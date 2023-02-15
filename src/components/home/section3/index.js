@@ -5,6 +5,7 @@ import Ads from './Ads'
 import WebGame from './WebGame'
 import Vr from '../../../../public/vr.png'
 import Link from 'next/link'
+import Image from 'next/image'
 const ServiceSection = () => {
     return (
         <Container>

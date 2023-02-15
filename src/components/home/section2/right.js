@@ -1,4 +1,4 @@
-import image from 'next/image'
+import Image from 'next/image'
 import React from 'react'
 import { Col, NavLink, Row } from 'react-bootstrap'
 import img1 from '../../../../public/01.png'

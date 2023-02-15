@@ -4,6 +4,7 @@ import ColLeft from '@/components/home/section2/left'
 import ColRight from '@/components/home/section2/right'
 import ServiceSection from '@/components/home/section3'
 import PortfolioSection from '@/components/home/section4'
+import WhatWeDo from '@/components/home/section5'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 const Home = () => {
@@ -37,6 +38,13 @@ const Home = () => {
             <div className="section4">
               <div className="section4Inner">
                 <PortfolioSection />
+              </div>
+            </div>
+
+            {/* // Section4 Service */}
+            <div className="section4">
+              <div className="section5Inner">
+                <WhatWeDo />
               </div>
             </div>
             <Footer />

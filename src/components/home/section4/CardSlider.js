@@ -6,6 +6,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper';
 import { BsArrowRight } from 'react-icons/bs'
 import cartList from "./cartData";
 import Link from "next/link";
+import Image from "next/image";
 export default function CardSlider() {
     return (
 
@@ -44,7 +45,7 @@ export default function CardSlider() {
                         return (
                             <SwiperSlide key={curCart._id}>
                                 <div className="cartContainer">
-                                    <Image src={curCart.img} alt="" />
+                                    <Image src={curCart.img} alt="" width={100} height={100}/>
                                     <div className="cartContant">
                                         <div className="tag">{curCart.tag}</div>
                                         <div className="portfolio__title">{curCart.title}</div>

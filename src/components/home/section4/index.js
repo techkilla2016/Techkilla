@@ -4,7 +4,7 @@ import recode_01 from '../../../../public/Assets/home/01.png'
 import recode_02 from '../../../../public/Assets/home/02.png'
 import recode_03 from '../../../../public/Assets/home/03.png'
 import recode_04 from '../../../../public/Assets/home/04.png'
-import image from "next/image"
+import Image from "next/image"
 const PortfolioSection = () => {
     return (
         <>

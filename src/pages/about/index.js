@@ -8,7 +8,7 @@ import recode_03 from '../../../public/Assets/home/03.png'
 import recode_04 from '../../../public/Assets/home/04.png'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import image from 'next/image'
+import Image from 'next/image'
 
 const About = () => {
     return (

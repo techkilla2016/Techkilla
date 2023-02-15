@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../../../public/logo.png'
+import logo from '../../../public/logoBlack.png'
 import { CgMenuRightAlt } from 'react-icons/cg'
 import { IoCloseSharp } from 'react-icons/io5'
-import image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 const Header = () => {
     const [windowSize, setWindowSize] = useState({
@@ -27,9 +27,9 @@ const Header = () => {
         return (
             <nav>
                 <div className="navbar">
-                    <div className="logo">
-                        {/* <Image src={logo} /> */}
-                    </div>
+                    <Link href='/' className="logo">
+                        <Image src={logo} width={200} />
+                    </Link>
                     <div className="nav">
                         <Link className='navlink' href='/'>Home</Link>
                         <Link className='navlink' href='/about'>About</Link>
