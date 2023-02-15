@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import logo from '../../../public/logo.png'
 import { CgMenuRightAlt } from 'react-icons/cg'
 import { IoCloseSharp } from 'react-icons/io5'
-//import Image from 'next/image'
+import image from 'next/image'
 import Link from 'next/link'
 const Header = () => {
     const [windowSize, setWindowSize] = useState({
@@ -28,7 +28,7 @@ const Header = () => {
             <nav>
                 <div className="navbar">
                     <div className="logo">
-                        {/* <img src={logo} /> */}
+                        {/* <Image src={logo} /> */}
                     </div>
                     <div className="nav">
                         <Link className='navlink' href='/'>Home</Link>
@@ -52,7 +52,7 @@ const Header = () => {
         return <nav>
             <div className="navbar">
                 <div className="logo">
-                    {/* <img src={logo} /> */}
+                    {/* <Image src={logo} /> */}
                 </div>
             </div>
             <div className='toggle-secction'>

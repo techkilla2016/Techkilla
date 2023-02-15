@@ -4,7 +4,7 @@ import recode_01 from '../../../../public/Assets/home/01.png'
 import recode_02 from '../../../../public/Assets/home/02.png'
 import recode_03 from '../../../../public/Assets/home/03.png'
 import recode_04 from '../../../../public/Assets/home/04.png'
-//import Image from "next/image"
+import image from "next/image"
 const PortfolioSection = () => {
     return (
         <>
@@ -28,7 +28,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <img src={recode_01} alt="" />
+                                <Image src={recode_01} alt="" />
                             </div>
                             <div className="recodeData">
                                 28+
@@ -42,7 +42,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <img src={recode_02} alt="" />
+                                <Image src={recode_02} alt="" />
                             </div>
                             <div className="recodeData">
                                 110+
@@ -56,7 +56,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <img src={recode_03} alt="" />
+                                <Image src={recode_03} alt="" />
                             </div>
                             <div className="recodeData">
                                 5+
@@ -70,7 +70,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <img src={recode_04} alt="" />
+                                <Image src={recode_04} alt="" />
                             </div>
                             <div className="recodeData">
                                 3+

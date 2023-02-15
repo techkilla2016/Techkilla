@@ -1,4 +1,4 @@
-//import Image from 'next/image'
+import image from 'next/image'
 import React from 'react'
 import { Col, NavLink, Row } from 'react-bootstrap'
 import img1 from '../../../../public/01.png'
@@ -21,7 +21,7 @@ const ColRight = () => {
                 <Col lg={6} md={12} sm={12} >
                     <div className="sub_secction">
                         <div className="img_section">
-                            <img src={img1} alt="" height={90} />
+                            <Image src={img1} alt="" height={90} />
                         </div>
                         <div className="para_section">
                             <div className="heading">Ideal Strategic</div>
@@ -34,7 +34,7 @@ const ColRight = () => {
                 <Col lg={6} md={12} sm={12} >
                     <div className="sub_secction">
                         <div className="img_section">
-                            <img src={img2} alt="" height={90} />
+                            <Image src={img2} alt="" height={90} />
                         </div>
                         <div className="para_section">
                             <div className="heading">Best Performance</div>

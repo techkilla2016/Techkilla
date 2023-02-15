@@ -1,6 +1,6 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
-//import Image from 'next/image'
+import image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
@@ -26,7 +26,7 @@ const Service = () => {
                                         <div className="serviceCart">
                                             <div className="iconContainer">
                                                 <div className="serviceIcon">
-                                                    <img src={AR} />
+                                                    <Image src={AR} />
                                                 </div>
                                             </div>
                                             <div className="cartTitle">
@@ -48,7 +48,7 @@ const Service = () => {
                                         <div className="serviceCart">
                                             <div className="iconContainer">
                                                 <div className="serviceIcon">
-                                                    <img src={AD} />
+                                                    <Image src={AD} />
                                                 </div>
                                             </div>
                                             <div className="cartTitle">
@@ -70,7 +70,7 @@ const Service = () => {
                                         <div className="serviceCart">
                                             <div className="iconContainer">
                                                 <div className="serviceIcon">
-                                                    <img src={VR} />
+                                                    <Image src={VR} />
                                                 </div>
                                             </div>
                                             <div className="cartTitle">
@@ -93,7 +93,7 @@ const Service = () => {
                                         <div className="serviceCart">
                                             <div className="iconContainer">
                                                 <div className="serviceIcon">
-                                                    <img src={Game} />
+                                                    <Image src={Game} />
                                                 </div>
                                             </div>
                                             <div className="cartTitle">

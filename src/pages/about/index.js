@@ -8,7 +8,7 @@ import recode_03 from '../../../public/Assets/home/03.png'
 import recode_04 from '../../../public/Assets/home/04.png'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-//import Image from 'next/image'
+import image from 'next/image'
 
 const About = () => {
     return (
@@ -38,7 +38,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src={recode_01} alt="" />
+                                                    <Image src={recode_01} alt="" />
                                                 </div>
                                                 <div className="recodeData">
                                                     28+
@@ -52,7 +52,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src={recode_02} alt="" />
+                                                    <Image src={recode_02} alt="" />
                                                 </div>
                                                 <div className="recodeData">
                                                     110+
@@ -66,7 +66,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src={recode_03} alt="" />
+                                                    <Image src={recode_03} alt="" />
                                                 </div>
                                                 <div className="recodeData">
                                                     5+
@@ -80,7 +80,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src={recode_04} alt="" />
+                                                    <Image src={recode_04} alt="" />
                                                 </div>
                                                 <div className="recodeData">
                                                     3+

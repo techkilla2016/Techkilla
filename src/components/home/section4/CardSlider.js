@@ -44,7 +44,7 @@ export default function CardSlider() {
                         return (
                             <SwiperSlide key={curCart._id}>
                                 <div className="cartContainer">
-                                    <img src={curCart.img} alt="" />
+                                    <Image src={curCart.img} alt="" />
                                     <div className="cartContant">
                                         <div className="tag">{curCart.tag}</div>
                                         <div className="portfolio__title">{curCart.title}</div>
