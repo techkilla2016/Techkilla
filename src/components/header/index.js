@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../../../public/logoBlack.png'
+import logo from '../../../public/Assets/logo/logo-01.png'
 import { CgMenuRightAlt } from 'react-icons/cg'
 import { IoCloseSharp } from 'react-icons/io5'
 import Image from 'next/image'
@@ -28,7 +28,7 @@ const Header = () => {
             <nav>
                 <div className="navbar">
                     <Link href='/' className="logo">
-                        <Image src={logo} width={200} />
+                        <Image src={logo} width={80} height={80} />
                     </Link>
                     <div className="nav">
                         <Link className='navlink' href='/'>Home</Link>
@@ -51,9 +51,9 @@ const Header = () => {
     } else {
         return <nav>
             <div className="navbar">
-                <div className="logo">
-                    {/* <Image src={logo} /> */}
-                </div>
+                <Link href='/' className="logo">
+                    <Image src={logo} width={60} height={60} />
+                </Link>
             </div>
             <div className='toggle-secction'>
                 <button className='toggle' onClick={() => setIsMobile(!isMobile)}>
@@ -65,28 +65,28 @@ const Header = () => {
                 <div className={isMobile ? "active mobile-container" : "mobile-container "} id='hideMobileNave'>
                     <div className={isMobile ? "mobile-nav active" : "mobile-nav"}>
                         <div className='mobileMenuContaienr'>
-                            <div className='listMenu'>
+                            <div className='listMenu' onClick={() => setIsMobile(false)}>
                                 <Link href='/'>Home</Link>
                             </div>
-                            <div className='listMenu'>
+                            <div className='listMenu' onClick={() => setIsMobile(false)}>
                                 <Link href='/about'>About</Link>
                             </div>
-                            <div className='listMenu'>
+                            <div className='listMenu' onClick={() => setIsMobile(false)}>
                                 <Link href='/service'>Service</Link>
                             </div>
-                            <div className='listMenu'>
+                            <div className='listMenu' onClick={() => setIsMobile(false)}>
                                 <Link href='/work'>Work</Link>
                             </div>
-                            <div className='listMenu'>
+                            <div className='listMenu' onClick={() => setIsMobile(false)}>
                                 <Link href='/careers'>Careers</Link>
                             </div >
                         </div >
                         <div className="MobileNavBtn">
                             <Link href='https://calendly.com/ensights-meeting/' target='_blank'>
-                                <button>Book A Demo</button>
+                                <button onClick={() => setIsMobile(false)}>Book A Demo</button>
                             </Link>
                             <Link href='/contact' >
-                                <button>Contect Us</button>
+                                <button onClick={() => setIsMobile(false)}>Contect Us</button>
                             </Link >
                         </div >
                     </div >

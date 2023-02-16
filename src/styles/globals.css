@@ -38,8 +38,8 @@ main {
 }
 
 .mainContainer {
-  height: 100%;
   width: 100%;
+  height: auto;
 }
 
 button {
@@ -49,8 +49,14 @@ button {
   background: none;
 }
 
+.introSection {
+  width: 100%;
+  height: 90vh;
+}
+
 @import url('./home.css');
 @import url('./header.css');
 @import url('./footer.css');
 @import url('./contact.css');
 @import url('./service.css');
+@import url('./case_studie.css');

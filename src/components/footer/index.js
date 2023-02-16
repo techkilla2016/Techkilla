@@ -21,7 +21,7 @@ const Footer = () => {
                     <h3>    About Company</h3>
                     <Link href="/">Services</Link>
                     <Link href="/">Portfolio</Link>
-                    <Link href="/">Case Studies</Link>
+                    <Link href="/case-studies">Case Studies</Link>
                     <Link href="/">About Us</Link>
                 </section>
 
