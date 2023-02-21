@@ -14,7 +14,6 @@ function Technology() {
             <Row className="m-0">
               <Col className="d-lg-block  d-flex justify-content-between">
                 <FeatureBox
-
                   title="Renewable Energy"
                   content="Direct, remote connections between inverters, loggers, weather data, SCADA, DAS, revenue grade meters, PV, solar, & wind for full visibility on every level."
                 />

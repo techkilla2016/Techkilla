@@ -26,11 +26,10 @@ const ServiceSection = () => {
                             </div>
                         </div>
                         <div className="serviceCartTitle">
-                            Social AR Filters
+                            Microsite design
                         </div>
                         <p>
-                            experiences with immersive augmented reality on Facebook,
-                            Instagram, and Snapchat
+                            We create customised microsites for your occasions, unique needs, and interaction.
                         </p>
                     </div>
                 </Col>

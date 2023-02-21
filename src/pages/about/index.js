@@ -9,10 +9,14 @@ import recode_04 from '../../../public/Assets/home/04.png'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const About = () => {
     return (
         <>
+            <Head>
+                <title>About Us</title>
+            </Head>
             <Header />
             <main>
                 <div className="main">

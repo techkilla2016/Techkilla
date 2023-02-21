@@ -1,15 +1,29 @@
+import Card from '@/components/card'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import ColLeft from '@/components/home/section2/left'
 import ColRight from '@/components/home/section2/right'
-import ServiceSection from '@/components/home/section3'
 import PortfolioSection from '@/components/home/section4'
 import WhatWeDo from '@/components/home/section5'
-import React from 'react'
+import axios from 'axios'
+import Head from 'next/head'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+
 const Home = () => {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    fetch('http://localhost:3000/api/home/').then((responce) => {
+      return responce.json()
+    }).then((result) => {
+      setData(result)
+    })
+  }, [])
   return (
     <>
+      <Head>
+        <title>Techkilla</title>
+      </Head>
       <Header />
       <main>
         <div className="main">
@@ -30,7 +44,16 @@ const Home = () => {
             {/* // Section3 Service */}
             <div className="section3">
               <div className="section3Inner">
-                <ServiceSection />
+                {/* <ServiceSection /> */}
+                <Container>
+                  <Row>
+                    {
+                      data.map((curItem, index) => {
+                        return <Card {...curItem} key={index} />
+                      })
+                    }
+                  </Row>
+                </Container>
               </div>
             </div>
 
@@ -57,3 +80,4 @@ const Home = () => {
 }
 
 export default Home
+

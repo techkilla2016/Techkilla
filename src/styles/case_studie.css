@@ -1,5 +1,5 @@
 .introHeading {
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 70px;
     line-height: 1.2;
     backdrop-filter: blur(3px);
@@ -7,10 +7,30 @@
     transition: all 0.2 linear;
 }
 
-.case-studio {
+.intro-Section {
+    width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    left: 0px;
+    top: 0px;
+}
+
+.introWraper {
+    height: 100vh;
+    width: 100%;
     position: relative;
     overflow: hidden;
+}
+
+.wrapperBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 100px;
 }
 
 .introHeading span {
@@ -146,10 +166,6 @@
 @media (max-width:425px) {
     .introTitle {
         font-size: 20px;
-    }
-
-    .introHeading {
-        margin-top: 20px;
     }
 }
 

@@ -1,5 +1,6 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
+import Head from 'next/head';
 import React from 'react'
 import ContactFrom from './ContactForm';
 
@@ -7,6 +8,9 @@ const Contact = () => {
     const ASSETS_URL = "https://s3.eu-west-1.amazonaws.com/ensights.ai/assets";
     return (
         <>
+            <Head>
+                <title>Contact Us</title>
+            </Head>
             <Header />
             <main>
                 <div className="main">

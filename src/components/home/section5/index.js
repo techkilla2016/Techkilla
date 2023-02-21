@@ -20,18 +20,20 @@ const WhatWeDo = () => {
                     <Row className="m-0">
                         <Col className="d-lg-block  d-flex justify-content-between">
                             <FeatureBox
-                                title="Renewable Energy"
-                                content="Direct, remote connections between inverters, loggers, weather data, SCADA, DAS, revenue grade meters, PV, solar, & wind for full visibility on every level."
+                                title="Microsite design"
+                                content="We create customized microsites for your occasions, unique needs, and interaction."
                             />
 
                             <FeatureBox className="my-4"
-                                title="Energy Utilizations"
-                                content="Our platform empowers and connects to a variety of energy uses, including storage batteries, EV charging stations, smart consumption meters, and more."
+                                title="VR Solutions"
+                                content="specialized VR 360 solutions for gaming and audience engagement"
                             />
+                           
                             <FeatureBox
-                                title="Integrations"
-                                content="Our platform empowers and connects to a variety of energy uses, including storage batteries, EV charging stations, smart consumption meters, and more."
+                                title="On-ground activations"
+                                content="We engage your audience in an intuitive way with fun experiential activities."
                             />
+
                         </Col>
                         <Col lg="auto" className="my-auto d-lg-block d-none">
                             <Image src={Curly} alt="curly" />
@@ -63,7 +65,7 @@ const WhatWeDo = () => {
                             <Image className="" src={ArrowRight} alt="arrow-right" />
                         </Col>
                         <Col>
-                            <FeatureBox title="Real-Time Alerts & Insights" />
+                            <FeatureBox title="Microsite design" />
                         </Col>
                     </Row>
                     <Row className="align-items-center m-0">
@@ -72,7 +74,7 @@ const WhatWeDo = () => {
                             <Image className="" src={ArrowRight} alt="arrow-right" />
                         </Col>
                         <Col>
-                            <FeatureBox title="Performance & Analysis" />
+                            <FeatureBox title="VR (Virtual reality) Solutions" />
                         </Col>
                     </Row>
                     <Row className="align-items-center m-0">
@@ -81,7 +83,7 @@ const WhatWeDo = () => {
                             <Image className="" src={ArrowRight} alt="arrow-right" />
                         </Col>
                         <Col>
-                            <FeatureBox title="Financial & Maintenance Visibility" />
+                            <FeatureBox title="Playable Ads" />
                         </Col>
                     </Row>
                     <Row className="align-items-center m-0">
@@ -90,7 +92,7 @@ const WhatWeDo = () => {
                             <Image className="" src={ArrowRight} alt="arrow-right" />
                         </Col>
                         <Col>
-                            <FeatureBox title="Reports & End User Interfaces" />
+                            <FeatureBox title="On-ground activations" />
                         </Col>
                     </Row>
                 </div>

@@ -7,7 +7,7 @@ function FeatureBox({ title, content }) {
   const [show, setShow] = useState(false)
   return (
     <div
-      className={`box ${show ? 'show' : ''} ${title === "Energy Utilizations" ? 'my-lg-4 my-0' : null} ${!content ? 'no-content' : ''}`}
+      className={`box my-lg-4 my-0 ${show ? 'show' : ''}  ${!content ? 'no-content' : ''}`}
     >
       <span className="closeable" onClick={() => setShow(!show)}>
         <Image src={show ? Minus : Plus} alt="toggleable Button" />

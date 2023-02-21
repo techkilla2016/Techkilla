@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../../../public/Assets/logo/logo-01.png'
+import logo from '../../../public/logo/logoone.png'
 import { CgMenuRightAlt } from 'react-icons/cg'
 import { IoCloseSharp } from 'react-icons/io5'
 import Image from 'next/image'
@@ -34,7 +34,7 @@ const Header = () => {
                         <Link className='navlink' href='/'>Home</Link>
                         <Link className='navlink' href='/about'>About</Link>
                         <Link className='navlink' href='/service'>Service</Link>
-                        <Link className='navlink' href='/work' > Work</Link >
+                        <Link className='navlink' href="/case-studies">Case Studies</Link>
                         <Link className='navlink' href='/careers' > Careers</Link >
                     </div >
                 </div >
@@ -75,7 +75,7 @@ const Header = () => {
                                 <Link href='/service'>Service</Link>
                             </div>
                             <div className='listMenu' onClick={() => setIsMobile(false)}>
-                                <Link href='/work'>Work</Link>
+                                <Link href="/case-studies">Case Studies</Link>
                             </div>
                             <div className='listMenu' onClick={() => setIsMobile(false)}>
                                 <Link href='/careers'>Careers</Link>
