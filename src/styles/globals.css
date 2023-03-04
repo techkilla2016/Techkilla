@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
   padding: 0px;
   margin: 0px;
@@ -60,3 +60,4 @@ button {
 @import url('./contact.css');
 @import url('./service.css');
 @import url('./case_studie.css');
+@import url('./service_project.css');

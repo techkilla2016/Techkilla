@@ -3,9 +3,8 @@ import Header from '@/components/header'
 import Head from 'next/head';
 import React from 'react'
 import ContactFrom from './ContactForm';
-
+import Comp from '../../../public/Assets/contact/Comp.mov'
 const Contact = () => {
-    const ASSETS_URL = "https://s3.eu-west-1.amazonaws.com/ensights.ai/assets";
     return (
         <>
             <Head>
@@ -21,8 +20,8 @@ const Contact = () => {
                                     <div className="hero ">
                                         <video autoPlay={true} playsInline loop={true} muted={true}>
                                             <source
-                                                src={`${ASSETS_URL}/Hero_Desk_alpha.webm`}
-                                                type="video/webm"
+                                                src={Comp}
+                                                type="video/mov"
                                             />
                                             <source src="/Hero_Desk_alpha.mp4" type="video/mp4" />
                                         </video>

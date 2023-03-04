@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import LogoIcon from '../../../public/logo/logoone.png'
+import LogoIcon from '../../../public/logo/logoOne.png'
 import Minus from '../../../public/Assets/Home/minus.svg'
 import Plus from '../../../public/Assets/Home/plus.svg'
 function FeatureCentralBox({ title, content }) {

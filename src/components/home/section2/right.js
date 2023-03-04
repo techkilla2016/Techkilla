@@ -8,7 +8,7 @@ const ColRight = () => {
         <div className='right-col'>
             <div className='colHeading'>Who We Are</div>
             <h3 className="section__title">
-                Advertise, analyze, and optimize!
+            Design, develop and execute!
                 <span className="section__title-line"> We manage it all.</span>
             </h3>
             <p className='section_Para' style={{ padding: '40px 0px 30px' }}>

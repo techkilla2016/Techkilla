@@ -239,7 +239,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background: rgba(0, 0, 0, 0.6);
+    /* background: rgba(0, 0, 0, 0.6); */
     left: 0px;
     top: 0px;
 }
@@ -257,12 +257,12 @@
 }
 
 .introDesc {
-    font-family: 'Courgette', cursive;
+    /* font-family: 'Courgette', cursive; */
     color: #fff;
     font-size: 60px;
     line-height: 1.1;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 .desc {
@@ -278,8 +278,9 @@
 .section h2 {
     font-weight: 900;
     text-transform: capitalize;
-    font-family: 'Gloock', serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
+    font-size: 60px;
     text-align: center;
 }
 
@@ -302,6 +303,270 @@
 .section a {
     margin-right: 40px;
 }
+
+.use_case {
+    margin-top: 100px;
+    background: url('../../public/back-pattern.png') repeat;
+}
+
+#use_case {
+    padding: 20px 0px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.use_case_heading {
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-weight: 900;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cartOut {
+    height: 100%;
+    padding: 20px;
+}
+
+.cartBox {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: #fafafa 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+.boxImg {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.boxImg img {
+    width: 100%;
+}
+
+.titleBox {
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: grid;
+    text-align: center;
+    place-items: center;
+    background: #000000c8;
+    color: #ffcb47;
+    font-size: 20px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    font-family: 'Poppins', sans-serif;
+}
+
+.use_case_intro {
+    text-align: center;
+    line-height: 1.2;
+    font-size: 30px;
+    padding: 0px 0px 30px;
+}
+
+.cartBox:hover .titleBox {
+    height: 100%;
+}
+
+
+.Benefits {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BenefitsContainer {
+    padding-bottom: 80px;
+}
+
+.BenefitsContainer h4 {
+    text-align: center;
+    font-size: 50px;
+    color: #ffcb47;
+    margin: 40px 0px;
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.BenefitsTitile {
+    padding: 150px 0px;
+    width: 100%;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    /* color: var(--swiper-theme-color); */
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+/* ------------------------  */
+
+.BenefitsTitile {
+    display: grid;
+    place-items: center;
+
+    --bkg: #5eb3fd;
+    --white: #e7e6e6;
+
+    background-color: var(--white);
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+
+.containerOut {
+    height: 500px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    color: black;
+}
+
+.ghost {
+    padding: 40px 0px;
+    width: 6vmin;
+    height: 10vmin;
+    background-color: var(--white);
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+    background-image: radial-gradient(ellipse at 35% 40%, #000 8%, transparent 0%),
+        radial-gradient(ellipse at 65% 40%, #000 8%, transparent 0%),
+        radial-gradient(ellipse at 50% 60%, #000 8%, transparent 0%);
+    border-radius: 100% / 70% 70% 0% 0%;
+    transform: translateX(100em) rotateZ(-90deg);
+    position: relative;
+    opacity: 0.9;
+    mix-blend-mode: exclusion;
+    animation: ghostMove 4s ease-out infinite;
+}
+
+@keyframes ghostMove {
+    0% {
+        transform: translateX(30em) rotateZ(-90deg);
+    }
+
+    100% {
+        transform: translateX(-35em) rotateZ(-90deg);
+    }
+}
+
+.ghost div {
+    position: absolute;
+    width: 20%;
+    background-color: var(--white);
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+
+.ghost div:nth-of-type(1) {
+    height: 7vmin;
+    left: 0;
+    bottom: -6vmin;
+    border-radius: 100% / 0% 0% 50% 50%;
+}
+
+.ghost div:nth-of-type(2),
+.ghost div:nth-of-type(4) {
+    height: 4vmin;
+    left: 20%;
+    bottom: -3vmin;
+    border-radius: 100% / 50% 50% 0% 0%;
+    background-color: transparent;
+}
+
+.ghost div:nth-of-type(3) {
+    height: 4vmin;
+    left: 40%;
+    bottom: -3.95vmin;
+    border-radius: 100% / 0% 0% 60% 60%;
+    background-color: var(--white);
+}
+
+.ghost div:nth-of-type(4) {
+    left: 60%;
+}
+
+.ghost div:nth-of-type(5) {
+    height: 3vmin;
+    left: 80%;
+    bottom: -2.9vmin;
+    border-radius: 100% / 0% 0% 70% 70%;
+    background-color: var(--white);
+}
+
+/* ------------------------  */
 
 @media (max-width:1440px) {
     .introDesc {

@@ -5,8 +5,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import bg from '../../../../public/Assets/service/bg.jpg'
+import bg from '../../../../public/Assets/service/web banner_micro site.jpg'
 import serive from '../../../../public/Assets/service/miro-service.gif'
+import UseCase from '@/components/service/UseCase'
+import Benefits from '@/components/service/Benefit'
+import ProjectSlider from '@/components/ProjectSlider/ProjectSlider'
+const baseUrl = 'http://localhost:3000'
+
 const MicrositeDesign = () => {
     const css = { maxWidth: '100%', height: 'auto' }
     return (
@@ -28,7 +33,7 @@ const MicrositeDesign = () => {
                                     <Row className='justify-content-center'>
                                         <Col xxl={10} lg={11} md={12} sm={12}>
                                             <div className="introDesc ">
-                                                Now, with the help of our professionals, you can have your very own microsite up and running in no time at all.
+                                                Crafting Engaging and Impactful Microsite Designs for Your Business
                                             </div>
                                         </Col>
                                     </Row>
@@ -50,22 +55,6 @@ const MicrositeDesign = () => {
                                             <p>
                                                 Instead, they are information-heavy websites with the goal of attracting the greatest number of users feasible. The material that can be found on their website (or websites) is almost always humorous and encourages users to participate. Because of this, their brand is better able to engage with users.
                                             </p>
-                                            <h4>Use cases</h4>
-                                            <p>
-                                                Product launch,
-                                                Targeting prospects,
-                                                Geotargeting market,
-                                                distinguishing the corporate brand
-                                                promoting events
-                                            </p>
-                                            <h4>Benefits of launching your own microsite</h4>
-                                            <p>
-                                                Specifically aimed campaigns, <br />
-                                                The production of leads, <br />
-                                                Awareness of the brand, <br />
-                                                SEO with virality potential for specialized keywords, <br />
-                                                Easy to manage
-                                            </p>
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
@@ -73,6 +62,26 @@ const MicrositeDesign = () => {
                                     </Col>
                                 </Row>
                             </Container>
+                            <div className="use_case">
+                                <div id="use_case">
+                                    <Container>
+                                        <div className='use_case_heading'>Use cases</div>
+                                        <Row>
+                                            <UseCase img={`${baseUrl}/Assets/service/product launch-01-01.png`} title={'Product launch'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Targeting prospects-01-01.png`} title={'Targeting prospects'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Geotargeting market-01-01.png`} title={'Geotargeting market'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/distinguishing the corporate-01-01.png`} title={'distinguishing the corporate brand'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/product launch-01-01.png`} title={'promoting events'} />
+                                        </Row>
+                                    </Container>
+                                </div>
+                            </div>
+                            <div className='BenefitsContainer'>
+                                <h4>Benefits of launching your own microsite</h4>
+                                <div className="Benefits">
+                                    <Benefits data={['Specifically aimed campaigns', 'The production of leads', 'Awareness of the brand', 'SEO with virality potential for specialized keywords', ' Easy to manage']} />
+                                </div>
+                            </div>
                         </div>
                         <Container>
                             <div className="section">
@@ -102,6 +111,11 @@ const MicrositeDesign = () => {
                                     <li><Link href='/'>  Total Oil - talent hun                     </Link> </li>
                                 </ul>
                             </div>
+                        </Container>
+
+                        {/* //the new design  vewed qudra */}
+                        <Container>
+                            <ProjectSlider />
                         </Container>
                         <Footer />
                     </div>

@@ -7,7 +7,8 @@ import bg from '../../../../public/Assets/service/vr.jpg'
 import serive from '../../../../public/Assets/service/miro-service.gif'
 import Link from 'next/link'
 import Footer from '@/components/footer'
-
+import UseCase from '@/components/service/UseCase'
+const baseUrl = 'http://localhost:3000'
 const VRSolutions = () => {
     const css = { maxWidth: '100%', height: 'auto' }
     return (
@@ -65,21 +66,6 @@ const VRSolutions = () => {
                                 <Row>
                                     <Col>
                                         <div className="serviceContainer">
-                                            <h4>Use cases - </h4>
-                                            <p>
-                                                Industries and divisions that are getting the most benefits of using virtual reality as tool
-                                            </p>
-                                            <ol>
-                                                <li>Education </li>
-                                                <li>Travel </li>
-                                                <li>Real Estate </li>
-                                                <li>Retail </li>
-                                                <li>Military </li>
-                                                <li>Entertainment </li>
-                                                <li>Gaming </li>
-                                                <li>Museums </li>
-                                                <li>Architecture and many more. </li>
-                                            </ol>
                                             <h4>Benefits </h4>
                                             <p>Some advantages of virtual reality are listed below.</p>
                                             <p>
@@ -99,6 +85,36 @@ const VRSolutions = () => {
                                     </Col>
                                 </Row>
                             </Container>
+                            <div className="use_case">
+                                <div id="use_case">
+                                    <Container>
+                                        <div className='use_case_heading'>Use cases</div>
+                                        <Row className='justify-content-center'>
+                                            <Col xxl={8} xl={8} lg={8} md={10} sm={12} className="use_case_intro ">
+                                                Industries and divisions that are getting the most benefits of using virtual reality as tool
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <UseCase img={`${baseUrl}/Assets/service/Education.png`} title={'Education'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Travel-01.png`} title={'Travel'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Real Estate-01.png`} title={'Real Estate '} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Retail-01.png`} title={'Retail'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Entertainment-01.png`} title={'Entertainment'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Gaming-01.png`} title={'Gaming'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Museums-01.png`} title={'Museums'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Architecture-01.png`} title={'Architecture and many more. '} />
+                                        </Row>
+                                        <h4>Benefits of launching your own microsite</h4>
+                                        <p>
+                                            Specifically aimed campaigns, <br />
+                                            The production of leads, <br />
+                                            Awareness of the brand, <br />
+                                            SEO with virality potential for specialized keywords, <br />
+                                            Easy to manage
+                                        </p>
+                                    </Container>
+                                </div>
+                            </div>
                         </div>
                         <Container>
                             <div className="section">
