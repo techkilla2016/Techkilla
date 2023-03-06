@@ -7,10 +7,7 @@ import bg from '&/Assets/service/web banner_VR1.jpg'
 import serive from '../../../../public/Assets/service/miro-service.gif'
 import Footer from '@/components/footer'
 import UseCase from '@/components/service/UseCase'
-<<<<<<< HEAD
 import SingleCard from '@/components/ProjectSlider/singleCard'
-=======
->>>>>>> 187a4d6181c551b274dbe0f9df58daf6f22551ef
 const baseUrl = 'http://localhost:3000'
 const VRSolutions = () => {
     const css = { maxWidth: '100%', height: 'auto' }
@@ -107,30 +104,8 @@ const VRSolutions = () => {
                                             <UseCase img={`${baseUrl}/Assets/service/Museums-01.png`} title={'Museums'} />
                                             <UseCase img={`${baseUrl}/Assets/service/Architecture-01.png`} title={'Architecture and many more. '} />
                                         </Row>
-<<<<<<< HEAD
                                     </Container>
                                 </div>
-=======
-                                        <h4>Benefits of launching your own microsite</h4>
-                                        <p>
-                                            Specifically aimed campaigns, <br />
-                                            The production of leads, <br />
-                                            Awareness of the brand, <br />
-                                            SEO with virality potential for specialized keywords, <br />
-                                            Easy to manage
-                                        </p>
-                                    </Container>
-                                </div>
-                            </div>
-                        </div>
-                        <Container>
-                            <div className="section">
-                                <h3>Related projects</h3>
-                                <ul>
-                                    <li><Link href='/'>  CEAT Shoppe experience - CEAT Tyres               </Link> </li>
-                                    <li><Link href='/'>  CEAT truck service hub experience - CEAT Tyres    </Link> </li>
-                                </ul>
->>>>>>> 187a4d6181c551b274dbe0f9df58daf6f22551ef
                             </div>
                         </div>
                         <div className="bgWhite">

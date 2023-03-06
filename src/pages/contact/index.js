@@ -3,6 +3,7 @@ import Header from '@/components/header'
 import Head from 'next/head';
 import React from 'react'
 import ContactFrom from './ContactForm';
+// import Comp from '../../../public/Assets/contact/Comp.mov'
 import ColLeft from '@/components/home/section2/left';
 const Contact = () => {
     return (
