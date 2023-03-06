@@ -9,6 +9,7 @@ import bg from '../../../../public/Assets/service/web banner_micro site.jpg'
 import serive from '../../../../public/Assets/service/miro-service.gif'
 import UseCase from '@/components/service/UseCase'
 import Benefits from '@/components/service/Benefit'
+<<<<<<< HEAD
 import GridSlider from '@/components/ProjectSlider/GridSlider'
 const baseUrl = 'http://localhost:3000'
 const list = ["DOW packaging and supplies",
@@ -33,6 +34,11 @@ const list = ["DOW packaging and supplies",
     "Cipla Urology quiz game",
     "Loreal dreamlength launch",
     "Total Oil - talent hun",]
+=======
+import ProjectSlider from '@/components/ProjectSlider/ProjectSlider'
+const baseUrl = 'http://localhost:3000'
+
+>>>>>>> 187a4d6181c551b274dbe0f9df58daf6f22551ef
 const MicrositeDesign = () => {
     const css = { maxWidth: '100%', height: 'auto' }
     return (
@@ -96,6 +102,7 @@ const MicrositeDesign = () => {
                                         </Row>
                                     </Container>
                                 </div>
+<<<<<<< HEAD
                             </div>
                             <div className='BenefitsContainer'>
                                 <h4>Benefits of launching your own microsite</h4>
@@ -112,6 +119,50 @@ const MicrositeDesign = () => {
                                 </div>
                             </Container>
                         </div>
+=======
+                            </div>
+                            <div className='BenefitsContainer'>
+                                <h4>Benefits of launching your own microsite</h4>
+                                <div className="Benefits">
+                                    <Benefits data={['Specifically aimed campaigns', 'The production of leads', 'Awareness of the brand', 'SEO with virality potential for specialized keywords', ' Easy to manage']} />
+                                </div>
+                            </div>
+                        </div>
+                        <Container>
+                            <div className="section">
+                                <h3>Related projects</h3>
+                                <ul>
+                                    <li><Link href='/'>  DOW packaging and supplies                 </Link> </li>
+                                    <li><Link href='/'>  NHRD QR verification and instant print     </Link> </li>
+                                    <li><Link href='/'>  HDFC Inquizitive family                    </Link> </li>
+                                    <li><Link href='/'>  HDFC Analytiq 1.0                          </Link> </li>
+                                    <li><Link href='/'>  HDFC Analytiq 2.                           </Link> </li>
+                                    <li><Link href='/'>  HDFC Analytiq 3.                           </Link> </li>
+                                    <li><Link href='/'>  Microsoft Hackathon                        </Link> </li>
+                                    <li><Link href='/'>  Tata International E-Marathon              </Link> </li>
+                                    <li><Link href='/'>  Tuborg super over                          </Link> </li>
+                                    <li><Link href='/'>  TVS Motors digital tambola                 </Link> </li>
+                                    <li><Link href='/'>  Concentrix got talent                      </Link> </li>
+                                    <li><Link href='/'>  Multitv Quiz Game                          </Link> </li>
+                                    <li><Link href='/'>  Total energies virtual talent hunt show    </Link> </li>
+                                    <li><Link href='/'>  Nutella - Ramadan video quiz game          </Link> </li>
+                                    <li><Link href='/'>  Cipla cycle meet                           </Link> </li>
+                                    <li><Link href='/'>  Colgate swashbuckers day                   </Link> </li>
+                                    <li><Link href='/'>  World cloud photobooth                     </Link> </li>
+                                    <li><Link href='/'>  Colgate - IPL                              </Link> </li>
+                                    <li><Link href='/'>  Cera - Quiz game                           </Link> </li>
+                                    <li><Link href='/'>  Cipla Urology quiz game                    </Link> </li>
+                                    <li><Link href='/'>  Loreal dreamlength launch                  </Link> </li>
+                                    <li><Link href='/'>  Total Oil - talent hun                     </Link> </li>
+                                </ul>
+                            </div>
+                        </Container>
+
+                        {/* //the new design  vewed qudra */}
+                        <Container>
+                            <ProjectSlider />
+                        </Container>
+>>>>>>> 187a4d6181c551b274dbe0f9df58daf6f22551ef
                         <Footer />
                     </div>
                 </div>

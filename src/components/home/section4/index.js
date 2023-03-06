@@ -1,9 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap"
 import CardSlider from "./CardSlider"
-import recode_01 from '../../../../public/Assets/home/01.png'
-import recode_02 from '../../../../public/Assets/home/02.png'
-import recode_03 from '../../../../public/Assets/home/03.png'
-import recode_04 from '../../../../public/Assets/home/04.png'
+import recode_01 from '../../../../public/Assets/Home/01.png'
+import recode_02 from '../../../../public/Assets/Home/02.png'
+import recode_03 from '../../../../public/Assets/Home/03.png'
+import recode_04 from '../../../../public/Assets/Home/04.png'
 import Image from "next/image"
 const PortfolioSection = () => {
     return (
