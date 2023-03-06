@@ -2,15 +2,10 @@ import Footer from '@/components/footer'
 import Header from '@/components/header'
 import ColLeft from '@/components/home/section2/left'
 import ColRight from '@/components/home/section2/right'
-import recode_01 from '../../../public/Assets/home/01.png'
-import recode_02 from '../../../public/Assets/home/02.png'
-import recode_03 from '../../../public/Assets/home/03.png'
-import recode_04 from '../../../public/Assets/home/04.png'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import Image from 'next/image'
 import Head from 'next/head'
-
+import recode_01 from '../../../public/Assets/Home/a01.png'
 const About = () => {
     return (
         <>
@@ -42,7 +37,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <Image src={recode_01} alt="" />
+                                                    <img src={recode_01}   alt="" />
                                                 </div>
                                                 <div className="recodeData">
                                                     28+
@@ -56,7 +51,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <Image src={recode_02} alt="" />
+                                                    <img src="/Assets/home/a02.png"  alt="" />
                                                 </div>
                                                 <div className="recodeData">
                                                     110+
@@ -70,7 +65,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <Image src={recode_03} alt="" />
+                                                    <img src="/Assets/home/a03.png"  alt="" />
                                                 </div>
                                                 <div className="recodeData">
                                                     5+
@@ -84,7 +79,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <Image src={recode_04} alt="" />
+                                                    <img src="/Assets/home/a04.png"  alt="" />
                                                 </div>
                                                 <div className="recodeData">
                                                     3+

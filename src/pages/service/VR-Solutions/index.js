@@ -8,7 +8,6 @@ import serive from '../../../../public/Assets/service/miro-service.gif'
 import Footer from '@/components/footer'
 import UseCase from '@/components/service/UseCase'
 import SingleCard from '@/components/ProjectSlider/singleCard'
-const baseUrl = 'http://localhost:3000'
 const VRSolutions = () => {
     const css = { maxWidth: '100%', height: 'auto' }
     return (
@@ -95,14 +94,14 @@ const VRSolutions = () => {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <UseCase img={`${baseUrl}/Assets/service/Education.png`} title={'Education'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Travel-01.png`} title={'Travel'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Real Estate-01.png`} title={'Real Estate '} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Retail-01.png`} title={'Retail'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Entertainment-01.png`} title={'Entertainment'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Gaming-01.png`} title={'Gaming'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Museums-01.png`} title={'Museums'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Architecture-01.png`} title={'Architecture and many more. '} />
+                                            <UseCase img={`/Assets/service/Education.png`} title={'Education'} />
+                                            <UseCase img={`/Assets/service/Travel-01.png`} title={'Travel'} />
+                                            <UseCase img={`/Assets/service/Real Estate-01.png`} title={'Real Estate '} />
+                                            <UseCase img={`/Assets/service/Retail-01.png`} title={'Retail'} />
+                                            <UseCase img={`/Assets/service/Entertainment-01.png`} title={'Entertainment'} />
+                                            <UseCase img={`/Assets/service/Gaming-01.png`} title={'Gaming'} />
+                                            <UseCase img={`/Assets/service/Museums-01.png`} title={'Museums'} />
+                                            <UseCase img={`/Assets/service/Architecture-01.png`} title={'Architecture and many more. '} />
                                         </Row>
                                     </Container>
                                 </div>

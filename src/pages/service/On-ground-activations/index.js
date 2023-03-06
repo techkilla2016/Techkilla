@@ -5,7 +5,6 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import bg from '&/Assets/service/web banner_on ground activity 2.jpg'
 import Footer from '@/components/footer'
-import GridSlider from '@/components/ProjectSlider/GridSlider'
 import Benefits from '@/components/service/Benefit'
 import SingleCard from '@/components/ProjectSlider/singleCard'
 const list = [

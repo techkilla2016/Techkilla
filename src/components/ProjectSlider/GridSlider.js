@@ -43,8 +43,8 @@ function GridSlider({ list }) {
                 className="mySwiper"
             >
                 {
-                    list?.map((item) => {
-                        return <SwiperSlide>
+                    list?.map((item, index) => {
+                        return <SwiperSlide key={index}>
                             <div className="swiperCart">
                                 <div className="backLyer">
                                     <Image src={project} />

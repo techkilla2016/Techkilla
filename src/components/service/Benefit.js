@@ -35,8 +35,8 @@ export default function Benefits({ data }) {
                 className="mySwiper"
             >
                 {
-                    data.map((item) => {
-                        return <SwiperSlide>
+                    data.map((item, index) => {
+                        return <SwiperSlide key={index}>
                             <div className="BenefitsTitile">
                                 <div class="containerOut">
                                     <div class="title">

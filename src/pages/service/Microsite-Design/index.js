@@ -2,7 +2,6 @@ import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import bg from '../../../../public/Assets/service/web banner_micro site.jpg'
@@ -10,7 +9,28 @@ import serive from '../../../../public/Assets/service/miro-service.gif'
 import UseCase from '@/components/service/UseCase'
 import Benefits from '@/components/service/Benefit'
 import GridSlider from '@/components/ProjectSlider/GridSlider'
-const baseUrl = 'http://localhost:3000'
+const usecase = [
+    {
+        img: '/Assets/service/product launch-01-01.png',
+        title: 'Product launch'
+    },
+    {
+        img: '/Assets/service/Targeting prospects-01-01.png',
+        title: 'Targeting prospects'
+    },
+    {
+        img: '/Assets/service/Geotargeting market-01-01.png',
+        title: 'Geotargeting market'
+    },
+    {
+        img: '/Assets/service/distinguishing the corporate-01-01.png',
+        title: 'distinguishing the corporate brand'
+    },
+    {
+        img: '../../../../public/Assets/service/product launch-01-01.png',
+        title: 'promoting events'
+    },
+]
 const list = ["DOW packaging and supplies",
     "NHRD QR verification and instant print",
     "HDFC Inquizitive family",
@@ -88,11 +108,7 @@ const MicrositeDesign = () => {
                                     <Container>
                                         <div className='use_case_heading'>Use cases</div>
                                         <Row>
-                                            <UseCase img={`${baseUrl}/Assets/service/product launch-01-01.png`} title={'Product launch'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Targeting prospects-01-01.png`} title={'Targeting prospects'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/Geotargeting market-01-01.png`} title={'Geotargeting market'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/distinguishing the corporate-01-01.png`} title={'distinguishing the corporate brand'} />
-                                            <UseCase img={`${baseUrl}/Assets/service/product launch-01-01.png`} title={'promoting events'} />
+                                            {usecase.map((curItem,index) => <UseCase key={index} img={curItem.img} title={curItem.title} />)}
                                         </Row>
                                     </Container>
                                 </div>

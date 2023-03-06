@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../../../public/logo/logoone.png'
+import logo from '&/logo/logoOne.png'
 import { CgMenuRightAlt } from 'react-icons/cg'
 import { IoCloseSharp } from 'react-icons/io5'
 import Image from 'next/image'

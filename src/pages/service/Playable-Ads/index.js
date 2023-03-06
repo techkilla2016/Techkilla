@@ -5,7 +5,6 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import bg from '&/Assets/service/web banner_playable ads.jpg'
 import serive from '../../../../public/Assets/service/miro-service.gif'
-import Link from 'next/link'
 import Footer from '@/components/footer'
 import SingleCard from '@/components/ProjectSlider/singleCard'
 
