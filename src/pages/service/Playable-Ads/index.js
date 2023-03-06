@@ -3,10 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import bg from '../../../../public/Assets/service/vr.jpg'
+import bg from '&/Assets/service/web banner_playable ads.jpg'
 import serive from '../../../../public/Assets/service/miro-service.gif'
 import Link from 'next/link'
 import Footer from '@/components/footer'
+import SingleCard from '@/components/ProjectSlider/singleCard'
 
 const PlayableAds = () => {
     const css = { maxWidth: '100%', height: 'auto' }
@@ -69,18 +70,14 @@ const PlayableAds = () => {
 
                             </Container>
                         </div>
-                        <Container>
-                            <div className="section">
-                                <h3>Related projects</h3>
-                                <ul>
-                                    <li><Link href='/'> KuKu FM - Guess the personality puzzle               </Link> </li>
-                                    <li><Link href='/'>  Microsoft - Pride month AR filter    </Link> </li>
-                                    <li><Link href='/'>  ITC Football header    </Link> </li>
-                                    <li><Link href='/'>  ITC Football Bounce Roll    </Link> </li>
-                                    <li><Link href='/'>  Fun wagerz - FIFA world cup     </Link> </li>
-                                </ul>
-                            </div>
-                        </Container>
+                        <div className="bgWhite">
+                            <Container>
+                                <div className="section">
+                                    <div className='use_case_heading'>Related projects</div>
+                                    <SingleCard list={['KuKu FM - Guess the personality puzzle', "Microsoft - Pride month AR filter", "ITC Football header", "ITC Football Bounce Roll", "Fun wagerz - FIFA world cup"]} />
+                                </div>
+                            </Container>
+                        </div>
                         <Footer />
                     </div>
                 </div>

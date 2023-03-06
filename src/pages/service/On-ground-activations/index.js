@@ -3,13 +3,26 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import bg from '../../../../public/Assets/service/vr.jpg'
-import serive from '../../../../public/Assets/service/miro-service.gif'
-import Link from 'next/link'
+import bg from '&/Assets/service/web banner_on ground activity 2.jpg'
 import Footer from '@/components/footer'
-
+import GridSlider from '@/components/ProjectSlider/GridSlider'
+import Benefits from '@/components/service/Benefit'
+import SingleCard from '@/components/ProjectSlider/singleCard'
+const list = [
+    "Excitometer",
+    "360* spin booth or photobooth",
+    "Mosaic wall",
+    "Magazine Booth",
+    "Kinect games",
+    "AR Football",
+    "VR Activities",
+    "Video feedback booth",
+    "Slingshot ",
+    "Digital Photobooth",
+    "Mosaic wall",
+    "Green screen or Croma photobooth",
+]
 const Ongroundactivations = () => {
-    const css = { maxWidth: '100%', height: 'auto' }
     return (
         <>
             <Head>
@@ -36,52 +49,20 @@ const Ongroundactivations = () => {
                                 </Container>
                             </div>
                         </div>
-                        <div className="desc pb-5">
-                            <h2 className='text-center py-5'>On-ground activations - Experiential marketing</h2>
+                        <div className='BenefitsContainer bgWhite'>
+                            <h4>Benefits</h4>
+                            <div className="Benefits">
+                                <Benefits data={['Captures visitors attention quickly', 'Easy database collection', 'Lasting experience', 'Word of mouth promotion', 'Higher engagement', 'Better retention', 'Feedback collection', 'Instant conversion']} />
+                            </div>
+                        </div>
+                        <div className="bgWhite">
                             <Container>
-                                <Row>
-
-                                    <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <div className="serviceContainer">
-
-                                            <h4>Benefits -</h4>
-                                            <ul>
-                                                <li>Captures visitors attention quickly</li>
-                                                <li> Easy database collection</li>
-                                                <li> Lasting experience</li>
-                                                <li> Word of mouth promotion</li>
-                                                <li> Higher engagement</li>
-                                                <li> Better retention</li>
-                                                <li> Feedback collection</li>
-                                                <li> Instant conversion</li>
-                                            </ul>
-                                        </div>
-                                    </Col>
-                                    <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src={serive} style={css} />
-                                    </Col>
-                                </Row>
+                                <div className="section">
+                                    <div className='use_case_heading'>Related projects</div>
+                                    <SingleCard list={list} />
+                                </div>
                             </Container>
                         </div>
-                        <Container>
-                            <div className="section">
-                                <h3>Related projects</h3>
-                                <ul>
-                                    <li><Link href='/'>  Excitometer               </Link> </li>
-                                    <li><Link href='/'>  360* spin booth or photobooth    </Link> </li>
-                                    <li><Link href='/'>  Mosaic wall    </Link> </li>
-                                    <li><Link href='/'>  Magazine Booth</Link> </li>
-                                    <li><Link href='/'>  Kinect games</Link> </li>
-                                    <li><Link href='/'>  AR Football</Link> </li>
-                                    <li><Link href='/'>  VR Activities</Link> </li>
-                                    <li><Link href='/'>  Video feedback booth</Link> </li>
-                                    <li><Link href='/'>  Slingshot </Link> </li>
-                                    <li><Link href='/'>  Digital Photobooth</Link> </li>
-                                    <li><Link href='/'>  Mosaic wall</Link> </li>
-                                    <li><Link href='/'>  Green screen or Croma photobooth</Link> </li>
-                                </ul>
-                            </div>
-                        </Container>
                         <Footer />
                     </div>
                 </div>

@@ -303,12 +303,18 @@
 
 /* ///// */
 .home-image {
-    background-color: #91bba8;
+    /* background-color: #91bba8; */
     min-height: calc(100vh);
     display: grid;
     place-items: center;
 }
-
+.hero{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .home-image .hero video {
     height: auto;
     max-width: 100%;

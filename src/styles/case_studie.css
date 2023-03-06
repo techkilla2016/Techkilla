@@ -5,6 +5,7 @@
     backdrop-filter: blur(3px);
     font-weight: 900 !important;
     transition: all 0.2 linear;
+    font-family: 'Playfair Display', serif;
 }
 
 .intro-Section {
@@ -40,6 +41,7 @@
 .introTitle {
     text-transform: capitalize;
     transition: all 0.2s linear;
+    font-family: 'Inter', sans-serif;
 }
 
 .introTitle span {

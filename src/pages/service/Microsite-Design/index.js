@@ -5,8 +5,34 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import bg from '../../../../public/Assets/service/bg.jpg'
+import bg from '../../../../public/Assets/service/web banner_micro site.jpg'
 import serive from '../../../../public/Assets/service/miro-service.gif'
+import UseCase from '@/components/service/UseCase'
+import Benefits from '@/components/service/Benefit'
+import GridSlider from '@/components/ProjectSlider/GridSlider'
+const baseUrl = 'http://localhost:3000'
+const list = ["DOW packaging and supplies",
+    "NHRD QR verification and instant print",
+    "HDFC Inquizitive family",
+    "HDFC Analytiq 1.0",
+    "HDFC Analytiq 2.",
+    "HDFC Analytiq 3.",
+    "Microsoft Hackathon",
+    "Tata International E-Marathon",
+    "Tuborg super over",
+    "TVS Motors digital tambola",
+    "Concentrix got talent",
+    "Multitv Quiz Game",
+    "Total energies virtual talent hunt show",
+    "Nutella - Ramadan video quiz game",
+    "Cipla cycle meet",
+    "Colgate swashbuckers day",
+    "World cloud photobooth",
+    "Colgate - IPL",
+    "Cera - Quiz game",
+    "Cipla Urology quiz game",
+    "Loreal dreamlength launch",
+    "Total Oil - talent hun",]
 const MicrositeDesign = () => {
     const css = { maxWidth: '100%', height: 'auto' }
     return (
@@ -28,7 +54,7 @@ const MicrositeDesign = () => {
                                     <Row className='justify-content-center'>
                                         <Col xxl={10} lg={11} md={12} sm={12}>
                                             <div className="introDesc ">
-                                                Now, with the help of our professionals, you can have your very own microsite up and running in no time at all.
+                                                Crafting Engaging and Impactful Microsite Designs for Your Business
                                             </div>
                                         </Col>
                                     </Row>
@@ -50,22 +76,6 @@ const MicrositeDesign = () => {
                                             <p>
                                                 Instead, they are information-heavy websites with the goal of attracting the greatest number of users feasible. The material that can be found on their website (or websites) is almost always humorous and encourages users to participate. Because of this, their brand is better able to engage with users.
                                             </p>
-                                            <h4>Use cases</h4>
-                                            <p>
-                                                Product launch,
-                                                Targeting prospects,
-                                                Geotargeting market,
-                                                distinguishing the corporate brand
-                                                promoting events
-                                            </p>
-                                            <h4>Benefits of launching your own microsite</h4>
-                                            <p>
-                                                Specifically aimed campaigns, <br />
-                                                The production of leads, <br />
-                                                Awareness of the brand, <br />
-                                                SEO with virality potential for specialized keywords, <br />
-                                                Easy to manage
-                                            </p>
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
@@ -73,36 +83,35 @@ const MicrositeDesign = () => {
                                     </Col>
                                 </Row>
                             </Container>
-                        </div>
-                        <Container>
-                            <div className="section">
-                                <h3>Related projects</h3>
-                                <ul>
-                                    <li><Link href='/'>  DOW packaging and supplies                 </Link> </li>
-                                    <li><Link href='/'>  NHRD QR verification and instant print     </Link> </li>
-                                    <li><Link href='/'>  HDFC Inquizitive family                    </Link> </li>
-                                    <li><Link href='/'>  HDFC Analytiq 1.0                          </Link> </li>
-                                    <li><Link href='/'>  HDFC Analytiq 2.                           </Link> </li>
-                                    <li><Link href='/'>  HDFC Analytiq 3.                           </Link> </li>
-                                    <li><Link href='/'>  Microsoft Hackathon                        </Link> </li>
-                                    <li><Link href='/'>  Tata International E-Marathon              </Link> </li>
-                                    <li><Link href='/'>  Tuborg super over                          </Link> </li>
-                                    <li><Link href='/'>  TVS Motors digital tambola                 </Link> </li>
-                                    <li><Link href='/'>  Concentrix got talent                      </Link> </li>
-                                    <li><Link href='/'>  Multitv Quiz Game                          </Link> </li>
-                                    <li><Link href='/'>  Total energies virtual talent hunt show    </Link> </li>
-                                    <li><Link href='/'>  Nutella - Ramadan video quiz game          </Link> </li>
-                                    <li><Link href='/'>  Cipla cycle meet                           </Link> </li>
-                                    <li><Link href='/'>  Colgate swashbuckers day                   </Link> </li>
-                                    <li><Link href='/'>  World cloud photobooth                     </Link> </li>
-                                    <li><Link href='/'>  Colgate - IPL                              </Link> </li>
-                                    <li><Link href='/'>  Cera - Quiz game                           </Link> </li>
-                                    <li><Link href='/'>  Cipla Urology quiz game                    </Link> </li>
-                                    <li><Link href='/'>  Loreal dreamlength launch                  </Link> </li>
-                                    <li><Link href='/'>  Total Oil - talent hun                     </Link> </li>
-                                </ul>
+                            <div className="use_case">
+                                <div id="use_case">
+                                    <Container>
+                                        <div className='use_case_heading'>Use cases</div>
+                                        <Row>
+                                            <UseCase img={`${baseUrl}/Assets/service/product launch-01-01.png`} title={'Product launch'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Targeting prospects-01-01.png`} title={'Targeting prospects'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/Geotargeting market-01-01.png`} title={'Geotargeting market'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/distinguishing the corporate-01-01.png`} title={'distinguishing the corporate brand'} />
+                                            <UseCase img={`${baseUrl}/Assets/service/product launch-01-01.png`} title={'promoting events'} />
+                                        </Row>
+                                    </Container>
+                                </div>
                             </div>
-                        </Container>
+                            <div className='BenefitsContainer'>
+                                <h4>Benefits of launching your own microsite</h4>
+                                <div className="Benefits">
+                                    <Benefits data={['Specifically aimed campaigns', 'The production of leads', 'Awareness of the brand', 'SEO with virality potential for specialized keywords', ' Easy to manage']} />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bgWhite">
+                            <Container>
+                                <div className="section">
+                                    <div className='use_case_heading'>Related projects</div>
+                                    <GridSlider list={list} />
+                                </div>
+                            </Container>
+                        </div>
                         <Footer />
                     </div>
                 </div>
