@@ -1,9 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap"
 import CardSlider from "./CardSlider"
-import recode_01 from '&/Assets/Home/01.png'
-import recode_02 from '&/Assets/Home/02.png'
-import recode_03 from '&/Assets/Home/03.png'
-import recode_04 from '&/Assets/Home/04.png'
 import Image from "next/image"
 const PortfolioSection = () => {
     return (
@@ -28,7 +24,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <Image src={recode_01} alt="" />
+                                <Image src='/Assets/Home/a01.png' alt="" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
                                 28+
@@ -42,7 +38,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <Image src={recode_02} alt="" />
+                                <Image src='/Assets/Home/a02.png' alt="" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
                                 110+
@@ -56,7 +52,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <Image src={recode_03} alt="" />
+                                <Image src='/Assets/Home/a03.png' alt="" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
                                 5+
@@ -70,7 +66,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <Image src={recode_04} alt="" />
+                                <Image src='/Assets/Home/a04.png' alt="" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
                                 3+
