@@ -1,26 +1,27 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
 import Link from 'next/link'
-const Card = ({ img, title, description, slag }) => {
+import Button from '../button/Button'
+const Card = ({ img, title, description, slag, color }) => {
+    console.log(color)
     return (
-        <Col xxl={3} lg={3} md={6} sm={6} className='my-3'>
+        <Col xxl={3} xl={3} lg={4} md={6} sm={6} className='my-3'>
             <div className="serviceCart">
-                <div className="iconContainer">
+                <div className="iconContainer" style={{ background: color }}>
                     <div className="serviceIcon">
                         <img src={img} />
                     </div>
                 </div>
-                <div className="cartTitle pt-5">
-                    {title}
-                </div>
-                <p>
-                    {description}
-                </p>
-                <div className="btnSection2">
-                    <button>
-                        <Link href={slag}>Read more</Link>
-                        <span></span>
-                    </button>
+                <div className="cardDesc">
+                    <div className="cartTitle pt-4">
+                        {title}
+                    </div>
+                    <p>
+                        {description}
+                    </p>
+                    <div className="btnSection2">
+                        <Button target={slag} title="Read more" />
+                    </div>
                 </div>
             </div>
         </Col>

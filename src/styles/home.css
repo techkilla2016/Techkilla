@@ -212,38 +212,14 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
     padding: 20px 0px;
 }
 
-.btnSection2 button {
-    padding: 12px 20px;
-    font-size: 18px;
-    background: #ffcb47;
-    color: #fff;
-    transition: all 0.1s linear;
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
+.btnSection2 a {
+    text-decoration: none;
 }
 
-.btnSection2 button a {
-    display: block;
-    position: relative;
-    z-index: 10;
+.btnSection2 a:nth-child(1) {
+    margin-right: 20px;
 }
 
-.btnSection2 button span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    background: #000;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: all 0.3s linear;
-}
-
-.btnSection2 button:hover span {
-    transform: translate(-50%, -50%) scale(1);
-}
 
 /* responsive  */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -398,6 +374,15 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
     display: flex;
     justify-content: center;
     padding: 50px 0px;
+}
+
+.serviceButton {
+    padding: 20px 0px 10px 20px;
+}
+
+.serviceButton a {
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .serviceBtn button span {

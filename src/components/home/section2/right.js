@@ -1,3 +1,4 @@
+import Button from '@/components/button/Button'
 import Image from 'next/image'
 import React from 'react'
 import { Col, NavLink, Row } from 'react-bootstrap'
@@ -8,7 +9,7 @@ const ColRight = () => {
         <div className='right-col'>
             <div className='colHeading'>Who We Are</div>
             <h3 className="section__title">
-            Design, develop and execute!
+                Design, develop and execute!
                 <span className="section__title-line"> We manage it all.</span>
             </h3>
             <p className='section_Para' style={{ padding: '40px 0px 30px' }}>
@@ -46,14 +47,8 @@ const ColRight = () => {
                 </Col>
             </Row>
             <div className="btnSection2">
-                <button style={{ marginRight: '30px' }}>
-                    <NavLink to='/'>read mode</NavLink>
-                    <span></span>
-                </button>
-                <button>
-                    <NavLink to="/">Book free demo</NavLink>
-                    <span></span>
-                </button>
+                <Button target='/' title='Read more' />
+                <Button target='https://calendly.com/techkilla/meeting' title='Book free demo' />
             </div>
         </div>
     )
