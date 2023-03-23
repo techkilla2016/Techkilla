@@ -3,7 +3,6 @@ import React from 'react'
 import Button from '../button/Button'
 
 const CaseStudieCart = ({ Heading, img, desc, target }) => {
-    console.log({ Heading, img, desc, target })
     return (
         <div className="cartBody">
             <div className="backBody">

@@ -1,9 +1,7 @@
 import React from 'react'
 import { Col } from 'react-bootstrap'
-import Link from 'next/link'
 import Button from '../button/Button'
 const Card = ({ img, title, description, slag, color }) => {
-    console.log(color)
     return (
         <Col xxl={3} xl={3} lg={4} md={6} sm={6} className='my-3'>
             <div className="serviceCart">

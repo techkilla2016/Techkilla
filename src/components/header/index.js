@@ -43,7 +43,7 @@ const Header = () => {
                         <button>Book A Demo</button>
                     </Link>
                     <Link href='/contact' >
-                        <button>Contect Us</button>
+                        <button>Contact Us</button>
                     </Link >
                 </div >
             </nav >
