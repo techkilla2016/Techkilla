@@ -20,30 +20,40 @@ const ColRight = () => {
             </p>
             <Row>
                 <Col lg={6} md={12} sm={12} >
-                    <div className="sub_secction">
-                        <div className="img_section">
-                            <Image src={img1} alt="" height={90} />
-                        </div>
-                        <div className="para_section">
-                            <div className="heading">Ideal Strategic</div>
-                            <div className='para'>
-                                With the aid of our knowledge, we carefully consider your question and provide you with a fitting response.
+                    {/* <div className="sub_secction"> */}
+                    <Row>
+                        <Col xxl={4} xl={4} lg={4} md={4} sm={4}>
+                            <div className="img_section">
+                                <Image src={img1} alt="" width={1920} height={1080} />
                             </div>
-                        </div>
-                    </div>
+                        </Col>
+                        <Col xxl={8} xl={8} lg={8} md={8} sm={8}>
+                            <div className="para_section">
+                                <div className="heading">Ideal Strategic</div>
+                                <div className='para'>
+                                    With the aid of our knowledge, we carefully consider your question and provide you with a fitting response.
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                    {/* </div> */}
                 </Col>
                 <Col lg={6} md={12} sm={12} >
-                    <div className="sub_secction">
-                        <div className="img_section">
-                            <Image src={img2} alt="" height={90} />
-                        </div>
-                        <div className="para_section">
-                            <div className="heading">Best Performance</div>
-                            <div className='para'>
-                                We turn that tale into the best performance so that your audience will remember it forever.
+                    <Row>
+                        <Col xxl={4} xl={4} lg={4} md={4} sm={4} xm={4}>
+                            <div className="img_section">
+                                <Image src={img2} alt="" width={1920} height={1080} />
                             </div>
-                        </div>
-                    </div>
+                        </Col>
+                        <Col xxl={8} xl={8} lg={8} md={8} sm={8}>
+                            <div className="para_section">
+                                <div className="heading">Best Performance</div>
+                                <div className='para'>
+                                    We turn that tale into the best performance so that your audience will remember it forever.
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
             <div className="btnSection2">

@@ -1,0 +1,675 @@
+.microHome1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.microHome {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.microIntro {
+    font-size: 65px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.microBtnSection {
+    margin-top: 50px;
+}
+
+
+.resbtn2 {
+    display: none;
+}
+
+/* 2 */
+.microSection {
+    width: 100%;
+    padding: 100px 0px;
+    height: auto;
+}
+
+.microSection .heading,
+.micro_heading01 {
+    font-size: 80px;
+    font-weight: 900;
+    text-align: center;
+    color: #000;
+    line-height: 1.2;
+}
+
+.microSection .heading span,
+.micro_heading01 span {
+    color: #fdb714;
+}
+
+.microFulImg {
+    /* width: 80%; */
+    margin: auto;
+}
+
+.microFulImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.microPara {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* 3 */
+.microSection2 {
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.microFun {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.microFun1 {
+    flex-direction: row-reverse;
+}
+
+.microFun_contain {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.BenefitsHeading {
+    padding: 30px 0px;
+}
+
+.micro_title {
+    font-weight: 900;
+    font-size: 35px;
+}
+
+p.micro_desc {
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.microFun_img {
+    width: 20%
+}
+
+.microFun_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.micro-b-cart {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.micro-b-them {
+    width: 100%;
+    background: #040503;
+    border-radius: 22px;
+    box-shadow: 0px 0px 32px 5px #f99c1c;
+    margin-bottom: 30px;
+}
+
+.micro-b-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.micro-b-them img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+}
+
+/* 4 */
+/* usecase  */
+.micro_qr {
+    width: 100%;
+    background: #fff;
+    padding: 100px 0px;
+}
+
+.qr-cases {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fff, #a8adb010);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.col-qr {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px;
+    /* margin-top: 50px; */
+}
+
+.qr-cases-icon {
+    width: 25%;
+    font-size: 80px;
+}
+
+.qr-cases-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.qr-title {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.qr-desc {
+    font-size: 16px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(5, 10, 10, 0.5);
+    font-weight: 500;
+}
+
+.qr-p {
+    margin-top: 80px;
+}
+
+/* 6 */
+.pointBox {
+    display: flex;
+    align-items: center;
+    padding: 40px 0px 0px;
+}
+
+.count {
+    margin-right: 20px;
+    font-size: 40px;
+    color: #fff;
+    background: #fdb714;
+    border-radius: 50%;
+    min-width: 70px;
+    min-height: 70px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.point {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.point a {
+    color: #000;
+}
+.point a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+/* 8 */
+.Qr_cartSection {
+    padding: 70px 0px;
+}
+
+.qr-cost-cart {
+    padding-top: 80px;
+}
+
+.cost-cart-box {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.cost_cart {
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 100px 0px;
+    padding: 20px 30px 50px;
+    position: relative;
+    background: #fff;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.price_section {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0px 30px;
+}
+
+.pay_section {
+    display: flex;
+    margin: 10px 0px 20px;
+}
+
+.price_section .cart-btnBox {
+    background: #f99c1c;
+    font-size: 24px;
+    font-weight: bold;
+    transform: translateX(65px);
+    position: relative;
+    z-index: 10;
+}
+
+.price_section .cart-btnBox::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    background: #dd942e;
+    transform-origin: right bottom;
+    transform: rotate(-0deg) skewY(-30deg);
+    z-index: -10;
+}
+
+.pay_section .cart-btnBox {
+    background: #f99c1c;
+    font-size: 24px;
+    font-weight: bold;
+    transform: translateX(-65px);
+    position: relative;
+    z-index: 10;
+}
+
+.pay_section .cart-btnBox::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #dd942e;
+    transform-origin: left bottom;
+    transform: rotate(-0deg) skewY(30deg);
+    z-index: -10;
+}
+
+.price-label {
+    padding: 5px 10px;
+    width: 100%;
+    background: #f99c1c;
+    height: 100%;
+    transition: all 0.3s linear;
+}
+
+.price-label:hover {
+    /* color: #fff; */
+    background: #dd942e;
+}
+
+.service_type {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.facilitie {
+    width: 100%;
+}
+
+.facilitie_option {
+    border-bottom: 1px solid #040503c8;
+    text-align: left;
+    font-size: 18px;
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.facilitie_option .icon_fa {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.facilitie_option .fa_text {
+    font-size: 18px;
+}
+
+@media (max-width:1440px) {
+    .microIntro {
+        font-size: 60px;
+    }
+
+    .microSection .heading,
+    .micro_heading01 {
+        font-size: 70px;
+    }
+
+    .microPara {
+        font-weight: normal;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:1440px) {
+    .micro_title {
+        font-size: 30px;
+    }
+
+    p.micro_desc {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:1024px) {
+    .service_type {
+        font-size: 24px;
+    }
+
+    .price-label {
+        font-size: 20px;
+    }
+
+    .cost-cart-box {
+        padding: 10px;
+    }
+
+    .price_section {
+        margin: 10px 0px 0px;
+    }
+
+    .cost_cart {
+        padding: 20px 20px 30px;
+        border-radius: 60px 0px;
+    }
+
+    .pay_section .cart-btnBox {
+        transform: translateX(-55px);
+    }
+
+    .price_section .cart-btnBox {
+        transform: translateX(55px);
+    }
+
+    .facilitie_option {
+        padding: 8px 0px;
+    }
+
+    .facilitie_option .icon_fa {
+        font-size: 17px;
+    }
+
+    .facilitie_option .fa_text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:992px) {
+    .microFun_img {
+        width: 25%;
+    }
+
+    .qr-cost-cart {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width:967px) {
+    .microIntro {
+        font-size: 50px;
+    }
+
+    .microSection {
+        padding: 60px 0px;
+    }
+
+    .microSection .heading,
+    .micro_heading01 {
+        font-size: 50px;
+    }
+
+    .microPara {
+        font-size: 18px;
+    }
+
+    .micro_title {
+        font-size: 28px;
+    }
+
+    p.micro_desc {
+        font-size: 18px;
+    }
+
+    .count {
+        min-width: 60px;
+        min-height: 60px;
+        font-size: 35px;
+    }
+
+    .point {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:769px) {
+    .microIntro {
+        font-size: 35px;
+    }
+
+    .microBtnSection {
+        margin-top: 20px;
+    }
+
+    .resbtn1 {
+        display: none;
+    }
+
+    .resbtn2 {
+        display: block;
+    }
+
+    .microFulImg {
+        width: 90%;
+    }
+
+    .microSection .heading {
+        font-size: 40px;
+    }
+
+    .microPara {
+        font-size: 18px;
+    }
+
+    .microFun_img {
+        width: 50%;
+    }
+
+    .microFun {
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .microFun_contain {
+        width: 100%;
+    }
+
+    .micro_qr {
+        padding: 50px 0px;
+    }
+
+    .qr-p {
+        margin: 0px auto;
+    }
+
+    .micro_qr .micro_heading01 {
+        font-size: 60px;
+    }
+
+    .count {
+        min-width: 55px;
+        min-height: 55px;
+        font-size: 30px;
+    }
+
+    .point {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:576px) {
+    .cost-cart-box {
+        padding: 10px 30px;
+    }
+
+    .price-label {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:576px) {
+    .micro-b-them {
+        width: 80%;
+        margin: 0px auto 30px;
+    }
+
+    .micro_qr .micro_heading01 {
+        font-size: 55px;
+    }
+
+    .pointBox {
+        padding: 25px 0px 0px;
+    }
+
+    .count {
+        min-width: 50px;
+        min-height: 50px;
+        font-size: 24px;
+    }
+
+    .point {
+        font-size: 24px;
+    }
+}
+
+@media (max-width:549px) {
+    .microIntro {
+        font-size: 30px;
+        padding: 0px 20px;
+    }
+
+    .button2 {
+        padding: 12px 15px;
+        /* font-size: 14px; */
+    }
+
+    .microPara {
+        font-size: 14px;
+    }
+
+    .micro_title {
+        font-size: 24px;
+    }
+
+    p.micro_desc {
+        font-size: 16px;
+    }
+
+    .micro_qr .micro_heading01 {
+        font-size: 50px;
+    }
+
+    .count {
+        min-width: 45px;
+        min-height: 45px;
+        font-size: 20px;
+    }
+
+    .point {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:440px) {
+    .microIntro {
+        font-size: 20px;
+    }
+
+    .button2 {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .microPara {
+        font-size: 12px;
+    }
+
+    .micro_title {
+        font-size: 20px;
+    }
+
+    p.micro_desc {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:425px) {
+    .col-qr {
+        padding: 20px 0px;
+    }
+
+    .micro_qr .micro_heading01 {
+        font-size: 45px;
+    }
+
+    .qr-cases-icon {
+        width: 20%;
+    }
+
+    .qr-title {
+        font-size: 20px;
+    }
+
+    .qr-desc {
+        font-size: 14px;
+        padding-top: 0px;
+    }
+}
+
+@media (max-width:375px) {
+
+    .microSection .heading,
+    .micro_heading01 {
+        font-size: 30px;
+    }
+
+    .count {
+        min-width: 35px;
+        min-height: 35px;
+        font-size: 16px;
+    }
+
+    .point {
+        font-size: 16px;
+    }
+}

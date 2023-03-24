@@ -152,3 +152,50 @@
 .fil0 {
     fill: #ffce39
 }
+
+
+/* button 2 */
+.button2 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 10px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #000;
+    cursor: pointer;
+    padding: 15px 20px;
+    line-height: 1;
+    overflow: hidden;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button2:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button2:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+    background: #fafafa;
+}
+
+.button2:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+@media (max-width:967px) {
+    .button2 {
+        font-size: 16px;
+    }
+}

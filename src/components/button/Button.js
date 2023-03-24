@@ -51,5 +51,12 @@ const Button = ({ target, title }) => {
         </Link>
     )
 }
+export const ButtonLight = ({ target, title }) => {
+    return (
+        <Link href={target} >
+            <button role="button" className="button2">{title}</button>
+        </Link>
+    )
+}
 
 export default Button
