@@ -7,7 +7,28 @@ import bg from '&/Assets/service/web banner_playable ads.jpg'
 import serive from '../../../../public/Assets/service/miro-service.gif'
 import Footer from '@/components/footer'
 import SingleCard from '@/components/ProjectSlider/singleCard'
-
+const related_project = [
+    {
+        title: "KuKu FM - Guess the personality puzzle",
+        them: "/assets/service/500x500/KuKu_FM_Guess_the_personality_uzzle.png"
+    },
+    {
+        title: "Microsoft - Pride month AR filter",
+        them: "/assets/service/500x500/Microsoft_Pride_month_AR_filte.png"
+    },
+    {
+        title: "ITC Football header",
+        them: "/assets/service/500x500/ITC_Football_header.png"
+    },
+    {
+        title: "ITC Football Bounce Roll",
+        them: "/assets/service/500x500/ITC_Football_Bounce_Roll.png"
+    },
+    {
+        title: "Fun wagerz - FIFA world cup",
+        them: "/assets/service/500x500/Fun_wagerz.png"
+    },
+]
 const PlayableAds = () => {
     const css = { maxWidth: '100%', height: 'auto' }
     return (
@@ -73,7 +94,7 @@ const PlayableAds = () => {
                             <Container>
                                 <div className="section">
                                     <div className='use_case_heading'>Related projects</div>
-                                    <SingleCard list={['KuKu FM - Guess the personality puzzle', "Microsoft - Pride month AR filter", "ITC Football header", "ITC Football Bounce Roll", "Fun wagerz - FIFA world cup"]} />
+                                    <SingleCard list={related_project} />
                                 </div>
                             </Container>
                         </div>

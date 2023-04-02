@@ -4,10 +4,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { GiClapperboard, GiMicrophone, GiFilmProjector, GiFreemasonry } from 'react-icons/gi'
+import { GiClapperboard, GiMicrophone, GiFilmProjector } from 'react-icons/gi'
 import { FaChalkboardTeacher } from 'react-icons/fa'
 import { MdComputer } from 'react-icons/md'
-import { TbHexagonNumber1 } from 'react-icons/tb'
 
 const index = () => {
     return (

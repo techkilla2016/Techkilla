@@ -96,11 +96,11 @@ const Home = () => {
             </div>
 
             {/* // Section4 Service */}
-            <div className="section4">
+            {/* <div className="section4">
               <div className="section5Inner">
                 <WhatWeDo />
               </div>
-            </div>
+            </div> */}
             <Footer />
           </div>
         </div>

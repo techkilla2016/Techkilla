@@ -55,7 +55,7 @@ const PortfolioSection = () => {
                                 <Image src='/Assets/Home/a03.png' alt="" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
-                                5+
+                                50+
                             </div>
                             <div className="recodeTitle">
                                 Organic Impressions

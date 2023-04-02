@@ -137,6 +137,104 @@ const packagecart = [
     "Add-on features with in microsite",
 ]
 
+const expertise = [
+    {
+        img: '/assets/Microsite/expertise_01.png',
+        title: "Healthcare & Pharmacy"
+    },
+    {
+        img: '/assets/Microsite/expertise_02.png',
+        title: "Automobile Industry"
+    },
+    {
+        img: '/assets/Microsite/expertise_03.png',
+        title: "Travel & Tourism"
+    },
+    {
+        img: '/assets/Microsite/expertise_04.png',
+        title: "Banking"
+    },
+    {
+        img: '/assets/Microsite/expertise_05.png',
+        title: "Gaming Industry"
+    },
+    {
+        img: '/assets/Microsite/expertise_06.png',
+        title: "E-Commerce & Retail"
+    },
+    {
+        img: '/assets/Microsite/expertise_07.png',
+        title: "Education"
+    },
+    {
+        img: '/assets/Microsite/expertise_08.png',
+        title: "Hotel & Restaurants"
+    },
+    {
+        img: '/assets/Microsite/expertise_09.png',
+        title: "Media Event & Entertainment"
+    },
+    {
+        img: '/assets/Microsite/expertise_10.png',
+        title: "Food & Beverages"
+    },
+]
+
+const graphGrow = [
+    {
+        img: '/assets/Microsite/graph_01.png',
+        title: 'MORE ENGAGING',
+        desc: `Experiential technology gives a user 3X more engagement than any TVc, video ads or billboards.`
+    },
+    {
+        img: '/assets/Microsite/graph_02.png',
+        title: 'MORE MEMORABLE',
+        desc: `participation in an activity & earning rewards gives a 70% better memory recall rate.`
+    },
+    {
+        img: '/assets/Microsite/graph_03.png',
+        title: 'OF CONSUMER',
+        desc: `One-third of shoppers concur that handling the product in person enhances the shopping experience.`
+    },
+    {
+        img: '/assets/Microsite/graph_03.png',
+        title: 'MORE ACCESSIBLE',
+        desc: `Using experiential technology, millions of people can interact both in person & online at once.`
+    },
+]
+
+const choose_list = [
+    {
+        title: 'Cost-effective solutions',
+        desc: `The business's ROI plan is transparent. As a result, 
+        our pricing is reasonable and competitive.`,
+        img: '/assets/Microsite/choose_01.png'
+    },
+    {
+        title: 'Customizable Unique Designs',
+        desc: `We create entirely individualised business solutions 
+        based on your requirements and utility`,
+        img: '/assets/Microsite/choose_02.png'
+    },
+    {
+        title: 'Customer Support',
+        desc: `Customer satisfaction is our top priority, and our 
+        support staff is dedicated to providing the best service.`,
+        img: '/assets/Microsite/choose_03.png'
+    },
+    {
+        title: 'Strong Expertise',
+        desc: `Our tight-knit team of experts simplifies and accurately 
+        solves complex problems for your idea.`,
+        img: '/assets/Microsite/choose_04.png'
+    },
+    {
+        title: 'Free Consultation',
+        desc: `Our strategy experts can help you find the best solutions 
+        for your brand theme and campaign.`,
+        img: '/assets/Microsite/choose_05.png'
+    },
+]
 const index = () => {
     return (
         <>
@@ -550,7 +648,135 @@ const index = () => {
                                     </Row>
                                 </Container>
                             </div>
+                            <Container>
+                                <div className="qr_note">
+                                    <span>Note-</span> Start with your customized microsite now. <Link href='https://calendly.com/techkilla/'>Book Demo</Link>
+                                </div>
+                            </Container>
                         </div>
+
+                        {/* 9 */}
+                        <div className="microSection" style={{ background: '#fff' }}>
+                            <h2 className="heading">
+                                Additional features
+                            </h2>
+                            <Container>
+                                <div className="microFulImg">
+                                    <Image src='/assets/Microsite/microsite_02.png' width={1920} height={1080} />
+                                </div>
+                                <div className="microPara">
+                                    Your microsite can experience more features like Gaming engagement,
+                                    digital photobooth interlinking, HR planned activities & many more use
+                                    cases.We customize your microsite as per the storyline and new ideas.
+                                </div>
+                            </Container>
+                        </div>
+
+                        {/* 10 */}
+                        <div className="Expertise_container" >
+                            <Container>
+                                <div className="micro_heading01">Our <span>Industry</span> Expertise</div>
+                                <div className="qr_Expertise_container">
+                                    <Row>
+                                        {
+                                            expertise?.map((item, index) => {
+                                                return <Col key={index} xxl={3} xl={3} lg={3} md={4} sm={6} xm={12}>
+                                                    <div className="qr_expertise">
+                                                        <div className="qr_exp_img">
+                                                            <Image src={item.img} width={1920} height={1080} />
+                                                        </div>
+                                                        <div className="expertise_title">
+                                                            {item.title}
+                                                        </div>
+                                                    </div>
+                                                </Col>
+                                            })
+                                        }
+                                    </Row>
+                                </div>
+                            </Container>
+                            <Container>
+                                <div className="Expertise_graph">
+                                    <h3 className='Expertise_para'>Grow your reach with enhanced interactive engagements</h3>
+                                    <Row>
+                                        {
+                                            graphGrow?.map((item, index) => {
+                                                return <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} key={index}>
+                                                    <div className="graph_container">
+                                                        <div className="graph_img">
+                                                            <Image src={item.img} width={1920} height={1080} />
+                                                        </div>
+                                                        <h4>{item.title}</h4>
+                                                        <p>{item.desc}</p>
+                                                    </div>
+                                                </Col>
+                                            })
+                                        }
+                                    </Row>
+                                </div>
+                            </Container>
+                        </div>
+
+                        {/* 11 */}
+                        <div className="Expertise_container res-top" style={{ background: '#f5f5f4' }} >
+                            <Container>
+                                <Row className='align-items-center'>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className="micro_heading01">
+                                            We <span>Collaborate</span> with <span>Brands</span> and <span>Agencies!</span>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className="imgfulScreen">
+                                            <Image src='/assets/Microsite/Brands.png' width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+
+                        {/* 12 */}
+                        <div className="Expertise_container py-5">
+                            <Container>
+                                <Row className='align-items-center'>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className="imgfulScreen db-ful">
+                                            <Image src='/assets/Microsite/logo-02.png' width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className="imgfulScreen db-ful">
+                                            <Image src='/assets/Microsite/logo-01.png' width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                            <div className="choose_container">
+                                <Container>
+                                    {
+                                        choose_list?.map((item, index) => {
+                                            return <Row className='align-items-center'>
+                                                <Col xxl={9} xl={9} lg={9} md={9} sm={12} xm={12} >
+                                                    <div className="choose_list">
+                                                        <h3><span></span> {item.title}</h3>
+                                                        <p>
+                                                            {item.desc}
+                                                        </p>
+                                                    </div>
+                                                </Col>
+                                                <Col xxl={3} xl={3} lg={3} md={3} sm={12} xm={12} >
+                                                    <div className="imageSec">
+                                                        <Image src={item.img} width={1920} height={1080} />
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                        })
+                                    }
+
+                                </Container>
+                            </div>
+                        </div>
+
                         <Footer />
                     </div>
                 </div>

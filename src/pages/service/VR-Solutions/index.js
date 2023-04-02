@@ -8,6 +8,24 @@ import serive from '../../../../public/Assets/service/miro-service.gif'
 import Footer from '@/components/footer'
 import UseCase from '@/components/service/UseCase'
 import SingleCard from '@/components/ProjectSlider/singleCard'
+const related_project = [
+    {
+        title: "CEAT Shoppe experience - CEAT Tyres",
+        them: "/assets/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
+    },
+    {
+        title: "QR_based_registration",
+        them: "/assets/service/500x500/QR_based_registration.png"
+    },
+    {
+        title: "CEAT truck service hub experience - CEAT Tyres",
+        them: "/assets/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
+    },
+    {
+        title: "VR Activities",
+        them: "/assets/service/500x500/VR_Activities.png"
+    },
+]
 const VRSolutions = () => {
     const css = { maxWidth: '100%', height: 'auto' }
     return (
@@ -111,7 +129,7 @@ const VRSolutions = () => {
                             <Container>
                                 <div className="section">
                                     <div className='use_case_heading'>Related projects</div>
-                                    <SingleCard list={['CEAT Shoppe experience - CEAT Tyres', 'CEAT truck service hub experience - CEAT Tyres']} />
+                                    <SingleCard list={related_project} />
                                 </div>
                             </Container>
                         </div>

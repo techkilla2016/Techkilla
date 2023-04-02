@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import "swiper/swiper-bundle.css";
-import project from '&/Assets/playable.jpg'
 import Link from "next/link";
 import Image from "next/image";
 import { Autoplay, Navigation } from "swiper";
@@ -47,10 +46,10 @@ function GridSlider({ list }) {
                         return <SwiperSlide key={index}>
                             <div className="swiperCart">
                                 <div className="backLyer">
-                                    <Image src={project} />
+                                    <Image src={item.them} width={1920} height={1080} />
                                 </div>
                                 <div className="lyear">
-                                    <Link href={`/${item}`}> {item}</Link>
+                                    <Link href={`/${item.title}`}> {item.title}</Link>
                                 </div>
                             </div>
                         </SwiperSlide>

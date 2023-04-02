@@ -5,7 +5,6 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
-import project from '@/Assets/service/Distinguishing The Corporate-01.png'
 
 export default function SingleCard({ list }) {
   return (
@@ -17,7 +16,7 @@ export default function SingleCard({ list }) {
           clickable: true,
         }}
         breakpoints={{
-          0:{
+          0: {
             slidesPerView: 1,
             spaceBetween: 10,
           },
@@ -42,10 +41,10 @@ export default function SingleCard({ list }) {
             return <SwiperSlide key={index}>
               <div className="swiperCart">
                 <div className="backLyer">
-                  <Image src={project} />
+                  <Image src={item.them} width={1920} height={1080} />
                 </div>
                 <div className="lyear">
-                  <Link href={`/${item}`}> {item}</Link>
+                  <Link href={`/${item.title}`}> {item.title}</Link>
                 </div>
               </div>
             </SwiperSlide>
