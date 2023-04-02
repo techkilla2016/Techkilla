@@ -38,12 +38,12 @@ export default function Benefits({ data }) {
                     data.map((item, index) => {
                         return <SwiperSlide key={index}>
                             <div className="BenefitsTitile">
-                                <div class="containerOut">
-                                    <div class="title">
+                                <div className="containerOut">
+                                    <div className="title">
                                         <h1>{item}</h1>
                                     </div>
                                 </div>
-                                <div class="ghost">
+                                <div className="ghost">
                                     <div></div>
                                     <div></div>
                                     <div></div>

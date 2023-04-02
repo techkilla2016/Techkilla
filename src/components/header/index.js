@@ -4,6 +4,8 @@ import { CgMenuRightAlt } from 'react-icons/cg'
 import { IoCloseSharp } from 'react-icons/io5'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Col, Form, Modal, Row } from 'react-bootstrap'
+import Button from '../button/Button'
 const Header = () => {
     const [windowSize, setWindowSize] = useState({
         width: undefined,
@@ -22,7 +24,7 @@ const Header = () => {
         windowSize.width > 966 ? setIsMobile(true) : setIsMobile(false)
         return () => window.removeEventListener("resize", handleResize);
     }, []);
-
+    const [show, setShow] = useState(false)
     if (windowSize.width > 966) {
         return (
             <nav>
@@ -35,7 +37,7 @@ const Header = () => {
                         <Link className='navlink' href='/about'>About</Link>
                         <Link className='navlink' href='/service'>Service</Link>
                         <Link className='navlink' href="/case-studies">Case Studies</Link>
-                        <Link className='navlink' href='/careers' > Careers</Link >
+                        <button className='navlink' onClick={() => setShow(true)}> Careers</button>
                     </div >
                 </div >
                 <div className="navButton">
@@ -46,6 +48,45 @@ const Header = () => {
                         <button>Contact Us</button>
                     </Link >
                 </div >
+                <Modal size="xl" centered show={show} onHide={() => setShow(false)}>
+                    <Modal.Header className='mb-4' closeButton>
+                        <Modal.Title>Careers Form</Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                        <Form className='px-5 pb-4'>
+                            <Row>
+                                <Col>
+                                    <Form.Label>First Name</Form.Label>
+                                    <Form.Control />
+                                </Col>
+                                <Col>
+                                    <Form.Label>Last Name</Form.Label>
+                                    <Form.Control />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Form.Label>Phone Number*</Form.Label>
+                                    <Form.Control />
+                                </Col>
+                                <Col>
+                                    <Form.Label>Opportunity Looking For*    </Form.Label>
+                                    <Form.Control />
+                                </Col>
+                            </Row>
+                            <Form.Group className="my-3 mb-4 pb-4" controlId="formGridAddress2">
+                                <Form.Label>How did you hear about us?</Form.Label>
+                                <Form.Control />
+                            </Form.Group>
+                            <button onClick={() => {
+                                setShow(false)
+                            }}>
+                                <Button target='' title='Send Massage'></Button>
+                            </button>
+                        </Form>
+                    </Modal.Body>
+                </Modal>
             </nav >
         )
     } else {
@@ -77,9 +118,6 @@ const Header = () => {
                             <div className='listMenu' onClick={() => setIsMobile(false)}>
                                 <Link href="/case-studies">Case Studies</Link>
                             </div>
-                            <div className='listMenu' onClick={() => setIsMobile(false)}>
-                                <Link href='/careers'>Careers</Link>
-                            </div >
                         </div >
                         <div className="MobileNavBtn">
                             <Link href='https://calendly.com/ensights-meeting/' target='_blank'>

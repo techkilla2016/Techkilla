@@ -51,11 +51,12 @@ const Button = ({ target, title }) => {
         </Link>
     )
 }
-export const ButtonLight = ({ target, title }) => {
+export const ButtonLight = ({ target, title, type }) => {
     return (
-        <Link href={target} >
-            <button role="button" className="button2">{title}</button>
-        </Link>
+        target ? <button role="button" className="button2">{title}</button>
+            : <Link href={target ? target : '/'} >
+                <button role="button" className="button2">{title}</button>
+            </Link>
     )
 }
 

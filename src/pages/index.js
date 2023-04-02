@@ -105,10 +105,8 @@ const Home = () => {
           </div>
         </div>
       </main>
-
     </>
   )
 }
 
 export default Home
-

@@ -28,72 +28,139 @@ const index = () => {
                                 </div>
                             </div>
                         </div>
-                        <Container className="caseContainer">
-                            <Row>
-                                <Col xxl={8} xl={8} lg={7} md={7} sm={12}>
-                                    <div className="ColText">
-                                        An exciting and entertaining exercise for the crowd that took place at the launch of Tetra pak's "Commit to win" campaign.
-                                    </div>
-                                </Col>
-                                <Col xxl={4} xl={4} lg={5} md={5} sm={12}>
-                                    <div className="imageCol">
-                                        <Image src='/assets/use-case/Tetra-Pak1.png' width={1920} height={1080} />
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Container>
+                        <div className="Excitometer">
+                            <Container>
+                                <Row>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className="pageInnerCol">
+                                            <h2 className="headCol">
+                                                Excitometer-Tetra Pak
+                                            </h2>
+                                            <div className="ColPara">
+                                                An exciting and entertaining exercise for the crowd that took place at the launch of Tetra pak's "Commit to win" campaign.
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className='caseFullImg'>
+                                            <Image src="/Assets/use-case/Tetra-Pak2.png" width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
                         <div className="pageContainer">
                             <h2 className="heading"> Key highlights</h2>
                             <Container>
-                                <Row className='justify-content-center'>
-                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12} >
-                                        <div className="key-inner">
-                                            <div className="keyCount">
-                                                <GiMicrophone />
-                                            </div>
-                                            <div className='keyPara'>
-                                                Real-time address <br /> to the adoring crowd
-                                            </div>
-                                        </div>
-                                    </Col>
-                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12} >
-                                        <div className="key-inner">
-                                            <div className="keyCount">
-                                                <GiClapperboard />
-                                            </div>
-                                            <div className='keyPara'>
-                                                Almost a thousand audience members hooted together to demonstrate their "commitment to win."
+                                <Row>
+                                    <Col xxl={6} xl={6} lg={6} md={6} sm={6} xs={12}>
+                                        <div className='key-cart'>
+                                            <div className='keyCount'>
+                                                <Row className='align-items-center'>
+                                                    <Col xxl={3} xl={3} lg={3} md={4} sm={4} xs={3}>
+                                                        <div className='key-icon'>
+                                                            <GiMicrophone />
+                                                        </div>
+                                                    </Col>
+                                                    <Col xxl={9} xl={9} lg={9} md={8} sm={8} xs={9}>
+                                                        <div className='key-para'>
+                                                            Real-time address to the adoring crowd
+                                                        </div>
+                                                    </Col>
+                                                </Row>
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12} >
-                                        <div className="key-inner">
-                                            <div className="keyCount">
-                                                <FaChalkboardTeacher />
-                                            </div>
-                                            <div className='keyPara'>
-                                                Principal activity
+
+                                    <Col xxl={6} xl={6} lg={6} md={6} sm={6} xs={12}>
+                                        <div className='key-cart'>
+                                            <div className='keyCount'>
+                                                <Row className='align-items-center'>
+                                                    <Col xxl={3} xl={3} lg={3} md={4} sm={4} xs={3}>
+                                                        <div className='key-icon'>
+                                                            <GiFilmProjector />
+                                                        </div>
+                                                    </Col>
+                                                    <Col xxl={9} xl={9} lg={9} md={8} sm={8} xs={9}>
+                                                        <div className='key-para'>
+                                                            Exceptional animation display
+                                                        </div>
+                                                    </Col>
+                                                </Row>
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12} >
-                                        <div className="key-inner">
-                                            <div className="keyCount">
-                                                <GiFilmProjector />
-                                            </div>
-                                            <div className='keyPara'>
-                                                Exceptional animation display
+                                    <Col xxl={6} xl={6} lg={6} md={6} sm={6} xs={12}>
+                                        <div className='key-cart'>
+                                            <div className='keyCount'>
+                                                <Row className='align-items-center'>
+                                                    <Col xxl={3} xl={3} lg={3} md={4} sm={4} xs={3}>
+                                                        <div className='key-icon'>
+                                                            <FaChalkboardTeacher />
+                                                        </div>
+                                                    </Col>
+                                                    <Col xxl={9} xl={9} lg={9} md={8} sm={8} xs={9}>
+                                                        <div className='key-para'>
+                                                            The primary or main activity being pursued
+                                                        </div>
+                                                    </Col>
+                                                </Row>
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12} >
-                                        <div className="key-inner">
-                                            <div className="keyCount">
-                                                <MdComputer />
+
+                                    <Col xxl={6} xl={6} lg={6} md={6} sm={6} xs={12}>
+                                        <div className='key-cart'>
+                                            <div className='keyCount'>
+                                                <Row className='align-items-center'>
+                                                    <Col xxl={3} xl={3} lg={3} md={4} sm={4} xs={3}>
+                                                        <div className='key-icon'>
+                                                            <MdComputer />
+                                                        </div>
+                                                    </Col>
+                                                    <Col xxl={9} xl={9} lg={9} md={8} sm={8} xs={9}>
+                                                        <div className='key-para'>
+                                                            No external hardware is  necessary
+                                                        </div>
+                                                    </Col>
+                                                </Row>
                                             </div>
-                                            <div className='keyPara'>
-                                                No external hardware is <br /> necessary
+                                        </div>
+                                    </Col>
+
+
+                                    {/* <Col xxl={4} xl={4} lg={4} md={6} sm={12} xs={12}>
+                                        <div className='key-cart'>
+                                            <div className='keyCount'>
+                                                <div className='key-icon'>
+                                                    <GiClapperboard />
+                                                </div>
+                                                <div className='key-para'>
+                                                    1,000 audience members hooted to commit to winning.
+                                                </div>
                                             </div>
+                                        </div>
+                                    </Col> */}
+                                </Row>
+                            </Container>
+                        </div>
+
+                        <div className="pageContAbout">
+                            <Container>
+                                <Row>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className="pageInnerCol">
+                                            <div className="headCol">
+                                                What is an excitometer?
+                                            </div>
+                                            <div className="ColPara">
+                                                Excitometer is a piece of hardware that works with smart software to record loud cheering, screaming, or hooting from the crowd and turn it into a visual representation.
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className='caseFullImg'>
+                                            <Image src="/Assets/use-case/excitometer2.png" width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
@@ -101,44 +168,26 @@ const index = () => {
                         </div>
 
                         <div className="pageContAbout">
-                            <div className="pageContInner">
-                                <Container>
-                                    <Row>
-                                        <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
-                                            <div className="pageInnerCol">
-                                                <div className="headCol">
-                                                    What is an excitometer?
-                                                </div>
-                                                <div className="ColPara">
-                                                    Excitometer is a piece of hardware that works with smart software to record loud cheering, screaming, or hooting from the crowd and turn it into a visual representation.
-                                                </div>
+                            <Container>
+                                <Row className='flex-col'>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className='caseFullImg'>
+                                            <Image src="/Assets/use-case/excitometer1.png" width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                        <div className="pageInnerCol">
+                                            <div className="headCol">
+                                                How does it work?
                                             </div>
-                                        </Col>
-                                        <Col xxl={6} xl={6} lg={6} md={12} sm={12}></Col>
-                                    </Row>
-                                </Container>
-                            </div>
-                        </div>
-
-                        <div className="pageContAbout1">
-                            <div className="pageContInner1">
-                                <Container>
-                                    <Row>
-                                        <Col xxl={7} xl={7} lg={7} md={12} sm={12}></Col>
-                                        <Col xxl={5} xl={5} lg={5} md={12} sm={12}>
-                                            <div className="pageInnerCol">
-                                                <div className="headCol">
-                                                    How does it work?
-                                                </div>
-                                                <div className="ColPara">
-                                                    a work of art that has been crafted specifically for the brand in accordance with its requirements, which determine how the final product will look. An external microphone that picks up the frequency and supplies the software with the input it needs.
-                                                    When it hits the predetermined threshold, the event that sets off the trigger will occur.
-                                                </div>
+                                            <div className="ColPara">
+                                                a work of art that has been crafted specifically for the brand in accordance with its requirements, which determine how the final product will look. An external microphone that picks up the frequency and supplies the software with the input it needs.
+                                                When it hits the predetermined threshold, the event that sets off the trigger will occur.
                                             </div>
-                                        </Col>
-                                    </Row>
-                                </Container>
-                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
                         </div>
 
                         <div className="useCaseSection">
@@ -147,52 +196,39 @@ const index = () => {
                                     What are the different <br /> use cases of Excitometer?
                                 </div>
                                 <Row>
-                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12}>
-                                        <div class="infoGraphic">
-
-                                            <div className="li">
-                                                <div class="numberWrap">
-                                                    <div class="number fontColor1">1</div>
-                                                    <div class="coverWrap">
-                                                        <div class="numberCover"></div>
-                                                    </div>
+                                    <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12}>
+                                        <div className='key-cart'>
+                                            <div className='keyCount'>
+                                                <div className='key-count' id='key-count1'>
+                                                    1
                                                 </div>
-                                                <div class="content">
-                                                    <p>Freebie-dispensing machine</p>
+                                                <div className='benif-para'>
+                                                    A machine that dispenses free items or giveaways.
                                                 </div>
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12}>
-                                        <div class="infoGraphic">
-
-                                            <div className="li">
-                                                <div class="numberWrap">
-                                                    <div class="number fontColor2">2</div>
-                                                    <div class="coverWrap">
-                                                        <div class="numberCover">
-
-                                                        </div>
-                                                    </div>
+                                    <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12}>
+                                        <div className='key-cart'>
+                                            <div className='keyCount'>
+                                                <div className='key-count' id='key-count2'>
+                                                    2
                                                 </div>
-                                                <div class="content">
-                                                    <p>A Party to Honor and Commemorate the Launch of a New Product</p>
+                                                <div className='benif-para'>
+                                                    Numerous events apart from logo launches taking place.
                                                 </div>
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col xxl={4} xl={4} lg={4} md={6} sm={12}>
-                                        <div class="infoGraphic">
 
-                                            <div className="li">
-                                                <div class="numberWrap">
-                                                    <div class="number  fontColor3">3</div>
-                                                    <div class="coverWrap">
-                                                        <div class="numberCover"></div>
-                                                    </div>
+                                    <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12}>
+                                        <div className='key-cart'>
+                                            <div className='keyCount'>
+                                                <div className='key-count' id='key-count3' >
+                                                    3
                                                 </div>
-                                                <div class="content">
-                                                    <p>	Many other events besides logo unveilings</p>
+                                                <div className='benif-para'>
+                                                    Product launch party celebration and commemoration.
                                                 </div>
                                             </div>
                                         </div>
@@ -200,7 +236,7 @@ const index = () => {
                                 </Row>
                             </Container>
                         </div>
-                        <div className="useCaseSection">
+                        {/* <div className="useCaseSection">
                             <Container>
                                 <div className="heading">
                                     Benefits
@@ -238,7 +274,7 @@ const index = () => {
                                     </Row>
                                 </div>
                             </Container>
-                        </div>
+                        </div> */}
                         <Footer />
                     </div>
                 </div>

@@ -172,7 +172,8 @@ nav {
     padding: 15px 0px;
 }
 
-.listMenu a {
+.listMenu a,
+.listMenu {
     text-decoration: none;
     color: rgb(12 44 43 / 50%);
     font-weight: bold;
@@ -180,7 +181,8 @@ nav {
     font-size: 20px;
 }
 
-.listMenu a.active {
+.listMenu a.active,
+.listMenu.active {
     color: #000;
 }
 
