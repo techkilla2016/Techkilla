@@ -65,7 +65,7 @@ const MicrositeDesign = ({ list, usecase }) => {
                                     <Container>
                                         <div className='use_case_heading'>Use cases</div>
                                         <Row>
-                                            {usecase?.data?.map((curItem, index) => <UseCase key={index} img={curItem.img} title={curItem.title} />)}
+                                            {usecase?.map((curItem, index) => <UseCase key={index} img={curItem.img} title={curItem.title} />)}
                                         </Row>
                                     </Container>
                                 </div>
@@ -81,7 +81,7 @@ const MicrositeDesign = ({ list, usecase }) => {
                             <Container>
                                 <div className="section">
                                     <div className='use_case_heading'>Related projects</div>
-                                    <GridSlider list={list.data} />
+                                    <GridSlider list={list} />
                                 </div>
                             </Container>
                         </div>
@@ -102,8 +102,8 @@ export const getServerSideProps = async () => {
     const usecase = await resUseCase.json()
     return {
         props: {
-            list: data,
-            usecase
+            list: data?.data,
+            usecase: usecase?.data
         }
     }
 }
