@@ -7,6 +7,125 @@ import Link from 'next/link'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { SiBlockchaindotcom } from 'react-icons/si'
+const funData = [
+    {
+        title: 'Form to sign up for an event or campaign',
+        desc: `A personalized web-browser-based registration form that lets your 
+        audience fill in their own information or that the promoter can fill in
+        on their behalf at the time of registration`,
+        img: '/assets/Microsite/microsite-banner-02.png'
+    },
+    {
+        title: 'Automatic database registration link emailing',
+        desc: `If we already have the database our intelligent software 
+        auto sends the registration form link to all the users via email.`,
+        img: '/assets/Microsite/microsite-banner-03.png'
+    },
+    {
+        title: 'Unique QR code',
+        desc: `After submitting the form, each attendee will receive a personalized 
+        QR code through email to present at the event`,
+        img: '/assets/Microsite/microsite-banner-04.png'
+    },
+    {
+        title: 'QR Scanner with auto-verification',
+        desc: `A QR code scanner web application that is solely dedicated to 
+        the purpose of scanning and verifying attendance at the moment 
+        of entry for all of the participants`,
+        img: '/assets/Microsite/microsite-banner-05.png'
+    },
+    {
+        title: 'Instant printout',
+        desc: `Immediately following the verification or completion of the form, 
+        a printout will be generated and can be distributed to participants.`,
+        img: '/assets/Microsite/microsite-banner-06.png'
+    },
+    {
+        title: 'Backend Acknowledgement & Database',
+        desc: `The backend server will record the person's name and entry time 
+        and date on the server for future use.`,
+        img: '/assets/Microsite/microsite-banner-07.png'
+    },
+]
+const benefits = [
+    {
+        img: '/assets/Microsite/microsite-b-01.png',
+        title: `Chaos-free Audience Management`
+    },
+    {
+        img: '/assets/Microsite/microsite-b-02.png',
+        title: `Effortless`
+    },
+    {
+        img: '/assets/Microsite/microsite-b-03.png',
+        title: `100% Backend Record`
+    },
+    {
+        img: '/assets/Microsite/microsite-b-04.png',
+        title: `Integrity of the data`
+    },
+    {
+        img: '/assets/Microsite/microsite-b-05.png',
+        title: `Auto-email`
+    },
+    {
+        img: '/assets/Microsite/microsite-b-06.png',
+        title: `Time-saver`
+    },
+]
+
+const userCase = [
+    {
+        icon: '/assets/Microsite/user-case01.png',
+        title: 'Pre event registration',
+        desc: `Online forms are increasingly being used for pre-event registration, when attendees provide their contact information and indicate whether they want to attend the event virtually or in person. Techkilla allows you to give your form a look and feel that is consistent with your brand.`
+    },
+
+    {
+        icon: '/assets/Microsite/user-case02.png',
+        title: 'On spot registration',
+        desc: `On-the-spot registration is performed at any event that requests attendee 
+        information and requires immediate identification. For instance, at the 
+        registration counter at trade shows and fairs, attendees' personal data is 
+        collected and an ID card is promptly printed`
+    },
+
+    {
+        icon: '/assets/Microsite/user-case03.png',
+        title: 'Entry verification',
+        desc: `The verification of registered users' entries plays a crucial part in crowd 
+        control by allowing entrance only to confirmed attendance. Techkilla's 
+        web-based scanner programme reads the QR code to verify the user's 
+        identity.`
+    },
+
+    {
+        icon: '/assets/Microsite/user-case04.png',
+        title: 'Audience management',
+        desc: `When working with a large group of people, it might be difficult to 
+        keep everyone under control. Our proprietary software streamlines
+        the process of managing a large audience by handling tasks such
+        as signup, automated emailing, QR code production, verification, 
+        and database administration.`
+    },
+
+    {
+        icon: '/assets/Microsite/user-case05.webp',
+        title: 'Student registration',
+        desc: `It is during admissions, college festivals, and other cultural events that 
+        the majority of students sign up to attend. Our AI technology is able to 
+        allow the management to operate on registration and fast ID printing 
+        within no time and seamlessly.`
+    },
+    {
+        icon: '/assets/Microsite/user-case06.webp',
+        title: 'Goodies distribution and many more',
+        desc: `Almost every event and freebie distribution includes the delivery of 
+        goodies as a form of appreciation. Get the user database with the help 
+        of our software and send out rewards to real people.`
+    },
+]
+
 const packagecart = [
     ' Personalized registration form',
     "Scanner application (Web based)",
@@ -16,6 +135,49 @@ const packagecart = [
     "Unique QR code for all the participants",
     "Whitelisted URL (Optional)",
     "Add-on features with in microsite",
+]
+
+const expertise = [
+    {
+        img: '/assets/Microsite/expertise_01.png',
+        title: "Healthcare & Pharmacy"
+    },
+    {
+        img: '/assets/Microsite/expertise_02.png',
+        title: "Automobile Industry"
+    },
+    {
+        img: '/assets/Microsite/expertise_03.png',
+        title: "Travel & Tourism"
+    },
+    {
+        img: '/assets/Microsite/expertise_04.png',
+        title: "Banking"
+    },
+    {
+        img: '/assets/Microsite/expertise_05.png',
+        title: "Gaming Industry"
+    },
+    {
+        img: '/assets/Microsite/expertise_06.png',
+        title: "E-Commerce & Retail"
+    },
+    {
+        img: '/assets/Microsite/expertise_07.png',
+        title: "Education"
+    },
+    {
+        img: '/assets/Microsite/expertise_08.png',
+        title: "Hotel & Restaurants"
+    },
+    {
+        img: '/assets/Microsite/expertise_09.png',
+        title: "Media Event & Entertainment"
+    },
+    {
+        img: '/assets/Microsite/expertise_10.png',
+        title: "Food & Beverages"
+    },
 ]
 
 const graphGrow = [
@@ -73,8 +235,7 @@ const choose_list = [
         img: '/assets/Microsite/choose_05.png'
     },
 ]
-
-const index = ({ user_case, How_does_it_function, benefits, our_industry_expertise }) => {
+const index = () => {
     return (
         <>
             <Head>
@@ -126,18 +287,18 @@ const index = ({ user_case, How_does_it_function, benefits, our_industry_experti
                             <Container>
                                 <div className="micro_heading01">How does it <span>function</span>? </div>
                                 {
-                                    How_does_it_function?.map((item, index) => (
+                                    funData?.map((item, index) => (
                                         <div className={index % 2 === 1 ? "microFun microFun1" : "microFun"} key={index}>
                                             <div className="microFun_contain">
                                                 <h3 className="micro_title">
-                                                    {item?.title}
+                                                    {item.title}
                                                 </h3>
                                                 <p className='micro_desc'>
-                                                    {item?.desc}
+                                                    {item.desc}
                                                 </p>
                                             </div>
                                             <div className="microFun_img">
-                                                <Image src={item?.img} alt={item?.title} width={1920} height={1080} />
+                                                <Image src={item.img} width={1920} height={1080} />
                                             </div>
                                         </div>
                                     ))
@@ -155,7 +316,7 @@ const index = ({ user_case, How_does_it_function, benefits, our_industry_experti
                                 <Container>
                                     <Row>
                                         {
-                                            user_case?.map((curCase, index) => {
+                                            userCase?.map((curCase, index) => {
                                                 // const Compo = 
                                                 return (
                                                     <Col key={index} xxl={4} xl={4} lg={4} md={6} sm={6} xs={12}>
@@ -518,7 +679,7 @@ const index = ({ user_case, How_does_it_function, benefits, our_industry_experti
                                 <div className="qr_Expertise_container">
                                     <Row>
                                         {
-                                            our_industry_expertise?.map((item, index) => {
+                                            expertise?.map((item, index) => {
                                                 return <Col key={index} xxl={3} xl={3} lg={3} md={4} sm={6} xm={12}>
                                                     <div className="qr_expertise">
                                                         <div className="qr_exp_img">
@@ -625,30 +786,3 @@ const index = ({ user_case, How_does_it_function, benefits, our_industry_experti
 }
 
 export default index
-
-export const getServerSideProps = async () => {
-    // How_does_it_function
-    const How_does_it_function = await fetch('http://localhost:3000/api/QR-Registration/How_does_it_function')
-    const How_does_it_function_result = await How_does_it_function.json()
-
-    // use case 
-    const res = await fetch('http://localhost:3000/api/QR-Registration/user-case')
-    const user_case_result = await res.json()
-
-    // benefits
-    const benefits_res = await fetch('http://localhost:3000/api/QR-Registration/benefits')
-    const benefits_result = await benefits_res.json()
-
-    // benefits
-    const our_industry_expertise = await fetch('http://localhost:3000/api/QR-Registration/benefits')
-    const our_industry_expertise_result = await our_industry_expertise.json()
-
-    return {
-        props: {
-            How_does_it_function: How_does_it_function_result?.data,
-            user_case: user_case_result?.data,
-            benefits: benefits_result?.data,
-            our_industry_expertise: our_industry_expertise_result?.data
-        }
-    }
-}
