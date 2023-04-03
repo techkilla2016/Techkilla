@@ -41,7 +41,7 @@ export default function SingleCard({ list }) {
             return <SwiperSlide key={index}>
               <div className="swiperCart">
                 <div className="backLyer">
-                  <Image src={item.them} width={1920} height={1080} />
+                  <Image src={item.them} alt={item.title} width={1920} height={1080} />
                 </div>
                 <div className="lyear">
                   <Link href={`/${item.title}`}> {item.title}</Link>

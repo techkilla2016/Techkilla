@@ -91,6 +91,11 @@ const microsite_Related_Project = (req, res) => {
             status: true,
             data: list
         })
+    } else {
+        res.status(405).json({
+            status: false,
+            massage: 'Method Not Allowed '
+        })
     }
 }
 export default microsite_Related_Project
