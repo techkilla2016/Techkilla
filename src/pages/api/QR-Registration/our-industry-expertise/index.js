@@ -1,42 +1,42 @@
 const data = [
     {
-        img: '/assets/Microsite/expertise_01.png',
+        img: '/Assets/Microsite/expertise_01.png',
         title: "Healthcare & Pharmacy"
     },
     {
-        img: '/assets/Microsite/expertise_02.png',
+        img: '/Assets/Microsite/expertise_02.png',
         title: "Automobile Industry"
     },
     {
-        img: '/assets/Microsite/expertise_03.png',
+        img: '/Assets/Microsite/expertise_03.png',
         title: "Travel & Tourism"
     },
     {
-        img: '/assets/Microsite/expertise_04.png',
+        img: '/Assets/Microsite/expertise_04.png',
         title: "Banking"
     },
     {
-        img: '/assets/Microsite/expertise_05.png',
+        img: '/Assets/Microsite/expertise_05.png',
         title: "Gaming Industry"
     },
     {
-        img: '/assets/Microsite/expertise_06.png',
+        img: '/Assets/Microsite/expertise_06.png',
         title: "E-Commerce & Retail"
     },
     {
-        img: '/assets/Microsite/expertise_07.png',
+        img: '/Assets/Microsite/expertise_07.png',
         title: "Education"
     },
     {
-        img: '/assets/Microsite/expertise_08.png',
+        img: '/Assets/Microsite/expertise_08.png',
         title: "Hotel & Restaurants"
     },
     {
-        img: '/assets/Microsite/expertise_09.png',
+        img: '/Assets/Microsite/expertise_09.png',
         title: "Media Event & Entertainment"
     },
     {
-        img: '/assets/Microsite/expertise_10.png',
+        img: '/Assets/Microsite/expertise_10.png',
         title: "Food & Beverages"
     },
 ]

@@ -1,26 +1,26 @@
 const benefits = [
     {
-        img: '/assets/Microsite/microsite-b-01.png',
+        img: '/Assets/Microsite/microsite-b-01.png',
         title: `Chaos-free Audience Management`
     },
     {
-        img: '/assets/Microsite/microsite-b-02.png',
+        img: '/Assets/Microsite/microsite-b-02.png',
         title: `Effortless`
     },
     {
-        img: '/assets/Microsite/microsite-b-03.png',
+        img: '/Assets/Microsite/microsite-b-03.png',
         title: `100% Backend Record`
     },
     {
-        img: '/assets/Microsite/microsite-b-04.png',
+        img: '/Assets/Microsite/microsite-b-04.png',
         title: `Integrity of the data`
     },
     {
-        img: '/assets/Microsite/microsite-b-05.png',
+        img: '/Assets/Microsite/microsite-b-05.png',
         title: `Auto-email`
     },
     {
-        img: '/assets/Microsite/microsite-b-06.png',
+        img: '/Assets/Microsite/microsite-b-06.png',
         title: `Time-saver`
     },
 ]
