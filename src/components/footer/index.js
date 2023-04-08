@@ -13,14 +13,14 @@ const Footer = () => {
             <div className='bookdemo-footer'>
                 <div className='bookDemo'>
                     <Row>
-                        <Col xxl={4} lg={4} md={4} xs={4}>
+                        <Col xxl={4} lg={4} md={4} xs={12}>
                             <div className='logo_outer'>
                                 <Link href='/' className='demo_logo'>
                                     <Image src='/logo/logoOne.png' width={1920} height={1080} />
                                 </Link>
                             </div>
                         </Col>
-                        <Col xxl={8} lg={8} md={8} xs={8}>
+                        <Col xxl={8} lg={8} md={8} xs={12}>
                             <div className='d-flex flex-column align-items-center justify-content-center h-100'>
                                 <h2 className='demoText'>
                                     Schedule Free Demo

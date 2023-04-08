@@ -286,14 +286,77 @@ footer .flex:last-child a:hover {
     }
 }
 
+@media (max-width:1024px) {
+    .demo_logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .demoText {
+        font-size: 40px;
+    }
+}
+
 @media (max-width:920px) {
     footer .flex:last-child .flex-content:last-child {
         text-align: left;
+    }
+
+    .demo_logo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .demoText {
+        font-size: 36px;
+    }
+}
+
+@media (max-width:769px) {
+    .demo_logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .demoText {
+        font-size: 26px;
+    }
+}
+
+@media (max-width:426px) {
+    .demo_logo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .demoText {
+        font-size: 26px;
     }
 }
 
 @media (max-width:320px) {
     footer .flex:first-child .flex-content {
         flex: 1 1 100%;
+    }
+
+    .bookdemo-footer {
+        width: 85%;
+    }
+
+    .demo_logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .demoText {
+        font-size: 18px;
+    }
+
+    .bookDemo a {
+        margin: 0px;
+    }
+
+    .bookDemo {
+        padding-bottom: 15px;
     }
 }
