@@ -20,7 +20,7 @@ const index = () => {
                     <div className="mainContainer">
                         <div className="caseHomePage">
                             <div className="pagebg">
-                                <Image src='/Assets/use-case/Tetra-Pak2.jpg' width={1920} height={1080} />
+                                <Image src='/assets/use-case/Tetra-Pak2.jpg' width={1920} height={1080} />
                             </div>
                             <div className="pageText">
                                 <div className="zoom">

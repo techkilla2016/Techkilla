@@ -11,19 +11,19 @@ import SingleCard from '@/components/ProjectSlider/singleCard'
 const related_project = [
     {
         title: "CEAT Shoppe experience - CEAT Tyres",
-        them: "/Assets/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
+        them: "/assets/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
     },
     {
         title: "QR_based_registration",
-        them: "/Assets/service/500x500/QR_based_registration.png"
+        them: "/assets/service/500x500/QR_based_registration.png"
     },
     {
         title: "CEAT truck service hub experience - CEAT Tyres",
-        them: "/Assets/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
+        them: "/assets/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
     },
     {
         title: "VR Activities",
-        them: "/Assets/service/500x500/VR_Activities.png"
+        them: "/assets/service/500x500/VR_Activities.png"
     },
 ]
 const VRSolutions = () => {

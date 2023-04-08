@@ -1,3 +1,80 @@
+.footer {
+    width: 100%;
+    position: relative;
+    padding-top: 150px;
+    margin-top: 200px;
+
+}
+
+.bookdemo-footer {
+    /* height: 300px; */
+    width: 70%;
+    /* background: #fafafa; */
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+}
+
+.bookDemo {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.bookdemo-footer::after,
+.bookdemo-footer::before {
+    width: 20%;
+    height: 50%;
+    background: #fdc632;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 8px;
+}
+
+.bookdemo-footer::after {
+    top: -15px;
+    left: -15px;
+
+}
+
+.logo_outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+}
+
+.demoText {
+    font-size: 60px;
+    font-weight: 900;
+    color: #334f6c;
+}
+
+.demo_logo {
+    width: 250px;
+    height: 250px;
+
+}
+
+.demo_logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.bookdemo-footer::before {
+    right: -15px;
+    bottom: -15px;
+    background: #fdc632;
+}
+
 /* ------------------        footer   -------------------- */
 footer a {
     text-decoration: none !important;

@@ -10,23 +10,23 @@ import SingleCard from '@/components/ProjectSlider/singleCard'
 const related_project = [
     {
         title: "KuKu FM - Guess the personality puzzle",
-        them: "/Assets/service/500x500/KuKu_FM_Guess_the_personality_uzzle.png"
+        them: "/assets/service/500x500/KuKu_FM_Guess_the_personality_uzzle.png"
     },
     {
         title: "Microsoft - Pride month AR filter",
-        them: "/Assets/service/500x500/Microsoft_Pride_month_AR_filte.png"
+        them: "/assets/service/500x500/Microsoft_Pride_month_AR_filte.png"
     },
     {
         title: "ITC Football header",
-        them: "/Assets/service/500x500/ITC_Football_header.png"
+        them: "/assets/service/500x500/ITC_Football_header.png"
     },
     {
         title: "ITC Football Bounce Roll",
-        them: "/Assets/service/500x500/ITC_Football_Bounce_Roll.png"
+        them: "/assets/service/500x500/ITC_Football_Bounce_Roll.png"
     },
     {
         title: "Fun wagerz - FIFA world cup",
-        them: "/Assets/service/500x500/Fun_wagerz.png"
+        them: "/assets/service/500x500/Fun_wagerz.png"
     },
 ]
 const PlayableAds = () => {
