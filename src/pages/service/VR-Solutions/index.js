@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import bg from '&/assets/service/web banner_VR1.jpg'
+import bg from '&'
 import Footer from '@/components/footer'
 import UseCase from '@/components/service/UseCase'
 import SingleCard from '@/components/ProjectSlider/singleCard'
@@ -38,7 +38,7 @@ const VRSolutions = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src={bg} />
+                                <Image src='/assets/service/web banner_VR1.jpg' alt='VR Solutions' />
                             </div>
                             <div className="introSection">
                                 <h1>VR Solutions</h1>

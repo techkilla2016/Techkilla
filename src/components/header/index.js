@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '&/logo/logoOne.png'
+import logo from '&'
 import { CgMenuRightAlt } from 'react-icons/cg'
 import { IoCloseSharp } from 'react-icons/io5'
 import Image from 'next/image'
@@ -30,7 +30,7 @@ const Header = () => {
             <nav>
                 <div className="navbar">
                     <Link href='/' className="logo">
-                        <Image src={logo} width={80} height={80} />
+                        <Image src='assets/logo/logoOne.png' alt='teckkilla' width={80} height={80} />
                     </Link>
                     <div className="nav">
                         <Link className='navlink' href='/'>Home</Link>
@@ -93,7 +93,7 @@ const Header = () => {
         return <nav>
             <div className="navbar">
                 <Link href='/' className="logo">
-                    <Image src={logo} width={60} height={60} />
+                    <Image src='assets/logo/logoOne.png' width={60} height={60} />
                 </Link>
             </div>
             <div className='toggle-secction'>

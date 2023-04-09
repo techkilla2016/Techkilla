@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useState } from "react";
-import LogoIcon from '&/logo/logoOne.png'
 function FeatureCentralBox({ title, content }) {
   const [show, setShow] = useState(false);
   return (
@@ -11,7 +10,7 @@ function FeatureCentralBox({ title, content }) {
         </span>
         {!show && (
           <div className="logo">
-            <Image src={LogoIcon} width={120} height={120} />
+            <Image src='assets/logo/logoOne.png' alt="techkilla" width={120} height={120} />
           </div>
         )}
         {show && (

@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import bg from '&/assets/service/web banner_playable ads.jpg'
 import Footer from '@/components/footer'
 import SingleCard from '@/components/ProjectSlider/singleCard'
 const related_project = [
@@ -41,7 +40,7 @@ const PlayableAds = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src={bg} />
+                                <Image src='/assets/service/web banner_playable ads.jpg' alt='Playable Ads' />
                             </div>
                             <div className="introSection">
                                 <h1>Playable Ads</h1>

@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import bg from '&/assets/service/web banner_on ground activity 2.jpg'
 import Footer from '@/components/footer'
 import Benefits from '@/components/service/Benefit'
 import SingleCard from '@/components/ProjectSlider/singleCard'
@@ -70,7 +69,7 @@ const Ongroundactivations = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src={bg} />
+                                <Image src='/assets/service/web banner_on ground activity 2.jpg' />
                             </div>
                             <div className="introSection">
                                 <h1>On-ground activations</h1>
