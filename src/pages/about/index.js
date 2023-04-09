@@ -5,7 +5,7 @@ import ColRight from '@/components/home/section2/right'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Head from 'next/head'
-import recode_01 from '../../../public/assets/Home/a01.png'
+import recode_01 from '../../../public'
 const About = () => {
     return (
         <>
@@ -37,7 +37,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src={recode_01}   alt="" />
+                                                    <img src='/assets/Home/a01.png'   alt="Happy Customers" />
                                                 </div>
                                                 <div className="recodeData">
                                                     28+
@@ -51,7 +51,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src="/assets/home/a02.png"  alt="" />
+                                                    <img src="/assets/home/a02.png"  alt="Projects Completed" />
                                                 </div>
                                                 <div className="recodeData">
                                                     110+
@@ -65,7 +65,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src="/assets/home/a03.png"  alt="" />
+                                                    <img src="/assets/home/a03.png"  alt="Organic Impressions" />
                                                 </div>
                                                 <div className="recodeData">
                                                     5+
@@ -79,7 +79,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src="/assets/home/a04.png"  alt="" />
+                                                    <img src="/assets/home/a04.png"  alt="Pro Awards Winner" />
                                                 </div>
                                                 <div className="recodeData">
                                                     3+

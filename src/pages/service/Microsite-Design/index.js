@@ -4,8 +4,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import bg from '../../../../public/assets/service/web banner_micro site.jpg'
-import serive from '../../../../public/assets/service/miro-service.gif'
 import UseCase from '@/components/service/UseCase'
 import Benefits from '@/components/service/Benefit'
 import GridSlider from '@/components/ProjectSlider/GridSlider'
@@ -27,7 +25,7 @@ const usecase = [
         title: 'distinguishing the corporate brand'
     },
     {
-        img: '../../../../public/assets/service/product launch-01-01.png',
+        img: 'assets/service/product launch-01-01.png',
         title: 'promoting events'
     },
 ]
@@ -72,7 +70,7 @@ const list = [
         title: "Concentrix got talent",
         them: "/assets/service/microsite/Concentrix_got_talent.png"
     },
-    
+
     {
         title: "Nutella - Ramadan video quiz game",
         them: "/assets/service/microsite/video_quize.png"
@@ -132,7 +130,7 @@ const MicrositeDesign = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src={bg} />
+                                <Image src='/assets/service/web banner_micro site.jpg' alt='Crafting Engaging and Impactful Microsite Designs for Your Business' />
                             </div>
                             <div className="introSection">
                                 <h1><span>M</span>icrosite <span>D</span>esign</h1>
@@ -165,7 +163,7 @@ const MicrositeDesign = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src={serive} style={css} />
+                                        <Image src='/assets/service/miro-service.gif' alt='Benefits of launching your own microsite' style={css} />
                                     </Col>
                                 </Row>
                             </Container>
