@@ -15,4 +15,3 @@ function FeatureBox({ title, content }) {
   )
 }
 export default FeatureBox
-s
