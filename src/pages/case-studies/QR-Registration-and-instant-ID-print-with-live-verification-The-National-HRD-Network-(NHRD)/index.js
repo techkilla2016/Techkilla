@@ -14,76 +14,76 @@ const funData = [
         desc: `A personalized web-browser-based registration form that lets your 
         audience fill in their own information or that the promoter can fill in
         on their behalf at the time of registration`,
-        img: '/assets/microsite/microsite-banner-02.png'
+        img: '/Assets/microsite/microsite-banner-02.png'
     },
     {
         title: 'Automatic database registration link emailing',
         desc: `If we already have the database our intelligent software 
         auto sends the registration form link to all the users via email.`,
-        img: '/assets/microsite/microsite-banner-03.png'
+        img: '/Assets/microsite/microsite-banner-03.png'
     },
     {
         title: 'Unique QR code',
         desc: `After submitting the form, each attendee will receive a personalized 
         QR code through email to present at the event`,
-        img: '/assets/microsite/microsite-banner-04.png'
+        img: '/Assets/microsite/microsite-banner-04.png'
     },
     {
         title: 'QR Scanner with auto-verification',
         desc: `A QR code scanner web application that is solely dedicated to 
         the purpose of scanning and verifying attendance at the moment 
         of entry for all of the participants`,
-        img: '/assets/microsite/microsite-banner-05.png'
+        img: '/Assets/microsite/microsite-banner-05.png'
     },
     {
         title: 'Instant printout',
         desc: `Immediately following the verification or completion of the form, 
         a printout will be generated and can be distributed to participants.`,
-        img: '/assets/microsite/microsite-banner-06.png'
+        img: '/Assets/microsite/microsite-banner-06.png'
     },
     {
         title: 'Backend Acknowledgement & Database',
         desc: `The backend server will record the person's name and entry time 
         and date on the server for future use.`,
-        img: '/assets/microsite/microsite-banner-07.png'
+        img: '/Assets/microsite/microsite-banner-07.png'
     },
 ]
 const benefits = [
     {
-        img: '/assets/microsite/microsite-b-01.png',
+        img: '/Assets/microsite/microsite-b-01.png',
         title: `Chaos-free Audience Management`
     },
     {
-        img: '/assets/microsite/microsite-b-02.png',
+        img: '/Assets/microsite/microsite-b-02.png',
         title: `Effortless`
     },
     {
-        img: '/assets/microsite/microsite-b-03.png',
+        img: '/Assets/microsite/microsite-b-03.png',
         title: `100% Backend Record`
     },
     {
-        img: '/assets/microsite/microsite-b-04.png',
+        img: '/Assets/microsite/microsite-b-04.png',
         title: `Integrity of the data`
     },
     {
-        img: '/assets/microsite/microsite-b-05.png',
+        img: '/Assets/microsite/microsite-b-05.png',
         title: `Auto-email`
     },
     {
-        img: '/assets/microsite/microsite-b-06.png',
+        img: '/Assets/microsite/microsite-b-06.png',
         title: `Time-saver`
     },
 ]
 
 const userCase = [
     {
-        icon: '/assets/microsite/user-case01.png',
+        icon: '/Assets/microsite/user-case01.png',
         title: 'Pre event registration',
         desc: `Online forms are increasingly being used for pre-event registration, when attendees provide their contact information and indicate whether they want to attend the event virtually or in person. Techkilla allows you to give your form a look and feel that is consistent with your brand.`
     },
 
     {
-        icon: '/assets/microsite/user-case02.png',
+        icon: '/Assets/microsite/user-case02.png',
         title: 'On spot registration',
         desc: `On-the-spot registration is performed at any event that requests attendee 
         information and requires immediate identification. For instance, at the 
@@ -92,7 +92,7 @@ const userCase = [
     },
 
     {
-        icon: '/assets/microsite/user-case03.png',
+        icon: '/Assets/microsite/user-case03.png',
         title: 'Entry verification',
         desc: `The verification of registered users' entries plays a crucial part in crowd 
         control by allowing entrance only to confirmed attendance. Techkilla's 
@@ -101,7 +101,7 @@ const userCase = [
     },
 
     {
-        icon: '/assets/microsite/user-case04.png',
+        icon: '/Assets/microsite/user-case04.png',
         title: 'Audience management',
         desc: `When working with a large group of people, it might be difficult to 
         keep everyone under control. Our proprietary software streamlines
@@ -111,7 +111,7 @@ const userCase = [
     },
 
     {
-        icon: '/assets/microsite/user-case05.webp',
+        icon: '/Assets/microsite/user-case05.webp',
         title: 'Student registration',
         desc: `It is during admissions, college festivals, and other cultural events that 
         the majority of students sign up to attend. Our AI technology is able to 
@@ -119,7 +119,7 @@ const userCase = [
         within no time and seamlessly.`
     },
     {
-        icon: '/assets/microsite/user-case06.webp',
+        icon: '/Assets/microsite/user-case06.webp',
         title: 'Goodies distribution and many more',
         desc: `Almost every event and freebie distribution includes the delivery of 
         goodies as a form of appreciation. Get the user database with the help 
@@ -140,65 +140,65 @@ const packagecart = [
 
 const expertise = [
     {
-        img: '/assets/microsite/expertise_01.png',
+        img: '/Assets/microsite/expertise_01.png',
         title: "Healthcare & Pharmacy"
     },
     {
-        img: '/assets/microsite/expertise_02.png',
+        img: '/Assets/microsite/expertise_02.png',
         title: "Automobile Industry"
     },
     {
-        img: '/assets/microsite/expertise_03.png',
+        img: '/Assets/microsite/expertise_03.png',
         title: "Travel & Tourism"
     },
     {
-        img: '/assets/microsite/expertise_04.png',
+        img: '/Assets/microsite/expertise_04.png',
         title: "Banking"
     },
     {
-        img: '/assets/microsite/expertise_05.png',
+        img: '/Assets/microsite/expertise_05.png',
         title: "Gaming Industry"
     },
     {
-        img: '/assets/microsite/expertise_06.png',
+        img: '/Assets/microsite/expertise_06.png',
         title: "E-Commerce & Retail"
     },
     {
-        img: '/assets/microsite/expertise_07.png',
+        img: '/Assets/microsite/expertise_07.png',
         title: "Education"
     },
     {
-        img: '/assets/microsite/expertise_08.png',
+        img: '/Assets/microsite/expertise_08.png',
         title: "Hotel & Restaurants"
     },
     {
-        img: '/assets/microsite/expertise_09.png',
+        img: '/Assets/microsite/expertise_09.png',
         title: "Media Event & Entertainment"
     },
     {
-        img: '/assets/microsite/expertise_10.png',
+        img: '/Assets/microsite/expertise_10.png',
         title: "Food & Beverages"
     },
 ]
 
 const graphGrow = [
     {
-        img: '/assets/microsite/graph_01.png',
+        img: '/Assets/microsite/graph_01.png',
         title: 'MORE ENGAGING',
         desc: `Experiential technology gives a user 3X more engagement than any TVc, video ads or billboards.`
     },
     {
-        img: '/assets/microsite/graph_02.png',
+        img: '/Assets/microsite/graph_02.png',
         title: 'MORE MEMORABLE',
         desc: `participation in an activity & earning rewards gives a 70% better memory recall rate.`
     },
     {
-        img: '/assets/microsite/graph_03.png',
+        img: '/Assets/microsite/graph_03.png',
         title: 'OF CONSUMER',
         desc: `One-third of shoppers concur that handling the product in person enhances the shopping experience.`
     },
     {
-        img: '/assets/microsite/graph_03.png',
+        img: '/Assets/microsite/graph_03.png',
         title: 'MORE ACCESSIBLE',
         desc: `Using experiential technology, millions of people can interact both in person & online at once.`
     },
@@ -209,31 +209,31 @@ const choose_list = [
         title: 'Cost-effective solutions',
         desc: `The business's ROI plan is transparent. As a result, 
         our pricing is reasonable and competitive.`,
-        img: '/assets/microsite/choose_01.png'
+        img: '/Assets/microsite/choose_01.png'
     },
     {
         title: 'Customizable Unique Designs',
         desc: `We create entirely individualised business solutions 
         based on your requirements and utility`,
-        img: '/assets/microsite/choose_02.png'
+        img: '/Assets/microsite/choose_02.png'
     },
     {
         title: 'Customer Support',
         desc: `Customer satisfaction is our top priority, and our 
         support staff is dedicated to providing the best service.`,
-        img: '/assets/microsite/choose_03.png'
+        img: '/Assets/microsite/choose_03.png'
     },
     {
         title: 'Strong Expertise',
         desc: `Our tight-knit team of experts simplifies and accurately 
         solves complex problems for your idea.`,
-        img: '/assets/microsite/choose_04.png'
+        img: '/Assets/microsite/choose_04.png'
     },
     {
         title: 'Free Consultation',
         desc: `Our strategy experts can help you find the best solutions 
         for your brand theme and campaign.`,
-        img: '/assets/microsite/choose_05.png'
+        img: '/Assets/microsite/choose_05.png'
     },
 ]
 const index = () => {
@@ -248,7 +248,7 @@ const index = () => {
                     <div className="mainContainer">
                         <div className="microHome1">
                             <div className="pagebg">
-                                <Image src='/assets/microsite/micrositeHome.png' width={1920} height={1080} />
+                                <Image src='/Assets/microsite/micrositeHome.png' width={1920} height={1080} />
                             </div>
                             <div className="microHome">
                                 <Container>
@@ -272,7 +272,7 @@ const index = () => {
                             </h1>
                             <Container>
                                 <div className="microFulImg">
-                                    <Image src='/assets/microsite/microsite.png' width={1920} height={1080} />
+                                    <Image src='/Assets/microsite/microsite.png' width={1920} height={1080} />
                                 </div>
                                 <div className="microPara">
                                     QR code registration is a form of one-of-a-kind registration process that occurs
@@ -672,7 +672,7 @@ const index = () => {
                             </h2>
                             <Container>
                                 <div className="microFulImg">
-                                    <Image src='/assets/microsite/microsite_02.png' width={1920} height={1080} />
+                                    <Image src='/Assets/microsite/microsite_02.png' width={1920} height={1080} />
                                 </div>
                                 <div className="microPara">
                                     Your microsite can experience more features like Gaming engagement,
@@ -738,7 +738,7 @@ const index = () => {
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className="imgfulScreen">
-                                            <Image src='/assets/microsite/Brands.png' width={1920} height={1080} />
+                                            <Image src='/Assets/microsite/Brands.png' width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
@@ -751,12 +751,12 @@ const index = () => {
                                 <Row className='align-items-center'>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className="imgfulScreen db-ful">
-                                            <Image src='/assets/microsite/logo-02.png' width={1920} height={1080} />
+                                            <Image src='/Assets/microsite/logo-02.png' width={1920} height={1080} />
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className="imgfulScreen db-ful">
-                                            <Image src='/assets/microsite/logo-01.png' width={1920} height={1080} />
+                                            <Image src='/Assets/microsite/logo-01.png' width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
