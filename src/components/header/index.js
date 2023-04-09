@@ -29,7 +29,7 @@ const Header = () => {
             <nav>
                 <div className="navbar">
                     <Link href='/' className="logo">
-                        <Image src='assets/logo/logoOne.png' alt='teckkilla' width={80} height={80} />
+                        <Image src='/logo/logo.png' alt='teckkilla' width={80} height={80} />
                     </Link>
                     <div className="nav">
                         <Link className='navlink' href='/'>Home</Link>
@@ -92,7 +92,7 @@ const Header = () => {
         return <nav>
             <div className="navbar">
                 <Link href='/' className="logo">
-                    <Image src='assets/logo/logoOne.png' width={60} height={60} />
+                    <Image src='/logo/logo.png' width={60} height={60} />
                 </Link>
             </div>
             <div className='toggle-secction'>

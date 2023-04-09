@@ -25,7 +25,7 @@ const usecase = [
         title: 'distinguishing the corporate brand'
     },
     {
-        img: 'assets/service/product launch-01-01.png',
+        img: '/assets/service/product launch-01-01.png',
         title: 'promoting events'
     },
 ]

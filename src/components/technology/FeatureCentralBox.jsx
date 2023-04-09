@@ -10,7 +10,7 @@ function FeatureCentralBox({ title, content }) {
         </span>
         {!show && (
           <div className="logo">
-            <Image src='assets/logo/logoOne.png' alt="techkilla" width={120} height={120} />
+            <Image src='/logo/logo.png' alt="techkilla" width={120} height={120} />
           </div>
         )}
         {show && (
