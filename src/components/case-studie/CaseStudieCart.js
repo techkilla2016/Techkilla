@@ -6,7 +6,7 @@ const CaseStudieCart = ({ Heading, img, desc, target }) => {
     return (
         <div className="cartBody">
             <div className="backBody">
-                <Image src={img} width={1920} height={1080} />
+                <Image alt={Heading} src={img} width={1920} height={1080} />
             </div>
             <div className="frontBody">
                 <div className="caseStudie__Title">

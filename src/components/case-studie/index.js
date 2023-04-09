@@ -9,7 +9,7 @@ const CaseStudieCard = () => {
             <Row className={1 == 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image alt='360 Photobooth or Spin Booth for Maybelline Newyork New launch' src={pic} />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
