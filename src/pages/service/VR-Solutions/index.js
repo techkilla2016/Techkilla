@@ -9,19 +9,19 @@ import SingleCard from '@/components/ProjectSlider/singleCard'
 const related_project = [
     {
         title: "CEAT Shoppe experience - CEAT Tyres",
-        them: "/assets/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
+        them: "/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
     },
     {
         title: "QR_based_registration",
-        them: "/assets/service/500x500/QR_based_registration.png"
+        them: "/service/500x500/QR_based_registration.png"
     },
     {
         title: "CEAT truck service hub experience - CEAT Tyres",
-        them: "/assets/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
+        them: "/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
     },
     {
         title: "VR Activities",
-        them: "/assets/service/500x500/VR_Activities.png"
+        them: "/service/500x500/VR_Activities.png"
     },
 ]
 const VRSolutions = () => {
@@ -37,7 +37,7 @@ const VRSolutions = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src='/assets/service/web banner_VR1.jpg' alt='VR Solutions' />
+                                <Image src='/service/web banner_VR1.jpg' alt='VR Solutions' />
                             </div>
                             <div className="introSection">
                                 <h1>VR Solutions</h1>
@@ -75,7 +75,7 @@ const VRSolutions = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src='/assets/service/miro-service.gif' style={css} />
+                                        <Image src='/service/miro-service.gif' style={css} />
                                     </Col>
                                 </Row>
                                 <Row>
@@ -110,14 +110,14 @@ const VRSolutions = () => {
                                             </Col>
                                         </Row>
                                         <Row>
-                                            <UseCase img={`/assets/service/Education.png`} title={'Education'} />
-                                            <UseCase img={`/assets/service/Travel-01.png`} title={'Travel'} />
-                                            <UseCase img={`/assets/service/Real Estate-01.png`} title={'Real Estate '} />
-                                            <UseCase img={`/assets/service/Retail-01.png`} title={'Retail'} />
-                                            <UseCase img={`/assets/service/Entertainment-01.png`} title={'Entertainment'} />
-                                            <UseCase img={`/assets/service/Gaming-01.png`} title={'Gaming'} />
-                                            <UseCase img={`/assets/service/Museums-01.png`} title={'Museums'} />
-                                            <UseCase img={`/assets/service/Architecture-01.png`} title={'Architecture and many more. '} />
+                                            <UseCase img={`/service/Education.png`} title={'Education'} />
+                                            <UseCase img={`/service/Travel-01.png`} title={'Travel'} />
+                                            <UseCase img={`/service/Real Estate-01.png`} title={'Real Estate '} />
+                                            <UseCase img={`/service/Retail-01.png`} title={'Retail'} />
+                                            <UseCase img={`/service/Entertainment-01.png`} title={'Entertainment'} />
+                                            <UseCase img={`/service/Gaming-01.png`} title={'Gaming'} />
+                                            <UseCase img={`/service/Museums-01.png`} title={'Museums'} />
+                                            <UseCase img={`/service/Architecture-01.png`} title={'Architecture and many more. '} />
                                         </Row>
                                     </Container>
                                 </div>

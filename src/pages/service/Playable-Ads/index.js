@@ -8,23 +8,23 @@ import SingleCard from '@/components/ProjectSlider/singleCard'
 const related_project = [
     {
         title: "KuKu FM - Guess the personality puzzle",
-        them: "/assets/service/500x500/KuKu_FM_Guess_the_personality_uzzle.png"
+        them: "/service/500x500/KuKu_FM_Guess_the_personality_uzzle.png"
     },
     {
         title: "Microsoft - Pride month AR filter",
-        them: "/assets/service/500x500/Microsoft_Pride_month_AR_filte.png"
+        them: "/service/500x500/Microsoft_Pride_month_AR_filte.png"
     },
     {
         title: "ITC Football header",
-        them: "/assets/service/500x500/ITC_Football_header.png"
+        them: "/service/500x500/ITC_Football_header.png"
     },
     {
         title: "ITC Football Bounce Roll",
-        them: "/assets/service/500x500/ITC_Football_Bounce_Roll.png"
+        them: "/service/500x500/ITC_Football_Bounce_Roll.png"
     },
     {
         title: "Fun wagerz - FIFA world cup",
-        them: "/assets/service/500x500/Fun_wagerz.png"
+        them: "/service/500x500/Fun_wagerz.png"
     },
 ]
 const PlayableAds = () => {
@@ -40,7 +40,7 @@ const PlayableAds = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src='/assets/service/web banner_playable ads.jpg' alt='Playable Ads' />
+                                <Image src='/service/web banner_playable ads.jpg' alt='Playable Ads' />
                             </div>
                             <div className="introSection">
                                 <h1>Playable Ads</h1>
@@ -82,7 +82,7 @@ const PlayableAds = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src='/assets/service/miro-service.gif' alt=' Access to advanced analytics' style={css} />
+                                        <Image src='/service/miro-service.gif' alt=' Access to advanced analytics' style={css} />
                                     </Col>
                                 </Row>
 

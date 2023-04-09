@@ -9,111 +9,111 @@ import Benefits from '@/components/service/Benefit'
 import GridSlider from '@/components/ProjectSlider/GridSlider'
 const usecase = [
     {
-        img: '/assets/service/product launch-01-01.png',
+        img: '/service/product launch-01-01.png',
         title: 'Product launch'
     },
     {
-        img: '/assets/service/Targeting prospects-01-01.png',
+        img: '/service/Targeting prospects-01-01.png',
         title: 'Targeting prospects'
     },
     {
-        img: '/assets/service/Geotargeting market-01-01.png',
+        img: '/service/Geotargeting market-01-01.png',
         title: 'Geotargeting market'
     },
     {
-        img: '/assets/service/distinguishing the corporate-01-01.png',
+        img: '/service/distinguishing the corporate-01-01.png',
         title: 'distinguishing the corporate brand'
     },
     {
-        img: '/assets/service/product launch-01-01.png',
+        img: '/service/product launch-01-01.png',
         title: 'promoting events'
     },
 ]
 const list = [
     {
         title: "DOW packaging and supplies",
-        them: "/assets/service/microsite/DOW_packaging.png"
+        them: "/service/microsite/DOW_packaging.png"
     },
     {
         title: "NHRD QR verification and instant print",
-        them: "/assets/service/microsite/NHRD_QR_verification.png"
+        them: "/service/microsite/NHRD_QR_verification.png"
     },
     {
         title: "HDFC Inquizitive family",
-        them: "/assets/service/microsite/HDFC_Inquizitive_family_show.png"
+        them: "/service/microsite/HDFC_Inquizitive_family_show.png"
     },
     {
         title: "HDFC Analytiq 1.0",
-        them: "/assets/service/microsite/HDFC_Analytiq_1.0.png"
+        them: "/service/microsite/HDFC_Analytiq_1.0.png"
     },
     {
         title: "HDFC Analytiq 2.0",
-        them: "/assets/service/microsite/HDFC_Analytiq_2.0.png"
+        them: "/service/microsite/HDFC_Analytiq_2.0.png"
     },
     // {
     //     title: "HDFC Analytiq 3.0",
-    //     them: "/assets/service/microsite/HDFC_Analytiq_3.0.png"
+    //     them: "/service/microsite/HDFC_Analytiq_3.0.png"
     // },
     {
         title: "Cipla Urology quiz game",
-        them: "/assets/service/microsite/Cipla_Urology_quiz_game.png"
+        them: "/service/microsite/Cipla_Urology_quiz_game.png"
     },
     {
         title: "Loreal dreamlength launch",
-        them: "/assets/service/microsite/Loreal_dreamlength_launch.png"
+        them: "/service/microsite/Loreal_dreamlength_launch.png"
     },
     {
         title: "Colgate - IPL",
-        them: "/assets/service/microsite/Colgate_IPL.png"
+        them: "/service/microsite/Colgate_IPL.png"
     },
     {
         title: "Concentrix got talent",
-        them: "/assets/service/microsite/Concentrix_got_talent.png"
+        them: "/service/microsite/Concentrix_got_talent.png"
     },
 
     {
         title: "Nutella - Ramadan video quiz game",
-        them: "/assets/service/microsite/video_quize.png"
+        them: "/service/microsite/video_quize.png"
     },
     {
         title: "Tata International E-Marathon",
-        them: "/assets/service/microsite/Tata_International_E-Marathon.png"
+        them: "/service/microsite/Tata_International_E-Marathon.png"
     },
     {
         title: "Tuborg super over",
-        them: "/assets/service/microsite/Tuborg_super_over.png"
+        them: "/service/microsite/Tuborg_super_over.png"
     },
     {
         title: "Total energies virtual talent hunt show",
-        them: "/assets/service/microsite/Total_energies_virtual_talent_hunt_show.png"
+        them: "/service/microsite/Total_energies_virtual_talent_hunt_show.png"
     },
     {
         title: "World cloud photobooth",
-        them: "/assets/service/microsite/World_cloud_photobooth.png"
+        them: "/service/microsite/World_cloud_photobooth.png"
     },
     {
         title: "TVS Motors digital tambola",
-        them: "/assets/service/microsite/TVS_Motors_digital_tambola.png"
+        them: "/service/microsite/TVS_Motors_digital_tambola.png"
     },
     {
         title: "Colgate swashbuckers day",
-        them: "/assets/service/microsite/Colgate_swashbuckers_day.png"
+        them: "/service/microsite/Colgate_swashbuckers_day.png"
     },
     // {
     //     title: "Multitv Quiz Game",
-    //     them: "/assets/service/microsite/Colgate_swashbuckers_day.png"
+    //     them: "/service/microsite/Colgate_swashbuckers_day.png"
     // }, 
     // {
     //    "Microsoft Hackathon",
-    //     them: "/assets/service/microsite/Colgate_swashbuckers_day.png"
+    //     them: "/service/microsite/Colgate_swashbuckers_day.png"
     // }, 
     // {
     //     "Cera - Quiz game",
-    //     them: "/assets/service/microsite/Colgate_swashbuckers_day.png"
+    //     them: "/service/microsite/Colgate_swashbuckers_day.png"
     // }, 
     // {
     //     "Total Oil - talent hun",
-    //     them: "/assets/service/microsite/Colgate_swashbuckers_day.png"
+    //     them: "/service/microsite/Colgate_swashbuckers_day.png"
     // },
 ]
 
@@ -130,7 +130,7 @@ const MicrositeDesign = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src='/assets/service/web banner_micro site.jpg' alt='Crafting Engaging and Impactful Microsite Designs for Your Business' />
+                                <Image src='/service/web banner_micro site.jpg' alt='Crafting Engaging and Impactful Microsite Designs for Your Business' />
                             </div>
                             <div className="introSection">
                                 <h1><span>M</span>icrosite <span>D</span>esign</h1>
@@ -163,7 +163,7 @@ const MicrositeDesign = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src='/assets/service/miro-service.gif' alt='Benefits of launching your own microsite' style={css} />
+                                        <Image src='/service/miro-service.gif' alt='Benefits of launching your own microsite' style={css} />
                                     </Col>
                                 </Row>
                             </Container>

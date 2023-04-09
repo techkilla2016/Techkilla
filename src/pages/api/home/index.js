@@ -3,25 +3,25 @@ export default function handler(req, res) {
         {
             title: 'Microsite design',
             description: 'We create customised microsites for your occasions, unique needs, and interaction.',
-            img: '/assets/service/MD.webp',
+            img: '/service/MD.webp',
             slag: '/service/Microsite-Design'
         },
         {
             title: 'Virtual reality Solutions',
             description: 'specialised VR 360 solutions for gaming and audience engagement.',
-            img: '/assets/service/VR.webp',
+            img: '/service/VR.webp',
             slag: '/service/VR-Solutions'
         },
         {
             title: 'Playable Ads',
             description: 'Interactive gaming ads made just for app advertisers to let people try before they buy.',
-            img: '/assets/service/ADS.webp',
+            img: '/service/ADS.webp',
             slag: '/service/Playable-Ads'
         },
         {
             title: 'On-ground activations',
             description: 'We engage your audience in an intuitive way with fun experiential activities.',
-            img: '/assets/service/Game.webp',
+            img: '/service/Game.webp',
             slag: '/service/On-ground-activations'
         },
     ]

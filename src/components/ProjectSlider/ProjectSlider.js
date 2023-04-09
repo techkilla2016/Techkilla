@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import project from '@/assets/service/Distinguishing The Corporate-01.png'
+import project from '@/service/Distinguishing The Corporate-01.png'
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
