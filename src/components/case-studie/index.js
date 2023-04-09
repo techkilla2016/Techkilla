@@ -2,14 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-import pic from '../../../public/assets/feedback.jpg'
 const CaseStudieCard = () => {
     return (
         <div className='CaseStudieCard'>
             <Row className={1 == 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image alt='360 Photobooth or Spin Booth for Maybelline Newyork New launch' src={pic} />
+                        <Image alt='360 Photobooth or Spin Booth for Maybelline Newyork New launch' src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -36,7 +35,7 @@ const CaseStudieCard = () => {
             <Row className={1 != 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -81,7 +80,7 @@ const CaseStudieCard = () => {
             <Row className={1 == 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -109,7 +108,7 @@ const CaseStudieCard = () => {
             <Row className={1 !== 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -137,7 +136,7 @@ const CaseStudieCard = () => {
             <Row className={1 === 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -162,7 +161,7 @@ const CaseStudieCard = () => {
             <Row className={1 !== 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -183,7 +182,7 @@ const CaseStudieCard = () => {
             <Row className={1 === 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -220,7 +219,7 @@ const CaseStudieCard = () => {
             <Row className={1 !== 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -249,7 +248,7 @@ const CaseStudieCard = () => {
             <Row className={1 == 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -287,7 +286,7 @@ const CaseStudieCard = () => {
             <Row className={1 !== 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -326,7 +325,7 @@ const CaseStudieCard = () => {
             <Row className={1 == 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -354,7 +353,7 @@ const CaseStudieCard = () => {
             <Row className={1 !== 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>
@@ -388,7 +387,7 @@ const CaseStudieCard = () => {
             <Row className={1 == 1 ? "py-5 my-5" : 'flex-row-reverse'}>
                 <Col xxl={6} lg={6} md={12} sm={12}>
                     <div className="innerBox">
-                        <Image src={pic} />
+                        <Image src='/assets/feedback.jpg' />
                     </div>
                 </Col>
                 <Col xxl={6} lg={6} md={12} sm={12}>

@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import Ads from './Ads'
 import WebGame from './WebGame'
-import Vr from '../../../../public/vr.png'
 import Link from 'next/link'
 import Image from 'next/image'
 const ServiceSection = () => {
@@ -56,7 +55,7 @@ const ServiceSection = () => {
                     <div className="serviceCard pt-3">
                         <div className="cartLogo">
                             <div className="icon">
-                                <Image src={Vr} alt="" />
+                                <Image src='/vr.png' alt="" />
                             </div>
                         </div>
                         <div className="serviceCartTitle">

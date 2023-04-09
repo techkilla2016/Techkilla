@@ -4,7 +4,6 @@ import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import bg from '&/assets/service/web banner_playable ads.jpg'
-import serive from '../../../../public/assets/service/miro-service.gif'
 import Footer from '@/components/footer'
 import SingleCard from '@/components/ProjectSlider/singleCard'
 const related_project = [
@@ -84,7 +83,7 @@ const PlayableAds = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src={serive} style={css} />
+                                        <Image src='/assets/service/miro-service.gif' alt=' Access to advanced analytics' style={css} />
                                     </Col>
                                 </Row>
 

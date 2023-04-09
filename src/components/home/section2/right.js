@@ -2,8 +2,6 @@ import Button from '@/components/button/Button'
 import Image from 'next/image'
 import React from 'react'
 import { Col, NavLink, Row } from 'react-bootstrap'
-import img1 from '../../../../public/01.png'
-import img2 from '../../../../public/02.png'
 const ColRight = () => {
     return (
         <div className='right-col'>
@@ -24,7 +22,7 @@ const ColRight = () => {
                     <Row>
                         <Col xxl={4} xl={4} lg={4} md={4} sm={4}>
                             <div className="img_section">
-                                <Image src={img1} alt="" width={1920} height={1080} />
+                                <Image src='/01.png' alt="" width={1920} height={1080} />
                             </div>
                         </Col>
                         <Col xxl={8} xl={8} lg={8} md={8} sm={8}>
@@ -42,7 +40,7 @@ const ColRight = () => {
                     <Row>
                         <Col xxl={4} xl={4} lg={4} md={4} sm={4} xm={4}>
                             <div className="img_section">
-                                <Image src={img2} alt="" width={1920} height={1080} />
+                                <Image src='/02.png' alt="" width={1920} height={1080} />
                             </div>
                         </Col>
                         <Col xxl={8} xl={8} lg={8} md={8} sm={8}>

@@ -5,7 +5,6 @@ import ColRight from '@/components/home/section2/right'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Head from 'next/head'
-import recode_01 from '../../../public'
 const About = () => {
     return (
         <>

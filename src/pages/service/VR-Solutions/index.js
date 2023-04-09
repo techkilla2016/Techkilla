@@ -4,7 +4,6 @@ import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import bg from '&/assets/service/web banner_VR1.jpg'
-import serive from '../../../../public/assets/service/miro-service.gif'
 import Footer from '@/components/footer'
 import UseCase from '@/components/service/UseCase'
 import SingleCard from '@/components/ProjectSlider/singleCard'
@@ -77,7 +76,7 @@ const VRSolutions = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src={serive} style={css} />
+                                        <Image src='/assets/service/miro-service.gif' style={css} />
                                     </Col>
                                 </Row>
                                 <Row>
