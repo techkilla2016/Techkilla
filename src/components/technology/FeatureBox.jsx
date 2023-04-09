@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-import Minus from '../../../public/Assets/Home/minus.svg'
-import Plus from '../../../public/Assets/Home/plus.svg'
+import Minus from '../../../public/assets/Home/minus.svg'
+import Plus from '../../../public/assets/Home/plus.svg'
 function FeatureBox({ title, content }) {
   const [show, setShow] = useState(false)
   return (

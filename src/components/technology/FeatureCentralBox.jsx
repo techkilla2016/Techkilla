@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import LogoIcon from '&/logo/logoOne.png'
-import Minus from '&/Assets/Home/minus.svg'
-import Plus from '&/Assets/Home/plus.svg'
+import Minus from '&/assets/Home/minus.svg'
+import Plus from '&/assets/Home/plus.svg'
 function FeatureCentralBox({ title, content }) {
   const [show, setShow] = useState(false);
   return (

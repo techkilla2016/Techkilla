@@ -3,8 +3,8 @@ import FeatureCentralBox from '@/components/technology/FeatureCentralBox'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import Curly from '../../../../public/Assets/Home/curly.svg'
-import ArrowRight from '../../../../public/Assets/Home/arrow-right.svg'
+import Curly from '../../../../public/assets/Home/curly.svg'
+import ArrowRight from '../../../../public/assets/Home/arrow-right.svg'
 const WhatWeDo = () => {
     return (
         <Container className='pb-4'>

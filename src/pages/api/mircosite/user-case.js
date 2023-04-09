@@ -2,23 +2,23 @@ const handler = (req, res) => {
     if (req.method === "GET") {
         const usecase = [
             {
-                img: '/Assets/service/product launch-01-01.png',
+                img: '/assets/service/product launch-01-01.png',
                 title: 'Product launch'
             },
             {
-                img: '/Assets/service/Targeting prospects-01-01.png',
+                img: '/assets/service/Targeting prospects-01-01.png',
                 title: 'Targeting prospects'
             },
             {
-                img: '/Assets/service/Geotargeting market-01-01.png',
+                img: '/assets/service/Geotargeting market-01-01.png',
                 title: 'Geotargeting market'
             },
             {
-                img: '/Assets/service/distinguishing the corporate-01-01.png',
+                img: '/assets/service/distinguishing the corporate-01-01.png',
                 title: 'distinguishing the corporate brand'
             },
             {
-                img: '/Assets/service/product launch-01-01.png',
+                img: '/assets/service/product launch-01-01.png',
                 title: 'promoting events'
             },
         ]

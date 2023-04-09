@@ -43,7 +43,7 @@ const index = () => {
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className='caseFullImg'>
-                                            <Image src="/Assets/use-case/Tetra-Pak2.png" width={1920} height={1080} />
+                                            <Image src="/assets/use-case/Tetra-Pak2.png" width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
@@ -160,7 +160,7 @@ const index = () => {
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className='caseFullImg'>
-                                            <Image src="/Assets/use-case/excitometer2.png" width={1920} height={1080} />
+                                            <Image src="/assets/use-case/excitometer2.png" width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
@@ -172,7 +172,7 @@ const index = () => {
                                 <Row className='flex-col'>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className='caseFullImg'>
-                                            <Image src="/Assets/use-case/excitometer1.png" width={1920} height={1080} />
+                                            <Image src="/assets/use-case/excitometer1.png" width={1920} height={1080} />
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>

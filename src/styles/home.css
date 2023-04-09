@@ -267,7 +267,7 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
 /* Section3 service  */
 .section3 {
     width: 100%;
-    background: url('../../public/Assets/tech.webp') center center/cover;
+    background: url('../../public/assets/tech.webp') center center/cover;
     background-attachment: fixed;
 }
 
