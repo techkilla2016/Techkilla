@@ -36,7 +36,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src='/assets/Home/a01.png'   alt="Happy Customers" />
+                                                    <img src='/home/a01.png'   alt="Happy Customers" />
                                                 </div>
                                                 <div className="recodeData">
                                                     28+
@@ -50,7 +50,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src="/assets/home/a02.png"  alt="Projects Completed" />
+                                                    <img src="/home/a02.png"  alt="Projects Completed" />
                                                 </div>
                                                 <div className="recodeData">
                                                     110+
@@ -64,7 +64,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src="/assets/home/a03.png"  alt="Organic Impressions" />
+                                                    <img src="/home/a03.png"  alt="Organic Impressions" />
                                                 </div>
                                                 <div className="recodeData">
                                                     5+
@@ -78,7 +78,7 @@ const About = () => {
                                         <Col xl={3} lg={3} md={6} sm={12} >
                                             <div className="recode my-4 py-4">
                                                 <div className="recodeIcon">
-                                                    <img src="/assets/home/a04.png"  alt="Pro Awards Winner" />
+                                                    <img src="/home/a04.png"  alt="Pro Awards Winner" />
                                                 </div>
                                                 <div className="recodeData">
                                                     3+

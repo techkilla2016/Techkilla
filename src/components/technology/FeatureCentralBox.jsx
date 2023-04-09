@@ -6,7 +6,7 @@ function FeatureCentralBox({ title, content }) {
     <div className="px-3 px-lg-0 centerBoxMain d-flex justify-content-center align-items-center">
       <div className={`box central-box ${show ? "show" : ""}`}>
         <span className="closeable" onClick={() => setShow(!show)}>
-          <Image src={show ? '/assets/Home/minus.svg' : '/assets/Home/plus.svg'} alt="Vendor Data Acquisitions" />
+          <Image src={show ? '/home/minus.svg' : '/home/plus.svg'} alt="Vendor Data Acquisitions" />
         </span>
         {!show && (
           <div className="logo">

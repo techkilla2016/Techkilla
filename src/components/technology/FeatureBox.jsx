@@ -7,7 +7,7 @@ function FeatureBox({ title, content }) {
       className={`box my-lg-4 my-0 ${show ? 'show' : ''}  ${!content ? 'no-content' : ''}`}
     >
       <span className="closeable" onClick={() => setShow(!show)}>
-        <Image src={show ? '/assets/Home/minus.svg' : '/assets/Home/plus.svg'} alt="toggleable Button" />
+        <Image src={show ? '/home/minus.svg' : '/home/plus.svg'} alt="toggleable Button" />
       </span>
       {!show && title && <div className={`w-100 title `} >{title}</div>}
       {show && content && <div className="w-100 content" onClick={() => setShow(!show)}>{content} </div>}

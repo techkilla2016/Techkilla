@@ -34,17 +34,17 @@ const WhatWeDo = () => {
 
                         </Col>
                         <Col lg="auto" className="my-auto d-lg-block d-none">
-                            <Image src='/assets/Home/curly.svg' alt="curly" />
+                            <Image src='/home/curly.svg' alt="curly" />
                         </Col>
                     </Row>
                     <div className=" d-flex d-lg-none justify-content-around">
                         <div className=" my-3">
-                            <Image className="tabletArrowDown" src='/assets/Home/arrow-right.svg' alt="arrow-right" />
+                            <Image className="tabletArrowDown" src='/home/arrow-right.svg' alt="arrow-right" />
                         </div>
                         <div className=" my-3">
-                            <Image className="tabletArrowDown" src='/assets/Home/arrow-right.svg' alt="arrow-right" />
+                            <Image className="tabletArrowDown" src='/home/arrow-right.svg' alt="arrow-right" />
                         </div><div className=" my-3">
-                            <Image className="tabletArrowDown" src='/assets/Home/arrow-right.svg' alt="arrow-right" />
+                            <Image className="tabletArrowDown" src='/home/arrow-right.svg' alt="arrow-right" />
                         </div>
                     </div>
                 </div>
@@ -53,14 +53,14 @@ const WhatWeDo = () => {
                     <Row className="align-items-center m-0">
                         <div className="d-lg-none d-block ">
                             <div className="row justify-content-around my-3">
-                                <Image className="mobileArrowDown mobileArrowDownBottom " src='/assets/Home/arrow-right.svg' alt="arrow-right" />
-                                <Image className="mobileArrowDown mobileArrowDownBottom " src='/assets/Home/arrow-right.svg' alt="arrow-right" />
-                                <Image className="mobileArrowDown mobileArrowDownBottom " src='/assets/Home/arrow-right.svg' alt="arrow-right" />
-                                <Image className="mobileArrowDown mobileArrowDownBottom " src='/assets/Home/arrow-right.svg' alt="arrow-right" /></div>
+                                <Image className="mobileArrowDown mobileArrowDownBottom " src='/home/arrow-right.svg' alt="arrow-right" />
+                                <Image className="mobileArrowDown mobileArrowDownBottom " src='/home/arrow-right.svg' alt="arrow-right" />
+                                <Image className="mobileArrowDown mobileArrowDownBottom " src='/home/arrow-right.svg' alt="arrow-right" />
+                                <Image className="mobileArrowDown mobileArrowDownBottom " src='/home/arrow-right.svg' alt="arrow-right" /></div>
                         </div>
                         <Col lg="auto" className="d-lg-block d-none">
 
-                            <Image className="" src='/assets/Home/arrow-right.svg' alt="arrow-right" />
+                            <Image className="" src='/home/arrow-right.svg' alt="arrow-right" />
                         </Col>
                         <Col>
                             <FeatureBox title="Microsite design" />
@@ -69,7 +69,7 @@ const WhatWeDo = () => {
                     <Row className="align-items-center m-0">
                         <Col lg="auto" className="d-lg-block d-none">
 
-                            <Image className="" src='/assets/Home/arrow-right.svg' alt="arrow-right" />
+                            <Image className="" src='/home/arrow-right.svg' alt="arrow-right" />
                         </Col>
                         <Col>
                             <FeatureBox title="VR (Virtual reality) Solutions" />
@@ -78,7 +78,7 @@ const WhatWeDo = () => {
                     <Row className="align-items-center m-0">
                         <Col lg="auto" className="d-lg-block d-none">
 
-                            <Image className="" src='/assets/Home/arrow-right.svg' alt="arrow-right" />
+                            <Image className="" src='/home/arrow-right.svg' alt="arrow-right" />
                         </Col>
                         <Col>
                             <FeatureBox title="Playable Ads" />
@@ -87,7 +87,7 @@ const WhatWeDo = () => {
                     <Row className="align-items-center m-0">
                         <Col lg="auto" className="d-lg-block d-none">
 
-                            <Image className="" src='/assets/Home/arrow-right.svg' alt="arrow-right" />
+                            <Image className="" src='/home/arrow-right.svg' alt="arrow-right" />
                         </Col>
                         <Col>
                             <FeatureBox title="On-ground activations" />

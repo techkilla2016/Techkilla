@@ -7,7 +7,7 @@ const Card = ({ img, title, description, slag, color }) => {
             <div className="serviceCart">
                 <div className="iconContainer" style={{ background: color }}>
                     <div className="serviceIcon">
-                        <img src={img} />
+                        <img src={img} alt={title} />
                     </div>
                 </div>
                 <div className="cardDesc">
