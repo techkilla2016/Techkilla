@@ -28,7 +28,7 @@ export default function ProjectSlider({ list }) {
           slideShadows: false,
         }}
         pagination={true}
-        modules={[EffectCoverflow,Autoplay, Pagination]}
+        modules={[EffectCoverflow, Autoplay, Pagination]}
         className="mySwiper"
       >
         {

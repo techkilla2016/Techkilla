@@ -2,11 +2,12 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function SingleCard({ list }) {
+
   return (
     <div className="singleCard">
       <Swiper
@@ -33,7 +34,11 @@ export default function SingleCard({ list }) {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Pagination, Autoplay]}
         className="mySwiper"
       >
         {
@@ -51,6 +56,6 @@ export default function SingleCard({ list }) {
           })
         }
       </Swiper>
-    </div>
+    </div >
   );
 }

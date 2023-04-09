@@ -130,7 +130,8 @@ const MicrositeDesign = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src='/service/web banner_micro site.jpg' alt='Crafting Engaging and Impactful Microsite Designs for Your Business' />
+                                <Image src='/service/web banner_micro site.jpg'
+                                    alt='Microsite design' width={1920} height={1080} />
                             </div>
                             <div className="introSection">
                                 <h1><span>M</span>icrosite <span>D</span>esign</h1>
@@ -163,7 +164,8 @@ const MicrositeDesign = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src='/service/miro-service.gif' alt='Benefits of launching your own microsite' style={css} />
+                                        <Image src='/service/miro-service.gif' alt='Benefits of launching your own microsite'
+                                            width={1920} height={1080} style={css} />
                                     </Col>
                                 </Row>
                             </Container>
