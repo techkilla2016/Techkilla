@@ -6,58 +6,58 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '@/components/footer'
 import Benefits from '@/components/service/Benefit'
 import SingleCard from '@/components/ProjectSlider/singleCard'
-const list = [
-    {
-        title: "Excitometer",
-        them: "/service/500x500/Excitometer.png"
-    },
-    {
-        title: "360* spin booth or photobooth",
-        them: "/service/500x500/spin_booth.png"
-    },
-    {
-        title: "Magazine Booth",
-        them: "/service/500x500/Magazine_Booth.png"
-    },
-    {
-        title: "Kinect games",
-        them: "/service/500x500/Kinect_games.png"
-    },
-    {
-        title: "AR Football",
-        them: "/service/500x500/AR_Football.png"
-    },
-    {
-        title: "VR Activities",
-        them: "/service/500x500/AR_Activities.png"
-    },
-    {
-        title: "Video feedback booth",
-        them: "/service/500x500/Video_fee_back_booth.png"
-    },
-    {
-        title: "Slingshot ",
-        them: "/service/500x500/Slingshot.png"
-    },
-    {
-        title: "Digital Photobooth",
-        them: "/service/500x500/Digital_Photobooth.png"
-    },
-    {
-        title: "Mosaic wall",
-        them: "/service/500x500/Mosaic_wall.png"
-    },
-    {
-        title: "Mosaic wall 2",
-        them: "/service/500x500/Mosaic_wall_2.png"
-    },
-    {
-        title: "Green screen or Croma photobooth",
-        them: "/service/500x500/Green_screen_or_Croma_photobooth.png"
-    },
-    
-]
-const Ongroundactivations = () => {
+// const Related_projects = [
+//     {
+//         title: "Excitometer",
+//         them: "/service/500x500/Excitometer.png"
+//     },
+//     {
+//         title: "360* spin booth or photobooth",
+//         them: "/service/500x500/spin_booth.png"
+//     },
+//     {
+//         title: "Magazine Booth",
+//         them: "/service/500x500/Magazine_Booth.png"
+//     },
+//     {
+//         title: "Kinect games",
+//         them: "/service/500x500/Kinect_games.png"
+//     },
+//     {
+//         title: "AR Football",
+//         them: "/service/500x500/AR_Football.png"
+//     },
+//     {
+//         title: "VR Activities",
+//         them: "/service/500x500/AR_Activities.png"
+//     },
+//     {
+//         title: "Video feedback booth",
+//         them: "/service/500x500/Video_fee_back_booth.png"
+//     },
+//     {
+//         title: "Slingshot ",
+//         them: "/service/500x500/Slingshot.png"
+//     },
+//     {
+//         title: "Digital Photobooth",
+//         them: "/service/500x500/Digital_Photobooth.png"
+//     },
+//     {
+//         title: "Mosaic wall",
+//         them: "/service/500x500/Mosaic_wall.png"
+//     },
+//     {
+//         title: "Mosaic wall 2",
+//         them: "/service/500x500/Mosaic_wall_2.png"
+//     },
+//     {
+//         title: "Green screen or Croma photobooth",
+//         them: "/service/500x500/Green_screen_or_Croma_photobooth.png"
+//     },
+
+// ]
+const Ongroundactivations = ({ Related_projects }) => {
     return (
         <>
             <Head>
@@ -69,7 +69,7 @@ const Ongroundactivations = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src='/service/web banner_on ground activity 2.jpg' />
+                                <Image src='/service/web banner_on ground activity 2.jpg' width={1920} height={1080} />
                             </div>
                             <div className="introSection">
                                 <h1>On-ground activations</h1>
@@ -94,7 +94,7 @@ const Ongroundactivations = () => {
                             <Container>
                                 <div className="section">
                                     <div className='use_case_heading'>Related projects</div>
-                                    <SingleCard list={list} />
+                                    <SingleCard list={Related_projects} />
                                 </div>
                             </Container>
                         </div>
@@ -108,3 +108,13 @@ const Ongroundactivations = () => {
 }
 
 export default Ongroundactivations
+
+export const getServerSideProps = async () => {
+    const res = await fetch('https://techkilla.vercel.app/api/on-ground-activations/')
+    const data = await res.json()
+    return ({
+        props: {
+            Related_projects: data?.data
+        }
+    })
+}
