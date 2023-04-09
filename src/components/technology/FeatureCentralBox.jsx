@@ -1,15 +1,13 @@
 import Image from "next/image";
 import { useState } from "react";
 import LogoIcon from '&/logo/logoOne.png'
-import Minus from '&/assets/Home/minus.svg'
-import Plus from '&/assets/Home/plus.svg'
 function FeatureCentralBox({ title, content }) {
   const [show, setShow] = useState(false);
   return (
     <div className="px-3 px-lg-0 centerBoxMain d-flex justify-content-center align-items-center">
       <div className={`box central-box ${show ? "show" : ""}`}>
         <span className="closeable" onClick={() => setShow(!show)}>
-          <Image src={show ? Minus : Plus} />
+          <Image src={show ? '/assets/Home/minus.svg' : '/assets/Home/plus.svg'} alt="Vendor Data Acquisitions" />
         </span>
         {!show && (
           <div className="logo">
