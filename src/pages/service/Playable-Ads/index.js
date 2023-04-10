@@ -40,16 +40,15 @@ const PlayableAds = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src='/service/web banner_playable ads.jpg' alt='Playable Ads' />
+                                <Image src='/service/web banner_playable ads.jpg' width={1920} height={1080} alt='Playable Ads' />
                             </div>
                             <div className="introSection">
-                                <h1>Playable Ads</h1>
                                 <Container>
                                     <Row className='justify-content-center'>
                                         <Col xxl={10} lg={11} md={12} sm={12}>
-                                            <div className="introDesc ">
+                                            <h1 className="introDesc ">
                                                 Step into the game and experience the fun with our interactive Playable-Ads today!
-                                            </div>
+                                            </h1>
                                         </Col>
                                     </Row>
                                 </Container>
@@ -82,7 +81,7 @@ const PlayableAds = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src='/service/miro-service.gif' alt=' Access to advanced analytics' style={css} />
+                                        <Image src='/service/miro-service.gif' width={1920} height={1080} alt=' Access to advanced analytics' style={css} />
                                     </Col>
                                 </Row>
 

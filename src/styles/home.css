@@ -888,3 +888,21 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
         width: 69px;
     }
 }
+
+.video_contain {
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.frame {
+    border-right: 10px solid #f5f5f4;
+    border-bottom: 10px solid #f5f5f4;
+    width: 96%;
+    height: 102%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0px;
+    left: 50%;
+}

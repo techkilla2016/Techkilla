@@ -69,16 +69,15 @@ const Ongroundactivations = ({ Related_projects }) => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src='/service/web banner_on ground activity 2.jpg' width={1920} height={1080} />
+                                <Image src='/service/web banner_on ground activity 2.jpg' alt='On-ground activations' width={1920} height={1080} />
                             </div>
                             <div className="introSection">
-                                <h1>On-ground activations</h1>
                                 <Container>
                                     <Row className='justify-content-center'>
                                         <Col xxl={10} lg={11} md={12} sm={12}>
-                                            <div className="introDesc ">
+                                            <h1 className="introDesc ">
                                                 Experience the brand like never before with our innovative experiential marketing strategies.
-                                            </div>
+                                            </h1>
                                         </Col>
                                     </Row>
                                 </Container>

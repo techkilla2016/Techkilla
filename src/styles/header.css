@@ -46,10 +46,48 @@ nav {
     padding: 8px 5px;
     color: rgb(12 44 43 / 50%);
     text-transform: capitalize;
+    position: relative;
+}
+
+.nav_child {
+    font-weight: 700;
+    line-height: 59px;
+    padding: 8px 5px;
+    color: rgb(12 44 43 / 50%);
+}
+
+.drop_down {
+    position: absolute;
+    top: 80%;
+    left: 0px;
+    white-space: nowrap;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: #fff;
+    padding: 15px 10px;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+}
+
+.navlink:hover .drop_down {
+    display: flex;
+}
+
+
+
+.nav_child_drop {
+    font-weight: 700;
+    line-height: 20px;
+    padding: 8px 5px;
+    color: rgb(12 44 43 / 50%);
 }
 
 .navlink.active,
-.navlink:hover {
+.nav_child.acitve,
+.nav_child:hover,
+.navlink:hover,
+.nav_child_drop.active,
+.nav_child_drop:hover {
     color: rgb(0 0 0 / 90%);
 }
 

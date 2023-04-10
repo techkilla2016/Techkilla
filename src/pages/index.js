@@ -62,8 +62,8 @@ const Home = () => {
               <Container>
                 <Row>
                   <Col lg={6} md={12} sm={12} >
-                    <ColLeft />
-                    {/* <IntroVideo/> */}
+                    {/* <ColLeft /> */}
+                    <IntroVideo/>
                   </Col>
                   <Col lg={6} md={12} sm={12} >
                     <ColRight />

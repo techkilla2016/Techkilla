@@ -134,7 +134,6 @@ const MicrositeDesign = () => {
                                     alt='Microsite design' width={1920} height={1080} />
                             </div>
                             <div className="introSection">
-                                <h1><span>M</span>icrosite <span>D</span>esign</h1>
                                 <Container>
                                     <Row className='justify-content-center'>
                                         <Col xxl={10} lg={11} md={12} sm={12}>

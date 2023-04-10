@@ -258,18 +258,6 @@
     padding-bottom: 100px;
 }
 
-.introSection h1 {
-    text-align: center;
-    font-weight: 900;
-    transition: 0.2s linear;
-    color: #ffcb47;
-    font-family: 'Playfair Display', serif;
-}
-
-.introSection h1 span {
-    /* color: #fff; */
-}
-
 .introDesc {
     /* font-family: 'Playfair Display', serif; */
     font-family: 'Inter', sans-serif;

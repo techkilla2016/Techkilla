@@ -37,10 +37,9 @@ const VRSolutions = () => {
                     <div className='mainContainer'>
                         <div className="serviceIntro">
                             <div className="backGround">
-                                <Image src='/service/web banner_VR1.jpg' alt='VR Solutions' />
+                                <Image src='/service/web banner_VR1.jpg' width={1920} height={1080} alt='VR Solutions' />
                             </div>
                             <div className="introSection">
-                                <h1>VR Solutions</h1>
                                 <Container>
                                     <Row className='justify-content-center'>
                                         <Col xxl={10} lg={11} md={12} sm={12}>
@@ -75,7 +74,7 @@ const VRSolutions = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src='/service/miro-service.gif' style={css} />
+                                        <Image src='/service/miro-service.gif' alt='VR Solutions' width={1920} height={1080} style={css} />
                                     </Col>
                                 </Row>
                                 <Row>

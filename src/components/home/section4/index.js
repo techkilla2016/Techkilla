@@ -27,7 +27,7 @@ const PortfolioSection = () => {
                                 <Image src='/home/a01.png' alt="" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
-                                28+
+                                80+
                             </div>
                             <div className="recodeTitle">
                                 Happy Customers
@@ -41,7 +41,7 @@ const PortfolioSection = () => {
                                 <Image src='/home/a02.png' alt="" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
-                                110+
+                                600+
                             </div>
                             <div className="recodeTitle">
                                 Projects Completed
