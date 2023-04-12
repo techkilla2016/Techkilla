@@ -5,7 +5,7 @@ import { Col, Row } from 'react-bootstrap'
 
 const ProdcutCard = ({ Heading, img, handleClick, target }) => {
     return (
-        <div className='p-3'>
+        <div className='card-main'>
             <div className="product-card">
                 <div className='watchVideo' title={`Preview ${Heading}`} onClick={() => handleClick(target)}>
                     <Image src={img} width={1920} height={1080} />
@@ -13,14 +13,14 @@ const ProdcutCard = ({ Heading, img, handleClick, target }) => {
                         {Heading}
                     </h5>
                 </div>
-                <div className='d-flex justify-content-around'>
-                    <button className='book-btn' onClick={() => handleClick(target)}>
-                        Preview
-                    </button>
-                    <button className='book-btn'>
-                        Book now
-                    </button>
-                </div>
+            </div>
+            <div className='d-flex pb-3 justify-content-around'>
+                {/* <button className='book-btn' onClick={() => handleClick(target)}>
+                    Preview
+                </button> */}
+                <button className='book-btn'>
+                    Book now
+                </button>
             </div>
         </div >
     )

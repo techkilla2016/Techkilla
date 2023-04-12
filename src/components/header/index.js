@@ -23,6 +23,13 @@ const Header = () => {
         windowSize.width > 966 ? setIsMobile(true) : setIsMobile(false)
         return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    const [curChild, setCurChild] = useState([])
+    const [isChild, setIsChild] = useState(false)
+    const childHandal = (payload) => {
+        setIsChild(true)
+        setCurChild(payload)
+    }
     const [show, setShow] = useState(false)
     if (windowSize.width > 966) {
         return (
@@ -44,7 +51,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className='navlink'>
-                            <Link className='nav_child' href='/product'>Product</Link>
+                            <Link className='nav_child' href='/product'>Products</Link>
                             <div className='drop_down'>
                                 <Link className='nav_child_drop' href='/product/Digital-Engagement'>Digital Engagement</Link>
                                 <Link className='nav_child_drop' href='/product/Physical-Engagement'>Physical Engagement</Link>
@@ -104,48 +111,97 @@ const Header = () => {
             </nav >
         )
     } else {
-        return <nav>
-            <div className="navbar">
-                <Link href='/' className="logo">
-                    <Image src='/logo/logo.png' width={60} height={60} />
-                </Link>
-            </div>
-            <div className='toggle-secction'>
-                <button className='toggle' onClick={() => setIsMobile(!isMobile)}>
-                    {isMobile ? <IoCloseSharp /> : <CgMenuRightAlt />}
-                    <span id='toggle'></span>
-                </button>
-            </div>
-            {
-                <div className={isMobile ? "active mobile-container" : "mobile-container "} id='hideMobileNave'>
-                    <div className={isMobile ? "mobile-nav active" : "mobile-nav"}>
-                        <div className='mobileMenuContaienr'>
-                            <div className='listMenu' onClick={() => setIsMobile(false)}>
-                                <Link href='/'>Home</Link>
-                            </div>
-                            <div className='listMenu' onClick={() => setIsMobile(false)}>
-                                <Link href='/about'>About</Link>
-                            </div>
-                            <div className='listMenu' onClick={() => setIsMobile(false)}>
-                                <Link href='/service'>Service</Link>
-                            </div>
-                            <div className='listMenu' onClick={() => setIsMobile(false)}>
-                                <Link href="/case-studies">Case Studies</Link>
-                            </div>
-                        </div >
-                        <div className="MobileNavBtn">
-                            <Link href='https://calendly.com/ensights-meeting/' target='_blank'>
-                                <button onClick={() => setIsMobile(false)}>Book A Demo</button>
-                            </Link>
-                            <Link href='/contact' >
-                                <button onClick={() => setIsMobile(false)}>Contect Us</button>
-                            </Link >
+        return <>
+            <nav>
+                <div className="navbar">
+                    <Link href='/' className="logo">
+                        <Image src='/logo/logo.png' width={60} height={60} />
+                    </Link>
+                </div>
+                <div className='toggle-secction'>
+                    <button className='toggle' onClick={() => setIsMobile(!isMobile)}>
+                        {isMobile ? <IoCloseSharp /> : <CgMenuRightAlt />}
+                        <span id='toggle'></span>
+                    </button>
+                </div>
+                {
+                    <div className={isMobile ? "active mobile-container" : "mobile-container "} id='hideMobileNave'>
+                        <div className={isMobile ? "mobile-nav active" : "mobile-nav"}>
+                            <div className='mobileMenuContaienr'>
+                                <div className='listMenu' onClick={() => setIsMobile(false)}>
+                                    <Link href='/'>Home</Link>
+                                </div>
+                                <div className='listMenu' onClick={() => setIsMobile(false)}>
+                                    <Link href='/about'>About</Link>
+                                </div>
+                                <div className='listMenu' onClick={() => childHandal([
+                                    {
+                                        title: 'Microsite Design',
+                                        url: '/service/Microsite-Design'
+                                    },
+                                    {
+                                        title: 'VR Solutions',
+                                        url: '/service/VR-Solutions'
+                                    },
+                                    {
+                                        title: 'Playable Ads',
+                                        url: '/service/Playable-Ads'
+                                    },
+                                    {
+                                        title: 'On Ground Activations',
+                                        url: '/service/On-ground-activations'
+                                    },
+                                ])}>
+                                    Service
+                                </div>
+                                <div className='listMenu' onClick={() => childHandal([
+                                    {
+                                        title: 'Digital Engagement',
+                                        url: '/product/Digital-Engagement'
+                                    },
+                                    {
+                                        title: 'Physical Engagement',
+                                        url: '/product/Physical-Engagement'
+                                    }
+                                ])}>
+                                    Products
+                                </div>
+                                <div className='listMenu' onClick={() => setIsMobile(false)}>
+                                    <Link href="/case-studies">Case Studies</Link>
+                                </div>
+                            </div >
+                            <div className="MobileNavBtn">
+                                <Link href='https://calendly.com/ensights-meeting/' target='_blank'>
+                                    <button onClick={() => setIsMobile(false)}>Book A Demo</button>
+                                </Link>
+                                <Link href='/contact' >
+                                    <button onClick={() => setIsMobile(false)}>Contect Us</button>
+                                </Link >
+                            </div >
                         </div >
                     </div >
-                </div >
+                }
+            </nav >
+
+            {
+                isChild && <div className='Mobile_nav_child_modal'>
+                    <div className='Mobile_nav_child_modal_inner'>
+                        {
+                            curChild?.map((item) => {
+                                return <div className='listMenu' onClick={() => {
+                                    // setIsMobile(false)
+                                    // setIsChild(false)
+                                }}>
+                                    <Link href={item?.url}>{item.title}</Link>
+                                </div>
+                            })
+                        }
+                    </div>
+                </div>
             }
-        </nav >
+        </>
     }
+
 }
 
 export default Header

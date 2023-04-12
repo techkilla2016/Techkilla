@@ -62,13 +62,13 @@ const PhysicalEngagement = ({ product }) => {
                         </h2> */}
                         <Container>
                             <div className='Heading'>
-                                Product
+                                products
                             </div>
                             <Row>
                                 {
                                     product?.map((curItem, keys) => {
                                         return (
-                                            <Col key={keys} xxl={4} xl={4} lg={4} md={6} sm={6} xm={12} className='my-4'>
+                                            <Col key={keys} xxl={3} xl={3} lg={4} md={6} sm={6} xm={12} className=''>
                                                 <ProdcutCard {...curItem} handleClick={handleOpen} />
                                             </Col>
                                         )

@@ -30,8 +30,8 @@ const DigitalEngagement = ({ product }) => {
                             <div className='preloaderBack'>
                                 <Image src='/product-02.png' width={1920} height={1080} />
                                 <Image src='/product-02_02.png' width={1920} height={1080} />
-                            <div className='preloaderBack-layer'>
-                            </div>
+                                <div className='preloaderBack-layer'>
+                                </div>
                             </div>
                             <div className='product_intro'>
                                 <Container>
@@ -62,13 +62,13 @@ const DigitalEngagement = ({ product }) => {
                         </h2> */}
                         <Container>
                             <div className='Heading'>
-                                Product
+                                products
                             </div>
                             <Row>
                                 {
                                     product?.map((curItem, keys) => {
                                         return (
-                                            <Col key={keys} xxl={4} xl={4} lg={4} md={6} sm={6} xm={12} className='my-4'>
+                                            <Col key={keys} xxl={3} xl={3} lg={4} md={6} sm={6} xm={12} className=''>
                                                 <ProdcutCard {...curItem} handleClick={handleOpen} />
                                             </Col>
                                         )
