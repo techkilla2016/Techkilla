@@ -334,3 +334,40 @@ body {
         margin-top: 18px;
     }
 }
+
+@media screen and (max-width:426px) {
+    .product_main p {
+        font-size: 17px;
+        margin-top: 85px;
+        color: #000;
+        text-align: center;
+        letter-spacing: 0px;
+        font-weight: normal;
+        color: #cdab45;
+    }
+
+    .product_main h2 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .product_main p {
+        font-size: 15px;
+    }
+
+    .product_main h2 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .product_main p {
+        font-size: 12px;
+        margin-top: 60px;
+    }
+
+    .product_main h2 {
+        font-size: 22px;
+    }
+}
