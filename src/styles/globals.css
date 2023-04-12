@@ -8,7 +8,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
+body {
+  background: transparent !important;
+}
 
 ::-webkit-scrollbar {
   width: 18px;
@@ -53,6 +55,11 @@ button {
   background: none;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .introSection {
   width: 100%;
   height: 90vh;
@@ -73,3 +80,4 @@ button {
 @import url('./case_studie.css');
 @import url('./service_project.css');
 @import url('./microsite.css');
+@import url('./product.css');

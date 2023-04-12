@@ -140,14 +140,45 @@
             hsl(0, 0%, 0%) 100%);
 }
 
+.frontBody1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0px;
+    color: #fff;
+    transform: translateY(0px);
+    z-index: 100;
+    padding-top: 0%;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    transition: all 500ms ease-in;
+    background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
 .cartBody:hover .frontBody {
     transform: translateY(-50%);
+}
+
+.btn-card {
+    margin-top: 10px;
 }
 
 .caseStudie__Title {
     font-size: 20px;
     color: #fff;
     padding: 0px 10px;
+}
+
+.caseStudie__Title1 {
+    font-size: 24px;
+    color: #fff;
+    padding: 10px 10px;
+    line-height: 1.2;
 }
 
 .cs__desc {
