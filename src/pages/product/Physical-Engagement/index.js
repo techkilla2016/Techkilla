@@ -1,6 +1,7 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import ProdcutCard from '@/components/product/productCard'
+import YouTubePlayer from '@/components/product/videoPlay'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
