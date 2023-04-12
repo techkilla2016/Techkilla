@@ -65,7 +65,7 @@ const PhysicalEngagement = ({ product }) => {
 }
 export default PhysicalEngagement
 export const getServerSideProps = async () => {
-    const res = await fetch('https://techkilla.vercel.app/api/product/physical-engagement')
+    const res = await fetch('https://techkilla.vercel.app/api/product/physical-engagement/')
     const data = await res.json()
     return ({
         props: {
