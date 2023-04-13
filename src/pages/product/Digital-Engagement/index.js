@@ -94,7 +94,6 @@ export default DigitalEngagement
 export const getServerSideProps = async () => {
     const res = await fetch('https://techkilla.vercel.app/api/product/digital-engagement/')
     const data = await res.json()
-    console.log(data)
     return ({
         props: {
             product: data?.data
