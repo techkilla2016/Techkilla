@@ -248,7 +248,7 @@ const index = () => {
                     <div className="mainContainer">
                         <div className="microHome1">
                             <div className="pagebg">
-                                <Image src='/microsite/micrositeHome.png' alt='QR code registration & Auto verification'  width={1920} height={1080} />
+                                <Image src='/microsite/micrositeHome.png' alt='QR code registration & Auto verification' width={1920} height={1080} />
                             </div>
                             <div className="microHome">
                                 <Container>
@@ -354,7 +354,7 @@ const index = () => {
                                             <Col key={index} xxl={3} xl={3} lg={3} md={4} sm={6} xm={12}>
                                                 <div className="micro-b-cart">
                                                     <div className="micro-b-them">
-                                                        <Image src={item.img} alt= {item.title} width={1920} height={1080} />
+                                                        <Image src={item.img} alt={item.title} width={1920} height={1080} />
                                                     </div>
                                                     <p className="micro-b-title">
                                                         {item.title}
@@ -751,12 +751,12 @@ const index = () => {
                                 <Row className='align-items-center'>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className="imgfulScreen db-ful">
-                                            <Image src='/microsite/logo-02.png' alt={item.title} width={1920} height={1080} />
+                                            <Image src='/microsite/logo-02.png' alt={'Collaborate'} width={1920} height={1080} />
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className="imgfulScreen db-ful">
-                                            <Image src='/microsite/logo-01.png' alt={item.title} width={1920} height={1080} />
+                                            <Image src='/microsite/logo-01.png' alt={'Collaborate'} width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
