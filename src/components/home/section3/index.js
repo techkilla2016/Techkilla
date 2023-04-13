@@ -55,7 +55,7 @@ const ServiceSection = () => {
                     <div className="serviceCard pt-3">
                         <div className="cartLogo">
                             <div className="icon">
-                                <Image src='/vr.png' alt="" />
+                                <Image src='/vr.png' alt="VR Experience" />
                             </div>
                         </div>
                         <div className="serviceCartTitle">

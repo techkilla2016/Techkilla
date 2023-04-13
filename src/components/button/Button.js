@@ -52,7 +52,7 @@ const Button = ({ target, title }) => {
     )
 }
 
-export const ButtonClick = ({ handleClick, title,target }) => {
+export const ButtonClick = ({ handleClick, title, target }) => {
     return (
         <button onClick={() => handleClick(target)} className='startButton'>{title}
             <div className="star-1">
@@ -112,4 +112,11 @@ export const ButtonLight = ({ target, title, type }) => {
     )
 }
 
+export const ButtonSwap = ({ clickHandel, url, title }) => {
+    return <button className='buttonSwap' onClick={() => clickHandel(url)}>
+        <span>{title}</span>
+    </button>
+}
+
 export default Button
+

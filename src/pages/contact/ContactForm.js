@@ -118,12 +118,12 @@ function ContactFrom() {
           <div className="submitted">
             <div className="header">
               <div className="close-btn" onClick={() => setShowModal(false)}>
-                <Image src="/close.svg" alt="close button" />
+                <Image src="/close.svg" alt="contact us" />
               </div>
             </div>
             <div className="body">
               <div>
-                <Image src="/envelop.svg" alt="envelop" />
+                <Image src="/envelop.svg" alt="contact us" />
               </div>
               <div className="title">Thanks for submitting</div>
               <div className="subtitle">your message has been sent!</div>

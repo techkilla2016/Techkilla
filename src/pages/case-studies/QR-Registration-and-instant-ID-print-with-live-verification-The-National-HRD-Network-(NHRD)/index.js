@@ -248,7 +248,7 @@ const index = () => {
                     <div className="mainContainer">
                         <div className="microHome1">
                             <div className="pagebg">
-                                <Image src='/microsite/micrositeHome.png' width={1920} height={1080} />
+                                <Image src='/microsite/micrositeHome.png' alt='QR code registration & Auto verification'  width={1920} height={1080} />
                             </div>
                             <div className="microHome">
                                 <Container>
@@ -272,7 +272,7 @@ const index = () => {
                             </h1>
                             <Container>
                                 <div className="microFulImg">
-                                    <Image src='/microsite/microsite.png' width={1920} height={1080} />
+                                    <Image src='/microsite/microsite.png' alt='What is QR Code Registration?' width={1920} height={1080} />
                                 </div>
                                 <div className="microPara">
                                     QR code registration is a form of one-of-a-kind registration process that occurs
@@ -299,7 +299,7 @@ const index = () => {
                                                 </p>
                                             </div>
                                             <div className="microFun_img">
-                                                <Image src={item.img} width={1920} height={1080} />
+                                                <Image src={item.img} alt='How does it function' width={1920} height={1080} />
                                             </div>
                                         </div>
                                     ))
@@ -324,7 +324,7 @@ const index = () => {
                                                         <div className="col-qr">
                                                             <div className="qr-cases">
                                                                 <h3 className="qr-cases-icon">
-                                                                    <Image src={curCase.icon} width={1920} height={1080} />
+                                                                    <Image src={curCase.icon} alt={curCase?.title} width={1920} height={1080} />
                                                                 </h3>
                                                                 <div className="qr-title">
                                                                     {curCase?.title}
@@ -354,7 +354,7 @@ const index = () => {
                                             <Col key={index} xxl={3} xl={3} lg={3} md={4} sm={6} xm={12}>
                                                 <div className="micro-b-cart">
                                                     <div className="micro-b-them">
-                                                        <Image src={item.img} width={1920} height={1080} />
+                                                        <Image src={item.img} alt= {item.title} width={1920} height={1080} />
                                                     </div>
                                                     <p className="micro-b-title">
                                                         {item.title}
@@ -672,7 +672,7 @@ const index = () => {
                             </h2>
                             <Container>
                                 <div className="microFulImg">
-                                    <Image src='/microsite/microsite_02.png' width={1920} height={1080} />
+                                    <Image src='/microsite/microsite_02.png' alt='Additional features' width={1920} height={1080} />
                                 </div>
                                 <div className="microPara">
                                     Your microsite can experience more features like Gaming engagement,
@@ -693,7 +693,7 @@ const index = () => {
                                                 return <Col key={index} xxl={3} xl={3} lg={3} md={4} sm={6} xm={12}>
                                                     <div className="qr_expertise">
                                                         <div className="qr_exp_img">
-                                                            <Image src={item.img} width={1920} height={1080} />
+                                                            <Image src={item.img} alt={item.title} width={1920} height={1080} />
                                                         </div>
                                                         <div className="expertise_title">
                                                             {item.title}
@@ -714,7 +714,7 @@ const index = () => {
                                                 return <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} key={index}>
                                                     <div className="graph_container">
                                                         <div className="graph_img">
-                                                            <Image src={item.img} width={1920} height={1080} />
+                                                            <Image src={item.img} alt={item.title} width={1920} height={1080} />
                                                         </div>
                                                         <h4>{item.title}</h4>
                                                         <p>{item.desc}</p>
@@ -738,7 +738,7 @@ const index = () => {
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className="imgfulScreen">
-                                            <Image src='/microsite/Brands.png' width={1920} height={1080} />
+                                            <Image src='/microsite/Brands.png' alt='we collaorate with brands and agencies' width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
@@ -751,12 +751,12 @@ const index = () => {
                                 <Row className='align-items-center'>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className="imgfulScreen db-ful">
-                                            <Image src='/microsite/logo-02.png' width={1920} height={1080} />
+                                            <Image src='/microsite/logo-02.png' alt={item.title} width={1920} height={1080} />
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className="imgfulScreen db-ful">
-                                            <Image src='/microsite/logo-01.png' width={1920} height={1080} />
+                                            <Image src='/microsite/logo-01.png' alt={item.title} width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
@@ -776,7 +776,7 @@ const index = () => {
                                                 </Col>
                                                 <Col xxl={3} xl={3} lg={3} md={3} sm={12} xm={12} >
                                                     <div className="imageSec">
-                                                        <Image src={item.img} width={1920} height={1080} />
+                                                        <Image src={item.img} alt={item.title} width={1920} height={1080} />
                                                     </div>
                                                 </Col>
                                             </Row>

@@ -10,7 +10,7 @@ import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
-const Home = () => {
+const Home = ({ work }) => {
   // const [data, setData] = useState([])
   // useEffect(() => {
   //   fetch('/api/home/').then((responce) => {
@@ -63,7 +63,7 @@ const Home = () => {
                 <Row>
                   <Col lg={6} md={12} sm={12} >
                     {/* <ColLeft /> */}
-                    <IntroVideo/>
+                    <IntroVideo />
                   </Col>
                   <Col lg={6} md={12} sm={12} >
                     <ColRight />
@@ -91,7 +91,7 @@ const Home = () => {
             {/* // Section4 Service */}
             <div className="section4">
               <div className="section4Inner">
-                <PortfolioSection />
+                <PortfolioSection work={work} />
               </div>
             </div>
 
@@ -110,3 +110,12 @@ const Home = () => {
 }
 
 export default Home
+export const getServerSideProps = async () => {
+  const res = await fetch('http://localhost:3000/api/work/')
+  const data = await res.json()
+  return ({
+    props: {
+      work: data?.data
+    }
+  })
+}

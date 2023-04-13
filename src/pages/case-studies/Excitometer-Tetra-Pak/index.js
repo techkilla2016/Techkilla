@@ -20,7 +20,7 @@ const index = () => {
                     <div className="mainContainer">
                         <div className="caseHomePage">
                             <div className="pagebg">
-                                <Image src='/use-case/Tetra-Pak2.jpg' width={1920} height={1080} />
+                                <Image src='/use-case/Tetra-Pak2.jpg' alt='Excitometer-Tetra Pak' width={1920} height={1080} />
                             </div>
                             <div className="pageText">
                                 <div className="zoom">
@@ -43,7 +43,7 @@ const index = () => {
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className='caseFullImg'>
-                                            <Image src="/use-case/Tetra-Pak2.png" width={1920} height={1080} />
+                                            <Image src="/use-case/Tetra-Pak2.png" alt=' Excitometer-Tetra Pak' width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
@@ -160,7 +160,7 @@ const index = () => {
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className='caseFullImg'>
-                                            <Image src="/use-case/excitometer2.png" width={1920} height={1080} />
+                                            <Image src="/use-case/excitometer2.png" alt='What is an excitometer?' width={1920} height={1080} />
                                         </div>
                                     </Col>
                                 </Row>
@@ -172,7 +172,7 @@ const index = () => {
                                 <Row className='flex-col'>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                                         <div className='caseFullImg'>
-                                            <Image src="/use-case/excitometer1.png" width={1920} height={1080} />
+                                            <Image src="/use-case/excitometer1.png" alt='How does it work?' width={1920} height={1080} />
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>

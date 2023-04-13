@@ -1,7 +1,26 @@
 import { Col, Container, Row } from "react-bootstrap"
-import CardSlider from "./CardSlider"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination, Navigation } from 'swiper';
 import Image from "next/image"
-const PortfolioSection = () => {
+import { ButtonSwap } from "@/components/button/Button"
+import YouTubePlayer from "@/components/product/videoPlay";
+import React, { useState } from "react";
+const PortfolioSection = ({ work }) => {
+    const [isPlay, setIsPlay] = useState(false)
+    const [curVideo, setCurVideo] = useState('')
+    const handleClose = () => {
+        setIsPlay(false)
+    }
+    const handleOpen = (payload) => {
+        setIsPlay(true)
+        if (payload === '/' || payload === '') {
+            setCurVideo('https://www.youtube.com/watch?v=JxMa3t3XDts&t=4s')
+        } else {
+            setCurVideo(payload)
+        }
+    }
     return (
         <>
             <Container>
@@ -14,17 +33,64 @@ const PortfolioSection = () => {
                     </Col>
                 </Row>
             </Container>
-            <Container >
-                <div className="slider">
-                    <CardSlider />
-                </div>
+            <Container>
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 50,
+                        },
+                    }}
+                    className="mySwiper py-5"
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                >
+                    {
+                        work.map((item, keys) => {
+                            return (
+                                <SwiperSlide key={keys} className="">
+                                    <div className="work_card">
+                                        <div className="work_card_inner">
+                                            <Image src={item?.img} alt={item?.Heading} width={1920} height={1080} />
+                                        </div>
+                                        <div className="work_card_layer">
+                                            <div className="work_btn">
+                                                <ButtonSwap title='Preview' clickHandel={handleOpen} url={item?.url} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+
+                </Swiper>
             </Container>
+
             <Container>
                 <Row>
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <Image src='/home/a01.png' alt="" width={1920} height={1080} />
+                                <Image src='/home/a01.png' alt="Happy Customers" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
                                 80+
@@ -38,7 +104,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <Image src='/home/a02.png' alt="" width={1920} height={1080} />
+                                <Image src='/home/a02.png' alt="Projects Completed" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
                                 600+
@@ -52,7 +118,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <Image src='/home/a03.png' alt="" width={1920} height={1080} />
+                                <Image src='/home/a03.png' alt="Organic Impressions" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
                                 5M+
@@ -66,7 +132,7 @@ const PortfolioSection = () => {
                     <Col xl={3} lg={3} md={6} sm={12} >
                         <div className="recode my-4 py-4">
                             <div className="recodeIcon">
-                                <Image src='/home/a04.png' alt="" width={1920} height={1080} />
+                                <Image src='/home/a04.png' alt="Pro Awards Winner" width={1920} height={1080} />
                             </div>
                             <div className="recodeData">
                                 3+
@@ -78,7 +144,7 @@ const PortfolioSection = () => {
                     </Col>
                 </Row>
             </Container>
-
+            {isPlay && <YouTubePlayer url={curVideo} handleClose={handleClose} />}
         </>
     )
 }

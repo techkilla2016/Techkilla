@@ -28,8 +28,8 @@ const PhysicalEngagement = ({ product }) => {
                     <div className='product_landing'>
                         <div className='product_landing_background'>
                             <div className='preloaderBack'>
-                                <Image src='/product-01.png' width={1920} height={1080} />
-                                <Image src='/product-01_01.png' width={1920} height={1080} />
+                                <Image src='/product-01.png' alt='Physical Engagement' width={1920} height={1080} />
+                                <Image src='/product-01_01.png'alt='Physical Engagement'  width={1920} height={1080} />
                                 <div className='preloaderBack-layer'>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ const PhysicalEngagement = ({ product }) => {
                                         </Col>
                                         <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
                                             <div className='product_main_icon'>
-                                                <Image src='/vrr.png' width={1080} height={1920} />
+                                                <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
                                             </div>
                                         </Col>
                                     </Row>

@@ -36,7 +36,7 @@ export default function ProjectSlider({ list }) {
             return <SwiperSlide key={index}>
               <div className="swiperCart">
                 <div className="backLyer">
-                  <Image src={project} />
+                  <Image src={project} alt={item} />
                 </div>
                 <div className="lyear">
                   <Link href={`/${item}`}> {item}</Link>
