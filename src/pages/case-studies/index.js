@@ -7,7 +7,7 @@ import Head from 'next/head'
 
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-const CaseStudie = ({useCase}) => {
+const CaseStudie = ({ useCase }) => {
     return (
         <>
             <Head>
@@ -62,7 +62,7 @@ const CaseStudie = ({useCase}) => {
 
 export default CaseStudie
 export const getServerSideProps = async () => {
-    const responce = await fetch('https://techkilla.vercel.app/api/case-studie/')
+    const responce = await fetch(`${process.env.BaseUrl}/api/case-studie/`)
     const data = await responce.json()
     return ({
         props: {

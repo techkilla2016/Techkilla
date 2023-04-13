@@ -108,8 +108,8 @@ const list = [
         target: '/'
     },
     {
-        Heading: 'Registration Microsite',
-        img: '/digital-engagement/registration-microsite_01.png',
+        Heading: 'Picture Quiz',
+        img: '/digital-engagement/picture-quiz.png',
         desc: '',
         target: '/'
     },

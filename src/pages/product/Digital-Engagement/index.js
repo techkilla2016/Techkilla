@@ -15,8 +15,13 @@ const DigitalEngagement = ({ product }) => {
     }
     const handleOpen = (payload) => {
         setIsPlay(true)
-        setCurVideo(payload)
+        if (payload === '/' || payload === '') {
+            setCurVideo('https://www.youtube.com/watch?v=JxMa3t3XDts&t=4s')
+        } else {
+            setCurVideo(payload)
+        }
     }
+
     return (
         <>
             <Head>
@@ -28,8 +33,8 @@ const DigitalEngagement = ({ product }) => {
                     <div className='product_landing'>
                         <div className='product_landing_background'>
                             <div className='preloaderBack'>
-                                <Image src='/product-02.png' alt='Physical Engagement'  width={1920} height={1080} />
-                                <Image src='/product-02_02.png'  alt='Physical Engagement' width={1920} height={1080} />
+                                <Image src='/product-02.png' alt='Physical Engagement' width={1920} height={1080} />
+                                <Image src='/product-02_02.png' alt='Physical Engagement' width={1920} height={1080} />
                                 <div className='preloaderBack-layer'>
                                 </div>
                             </div>
@@ -92,7 +97,7 @@ const DigitalEngagement = ({ product }) => {
 }
 export default DigitalEngagement
 export const getServerSideProps = async () => {
-    const res = await fetch('https://techkilla.vercel.app/api/product/digital-engagement/')
+    const res = await fetch(`${process.env.BaseUrl}/api/product/digital-engagement/`)
     const data = await res.json()
     return ({
         props: {

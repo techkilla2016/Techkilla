@@ -15,7 +15,11 @@ const PhysicalEngagement = ({ product }) => {
     }
     const handleOpen = (payload) => {
         setIsPlay(true)
-        setCurVideo(payload)
+        if (payload === '/' || payload === '') {
+            setCurVideo('https://www.youtube.com/watch?v=JxMa3t3XDts&t=4s')
+        } else {
+            setCurVideo(payload)
+        }
     }
     return (
         <>
@@ -29,7 +33,7 @@ const PhysicalEngagement = ({ product }) => {
                         <div className='product_landing_background'>
                             <div className='preloaderBack'>
                                 <Image src='/product-01.png' alt='Physical Engagement' width={1920} height={1080} />
-                                <Image src='/product-01_01.png'alt='Physical Engagement'  width={1920} height={1080} />
+                                <Image src='/product-01_01.png' alt='Physical Engagement' width={1920} height={1080} />
                                 <div className='preloaderBack-layer'>
                                 </div>
                             </div>
@@ -94,7 +98,7 @@ const PhysicalEngagement = ({ product }) => {
 
 export default PhysicalEngagement
 export const getServerSideProps = async () => {
-    const res = await fetch('https://techkilla.vercel.app/api/product/physical-engagement/')
+    const res = await fetch(`${process.env.BaseUrl}/api/product/physical-engagement/`)
     const data = await res.json()
     return ({
         props: {

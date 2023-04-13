@@ -109,7 +109,7 @@ const Ongroundactivations = ({ Related_projects }) => {
 export default Ongroundactivations
 
 export const getServerSideProps = async () => {
-    const res = await fetch('https://techkilla.vercel.app/api/on-ground-activations/')
+    const res = await fetch(`${process.env.BaseUrl}/api/on-ground-activations/`)
     const data = await res.json()
     return ({
         props: {

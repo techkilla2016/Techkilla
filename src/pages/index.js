@@ -111,7 +111,7 @@ const Home = ({ work }) => {
 
 export default Home
 export const getServerSideProps = async () => {
-  const res = await fetch('http://localhost:3000/api/work/')
+  const res = await fetch(`${process.env.BaseUrl}/api/work/`)
   const data = await res.json()
   return ({
     props: {
