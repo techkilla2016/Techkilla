@@ -9,7 +9,7 @@ import { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 const DigitalEngagement = ({ product }) => {
     const [isPlay, setIsPlay] = useState(false)
-    const [curVideo, setCurVideo] = useState('')
+    const [curVideo, setCurVideo] = useState('https://youtu.be/4o0XpbQFDJc')
     const handleClose = () => {
         setIsPlay(false)
     }
@@ -94,6 +94,7 @@ export default DigitalEngagement
 export const getServerSideProps = async () => {
     const res = await fetch('https://techkilla.vercel.app/api/product/digital-engagement/')
     const data = await res.json()
+    console.log(data)
     return ({
         props: {
             product: data?.data
