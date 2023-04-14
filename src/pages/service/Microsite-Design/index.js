@@ -127,24 +127,38 @@ const MicrositeDesign = () => {
             <Header />
             <main>
                 <div className="main">
-                    <div className='mainContainer'>
-                        <div className="serviceIntro">
-                            <div className="backGround">
-                                <Image src='/service/web banner_micro site.jpg'
-                                    alt='Microsite design' width={1920} height={1080} />
+                    <div className='product_landing' style={{ background: '#fff' }}>
+                        <div className='product_landing_background'>
+                            <div className='preloaderBack'>
+                                <Image src='/banner/microsite-design.png' alt='Physical Engagement' width={1920} height={1080} />
+                                <Image src='/banner/microsite-design.png' alt='Physical Engagement' width={1920} height={1080} />
+                                <div className='preloaderBack-layer'>
+                                </div>
                             </div>
-                            <div className="introSection">
+                            <div className='product_intro'>
                                 <Container>
-                                    <Row className='justify-content-center'>
-                                        <Col xxl={10} lg={11} md={12} sm={12}>
-                                            <div className="introDesc ">
-                                                Crafting Engaging and Impactful Microsite Designs for Your Business
+                                    <Row>
+                                        <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
+                                            <div className='product_main'>
+                                                <h2>
+                                                    Drive engagement with Microsite Designs
+                                                </h2>
+                                                <p>
+                                                    A well-designed microsite can be an effective tool for driving engagement and achieving business goals. To achieve this, it's important to understand your target audience and what they are looking for.
+                                                </p>
+                                            </div>
+                                        </Col>
+                                        <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
+                                            <div className='product_main_icon'>
+                                                <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
                                             </div>
                                         </Col>
                                     </Row>
                                 </Container>
                             </div>
                         </div>
+                    </div>
+                    <div className='mainContainer'>
                         <div className="desc pb-5">
                             <h2 className='text-center py-5'>What are microsites?</h2>
                             <Container>

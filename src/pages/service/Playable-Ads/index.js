@@ -32,28 +32,44 @@ const PlayableAds = () => {
     return (
         <>
             <Head>
-                <title>VR-Solutions</title>
+                <title>Playable Ads</title>
             </Head>
             <Header />
             <main>
                 <div className="main">
                     <div className='mainContainer'>
-                        <div className="serviceIntro">
-                            <div className="backGround">
-                                <Image src='/service/web banner_playable ads.jpg' width={1920} height={1080} alt='Playable Ads' />
-                            </div>
-                            <div className="introSection">
-                                <Container>
-                                    <Row className='justify-content-center'>
-                                        <Col xxl={10} lg={11} md={12} sm={12}>
-                                            <h1 className="introDesc ">
-                                                Step into the game and experience the fun with our interactive Playable-Ads today!
-                                            </h1>
-                                        </Col>
-                                    </Row>
-                                </Container>
+                        <div className='product_landing' style={{ background: '#fff' }}>
+                            <div className='product_landing_background'>
+                                <div className='preloaderBack'>
+                                    <Image src='/banner/Playable-ads.png' alt='Physical Engagement' width={1920} height={1080} />
+                                    <Image src='/banner/Playable-ads.png' alt='Physical Engagement' width={1920} height={1080} />
+                                    <div className='preloaderBack-layer'>
+                                    </div>
+                                </div>
+                                <div className='product_intro'>
+                                    <Container>
+                                        <Row>
+                                            <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
+                                                <div className='product_main'>
+                                                    <h2>
+                                                        interactive Playable-Ads today!
+                                                    </h2>
+                                                    <p>
+                                                        Step into the game and experience the fun with our interactive Playable-Ads today! Our Playable-Ads allow users to engage with your brand in a fun and memorable way. 
+                                                    </p>
+                                                </div>
+                                            </Col>
+                                            <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
+                                                <div className='product_main_icon'>
+                                                    <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </div>
                             </div>
                         </div>
+
                         <div className="desc pb-5">
                             <h2 className='text-center py-5'>Playable Ads</h2>
                             <Container>

@@ -61,28 +61,44 @@ const Ongroundactivations = ({ Related_projects }) => {
     return (
         <>
             <Head>
-                <title>VR-Solutions</title>
+                <title>Ongroound Activity</title>
             </Head>
             <Header />
             <main>
                 <div className="main">
                     <div className='mainContainer'>
-                        <div className="serviceIntro">
-                            <div className="backGround">
-                                <Image src='/service/web banner_on ground activity 2.jpg' alt='On-ground activations' width={1920} height={1080} />
-                            </div>
-                            <div className="introSection">
-                                <Container>
-                                    <Row className='justify-content-center'>
-                                        <Col xxl={10} lg={11} md={12} sm={12}>
-                                            <h1 className="introDesc ">
-                                                Experience the brand like never before with our innovative experiential marketing strategies.
-                                            </h1>
-                                        </Col>
-                                    </Row>
-                                </Container>
+                        <div className='product_landing' style={{ background: '#fff' }}>
+                            <div className='product_landing_background'>
+                                <div className='preloaderBack'>
+                                    <Image src='/banner/ongroound-activity.png' alt='Physical Engagement' width={1920} height={1080} />
+                                    <Image src='/banner/ongroound-activity.png' alt='Physical Engagement' width={1920} height={1080} />
+                                    <div className='preloaderBack-layer'>
+                                    </div>
+                                </div>
+                                <div className='product_intro'>
+                                    <Container>
+                                        <Row>
+                                            <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
+                                                <div className='product_main'>
+                                                    <h2>
+                                                        Ongroound Activity
+                                                    </h2>
+                                                    <p>
+                                                        Experiential marketing is all about creating memorable and immersive experiences that engage customers and leave a lasting impression. Our innovative strategies are designed to do just that.
+                                                    </p>
+                                                </div>
+                                            </Col>
+                                            <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
+                                                <div className='product_main_icon'>
+                                                    <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                </div>
+                                            </Col>
+                                        </Row>
+                                    </Container>
+                                </div>
                             </div>
                         </div>
+
                         <div className='BenefitsContainer bgWhite'>
                             <h4>Benefits</h4>
                             <div className="Benefits">
