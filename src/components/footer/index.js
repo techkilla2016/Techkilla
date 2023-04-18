@@ -59,7 +59,7 @@ const Footer = () => {
                     <section className="flex-content padding_1x">
                         <h3>Newsletter</h3>
                         <p>You can trust us. we only send promo offers,</p>
-                        <fieldset className="fixed_flex">   
+                        <fieldset className="fixed_flex">
                             <input type="email" name="newsletter" placeholder="Your Email Address" />
                             <button className="btn btn_2"><GrSend /></button>
                         </fieldset>
