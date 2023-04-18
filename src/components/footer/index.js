@@ -43,7 +43,7 @@ const Footer = () => {
 
                     <section className="flex-content padding_1x">
                         <h3>    About Company</h3>
-                        <Link href="/">Services</Link>
+                        <Link href="/service">Services</Link>
                         <Link href="/">Portfolio</Link>
                         <Link href="/case-studies">Case Studies</Link>
                         <Link href="/">About Us</Link>

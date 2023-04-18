@@ -236,6 +236,16 @@ const choose_list = [
         img: '/microsite/choose_05.png'
     },
 ]
+
+const basicPlans = (url) => {
+    const link = document.createElement("a");
+    link.setAttribute("target", "_blank");
+    link.href = url;
+    link.setAttribute("download", url.split("/")[5]); // you can set the filename here
+    document.body.appendChild(link);
+    link.click();
+}
+
 const index = () => {
     return (
         <>
@@ -478,7 +488,7 @@ const index = () => {
                                                     </div>
                                                     <div className="pay_section">
                                                         <div className="cart-btnBox">
-                                                            <button className="price-label">
+                                                            <button onClick={() => basicPlans(`http://wa.me/917827362702?text=Hello Techkilla team! %0A%0A I've been looking for a reliable QR-based registration system and I came across your company. I would like to purchase the Basic package - could you help me with the process and any additional details I need to know?`)} className="price-label">
                                                                 ORDER NOW
                                                             </button>
                                                         </div>
@@ -548,7 +558,7 @@ const index = () => {
 
                                                     <div className="pay_section">
                                                         <div className="cart-btnBox">
-                                                            <button className="price-label">
+                                                            <button onClick={() => basicPlans(`http://wa.me/917827362702?text=Hello Techkilla team! %0A%0A I've been looking for a reliable QR-based registration system and I came across your company. I would like to purchase the Standard package - could you help me with the process and any additional details I need to know?`)} className="price-label">
                                                                 ORDER NOW
                                                             </button>
                                                         </div>
@@ -556,7 +566,6 @@ const index = () => {
                                                 </div>
                                             </div>
                                         </Col>
-
 
                                         <Col xxl={4} xl={4} lg={4} md={6} sm={12}>
                                             <div className="cost-cart-box">
@@ -637,7 +646,7 @@ const index = () => {
 
                                                     <div className="pay_section">
                                                         <div className="cart-btnBox">
-                                                            <button className="price-label">
+                                                            <button onClick={() => basicPlans(`http://wa.me/917827362702?text=Hello Techkilla team! %0A%0A I've been looking for a reliable QR-based registration system and I came across your company. I would like to purchase the Premium Package - could you help me with the process and any additional details I need to know?`)} className="price-label">
                                                                 ORDER NOW
                                                             </button>
                                                         </div>
@@ -646,6 +655,7 @@ const index = () => {
                                                 </div>
                                             </div>
                                         </Col>
+
                                     </Row>
                                 </Container>
                             </div>

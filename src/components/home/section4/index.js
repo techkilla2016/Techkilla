@@ -65,6 +65,7 @@ const PortfolioSection = ({ work }) => {
                 >
                     {
                         work.map((item, keys) => {
+                            console.log(item)
                             return (
                                 <SwiperSlide key={keys} className="">
                                     <div className="work_card">
@@ -72,7 +73,10 @@ const PortfolioSection = ({ work }) => {
                                             <Image src={item?.img} alt={item?.Heading} width={1920} height={1080} />
                                         </div>
                                         <div className="work_card_layer">
+                                            <div>
+                                            </div>
                                             <div className="work_btn">
+                                                <Image src={item?.logo} alt={item?.Heading} width={1920} height={1080} />
                                                 <ButtonSwap title='Preview' clickHandel={handleOpen} url={item?.url} />
                                             </div>
                                         </div>

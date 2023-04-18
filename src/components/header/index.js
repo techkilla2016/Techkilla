@@ -87,16 +87,16 @@ const Header = () => {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col>
+                                <Col className='mt-3'>
                                     <Form.Label>Phone Number*</Form.Label>
                                     <Form.Control />
                                 </Col>
-                                <Col>
+                                <Col className='mt-3'>
                                     <Form.Label>Opportunity Looking For*    </Form.Label>
                                     <Form.Control />
                                 </Col>
                             </Row>
-                            <Form.Group className="my-3 mb-4 pb-4" controlId="formGridAddress2">
+                            <Form.Group className="mt-3 mb-4 pb-4" controlId="formGridAddress2">
                                 <Form.Label>How did you hear about us?</Form.Label>
                                 <Form.Control />
                             </Form.Group>

@@ -38,7 +38,7 @@ const VRSolutions = () => {
                         <div className='product_landing' style={{ background: '#fff' }}>
                             <div className='product_landing_background'>
                                 <div className='preloaderBack'>
-                                    <Image src='/banner/VR-1.png' alt='Physical Engagement' width={1920} height={1080} />
+                                    <Image src='/banner/VR-2.png' alt='Physical Engagement' width={1920} height={1080} />
                                     <Image src='/banner/VR-1.png' alt='Physical Engagement' width={1920} height={1080} />
                                     <div className='preloaderBack-layer'>
                                     </div>

@@ -70,7 +70,7 @@ const Ongroundactivations = ({ Related_projects }) => {
                         <div className='product_landing' style={{ background: '#fff' }}>
                             <div className='product_landing_background'>
                                 <div className='preloaderBack'>
-                                    <Image src='/banner/ongroound-activity.png' alt='Physical Engagement' width={1920} height={1080} />
+                                    <Image src='/banner/ongroound-activity_01.png' alt='Physical Engagement' width={1920} height={1080} />
                                     <Image src='/banner/ongroound-activity.png' alt='Physical Engagement' width={1920} height={1080} />
                                     <div className='preloaderBack-layer'>
                                     </div>
@@ -90,7 +90,7 @@ const Ongroundactivations = ({ Related_projects }) => {
                                             </Col>
                                             <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
                                                 <div className='product_main_icon'>
-                                                    <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                    <Image src='/brand-activation.png' alt='Physical Engagement' width={1080} height={1920} />
                                                 </div>
                                             </Col>
                                         </Row>

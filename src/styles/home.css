@@ -938,6 +938,14 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
     transition: all 0.2s linear;
 }
 
+.work_btn img {
+    transition: all 0.1s linear;
+    transform: scale(0.5);
+}
+
+.work_card:hover .work_btn img {
+    transform: scale(1);
+}
 
 .work_card:hover .work_card_layer {
     backdrop-filter: blur(1px);

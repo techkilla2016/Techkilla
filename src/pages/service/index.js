@@ -3,6 +3,7 @@ import Card from '@/components/card'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
@@ -17,7 +18,7 @@ const Service = () => {
     //         setData(result)
     //     })
     // }, [])
-    const  data = [
+    const data = [
         {
             title: 'Microsite design',
             description: 'We create customised microsites for your occasions, unique needs, and interaction.',
@@ -51,22 +52,38 @@ const Service = () => {
             <Header />
             <main>
                 <div className="main">
-                    <div className="intro-Section">
-                        <div className="introWraper">
-                            <Buble />
-                            <div className="wrapperBox">
+                    <div className='product_landing  bg-light'>
+                        <div className='product_landing_background'>
+                            <div className='preloaderBack'>
+                                <Image src='/banner/service.png' alt='Physical Engagement' width={1920} height={1080} />
+                                <Image src='/banner/Microsite.png' alt='Physical Engagement' width={1920} height={1080} />
+                                <div className='preloaderBack-layer'>
+                                </div>
+                            </div>
+                            <div className='product_intro'>
                                 <Container>
-                                    <h4 className='introTitle text-light text-center'> Our Service page </h4>
-                                    <Row className='justify-content-center '>
-                                        <Col xxl={10} lg={11} sm={12} className='text-light text-center'>
-                                            <h1 className='introHeading'>we provide exceptional solutions tailored to your <span>unique needs and preferences.</span></h1>
+                                    <Row>
+                                        <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
+                                            <div className='product_main'>
+                                                <h2>
+                                                    Our Service
+                                                </h2>
+                                                <p>
+                                                    We provide exceptional solutions tailored to your unique needs and preferences.
+                                                </p>
+                                            </div>
+                                        </Col>
+                                        <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
+                                            <div className='product_main_icon'>
+                                                <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                            </div>
                                         </Col>
                                     </Row>
                                 </Container>
                             </div>
                         </div>
                     </div>
-                    <div className='mainContainer my-5'>
+                    <div className='mainContainer bg-light' >
                         <div className="service">
                             <h3 className="section__title my-5" style={{ color: " #000", padding: "30px 0px", textAlign: 'center' }}>
                                 <span className='section__title-line-center'>Our Service</span>
@@ -84,7 +101,7 @@ const Service = () => {
                         <Footer />
                     </div>
                 </div>
-            </main>
+            </main >
 
         </>
     )

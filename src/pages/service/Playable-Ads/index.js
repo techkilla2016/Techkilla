@@ -41,7 +41,7 @@ const PlayableAds = () => {
                         <div className='product_landing' style={{ background: '#fff' }}>
                             <div className='product_landing_background'>
                                 <div className='preloaderBack'>
-                                    <Image src='/banner/Playable-ads.png' alt='Physical Engagement' width={1920} height={1080} />
+                                    <Image src='/banner/Playable-ads_01.png' alt='Physical Engagement' width={1920} height={1080} />
                                     <Image src='/banner/Playable-ads.png' alt='Physical Engagement' width={1920} height={1080} />
                                     <div className='preloaderBack-layer'>
                                     </div>
@@ -55,13 +55,13 @@ const PlayableAds = () => {
                                                         interactive Playable-Ads today!
                                                     </h2>
                                                     <p>
-                                                        Step into the game and experience the fun with our interactive Playable-Ads today! Our Playable-Ads allow users to engage with your brand in a fun and memorable way. 
+                                                        Step into the game and experience the fun with our interactive Playable-Ads today! Our Playable-Ads allow users to engage with your brand in a fun and memorable way.
                                                     </p>
                                                 </div>
                                             </Col>
                                             <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
                                                 <div className='product_main_icon'>
-                                                    <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                    <Image src='/ad.png' alt='Physical Engagement' width={1080} height={1920} />
                                                 </div>
                                             </Col>
                                         </Row>
