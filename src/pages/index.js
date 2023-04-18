@@ -1,3 +1,4 @@
+import Button from '@/components/button/Button'
 import Card from '@/components/card'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
@@ -7,6 +8,7 @@ import ColRight from '@/components/home/section2/right'
 import PortfolioSection from '@/components/home/section4'
 import WhatWeDo from '@/components/home/section5'
 import Head from 'next/head'
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
@@ -69,6 +71,68 @@ const Home = ({ work }) => {
                     <ColRight />
                   </Col>
                 </Row>
+
+                <h3 className="colHeading text-center pt-4 mt-4">
+                  We address your issues to draw customers to your brand.
+                </h3>
+                <Row className='mt-5'>
+                  <Col xxl={4} xl={4} lg={4} md={12} sm={12} >
+                    <div className='d-flex justify-content-start'>
+                      <div className="img_section">
+                        <div className='img'>
+                          <Image src='/02.png' alt="Best Performance" width={1920} height={1080} />
+                        </div>
+                      </div>
+                      <div className="para_section">
+                        <div className="heading">Best Performance</div>
+                        <div className='para'>
+                          We turn that tale into the best performance so that your audience will remember it forever.
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col xxl={4} xl={4} lg={4} md={12} sm={12} >
+                    {/* <div className="sub_secction"> */}
+                    <div className='d-flex justify-content-start'>
+                      <div className="img_section">
+                        <div className='img'>
+                          <Image src='/01.png' alt="Ideal Strategic" width={1920} height={1080} />
+                        </div>
+                      </div>
+                      <div className="para_section">
+                        <div className="heading">Ideal Strategic</div>
+                        <div className='para'>
+                          With the aid of our knowledge, we carefully consider your question and provide you with a fitting response.
+                        </div>
+                      </div>
+                    </div>
+                    {/* </div> */}
+                  </Col>
+                  <Col xxl={4} xl={4} lg={4} md={12} sm={12} >
+                    <div className='d-flex justify-content-start'>
+                      <div className="img_section">
+                        <div className='img'>
+                          <Image src='/02.png' alt="Best Performance" width={1920} height={1080} />
+                        </div>
+                      </div>
+                      <div className="para_section">
+                        <div className="heading">Best Performance</div>
+                        <div className='para'>
+                          We turn that tale into the best performance so that your audience will remember it forever.
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+
+                <div className="mt-5 d-flex justify-content-center flex-sm-row flex-column" >
+                  <div className='m-3'>
+                    <Button target='/' title='Read more' />
+                  </div>
+                  <div className='m-3'>
+                    <Button target='https://calendly.com/techkilla/meeting' title='Book free demo' />
+                  </div>
+                </div>
               </Container>
             </div>
 
@@ -101,7 +165,7 @@ const Home = ({ work }) => {
                 <WhatWeDo />
               </div>
             </div> */}
-            <Footer />
+            <Footer bg="#fafafa" />
           </div>
         </div>
       </main>

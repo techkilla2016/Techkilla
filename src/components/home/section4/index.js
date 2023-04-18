@@ -26,7 +26,7 @@ const PortfolioSection = ({ work }) => {
             <Container>
                 <Row className='justify-content-center'>
                     <Col lg={7} md={8} sm={8}>
-                        <div className='colHeading' style={{ textAlign: 'center' }}>Our Portfolio</div>
+                        <div className='colHeading text-center' >Our Portfolio</div>
                         <div className="portfolioTitle text-center">
                             Featured Shots of Recent Works
                         </div>
@@ -144,6 +144,15 @@ const PortfolioSection = ({ work }) => {
                             <div className="recodeTitle">
                                 Pro Awards Winner
                             </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row className="justify-content-center pb-4">
+                    <Col xxl={8} xl={8} lg={8} md={10} sm={12} xm={12}>
+                        <div className="text-center">
+                            With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals.
                         </div>
                     </Col>
                 </Row>
