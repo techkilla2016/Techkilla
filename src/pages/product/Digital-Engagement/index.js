@@ -33,8 +33,8 @@ const DigitalEngagement = ({ product }) => {
                     <div className='product_landing'>
                         <div className='product_landing_background'>
                             <div className='preloaderBack'>
-                                <Image src='/product-02.png' alt='Physical Engagement' width={1920} height={1080} />
-                                <Image src='/product-02_02.png' alt='Physical Engagement' width={1920} height={1080} />
+                                <Image src='/banner/Physical_Engagement_02.png' alt='Physical Engagement' width={1920} height={1080} />
+                                <Image src='/banner/Physical_Engagement_01.png' alt='Physical Engagement' width={1920} height={1080} />
                                 <div className='preloaderBack-layer'>
                                 </div>
                             </div>
