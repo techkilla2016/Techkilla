@@ -80,13 +80,13 @@ const Home = ({ work }) => {
                     <div className='d-flex justify-content-start'>
                       <div className="img_section">
                         <div className='img'>
-                          <Image src='/02.png' alt="Best Performance" width={1920} height={1080} />
+                          <Image src='/home/empathize.png' alt="Best Performance" width={1920} height={1080} />
                         </div>
                       </div>
                       <div className="para_section">
-                        <div className="heading">Best Performance</div>
+                        <div className="heading">Empathize</div>
                         <div className='para'>
-                          We turn that tale into the best performance so that your audience will remember it forever.
+                          We carefully consider your problem statements and make the finest recommendation.
                         </div>
                       </div>
                     </div>
@@ -96,13 +96,13 @@ const Home = ({ work }) => {
                     <div className='d-flex justify-content-start'>
                       <div className="img_section">
                         <div className='img'>
-                          <Image src='/01.png' alt="Ideal Strategic" width={1920} height={1080} />
+                          <Image src='/home/persnalize.png' alt="Ideal Strategic" width={1920} height={1080} />
                         </div>
                       </div>
                       <div className="para_section">
-                        <div className="heading">Ideal Strategic</div>
+                        <div className="heading">Personalize</div>
                         <div className='para'>
-                          With the aid of our knowledge, we carefully consider your question and provide you with a fitting response.
+                          Utilise Our State-of-the-Art Technology Solutions to Meet Your Specific Needs
                         </div>
                       </div>
                     </div>
@@ -112,13 +112,13 @@ const Home = ({ work }) => {
                     <div className='d-flex justify-content-start'>
                       <div className="img_section">
                         <div className='img'>
-                          <Image src='/02.png' alt="Best Performance" width={1920} height={1080} />
+                          <Image src='/home/best_performance.png' alt="Best Performance" width={1920} height={1080} />
                         </div>
                       </div>
                       <div className="para_section">
                         <div className="heading">Best Performance</div>
                         <div className='para'>
-                          We turn that tale into the best performance so that your audience will remember it forever.
+                          We create the best play out of that story so that your audience will always remember it.
                         </div>
                       </div>
                     </div>

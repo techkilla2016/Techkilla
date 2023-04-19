@@ -98,7 +98,6 @@ const list = [
 ]
 
 function handler(req, res) {
-    console.log(req.url)
     if (req.method === 'GET') {
         res.status(200).json({
             status: true,

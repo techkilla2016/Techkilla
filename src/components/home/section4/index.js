@@ -65,7 +65,6 @@ const PortfolioSection = ({ work }) => {
                 >
                     {
                         work.map((item, keys) => {
-                            console.log(item)
                             return (
                                 <SwiperSlide key={keys} className="">
                                     <div className="work_card">
