@@ -1,11 +1,9 @@
-import Button from '@/components/button/Button'
-import Image from 'next/image'
+
 import React from 'react'
-import { Col, NavLink, Row } from 'react-bootstrap'
-const ColRight = () => {
+const ColRight = ({ about }) => {
     return (
         <div className='right-col'>
-            <div className='colHeading'>Who We Are</div>
+            <div className='colHeading'>{about ? about : 'What We Do?'}</div>
             <h3 className="section__title">
                 Design, develop and execute!
                 <span className="section__title-line"> We manage it all.</span>
@@ -16,10 +14,6 @@ const ColRight = () => {
             <p className='section_Para pb-4'>
                 Our expertise lies in the implementation of innovative solutions like Virtual Reality, Microsite engagement, On-ground engagement, photo booths, interactive playable ads, and more.
             </p>
-            {/* <p className='section_Para'>
-                We address your issues to draw customers to your brand.
-            </p> */}
-            
         </div>
     )
 }

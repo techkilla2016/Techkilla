@@ -57,7 +57,7 @@ const VRSolutions = () => {
                                                 </div>
                                             </Col>
                                             <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
-                                                <div className='product_main_icon'>
+                                                <div className='product_main_icon1'>
                                                     <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
                                                 </div>
                                             </Col>
@@ -67,8 +67,8 @@ const VRSolutions = () => {
                             </div>
                         </div>
 
-                        <div className="desc pb-5">
-                            <h2 className='text-center py-5'>VR Solutions</h2>
+                        <div className="desc">
+                            <h2 className='text-center pb-5'>VR Solutions</h2>
                             <Container>
                                 <Row>
 

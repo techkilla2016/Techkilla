@@ -1,23 +1,14 @@
-import Buble from '@/components/animation/buble'
 import Card from '@/components/card'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
 
 const Service = () => {
-    // const [data, setData] = useState([])
-    // useEffect(() => {
-    //     fetch('/api/home/').then((responce) => {
-    //         return responce.json()
-    //     }).then((result) => {
-    //         setData(result)
-    //     })
-    // }, [])
     const data = [
         {
             title: 'Microsite design',
@@ -75,7 +66,7 @@ const Service = () => {
                                         </Col>
                                         <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
                                             <div className='product_main_icon'>
-                                                <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                <Image src='/service.svg' alt='Physical Engagement' width={1080} height={1920} />
                                             </div>
                                         </Col>
                                     </Row>
@@ -98,6 +89,15 @@ const Service = () => {
                                 </Row>
                             </Container>
                         </div>
+                        <Container>
+                            <Row className="justify-content-center py-4">
+                                <Col xxl={8} xl={8} lg={8} md={10} sm={12} xm={12}>
+                                    <div className="text-center" style={{ fontSize: '18px' }}>
+                                        Our team of experts works closely with you to understand your unique needs and deliver tailored solutions that meet your specific goals. Whether you're looking to improve customer satisfaction, increase sales, or enhance your brand's image, our experiential technology solutions can help you achieve your objectives.
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
                         <Footer />
                     </div>
                 </div>

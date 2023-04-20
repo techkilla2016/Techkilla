@@ -7,7 +7,7 @@ import Image from "next/image"
 import { ButtonSwap } from "@/components/button/Button"
 import YouTubePlayer from "@/components/product/videoPlay";
 import React, { useState } from "react";
-const PortfolioSection = ({ work }) => {
+const PortfolioSection = ({ work, lastLine }) => {
     const [isPlay, setIsPlay] = useState(false)
     const [curVideo, setCurVideo] = useState('')
     const handleClose = () => {
@@ -151,7 +151,7 @@ const PortfolioSection = ({ work }) => {
                 <Row className="justify-content-center pb-4">
                     <Col xxl={8} xl={8} lg={8} md={10} sm={12} xm={12}>
                         <div className="text-center">
-                            With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals.
+                            {lastLine}
                         </div>
                     </Col>
                 </Row>

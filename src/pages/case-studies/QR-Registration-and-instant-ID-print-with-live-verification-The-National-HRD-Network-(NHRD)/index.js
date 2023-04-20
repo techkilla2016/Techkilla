@@ -198,7 +198,7 @@ const graphGrow = [
         desc: `One-third of shoppers concur that handling the product in person enhances the shopping experience.`
     },
     {
-        img: '/microsite/graph_03.png',
+        img: '/microsite/graph_04.png',
         title: 'MORE ACCESSIBLE',
         desc: `Using experiential technology, millions of people can interact both in person & online at once.`
     },

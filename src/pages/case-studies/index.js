@@ -38,7 +38,7 @@ const CaseStudie = ({ useCase }) => {
                                         </Col>
                                         <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
                                             <div className='product_main_icon'>
-                                                <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                <Image src='/case-studie.png' alt='Physical Engagement' width={1080} height={1920} />
                                             </div>
                                         </Col>
                                     </Row>
