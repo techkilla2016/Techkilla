@@ -118,7 +118,7 @@ const Home = ({ work }) => {
                       <div className="para_section">
                         <div className="heading">Best Performance</div>
                         <div className='para'>
-                          We create the best play out of that story so that your audience will always remember it.
+                          We construct the ideal play based on that tale to maximise your company's ROI.
                         </div>
                       </div>
                     </div>

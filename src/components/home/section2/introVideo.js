@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 const IntroVideo = () => {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            videoRef.current.play();
+        }, 1000); // Adjust the delay time as needed
+        return () => clearTimeout(timeoutId);
+    }, []);
+
     return (
         <div className='video_contain'>
-            <video width="95%" autoPlay mute="true" loop={true}>
+            <video ref={videoRef} width="95%" muted loop={true}>
                 <source src="/intro.mp4" type="video/mp4" />
                 <source src="/intro.ogg" type="video/ogg" />
             </video>
@@ -13,5 +22,6 @@ const IntroVideo = () => {
         </div>
     )
 }
+
 
 export default IntroVideo
