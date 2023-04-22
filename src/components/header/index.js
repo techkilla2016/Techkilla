@@ -42,7 +42,7 @@ const Header = () => {
                         <Link className='navlink' href='/'>Home</Link>
                         <Link className='navlink' href='/about'>About</Link>
                         <div className='navlink'>
-                            <Link className='nav_child' href='/service'>Service</Link>
+                            <Link className='nav_child' href='/service'>Services</Link>
                             <div className='drop_down'>
                                 <Link className='nav_child_drop' href='/service/Microsite-Design'>Microsite design</Link>
                                 <Link className='nav_child_drop' href='/service/VR-Solutions'>Virtual reality Solutions</Link>
@@ -152,7 +152,7 @@ const Header = () => {
                                         url: '/service/On-ground-activations'
                                     },
                                 ])}>
-                                    Service
+                                    Services
                                 </div>
                                 <div className='listMenu' onClick={() => childHandal([
                                     {

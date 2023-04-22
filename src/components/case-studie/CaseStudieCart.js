@@ -17,7 +17,7 @@ const CaseStudieCart = ({ Heading, img, desc, target }) => {
                         <p>{desc}</p>
                     </div>
                 </div>
-                <Button target={target} title="Read More" />
+                <Button target={target} title="Watch Now" />
             </div>
         </div>
     )

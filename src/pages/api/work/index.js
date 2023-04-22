@@ -95,6 +95,22 @@ const list = [
    in form of video. Shared using airdrop, QR code or whatsapp.`,
         url: 'https://youtube.com/shorts/Ql0lUsI4U64?feature=share'
     },
+    {
+        Heading: 'airtel',
+        img: '/work/airtel.png',
+        logo : '/work/airtel-logo.png',
+        desc: `group to engage participants & give them a memorable experience 
+   in form of video. Shared using airdrop, QR code or whatsapp.`,
+        url: 'https://youtube.com/shorts/rbnMxtTQFuM?feature=share'
+    },
+    {
+        Heading: 'airtel',
+        img: '/work/India_Partner.png',
+        logo : '/work/India_Partner-logo.png',
+        desc: `group to engage participants & give them a memorable experience 
+   in form of video. Shared using airdrop, QR code or whatsapp.`,
+        url: 'https://youtube.com/shorts/rbnMxtTQFuM?feature=share'
+    },
 ]
 
 function handler(req, res) {

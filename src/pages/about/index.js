@@ -222,7 +222,7 @@ const About = ({ work }) => {
                             </Container>
                         </div>
                         <div className='pb-5' style={{ background: "#fff" }}>
-                            <div className="micro_heading01" >Our <span>Service</span></div>
+                            <div className="micro_heading01" >Our <span>Services</span></div>
                         </div>
                         <div className="section3">
                             <div className="section3Inner">

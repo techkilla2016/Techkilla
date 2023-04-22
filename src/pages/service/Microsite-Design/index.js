@@ -28,6 +28,18 @@ const usecase = [
         img: '/service/product launch-01-01.png',
         title: 'promoting events'
     },
+    {
+        img: '/service/product launch-01-01.png',
+        title: 'Running a campaign'
+    },
+    {
+        img: '/service/product launch-01-01.png',
+        title: 'Hosting an event'
+    },
+    {
+        img: '/service/product launch-01-01.png',
+        title: 'Engaging with influencers'
+    },
 ]
 const list = [
     {
@@ -50,10 +62,6 @@ const list = [
         title: "HDFC Analytiq 2.0",
         them: "/service/microsite/HDFC_Analytiq_2.0.png"
     },
-    // {
-    //     title: "HDFC Analytiq 3.0",
-    //     them: "/service/microsite/HDFC_Analytiq_3.0.png"
-    // },
     {
         title: "Cipla Urology quiz game",
         them: "/service/microsite/Cipla_Urology_quiz_game.png"
@@ -99,6 +107,10 @@ const list = [
         title: "Colgate swashbuckers day",
         them: "/service/microsite/Colgate_swashbuckers_day.png"
     },
+    // {
+    //     title: "HDFC Analytiq 3.0",
+    //     them: "/service/microsite/HDFC_Analytiq_3.0.png"
+    // },
     // {
     //     title: "Multitv Quiz Game",
     //     them: "/service/microsite/Colgate_swashbuckers_day.png"
@@ -159,8 +171,11 @@ const MicrositeDesign = () => {
                         </div>
                     </div>
                     <div className='mainContainer'>
-                        <div className="desc pb-5">
-                            <h2 className='text-center py-5'>What are microsites?</h2>
+                        <div className="desc py-5">
+                            {/* <h2 className='text-center py-5'></h2> */}
+                            <h3 className="section__title my-5" style={{ color: " #000", padding: "30px 0px", textAlign: 'center' }}>
+                                <span className='section__title-line-center'>What are microsites?</span>
+                            </h3>
                             <Container>
                                 <Row>
                                     <Col xxl={6} xl={6} md={6} sm={12}>

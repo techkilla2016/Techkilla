@@ -18,7 +18,7 @@ const Service = () => {
         },
         {
             title: 'Virtual reality Solutions',
-            description: 'specialised VR 360 solutions for gaming and audience engagement.',
+            description: 'specialised VR 360 solutions for gaming, 360 tour and audience engagement.',
             img: '/service/VR.webp',
             slag: '/service/VR-Solutions'
         },
@@ -57,15 +57,16 @@ const Service = () => {
                                         <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
                                             <div className='product_main'>
                                                 <h2>
-                                                    Our Service
+                                                    Revolutionary Tech Solutions
                                                 </h2>
                                                 <p>
-                                                    We provide exceptional solutions tailored to your unique needs and preferences.
+                                                    we specialize in providing experiential technology solutions that help businesses enhance customer engagement, drive growth, and increase brand loyalty.
                                                 </p>
                                             </div>
                                         </Col>
                                         <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
                                             <div className='product_main_icon'>
+                                              
                                                 <Image src='/service.svg' alt='Physical Engagement' width={1080} height={1920} />
                                             </div>
                                         </Col>
@@ -91,7 +92,7 @@ const Service = () => {
                         </div>
                         <Container>
                             <Row className="justify-content-center py-4">
-                                <Col xxl={8} xl={8} lg={8} md={10} sm={12} xm={12}>
+                                <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
                                     <div className="text-center" style={{ fontSize: '18px' }}>
                                         Our team of experts works closely with you to understand your unique needs and deliver tailored solutions that meet your specific goals. Whether you're looking to improve customer satisfaction, increase sales, or enhance your brand's image, our experiential technology solutions can help you achieve your objectives.
                                     </div>

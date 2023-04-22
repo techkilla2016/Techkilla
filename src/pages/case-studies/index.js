@@ -29,10 +29,10 @@ const CaseStudie = ({ useCase }) => {
                                         <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
                                             <div className='product_main'>
                                                 <h2>
-                                                    Optimization on <span>TK</span> website
+                                                    From Challenge to Triumph: Clients' Journey with Experiential Tech
                                                 </h2>
                                                 <p>
-                                                    In-person engagement is an essential part of building strong customer relationships, and experiential technology products can help businesses create memorable experiences that connect with their audiences.
+                                                    See how Techkilla delivered exceptional results for its clients by providing innovative experiential technology solutions.
                                                 </p>
                                             </div>
                                         </Col>

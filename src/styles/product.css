@@ -89,7 +89,7 @@ body {
 }
 
 .product_main h2 {
-    font-size: 60px;
+    font-size: 50px;
     color: #fff;
     font-weight: bold;
     animation: textSlide 0.5s linear;
@@ -280,6 +280,9 @@ body {
     width: 100%;
     color: #000;
 
+}
+.finishLine{
+    font-size: 20px;
 }
 
 @media screen and (max-width:1024px) {

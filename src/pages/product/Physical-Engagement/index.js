@@ -43,7 +43,7 @@ const PhysicalEngagement = ({ product }) => {
                                         <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
                                             <div className='product_main'>
                                                 <h2>
-                                                    Drive engagement with digital innovation
+                                                    Immersive Experiences with Experiential Technology
                                                 </h2>
                                                 <p>
                                                     In-person engagement is an essential part of building strong customer relationships, and experiential technology products can help businesses create memorable experiences that connect with their audiences.
@@ -52,7 +52,7 @@ const PhysicalEngagement = ({ product }) => {
                                         </Col>
                                         <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
                                             <div className='product_main_icon'>
-                                                <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                <Image src='/brand-activation.png' alt='Physical Engagement' width={1080} height={1920} />
                                             </div>
                                         </Col>
                                     </Row>
@@ -85,6 +85,15 @@ const PhysicalEngagement = ({ product }) => {
                     {
                         isPlay && <YouTubePlayer url={curVideo} handleClose={handleClose} />
                     }
+                    <Container>
+                        <Row className="justify-content-center pb-4">
+                            <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
+                                <div className="text-center finishLine">
+                                    Our physical engagement experiential technology products are an excellent choice for businesses looking to engage with their customers in powerful and meaningful ways. We offer a range of features and tools that can help businesses create immersive and memorable experiences that connect with customers on a deeper level, and build strong, long-lasting relationships.
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
                     <div className='mainContainer my-5'>
                         <Footer />
                     </div>

@@ -85,6 +85,12 @@ const case_studie = [
         img: '/use-case/Hackathon.png',
         desc: "n any case, controlling the throng is always challenging, but even more so is maintaining a validated entry to prevent any unauthorised visitors."
     },
+    {
+        target: 'https://youtube.com/shorts/rbnMxtTQFuM?feature=share',
+        Heading: 'Airtel Quizzitech',
+        img: '/use-case/airtel.png',
+        desc: "n any case, controlling the throng is always challenging, but even more so is maintaining a validated entry to prevent any unauthorised visitors."
+    },
 ]
 
 const handler = (req, res) => {

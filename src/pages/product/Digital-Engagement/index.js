@@ -41,19 +41,19 @@ const DigitalEngagement = ({ product }) => {
                             <div className='product_intro'>
                                 <Container>
                                     <Row>
-                                        <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
+                                        <Col xxl={7} xl={7} lg={7} md={7} sm={12} xm={12}>
                                             <div className='product_main'>
                                                 <h2>
-                                                    Drive engagement with digital innovation
+                                                    Tech-Driven Engagement for Physical Experiences
                                                 </h2>
                                                 <p>
                                                     Digital engagement is an essential part of modern business, and experiential technology products can help your brand stand out and engage its customers in new and exciting ways.
                                                 </p>
                                             </div>
                                         </Col>
-                                        <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
+                                        <Col xxl={5} xl={5} lg={5} md={5} sm={0} xm={0}>
                                             <div className='product_main_icon'>
-                                                <Image src='/vrr.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                <Image src='/brand-activation.png' alt='Physical Engagement' width={1080} height={1920} />
                                             </div>
                                         </Col>
                                     </Row>
@@ -86,6 +86,15 @@ const DigitalEngagement = ({ product }) => {
                     {
                         isPlay && <YouTubePlayer url={curVideo} handleClose={handleClose} />
                     }
+                    <Container>
+                        <Row className="justify-content-center pb-4">
+                            <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
+                                <div className="text-center finishLine">
+                                    our digital engagement experiential technology products are an excellent choice for businesses looking to take their customer engagement to the next level. We offer a range of features and tools that can help businesses connect with their audiences in new and exciting ways, and drive real results. Whether you're looking to boost sales, build customer loyalty, or simply create a fun and engaging experience for your customers, our products can help you get there.
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
                     <div className='mainContainer my-5'>
                         <Footer />
                     </div>
