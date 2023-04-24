@@ -199,6 +199,15 @@ const PlayableAds = () => {
                                 </div>
                             </Container>
                         </div>
+                        <Container>
+                            <Row className="justify-content-center pb-4">
+                                <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
+                                    <div className="text-center py-5">
+                                        playable ads are a powerful tool for digital advertisers looking to engage their audience in a fun and interactive way. By providing users with a unique and memorable experience, you can increase brand awareness, drive conversions, and gain valuable insights into user behavior. So why not try incorporating playable ads into your next digital ad campaign?
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
                         <Footer bg={'#fff'} />
                     </div>
                 </div>
