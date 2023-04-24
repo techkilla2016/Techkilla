@@ -10,11 +10,13 @@ import { HiOutlineBriefcase } from 'react-icons/hi'
 import { TbCloudDataConnection } from 'react-icons/tb'
 import { FcConferenceCall } from 'react-icons/fc'
 import { GiSentryGun } from 'react-icons/gi'
+import GridSlider from '@/components/ProjectSlider/GridSlider'
+import GridSliderOne from '@/components/ProjectSlider/GridSliderOne'
 
 const related_project = [
     {
         title: "CEAT Shoppe experience - CEAT Tyres",
-        them: "/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png",
+        them: "/service/500x500/CEAT-shop.png",
         url: 'https://www.youtube.com/watch?v=11P-6L5zmco'
     },
     {
@@ -191,7 +193,7 @@ const VRSolutions = () => {
                             <Container>
                                 <div className="section">
                                     <div className='use_case_heading'>Related projects</div>
-                                    <SingleCard list={related_project} />
+                                    <GridSliderOne list={related_project} itemCount={3} />
                                 </div>
                             </Container>
                         </div>
