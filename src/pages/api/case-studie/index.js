@@ -91,6 +91,12 @@ const case_studie = [
         img: '/use-case/airtel.png',
         desc: "n any case, controlling the throng is always challenging, but even more so is maintaining a validated entry to prevent any unauthorised visitors."
     },
+    {
+        target: 'https://youtube.com/shorts/rbnMxtTQFuM?feature=share',
+        Heading: 'INDIA PARTNER GALA',
+        img: '/use-case/india.png',
+        desc: "We've set up a simple yet stunning 360 Spin Booth so that guests can remain amused at the event and leave with a memory in the shape of a 360 film that includes energising background music"
+    },
 ]
 
 const handler = (req, res) => {

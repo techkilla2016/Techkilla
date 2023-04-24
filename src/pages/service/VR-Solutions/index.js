@@ -6,6 +6,11 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '@/components/footer'
 import UseCase from '@/components/service/UseCase'
 import SingleCard from '@/components/ProjectSlider/singleCard'
+import { HiOutlineBriefcase } from 'react-icons/hi'
+import { TbCloudDataConnection } from 'react-icons/tb'
+import { FcConferenceCall } from 'react-icons/fc'
+import { GiSentryGun } from 'react-icons/gi'
+
 const related_project = [
     {
         title: "CEAT Shoppe experience - CEAT Tyres",
@@ -93,23 +98,68 @@ const VRSolutions = () => {
                                         <Image src='/service/miro-service.gif' alt='VR Solutions' width={1920} height={1080} style={css} />
                                     </Col>
                                 </Row>
+                                <div className="serviceContainer pb-5">
+                                    <h3 className='text-center benifit-head pt-4' >Benefits </h3>
+                                    <div className='text-center benifit-para'>Some advantages of virtual reality are listed below.</div>
+                                </div>
                                 <Row>
-                                    <Col>
-                                        <div className="serviceContainer">
-                                            <h4>Benefits </h4>
-                                            <p>Some advantages of virtual reality are listed below.</p>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12}>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hsl(185.13deg 91.57% 32.55%)' }}>
+                                                    <HiOutlineBriefcase />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Practical training
+                                            </h5>
                                             <p>
-                                                <strong>Practical training :</strong> Virtual reality is a risk-free technique to recreate potentially harmful training scenarios. First responders, aviators, astronauts, and law enforcement officers can train in a safe setting before venturing out into the field. Training timelines can be compressed by the use of immersive experiences, allowing students to more quickly reach professional competence.
+                                                Virtual reality is a risk-free technique to recreate potentially harmful training scenarios
                                             </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12}>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hsl(29.72deg 97.27% 56.86%)' }}>
+                                                    <TbCloudDataConnection />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Participation and Connection
+                                            </h5>
                                             <p>
-                                                <strong>Participation and Connection: </strong> Virtual reality provides an interactive and interesting experience for its users.
+                                                Virtual reality provides an interactive and interesting experience for its users.
                                             </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12}>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: '#4783c8' }}>
+                                                    <FcConferenceCall />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Convenient Conferences
+                                            </h5>
                                             <p>
-                                                <strong>Convenient Conferences: </strong> Teleconferencing helps keep costs down without sacrificing productivity or camaraderie.
+                                                Teleconferencing helps keep costs down without sacrificing productivity or camaraderie.
                                             </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12}>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hsl(34.1deg 100% 72.75%)' }}>
+                                                    <GiSentryGun />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                "Tryout" Capability
+                                            </h5>
                                             <p>
-                                                <strong>"Tryout" Capability: </strong> VR might put an end to buyer's remorse. Without leaving the comfort of your own home, you may use virtual reality to shop for furniture, take a spin in a new automobile, or even put on wedding jewellery.
-
+                                                VR might put an end to buyer's remorse.
                                             </p>
                                         </div>
                                     </Col>
