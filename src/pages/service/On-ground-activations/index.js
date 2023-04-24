@@ -35,19 +35,19 @@ const Ongroundactivations = ({ Related_projects }) => {
                                 <div className='product_intro'>
                                     <Container>
                                         <Row>
-                                            <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
+                                            <Col xxl={7} xl={7} lg={7} md={7} sm={12} xm={12}>
                                                 <div className='product_main'>
                                                     <h2>
-                                                        Ongroound Activity
+                                                        On-ground Activities
                                                     </h2>
                                                     <p>
                                                         Experiential marketing is all about creating memorable and immersive experiences that engage customers and leave a lasting impression. Our innovative strategies are designed to do just that.
                                                     </p>
                                                 </div>
                                             </Col>
-                                            <Col xxl={3} xl={3} lg={3} md={4} sm={0} xm={0}>
+                                            <Col xxl={5} xl={5} lg={5} md={4} sm={0} xm={0}>
                                                 <div className='product_main_icon'>
-                                                    <Image style={{ transform: 'scale(1.5)' }} src='/onground.svg' alt='Physical Engagement' width={1080} height={1920} />
+                                                    <Image src='/brand-activation.png' alt='Physical Engagement' width={1080} height={1920} />
                                                 </div>
                                             </Col>
                                         </Row>
@@ -56,7 +56,7 @@ const Ongroundactivations = ({ Related_projects }) => {
                             </div>
                         </div>
 
-                        <div className='BenefitsContainer bgWhite mt-5 pt-5'>
+                        <div className='BenefitsContainer bgWhite'>
                             <Container>
                                 <div className="serviceContainer pb-5">
                                     <h3 className='text-center benifit-head pt-5' >Benefits </h3>
