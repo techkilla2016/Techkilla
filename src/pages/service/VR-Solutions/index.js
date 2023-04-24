@@ -14,19 +14,24 @@ import { GiSentryGun } from 'react-icons/gi'
 const related_project = [
     {
         title: "CEAT Shoppe experience - CEAT Tyres",
-        them: "/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
+        them: "/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png",
+        url: 'https://www.youtube.com/watch?v=11P-6L5zmco'
     },
     {
         title: "QR_based_registration",
-        them: "/service/500x500/QR_based_registration.png"
+        them: "/service/500x500/QR_based_registration.png",
+        url: '/'
+
     },
     {
         title: "CEAT truck service hub experience - CEAT Tyres",
-        them: "/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png"
+        them: "/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png",
+        url: 'https://www.youtube.com/watch?v=11P-6L5zmco'
     },
     {
         title: "VR Activities",
-        them: "/service/500x500/VR_Activities.png"
+        them: "/service/500x500/VR_Activities.png",
+        url: '/'
     },
 ]
 const VRSolutions = () => {
@@ -75,7 +80,7 @@ const VRSolutions = () => {
                         <div className="desc">
                             <h2 className='text-center pb-5'>VR Solutions</h2>
                             <Container>
-                                <Row>
+                                <Row className='justify-content-center'>
 
                                     <Col xxl={6} xl={6} md={6} sm={12}>
                                         <div className="serviceContainer">

@@ -358,7 +358,7 @@ const index = () => {
                         <div className="microSection2 my-4">
                             <div className="micro_heading01 BenefitsHeading">Benefits </div>
                             <Container className='pt-4'>
-                                <Row>
+                                <Row className='justify-content-center'>
                                     {
                                         benefits?.map((item, index) => (
                                             <Col key={index} xxl={3} xl={3} lg={3} md={4} sm={6} xm={12}>
@@ -697,7 +697,7 @@ const index = () => {
                             <Container>
                                 <div className="micro_heading01">Our <span>Industry</span> Expertise</div>
                                 <div className="qr_Expertise_container">
-                                    <Row>
+                                    <Row className='justify-content-center'>
                                         {
                                             expertise?.map((item, index) => {
                                                 return <Col key={index} xxl={3} xl={3} lg={3} md={4} sm={6} xm={12}>
@@ -756,7 +756,7 @@ const index = () => {
                         </div>
 
                         {/* 12 */}
-                        <div className="Expertise_container py-5">
+                        <div className="Expertise_container pt-5">
                             <Container>
                                 <Row className='align-items-center'>
                                     <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
@@ -797,7 +797,7 @@ const index = () => {
                             </div>
                         </div>
 
-                        <Footer />
+                        <Footer bg="#fff"/>
                     </div>
                 </div>
             </main>

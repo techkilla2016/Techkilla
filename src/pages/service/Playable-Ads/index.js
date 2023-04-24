@@ -5,7 +5,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '@/components/footer'
 import SingleCard from '@/components/ProjectSlider/singleCard'
-import { HiOutlineBriefcase, HiOutlineUserGroup } from 'react-icons/hi'
+import { HiOutlineUserGroup } from 'react-icons/hi'
 import { MdVideoSettings, MdOutlineMemory } from 'react-icons/md'
 import { RiInstallLine } from 'react-icons/ri'
 
@@ -14,23 +14,28 @@ import { GiGrowth } from 'react-icons/gi'
 const related_project = [
     {
         title: "KuKu FM - Guess the personality puzzle",
-        them: "/service/500x500/KuKu_FM_Guess_the_personality_uzzle.png"
+        them: "/service/500x500/KuKu_FM_Guess_the_personality_uzzle.png",
+        url: '/'
     },
     {
         title: "Microsoft - Pride month AR filter",
-        them: "/service/500x500/Microsoft_Pride_month_AR_filte.png"
+        them: "/service/500x500/Microsoft_Pride_month_AR_filte.png",
+        url: '/'
     },
     {
         title: "ITC Football header",
-        them: "/service/500x500/ITC_Football_header.png"
+        them: "/service/500x500/ITC_Football_header.png",
+        url: '/'
     },
     {
         title: "ITC Football Bounce Roll",
-        them: "/service/500x500/ITC_Football_Bounce_Roll.png"
+        them: "/service/500x500/ITC_Football_Bounce_Roll.png",
+        url: '/'
     },
     {
         title: "Fun wagerz - FIFA world cup",
-        them: "/service/500x500/Fun_wagerz.png"
+        them: "/service/500x500/Fun_wagerz.png",
+        url: '/'
     },
 ]
 const PlayableAds = () => {
@@ -91,7 +96,7 @@ const PlayableAds = () => {
                                     <h3 className='text-center benifit-head pt-4' >Benefits </h3>
                                     <div className='text-center benifit-para'>Who is leveraging playable ads?</div>
                                 </div>
-                                <Row>
+                                <Row className='justify-content-center'>
                                     <Col xxl={4} xl={4} lg={4} md={6} sm={6} xm={12} className='mt-2'>
                                         <div className='benifit'>
                                             <div className='benifit-icon '>
@@ -103,8 +108,7 @@ const PlayableAds = () => {
                                                 conventional video ads,
                                             </h5>
                                             <p>
-                                                3x more conversion than conventional video ads
-                                                3x more conversion than conventional video ads
+                                                Playable ads increase engagement, conversion rates, and provide interactive user experiences.
                                             </p>
                                         </div>
                                     </Col>
@@ -119,8 +123,7 @@ const PlayableAds = () => {
                                                 Highest customer engagement
                                             </h5>
                                             <p>
-                                                3x more conversion than conventional video ads,
-                                                3x more conversion than conventional video ads,
+                                                Playable ads allow users to interact and experience products, increasing conversion.
                                             </p>
                                         </div>
                                     </Col>
@@ -132,11 +135,10 @@ const PlayableAds = () => {
                                                 </div>
                                             </div>
                                             <h5 className='head'>
-                                                70% Better memory recall rate
+                                                70% better memory recall rate
                                             </h5>
                                             <p>
-                                                3x more conversion than conventional video ads,
-                                                3x more conversion than conventional video ads,
+                                                Interactive playable ads create more memorable experiences, boosting recall rates.
                                             </p>
                                         </div>
                                     </Col>
@@ -151,8 +153,7 @@ const PlayableAds = () => {
                                                 Increased retention
                                             </h5>
                                             <p>
-                                                3x more conversion than conventional video ads,
-                                                3x more conversion than conventional video ads,
+                                                Playable ads keep users engaged and interested, leading to higher retention.
                                             </p>
                                         </div>
                                     </Col>
@@ -167,8 +168,7 @@ const PlayableAds = () => {
                                                 decreased uninstalls
                                             </h5>
                                             <p>
-                                                3x more conversion than conventional video ads,
-                                                3x more conversion than conventional video ads,
+                                                Interactive playable ads accurately showcase products, reducing chances of uninstallation.
                                             </p>
                                         </div>
                                     </Col>
@@ -183,8 +183,7 @@ const PlayableAds = () => {
                                                 Access to advanced analytics
                                             </h5>
                                             <p>
-                                                3x more conversion than conventional video ads,
-                                                3x more conversion than conventional video ads,
+                                                Playable ads offer detailed insights and metrics for effective campaign optimization.
                                             </p>
                                         </div>
                                     </Col>

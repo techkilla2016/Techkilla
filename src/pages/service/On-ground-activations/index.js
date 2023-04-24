@@ -6,57 +6,14 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '@/components/footer'
 import Benefits from '@/components/service/Benefit'
 import SingleCard from '@/components/ProjectSlider/singleCard'
-// const Related_projects = [
-//     {
-//         title: "Excitometer",
-//         them: "/service/500x500/Excitometer.png"
-//     },
-//     {
-//         title: "360* spin booth or photobooth",
-//         them: "/service/500x500/spin_booth.png"
-//     },
-//     {
-//         title: "Magazine Booth",
-//         them: "/service/500x500/Magazine_Booth.png"
-//     },
-//     {
-//         title: "Kinect games",
-//         them: "/service/500x500/Kinect_games.png"
-//     },
-//     {
-//         title: "AR Football",
-//         them: "/service/500x500/AR_Football.png"
-//     },
-//     {
-//         title: "VR Activities",
-//         them: "/service/500x500/AR_Activities.png"
-//     },
-//     {
-//         title: "Video feedback booth",
-//         them: "/service/500x500/Video_fee_back_booth.png"
-//     },
-//     {
-//         title: "Slingshot ",
-//         them: "/service/500x500/Slingshot.png"
-//     },
-//     {
-//         title: "Digital Photobooth",
-//         them: "/service/500x500/Digital_Photobooth.png"
-//     },
-//     {
-//         title: "Mosaic wall",
-//         them: "/service/500x500/Mosaic_wall.png"
-//     },
-//     {
-//         title: "Mosaic wall 2",
-//         them: "/service/500x500/Mosaic_wall_2.png"
-//     },
-//     {
-//         title: "Green screen or Croma photobooth",
-//         them: "/service/500x500/Green_screen_or_Croma_photobooth.png"
-//     },
+import { FaRegEye } from 'react-icons/fa'
+import { FcAcceptDatabase } from 'react-icons/fc'
+import { BiDonateHeart } from 'react-icons/bi'
+import { BsMegaphone } from 'react-icons/bs'
+import { VscFeedback } from 'react-icons/vsc'
 
-// ]
+import { TbHeartHandshake } from 'react-icons/tb'
+import { GiCarKey, GiHypersonicBolt } from 'react-icons/gi'
 const Ongroundactivations = ({ Related_projects }) => {
     return (
         <>
@@ -88,7 +45,7 @@ const Ongroundactivations = ({ Related_projects }) => {
                                                     </p>
                                                 </div>
                                             </Col>
-                                            <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
+                                            <Col xxl={3} xl={3} lg={3} md={4} sm={0} xm={0}>
                                                 <div className='product_main_icon'>
                                                     <Image src='/brand-activation.png' alt='Physical Engagement' width={1080} height={1920} />
                                                 </div>
@@ -99,11 +56,135 @@ const Ongroundactivations = ({ Related_projects }) => {
                             </div>
                         </div>
 
-                        <div className='BenefitsContainer bgWhite'>
-                            <h4>Benefits</h4>
-                            <div className="Benefits">
-                                <Benefits data={['Captures visitors attention quickly', 'Easy database collection', 'Lasting experience', 'Word of mouth promotion', 'Higher engagement', 'Better retention', 'Feedback collection', 'Instant conversion']} />
-                            </div>
+                        <div className='BenefitsContainer bgWhite mt-5 pt-5'>
+                            <Container>
+                                <div className="serviceContainer pb-5">
+                                    <h3 className='text-center benifit-head pt-4' >Benefits </h3>
+                                    <div className='text-center benifit-para'>Benefits of On Ground Activations</div>
+                                </div>
+                                <Row className='justify-content-center'>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hsl(29.72deg 97.27% 56.86%)' }}>
+                                                    <FaRegEye />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Captures visitors attention quickly
+                                            </h5>
+                                            <p>
+                                                On-ground engagement offers immediate and eye-catching experiences, capturing visitors' attention.
+                                            </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: '#4783c8' }}>
+                                                    <FcAcceptDatabase />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Easy database collections
+                                            </h5>
+                                            <p>
+                                                On-ground engagement enables effortless collection of visitor information for future marketing
+                                            </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hotpink' }}>
+                                                    <BiDonateHeart />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Lasting experience
+                                            </h5>
+                                            <p>
+                                                On-ground engagement creates memorable experiences, leading to brand loyalty and advocacy.
+                                            </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hsl(185.13deg 91.57% 32.55%)' }}>
+                                                    <BsMegaphone />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Word of mouth promotion
+                                            </h5>
+                                            <p>
+                                                On-ground engagement generates positive word of mouth, resulting in increased promotion.
+                                            </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hsl(185.13deg 91.57% 32.55%)' }}>
+                                                    <TbHeartHandshake />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Higher engagement
+                                            </h5>
+                                            <p>
+                                                On-ground engagement increases engagement levels, creating more meaningful interactions with customers.
+                                            </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hsl(34.1deg 100% 72.75%)' }}>
+                                                    <GiCarKey />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Better retention
+                                            </h5>
+                                            <p>
+                                                On-ground engagement fosters emotional connections, leading to improved customer retention.
+                                            </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: 'hsl(29.72deg 97.27% 56.86%)' }}>
+                                                    <VscFeedback />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Feedback collection
+                                            </h5>
+                                            <p>
+                                                On-ground engagement allows for valuable feedback collection and insights into customer needs.
+                                            </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
+                                        <div className='benifit'>
+                                            <div className='benifit-icon '>
+                                                <div className='icon-inner d-flex align-items-center justify-content-center' style={{ color: '#4783c8' }}>
+                                                    <GiHypersonicBolt />
+                                                </div>
+                                            </div>
+                                            <h5 className='head'>
+                                                Instant conversion
+                                            </h5>
+                                            <p>
+                                                On-ground engagement enables instant conversion opportunities, leading to higher sales.
+                                            </p>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
                         </div>
                         <div className="bgWhite">
                             <Container>

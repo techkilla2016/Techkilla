@@ -1,4 +1,4 @@
-import CaseStudieCart from '@/components/case-studie/CaseStudieCart'
+import CaseStudieCart from '@/components/case-studie/'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head'
