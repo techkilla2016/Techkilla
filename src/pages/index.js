@@ -31,7 +31,7 @@ const Home = ({ work }) => {
     },
     {
       title: 'Virtual reality Solutions',
-      description: 'specialised VR 360 solutions for gaming and audience engagement.',
+      description: 'specialised VR 360 solutions for gaming and audience engagement.          \n',
       img: '/service/VR.webp',
       slag: '/service/VR-Solutions',
       color: '#7dbee91f',
@@ -117,8 +117,8 @@ const Home = ({ work }) => {
                       </div>
                       <div className="para_section">
                         <div className="heading">Best Performance</div>
-                        <div className='para'>
-                          We construct the ideal play based on that tale to maximise your company's ROI.
+                        <div className='para pr-3'>
+                          We construct the ideal play based on that tale to maximise yourcompany's ROI.
                         </div>
                       </div>
                     </div>
@@ -127,10 +127,10 @@ const Home = ({ work }) => {
 
                 <div className="mt-5 d-flex justify-content-center flex-sm-row flex-column" >
                   <div className='m-3'>
-                    <Button target='/' title='Read more' />
+                    <Button url='/about' title='Read more' />
                   </div>
                   <div className='m-3'>
-                    <Button target='https://calendly.com/techkilla/meeting' title='Book free demo' />
+                    <Button url='https://calendly.com/techkilla/meeting' target="_blank" title='Book free demo' />
                   </div>
                 </div>
               </Container>
@@ -155,7 +155,7 @@ const Home = ({ work }) => {
             {/* // Section4 Service */}
             <div className="section4">
               <div className="section4Inner">
-                <PortfolioSection work={work} lastLine="With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals." />
+                <PortfolioSection work={work} lastLine="With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals." />
               </div>
             </div>
 

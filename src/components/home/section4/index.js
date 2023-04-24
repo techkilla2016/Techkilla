@@ -150,7 +150,7 @@ const PortfolioSection = ({ work, lastLine }) => {
             <Container>
                 <Row className="justify-content-center pb-4">
                     <Col xxl={9} xl={9} lg={9} md={10} sm={12} xm={12}>
-                        <div className="text-center">
+                        <div className="text-center ">
                             {lastLine}
                         </div>
                     </Col>

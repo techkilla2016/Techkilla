@@ -82,7 +82,7 @@ const PlayableAds = () => {
                         </div>
 
                         <div className="desc pb-5">
-                            <h2 className='text-center py-5 mt-4'>Playable Ads</h2>
+                            <h2 className='text-center py-5 mt-5 heading'>Playable Ads</h2>
                             <Container>
                                 <div className="serviceContainer ">
                                     <p className='text-center'>
@@ -93,8 +93,8 @@ const PlayableAds = () => {
                                     </p>
                                 </div>
                                 <div className="serviceContainer pb-5">
-                                    <h3 className='text-center benifit-head pt-4' >Benefits </h3>
-                                    <div className='text-center benifit-para'>Who is leveraging playable ads?</div>
+                                    <h3 className='text-center benifit-head pt-4 mt-5' >Benefits </h3>
+                                    <div className='text-center benifit-para'>Why Playables?</div>
                                 </div>
                                 <Row className='justify-content-center'>
                                     <Col xxl={4} xl={4} lg={4} md={6} sm={6} xm={12} className='mt-2'>
@@ -183,7 +183,7 @@ const PlayableAds = () => {
                                                 Access to advanced analytics
                                             </h5>
                                             <p>
-                                                Playable ads offer detailed insights and metrics for effective campaign optimization.
+                                                Playable ads offer detailed insights and metrics for effective campaign optimization.
                                             </p>
                                         </div>
                                     </Col>

@@ -40,17 +40,17 @@ const PhysicalEngagement = ({ product }) => {
                             <div className='product_intro'>
                                 <Container>
                                     <Row>
-                                        <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
+                                        <Col xxl={7} xl={7} lg={7} md={7} sm={12} xm={12}>
                                             <div className='product_main'>
                                                 <h2>
-                                                    Immersive Experiences with Experiential Technology
+                                                    Tech-Driven Engagement for Physical Experiences
                                                 </h2>
                                                 <p>
                                                     In-person engagement is an essential part of building strong customer relationships, and experiential technology products can help businesses create memorable experiences that connect with their audiences.
                                                 </p>
                                             </div>
                                         </Col>
-                                        <Col xxl={4} xl={4} lg={4} md={4} sm={0} xm={0}>
+                                        <Col xxl={5} xl={5} lg={5} md={5} sm={0} xm={0}>
                                             <div className='product_main_icon'>
                                                 <Image src='/brand-activation.png' alt='Physical Engagement' width={1080} height={1920} />
                                             </div>
@@ -65,10 +65,13 @@ const PhysicalEngagement = ({ product }) => {
                             Our physical engagement experiential technology products are designed to help businesses create immersive and memorable experiences that connect with their customers on a deeper level.
                         </h2> */}
                         <Container>
+                            <p className='text-center mb-5 first_line' >
+                                Our physical engagement experiential technology products are an excellent choice for businesses looking to engage with their customers in powerful and meaningful ways. We offer a range of features and tools that can help businesses create immersive and memorable experiences that connect with customers on a deeper level, and build strong, long-lasting relationships.
+                            </p>
                             <div className='Heading'>
                                 products
                             </div>
-                            <Row>
+                            <Row className='justify-content-center'>
                                 {
                                     product?.map((curItem, keys) => {
                                         return (
@@ -89,7 +92,7 @@ const PhysicalEngagement = ({ product }) => {
                         <Row className="justify-content-center pb-4">
                             <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
                                 <div className="text-center finishLine">
-                                    Our physical engagement experiential technology products are an excellent choice for businesses looking to engage with their customers in powerful and meaningful ways. We offer a range of features and tools that can help businesses create immersive and memorable experiences that connect with customers on a deeper level, and build strong, long-lasting relationships.
+                                    Transform the way your customers interact with your brand by leveraging our expertise in experiential technology for unique, immersive, and unforgettable physical engagement solutions.
                                 </div>
                             </Col>
                         </Row>

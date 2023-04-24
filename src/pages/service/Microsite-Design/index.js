@@ -27,22 +27,22 @@ const usecase = [
         img: '/service/distinguishing the corporate-01-01.png',
         title: 'distinguishing the corporate brand'
     },
-    {
-        img: '/service/product launch-01-01.png',
-        title: 'promoting events'
-    },
-    {
-        img: '/service/product launch-01-01.png',
-        title: 'Running a campaign'
-    },
-    {
-        img: '/service/product launch-01-01.png',
-        title: 'Hosting an event'
-    },
-    {
-        img: '/service/product launch-01-01.png',
-        title: 'Engaging with influencers'
-    },
+    // {
+    //     img: '/service/product launch-01-01.png',
+    //     title: 'promoting events'
+    // },
+    // {
+    //     img: '/service/product launch-01-01.png',
+    //     title: 'Running a campaign'
+    // },
+    // {
+    //     img: '/service/product launch-01-01.png',
+    //     title: 'Hosting an event'
+    // },
+    // {
+    //     img: '/service/product launch-01-01.png',
+    //     title: 'Engaging with influencers'
+    // },
 ]
 const list = [
     {
@@ -182,7 +182,7 @@ const MicrositeDesign = () => {
                     <div className='mainContainer'>
                         <div className="desc py-5">
                             {/* <h2 className='text-center py-5'></h2> */}
-                            <h3 className="section__title my-5" style={{ color: " #000", padding: "30px 0px", textAlign: 'center' }}>
+                            <h3 className="section__title mt-4 mb-5" style={{ color: " #000", padding: "30px 0px", textAlign: 'center' }}>
                                 <span className='section__title-line-center'>What are microsites?</span>
                             </h3>
                             <Container>
@@ -294,7 +294,7 @@ const MicrositeDesign = () => {
                                                     Easy to manage
                                                 </h5>
                                                 <p>
-                                                    Easy management saves time and resources, increasing efficiency and productivity.
+                                                    Easy management saves time and resources, increasing efficiency and productivity.
                                                 </p>
                                             </div>
                                         </Col>
@@ -316,7 +316,7 @@ const MicrositeDesign = () => {
                     </div>
                 </div>
             </main>
-          
+
         </>
     )
 }

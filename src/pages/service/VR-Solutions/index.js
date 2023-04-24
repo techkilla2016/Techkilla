@@ -18,12 +18,6 @@ const related_project = [
         url: 'https://www.youtube.com/watch?v=11P-6L5zmco'
     },
     {
-        title: "QR_based_registration",
-        them: "/service/500x500/QR_based_registration.png",
-        url: '/'
-
-    },
-    {
         title: "CEAT truck service hub experience - CEAT Tyres",
         them: "/service/500x500/CEAT_Shoppe_experience-CEAT_Tyres.png",
         url: 'https://www.youtube.com/watch?v=11P-6L5zmco'
@@ -84,10 +78,10 @@ const VRSolutions = () => {
 
                                     <Col xxl={6} xl={6} md={6} sm={12}>
                                         <div className="serviceContainer">
-                                            <p>
+                                            {/* <p>
                                                 VR (virtual reality) is now mainstream. This is a fact of your current existence. As a matter of fact, certain sectors have already experimented with the new technology and found it to be beneficial.
                                                 In virtual reality, the user is placed in a safe, simulated setting that can be used to practise for real-world situations.
-                                            </p>
+                                            </p> */}
 
                                             <h4>What is virtual reality?</h4>
                                             <p>
@@ -104,7 +98,7 @@ const VRSolutions = () => {
                                     </Col>
                                 </Row>
                                 <div className="serviceContainer pb-5">
-                                    <h3 className='text-center benifit-head pt-4' >Benefits </h3>
+                                    <h3 className='text-center benifit-head pt-5 mt-3' >Benefits </h3>
                                     <div className='text-center benifit-para'>Some advantages of virtual reality are listed below.</div>
                                 </div>
                                 <Row>

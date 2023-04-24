@@ -86,7 +86,7 @@ const ServiceSection = () => {
             </Row>
             <div className='serviceBtn btnSection2'>
                 <button>
-                    <Link href="/">Book free demo</Link>
+                    <Link href="https://calendly.com/techkilla/meeting" target='_blank'>Book free demo</Link>
                     <span></span>
                 </button>
             </div>

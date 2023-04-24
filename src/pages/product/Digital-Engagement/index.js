@@ -44,7 +44,7 @@ const DigitalEngagement = ({ product }) => {
                                         <Col xxl={7} xl={7} lg={7} md={7} sm={12} xm={12}>
                                             <div className='product_main'>
                                                 <h2>
-                                                    Tech-Driven Engagement for Physical Experiences
+                                                    Drive engagement with digital innovation
                                                 </h2>
                                                 <p>
                                                     Digital engagement is an essential part of modern business, and experiential technology products can help your brand stand out and engage its customers in new and exciting ways.
@@ -62,14 +62,15 @@ const DigitalEngagement = ({ product }) => {
                         </div>
                     </div>
                     <div className='product-container'>
-                        {/* <h2>
-                            Our physical engagement experiential technology products are designed to help businesses create immersive and memorable experiences that connect with their customers on a deeper level.
-                        </h2> */}
+
                         <Container>
+                            <p className='text-center mb-5 first_line' >
+                                our digital engagement experiential technology products are an excellent choice for businesses looking to take their customer engagement to the next level. We offer a range of features and tools that can help businesses connect with their audiences in new and exciting ways, and drive real results.
+                            </p>
                             <div className='Heading'>
                                 products
                             </div>
-                            <Row>
+                            <Row className='justify-content-center'>
                                 {
                                     product?.map((curItem, keys) => {
                                         return (
@@ -90,7 +91,7 @@ const DigitalEngagement = ({ product }) => {
                         <Row className="justify-content-center pb-4">
                             <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
                                 <div className="text-center finishLine">
-                                    our digital engagement experiential technology products are an excellent choice for businesses looking to take their customer engagement to the next level. We offer a range of features and tools that can help businesses connect with their audiences in new and exciting ways, and drive real results. Whether you're looking to boost sales, build customer loyalty, or simply create a fun and engaging experience for your customers, our products can help you get there.
+                                    Whether you're looking to boost sales, build customer loyalty, or simply create a fun and engaging experience for your customers, our products can help you get there.
                                 </div>
                             </Col>
                         </Row>

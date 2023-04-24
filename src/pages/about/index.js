@@ -118,7 +118,7 @@ const data = [
     },
     {
         title: 'Virtual reality Solutions',
-        description: 'specialised VR 360 solutions for gaming and audience engagement.',
+        description: 'specialised VR 360 solutions for gaming and audience engagement.         \n',
         img: '/service/VR.webp',
         slag: '/service/VR-Solutions',
         color: '#7dbee91f',
@@ -155,7 +155,19 @@ const About = ({ work }) => {
                                         <Image src='/about2.gif' width={1920} height={1080} />
                                     </Col>
                                     <Col lg={6} md={12} sm={12} >
-                                        <ColRight about="Who We Are" />
+                                        <div className='right-col'>
+                                            <div className='colHeading'>Who We Are</div>
+                                            <h3 className="section__title">
+                                                Empowering brands through
+                                                <span className="section__title-line"> digital creativity</span>
+                                            </h3>
+                                            <p className='section_Para pt-5 text-justify'>
+                                                We are a dynamic team of professionals with a passion for delivering exceptional customer engagement solutions. We work closely with clients to create tailored solutions that address their unique challenges and help them achieve their business goals.
+                                            </p>
+                                            <p className='section_Para pb-4'>
+                                                Our team is made up of experts from various backgrounds, including marketing, technology, and design. We are passionate about creating immersive experiences that captivate audiences and enhance customer engagement.
+                                            </p>
+                                        </div>
                                     </Col>
                                 </Row>
                                 <h3 className="colHeading text-center pt-4 mt-4">
@@ -204,21 +216,21 @@ const About = ({ work }) => {
                                             <div className="para_section">
                                                 <div className="heading">Best Performance</div>
                                                 <div className='para'>
-                                                    We construct the ideal play based on that tale to maximise your company's ROI.
+                                                    We construct the ideal play based on that tale to maximise your company's ROI.
                                                 </div>
                                             </div>
                                         </div>
                                     </Col>
                                 </Row>
 
-                                <div className="mt-5 d-flex justify-content-center flex-sm-row flex-column" >
+                                {/* <div className="mt-5 d-flex justify-content-center flex-sm-row flex-column" >
                                     <div className='m-3'>
-                                        <Button target='/' title='Read more' />
+                                        <Button url='/' title='Read more' />
                                     </div>
                                     <div className='m-3'>
-                                        <Button target='https://calendly.com/techkilla/meeting' title='Book free demo' />
+                                        <Button url='https://calendly.com/techkilla/meeting' target="_blank" title='Book free demo' />
                                     </div>
-                                </div>
+                                </div> */}
                             </Container>
                         </div>
                         <div className='pb-5' style={{ background: "#fff" }}>
@@ -349,7 +361,7 @@ const About = ({ work }) => {
                         {/* section  */}
                         <div className="section4">
                             <div className="section4Inner">
-                                <PortfolioSection work={work} lastLine="With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals." />
+                                <PortfolioSection work={work} lastLine="With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals." />
                             </div>
                         </div>
 

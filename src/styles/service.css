@@ -17,6 +17,10 @@
     transition: all 0.2s linear;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 8px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .serviceCart:hover {
@@ -67,7 +71,7 @@
 .serviceCart p {
     color: #828da5;
     font-size: 14px;
-    padding: 0px 20px;
+    padding: 0px 10px;
     text-align: justify;
     /* font-family: 'Playfair Display', serif; */
 }
@@ -287,7 +291,7 @@
 .section h2 {
     font-weight: 900;
     text-transform: capitalize;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     font-size: 60px;
     text-align: center;
@@ -329,7 +333,7 @@
     font-size: 50px;
     text-align: center;
     font-weight: 900;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cartOut {

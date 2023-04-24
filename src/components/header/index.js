@@ -103,7 +103,7 @@ const Header = () => {
                             <button onClick={() => {
                                 setShow(false)
                             }}>
-                                <Button target='' title='Send Massage'></Button>
+                                <Button url='' title='Send Massage'></Button>
                             </button>
                         </Form>
                     </Modal.Body>
@@ -171,7 +171,7 @@ const Header = () => {
                                 </div>
                             </div >
                             <div className="MobileNavBtn">
-                                <Link href='https://calendly.com/ensights-meeting/' target='_blank'>
+                                <Link href='https://calendly.com/ensights-meeting/' target="_blank">
                                     <button onClick={() => setIsMobile(false)}>Book A Demo</button>
                                 </Link>
                                 <Link href='/contact' >

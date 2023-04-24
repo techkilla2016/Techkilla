@@ -47,7 +47,7 @@ const Ongroundactivations = ({ Related_projects }) => {
                                             </Col>
                                             <Col xxl={3} xl={3} lg={3} md={4} sm={0} xm={0}>
                                                 <div className='product_main_icon'>
-                                                    <Image src='/brand-activation.png' alt='Physical Engagement' width={1080} height={1920} />
+                                                    <Image style={{ transform: 'scale(1.5)' }} src='/onground.svg' alt='Physical Engagement' width={1080} height={1920} />
                                                 </div>
                                             </Col>
                                         </Row>
@@ -59,8 +59,8 @@ const Ongroundactivations = ({ Related_projects }) => {
                         <div className='BenefitsContainer bgWhite mt-5 pt-5'>
                             <Container>
                                 <div className="serviceContainer pb-5">
-                                    <h3 className='text-center benifit-head pt-4' >Benefits </h3>
-                                    <div className='text-center benifit-para'>Benefits of On Ground Activations</div>
+                                    <h3 className='text-center benifit-head pt-5' >Benefits </h3>
+                                    <div className='text-center benifit-para'>Advantages of on-the-ground activations</div>
                                 </div>
                                 <Row className='justify-content-center'>
                                     <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12} className='mt-2'>
@@ -179,22 +179,20 @@ const Ongroundactivations = ({ Related_projects }) => {
                                                 Instant conversion
                                             </h5>
                                             <p>
-                                                On-ground engagement enables instant conversion opportunities, leading to higher sales.
+                                                On-ground engagement enables instant conversion opportunities, leading to higher sales.
                                             </p>
                                         </div>
                                     </Col>
                                 </Row>
                             </Container>
                         </div>
-                        <div className="bgWhite">
+                        <div className="bgWhite pb-5">
                             <Container>
-                                <div className="section">
-                                    <div className='use_case_heading'>Related projects</div>
-                                    <SingleCard list={Related_projects} />
-                                </div>
+                                <div className='use_case_heading'>Related projects</div>
+                                <SingleCard list={Related_projects} />
                             </Container>
                         </div>
-                        <Footer />
+                        <Footer bg="#fff" />
                     </div>
                 </div>
             </main>

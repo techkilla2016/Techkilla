@@ -26,7 +26,7 @@ const Footer = ({ bg }) => {
                                     <h2 className='demoText'>
                                         Schedule Free Demo
                                     </h2>
-                                    <Button target='https://calendly.com/techkilla/meeting' title='Book free demo' />
+                                    <Button url='https://calendly.com/techkilla/meeting' target="_blank" title='Book free demo' />
                                 </div>
                             </Col>
                         </Row>
@@ -75,7 +75,7 @@ const Footer = ({ bg }) => {
                                 <Link href="https://www.facebook.com/techkilla2015/" target={'_blank'}><FaFacebookF /></Link>
                                 <Link href="https://twitter.com/techkilla15?s=08" target={'_blank'}><AiOutlineTwitter /></Link>
                                 <Link href="https://www.instagram.com/techkillatechnologies/?igshid=1j33p32nqf62k" target={'_blank'}><BsInstagram /></Link>
-                                <Link href="https://www.linkedin.com/company/techkilla"><GrLinkedinOption /></Link>
+                                <Link href="https://www.linkedin.com/company/techkilla"  target="_blank"><GrLinkedinOption /></Link>
                             </section>
                         </div>
                     </div>

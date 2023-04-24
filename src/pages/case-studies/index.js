@@ -3,6 +3,7 @@ import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
@@ -29,7 +30,7 @@ const CaseStudie = ({ useCase }) => {
                                         <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12}>
                                             <div className='product_main'>
                                                 <h2>
-                                                    From Challenge to Triumph: Clients' Journey with Experiential Tech
+                                                    From Challenge to Triumph: Clients' Journey with Experiential Tech
                                                 </h2>
                                                 <p>
                                                     See how Techkilla delivered exceptional results for its clients by providing innovative experiential technology solutions.
@@ -62,6 +63,15 @@ const CaseStudie = ({ useCase }) => {
                                             )
                                         })
                                     }
+                                </Row>
+                            </Container>
+                            <Container>
+                                <Row className="justify-content-center  py-5">
+                                    <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
+                                        <div className="text-center finishLine">
+                                            <Link href='/contact'>Partner with us</Link>  to leverage the power of experiential technology and create unique, memorable, and personalized brand experiences that drive customer engagement, loyalty, and revenue growth.
+                                        </div>
+                                    </Col>
                                 </Row>
                             </Container>
                         </div>

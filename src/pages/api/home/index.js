@@ -8,7 +8,7 @@ export default function handler(req, res) {
         },
         {
             title: 'Virtual reality Solutions',
-            description: 'specialised VR 360 solutions for gaming and audience engagement.',
+            description: 'specialised VR 360 solutions for gaming and audience engagement.       \n',
             img: '/service/VR.webp',
             slag: '/service/VR-Solutions'
         },

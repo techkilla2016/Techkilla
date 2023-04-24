@@ -667,7 +667,7 @@ const index = () => {
                                                 <h2 className='h1 mb-3 text-center'>
                                                     Start with your customized microsite now.
                                                 </h2>
-                                                <Button target='https://calendly.com/techkilla/meeting' title='Book free demo' />
+                                                <Button url='https://calendly.com/techkilla/meeting' title='Book free demo' />
                                             </div>
                                         </Col>
                                     </Row>
