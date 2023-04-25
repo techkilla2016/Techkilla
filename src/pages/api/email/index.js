@@ -1,8 +1,8 @@
 import nodeMalter from 'nodemailer'
 export default function handler(req, res) {
-    const contactForm = (data) => {
-        const { name, email, phone, company, message } = data
-        return `
+  const contactForm = (data) => {
+    const { name, email, phone, company, message } = data
+    return `
         <html>
         <head>
           <style>
@@ -42,10 +42,10 @@ export default function handler(req, res) {
         </body>
       </html>
       `
-    }
-    const careersForm = (data) => {
-        const { First_Name, Last_Name, Phone_Number, Opportunity, abou_us } = data
-        return `
+  }
+  const careersForm = (data) => {
+    const { First_Name, Last_Name, Phone_Number, Opportunity, about_us } = data
+    return `
         <html>
         <head>
           <style>
@@ -73,47 +73,47 @@ export default function handler(req, res) {
           </style>
         </head>
         <body>
-          <h3>New Contact Form Submission</h3>
+          <h3>New Careers Form Submission</h3>
           <p>Here are the details of the new Careers form submission:</p>
           <ul>
             <li><strong>Name:</strong> ${First_Name}  ${Last_Name} </li>
             <li><strong>Phone Number : </strong> ${Phone_Number}</li>
             <li><strong>Opportunity : </strong> ${Opportunity}</li>
-            <li><strong>How did you hear about us? : </strong> ${abou_us}</li>
+            <li><strong>How did you hear about us? : </strong> ${about_us}</li>
           </ul>
         </body>
       </html>
       `
-    }
+  }
 
-    if (req.method === 'POST') {
-        const transporter = nodeMalter.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.EMAIL,
-                pass: process.env.EMAIL_PASSWORD
-            },
-            port: 465,
-            host: 'smtp.gmail.com'
-        })
-        const data = req.body
-        const mainOption = {
-            from: process.env.EMAIL,
-            to: 'rajputana6688@gmail.com',
-            subject: req?.body?.subject,
-            html: req.body.type === 'contact' ? contactForm(data) : careersForm(data)
-        }
-        transporter.sendMail(mainOption, (error, info) => {
-            // console.log(error);
-            // console.log(info);
-        })
-        res.status(200).json({
-            massage: "email sending success",
-        })
-    } else {
-        res.status(405).json({
-            status: false,
-            massage: 'Method Not Allowed'
-        })
+  if (req.method === 'POST') {
+    const transporter = nodeMalter.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASSWORD
+      },
+      port: 465,
+      host: 'smtp.gmail.com'
+    })
+    const data = req.body
+    const mainOption = {
+      from: process.env.EMAIL,
+      to: process.env.RE_EMAIL,
+      subject: req?.body?.subject,
+      html: req.body.type === 'contact' ? contactForm(data) : careersForm(data)
     }
+    transporter.sendMail(mainOption, (error, info) => {
+      // console.log(error);
+      // console.log(info);
+    })
+    res.status(200).json({
+      massage: "email sending success",
+    })
+  } else {
+    res.status(405).json({
+      status: false,
+      massage: 'Method Not Allowed'
+    })
+  }
 }
