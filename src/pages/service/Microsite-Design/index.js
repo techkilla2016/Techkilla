@@ -2,7 +2,7 @@ import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import UseCase from '@/components/service/UseCase'
 import GridSlider from '@/components/ProjectSlider/GridSlider'
@@ -139,7 +139,14 @@ const list = [
 ]
 
 const MicrositeDesign = () => {
-    const css = { maxWidth: '100%', height: 'auto' }
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            videoRef.current.play();
+        }, 1000); // Adjust the delay time as needed
+        return () => clearTimeout(timeoutId);
+    }, []);
     return (
         <>
             <Head>
@@ -179,8 +186,8 @@ const MicrositeDesign = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='mainContainer'>
-                        <div className="desc py-5">
+                    <div className='mainContainer' >
+                        <div className="desc py-5" style={{ background: '#f4f4f4' }}>
                             {/* <h2 className='text-center py-5'></h2> */}
                             <h3 className="section__title mt-4 mb-5" style={{ color: " #000", padding: "30px 0px", textAlign: 'center' }}>
                                 <span className='section__title-line-center'>What are microsites?</span>
@@ -201,13 +208,22 @@ const MicrositeDesign = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src='/service/miro-service.gif' alt='Benefits of launching your own microsite'
-                                            width={1920} height={1080} style={css} />
+                                        <div className='video_contain'>
+                                            <video ref={videoRef} width="70%" muted loop={true}>
+                                                <source src="/microsite.mp4" type="video/mp4" />
+                                                <source src="/microsite.ogg" type="video/ogg" />
+                                            </video>
+                                            <div className='frame'>
+
+                                            </div>
+                                        </div>
+                                        {/* <Image src='/service/miro-service.gif' alt='Benefits of launching your own microsite'
+                                            width={1920} height={1080} style={css} /> */}
                                     </Col>
                                 </Row>
                             </Container>
                             <div className="use_case">
-                                <div id="use_case">
+                                <div id="use_case" className='py-5'>
                                     <Container>
                                         <div className='use_case_heading'>Use cases</div>
                                         <Row>
@@ -216,9 +232,9 @@ const MicrositeDesign = () => {
                                     </Container>
                                 </div>
                             </div>
-                            <div className='BenefitsContainer'>
+                            <div className=''>
                                 <Container>
-                                    <div className="serviceContainer pb-5">
+                                    <div className="serviceContainer py-5">
                                         <h3 className='text-center benifit-head pt-4' >Benefits </h3>
                                         <div className='text-center benifit-para'>Benefits of launching your own microsite</div>
                                     </div>
@@ -300,8 +316,6 @@ const MicrositeDesign = () => {
                                         </Col>
                                     </Row>
                                 </Container>
-                                <div className="Benefits">
-                                </div>
                             </div>
                         </div>
                         <div className="bgWhite">

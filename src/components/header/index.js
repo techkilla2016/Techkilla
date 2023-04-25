@@ -51,7 +51,7 @@ const Header = () => {
                             </div>
                         </div>
                         <div className='navlink'>
-                            <Link className='nav_child' href='/product'>Products</Link>
+                            <Link className='nav_child' href='/product/Digital-Engagement'>Products</Link>
                             <div className='drop_down'>
                                 <Link className='nav_child_drop' href='/product/Digital-Engagement'>Digital Engagement</Link>
                                 <Link className='nav_child_drop' href='/product/Physical-Engagement'>Physical Engagement</Link>

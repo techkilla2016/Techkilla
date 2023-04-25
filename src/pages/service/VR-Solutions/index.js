@@ -197,7 +197,7 @@ const VRSolutions = () => {
                                 </div>
                             </Container>
                         </div>
-                        <Footer />
+                        <Footer bg={"#fff"} />
                     </div>
                 </div>
             </main>
