@@ -3,9 +3,19 @@ import Header from '@/components/header'
 import Head from 'next/head';
 import React from 'react'
 import ContactFrom from './ContactForm';
-// import Comp from '../../../public/assets/contact/Comp.mov'
 import ColLeft from '@/components/home/section2/left';
-const Contact = () => {
+import axios from 'axios';
+
+const Contact = ({ BaseUrl }) => {
+    const send = async (contact) => {
+        try {
+            const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
+            console.log(reponce.data)
+            return true
+        } catch (error) {
+            return false;
+        }
+    };
     return (
         <>
             <Head>
@@ -19,19 +29,12 @@ const Contact = () => {
                             <div className="row">
                                 <div className="col-lg-6  home-image px-0">
                                     <div className="hero ">
-                                        {/* <video autoPlay={true} playsInline loop={true} muted={true}>
-                                            <source
-                                                src={Comp}
-                                                type="video/mov"
-                                            />
-                                            <source src="/Hero_Desk_alpha.mp4" type="video/mp4" />
-                                        </video> */}
                                         <ColLeft />
                                     </div>
 
                                 </div>
                                 <div className="col-lg-6 contact-form">
-                                    <ContactFrom />
+                                    <ContactFrom send={send} />
                                 </div>
                             </div>
                         </div>
@@ -45,3 +48,11 @@ const Contact = () => {
 }
 
 export default Contact
+
+export const getServerSideProps = async () => {
+    return {
+        props: {
+            BaseUrl: process.env.BaseUrl
+        }
+    }
+}

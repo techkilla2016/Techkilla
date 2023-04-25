@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form, Col, Row, Button } from "react-bootstrap";
+import { Form, Col, Row, Button, Modal, ButtonGroup } from "react-bootstrap";
 
 
 // const SERVICE_URL = 
@@ -11,18 +11,25 @@ const EMPTY_CONTACT = {
   name: "",
   message: "",
   phone: "",
+  type: 'contact'
 };
-function ContactFrom() {
+function ContactFrom({ send }) {
   const [showModal, setShowModal] = useState(false);
   const [contact, setContact] = useState(EMPTY_CONTACT);
 
   const onInputChange = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
+  const [show, setShow] = useState(false)
 
-  const send = async () => {
-    setContact({ ...EMPTY_CONTACT });
-  };
+  const submitForm = async () => {
+    const isSend = await send(contact)
+    if (isSend) {
+      setShow(true)
+      setContact(EMPTY_CONTACT)
+    }
+  }
+
   return (
     <div className=" contactus px-3" id="contact" >
       <div className="container">
@@ -102,7 +109,7 @@ function ContactFrom() {
             </Row>
             <Row>
               <Col lg="auto">
-                <Button className="btn-action" onClick={send}>
+                <Button className="btn-action" onClick={submitForm}>
                   Contact Us
                 </Button>
               </Col>
@@ -130,6 +137,33 @@ function ContactFrom() {
             </div>
           </div>
         )}</div>
+
+
+      <>
+        <Modal
+          size="lg"
+          show={show}
+          centered
+          onHide={() => setShow(false)}
+          aria-labelledby="example-modal-sizes-title-sm"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">
+              Submission Success
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="text-center">
+            Thank you for your submission! Our team will review your information and get back to you as soon as possible. In the meantime, feel free to explore our website and learn more about our products/services. If you have any urgent inquiries, please don't hesitate to contact us directly. We appreciate your interest in our business and look forward to speaking with you soon.
+          </Modal.Body>
+          <Modal.Footer>
+            <ButtonGroup>
+              <Button variant="secondary" size="sm">
+                close
+              </Button>
+            </ButtonGroup>
+          </Modal.Footer>
+        </Modal>
+      </>
     </div>
   );
 }
