@@ -157,7 +157,7 @@ function ContactFrom({ send }) {
           </Modal.Body>
           <Modal.Footer>
             <ButtonGroup>
-              <Button variant="secondary" size="sm">
+              <Button variant="secondary" size="sm" onClick={() => setShow(false)}>
                 close
               </Button>
             </ButtonGroup>

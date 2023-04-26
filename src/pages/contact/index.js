@@ -10,7 +10,6 @@ const Contact = ({ BaseUrl }) => {
     const send = async (contact) => {
         try {
             const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
-            console.log(reponce.data)
             return true
         } catch (error) {
             return false;
