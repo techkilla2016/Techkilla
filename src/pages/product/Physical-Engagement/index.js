@@ -65,7 +65,7 @@ const PhysicalEngagement = ({ product }) => {
                             Our physical engagement experiential technology products are designed to help businesses create immersive and memorable experiences that connect with their customers on a deeper level.
                         </h2> */}
                         <Container>
-                            <p className='text-center mb-5 first_line' >
+                            <p className='text-center first_line' >
                                 Our physical engagement experiential technology products are an excellent choice for businesses looking to engage with their customers in powerful and meaningful ways. We offer a range of features and tools that can help businesses create immersive and memorable experiences that connect with customers on a deeper level, and build strong, long-lasting relationships.
                             </p>
                             <div className='Heading'>

@@ -319,12 +319,12 @@
 }
 
 .use_case {
-    margin-top: 100px;
     background: url('../../public/back-pattern.png') repeat;
+    background-attachment: fixed;
 }
 
 #use_case {
-    padding: 20px 0px;
+    padding: 60px 0px;
     background: rgba(255, 255, 255, 0.7);
 }
 

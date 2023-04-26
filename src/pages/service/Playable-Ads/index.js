@@ -81,10 +81,10 @@ const PlayableAds = () => {
                             </div>
                         </div>
 
-                        <div className="desc pb-5">
-                            <h2 className='text-center py-5 mt-5 heading'>Playable Ads</h2>
+                        <div className="desc pb-5 pt-4">
+                            <h2 className='text-center heading pt-5'>Playable Ads</h2>
                             <Container>
-                                <div className="serviceContainer ">
+                                <div className="serviceContainer p-0 ">
                                     <p className='text-center'>
                                         Playable ads are a type of interactive advertisement that give users the opportunity to try out a mobile app experience before they are required to download the full version of the app.It works on a “try-before-buy” concept.
                                     </p>

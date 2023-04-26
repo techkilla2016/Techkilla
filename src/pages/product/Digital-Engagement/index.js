@@ -64,7 +64,7 @@ const DigitalEngagement = ({ product }) => {
                     <div className='product-container'>
 
                         <Container>
-                            <p className='text-center mb-5 first_line' >
+                            <p className='text-center first_line' >
                                 our digital engagement experiential technology products are an excellent choice for businesses looking to take their customer engagement to the next level. We offer a range of features and tools that can help businesses connect with their audiences in new and exciting ways, and drive real results.
                             </p>
                             <div className='Heading'>

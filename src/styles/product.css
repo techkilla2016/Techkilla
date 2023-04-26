@@ -457,7 +457,7 @@ body {
     }
 
     .first_line {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .product-container {
@@ -479,17 +479,24 @@ body {
     }
 
     .first_line {
-        font-size: 16px;
+        font-size: 14px;
+    }
+    .product_main{
+        padding: 0px;
     }
 }
 
 @media screen and (max-width:321px) {
     .product_main p {
         font-size: 12px;
-        margin-top: 60px;
+        margin-top: 70px;
     }
 
     .product_main h2 {
         font-size: 22px;
+    }
+
+    .first_line {
+        font-size: 12px;
     }
 }

@@ -58,7 +58,7 @@ const Ongroundactivations = ({ Related_projects }) => {
 
                         <div className='BenefitsContainer bgWhite'>
                             <Container>
-                                <p className='text-center mb-5 first_line' >
+                                <p className='text-center  first_line' >
                                     Discover a new dimension of fun and engagement with our On-ground experiential technology solutions. Our installations are designed to appeal to a wide range of audiences, from kids to adults, from tech-savvy to casual users.
                                 </p>
                                 <div className="serviceContainer pb-5">

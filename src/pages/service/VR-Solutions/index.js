@@ -1,7 +1,7 @@
 import Header from '@/components/header'
 import Head from 'next/head'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '@/components/footer'
 import UseCase from '@/components/service/UseCase'
@@ -31,7 +31,14 @@ const related_project = [
     },
 ]
 const VRSolutions = () => {
-    const css = { maxWidth: '100%', height: 'auto' }
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            videoRef.current.play();
+        }, 1000); // Adjust the delay time as needed
+        return () => clearTimeout(timeoutId);
+    }, []);
     return (
         <>
             <Head>
@@ -41,7 +48,7 @@ const VRSolutions = () => {
             <main>
                 <div className="main">
                     <div className='mainContainer'>
-                        <div className='product_landing' style={{ background: '#fff' }}>
+                        <div className='product_landing' style={{ background: '#f4f4f4' }}>
                             <div className='product_landing_background'>
                                 <div className='preloaderBack'>
                                     <Image src='/banner/VR-2.png' alt='Physical Engagement' width={1920} height={1080} />
@@ -73,7 +80,7 @@ const VRSolutions = () => {
                             </div>
                         </div>
 
-                        <div className="desc">
+                        <div className="desc" style={{ background: '#f4f4f4' }}>
                             <h2 className='text-center pb-5'>VR Solutions</h2>
                             <Container>
                                 <Row className='justify-content-center'>
@@ -96,12 +103,23 @@ const VRSolutions = () => {
                                         </div>
                                     </Col>
                                     <Col xxl={6} xl={6} md={6} sm={12}>
-                                        <Image src='/service/miro-service.gif' alt='VR Solutions' width={1920} height={1080} style={css} />
+                                        <div className='video_contain'>
+                                            <video ref={videoRef} width="75%" muted loop={true}>
+                                                <source src="/service/vr.mp4" type="video/mp4" />
+                                                <source src="/service/vr.ogg" type="video/ogg" />
+                                            </video>
+                                            <div className='frame'>
+                                            </div>
+                                        </div>
                                     </Col>
                                 </Row>
-                                <div className="serviceContainer pb-5">
-                                    <h3 className='text-center benifit-head pt-5 mt-3' >Benefits </h3>
-                                    <div className='text-center benifit-para'>Some advantages of virtual reality are listed below.</div>
+                            </Container>
+                        </div>
+                        <div className='py-5' style={{ background: '#fff' }}>
+                            <Container>
+                                <div className="serviceContainer">
+                                    <h3 className='text-center benifit-head pt-5' >Benefits </h3>
+                                    <div className='text-center benifit-para pb-4'>Some advantages of virtual reality are listed below.</div>
                                 </div>
                                 <Row>
                                     <Col xxl={3} xl={3} lg={3} md={6} sm={6} xm={12}>
@@ -166,27 +184,27 @@ const VRSolutions = () => {
                                     </Col>
                                 </Row>
                             </Container>
-                            <div className="use_case">
-                                <div id="use_case">
-                                    <Container>
-                                        <div className='use_case_heading'>Use cases</div>
-                                        <Row className='justify-content-center'>
-                                            <Col xxl={8} xl={8} lg={8} md={10} sm={12} className="use_case_intro ">
-                                                Industries and divisions that are getting the most benefits of using virtual reality as tool
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <UseCase img={`/service/Education.png`} title={'Education'} />
-                                            <UseCase img={`/service/Travel-01.png`} title={'Travel'} />
-                                            <UseCase img={`/service/Real Estate-01.png`} title={'Real Estate '} />
-                                            <UseCase img={`/service/Retail-01.png`} title={'Retail'} />
-                                            <UseCase img={`/service/Entertainment-01.png`} title={'Entertainment'} />
-                                            <UseCase img={`/service/Gaming-01.png`} title={'Gaming'} />
-                                            <UseCase img={`/service/Museums-01.png`} title={'Museums'} />
-                                            <UseCase img={`/service/Architecture-01.png`} title={'Architecture and many more. '} />
-                                        </Row>
-                                    </Container>
-                                </div>
+                        </div>
+                        <div className="use_case">
+                            <div id="use_case">
+                                <Container>
+                                    <div className='use_case_heading'>Use cases</div>
+                                    <Row className='justify-content-center'>
+                                        <Col xxl={8} xl={8} lg={8} md={10} sm={12} className="use_case_intro ">
+                                            Industries and divisions that are getting the most benefits of using virtual reality as tool
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <UseCase img={`/service/Education.png`} title={'Education'} />
+                                        <UseCase img={`/service/Travel-01.png`} title={'Travel'} />
+                                        <UseCase img={`/service/Real Estate-01.png`} title={'Real Estate '} />
+                                        <UseCase img={`/service/Retail-01.png`} title={'Retail'} />
+                                        <UseCase img={`/service/Entertainment-01.png`} title={'Entertainment'} />
+                                        <UseCase img={`/service/Gaming-01.png`} title={'Gaming'} />
+                                        <UseCase img={`/service/Museums-01.png`} title={'Museums'} />
+                                        <UseCase img={`/service/Architecture-01.png`} title={'Architecture and many more. '} />
+                                    </Row>
+                                </Container>
                             </div>
                         </div>
                         <div className="bgWhite">
@@ -200,7 +218,7 @@ const VRSolutions = () => {
                         <Footer bg={"#fff"} />
                     </div>
                 </div>
-            </main>
+            </main >
 
         </>
     )
