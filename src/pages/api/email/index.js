@@ -107,20 +107,12 @@ export default function handler(req, res) {
       if (error) {
         res.status(405).json({
           massage: "email sending failed",
-          data: {
-            user: process.env.EMAIL,
-            pass: process.env.EMAIL_PASSWORD,
-            to: process.env.RE_EMAIL,
-          }
+          status: false
         })
       } else {
         res.status(200).json({
           massage: "email sending success",
-          data: {
-            user: process.env.EMAIL,
-            pass: process.env.EMAIL_PASSWORD,
-            to: process.env.RE_EMAIL,
-          }
+          status: true
         })
       }
     })
