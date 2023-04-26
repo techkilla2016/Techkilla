@@ -115,7 +115,8 @@ export default function handler(req, res) {
       massage: "email sending success",
       data: {
         user: process.env.EMAIL,
-        pass: process.env.EMAIL_PASSWORD
+        pass: process.env.EMAIL_PASSWORD,
+        to: process.env.RE_EMAIL,
       }
     })
   } else {
