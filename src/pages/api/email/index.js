@@ -99,7 +99,7 @@ export default function handler(req, res) {
     const data = req.body
     const mainOption = {
       from: process.env.EMAIL,
-      to: req.body.type === 'contact' ? process.env.EMAIL : process.env.RE_EMAIL,
+      to: req.body.type === 'contact' ? process.env.RE_EMAIL : process.env.EMAIL,
       subject: req?.body?.subject,
       html: req.body.type === 'contact' ? contactForm(data) : careersForm(data)
     }
