@@ -104,11 +104,19 @@ export default function handler(req, res) {
       html: req.body.type === 'contact' ? contactForm(data) : careersForm(data)
     }
     transporter.sendMail(mainOption, (error, info) => {
-      // console.log(error);
-      // console.log(info);
+      if (error) {
+        console.log('error')
+      } else {
+        console.log("info : ", info);
+      }
     })
+
     res.status(200).json({
       massage: "email sending success",
+      data: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASSWORD
+      }
     })
   } else {
     res.status(405).json({
