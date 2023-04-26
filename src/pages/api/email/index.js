@@ -105,18 +105,23 @@ export default function handler(req, res) {
     }
     transporter.sendMail(mainOption, (error, info) => {
       if (error) {
-        console.log('error')
+        res.status(405).json({
+          massage: "email sending failed",
+          data: {
+            user: process.env.EMAIL,
+            pass: process.env.EMAIL_PASSWORD,
+            to: process.env.RE_EMAIL,
+          }
+        })
       } else {
-        console.log("info : ", info);
-      }
-    })
-
-    res.status(200).json({
-      massage: "email sending success",
-      data: {
-        user: process.env.EMAIL,
-        pass: process.env.EMAIL_PASSWORD,
-        to: process.env.RE_EMAIL,
+        res.status(200).json({
+          massage: "email sending success",
+          data: {
+            user: process.env.EMAIL,
+            pass: process.env.EMAIL_PASSWORD,
+            to: process.env.RE_EMAIL,
+          }
+        })
       }
     })
   } else {
