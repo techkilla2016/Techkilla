@@ -118,7 +118,7 @@ const Home = ({ work }) => {
                       <div className="para_section">
                         <div className="heading">Best Performance</div>
                         <div className='para pr-3'>
-                          We construct the ideal play based on that tale to maximise yourcompany's ROI.
+                          We construct the ideal play based on that tale to maximise your company's ROI.
                         </div>
                       </div>
                     </div>
