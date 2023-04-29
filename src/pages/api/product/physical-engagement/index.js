@@ -3,133 +3,133 @@ const list = [
         Heading: 'strip photo booth',
         img: '/physical-engagement/strip-photo-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'selfie booth',
         img: '/physical-engagement/selfie-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'physical mosaic',
         img: '/physical-engagement/physical-mosaic.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
-        Heading: 'tomtom',
+        Heading: 'Chroma Photobooth',
         img: '/physical-engagement/tomtom.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'magic mirror photo booth',
         img: '/physical-engagement/magic-mirror-photo-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: 'https://youtube.com/shorts/s59J6i-Y1Pg?feature=share'
     },
     {
         Heading: 'world cloud photo booth',
         img: '/physical-engagement/world-cloud-photo-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: 'https://youtu.be/ygj8A3b6bCE'
     },
     {
-        Heading: 'pepsi tag selfie',
+        Heading: '#Tag Printer',
         img: '/physical-engagement/pepsi-tag-selfie.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: 'https://youtu.be/bHBGWewoDb8'
     },
     {
         Heading: 'digital caricature',
         img: '/physical-engagement/digital-caricature.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'VR Games',
         img: '/physical-engagement/VR-Games.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
-        Heading: 'boomeran booth',
+        Heading: 'Gif Booth',
         img: '/physical-engagement/boomeran-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: 'https://youtu.be/TfNxU4H1a-4'
     },
     {
         Heading: 'photo booth',
         img: '/physical-engagement/photo-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: 'https://youtu.be/VZTxtnyyIhQ'
     },
     {
         Heading: '360 spin booth',
         img: '/physical-engagement/360-spin-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: 'https://youtube.com/shorts/97xAj1S_pHU?feature=share'
     },
     {
-        Heading: 'digital mosaic wall photp booth',
+        Heading: 'mosaic wall photo booth',
         img: '/physical-engagement/digital-mosaic-wall-photp-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'blobe photo booth',
         img: '/physical-engagement/blobe-phto-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'cash grab cube money machine',
         img: '/physical-engagement/cash-grab-cube-money-machine.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'flipbook photo booth',
         img: '/physical-engagement/flipbook-photo-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'social wall display',
         img: '/physical-engagement/social-wall-display.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'virtual paparazzi',
         img: '/physical-engagement/virtual-paparazzi.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'antigravity photobooth',
         img: '/physical-engagement/antigravity-photobooth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: 'sling shot',
         img: '/physical-engagement/sling-shot.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: 'https://youtu.be/hx4TyRDSqMk'
     },
     {
         Heading: 'bobble head/dancing head',
         img: '/physical-engagement/bobble-head-dancing-head.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
     {
         Heading: '180 degree freeze booth',
         img: '/physical-engagement/180-degree-freeze-booth.png',
         desc: '',
-        target: 'https://www.youtube.com/watch?v=xhOyOVAv-l4'
+        target: '/'
     },
 
 ]

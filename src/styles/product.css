@@ -282,6 +282,7 @@ body {
     background: #fafafa;
     backdrop-filter: blue(3px);
     width: 100%;
+    text-transform: capitalize;
     color: #000;
 
 }

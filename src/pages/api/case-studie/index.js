@@ -19,7 +19,7 @@ const case_studie = [
     },
     {
         target: 'https://www.youtube.com/shorts/gt75HKHKMxk',
-        Heading: 'HDFC AnalytIQ 3.0s',
+        Heading: 'HDFC AnalytIQ 3.0',
         img: '/use-case/HDFC.png',
         desc: "a specially created analytical campaign for HDFC Bank to allow its selective customers to enter a raffle to win rewards from their partner bank."
     },
@@ -83,13 +83,13 @@ const case_studie = [
         target: '/case-studies/',
         Heading: 'Microsoft Hackathon',
         img: '/use-case/Hackathon.png',
-        desc: "n any case, controlling the throng is always challenging, but even more so is maintaining a validated entry to prevent any unauthorised visitors."
+        desc: "Our sophisticated software for QR-based verification takes the initiative and aids you in avoiding any false submissions."
     },
     {
         target: 'https://youtube.com/shorts/rbnMxtTQFuM?feature=share',
         Heading: 'Airtel Quizzitech',
         img: '/use-case/airtel.png',
-        desc: "n any case, controlling the throng is always challenging, but even more so is maintaining a validated entry to prevent any unauthorised visitors."
+        desc: "Idea - To create a personalised microsite for Airtel Wizzards to play and win the Airtel Quizzitech Cup"
     },
     {
         target: 'https://www.youtube.com/shorts/PhjwJKyTo68',

@@ -1,6 +1,6 @@
 const list = [
     {
-        Heading: 'digital mosaic wall photp booth',
+        Heading: 'digital mosaic wall photo booth',
         img: '/digital-engagement/digital-mosaic-wall-photp-booth.png',
         desc: '',
         target: '/'
@@ -60,7 +60,7 @@ const list = [
         target: 'https://youtu.be/lUiW07szbnk'
     },
     {
-        Heading: 'KBC Yype Quiz Game',
+        Heading: 'KBC type Quiz Game',
         img: '/digital-engagement/KBC-type-quiz-game.png',
         desc: '',
         target: '/'
