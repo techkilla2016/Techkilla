@@ -4,12 +4,41 @@ import { FaFacebookF } from 'react-icons/fa'
 import { AiOutlineTwitter } from 'react-icons/ai'
 import { BsInstagram } from 'react-icons/bs'
 import Link from 'next/link'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import Image from 'next/image'
 import Button from '../button/Button'
+import { BsWhatsapp } from 'react-icons/bs'
+import { IoLogoInstagram } from 'react-icons/io'
+import { ImFacebook } from 'react-icons/im'
 const Footer = ({ bg }) => {
     return (
         <footer>
+            <div className='aside_social'>
+                <div className='link_box'>
+                    <Link href='/' className='link' target='_blank'>
+                        <span className='text'>whatsapp</span>
+                        <span className='icon' id="wapp"><BsWhatsapp /></span>
+                    </Link>
+                </div>
+                <div className='link_box'>
+                    <Link href='https://www.instagram.com/techkillatechnologies/' className='link' target='_blank'>
+                        <span className='text'>Instagram</span>
+                        <span className='icon' id="insta"><IoLogoInstagram /></span>
+                    </Link>
+                </div>
+                <div className='link_box'>
+                    <Link href='https://www.facebook.com/techkilla2015' target='_blank' className='link'>
+                        <span className='text'>Facebook</span>
+                        <span className='icon' id="face"><ImFacebook /></span>
+                    </Link>
+                </div>
+                <div className='link_box'>
+                    <Link href='https://twitter.com/techkilla15' className='link' target='_blank'>
+                        <span className='text'>Twitter</span>
+                        <span className='icon' id="twt"><AiOutlineTwitter /></span>
+                    </Link>
+                </div>
+            </div>
             <div className="footer" style={{ background: bg }}>
                 <div className='bookdemo-footer'>
                     <div className='bookDemo'>
@@ -75,7 +104,7 @@ const Footer = ({ bg }) => {
                                 <Link href="https://www.facebook.com/techkilla2015/" target={'_blank'}><FaFacebookF /></Link>
                                 <Link href="https://twitter.com/techkilla15?s=08" target={'_blank'}><AiOutlineTwitter /></Link>
                                 <Link href="https://www.instagram.com/techkillatechnologies/?igshid=1j33p32nqf62k" target={'_blank'}><BsInstagram /></Link>
-                                <Link href="https://www.linkedin.com/company/techkilla"  target="_blank"><GrLinkedinOption /></Link>
+                                <Link href="https://www.linkedin.com/company/techkilla" target="_blank"><GrLinkedinOption /></Link>
                             </section>
                         </div>
                     </div>

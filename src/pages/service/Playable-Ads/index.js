@@ -11,6 +11,7 @@ import { RiInstallLine } from 'react-icons/ri'
 
 import { TbDeviceAnalytics } from 'react-icons/tb'
 import { GiGrowth } from 'react-icons/gi'
+
 const related_project = [
     {
         title: "KuKu FM - Guess the personality puzzle",
@@ -38,6 +39,7 @@ const related_project = [
         url: '/'
     },
 ]
+
 const PlayableAds = () => {
     const css = { maxWidth: '100%', height: 'auto' }
     return (
@@ -79,6 +81,10 @@ const PlayableAds = () => {
                                     </Container>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className=''>
+
                         </div>
 
                         <div className="desc pb-5 pt-4">

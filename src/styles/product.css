@@ -247,6 +247,13 @@ body {
     font-weight: bold;
     margin: 20px auto;
 }
+.book-btn a{
+    color: #ffce39;
+    display: block;
+}
+.book-btn:hover a{
+    color: #fff;
+}
 
 .book-btn:nth-child(2) {
     border: 2px solid #ffce39;

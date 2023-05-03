@@ -82,6 +82,122 @@
     background: #fdc632;
 }
 
+/* ===================== */
+.aside_social {
+    width: auto;
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.link_box {
+    width: auto;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+    position: relative;
+    margin: 5px 0px;
+    left: -100%;
+    transition: all 0.3s linear;
+    transform: translateX(45px)
+}
+
+.link_box:hover {
+    background: #fafafa;
+    transform: translateX(0px);
+    left: 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+span {
+    color: #fff;
+}
+
+a.link {
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #002347;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 1;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+span.text {
+    opacity: 0;
+    font-size: 16px;
+    color: #002347;
+    transition: all 0.3s linear;
+    padding-left: 10px;
+}
+
+.link_box:hover span.text {
+    opacity: 1;
+}
+
+span.icon {
+    display: block;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+    z-index: 10;
+    position: relative;
+}
+
+span.icon::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background: #000;
+    content: "";
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.2s;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+span.icon:hover {
+    color: #fff;
+}
+
+span.icon:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#wapp::before {
+    background-color: #4ac959;
+}
+
+#twt::before {
+    background-color: #00aced;
+}
+
+#face::before {
+    background-color: #3d5998;
+}
+
+#insta::before {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306c, #FD1D1D);
+}
+
+.icon:hover:before {
+    width: 100%;
+    height: 100%;
+}
+
 /* ------------------        footer   -------------------- */
 footer a {
     text-decoration: none !important;

@@ -1,7 +1,8 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
-const ProdcutCard = ({ Heading, img, handleClick, target }) => {
+const ProdcutCard = ({ Heading, img, handleClick, bookNow, target }) => {
     return (
         <div className='card-main'>
             <div className="product-card">
@@ -17,7 +18,9 @@ const ProdcutCard = ({ Heading, img, handleClick, target }) => {
                     Preview
                 </button> */}
                 <button className='book-btn'>
-                    Book now
+                    <Link href={bookNow} target='_blank'>
+                        Book now
+                    </Link>
                 </button>
             </div>
         </div >

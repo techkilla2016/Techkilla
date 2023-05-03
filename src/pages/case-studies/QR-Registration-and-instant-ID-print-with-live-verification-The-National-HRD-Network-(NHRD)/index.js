@@ -797,7 +797,7 @@ const index = () => {
                             </div>
                         </div>
 
-                        <Footer bg="#fff"/>
+                        <Footer bg="#fff" />
                     </div>
                 </div>
             </main>
