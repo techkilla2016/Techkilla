@@ -18,7 +18,7 @@ const ProdcutCard = ({ Heading, img, handleClick, bookNow, target }) => {
                     Preview
                 </button> */}
                 <button className='book-btn'>
-                    <Link href={bookNow} target='_blank'>
+                    <Link href={`http://wa.me/917827362702?text=Hello Techkilla team! %0A%0A I was looking for some engagement solutions and I came across your company. I would like to purchase the "${bookNow}" - could you help me with the process and any additional details I need to know?`} target='_blank'>
                         Book now
                     </Link>
                 </button>
