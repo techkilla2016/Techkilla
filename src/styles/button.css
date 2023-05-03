@@ -219,6 +219,10 @@
     background-color: white;
 }
 
+.buttonSwap span {
+    color: #000;
+}
+
 .buttonSwap:hover {
     transform: translateY(-3px);
     color: #FEC195;

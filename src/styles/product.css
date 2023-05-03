@@ -252,7 +252,7 @@ body {
     display: block;
 }
 .book-btn:hover a{
-    color: #fff;
+    color: #000;
 }
 
 .book-btn:nth-child(2) {

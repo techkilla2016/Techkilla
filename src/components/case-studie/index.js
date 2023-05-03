@@ -17,7 +17,7 @@ const CaseStudieCart = ({ Heading, img, desc, target }) => {
                         <p>{desc}</p>
                     </div>
                 </div>
-                <Button url={target} title="Watch Now" />
+                <Button url={target} title={target.startsWith("https") ? "Watch Now" : "Read More"} openWith={target.startsWith("https") ? "_blank" : ""} />
             </div>
         </div>
     )
