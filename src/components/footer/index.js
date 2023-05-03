@@ -15,7 +15,7 @@ const Footer = ({ bg }) => {
         <footer>
             <div className='aside_social'>
                 <div className='link_box'>
-                    <Link href='/' className='link' target='_blank'>
+                    <Link href='http://wa.me/917827362702?text=hello techilla' className='link' target='_blank'>
                         <span className='text'>whatsapp</span>
                         <span className='icon' id="wapp"><BsWhatsapp /></span>
                     </Link>
