@@ -56,7 +56,7 @@ const case_studie = [
         desc: "Bingo, Tambola, or Housie Regardless of the name you give it, this is the game that will test your ability to win the big bucks. "
     },
     {
-        target: '/case-studies/',
+        target: 'https://youtu.be/znj9F9XeF3U',
         Heading: 'Cricket Game',
         img: '/use-case/CricketGame.png',
         desc: "A well-known beer and distilled water company, Tuborg, has introduced a really original idea for a web-based engagement activity that can also be used for on-ground activations."

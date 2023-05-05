@@ -66,10 +66,10 @@ const Footer = ({ bg }) => {
                         <div className="flex">
                             <section className="flex-content padding_1x">
                                 <h3>Top Products</h3>
-                                <Link href="/">Managed Website</Link>
-                                <Link href="/">Manage Reputation</Link>
-                                <Link href="/">Power Tools</Link>
-                                <Link href="/">Marketing Service</Link>
+                                <Link href="/case-studies/QR-Registration-and-instant-ID-print-with-live-verification-The-National-HRD-Network-(NHRD)">QR Registration</Link>
+                                <Link href="https://www.instagram.com/p/CjPoSz7DaSw"> 360° Spin Booth</Link>
+                                <Link href="/case-studies/Excitometer-Tetra-Pak">Excitometer-Tetra Pak</Link>
+                                <Link href="https://youtu.be/znj9F9XeF3U">Cricket Game</Link>
                             </section>
 
                             <section className="flex-content padding_1x">

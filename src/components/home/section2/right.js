@@ -5,7 +5,7 @@ const ColRight = ({ about }) => {
         <div className='right-col'>
             <div className='colHeading'>{about ? about : 'What We Do?'}</div>
             <h3 className="section__title">
-                Design, develop and execute!
+                Design, develop, and execute!
                 <span className="section__title-line"> We manage it all.</span>
             </h3>
             <p className='section_Para pt-5 text-justify'>

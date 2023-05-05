@@ -247,11 +247,13 @@ body {
     font-weight: bold;
     margin: 20px auto;
 }
-.book-btn a{
+
+.book-btn a {
     color: #ffce39;
     display: block;
 }
-.book-btn:hover a{
+
+.book-btn:hover a {
     color: #000;
 }
 
@@ -305,6 +307,69 @@ body {
     text-shadow: 1px 1px 0px #000;
     font-family: 'Poppins', sans-serif;
 }
+
+
+/* .....................  */
+.cssbuttons-io-button {
+    background: #fdd002;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    /* padding-left: 1.2em; */
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.7em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    /* box-shadow: inset 0 0 1.6em -0.6em #714da6; */
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 8px;
+    /* margin: 20px auto; */
+}
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5em;
+    /* box-shadow: 0.1em 0.1em 0.6em 0.2em #fdd002; */
+    right: 0.3em;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #fdd002;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+/* .....................  */
 
 @media screen and (max-width:1024px) {
     .product_main h2 {
@@ -489,7 +554,8 @@ body {
     .first_line {
         font-size: 14px;
     }
-    .product_main{
+
+    .product_main {
         padding: 0px;
     }
 }

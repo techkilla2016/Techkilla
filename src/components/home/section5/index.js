@@ -29,7 +29,7 @@ const WhatWeDo = () => {
 
                             <FeatureBox
                                 title="On-ground activations"
-                                content="We engage your audience in an intuitive way with fun experiential activities."
+                                content="We engage your audience in an intuitive way with fun, experiential activities."
                             />
 
                         </Col>

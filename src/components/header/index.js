@@ -95,7 +95,7 @@ const Header = () => {
                 </div >
                 <div className="navButton">
                     <Link href='https://calendly.com/techkilla/meeting' target='_blank'>
-                        <button>Book A Demo</button>
+                        <button>Book a Demo</button>
                     </Link>
                     <Link href='/contact' >
                         <button>Contact Us</button>

@@ -28,7 +28,7 @@ const ServiceSection = () => {
                             Microsite design
                         </div>
                         <p>
-                            We create customised microsites for your occasions, unique needs, and interaction.
+                            We create customised microsites for your occasions, unique needs, and interactions.
                         </p>
                     </div>
                 </Col>
