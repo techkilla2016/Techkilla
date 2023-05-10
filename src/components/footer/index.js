@@ -16,25 +16,21 @@ const Footer = ({ bg }) => {
             <div className='aside_social'>
                 <div className='link_box'>
                     <Link href='http://wa.me/917827362702?text=Hello Techkilla team! %0A%0A I am looking for some Tech Engagement solutions- could you help me with the process and any additional details I need to know?' className='link' target='_blank'>
-                        <span className='text'>whatsapp</span>
                         <span className='icon' id="wapp"><BsWhatsapp /></span>
                     </Link>
                 </div>
                 <div className='link_box'>
                     <Link href='https://www.instagram.com/techkillatechnologies/' className='link' target='_blank'>
-                        <span className='text'>Instagram</span>
                         <span className='icon' id="insta"><IoLogoInstagram /></span>
                     </Link>
                 </div>
                 <div className='link_box'>
                     <Link href='https://www.facebook.com/techkilla2015' target='_blank' className='link'>
-                        <span className='text'>Facebook</span>
                         <span className='icon' id="face"><ImFacebook /></span>
                     </Link>
                 </div>
                 <div className='link_box'>
                     <Link href='https://twitter.com/techkilla15' className='link' target='_blank'>
-                        <span className='text'>Twitter</span>
                         <span className='icon' id="twt"><AiOutlineTwitter /></span>
                     </Link>
                 </div>

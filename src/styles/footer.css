@@ -99,16 +99,12 @@
     overflow: hidden;
     position: relative;
     margin: 5px 0px;
-    left: -100%;
     transition: all 0.3s linear;
-    transform: translateX(45px)
 }
 
 .link_box:hover {
-    background: #fafafa;
     transform: translateX(0px);
     left: 0px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 a.link {
@@ -123,7 +119,6 @@ a.link {
     line-height: 1;
     font-family: 'Poppins', sans-serif;
 }
-
 
 span.text {
     opacity: 0;

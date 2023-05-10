@@ -6,11 +6,13 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '@/components/footer'
 import SingleCard from '@/components/ProjectSlider/singleCard'
 import { HiOutlineUserGroup } from 'react-icons/hi'
-import { MdVideoSettings, MdOutlineMemory } from 'react-icons/md'
+import { MdVideoSettings, MdOutlineMemory, MdMobileFriendly } from 'react-icons/md'
 import { RiInstallLine } from 'react-icons/ri'
-
+import { IoIosPeople } from 'react-icons/io'
 import { TbDeviceAnalytics } from 'react-icons/tb'
 import { GiGrowth } from 'react-icons/gi'
+import { AiOutlineFileSearch } from 'react-icons/ai'
+import { VscGraphLine } from 'react-icons/vsc'
 
 const related_project = [
     {
@@ -82,24 +84,257 @@ const PlayableAds = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="pb-5 pt-4 ads_main_play">
+                            <h2 className='text-center ads_heading'>What can you do with <br /> <span>Playable Ads?</span></h2>
 
-                        <div className=''>
+                            {/* desktop  */}
+                            <Container className='pt-5 desktop'>
+                                <Row>
+                                    <Col xxl={6} xl={6} lg={6} sm={12} md={12} className='card-inner-padding d-flex justify-content-center'>
+                                        <div className="d-100  ads_container_one">
+                                            <div className="ads-card-back-container">
+                                                <Image src='/service/ads-card-bg-light.png' width={1920} height={1080} />
+                                            </div>
+                                            <div className="top_image">
+                                                <Image src='/service/Immersive-preview.png' width={1920} height={1080} />
+                                            </div>
+                                            <div className="ads_card_front_container">
+                                                <h3 className='ads-card-heading'>Create an <span>Immersive Preview</span></h3>
+                                                <div className="para_container_aside">
+                                                    <div className="side_image">
+                                                        <AiOutlineFileSearch />
+                                                    </div>
+                                                    <p className='card_para_ads'>Use a lead-in video in the <br />
+                                                        news feed or stories to highlight <br />
+                                                        your app or game and encourage <br />
+                                                        players to download it</p>
 
-                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={6} xl={6} lg={6} sm={12} md={12} className='card-inner-padding d-flex justify-content-center'>
+                                        <div className="d-100  ads_container_one">
+                                            <div className="ads-card-back-container">
+                                                <Image src='/service/ads-card-bg-dark.png' width={1920} height={1080} />
+                                            </div>
+                                            <div className="top_image">
+                                                <Image src='/service/Engaged-players.png' width={1920} height={1080} />
+                                            </div>
+                                            <div className="ads_card_front_container">
+                                                <h3 className='ads-card-heading'>Find engaged  <span>players and customers</span></h3>
+                                                <div className="para_container_aside">
+                                                    <div className="side_image_dard">
+                                                        <MdMobileFriendly />
+                                                    </div>
+                                                    <p className='card_para_ads'>
+                                                        Drive more clients and gamers <br />
+                                                        with higher intent to your app.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
 
-                        <div className="desc pb-5 pt-4">
-                            <h2 className='text-center heading pt-5'>Playable Ads</h2>
+                                    <Col xxl={6} xl={6} lg={6} sm={12} md={12} className='card-inner-padding d-flex justify-content-center'>
+                                        <div className="d-100  ads_container_one">
+                                            <div className="ads-card-back-container">
+                                                <Image src='/service/ads-card-bg-light.png' width={1920} height={1080} />
+                                            </div>
+                                            <div className="top_image">
+                                                <Image src='/service/Allow-People.png' width={1920} height={1080} />
+                                            </div>
+                                            <div className="ads_card_front_container">
+                                                <h3 className='ads-card-heading'>Allow people to <span>test-drive your app</span></h3>
+                                                <div className="para_container_aside">
+                                                    <div className="side_image">
+                                                        <IoIosPeople />
+                                                    </div>
+                                                    <p className='card_para_ads'>
+                                                        Give people the option to view <br />
+                                                        a preview of your app right from <br />
+                                                        the ad before downloading it.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+
+                                    <Col xxl={6} xl={6} lg={6} sm={12} md={12} className='card-inner-padding d-flex justify-content-center'>
+                                        <div className="d-100  ads_container_one">
+                                            <div className="ads-card-back-container">
+                                                <Image src='/service/ads-card-bg-dark.png' width={1920} height={1080} />
+                                            </div>
+                                            <div className="top_image">
+                                                <Image src='/service/Data-insights.png' width={1920} height={1080} />
+                                            </div>
+                                            <div className="ads_card_front_container">
+                                                <h3 className='ads-card-heading'>Gain access to <span>valuable data insights</span>
+                                                </h3>
+                                                <div className="para_container_aside">
+                                                    <div className="side_image_dard">
+                                                        <VscGraphLine />
+                                                    </div>
+                                                    <p className='card_para_ads'>
+                                                        Learn which user will interact with <br />
+                                                        your ads and which CTA will lead <br />
+                                                        to the most conversions
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+
+                            {/* Mobile  */}
+                            <Container className='mobile'>
+                                <Row>
+                                    {/* 1 */}
+                                    <Col sm={12} xs={12}>
+                                        <div className="ads-mobile_inner">
+                                            <Row className='align-items-center'>
+                                                <Col sm={3} xs={3}>
+                                                    <div className="ads-mobile_inner">
+                                                        <Image src='/service/Immersive-preview.png' width={1920} height={1080} />
+                                                    </div>
+                                                </Col>
+                                                <Col sm={9} xs={9}>
+                                                    <div className="ads-mobile_inner">
+                                                        <h3>Create an <span>Immersive Preview</span></h3>
+                                                        <p>
+                                                            Use a lead-in video in the <br />
+                                                            news feed or stories to highlight <br />
+                                                            your app or game and encourage <br />
+                                                            players to download it
+                                                        </p>
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </Col>
+
+                                    {/* 2 */}
+                                    <Col sm={12} xs={12} className='mt-5'>
+                                        <div className="ads-mobile_inner">
+                                            <Row className='align-items-center'>
+                                                <Col sm={9} xs={9}>
+                                                    <div className="ads-mobile_inner">
+                                                        <h3>Find engaged  <span>players and customers</span></h3>
+                                                        <p>
+                                                            Drive more clients and gamers <br />
+                                                            with higher intent to your app.
+                                                        </p>
+                                                    </div>
+                                                </Col>
+                                                <Col sm={3} xs={3}>
+                                                    <div className="ads-mobile_inner">
+                                                        <Image src='/service/Engaged-players.png' width={1920} height={1080} />
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </Col>
+
+                                    {/* 3 */}
+                                    <Col sm={12} xs={12} className='mt-5'>
+                                        <div className="ads-mobile_inner">
+                                            <Row className='align-items-center'>
+                                                <Col sm={3} xs={3}>
+                                                    <div className="ads-mobile_inner">
+                                                        <Image src='/service/Allow-People.png' width={1920} height={1080} />
+                                                    </div>
+                                                </Col>
+                                                <Col sm={9} xs={9}>
+                                                    <div className="ads-mobile_inner">
+                                                        <h3>Allow people to <span>test-drive your app</span></h3>
+                                                        <p>
+                                                            Give people the option to view <br />
+                                                            a preview of your app right from <br />
+                                                            the ad before downloading it.
+                                                        </p>
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </Col>
+
+                                    {/* 3 */}
+                                    <Col sm={12} xs={12} className='mt-5'>
+                                        <div className="ads-mobile_inner">
+                                            <Row className='align-items-center'>
+                                                <Col sm={9} xs={9}>
+                                                    <div className="ads-mobile_inner">
+                                                        <h3>Gain access to <span>valuable data insights</span></h3>
+                                                        <p>
+                                                            Learn which user will interact with <br />
+                                                            your ads and which CTA will lead <br />
+                                                            to the most conversions
+                                                        </p>
+                                                    </div>
+                                                </Col>
+                                                <Col sm={3} xs={3}>
+                                                    <div className="ads-mobile_inner">
+                                                        <Image src='/service/Data-insights.png' width={1920} height={1080} />
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+
+                            <h2 className='text-center pt-5 ads_heading mt-5'>Playable Ads are made up of <br /> <span>three parts</span> </h2>
                             <Container>
-                                <div className="serviceContainer p-0 ">
+                                <Row>
+                                    <Col xxl={4} xl={4} lg={4} md={6} xs={12}>
+                                        <div className="ads-col-inner">
+                                            <Image src='/service/phone_01.png' width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                    <Col xxl={4} xl={4} lg={4} md={6} xs={12}>
+                                        <div className="ads-col-inner">
+                                            <Image src='/service/phone_02.png' width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                    <Col xxl={4} xl={4} lg={4} md={6} xs={12}>
+                                        <div className="ads-col-inner">
+                                            <Image src='/service/phone_03.png' width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                            <Container className='py-5'>
+                                <Row>
+                                    <Col xxl={7} xl={7} lg={7} md={12} sm={12} xs={12} className='d-flex align-items-center flex-column justify-content-center'>
+                                        <div className="ads-col-inner">
+                                            <h3 className='ads_Benefits_heading'> Benefits for <span>consumers</span></h3>
+                                            <p className='ads_Benefits_para'>Playable is an effective ad unit for mobile <br />
+                                                and one that connects with customers <br />
+                                                because it blends gamification and <br />
+                                                interactivity.
+                                            </p>
+                                        </div>
+                                    </Col>
+                                    <Col xxl={5} xl={5} lg={5} md={12} sm={12} xs={12}>
+                                        <div className="ads-col-inner p-2">
+                                            <Image src='/service/ads-play.svg' width={1920} height={1080} />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                            {/* <h2 className='text-center heading pt-5'>Playable Ads</h2> */}
+                            <Container>
+                                {/* <div className="serviceContainer p-0 ">
                                     <p className='text-center'>
                                         Playable ads are a type of interactive advertisement that give users the opportunity to try out a mobile app experience before they are required to download the full version of the app.It works on a “try-before-buy” concept.
                                     </p>
                                     <p className='text-center'>
                                         Additionally,playables are "A single ad unit that mixes interaction with gamification to facilitate full-funnel marketing brand communication (attention, education, and action)"
                                     </p>
-                                </div>
+                                </div> */}
                                 <div className="serviceContainer pb-5">
-                                    <h3 className='text-center benifit-head pt-4 mt-5' >Benefits </h3>
+                                    <h3 className='text-center benifit-head' >Benefits </h3>
                                     <div className='text-center benifit-para'>Why Playables?</div>
                                 </div>
                                 <Row className='justify-content-center'>
