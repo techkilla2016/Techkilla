@@ -384,6 +384,39 @@ footer .flex:last-child a {
     text-align: center;
 }
 
+
+.rcw-conversation-container>.rcw-header {
+    background-color: #ffc107 !important;
+}
+
+/* 
+.rcw-message>.rcw-response {
+    background-color: black !important;
+} */
+.rcw-conversation-container .rcw-title {
+    font-weight: bold !important;
+    color: #fff !important;
+}
+
+.rcw-message-text {
+    background: #fdc632 !important;
+    color: #fff;
+}
+
+.rcw-input {
+    color: #000 !important;
+}
+
+.rcw-sender {
+    align-items: center !important;
+    justify-content: space-evenly !important;
+}
+
+.rcw-launcher {
+    background: #fdc632 !important;
+    padding: 10px !important;
+}
+
 footer .flex:last-child a:hover {
     background-color: #fdc632;
     color: rgba(1, 1, 1, 0.6);
