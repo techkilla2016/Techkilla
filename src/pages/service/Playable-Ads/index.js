@@ -23,22 +23,22 @@ const related_project = [
     {
         title: "Microsoft - Pride month AR filter",
         them: "/service/500x500/Microsoft_Pride_month_AR_filte.png",
-        url: '/'
+        url: 'https://youtu.be/AJSZIIxfYYY'
     },
     {
         title: "ITC Football header",
         them: "/service/500x500/ITC_Football_header.png",
-        url: '/'
+        url: 'https://youtube.com/shorts/5JFvK6a15oI?feature=share'
     },
     {
         title: "ITC Football Bounce Roll",
         them: "/service/500x500/ITC_Football_Bounce_Roll.png",
-        url: '/'
+        url: 'https://www.instagram.com/p/CmddNv-oDak/'
     },
     {
         title: "Fun wagerz - FIFA world cup",
         them: "/service/500x500/Fun_wagerz.png",
-        url: '/'
+        url: 'https://www.instagram.com/reel/CmGRGWWj7wC/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA'
     },
 ]
 
