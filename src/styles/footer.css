@@ -281,8 +281,8 @@ footer fieldset {
 
 .btn_2 {
 
-    /* border: 1px solid #fdc632 !important; */
-    /* background: #fdc632 !important; */
+    border: 1px solid #fdc632 !important;
+    background: #fdc632 !important;
     color: #fff !important;
 }
 
@@ -399,14 +399,22 @@ footer .flex:last-child a {
 }
 
 .rcw-message-text {
-    background: #ddd !important;
-    color: #000;
+    background: #fdc632 !important;
+    color: #fff;
 }
-.rcw-timestamp{
-    color: #000;
-}
+
 .rcw-input {
     color: #000 !important;
+}
+
+.rcw-link
+{
+    color: #000;
+}
+
+.rcw-link:hover
+{
+    color: #ffc107;
 }
 
 .rcw-sender {
