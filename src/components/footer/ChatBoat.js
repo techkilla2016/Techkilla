@@ -133,7 +133,7 @@ function ChatBoat() {
       }else
       {
         console.log("sending query")
-        axios.post("https://techkilla-chat-server.onrender.com/chat",{token:"b4784706-f357-11ed-a05b-0242ac12000",prompt:newMessage})
+        axios.post("https://techkilla-chat-server.onrender.com/chat",{token:"b4784706-f357-11ed-a05b-0242ac120003",prompt:newMessage})
         .then(async (res)=>{
           console.log(res)
           addResponseMessage(res.data);
