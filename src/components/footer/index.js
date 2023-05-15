@@ -14,7 +14,7 @@ import ChatBoat from './ChatBoat'
 const Footer = ({ bg }) => {
     return (
         <footer>
-                { <ChatBoat/> }
+                <ChatBoat/> 
             <div className='aside_social'>
                 <div className='link_box'>
                     <Link href='http://wa.me/917827362702?text=Hello Techkilla team! %0A%0A I am looking for some Tech Engagement solutions- could you help me with the process and any additional details I need to know?' className='link' target='_blank'>
