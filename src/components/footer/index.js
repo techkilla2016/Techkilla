@@ -102,7 +102,7 @@ const Footer = ({ bg }) => {
                         </div>
                         <div className="flex">
                             <section className="flex-content padding_1x">
-                                <p>Copyright © 2022 Techkilla Technologies Pvt. Ltd</p>
+                                <p>Copyright © {new Date().getFullYear()} Techkilla Technologies Pvt. Ltd</p>
                             </section>
                             <section className="flex-content padding_1x">
                                 <Link href="https://www.facebook.com/techkilla2015/" target={'_blank'}><FaFacebookF /></Link>
