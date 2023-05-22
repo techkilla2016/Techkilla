@@ -2,42 +2,29 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@/styles/globals.css'
 import Head from 'next/head'
 import { useEffect } from 'react';
+import { initGA, logPageView } from '../utils/analytics';
+import { useRouter } from 'next/router';
 
-export default function App({ Component, pageProps }) {
-  // useEffect(() => {
-  //   // Move the dataLayer initialization here
-  //   window.dataLayer = window.dataLayer || [];
+function Page({ Component, pageProps }) {
+  const router = useRouter();
 
-  //   // Call the gtag function after initialization
-  //   function gtag() {
-  //     window.dataLayer.push(arguments);
-  //   }
-  //   gtag('js', new Date());
-  //   gtag('config', 'G-1Q8D92YRHE');
-  // }, []); // Empty dependency array ensures this runs only once on mount
+  useEffect(() => {
+    initGA();
+    logPageView();
+    // Track pageview on route change
+    const handleRouteChange = (url) => {
+      logPageView();
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, []);
+  <Head>
+    <title>Techkilla</title>
+  </Head>
 
-  return (
-    <>
-      <Head>
-        {/* <!-- Google tag (gtag.js) --> */}
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Q8D92YRHE"></script> */}
-        <script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-1Q8D92YRHE" />
-        <script
-          id='google-analytics'
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}D
- gtag('js', new Date());
- gtag('config', 'G-1Q8D92YRHE', {
- page_path: window.location.pathname,
- });
-`,
-          }}
-        />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  )
+  return <Component {...pageProps} />;
 }
+
+export default Page;

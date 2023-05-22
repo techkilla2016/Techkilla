@@ -19,21 +19,6 @@ const Contact = ({ BaseUrl }) => {
         <>
             <Head>
                 <title>Contact Us</title>
-                <script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-1Q8D92YRHE" />
-                <script
-                    id='google-analytics'
-                    strategy="afterInteractive"
-                    dangerouslySetInnerHTML={{
-                        __html: `
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}D
- gtag('js', new Date());
- gtag('config', 'G-1Q8D92YRHE', {
- page_path: window.location.pathname,
- });
-`,
-                    }}
-                />
             </Head>
             <Header />
             <main>
