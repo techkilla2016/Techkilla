@@ -43,7 +43,7 @@ const VRSolutions = () => {
         <>
             <Head>
                 <title>VR-Solutions</title>
-                <script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=UA-252119773-1" />
+                <script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-1Q8D92YRHE" />
                 <script
                     id='google-analytics'
                     strategy="afterInteractive"
@@ -52,7 +52,7 @@ const VRSolutions = () => {
  window.dataLayer = window.dataLayer || [];
  function gtag(){dataLayer.push(arguments);}D
  gtag('js', new Date());
- gtag('config', 'UA-252119773-1', {
+ gtag('config', 'G-1Q8D92YRHE', {
  page_path: window.location.pathname,
  });
 `,
