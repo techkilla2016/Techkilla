@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@/styles/globals.css'
 import Head from 'next/head'
 import { useEffect } from 'react';
-import { initGA, logPageView } from '../utils/analytics';
+import { initGA, logPageView } from '@/utils/analytics';
 import { useRouter } from 'next/router';
 
 function Page({ Component, pageProps }) {
