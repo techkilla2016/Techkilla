@@ -13,14 +13,13 @@ export default function App({ Component, pageProps }) {
       window.dataLayer.push(arguments);
     }
     gtag('js', new Date());
-    gtag('config', 'G-TV1ZCTF238');
+    gtag('config', 'G-1Q8D92YRHE');
   }, []); // Empty dependency array ensures this runs only once on mount
 
   return (
     <>
       <Head>
         {/* <!-- Google tag (gtag.js) --> */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TV1ZCTF238"></script>
       </Head>
       <Component {...pageProps} />
     </>
