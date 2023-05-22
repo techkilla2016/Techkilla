@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }) {
           dangerouslySetInnerHTML={{
             __html: `
  window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
+ function gtag(){dataLayer.push(arguments);}D
  gtag('js', new Date());
  gtag('config', 'UA-252119773-1', {
  page_path: window.location.pathname,
