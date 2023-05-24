@@ -2,9 +2,16 @@ const list = [
     {
         Heading: 'Aashirvaad Svasti Lassi Instagram filter',
         img: '/work/Lassi-filter.png',
-        logo: '/work/Bounce-logo.png',
+        logo: '/work/lassi-filter_01.png',
         desc: `Choose your favourite flavour, take a sip, and feel refreshed. With classic Mango, tangy Strawberry, & rose options, satisfy your cravings and cool down instantly.`,
         url: 'https://youtu.be/PyFBZ0vs7js'
+    },
+    {
+        Heading: '3d-hologram',
+        img: '/work/3d-hologram.png',
+        logo: '/work/3d-hologram.png',
+        desc: `3d-hologram`,
+        url: ''
     },
 
     {

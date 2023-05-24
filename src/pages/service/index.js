@@ -78,7 +78,7 @@ const Service = () => {
                     <div className='mainContainer bg-light' >
                         <div className="service">
                             <h3 className="section__title my-5" style={{ color: " #000", padding: "30px 0px", textAlign: 'center' }}>
-                                <span className='section__title-line-center'>Our Service</span>
+                                <span className='section__title-line-center'>Our Services</span>
                             </h3>
                             <Container>
                                 <Row>

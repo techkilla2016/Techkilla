@@ -1,5 +1,6 @@
 const list = [
     {
+        id: 1,
         Heading: 'digital mosaic wall photo booth',
         img: '/digital-engagement/digital-mosaic-wall-photp-booth.png',
         desc: '',
@@ -7,6 +8,7 @@ const list = [
         target: '/'
     },
     {
+        id: 2,
         Heading: 'digital photobooth',
         img: '/digital-engagement/digital-photobooth.png',
         desc: '',
@@ -15,6 +17,7 @@ const list = [
         target: 'https://youtu.be/4o0XpbQFDJc'
     },
     {
+        id: 3,
         Heading: 'online crossword',
         img: '/digital-engagement/online-crossword.png',
         desc: '',
@@ -22,6 +25,7 @@ const list = [
         target: 'https://www.youtube.com/watch?v=cPIxHvY3K2o'
     },
     {
+        id: 4,
         Heading: 'online chess game',
         img: '/digital-engagement/online-chess-game.png',
         desc: '',
@@ -29,6 +33,7 @@ const list = [
         target: '/'
     },
     {
+        id: 5,
         Heading: 'QR Code Based Registration',
         img: '/digital-engagement/qr-code-based-registration.png',
         desc: '',
@@ -36,6 +41,7 @@ const list = [
         target: 'https://youtu.be/pD1otredtSY'
     },
     {
+        id: 6,
         Heading: 'Online Cricket',
         img: '/digital-engagement/online-cricket.png',
         desc: '',
@@ -43,6 +49,7 @@ const list = [
         target: 'https://youtu.be/znj9F9XeF3U'
     },
     {
+        id: 7,
         Heading: 'Online Sudoku',
         img: '/digital-engagement/online-sudoku.png',
         desc: '',
@@ -50,6 +57,7 @@ const list = [
         target: 'https://youtu.be/nb8UL5ZHfys'
     },
     {
+        id: 8,
         Heading: 'Jigsaw Puzzle Game',
         img: '/digital-engagement/jigsaw-puzzle-game.png',
         desc: '',
@@ -57,6 +65,7 @@ const list = [
         target: 'https://youtu.be/y3pjUx5U_vY'
     },
     {
+        id: 9,
         Heading: 'Digital Tambola Game',
         img: '/digital-engagement/digital-tambola-game.png',
         desc: '',
@@ -64,6 +73,7 @@ const list = [
         target: 'https://youtu.be/gENxYQYVB4Y'
     },
     {
+        id: 10,
         Heading: 'Text Quiz Game',
         img: '/digital-engagement/text-quize-game.png',
         desc: '',
@@ -71,6 +81,7 @@ const list = [
         target: 'https://youtu.be/lUiW07szbnk'
     },
     {
+        id: 11,
         Heading: 'KBC type Quiz Game',
         img: '/digital-engagement/KBC-type-quiz-game.png',
         desc: '',
@@ -78,6 +89,7 @@ const list = [
         target: '/'
     },
     {
+        id: 12,
         Heading: 'Photo Quiz Game',
         img: '/digital-engagement/photo-quiz-game.png',
         desc: '',
@@ -85,6 +97,7 @@ const list = [
         target: '/'
     },
     {
+        id: 13,
         Heading: 'Music Video Booth',
         img: '/digital-engagement/music-video-booth.png',
         desc: '',
@@ -92,6 +105,7 @@ const list = [
         target: 'https://youtu.be/jrtQXnqmUvg'
     },
     {
+        id: 14,
         Heading: 'Magazine Booth',
         img: '/digital-engagement/magazine-booth.png',
         desc: '',
@@ -99,6 +113,7 @@ const list = [
         target: '/'
     },
     {
+        id: 15,
         Heading: 'Digital Video Booth',
         img: '/digital-engagement/digital-video-booth.png',
         desc: '',
@@ -106,6 +121,7 @@ const list = [
         target: 'https://youtu.be/q5uIGVj4aBE'
     },
     {
+        id: 16,
         Heading: 'Match Card Game',
         img: '/digital-engagement/match-card-game.png',
         desc: '',
@@ -113,6 +129,7 @@ const list = [
         target: 'https://youtu.be/CHdWwhsFjVo'
     },
     {
+        id: 17,
         Heading: 'Instant Id Print',
         img: '/digital-engagement/instant-id-print.png',
         desc: '',
@@ -120,6 +137,7 @@ const list = [
         target: 'https://youtu.be/pD1otredtSY'
     },
     {
+        id: 18,
         Heading: 'Registration Microsite',
         img: '/digital-engagement/registration-microsite.png',
         desc: '',
@@ -127,6 +145,7 @@ const list = [
         target: '/'
     },
     {
+        id: 19,
         Heading: 'Picture Quiz',
         img: '/digital-engagement/picture-quiz.png',
         desc: '',
@@ -140,6 +159,7 @@ function handler(req, res) {
         res.status(200).json({
             status: true,
             data: list,
+            total: list.length
         })
     } else {
         res.status(405).json({

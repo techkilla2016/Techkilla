@@ -5,9 +5,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
+import { Col, Container, Pagination, Row } from 'react-bootstrap'
 const CaseStudie = ({ useCase }) => {
+    const [page, setPage] = useState(0)
+    const [completedUseCase, setCompletedUseCase] = useState()
+    useEffect(() => {
+        const arr = [];
+        for (let i = 0; i < useCase?.total / 8; i++) {
+            arr.push(i + 1);
+        }
+        setCompletedUseCase(arr)
+    }, [page])
     return (
         <>
             <Head>
@@ -55,15 +64,48 @@ const CaseStudie = ({ useCase }) => {
                             <Container>
                                 <Row>
                                     {
-                                        useCase?.map((curItem, keys) => {
-                                            return (
-                                                <Col key={keys} xxl={3} xl={3} lg={4} md={6} sm={6} xm={12} className='my-4'>
-                                                    <CaseStudieCart {...curItem} />
-                                                </Col>
-                                            )
-                                        })
+                                        useCase?.data?.map((curItem, keys) => (curItem.id >= (8 * page + 1) && curItem.id <= (8 * (page + 1))) && (
+                                            <Col key={keys} xxl={3} xl={3} lg={4} md={6} sm={6} xm={12} className='my-4'>
+                                                <CaseStudieCart {...curItem} />
+                                            </Col>
+                                        ))
                                     }
                                 </Row>
+                                <div className="d-flex m-auto justify-content-center">
+                                    <Pagination>
+                                        <Pagination.First
+                                            onClick={() => {
+                                                setPage(0);
+                                            }}
+                                        />
+                                        <Pagination.Prev
+                                            onClick={() => {
+                                                setPage(page > 0 ? page - 1 : page);
+                                            }}
+                                        />
+                                        {completedUseCase?.map((res, key) => (
+                                            <Pagination.Item
+                                                key={key}
+                                                active={page + 1 == res}
+                                                onClick={() => {
+                                                    setPage(key);
+                                                }}
+                                            >
+                                                {res}
+                                            </Pagination.Item>
+                                        ))}
+                                        <Pagination.Next
+                                            onClick={() => {
+                                                setPage((completedUseCase.length - 1) > page ? page + 1 : page);
+                                            }}
+                                        />
+                                        <Pagination.Last
+                                            onClick={() => {
+                                                setPage(completedUseCase.length - 1);
+                                            }}
+                                        />
+                                    </Pagination>
+                                </div>
                             </Container>
                             <Container>
                                 <Row className="justify-content-center  py-5">
@@ -86,11 +128,18 @@ const CaseStudie = ({ useCase }) => {
 
 export default CaseStudie
 export const getServerSideProps = async () => {
-    const responce = await fetch(`${process.env.BaseUrl}/api/case-studie/`)
-    const data = await responce.json()
+    const page = {
+        from: 1,
+        to: 8
+    }
+    const res = await fetch(`${process.env.BaseUrl}/api/case-studie`, {
+        body: JSON.stringify(page),
+        method: "POST"
+    })
+    const data = await res.json()
     return ({
         props: {
-            useCase: data?.data
+            useCase: data
         }
     })
 }

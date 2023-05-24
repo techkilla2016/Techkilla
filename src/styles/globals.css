@@ -65,14 +65,28 @@ img {
   width: 100%;
   height: 90vh;
 }
-.lightBG{
+
+.lightBG {
   background: #fff;
 }
+
 @media screen and (max-width:1023px) {
   ::-webkit-scrollbar {
     width: 0px;
   }
 }
+
+.page-link {
+  color: #fcce39 !important;
+}
+
+.active>.page-link,
+.page-link.active {
+  color: #000 !important;
+  background: #fcce39 !important;
+  border-color: #fcce39 !important;
+}
+
 
 @import url('./button.css');
 @import url('./home.css');

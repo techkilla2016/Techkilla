@@ -5,11 +5,14 @@ import YouTubePlayer from '@/components/product/videoPlay'
 import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
+import { useEffect } from 'react'
 import { useState } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Pagination, Row } from 'react-bootstrap'
 const PhysicalEngagement = ({ product }) => {
     const [isPlay, setIsPlay] = useState(false)
     const [curVideo, setCurVideo] = useState('')
+    const [page, setPage] = useState(0)
+    const [completedUseCase, setCompletedUseCase] = useState()
     const handleClose = () => {
         setIsPlay(false)
     }
@@ -21,6 +24,13 @@ const PhysicalEngagement = ({ product }) => {
             setCurVideo(payload)
         }
     }
+    useEffect(() => {
+        const arr = [];
+        for (let i = 0; i < product?.total / 8; i++) {
+            arr.push(i + 1);
+        }
+        setCompletedUseCase(arr)
+    }, [page])
     return (
         <>
             <Head>
@@ -73,15 +83,50 @@ const PhysicalEngagement = ({ product }) => {
                             </div>
                             <Row className='justify-content-center'>
                                 {
-                                    product?.map((curItem, keys) => {
+                                    product?.data?.map((curItem, keys) => {
                                         return (
-                                            <Col key={keys} xxl={3} xl={3} lg={4} md={6} sm={6} xm={12} className=''>
+                                            (curItem.id >= (8 * page + 1) && curItem.id <= (8 * (page + 1))) && <Col key={keys} xxl={3} xl={3} lg={4} md={6} sm={6} xm={12} className=''>
                                                 <ProdcutCard {...curItem} handleClick={handleOpen} />
                                             </Col>
                                         )
                                     })
                                 }
                             </Row>
+                            <div className="d-flex m-auto justify-content-center mt-4">
+                                <Pagination className="">
+                                    <Pagination.First
+                                        onClick={() => {
+                                            setPage(0);
+                                        }}
+                                    />
+                                    <Pagination.Prev
+                                        onClick={() => {
+                                            setPage(page > 0 ? page - 1 : page);
+                                        }}
+                                    />
+                                    {completedUseCase?.map((res, key) => (
+                                        <Pagination.Item
+                                            key={key}
+                                            active={page + 1 == res}
+                                            onClick={() => {
+                                                setPage(key);
+                                            }}
+                                        >
+                                            {res}
+                                        </Pagination.Item>
+                                    ))}
+                                    <Pagination.Next
+                                        onClick={() => {
+                                            setPage((completedUseCase.length - 1) > page ? page + 1 : page);
+                                        }}
+                                    />
+                                    <Pagination.Last
+                                        onClick={() => {
+                                            setPage(completedUseCase.length - 1);
+                                        }}
+                                    />
+                                </Pagination>
+                            </div>
                         </Container>
                     </div>
 
@@ -114,7 +159,7 @@ export const getServerSideProps = async () => {
     const data = await res.json()
     return ({
         props: {
-            product: data?.data
+            product: data
         }
     })
 }

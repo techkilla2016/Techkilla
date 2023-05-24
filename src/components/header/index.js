@@ -145,7 +145,7 @@ const Header = () => {
             <nav>
                 <div className="navbar">
                     <Link href='/' className="logo">
-                        <Image src='/logo/logo.png' width={60} height={60} />
+                        <Image src='/logo/logo.png' alt='techkilla' width={60} height={60} />
                     </Link>
                 </div>
                 <div className='toggle-secction'>
