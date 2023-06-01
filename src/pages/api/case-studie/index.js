@@ -141,8 +141,8 @@ const handler = async (req, res) => {
         })
         res.status(200).json({
             status: true,
-            total: data ? data?.length : 0,
-            data: data ? dataList : [],
+            total: data?.length ? data?.length : 0,
+            data: data?.length ? dataList : [],
         })
     } catch (error) {
         res.status(405).json({

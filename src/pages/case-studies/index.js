@@ -124,18 +124,26 @@ const CaseStudie = ({ useCase }) => {
 
 export default CaseStudie
 export const getServerSideProps = async () => {
-    const page = {
-        from: 1,
-        to: 8
-    }
-    const res = await fetch(`${process.env.BaseUrl}/api/case-studie`, {
-        body: JSON.stringify(page),
-        method: "POST"
-    })
-    const data = await res.json()
-    return ({
-        props: {
-            useCase: data
+    try {
+        const page = {
+            from: 1,
+            to: 8
         }
-    })
+        const res = await fetch(`${process.env.BaseUrl}/api/case-studie`, {
+            body: JSON.stringify(page),
+            method: "POST"
+        })
+        const data = await res.json()
+        return ({
+            props: {
+                useCase: data
+            }
+        })
+    } catch (error) {
+        return ({
+            props: {
+                useCase: []
+            }
+        })
+    }
 }
