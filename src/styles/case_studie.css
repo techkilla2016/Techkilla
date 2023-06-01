@@ -1,3 +1,8 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 .introHeading {
     margin-top: 20px;
     font-size: 70px;
@@ -14,6 +19,10 @@
     background: rgba(0, 0, 0, 0.6);
     left: 0px;
     top: 0px;
+}
+
+.ellipsis p {
+    margin: 0px;
 }
 
 .introWraper {
@@ -111,6 +120,7 @@
     width: 100%;
     height: 100%;
     transition: all 500ms ease-in;
+    cursor: pointer;
 }
 
 .backBody>img {
@@ -127,17 +137,26 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 50%;
+    top: 0%;
     left: 0px;
     color: #fff;
-    transform: translateY(-30px);
+    transform: translateY(-0px);
+    /* padding-top: 55%; */
+    opacity: 0;
     z-index: 100;
-    padding-top: 55%;
     transition: all 500ms ease-in;
     background: linear-gradient(180deg,
             hsla(0, 0%, 0%, 0) 0%,
             hsla(0, 0%, 0%, 0.3) 10%,
             hsl(0, 0%, 0%) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cartBody:hover .frontBody {
+    opacity: 1;
+
 }
 
 .frontBody1 {
@@ -157,11 +176,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
 
 }
 
 .cartBody:hover .frontBody {
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
 }
 
 .btn-card {
@@ -187,7 +207,7 @@
     overflow: hidden;
     padding: 10px;
     transition: all 500ms ease-in;
-    opacity: 0;
+    /* display: none; */
     font-family: 'Playfair Display', serif;
     font-weight: 400;
 }
@@ -355,7 +375,8 @@
 }
 
 .key-icon {
-    font-size: 60px;
+    width: 100px;
+    padding: 10px;
     text-align: center;
     color: #ffce39;
     border-right: 1px solid #ffce39;
@@ -660,10 +681,12 @@
     .benifit-head {
         font-size: 45px;
     }
-    .benifit-para{
+
+    .benifit-para {
         font-size: 16px;
     }
-    .benifit .head{
+
+    .benifit .head {
         font-size: 16px;
     }
 }

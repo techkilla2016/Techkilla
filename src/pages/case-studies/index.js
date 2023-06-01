@@ -64,48 +64,44 @@ const CaseStudie = ({ useCase }) => {
                             <Container>
                                 <Row>
                                     {
-                                        useCase?.data?.map((curItem, keys) => (curItem.id >= (8 * page + 1) && curItem.id <= (8 * (page + 1))) && (
+                                        useCase?.data?.map((curItem, keys) => (keys + 1 >= (8 * page + 1) && keys + 1 <= (8 * (page + 1))) && (
                                             <Col key={keys} xxl={3} xl={3} lg={4} md={6} sm={6} xm={12} className='my-4'>
                                                 <CaseStudieCart {...curItem} />
                                             </Col>
                                         ))
                                     }
                                 </Row>
-                                <div className="d-flex m-auto justify-content-center">
+
+                                {useCase?.data?.length > 8 && <div className="d-flex m-auto justify-content-center">
                                     <Pagination>
                                         <Pagination.First
                                             onClick={() => {
                                                 setPage(0);
-                                            }}
-                                        />
+                                            }} />
                                         <Pagination.Prev
                                             onClick={() => {
                                                 setPage(page > 0 ? page - 1 : page);
-                                            }}
-                                        />
+                                            }} />
                                         {completedUseCase?.map((res, key) => (
                                             <Pagination.Item
                                                 key={key}
                                                 active={page + 1 == res}
                                                 onClick={() => {
                                                     setPage(key);
-                                                }}
-                                            >
+                                                }} >
                                                 {res}
                                             </Pagination.Item>
                                         ))}
                                         <Pagination.Next
                                             onClick={() => {
                                                 setPage((completedUseCase.length - 1) > page ? page + 1 : page);
-                                            }}
-                                        />
+                                            }} />
                                         <Pagination.Last
                                             onClick={() => {
                                                 setPage(completedUseCase.length - 1);
-                                            }}
-                                        />
+                                            }} />
                                     </Pagination>
-                                </div>
+                                </div>}
                             </Container>
                             <Container>
                                 <Row className="justify-content-center  py-5">
@@ -119,8 +115,8 @@ const CaseStudie = ({ useCase }) => {
                         </div>
                         <Footer />
                     </div>
-                </div>
-            </main>
+                </div >
+            </main >
 
         </>
     )

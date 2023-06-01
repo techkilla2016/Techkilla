@@ -12,6 +12,7 @@ import { IoLogoInstagram } from 'react-icons/io'
 import { ImFacebook } from 'react-icons/im'
 import { FaLinkedinIn } from 'react-icons/fa'
 import ChatBoat from './ChatBoat'
+import LogoHover from './logoHover'
 const Footer = ({ bg }) => {
     return (
         <footer>
@@ -32,11 +33,11 @@ const Footer = ({ bg }) => {
                         <span className='icon' id="face"><ImFacebook /></span>
                     </Link>
                 </div>
-                <div className='link_box'>
+                {/* <div className='link_box'>
                     <Link href='https://twitter.com/techkilla15' className='link' target='_blank'>
                         <span className='icon' id="twt"><AiOutlineTwitter /></span>
                     </Link>
-                </div>
+                </div> */}
                 <div className='link_box'>
                     <Link href='https://www.linkedin.com/company/techkilla' className='link' target='_blank'>
                         <span className='icon' id="twt"><FaLinkedinIn /></span>
@@ -48,10 +49,13 @@ const Footer = ({ bg }) => {
                     <div className='bookDemo'>
                         <Row>
                             <Col xxl={4} lg={4} md={4} xs={12}>
-                                <div className='logo_outer'>
+                                {/* <div className='logo_outer'>
                                     <Link href='/' className='demo_logo'>
                                         <Image src='/logo/logo.png' alt='Techkilla' width={1920} height={1080} />
                                     </Link>
+                                </div> */}
+                                <div className="footer_logo_section">
+                                    <LogoHover />
                                 </div>
                             </Col>
                             <Col xxl={8} lg={8} md={8} xs={12}>

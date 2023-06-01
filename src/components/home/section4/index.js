@@ -37,9 +37,9 @@ const PortfolioSection = ({ work, lastLine }) => {
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={10}
-                    // pagination={{
-                    //     clickable: true,
-                    // }}
+                    pagination={{
+                        clickable: true,
+                    }}
                     breakpoints={{
                         640: {
                             slidesPerView: 1,
@@ -69,7 +69,7 @@ const PortfolioSection = ({ work, lastLine }) => {
                                 <SwiperSlide key={keys} className="">
                                     <div className="work_card">
                                         <div className="work_card_inner">
-                                            <Image src={item?.img} alt={item?.Heading} width={1920} height={1080} />
+                                            <Image src={item?.thumbnail} alt={item?.Heading} width={1920} height={1080} />
                                         </div>
                                         <div className="work_card_layer">
                                             <div>

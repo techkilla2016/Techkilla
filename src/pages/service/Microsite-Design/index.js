@@ -217,8 +217,6 @@ const MicrositeDesign = () => {
 
                                             </div>
                                         </div>
-                                        {/* <Image src='/service/miro-service.gif' alt='Benefits of launching your own microsite'
-                                            width={1920} height={1080} style={css} /> */}
                                     </Col>
                                 </Row>
                             </Container>

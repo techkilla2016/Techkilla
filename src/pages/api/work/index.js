@@ -1,3 +1,8 @@
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import connectDB from "@/middleware/connection"
+import recentWorkModel from "@/models/work"
+import mongoose from "mongoose"
+
 const list = [
     {
         Heading: 'Aashirvaad Svasti Lassi Instagram filter',
@@ -107,13 +112,27 @@ const list = [
     },
 ]
 
-function handler(req, res) {
-    if (req.method === 'GET') {
+async function handler(req, res) {
+
+    try {
+        if (req.method !== 'GET') {
+            throw new Error(`${req.method} are not allowed`)
+        }
+        const result = await recentWorkModel.find()
+        const data = result?.map(item => {
+            const filterData = {
+                heading: item?.heading,
+                logo: process.env.SERVER_URL + item?.logo,
+                thumbnail: process.env.SERVER_URL + item?.thumbnail,
+                url: item?.url
+            }
+            return filterData
+        })
         res.status(200).json({
             status: true,
-            data: list,
+            data: data
         })
-    } else {
+    } catch (error) {
         res.status(405).json({
             status: false,
             massage: 'Method Not Allowed'
@@ -121,5 +140,4 @@ function handler(req, res) {
     }
 }
 
-
-export default handler
+export default connectDB(handler)

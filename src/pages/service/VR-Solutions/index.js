@@ -87,11 +87,6 @@ const VRSolutions = () => {
 
                                     <Col xxl={6} xl={6} md={6} sm={12}>
                                         <div className="serviceContainer">
-                                            {/* <p>
-                                                VR (virtual reality) is now mainstream. This is a fact of your current existence. As a matter of fact, certain sectors have already experimented with the new technology and found it to be beneficial.
-                                                In virtual reality, the user is placed in a safe, simulated setting that can be used to practise for real-world situations.
-                                            </p> */}
-
                                             <h4>What is virtual reality?</h4>
                                             <p>
                                                 The term "virtual reality" refers to the practise of using computer technology to construct simulated realities. When using VR, one is immersed in a simulated environment that gives the impression of being in three dimensions. Users no longer look at a screen but rather are immersed in and may interact with 3D environments.

@@ -1,3 +1,4 @@
+import caseStudieSchema from '@/models/case-studie'
 const case_studie = [
     {
         id: 1,
@@ -66,7 +67,8 @@ const case_studie = [
     },
     {
         id: 10,
-        target: 'https://youtu.be/znj9F9XeF3U',
+        // target: 'https://youtu.be/znj9F9XeF3U',
+        target: '/case-studies/Tuborg-Super-Over-Cricket-Game',
         Heading: 'Cricket Game',
         img: '/use-case/CricketGame.png',
         desc: "A well-known beer and distilled water company, Tuborg, has introduced a really original idea for a web-based engagement activity that can also be used for on-ground activations."
@@ -94,7 +96,7 @@ const case_studie = [
     },
     {
         id: 14,
-        target: '/case-studies/',
+        target: '/case-studies/Microsoft-Hackathon',
         Heading: 'Microsoft Hackathon',
         img: '/use-case/Hackathon.png',
         desc: "Our sophisticated software for QR-based verification takes the initiative and aids you in avoiding any false submissions."
@@ -122,22 +124,25 @@ const case_studie = [
     },
 ]
 
-const handler = (req, res) => {
+const handler = async (req, res) => {
     try {
         if (req.method !== "POST") {
             throw new Error(`${req?.method} method not allowed`)
         }
-        const { from, to } = JSON.parse(req?.body)
-        const filter_data = case_studie.filter((item) => {
-            if (item.id >= from && item.id <= to) {
-                return item
+        const data = await caseStudieSchema.find({ status: true }, 'heading cart_them slag desc')
+        const dataList = data.map(item => {
+            return {
+                heading: item?.heading,
+                cart_them: process?.env?.SERVER_URL + item?.cart_them,
+                slag: item?.slag,
+                id: item?.id,
+                desc: item?.desc
             }
         })
-
         res.status(200).json({
             status: true,
-            total: case_studie.length,
-            data: case_studie,
+            total: data.length,
+            data: dataList,
         })
     } catch (error) {
         res.status(405).json({

@@ -72,7 +72,7 @@
 }
 
 .demo_logo img {
-    width: 100%  !important;
+    width: 100% !important;
     height: 100% !important;
 }
 
@@ -407,13 +407,11 @@ footer .flex:last-child a {
     color: #000 !important;
 }
 
-.rcw-link
-{
+.rcw-link {
     color: #000;
 }
 
-.rcw-link:hover
-{
+.rcw-link:hover {
     color: #ffc107;
 }
 
@@ -515,4 +513,330 @@ footer .flex:last-child a:hover {
     .bookDemo {
         padding-bottom: 15px;
     }
+}
+
+/* ..................  */
+.main_footer_hover_back {
+    position: absolute;
+    border-radius: 10px;
+    width: 11em;
+    height: 11em;
+    z-index: -2;
+}
+
+.main_footer_hover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover_effet {
+    display: flex;
+    flex-wrap: wrap;
+    width: 14em;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.card_icon_footer {
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 10px;
+    transition: .4s ease-in-out, .2s background-color ease-in-out, .2s background-image ease-in-out;
+    border: 1px solid transparent;
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover_effet:hover .card_icon_footer {
+    background: rgba(255, 255, 255, 0.596);
+    backdrop-filter: blur(5px);
+}
+
+.hover_effet:hover {
+    background: #fff;
+}
+
+.card_icon_footer .instagram {
+    opacity: 0;
+    transition: .2s ease-in-out;
+    fill: #cc39a4;
+}
+
+.card_icon_footer:nth-child(2) {
+    border-radius: 0px;
+}
+
+.card_icon_footer:nth-child(2) .twitter {
+    opacity: 0;
+    transition: .2s ease-in-out;
+    fill: #03A9F4;
+}
+
+.card_icon_footer:nth-child(3) {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    font-size: 30px;
+    color: #000;
+}
+
+.card_icon_footer:nth-child(3) .dribble {
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.card_icon_footer:nth-child(4) {
+    border-radius: 0px;
+}
+
+.card_icon_footer:nth-child(4) .facebook {
+    opacity: 0;
+    transition: .2s ease-in-out;
+    font-size: 20px;
+    color: #3f6fb2;
+}
+
+.card_icon_footer:nth-child(5) {
+    border-radius: 0px;
+}
+
+.card_icon_footer:nth-child(5) .youtube {
+    opacity: 0;
+    transition: .2s ease-in-out;
+    font-size: 20px;
+    color: #f70000;
+}
+
+
+.card_icon_footer:nth-child(6) {
+    border-radius: 0px;
+}
+
+.card_icon_footer:nth-child(6) .linkedin {
+    opacity: 0;
+    transition: .2s ease-in-out;
+    color: #2764ac;
+
+}
+
+.card_icon_footer:nth-child(7) {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0px;
+    color: #f7f400;
+    font-size: 24px;
+}
+
+.card_icon_footer:nth-child(7) .github {
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
+.card_icon_footer:nth-child(8) {
+    border-radius: 0px;
+}
+
+.card_icon_footer:nth-child(8) .telegram {
+    opacity: 0;
+    transition: .2s ease-in-out;
+    fill: #29b6f6;
+}
+
+.card_icon_footer:nth-child(9) {
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+}
+
+.card_icon_footer:nth-child(9) .reddit {
+    opacity: 0;
+    transition: .2s ease-in-out;
+    color: red;
+    font-size: 24px;
+}
+
+.footer_logo_section {
+    width: 14em;
+    min-height: 14em;
+    margin: 2em auto 0em;
+}
+
+.hover_effet {
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+}
+
+.main_footer_hover_back {
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+}
+
+.hover_effet:hover {
+    width: 14em;
+    cursor: pointer;
+}
+
+.hover_effet:hover .main_footer_hover_back {
+    opacity: 0;
+}
+
+.hover_effet:hover .card_icon_footer {
+    margin: .2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hover_effet:hover .card_icon_footer:nth-child(5) {
+    border: transparent;
+}
+
+.hover_effet:hover .text {
+    opacity: 0;
+    z-index: -3;
+}
+
+.hover_effet:hover .instagram {
+    opacity: 1;
+}
+
+.hover_effet:hover .twitter {
+    opacity: 1;
+}
+
+.hover_effet:hover .dribble {
+    opacity: 1;
+}
+
+.hover_effet:hover .facebook {
+    opacity: 1;
+}
+
+.hover_effet:hover .youtube {
+    opacity: 1;
+}
+
+.hover_effet:hover .linkedin {
+    opacity: 1;
+}
+
+.hover_effet:hover .github {
+    opacity: 1;
+}
+
+.hover_effet:hover .telegram {
+    opacity: 1;
+}
+
+.hover_effet:hover .reddit {
+    opacity: 1;
+}
+
+.card_icon_footer:nth-child(1):hover {
+    background-color: #cc39a4;
+}
+
+.card_icon_footer:nth-child(1):hover .instagram {
+    fill: white;
+}
+
+.card_icon_footer:nth-child(2):hover {
+    background-color: #03A9F4;
+}
+
+.card_icon_footer:nth-child(2):hover .twitter {
+    fill: white;
+}
+
+.card_icon_footer:nth-child(3):hover {
+    background-color: #1cb96f;
+}
+
+.card_icon_footer:nth-child(3):hover .dribble {
+    fill: white;
+}
+
+.card_icon_footer:nth-child(4):hover {
+    background-color: #3f6fb2;
+}
+
+.card_icon_footer:nth-child(4):hover .facebook {
+    color: #fff;
+}
+
+.card_icon_footer:nth-child(5):hover {
+    background: #f70000;
+}
+
+.card_icon_footer:nth-child(5):hover .youtube {
+    color: #fff;
+}
+
+.logo_image_footer {
+    width: 14em;
+    height: 14em;
+}
+
+@keyframes backgroundIMG {
+    100% {
+        background-image: linear-gradient(#BF66FF, #6248FF, #00DDEB);
+    }
+}
+
+.card_icon_footer:nth-child(6):hover {
+    background-color: #2764ac;
+}
+
+.card_icon_footer:nth-child(6):hover .linkedin {
+    color: #fff;
+}
+
+.card_icon_footer:nth-child(7):hover {
+    background-color: rgb(247 244 0);
+}
+
+.card_icon_footer:nth-child(7):hover .github {
+    color: #000;
+}
+
+.card_icon_footer:nth-child(8):hover {
+    background-color: #29b6f6;
+}
+
+.card_icon_footer:nth-child(8):hover .telegram>path:nth-of-type(1) {
+    fill: white;
+}
+
+.card_icon_footer:nth-child(8):hover .telegram>path:nth-of-type(2) {
+    fill: #29b6f6;
+}
+
+.card_icon_footer:nth-child(8):hover .telegram>path:nth-of-type(3) {
+    fill: #29b6f6;
+}
+
+.card_icon_footer:nth-child(9):hover {
+    background-color: rgb(255, 69, 0);
+}
+
+.card_icon_footer:nth-child(9):hover .reddit {
+    color: #fff;
+}
+
+
+
+.text {
+    position: absolute;
+    font-size: 0.7em;
+    transition: .4s ease-in-out;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.33em;
+    z-index: 3;
 }

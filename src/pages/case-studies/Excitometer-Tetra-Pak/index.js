@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { GiClapperboard, GiMicrophone, GiFilmProjector } from 'react-icons/gi'
+import { GiMicrophone, GiFilmProjector } from 'react-icons/gi'
 import { FaChalkboardTeacher } from 'react-icons/fa'
 import { MdComputer } from 'react-icons/md'
 
@@ -127,20 +127,6 @@ const index = () => {
                                             </div>
                                         </div>
                                     </Col>
-
-
-                                    {/* <Col xxl={4} xl={4} lg={4} md={6} sm={12} xs={12}>
-                                        <div className='key-cart'>
-                                            <div className='keyCount'>
-                                                <div className='key-icon'>
-                                                    <GiClapperboard />
-                                                </div>
-                                                <div className='key-para'>
-                                                    1,000 audience members hooted to commit to winning.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Col> */}
                                 </Row>
                             </Container>
                         </div>
@@ -236,45 +222,6 @@ const index = () => {
                                 </Row>
                             </Container>
                         </div>
-                        {/* <div className="useCaseSection">
-                            <Container>
-                                <div className="heading">
-                                    Benefits
-                                </div>
-                                <div className="benefitsCart">
-                                    <Row>
-                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12}>
-                                            <div className="benefitInner">
-                                                <div className="benefitsCartBox">
-                                                    Team Excitement generator
-                                                </div>
-                                            </div>
-                                        </Col>
-                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12}>
-                                            <div className="benefitInner">
-                                                <div className="benefitsCartBox">
-                                                    Wow aspect
-                                                </div>
-                                            </div>
-                                        </Col>
-                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12}>
-                                            <div className="benefitInner">
-                                                <div className="benefitsCartBox">
-                                                    Greatest engagement
-                                                </div>
-                                            </div>
-                                        </Col>
-                                        <Col xxl={6} xl={6} lg={6} md={6} sm={12}>
-                                            <div className="benefitInner">
-                                                <div className="benefitsCartBox">
-                                                    Real-time behavior
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    </Row>
-                                </div>
-                            </Container>
-                        </div> */}
                         <Footer />
                     </div>
                 </div>

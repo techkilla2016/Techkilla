@@ -12,6 +12,7 @@
     "@next/font": "13.1.6",
     "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "mongoose": "^7.2.1",
     "next": "13.1.6",
     "next-images": "^1.8.4",
     "next-videos": "^1.4.1",
