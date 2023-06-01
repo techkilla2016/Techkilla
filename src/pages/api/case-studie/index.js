@@ -130,7 +130,7 @@ const handler = async (req, res) => {
             throw new Error(`${req?.method} method not allowed`)
         }
         const data = await caseStudieSchema.find({ status: true }, 'heading cart_them slag desc')
-        const dataList = data.map(item => {
+        const dataList = data?.map(item => {
             return {
                 heading: item?.heading,
                 cart_them: process?.env?.SERVER_URL + item?.cart_them,
@@ -141,8 +141,8 @@ const handler = async (req, res) => {
         })
         res.status(200).json({
             status: true,
-            total: data.length,
-            data: dataList,
+            total: data ? data?.length : 0,
+            data: data ? dataList : [],
         })
     } catch (error) {
         res.status(405).json({

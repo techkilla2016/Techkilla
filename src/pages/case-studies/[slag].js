@@ -4,9 +4,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { GiMicrophone, GiFilmProjector, GiDuffelBag } from 'react-icons/gi'
-import { FaChalkboardTeacher } from 'react-icons/fa'
-import { MdComputer } from 'react-icons/md'
 import { SiShanghaimetro } from 'react-icons/si'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -26,7 +23,6 @@ const Page = ({ BaseUrl }) => {
                     })
                 })
                 const result = await responce?.json()
-                console.log(result)
                 setCaseStudie(result?.data);
                 setUrl(result?.BaseUrl);
             } catch (error) {
