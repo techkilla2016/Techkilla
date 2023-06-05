@@ -19,7 +19,8 @@ const CaseStudieCart = ({ heading, cart_them, desc, slag }) => {
                 </div>
                 <div className="d-flex justify-content-center case-studie-btn">
                     {
-                        slag ? <Link className="button" href={'/case-studies' + slag}>
+                        // slag ? <Link className="button" href={'/case-studies' + slag}>
+                        slag ? <Link className="button" href={slag}>
                             <span className="button_lg">
                                 <span className="button_sl"></span>
                                 <span className="button_text">Read More</span>
