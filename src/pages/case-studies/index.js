@@ -135,7 +135,6 @@ export const getServerSideProps = async () => {
             method: "POST"
         })
         const data = await res.json()
-        console.log("data : ", data)
         return ({
             props: {
                 useCase: data

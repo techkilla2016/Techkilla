@@ -3,6 +3,8 @@ import React from 'react'
 import Link from 'next/link'
 
 const CaseStudieCart = ({ heading, cart_them, desc, slag }) => {
+    console.log({ heading, cart_them, desc, slag })
+    
     return (
         <div className="cartBody">
             <div className="backBody">
@@ -10,7 +12,7 @@ const CaseStudieCart = ({ heading, cart_them, desc, slag }) => {
             </div>
             <div className="frontBody">
                 <div className="caseStudie__Title">
-                    {heading}
+                    {/* {heading} */}
                 </div>
                 <div className="cs__desc mb-2">
                     <div className="ellipsis">
