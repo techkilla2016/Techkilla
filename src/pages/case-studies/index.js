@@ -8,6 +8,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Pagination, Row } from 'react-bootstrap'
 const CaseStudie = ({ useCase }) => {
+    console.log("useCase 1 :", useCase)
     const [page, setPage] = useState(0)
     const [completedUseCase, setCompletedUseCase] = useState()
     useEffect(() => {
@@ -134,12 +135,14 @@ export const getServerSideProps = async () => {
             method: "POST"
         })
         const data = await res.json()
+        console.log("data : ", data)
         return ({
             props: {
                 useCase: data
             }
         })
     } catch (error) {
+        console.log("data : ", error)
         return ({
             props: {
                 useCase: []
