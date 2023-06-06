@@ -122,7 +122,7 @@ const case_studie = [
         cart_them: '/use-case/Lassi-filter-card.png',
         desc: "Choose your favourite flavour, take a sip, and feel refreshed. With classic Mango, tangy Strawberry, & rose options, satisfy your cravings and cool down instantly."
     },
-]   
+]
 
 const handler = async (req, res) => {
     try {
@@ -147,7 +147,7 @@ const handler = async (req, res) => {
 
         res.status(200).json({
             status: true,
-            total: case_studie?.length ? case_studie?.length : 0,
+            total: case_studie?.length,
             data: case_studie,
         })
 
