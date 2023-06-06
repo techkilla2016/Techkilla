@@ -7,9 +7,20 @@ import Link from 'next/link'
 
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Pagination, Row } from 'react-bootstrap'
-const CaseStudie = ({ useCase }) => {
-    console.log("useCase 1 :", useCase)
+const CaseStudie = () => {
+    const [useCase, setUseCase] = useState([])
     const [page, setPage] = useState(0)
+    useEffect(() => {
+        const getdata = async () => {
+            const res = await fetch(`/api/case-studie`, {
+                body: JSON.stringify(page),
+                method: "POST"
+            })
+            const data = await res.json()
+            setUseCase(data)
+        }
+        getdata()
+    }, [])
     const [completedUseCase, setCompletedUseCase] = useState()
     useEffect(() => {
         const arr = [];
@@ -17,7 +28,7 @@ const CaseStudie = ({ useCase }) => {
             arr.push(i + 1);
         }
         setCompletedUseCase(arr)
-    }, [page])
+    }, [page, useCase])
     return (
         <>
             <Head>
@@ -124,42 +135,42 @@ const CaseStudie = ({ useCase }) => {
 }
 
 export default CaseStudie
-export const getServerSideProps = async () => {
-    const page = {
-        from: 1,
-        to: 8
-    }
-    const res = await fetch(`${process.env.BaseUrl}/api/case-studie`, {
-        body: JSON.stringify(page),
-        method: "POST"
-    })
-    const data = await res.json()
-    return ({
-        props: {
-            useCase: data
-        }
-    })
-    // try {
-    // const page = {
-    //     from: 1,
-    //     to: 8
-    // }
-    // const res = await fetch(`${process.env.BaseUrl}/api/case-studie`, {
-    //     body: JSON.stringify(page),
-    //     method: "POST"
-    // })
-    // const data = await res.json()
-    // return ({
-    //     props: {
-    //         useCase: data
-    //     }
-    // })
-    // } catch (error) {
-    //     console.log("data : ", error)
-    //     return ({
-    //         props: {
-    //             useCase: []
-    //         }
-    //     })
-    // }
-}
+// export const getServerSideProps = async () => {
+//     const page = {
+//         from: 1,
+//         to: 8
+//     }
+//     const res = await fetch(`${process.env.BaseUrl}/api/case-studie`, {
+//         body: JSON.stringify(page),
+//         method: "POST"
+//     })
+//     const data = await res.json()
+//     return ({
+//         props: {
+//             useCase: data
+//         }
+//     })
+//     // try {
+//     // const page = {
+//     //     from: 1,
+//     //     to: 8
+//     // }
+//     // const res = await fetch(`${process.env.BaseUrl}/api/case-studie`, {
+//     //     body: JSON.stringify(page),
+//     //     method: "POST"
+//     // })
+//     // const data = await res.json()
+//     // return ({
+//     //     props: {
+//     //         useCase: data
+//     //     }
+//     // })
+//     // } catch (error) {
+//     //     console.log("data : ", error)
+//     //     return ({
+//     //         props: {
+//     //             useCase: []
+//     //         }
+//     //     })
+//     // }
+// }
