@@ -2,7 +2,7 @@
 const case_studie = [
     {
         id: 1,
-        slag: '/case-studies/QR-Registration-and-instant-ID-print-with-live-verification-The-National-HRD-Network-(NHRD)',
+        slag: 'https://www.youtube.com/watch?v=pD1otredtSY',
         Heading: 'QR Registration',
         cart_them: '/use-case/QRRegistration1.png',
         desc: "The National HRD Network (NHRDN) is a Global Centre for Grooming Leaders and the National Apex body of professionals committed to promoting the People Development movement in the country, "

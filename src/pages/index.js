@@ -9,6 +9,7 @@ import PortfolioSection from '@/components/home/section4'
 import WhatWeDo from '@/components/home/section5'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
@@ -133,6 +134,36 @@ const Home = ({ work }) => {
                     <Button url='https://calendly.com/techkilla/meeting' target="_blank" title='Book free demo' />
                   </div>
                 </div>
+              </Container>
+            </div>
+            <div className="microSection">
+              <h1 className="section__title pb-5 text-center" style={{
+
+              }}>
+                <span className='section__title-line-center'> <strong style={{
+                  color: '#fdb714'
+                }}>Project X:</strong> The Ultimate Trendsetter</span>
+              </h1>
+              <h2 className="heading" style={{
+                fontSize: '40px'
+              }}>
+                <Link href='/QR-Registration/' style={{ color: '#fdb714' }} >QR Code</Link> Registration
+              </h2>
+              <Container>
+                <div className="microFulImg">
+                  <Image src='/microsite/microsite.png' alt='What is QR Code Registration?' width={1920} height={1080} />
+                </div>
+                <div className="microPara">
+                  QR code registration is a form of one-of-a-kind registration process that occurs
+                  when a wider audience must be managed in terms of attendance,verification,
+                  and backend entry count over time. It overcomes the difficulty of dealing with
+                  and maintaining manual records and also saves time & labor
+                </div>
+                <div className="micro_heading01 my-5">How does it <span>function</span>? </div>
+                <div className="d-flex justify-content-center">
+                  <Link id="bottone1" href='/QR-Registration/' className='m-auto my-3'><strong>Read More...</strong></Link>
+                </div>
+
               </Container>
             </div>
 

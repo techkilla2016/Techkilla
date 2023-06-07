@@ -90,7 +90,10 @@ const Header = () => {
                             </div>
                         </div>
                         <Link className='navlink' href="/case-studies">Case Studies</Link>
-                        <button className='navlink' onClick={() => setShow(true)}> Careers</button>
+                        <Link className='navlink' href="/QR-Registration" style={{
+                            color: '#fdb714'
+                        }}>QR Registration</Link>
+                        {/* <button className='navlink' onClick={() => setShow(true)}> Careers</button> */}
                     </div >
                 </div >
                 <div className="navButton">

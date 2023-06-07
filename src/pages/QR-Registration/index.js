@@ -1,4 +1,4 @@
-import { ButtonLight } from '@/components/button/Button'
+import Button, { ButtonLight } from '@/components/button/Button'
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head'
@@ -7,7 +7,6 @@ import Link from 'next/link'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { SiBlockchaindotcom } from 'react-icons/si'
-import Button from '../../../components/button/Button'
 const funData = [
     {
         title: 'Form to sign up for an event or campaign',

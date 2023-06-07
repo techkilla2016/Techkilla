@@ -384,3 +384,24 @@
 .button:hover .button_lg::after {
     background-color: #000;
 }
+
+#bottone1 {
+    padding: 10px 33px;
+    border-radius: 9px;
+    background: #fdb714;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    color: #0f1923;
+}
+
+#bottone1:hover {
+    box-shadow: 7px 5px 56px -14px #fdb714;
+}
+
+#bottone1:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #fdb714;
+}
