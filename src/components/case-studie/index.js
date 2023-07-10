@@ -2,17 +2,15 @@ import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
 
-const CaseStudieCart = ({ heading, cart_them, desc, slag }) => {
-    console.log({ heading, cart_them, desc, slag })
-    
+const CaseStudieCart = ({ Heading, cart_them, desc, slag }) => {
     return (
         <div className="cartBody">
             <div className="backBody">
-                <Image alt={heading} src={cart_them} width={1920} height={1080} />
+                <Image alt={Heading} src={cart_them} width={1920} height={1080} />
             </div>
             <div className="frontBody">
                 <div className="caseStudie__Title">
-                    {/* {heading} */}
+                    {Heading}
                 </div>
                 <div className="cs__desc mb-2">
                     <div className="ellipsis">

@@ -7,6 +7,8 @@ import Image from "next/image"
 import { ButtonSwap } from "@/components/button/Button"
 import YouTubePlayer from "@/components/product/videoPlay";
 import React, { useState } from "react";
+
+
 const PortfolioSection = ({ work, lastLine }) => {
     const [isPlay, setIsPlay] = useState(false)
     const [curVideo, setCurVideo] = useState('')

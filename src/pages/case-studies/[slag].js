@@ -32,7 +32,6 @@ const Page = ({ BaseUrl }) => {
 
         fetchData();
     }, [slag]);
-    console.log(caseStudie)
     return (
         caseStudie ? <>
             <Head>

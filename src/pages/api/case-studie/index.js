@@ -119,7 +119,7 @@ const case_studie = [
         id: 17,
         slag: 'https://youtu.be/PyFBZ0vs7js',
         Heading: 'Aashirvaad Svasti Lassi',
-        cart_them: '/use-case/Lassi-filter-card.png',
+        cart_them: '/use-case/Magazine-booth-Case-Studies-size.png',
         desc: "Choose your favourite flavour, take a sip, and feel refreshed. With classic Mango, tangy Strawberry, & rose options, satisfy your cravings and cool down instantly."
     },
 ]
