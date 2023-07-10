@@ -1,13 +1,14 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head'
-import { Col, Container, NavLink, Row } from 'react-bootstrap'
+import Link from 'next/link'
+import { Container } from 'react-bootstrap'
 
 const Home = () => {
     return (
         <>
             <Head>
-                <title><strong>Techkilla </strong></title>
+                <title><strong>privacy-policy </strong></title>
             </Head>
             <Header />
             <main>
@@ -74,12 +75,12 @@ const Home = () => {
                             </h5>
                             INCLUDE OPT-OUT LINKS FROM WHICHEVER SERVICES BEING USED. <br />
                             COMMON LINKS INCLUDE: <br /><br />
-                            FACEBOOK - <NavLink to="https://www.facebook.com/settings/?tab=ads" target='blank'>https://www.facebook.com/settings/?tab=ads</NavLink> <br />
-                            GOOGLE -  <NavLink to="https://www.google.com/settings/ads/anonymous" target='blank'>https://www.google.com/settings/ads/anonymous</NavLink> <br />
-                            BING - <NavLink to="https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads" target='blank'>https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads</NavLink>
+                            FACEBOOK - <Link href="https://www.facebook.com/settings/?tab=ads" target='blank'>https://www.facebook.com/settings/?tab=ads</Link> <br />
+                            GOOGLE -  <Link href="https://www.google.com/settings/ads/anonymous" target='blank'>https://www.google.com/settings/ads/anonymous</Link> <br />
+                            BING - <Link href="https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads" target='blank'>https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads</Link>
                             <br />
                             <p>
-                                Additionally, you can opt out of some of these services by visiting the Digital Advertising Alliance’s opt-out portal at:  <NavLink to='http://optout.aboutads.info/.' target='blank'>http://optout.aboutads.info/.</NavLink>
+                                Additionally, you can opt out of some of these services by visiting the Digital Advertising Alliance’s opt-out portal at:  <Link href='http://optout.aboutads.info/.' target='blank'>http://optout.aboutads.info/.</Link>
                             </p>
 
                             <h4>
