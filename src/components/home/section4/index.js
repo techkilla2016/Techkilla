@@ -7,7 +7,7 @@ import Image from "next/image"
 import { ButtonSwap } from "@/components/button/Button"
 import YouTubePlayer from "@/components/product/videoPlay";
 import React, { useState } from "react";
-
+import Counter from "@/components/common/Counter";
 
 const PortfolioSection = ({ work, lastLine }) => {
     const [isPlay, setIsPlay] = useState(false)
@@ -28,8 +28,8 @@ const PortfolioSection = ({ work, lastLine }) => {
             <Container>
                 <Row className='justify-content-center'>
                     <Col lg={7} md={8} sm={8}>
-                        <div className='colHeading text-center' >Our Portfolio</div>
-                        <div className="portfolioTitle text-center">
+                        <div className='colHeading text-center' data-aos="fade-down" data-aos-delay={0}>Our Portfolio</div>
+                        <div className="portfolioTitle text-center" data-aos="zoom-in-up" data-aos-delay={0}>
                             Featured Shots of Recent Works
                         </div>
                     </Col>
@@ -37,6 +37,7 @@ const PortfolioSection = ({ work, lastLine }) => {
             </Container>
             <Container>
                 <Swiper
+                    data-aos="zoom-in-up" data-aos-delay={0}
                     slidesPerView={1}
                     spaceBetween={10}
                     pagination={{
@@ -68,7 +69,7 @@ const PortfolioSection = ({ work, lastLine }) => {
                     {
                         work.map((item, keys) => {
                             return (
-                                <SwiperSlide key={keys} className="">
+                                <SwiperSlide key={keys} className="" >
                                     <div className="work_card">
                                         <div className="work_card_inner">
                                             <Image src={item?.thumbnail} alt={item?.Heading} width={1920} height={1080} />
@@ -92,67 +93,13 @@ const PortfolioSection = ({ work, lastLine }) => {
 
             <Container>
                 <Row>
-                    <Col xl={3} lg={3} md={6} sm={12} >
-                        <div className="recode my-4 py-4">
-                            <div className="recodeIcon">
-                                <Image src='/home/a01.png' alt="Happy Customers" width={1920} height={1080} />
-                            </div>
-                            <div className="recodeData">
-                                80+
-                            </div>
-                            <div className="recodeTitle">
-                                Happy Customers
-                            </div>
-                        </div>
-                    </Col>
-
-                    <Col xl={3} lg={3} md={6} sm={12} >
-                        <div className="recode my-4 py-4">
-                            <div className="recodeIcon">
-                                <Image src='/home/a02.png' alt="Projects Completed" width={1920} height={1080} />
-                            </div>
-                            <div className="recodeData">
-                                600+
-                            </div>
-                            <div className="recodeTitle">
-                                Projects Completed
-                            </div>
-                        </div>
-                    </Col>
-
-                    <Col xl={3} lg={3} md={6} sm={12} >
-                        <div className="recode my-4 py-4">
-                            <div className="recodeIcon">
-                                <Image src='/home/a03.png' alt="Organic Impressions" width={1920} height={1080} />
-                            </div>
-                            <div className="recodeData">
-                                5M+
-                            </div>
-                            <div className="recodeTitle">
-                                Organic Impressions
-                            </div>
-                        </div>
-                    </Col>
-
-                    <Col xl={3} lg={3} md={6} sm={12} >
-                        <div className="recode my-4 py-4">
-                            <div className="recodeIcon">
-                                <Image src='/home/a04.png' alt="Pro Awards Winner" width={1920} height={1080} />
-                            </div>
-                            <div className="recodeData">
-                                3+
-                            </div>
-                            <div className="recodeTitle">
-                                Pro Awards Winner
-                            </div>
-                        </div>
-                    </Col>
+                    <Counter />
                 </Row>
             </Container>
             <Container>
-                <Row className="justify-content-center pb-4">
+                <Row className="justify-content-center pb-4" data-aos="zoom-in" data-aos-delay={0}>
                     <Col xxl={9} xl={9} lg={9} md={10} sm={12} xm={12}>
-                        <div className="text-center ">
+                        <div className="text-center">
                             {lastLine}
                         </div>
                     </Col>

@@ -2,38 +2,30 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@/styles/globals.css'
 import Head from 'next/head'
 import { useEffect } from 'react';
-
+import 'aos/dist/aos.css'; 
+import AOS from 'aos'; 
+import Script from 'next/script';
 export default function App({ Component, pageProps }) {
-  // useEffect(() => {
-  //   // Move the dataLayer initialization here
-  //   window.dataLayer = window.dataLayer || [];
-
-  //   // Call the gtag function after initialization
-  //   function gtag() {
-  //     window.dataLayer.push(arguments);
-  //   }
-  //   gtag('js', new Date());
-  //   gtag('config', 'UA-252119773-1');
-  // }, []); // Empty dependency array ensures this runs only once on mount
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   return (
     <>
       <Head>
-        {/* <!-- Google tag (gtag.js) --> */}
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-252119773-1"></script> */}
-        <script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=UA-252119773-1" />
-        <script
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=UA-252119773-1" />
+        <Script
           id='google-analytics'
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
- gtag('config', 'UA-252119773-1', {
- page_path: window.location.pathname,
- });
-`,
+            __html: `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-252119773-1', {
+                page_path: window.location.pathname,
+                });
+                `,
           }}
         />
       </Head>

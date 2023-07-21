@@ -459,6 +459,15 @@ ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
+aos@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/aos/-/aos-2.3.4.tgz#eb1c29f5c1806a197cf6323080747547edd3db8e"
+  integrity sha512-zh/ahtR2yME4I51z8IttIt4lC1Nw0ktsFtmeDzID1m9naJnWXhCoARaCgNOGXb5CLy3zm+wqmRAEgMYB5E2HUw==
+  dependencies:
+    classlist-polyfill "^1.0.3"
+    lodash.debounce "^4.0.6"
+    lodash.throttle "^4.0.1"
+
 argparse@^1.0.7:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
@@ -534,6 +543,11 @@ chalk@^2.0.0:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
+
+classlist-polyfill@^1.0.3:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz#935bc2dfd9458a876b279617514638bcaa964a2e"
+  integrity sha512-GzIjNdcEtH4ieA2S8NmrSxv7DfEV5fmixQeyTmqmRmRJPGpRBaSnA2a0VrCjyT8iW8JjEdMbKzDotAJf+ajgaQ==
 
 classnames@^2.2.6, classnames@^2.3.1:
   version "2.3.2"
@@ -842,7 +856,12 @@ loader-utils@^2.0.0:
     emojis-list "^3.0.0"
     json5 "^2.1.2"
 
-lodash.throttle@^4.1.1:
+lodash.debounce@^4.0.6:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
+
+lodash.throttle@^4.0.1, lodash.throttle@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
@@ -1235,6 +1254,13 @@ react-transition-group@^4.4.2:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-visibility-sensor@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-5.1.1.tgz#5238380960d3a0b2be0b7faddff38541e337f5a9"
+  integrity sha512-cTUHqIK+zDYpeK19rzW6zF9YfT4486TIgizZW53wEZ+/GPBbK7cNS0EHyJVyHYacwFEvvHLEKfgJndbemWhB/w==
+  dependencies:
+    prop-types "^15.7.2"
 
 react@18.2.0:
   version "18.2.0"

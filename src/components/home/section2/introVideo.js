@@ -11,7 +11,7 @@ const IntroVideo = () => {
     }, []);
 
     return (
-        <div className='video_contain'>
+        <div className='video_contain' data-aos="fade-right" data-aos-delay="0">
             <video ref={videoRef} width="95%" muted loop={true}>
                 <source src="/intro.mp4" type="video/mp4" />
                 <source src="/intro.ogg" type="video/ogg" />
