@@ -135,6 +135,27 @@ const Home = ({ work }) => {
               </div>
             </Container>
           </div>
+
+
+          {/* // Section3 Service */}
+          <div className='pb-5' style={{ background: 'rgb(245 245 244)' }} >
+            <div className="micro_heading01" data-aos="zoom-in-down" data-aos-delay={100}>Our <span>Services</span></div>
+          </div>
+          <div className="section3">
+            <div className="section3Inner">
+              {/* <ServiceSection /> */}
+              <Container>
+                <Row>
+                  {
+                    data.map((curItem, index) => {
+                      return <Card {...curItem} delay={index} key={index} />
+                    })
+                  }
+                </Row>
+              </Container>
+            </div>
+          </div>
+
           <div className="microSection">
             <h1 className="section__title pb-5 text-center" data-aos="zoom-in-down" data-aos-delay="0">
               <span className='section__title-line-center'> <strong style={{
@@ -160,22 +181,6 @@ const Home = ({ work }) => {
               </div>
 
             </Container>
-          </div>
-
-          {/* // Section3 Service */}
-          <div className="section3">
-            <div className="section3Inner">
-              {/* <ServiceSection /> */}
-              <Container>
-                <Row>
-                  {
-                    data.map((curItem, index) => {
-                      return <Card {...curItem} delay={index} key={index} />
-                    })
-                  }
-                </Row>
-              </Container>
-            </div>
           </div>
 
           {/* // Section4 Service */}
