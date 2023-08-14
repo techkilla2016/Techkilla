@@ -157,11 +157,11 @@ const App = () => {
     return (
         <>
             <div className="main">
-                <div className='d-flex justify-content-between align-items-center py-1 px-3 qr-header'>
+                <div className='d-flex justify-content-between align-items-center py-1 px-3 qr-header flex-wrap'>
                     <div className="qr-logo">
                         <Image src="/logo/logo.png" width={70} height={70} />
                     </div>
-                    <div className="d-flex">
+                    <div className="d-flex flex-wrap">
                         <div className='text-dark'>
                             <strong>Email</strong> : example@gmail.com
                         </div>
