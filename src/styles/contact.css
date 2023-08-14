@@ -308,13 +308,15 @@
     display: grid;
     place-items: center;
 }
-.hero{
+
+.hero {
     width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .home-image .hero video {
     height: auto;
     max-width: 100%;
@@ -352,4 +354,24 @@
     .contactus {
         margin: 15px !important;
     }
+}
+
+
+/* ===========================  */
+.hero {
+    width: 100%;
+}
+.qr-header{
+    background: #fff;
+}
+.qr-logo {
+    width: 80px;
+    height: 80px;
+}
+.qr-logo img{
+    width: 100%;
+}
+.qr-footer-logo{
+    width: 200px;
+    height: 200px;
 }

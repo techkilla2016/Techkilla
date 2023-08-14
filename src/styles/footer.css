@@ -4,11 +4,14 @@
     padding-top: 200px;
 }
 
-.main-footer {
+.main-footer,
+.main-footer-01 {
     width: 100%;
     height: 100%;
     background-color: #002347;
     position: relative;
+}
+.main-footer{
     padding-top: 150px;
 }
 
@@ -839,4 +842,14 @@ footer .flex:last-child a:hover {
     font-weight: bold;
     letter-spacing: 0.33em;
     z-index: 3;
+}
+
+
+/* footer 01  */
+.footer-logo{
+    width: 200px;
+    height: 200px;
+}
+.footer-logo img{
+    width: 100%;
 }
