@@ -20,11 +20,11 @@ const Footer01 = ({ bg }) => {
                                     <div className='d-flex justify-content-evenly align-items-center flex-wrap'>
                                         <div className="my-3">
                                             <div>Email :-</div>
-                                            <div><HiOutlineMail /> example@gmail.com</div>
+                                            <div><HiOutlineMail /> Contact@techkilla.com</div>
                                         </div>
                                         <div className="py-3">
                                             <div>Phone :-</div>
-                                            <div><GiSmartphone /> +91 8909213245</div>
+                                            <div><GiSmartphone /> +91-7827362702</div>
                                         </div>
                                     </div>
                                     <p className='text-center mt-5'>Copyright © {new Date().getFullYear()} Techkilla Technologies Pvt. Ltd</p>

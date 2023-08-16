@@ -30,7 +30,6 @@ const Contact = ({ BaseUrl }) => {
                                     <div className="hero ">
                                         <ColLeft />
                                     </div>
-
                                 </div>
                                 <div className="col-lg-6 contact-form">
                                     <ContactFrom send={send} />

@@ -168,10 +168,10 @@ const App = () => {
                     <Col xxl={10} xl={10} lg={10} md={10} sm={10} xs={10}>
                         <div className="d-flex justify-content-end flex-wrap">
                             <div className='text-dark context-id ' >
-                                <strong><HiOutlineMail /></strong> example@gmail.com
+                                <strong><HiOutlineMail /></strong> Contact@techkilla.com
                             </div>
                             <div className='text-dark context-id' id='context-id'>
-                                <strong><GiSmartphone /></strong> +91 9878457645
+                                <strong><GiSmartphone /></strong> +91-7827362702
                             </div>
                         </div>
                     </Col>
