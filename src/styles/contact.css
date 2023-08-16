@@ -361,17 +361,39 @@
 .hero {
     width: 100%;
 }
-.qr-header{
+
+.qr-header {
     background: #fff;
 }
+
 .qr-logo {
     width: 80px;
     height: 80px;
 }
-.qr-logo img{
+
+.qr-logo img {
     width: 100%;
 }
-.qr-footer-logo{
+
+.qr-footer-logo {
     width: 200px;
     height: 200px;
+}
+
+#context-id {
+    padding-left: 15px;
+}
+
+@media screen and (max-width:425px) {
+    .qr-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .context-id {
+        font-size: 10px;
+    }
+    #context-id {
+        padding-left: 5px;
+    }
 }
