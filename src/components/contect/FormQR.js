@@ -5,25 +5,29 @@ import { Form, Col, Row, Button, Modal, ButtonGroup } from "react-bootstrap";
 // const SERVICE_URL = 
 
 const EMPTY_CONTACT = {
-    subject: "",
-    company: "",
-    email: "",
-    name: "",
-    message: "",
-    phone: "",
-    type: 'contact'
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    job: '',
+    country: ''
 };
-function QrForm() {
+
+function QrForm({ send }) {
     const [showModal, setShowModal] = useState(false);
     const [contact, setContact] = useState(EMPTY_CONTACT);
 
-    const onInputChange = (e) => {
+    const handleChange = (e) => {
         setContact({ ...contact, [e.target.name]: e.target.value });
     };
     const [show, setShow] = useState(false)
 
     const submitForm = async () => {
-
+        const isSend = await send(contact)
+        if (isSend) {
+            setShow(true)
+            setContact(EMPTY_CONTACT)
+        }
     }
 
     return (
@@ -38,8 +42,8 @@ function QrForm() {
                                     <Form.Control
                                         placeholder="Full Name *"
                                         name="name"
-                                        value={contact.name}
-                                        onChange={onInputChange}
+                                        value={contact?.name}
+                                        onChange={handleChange}
                                     />
                                 </Form.Group>
                             </Col>
@@ -49,8 +53,8 @@ function QrForm() {
                                         type="email"
                                         placeholder="Work Email *"
                                         name="email"
-                                        value={contact.email}
-                                        onChange={onInputChange}
+                                        value={contact?.email}
+                                        onChange={handleChange}
                                     />
                                 </Form.Group>
                             </Col>
@@ -60,8 +64,8 @@ function QrForm() {
                                     <Form.Control
                                         placeholder="Company Name *"
                                         name="company"
-                                        value={contact.company}
-                                        onChange={onInputChange}
+                                        value={contact?.company}
+                                        onChange={handleChange}
                                     />
                                 </Form.Group>
                             </Col>
@@ -71,30 +75,30 @@ function QrForm() {
                                     <Form.Control
                                         placeholder="Phone Number"
                                         name="phone"
-                                        value={contact.phone}
-                                        onChange={onInputChange}
+                                        value={contact?.phone}
+                                        onChange={handleChange}
                                     />
                                 </Form.Group>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <Form.Group controlId="subject">
+                                <Form.Group controlId="job">
                                     <Form.Control
-                                        name="subject"
-                                        value={contact.subject}
+                                        name="job"
+                                        value={contact?.job}
                                         placeholder="Job Title"
-                                        onChange={onInputChange}
+                                        onChange={handleChange}
                                     />
                                 </Form.Group>
                             </Col>
                             <Col>
-                                <Form.Group controlId="subject">
+                                <Form.Group controlId="country">
                                     <Form.Control
-                                        name="subject"
-                                        value={contact.subject}
+                                        name="country"
+                                        value={contact?.country}
                                         placeholder="Country/Region"
-                                        onChange={onInputChange}
+                                        onChange={handleChange}
                                     />
                                 </Form.Group>
                             </Col>

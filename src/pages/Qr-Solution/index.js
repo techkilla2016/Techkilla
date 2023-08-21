@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Container, Row, } from 'react-bootstrap'
 import QrForm from '@/components/contect/FormQR'
 import Image from 'next/image'
 import Footer01 from '@/components/footer/footer_01'
 import { HiOutlineMail } from 'react-icons/hi'
 import { GiSmartphone } from 'react-icons/gi'
+import axios from 'axios'
 const funData = [
     {
         title: 'Form to sign up for an event or campaign',
@@ -155,7 +156,17 @@ const choose_list = [
         img: '/microsite/choose_05.png'
     },
 ]
-const App = () => {
+
+const App = ({ BaseUrl }) => {
+    const send = async (contact) => {
+        try {
+            const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
+            return true
+        } catch (error) {
+            return false;
+        }
+    };
+
     return (
         <>
             <div className="main">
@@ -186,7 +197,7 @@ const App = () => {
 
                             </div>
                             <div className="col-lg-6 contact-form">
-                                <QrForm />
+                                <QrForm send={send} />
                             </div>
                         </div>
                     </div>
@@ -360,3 +371,11 @@ const App = () => {
 }
 
 export default App
+
+export const getStaticProps = async () => {
+    return {
+        props: {
+            BaseUrl: process.env.BaseUrl
+        }
+    }
+}
