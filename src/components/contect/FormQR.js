@@ -16,6 +16,7 @@ const EMPTY_CONTACT = {
 function QrForm({ send }) {
     const [showModal, setShowModal] = useState(false);
     const [contact, setContact] = useState(EMPTY_CONTACT);
+    const [isLoad, setIsLoad] = useState(false)
 
     const handleChange = (e) => {
         setContact({ ...contact, [e.target.name]: e.target.value });
@@ -23,10 +24,14 @@ function QrForm({ send }) {
     const [show, setShow] = useState(false)
 
     const submitForm = async () => {
-        const isSend = await send(contact)
-        if (isSend) {
-            setShow(true)
-            setContact(EMPTY_CONTACT)
+        const { name, email, company, phone, job, country } = contact
+        if (name && email && company && phone && job && country) {
+            setIsLoad(true)
+            const isSend = await send(contact)
+            if (isSend) {
+                setShow(true)
+                setContact(EMPTY_CONTACT)
+            }
         }
     }
 
@@ -105,8 +110,13 @@ function QrForm({ send }) {
                         </Row>
                         <Row>
                             <Col lg="auto">
-                                <Button className="btn-action" onClick={submitForm}>
-                                    Contact Us
+                                <Button className="btn-action d-flex align-items-center justify-content-center" onClick={submitForm}>
+                                    {
+                                        isLoad ? <div class="spinner-border text-secondary" role="status">
+                                        </div> : <div className="px-3">
+                                            submit
+                                        </div>
+                                    }
                                 </Button>
                             </Col>
                             <Col>
@@ -140,12 +150,15 @@ function QrForm({ send }) {
                     size="lg"
                     show={show}
                     centered
-                    onHide={() => setShow(false)}
+                    onHide={() => {
+                        setShow(false)
+                        setIsLoad(false)
+                    }}
                     aria-labelledby="example-modal-sizes-title-sm"
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="example-modal-sizes-title-sm">
-                            Submission Success
+                            <strong>Submission Success</strong>
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="text-center">
@@ -153,7 +166,10 @@ function QrForm({ send }) {
                     </Modal.Body>
                     <Modal.Footer>
                         <ButtonGroup>
-                            <Button variant="secondary" size="sm" onClick={() => setShow(false)}>
+                            <Button variant="secondary" size="sm" onClick={() => {
+                                setShow(false)
+                                setIsLoad(false)
+                            }}>
                                 close
                             </Button>
                         </ButtonGroup>
