@@ -78,7 +78,7 @@ function QrForm({ send }) {
                             <Col md={6}>
                                 <Form.Group controlId="phone">
                                     <Form.Control
-                                        placeholder="Phone Number"
+                                        placeholder="Phone Number *"
                                         name="phone"
                                         value={contact?.phone}
                                         onChange={handleChange}
@@ -92,7 +92,7 @@ function QrForm({ send }) {
                                     <Form.Control
                                         name="job"
                                         value={contact?.job}
-                                        placeholder="Job Title"
+                                        placeholder="Job Title *"
                                         onChange={handleChange}
                                     />
                                 </Form.Group>
@@ -102,7 +102,7 @@ function QrForm({ send }) {
                                     <Form.Control
                                         name="country"
                                         value={contact?.country}
-                                        placeholder="Country/Region"
+                                        placeholder="Country/Region *"
                                         onChange={handleChange}
                                     />
                                 </Form.Group>

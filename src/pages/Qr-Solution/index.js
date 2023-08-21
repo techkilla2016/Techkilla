@@ -160,7 +160,7 @@ const choose_list = [
 const App = ({ BaseUrl }) => {
     const send = async (contact) => {
         try {
-            const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
+            const reponce = await axios.post(`${BaseUrl}/api/email/contect`, contact)
             return true
         } catch (error) {
             return false;
