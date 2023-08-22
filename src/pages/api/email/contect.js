@@ -58,7 +58,7 @@ export default function handler(req, res) {
     const data = req.body
     const mainOption = {
       from: process.env.EMAIL,
-      to: process.env.RE_EMAIL,
+      to: process.env.EMAIL,
       subject: req?.body?.job,
       html: contactForm(data)
     }
