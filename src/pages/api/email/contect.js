@@ -1,8 +1,8 @@
 import nodeMalter from 'nodemailer'
 export default function handler(req, res) {
-    const contactForm = (data) => {
-        const { name, email, company, phone, job, country } = data
-        return `
+  const contactForm = (data) => {
+    const { name, email, company, phone, job, country } = data
+    return `
         <html>
         <head>
           <style>
@@ -43,42 +43,43 @@ export default function handler(req, res) {
         </body>
       </html>
       `
-    }
+  }
 
-    if (req.method === 'POST') {
-        const transporter = nodeMalter.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.EMAIL,
-                pass: process.env.EMAIL_PASSWORD
-            },
-            port: 465,
-            host: 'smtp.gmail.com'
-        })
-        const data = req.body
-        const mainOption = {
-            from: process.env.EMAIL,
-            to: req.body.type === 'contact' ? process.env.RE_EMAIL : process.env.EMAIL,
-            subject: req?.body?.subject,
-            html: req.body.type === 'contact' ? contactForm(data) : careersForm(data)
-        }
-        transporter.sendMail(mainOption, (error, info) => {
-            if (error) {
-                res.status(405).json({
-                    massage: "email sending failed",
-                    status: false
-                })
-            } else {
-                res.status(200).json({
-                    massage: "email sending success",
-                    status: true
-                })
-            }
-        })
-    } else {
-        res.status(405).json({
-            status: false,
-            massage: 'Method Not Allowed'
-        })
+  if (req.method === 'POST') {
+    const transporter = nodeMalter.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASSWORD
+      },
+      port: 465,
+      host: 'smtp.gmail.com'
+    })
+    const data = req.body
+    const mainOption = {
+      from: process.env.EMAIL,
+      to: process.env.RE_EMAIL,
+      subject: req?.body?.job,
+      html: contactForm(data)
     }
+    transporter.sendMail(mainOption, (error, info) => {
+      if (error) {
+        console.log(error)
+        res.status(405).json({
+          massage: "email sending failed",
+          status: false
+        })
+      } else {
+        res.status(200).json({
+          massage: "email sending success",
+          status: true
+        })
+      }
+    })
+  } else {
+    res.status(405).json({
+      status: false,
+      massage: 'Method Not Allowed'
+    })
+  }
 }
