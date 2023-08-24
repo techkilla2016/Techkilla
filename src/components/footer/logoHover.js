@@ -7,11 +7,11 @@ const LogoHover = () => {
     return (
         <>
             <div className="main_footer_hover">
-                <div className="main_footer_hover_back">
+                {/* <div className="main_footer_hover_back">
                     <p className="logo_image_footer">
                         <Image src='/logo/logo.png' alt='Techkilla' width={1920} height={1080} />
                     </p>
-                </div>
+                </div> */}
                 <div className="hover_effet">
                     <Link className="card_icon_footer instagram" href='http://instagram.com/techkillatechnologies/' target='_blank'>
                         <svg fillRule="nonzero" height="30px" width="30px" viewBox="0,0,256,256" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" className="instagram" >

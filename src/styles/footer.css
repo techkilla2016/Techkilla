@@ -11,7 +11,8 @@
     background-color: #002347;
     position: relative;
 }
-.main-footer{
+
+.main-footer {
     padding-top: 150px;
 }
 
@@ -478,6 +479,14 @@ footer .flex:last-child a:hover {
     .demoText {
         font-size: 26px;
     }
+
+    .main-footer {
+        padding-top: 225px;
+    }
+
+    .demoText {
+        text-align: center;
+    }
 }
 
 @media (max-width:426px) {
@@ -555,17 +564,7 @@ footer .flex:last-child a:hover {
     justify-content: center;
 }
 
-.hover_effet:hover .card_icon_footer {
-    background: rgba(255, 255, 255, 0.596);
-    backdrop-filter: blur(5px);
-}
-
-.hover_effet:hover {
-    background: #fff;
-}
-
 .card_icon_footer .instagram {
-    opacity: 0;
     transition: .2s ease-in-out;
     fill: #cc39a4;
 }
@@ -575,7 +574,6 @@ footer .flex:last-child a:hover {
 }
 
 .card_icon_footer:nth-child(2) .twitter {
-    opacity: 0;
     transition: .2s ease-in-out;
     fill: #03A9F4;
 }
@@ -588,7 +586,6 @@ footer .flex:last-child a:hover {
 }
 
 .card_icon_footer:nth-child(3) .dribble {
-    opacity: 0;
     transition: .2s ease-in-out;
 }
 
@@ -597,7 +594,6 @@ footer .flex:last-child a:hover {
 }
 
 .card_icon_footer:nth-child(4) .facebook {
-    opacity: 0;
     transition: .2s ease-in-out;
     font-size: 20px;
     color: #3f6fb2;
@@ -608,7 +604,6 @@ footer .flex:last-child a:hover {
 }
 
 .card_icon_footer:nth-child(5) .youtube {
-    opacity: 0;
     transition: .2s ease-in-out;
     font-size: 20px;
     color: #f70000;
@@ -620,7 +615,6 @@ footer .flex:last-child a:hover {
 }
 
 .card_icon_footer:nth-child(6) .linkedin {
-    opacity: 0;
     transition: .2s ease-in-out;
     color: #2764ac;
 
@@ -634,7 +628,6 @@ footer .flex:last-child a:hover {
 }
 
 .card_icon_footer:nth-child(7) .github {
-    opacity: 0;
     transition: .2s ease-in-out;
 }
 
@@ -643,7 +636,6 @@ footer .flex:last-child a:hover {
 }
 
 .card_icon_footer:nth-child(8) .telegram {
-    opacity: 0;
     transition: .2s ease-in-out;
     fill: #29b6f6;
 }
@@ -654,7 +646,6 @@ footer .flex:last-child a:hover {
 }
 
 .card_icon_footer:nth-child(9) .reddit {
-    opacity: 0;
     transition: .2s ease-in-out;
     color: red;
     font-size: 24px;
@@ -683,11 +674,7 @@ footer .flex:last-child a:hover {
     cursor: pointer;
 }
 
-.hover_effet:hover .main_footer_hover_back {
-    opacity: 0;
-}
-
-.hover_effet:hover .card_icon_footer {
+.card_icon_footer {
     margin: .2em;
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -695,49 +682,9 @@ footer .flex:last-child a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.hover_effet:hover .card_icon_footer:nth-child(5) {
-    border: transparent;
-}
-
-.hover_effet:hover .text {
+.hover_effet .text {
     opacity: 0;
     z-index: -3;
-}
-
-.hover_effet:hover .instagram {
-    opacity: 1;
-}
-
-.hover_effet:hover .twitter {
-    opacity: 1;
-}
-
-.hover_effet:hover .dribble {
-    opacity: 1;
-}
-
-.hover_effet:hover .facebook {
-    opacity: 1;
-}
-
-.hover_effet:hover .youtube {
-    opacity: 1;
-}
-
-.hover_effet:hover .linkedin {
-    opacity: 1;
-}
-
-.hover_effet:hover .github {
-    opacity: 1;
-}
-
-.hover_effet:hover .telegram {
-    opacity: 1;
-}
-
-.hover_effet:hover .reddit {
-    opacity: 1;
 }
 
 .card_icon_footer:nth-child(1):hover {
@@ -846,10 +793,11 @@ footer .flex:last-child a:hover {
 
 
 /* footer 01  */
-.footer-logo{
+.footer-logo {
     width: 200px;
     height: 200px;
 }
-.footer-logo img{
+
+.footer-logo img {
     width: 100%;
 }
