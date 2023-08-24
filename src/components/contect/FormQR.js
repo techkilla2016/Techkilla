@@ -1,44 +1,54 @@
 import { useState } from "react";
 import { Form, Col, Row, Button, Modal, ButtonGroup } from "react-bootstrap";
+import CountrySelect from "react-bootstrap-country-select";
+import "bootstrap/dist/css/bootstrap.css";
+import "react-bootstrap-country-select/dist/react-bootstrap-country-select.css";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
-
-// const SERVICE_URL = 
+// const SERVICE_URL =
 
 const EMPTY_CONTACT = {
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    job: '',
-    country: ''
+    name: "",
+    email: "",
+    company: "",
+    job: "",
+    country: "",
 };
 
 function QrForm({ send }) {
+    const [phoneNum, setPhoneNum] = useState();
+    const [value, setValue] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [contact, setContact] = useState(EMPTY_CONTACT);
-    const [isLoad, setIsLoad] = useState(false)
+    const [isLoad, setIsLoad] = useState(false);
 
     const handleChange = (e) => {
         setContact({ ...contact, [e.target.name]: e.target.value });
     };
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(false);
 
     const submitForm = async () => {
-        const { name, email, company, phone, job, country } = contact
+        const { name, email, company, job, country } = contact;
         if (name && email && company && phone && job && country) {
-            setIsLoad(true)
-            const isSend = await send(contact)
+            setIsLoad(true);
+            const isSend = await send({ ...contact, phone });
             if (isSend) {
-                setShow(true)
-                setContact(EMPTY_CONTACT)
+                setShow(true);
+                setContact(EMPTY_CONTACT);
             }
         }
-    }
+    };
+    const [phone, setPhone] = useState("");
+
+    const handlePhoneChange = (value) => {
+        setPhone(value);
+    };
 
     return (
-        <div className="contactus px-3" id="contact" >
+        <div className="contactus px-3 py-0" id="contact">
             <div className="container">
-                <h3 className="fw-bold" >Let's Talk</h3>
+                <h3 className="fw-bold">Let's Talk</h3>
                 <Row className={`main-row ${showModal ? "form-submitted" : ""}`}>
                     <Col className="details-form">
                         <Row>
@@ -63,27 +73,23 @@ function QrForm({ send }) {
                                     />
                                 </Form.Group>
                             </Col>
-
-                            <Col md={6}>
-                                <Form.Group controlId="company">
+                            <Col>
+                                <Form.Group controlId="country">
                                     <Form.Control
-                                        placeholder="Company Name *"
-                                        name="company"
-                                        value={contact?.company}
+                                        name="country"
+                                        value={contact?.country}
+                                        placeholder="Country/Region *"
                                         onChange={handleChange}
                                     />
                                 </Form.Group>
                             </Col>
-
                             <Col md={6}>
-                                <Form.Group controlId="phone">
-                                    <Form.Control
-                                        placeholder="Phone Number *"
-                                        name="phone"
-                                        value={contact?.phone}
-                                        onChange={handleChange}
-                                    />
-                                </Form.Group>
+                                <PhoneInput
+                                    className="phoneInput"
+                                    defaultCountry="US" // Set the default country
+                                    value={phone}
+                                    onChange={handlePhoneChange}
+                                />
                             </Col>
                         </Row>
                         <Row>
@@ -97,32 +103,42 @@ function QrForm({ send }) {
                                     />
                                 </Form.Group>
                             </Col>
+                        </Row>
+                        <Row>
                             <Col>
-                                <Form.Group controlId="country">
+                                <Form.Group controlId="company">
                                     <Form.Control
-                                        name="country"
-                                        value={contact?.country}
-                                        placeholder="Country/Region *"
+                                        placeholder="Company Name *"
+                                        name="company"
+                                        value={contact?.company}
                                         onChange={handleChange}
                                     />
                                 </Form.Group>
                             </Col>
                         </Row>
                         <Row>
-                            <Col lg="auto">
-                                <Button className="btn-action d-flex align-items-center justify-content-center" onClick={submitForm}>
-                                    {
-                                        isLoad ? <div class="spinner-border text-secondary" role="status">
-                                        </div> : <div className="px-3">
-                                            submit
-                                        </div>
-                                    }
-                                </Button>
-                            </Col>
-                            <Col>
+                            <Col className="mb-3 px-3">
                                 <div className="disclaimer">
-                                    * By submitting this form, you are accepting our <u>Terms of use</u> and our <u>Privacy policy .</u>
+                                    * By submitting this form, you are accepting our{" "}
+                                    <u>Terms of use</u> and our <u>Privacy policy .</u>
                                 </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col lg="auto">
+                                <Button
+                                    className="btn-action d-flex align-items-center justify-content-center"
+                                    onClick={submitForm}
+                                >
+                                    {isLoad ? (
+                                        <div
+                                            class="spinner-border text-secondary"
+                                            role="status"
+                                        ></div>
+                                    ) : (
+                                        <div className="px-3">submit</div>
+                                    )}
+                                </Button>
                             </Col>
                         </Row>
                     </Col>
@@ -142,8 +158,8 @@ function QrForm({ send }) {
                             <div className="subtitle">your message has been sent!</div>
                         </div>
                     </div>
-                )}</div>
-
+                )}
+            </div>
 
             <>
                 <Modal
@@ -151,8 +167,8 @@ function QrForm({ send }) {
                     show={show}
                     centered
                     onHide={() => {
-                        setShow(false)
-                        setIsLoad(false)
+                        setShow(false);
+                        setIsLoad(false);
                     }}
                     aria-labelledby="example-modal-sizes-title-sm"
                 >
@@ -162,14 +178,23 @@ function QrForm({ send }) {
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="text-center">
-                        Thank you for your submission! Our team will review your information and get back to you as soon as possible. In the meantime, feel free to explore our website and learn more about our products/services. If you have any urgent inquiries, please don't hesitate to contact us directly. We appreciate your interest in our business and look forward to speaking with you soon.
+                        Thank you for your submission! Our team will review your information
+                        and get back to you as soon as possible. In the meantime, feel free
+                        to explore our website and learn more about our products/services.
+                        If you have any urgent inquiries, please don't hesitate to contact
+                        us directly. We appreciate your interest in our business and look
+                        forward to speaking with you soon.
                     </Modal.Body>
                     <Modal.Footer>
                         <ButtonGroup>
-                            <Button variant="secondary" size="sm" onClick={() => {
-                                setShow(false)
-                                setIsLoad(false)
-                            }}>
+                            <Button
+                                variant="secondary"
+                                size="sm"
+                                onClick={() => {
+                                    setShow(false);
+                                    setIsLoad(false);
+                                }}
+                            >
                                 close
                             </Button>
                         </ButtonGroup>
