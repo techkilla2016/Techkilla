@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form, Col, Row, Button, Modal, ButtonGroup } from "react-bootstrap";
+import PhoneInput from "react-phone-input-2";
 
 
 // const SERVICE_URL = 
@@ -10,7 +11,6 @@ const EMPTY_CONTACT = {
   email: "",
   name: "",
   message: "",
-  phone: "",
   type: 'contact'
 };
 function ContactFrom({ send }) {
@@ -22,8 +22,14 @@ function ContactFrom({ send }) {
   };
   const [show, setShow] = useState(false)
 
+  const [phone, setPhone] = useState("");
+
+  const handlePhoneChange = (value) => {
+    setPhone(value);
+  };
+
   const submitForm = async () => {
-    const isSend = await send(contact)
+    const isSend = await send({ ...contact, phone })
     if (isSend) {
       setShow(true)
       setContact(EMPTY_CONTACT)
@@ -71,14 +77,12 @@ function ContactFrom({ send }) {
               </Col>
 
               <Col md={6}>
-                <Form.Group controlId="phone">
-                  <Form.Control
-                    placeholder="Phone Number"
-                    name="phone"
-                    value={contact.phone}
-                    onChange={onInputChange}
-                  />
-                </Form.Group>
+                <PhoneInput
+                  className="phoneInput"
+                  defaultCountry="IN" // Set the default country
+                  value={phone}
+                  onChange={handlePhoneChange}
+                />
               </Col>
             </Row>
             <Row>
@@ -108,15 +112,17 @@ function ContactFrom({ send }) {
               </Col>
             </Row>
             <Row>
-              <Col lg="auto">
-                <Button className="btn-action" onClick={submitForm}>
-                  Contact Us
-                </Button>
-              </Col>
-              <Col>
+              <Col className="mb-4 px-5">
                 <div className="disclaimer">
                   * By submitting this form, you are accepting our <u>Terms of use</u> and our <u>Privacy policy .</u>
                 </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col lg="auto" className="px-4">
+                <Button className="btn-action" onClick={submitForm}>
+                  Contact Us
+                </Button>
               </Col>
             </Row>
           </Col>

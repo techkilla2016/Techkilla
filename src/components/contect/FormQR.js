@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { Form, Col, Row, Button, Modal, ButtonGroup } from "react-bootstrap";
-import CountrySelect from "react-bootstrap-country-select";
 import "bootstrap/dist/css/bootstrap.css";
 import "react-bootstrap-country-select/dist/react-bootstrap-country-select.css";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 
 // const SERVICE_URL =
 
@@ -17,8 +15,6 @@ const EMPTY_CONTACT = {
 };
 
 function QrForm({ send }) {
-    const [phoneNum, setPhoneNum] = useState();
-    const [value, setValue] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [contact, setContact] = useState(EMPTY_CONTACT);
     const [isLoad, setIsLoad] = useState(false);

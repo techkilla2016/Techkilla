@@ -49,11 +49,6 @@ const Footer = ({ bg }) => {
                     <div className='bookDemo'>
                         <Row>
                             <Col xxl={4} lg={4} md={4} xs={12}>
-                                {/* <div className='logo_outer'>
-                                    <Link href='/' className='demo_logo'>
-                                        <Image src='/logo/logo.png' alt='Techkilla' width={1920} height={1080} />
-                                    </Link>
-                                </div> */}
                                 <div className="footer_logo_section">
                                     <LogoHover />
                                 </div>
