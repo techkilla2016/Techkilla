@@ -2,7 +2,7 @@ import Footer from '@/components/footer'
 import Header from '@/components/header'
 import Head from 'next/head';
 import React from 'react'
-import ContactFrom from './ContactForm';
+import ContactFrom from '@/components/contect/ContactForm';
 import ColLeft from '@/components/home/section2/left';
 import axios from 'axios';
 
