@@ -32,6 +32,7 @@
     "react-scroll-trigger": "^0.6.14",
     "react-slider-swiper": "^2.0.6",
     "react-visibility-sensor": "^5.1.1",
+    "sass": "^1.67.0",
     "styled-components": "^5.3.6",
     "swiper": "^9.1.0"
   },

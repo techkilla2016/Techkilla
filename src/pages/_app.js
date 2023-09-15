@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "react-phone-input-2/lib/style.css";
+import 'aos/dist/aos.css'; 
 import '@/styles/globals.css'
+import '@/styles/photo-ai.scss'
 import Head from 'next/head'
 import { useEffect } from 'react';
-import 'aos/dist/aos.css'; 
 import AOS from 'aos'; 
 import Script from 'next/script';
 export default function App({ Component, pageProps }) {

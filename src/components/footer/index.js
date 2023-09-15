@@ -17,7 +17,7 @@ const Footer = ({ bg }) => {
     return (
         <footer>
             {/* <ChatBoat /> */}
-            <div className='aside_social'>
+            {/* <div className='aside_social'>
                 <div className='link_box'>
                     <Link href='http://wa.me/917827362702?text=Hello Techkilla team! %0A%0A I am looking for some Tech Engagement solutions- could you help me with the process and any additional details I need to know?' className='link' target='_blank'>
                         <span className='icon' id="wapp"><BsWhatsapp /></span>
@@ -33,17 +33,12 @@ const Footer = ({ bg }) => {
                         <span className='icon' id="face"><ImFacebook /></span>
                     </Link>
                 </div>
-                {/* <div className='link_box'>
-                    <Link href='https://twitter.com/techkilla15' className='link' target='_blank'>
-                        <span className='icon' id="twt"><AiOutlineTwitter /></span>
-                    </Link>
-                </div> */}
                 <div className='link_box'>
                     <Link href='https://www.linkedin.com/company/techkilla' className='link' target='_blank'>
                         <span className='icon' id="twt"><FaLinkedinIn /></span>
                     </Link>
                 </div>
-            </div>
+            </div> */}
             <div className="footer" style={{ background: bg }}>
                 <div className='bookdemo-footer'>
                     <div className='bookDemo'>
