@@ -5,7 +5,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { SiTailwindcss } from 'react-icons/si'
 import { FaTeamspeak } from 'react-icons/fa'
-import { FaArrowTrendUp } from 'react-icons/fa6'
+import { IoMdTrendingUp } from 'react-icons/io'
 import { MdDone } from 'react-icons/md'
 const PhotoAI = () => {
     const aiList = [
@@ -120,7 +120,7 @@ const PhotoAI = () => {
                                 <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12}>
                                     <div className='inner d-flex flex-column align-items-center'>
                                         <div className="icon">
-                                            <FaArrowTrendUp />
+                                            <IoMdTrendingUp />
                                         </div>
                                         <h5 className="head text-center">
                                             Embracing the Pinnacle of Current Style
