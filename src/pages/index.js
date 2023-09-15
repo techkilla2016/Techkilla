@@ -7,6 +7,7 @@ import ColLeft from '@/components/home/section2/left'
 import ColRight from '@/components/home/section2/right'
 import PortfolioSection from '@/components/home/section4'
 import WhatWeDo from '@/components/home/section5'
+import Hero from '@/components/photo-ai/hero'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -60,11 +61,12 @@ const Home = ({ work }) => {
       <Header />
       <main>
         <div className="main">
+          <Hero isContinue={true} />
+         
           <div className='Section2'>
             <Container>
               <Row>
                 <Col lg={6} md={12} sm={12} >
-                  {/* <ColLeft /> */}
                   <IntroVideo />
                 </Col>
                 <Col lg={6} md={12} sm={12} >
@@ -92,7 +94,6 @@ const Home = ({ work }) => {
                   </div>
                 </Col>
                 <Col xxl={4} xl={4} lg={4} md={12} sm={12} data-aos="fade-up" data-aos-delay="200">
-                  {/* <div className="sub_secction"> */}
                   <div className='d-flex justify-content-start'>
                     <div className="img_section">
                       <div className='img'>
@@ -106,7 +107,6 @@ const Home = ({ work }) => {
                       </div>
                     </div>
                   </div>
-                  {/* </div> */}
                 </Col>
                 <Col xxl={4} xl={4} lg={4} md={12} sm={12} data-aos="fade-up" data-aos-delay="400">
                   <div className='d-flex justify-content-start'>

@@ -7,6 +7,7 @@ import { SiTailwindcss } from 'react-icons/si'
 import { FaTeamspeak } from 'react-icons/fa'
 import { IoMdTrendingUp } from 'react-icons/io'
 import { MdDone } from 'react-icons/md'
+import Hero from '@/components/photo-ai/hero';
 const PhotoAI = () => {
     const aiList = [
         "No Need for Staffing",
@@ -25,68 +26,7 @@ const PhotoAI = () => {
             <main>
                 <div className="main">
                     <div className='mainContainer'>
-                        <div className="photo-ai-home">
-                            <Container fluid>
-                                <Row className='py-5'>
-                                    <Col xxl={7} xl={7} lg={7} md={12} sm={12} xs={12}>
-                                        <div className="d-flex align-items-center flex-column justify-content-center">
-                                            <h1 className='photo-ai-heading text-center'>AI Photo Booth</h1>
-                                            <p className='photo-ai-para py-3'>
-                                                Artfcial intelligence photo booth <br /> Technology powerd by techkilla.com
-                                            </p>
-                                            <div className="d-flex align-items-center justify-content-center  ai-photo-convert-container">
-                                                <div className="ai-modal">
-                                                    <img alt='AI Photo' src='/photo-ai/Model.png' />
-                                                    <p className='text-center text-light fw-bold'>Orignal</p>
-                                                </div>
-                                                <div className="ai-convert-arrow mx-2">
-                                                    <img alt='AI Photo' src='/photo-ai/Arrow-01.png' />
-                                                    <p className='text-center text-light fw-bold'>Ai Generated Avatar</p>
-                                                </div>
-                                            </div>
-                                            <div className="d-flex">
-                                                {/* <button className=''>Book Now</button> */}
-                                            </div>
-
-                                        </div>
-                                    </Col>
-                                    <Col xxl={5} xl={5} lg={5} md={12} sm={12} xs={12}>
-                                        <Row className='align-items-start justify-content-center'>
-                                            <Col>
-                                                <div className="ai-photo-result my-4">
-                                                    <img alt='AI Photo' src='/photo-ai/ai7.png' />
-                                                    <img alt='AI Photo' src='/photo-ai/ai_7.png' />
-                                                </div>
-                                                <div className="ai-photo-result my-4">
-                                                    <img alt='AI Photo' src='/photo-ai/ai2.png' />
-                                                    <img alt='AI Photo' src='/photo-ai/ai_2.png' />
-                                                </div>
-                                            </Col>
-                                            <Col className='pt-5 mt-5'>
-                                                <div className="ai-photo-result my-4">
-                                                    <img alt='AI Photo' src='/photo-ai/ai8.png' />
-                                                    <img alt='AI Photo' src='/photo-ai/ai_8.png' />
-                                                </div>
-                                                <div className="ai-photo-result my-4">
-                                                    <img alt='AI Photo' src='/photo-ai/ai4.png' />
-                                                    <img alt='AI Photo' src='/photo-ai/ai_4.png' />
-                                                </div>
-                                            </Col>
-                                            <Col>
-                                                <div className="ai-photo-result my-4">
-                                                    <img alt='AI Photo' src='/photo-ai/ai5.png' />
-                                                    <img alt='AI Photo' src='/photo-ai/ai_5.png' />
-                                                </div>
-                                                <div className="ai-photo-result my-4">
-                                                    <img alt='AI Photo' src='/photo-ai/ai6.png' />
-                                                    <img alt='AI Photo' src='/photo-ai/ai_6.png' />
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </div>
+                        <Hero isContinue={false} />
 
                         {/* section 2  */}
                         <Container className='photo-ai-company py-5'>

@@ -405,3 +405,42 @@
     transform: scale(0.97);
     box-shadow: 7px 5px 56px -10px #fdb714;
 }
+
+
+
+/* scroll btn  */
+
+.scroll-btn {
+    cursor: pointer;
+    font-family: Helvetica, "sans-serif";
+    transition: all .2s;
+    padding: 10px 30px;
+    border-radius: 100px;
+    color: #fff;
+    background: linear-gradient(45deg, #ffac00, #e35a00);
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.scroll-btn:hover {
+    background: linear-gradient(45deg, #ffac00, #e35a00);
+    color: #fafafa !important;
+}
+
+.scroll-btn>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+.scroll-btn:hover svg {
+    transform: translateX(5px);
+    color: #fafafa;
+}
+
+.scroll-btn:active {
+    transform: scale(0.95);
+}
