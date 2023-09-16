@@ -8,7 +8,6 @@ import { FaTeamspeak } from 'react-icons/fa'
 import { IoMdTrendingUp } from 'react-icons/io'
 import { MdDone } from 'react-icons/md'
 import Hero from '@/components/photo-ai/hero';
-import Slider from '@/components/photo-ai/slider';
 const PhotoAI = () => {
     const aiList = [
         "No Need for Staffing",
@@ -206,9 +205,9 @@ const PhotoAI = () => {
 
 
                         {/* section 6 */}
-                        <Container fluid className='ai-slilder py-5'>
-                            <Slider />
-                        </Container>
+                        {/* <Container fluid className='ai-slilder py-5'>
+                            
+                        </Container> */}
                         <Footer />
                     </div>
                 </div>
