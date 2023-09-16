@@ -3,6 +3,26 @@ import { Col, Container, Row } from 'react-bootstrap'
 import ScrollBtn from '../button/scrollBtn'
 
 const Hero = ({ isContinue }) => {
+    const model = [
+        {
+            img1: '/photo-ai/ai7.png',
+            img_1: '/photo-ai/ai_7.png',
+            img2: '/photo-ai/ai2.png',
+            img_2: '/photo-ai/ai_2.png'
+        },
+        {
+            img1: '/photo-ai/ai3.png',
+            img_1: '/photo-ai/ai_3.png',
+            img2: '/photo-ai/ai4.png',
+            img_2: '/photo-ai/ai_4.png'
+        },
+        {
+            img1: '/photo-ai/ai5.png',
+            img_1: '/photo-ai/ai_5.png',
+            img2: '/photo-ai/ai6.png',
+            img_2: '/photo-ai/ai_6.png'
+        },
+    ]
     return (
         <div className="photo-ai-home">
             <Container fluid>
@@ -31,36 +51,20 @@ const Hero = ({ isContinue }) => {
                     </Col>
                     <Col xxl={5} xl={5} lg={5} md={12} sm={12} xs={12}>
                         <Row className='align-items-start justify-content-center'>
-                            <Col>
-                                <div className="ai-photo-result my-4" data-aos="fade-up" data-aos-delay={100}>
-                                    <img alt='AI Photo' src='/photo-ai/ai7.png' />
-                                    <img alt='AI Photo' src='/photo-ai/ai_7.png' />
-                                </div>
-                                <div className="ai-photo-result my-4" data-aos="fade-up" data-aos-delay={200}>
-                                    <img alt='AI Photo' src='/photo-ai/ai2.png' />
-                                    <img alt='AI Photo' src='/photo-ai/ai_2.png' />
-                                </div>
-                            </Col>
-                            <Col className='pt-5 mt-5'>
-                                <div className="ai-photo-result my-4" data-aos="fade-up" data-aos-delay={300}>
-                                    <img alt='AI Photo' src='/photo-ai/ai8.png' />
-                                    <img alt='AI Photo' src='/photo-ai/ai_8.png' />
-                                </div>
-                                <div className="ai-photo-result my-4" data-aos="fade-up" data-aos-delay={400}>
-                                    <img alt='AI Photo' src='/photo-ai/ai4.png' />
-                                    <img alt='AI Photo' src='/photo-ai/ai_4.png' />
-                                </div>
-                            </Col>
-                            <Col>
-                                <div className="ai-photo-result my-4" data-aos="fade-up" data-aos-delay={500}>
-                                    <img alt='AI Photo' src='/photo-ai/ai5.png' />
-                                    <img alt='AI Photo' src='/photo-ai/ai_5.png' />
-                                </div>
-                                <div className="ai-photo-result my-4" data-aos="fade-up" data-aos-delay={600}>
-                                    <img alt='AI Photo' src='/photo-ai/ai6.png' />
-                                    <img alt='AI Photo' src='/photo-ai/ai_6.png' />
-                                </div>
-                            </Col>
+                            {
+                                model?.map((item, keys) => {
+                                    return <Col className={keys % 2 !== 0 ? `pt-5 mt-5` : ''} key={keys}>
+                                        <div className="ai-photo-result my-4" data-aos="fade-up" data-aos-delay={keys * 100}>
+                                            <img alt='AI Photo' src={item?.img1} />
+                                            <img alt='AI Photo' src={item?.img_1} />
+                                        </div>
+                                        <div className="ai-photo-result my-4" data-aos="fade-up" data-aos-delay={keys * 200}>
+                                            <img alt='AI Photo' src={item?.img2} />
+                                            <img alt='AI Photo' src={item?.img_2} />
+                                        </div>
+                                    </Col>
+                                })
+                            }
                         </Row>
                     </Col>
                 </Row>

@@ -8,6 +8,7 @@ import { FaTeamspeak } from 'react-icons/fa'
 import { IoMdTrendingUp } from 'react-icons/io'
 import { MdDone } from 'react-icons/md'
 import Hero from '@/components/photo-ai/hero';
+import Slider from '@/components/photo-ai/slider';
 const PhotoAI = () => {
     const aiList = [
         "No Need for Staffing",
@@ -17,10 +18,80 @@ const PhotoAI = () => {
         "Instant Sharing via QR Code, Email, or Drive",
         "Compatible with On-Site Printing"
     ]
+    const data2 = [
+        {
+            icon: <SiTailwindcss />,
+            heading: "Artistry Tailored Just for You",
+            desc: "Personalized creative work with a unique touch, carefully crafted to suit individual preferences and needs."
+        },
+        {
+            icon: <FaTeamspeak />,
+            heading: "Immersive Interaction at its Peak",
+            desc: "An engaging experience that deeply involves participants, reaching the zenith of immersive engagement."
+        },
+        {
+            icon: <IoMdTrendingUp />,
+            heading: "Embracing the Pinnacle of Current Style",
+            desc: "Adopting the industry's latest and most fashionable trends to deliver remarkable outcomes."
+        },
+
+    ]
+
+    const companyData = [
+        '/photo-ai/company_01.svg',
+        '/photo-ai/company_02.svg',
+        '/photo-ai/company_03.svg',
+        '/photo-ai/company_04.svg',
+        '/photo-ai/company_05.svg',
+        '/photo-ai/company_01.svg',
+    ]
+
+    const AIEnhancedData = [
+        {
+            img: '/photo-ai/2nd-page/1.png',
+        },
+        {
+            img: '/photo-ai/2nd-page/2.png',
+        },
+        {
+            img: '/photo-ai/2nd-page/3.png',
+        },
+        {
+            img: '/photo-ai/2nd-page/4.png',
+        },
+    ]
+
+    const modalShow = [
+        {
+            img1: '/photo-ai/model/Ai-photos-1.png',
+            img2: '/photo-ai/model/Ai-photos-2.png',
+        },
+        {
+            img1: '/photo-ai/model/Ai-photos-3.png',
+            img2: '/photo-ai/model/Ai-photos-4.png',
+        },
+        {
+            img1: '/photo-ai/model/Ai-photos-5.png',
+            img2: '/photo-ai/model/Ai-photos-6.png',
+        },
+        {
+            img1: '/photo-ai/model/Ai-photos-7.png',
+            img2: '/photo-ai/model/Ai-photos-8.png',
+        },
+        {
+            img1: '/photo-ai/model/Ai-photos-4.png',
+            img2: '/photo-ai/model/Ai-photos-3.png',
+        },
+        {
+            img1: '/photo-ai/model/Ai-photos-2.png',
+            img2: '/photo-ai/model/Ai-photos-1.png',
+        },
+    ]
+
     return (
         <>
             <Head>
-                <title>Contact Us</title>
+                <title>AI Photo Booth</title>
             </Head>
             <Header />
             <main>
@@ -31,116 +102,63 @@ const PhotoAI = () => {
                         {/* section 2  */}
                         <Container className='photo-ai-company py-5'>
                             <Row>
-                                <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12}>
-                                    <div className='inner d-flex flex-column align-items-center'>
-                                        <div className="icon">
-                                            <SiTailwindcss />
-                                        </div>
-                                        <h5 className="head text-center">
-                                            Artistry Tailored Just for You
-                                        </h5>
-                                        <p className='text-center'>
-                                            Personalized creative work with a unique touch, carefully crafted to suit individual preferences and needs.
-                                        </p>
-                                    </div>
-                                </Col>
-                                <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12}>
-                                    <div className='inner d-flex flex-column align-items-center'>
-                                        <div className="icon">
-                                            <FaTeamspeak />
-                                        </div>
-                                        <h5 className="head text-center">
-                                            Immersive Interaction at its Peak
-                                        </h5>
-                                        <p className='text-center'>
-                                            An engaging experience that deeply involves participants, reaching the zenith of immersive engagement.
-                                        </p>
-                                    </div>
-                                </Col>
-                                <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12}>
-                                    <div className='inner d-flex flex-column align-items-center'>
-                                        <div className="icon">
-                                            <IoMdTrendingUp />
-                                        </div>
-                                        <h5 className="head text-center">
-                                            Embracing the Pinnacle of Current Style
-                                        </h5>
-                                        <p className='text-center'>
-                                            "Adopting the industry's latest and most fashionable trends to deliver remarkable outcomes."
-                                        </p>
-                                    </div>
-                                </Col>
+                                {
+                                    data2?.map((item, keys) => {
+                                        return <Col key={keys} xxl={4} xl={4} lg={4} md={12} sm={12} xs={12} data-aos="fade-up" data-aos-delay={keys * 100}>
+                                            <div className='inner d-flex flex-column align-items-center'>
+                                                <div className="icon" data-aos="fade-up" data-aos-delay={keys * 100}>
+                                                    {item?.icon}
+                                                </div>
+                                                <h5 className="head text-center" data-aos="fade-up" data-aos-delay={keys * 200}>
+                                                    {item?.heading}
+                                                </h5>
+                                                <p className='text-center' data-aos="fade-up" data-aos-delay={keys * 300}>
+                                                    {item?.desc}
+                                                </p>
+                                            </div>
+                                        </Col>
+                                    })
+                                }
+
                             </Row>
                             <Row className='py-4'>
-                                <Col xxl={2} xl={2} lg={2} md={3} sm={4} xs={6} className='p-5'>
-                                    <img src='/photo-ai/company_01.svg' alt="" />
-                                </Col>
-                                <Col xxl={2} xl={2} lg={2} md={3} sm={4} xs={6} className='p-5'>
-                                    <img src='/photo-ai/company_02.svg' alt="" />
-                                </Col>
-                                <Col xxl={2} xl={2} lg={2} md={3} sm={4} xs={6} className='p-5'>
-                                    <img src='/photo-ai/company_03.svg' alt="" />
-                                </Col>
-                                <Col xxl={2} xl={2} lg={2} md={3} sm={4} xs={6} className='p-5'>
-                                    <img src='/photo-ai/company_04.svg' alt="" />
-                                </Col>
-                                <Col xxl={2} xl={2} lg={2} md={3} sm={4} xs={6} className='p-5'>
-                                    <img src='/photo-ai/company_05.svg' alt="" />
-                                </Col>
-                                <Col xxl={2} xl={2} lg={2} md={3} sm={4} xs={6} className='p-5'>
-                                    <img src='/photo-ai/company_01.svg' alt="" />
-                                </Col>
+                                {
+                                    companyData?.map((item, keys) => {
+                                        return <Col xxl={2} xl={2} key={keys} lg={2} md={3} sm={4} xs={6} className='p-5' data-aos="fade-up" data-aos-delay={keys * 100}>
+                                            <img src={item} alt="" />
+                                        </Col>
+                                    })
+                                }
                             </Row>
                         </Container>
-
 
                         {/* section 3 */}
                         <div className='What-ai py-5'>
                             <Container >
                                 <Row className='justify-content-evenly'>
                                     <Col xxl={5} xl={5} lg={5} md={12} sm={12} xs={12}>
-                                        <h2 className='py-3'>What Exactly Is an AI-Enhanced Photo Booth?</h2>
-                                        <p>
+                                        <h2 className='py-3' data-aos="fade-up" data-aos-delay={100}>What Exactly Is an AI-Enhanced Photo Booth?</h2>
+                                        <p data-aos="fade-up" data-aos-delay={200}>
                                             At the heart of our cutting-edge photo booth platform, AI Photoshots, lies the infusion of state-of-the-art generative AI technology, ensuring the creation of truly exceptional results.
                                         </p>
-                                        <p>
+                                        <p data-aos="fade-up" data-aos-delay={300}>
                                             With this integration, you have the power to harness customized AI prompts to morph user photographs into enchanting, themed masterpieces. Our proprietary implementation goes a step further, allowing you to not only craft distinct styles but also dictate unique poses, introduce specific characters or objects.
                                         </p>
                                     </Col>
                                     <Col xxl={5} xl={5} lg={5} md={12} sm={12} xs={12}>
                                         <Row>
-                                            <Col xxl={6} lg={6} md={6} sm={6} xs={6} className='py-3'>
-                                                <div className="img-ai-box">
-                                                    <div className="imgBox">
-                                                        <img src='/photo-ai/2nd-page/1.png' alt="" />
-                                                    </div>
-                                                    <div className="count-ai" id='count1'>1</div>
-                                                </div>
-                                            </Col>
-                                            <Col xxl={6} lg={6} md={6} sm={6} xs={6} className='py-3'>
-                                                <div className="img-ai-box">
-                                                    <div className="imgBox">
-                                                        <img src='/photo-ai/2nd-page/2.png' alt="" />
-                                                    </div>
-                                                    <div className="count-ai" id='count2'>2</div>
-                                                </div>
-                                            </Col>
-                                            <Col xxl={6} lg={6} md={6} sm={6} xs={6} className='py-3'>
-                                                <div className="img-ai-box">
-                                                    <div className="imgBox">
-                                                        <img src='/photo-ai/2nd-page/3.png' alt="" />
-                                                    </div>
-                                                    <div className="count-ai" id='count3'>3</div>
-                                                </div>
-                                            </Col>
-                                            <Col xxl={6} lg={6} md={6} sm={6} xs={6} className='py-3'>
-                                                <div className="img-ai-box">
-                                                    <div className="imgBox">
-                                                        <img src='/photo-ai/2nd-page/4.png' alt="" />
-                                                    </div>
-                                                    <div className="count-ai" id='count4'>4</div>
-                                                </div>
-                                            </Col>
+                                            {
+                                                AIEnhancedData?.map((item, keys) => {
+                                                    return <Col xxl={6} lg={6} md={6} sm={6} xs={6} key={keys} className='py-3' data-aos="fade-up" data-aos-delay={keys * 100}>
+                                                        <div className="img-ai-box">
+                                                            <div className="imgBox">
+                                                                <img src={item?.img} alt="" />
+                                                            </div>
+                                                            <div className="count-ai" id={`count${keys + 1}`}>{keys + 1}</div>
+                                                        </div>
+                                                    </Col>
+                                                })
+                                            }
                                         </Row>
                                     </Col>
                                 </Row>
@@ -150,54 +168,18 @@ const PhotoAI = () => {
                         {/* section 4 */}
                         <div className="ai-model-container py-5">
                             <div className="ai-model-inner  py-5 d-flex align-items-start">
-                                <div className="ai-model-box mx-2">
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-1.png" alt="" />
-                                    </div>
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-2.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="ai-model-box mx-2">
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-3.png" alt="" />
-                                    </div>
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-4.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="ai-model-box mx-2">
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-5.png" alt="" />
-                                    </div>
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-6.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="ai-model-box mx-2">
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-7.png" alt="" />
-                                    </div>
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-8.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="ai-model-box mx-2">
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-2.png" alt="" />
-                                    </div>
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-3.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="ai-model-box mx-2">
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-7.png" alt="" />
-                                    </div>
-                                    <div className="img-ai-box-inner p-2">
-                                        <img src="/photo-ai/model/Ai-photos-4.png" alt="" />
-                                    </div>
-                                </div>
+                                {
+                                    modalShow?.map((item, key) => {
+                                        return <div className="ai-model-box mx-2" key={key}>
+                                            <div className="img-ai-box-inner p-2" data-aos="fade-left" data-aos-delay={key * 100}>
+                                                <img src={item?.img1} alt="" />
+                                            </div>
+                                            <div className="img-ai-box-inner p-2" data-aos="fade-up" data-aos-delay={key * 150}>
+                                                <img src={item?.img2} alt="" />
+                                            </div>
+                                        </div>
+                                    })
+                                }
                             </div>
                         </div>
 
@@ -210,7 +192,7 @@ const PhotoAI = () => {
                                 <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                     {
                                         aiList?.map((item, keys) => {
-                                            return <div key={keys} className="list-ai py-1 d-flex align-items-center">
+                                            return <div key={keys} className="list-ai py-1 d-flex align-items-center" data-aos="fade-up" data-aos-delay={keys * 150}>
                                                 <div className="icon-done"><MdDone /></div>
                                                 <div className="ai-title">{item}</div>
                                             </div>
@@ -219,6 +201,13 @@ const PhotoAI = () => {
 
                                 </Col>
                             </Row>
+                        </Container>
+
+
+
+                        {/* section 6 */}
+                        <Container fluid className='ai-slilder py-5'>
+                            <Slider />
                         </Container>
                         <Footer />
                     </div>
