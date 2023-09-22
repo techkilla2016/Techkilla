@@ -9,18 +9,18 @@
     font-size: 80px;
     font-weight: bold;
     color: #fafafa;
-    text-shadow: 2px 2px 0px #edb141;
+    text-shadow: 1px 1px 0px #edb141;
 }
 
 .photo-ai-para {
     font-size: 25px;
     line-height: 1.2;
-    color: #fafafa;
+    color: #fff;
 }
 
 .ai-modal {
-    margin: 0px 60px;
-    padding-left: 100px;
+    margin: 0px 10px;
+    // padding-left: 100px;
 
     img {
         width: 250px;
@@ -38,7 +38,7 @@
 
     img {
         margin-bottom: 10px;
-        width: 150px;
+        width: 120px;
         height: 100%;
     }
 }
@@ -213,6 +213,70 @@
 
         @media screen and (max-width : 768px) {
             font-size: 18px;
+        }
+    }
+}
+
+.append-buttons {
+    text-align: center;
+    margin-top: 20px;
+
+    button {
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid #9d260f;
+        color: #9d260f;
+        text-decoration: none;
+        padding: 12px 30px;
+        border-radius: 40px;
+        margin: 0 10px;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    button:active {
+        background-image: linear-gradient(150deg, #ff8a48 47%, #9d260f);
+        color: #fff;
+        border-color: transparent;
+    }
+
+    button:hover {
+        background-image: linear-gradient(150deg, #ff8a48 47%, #9d260f);
+        color: #fff;
+        border-color: transparent;
+    }
+}
+
+.ai-photo-Section-7 {
+    h2 {
+        font-size: 50px;
+        color: #e35a00;
+        font-weight: bold;
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 24px;
+        color: #c1c1c1;
+        padding: 20px padding;
+    }
+
+    button {
+        background: linear-gradient(45deg, #ffac00, #e35a00);
+        border-radius: 24px;
+        font-weight: bold;
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .img-section {
+        width: 100%;
+
+        img {
+            width: 100%;
         }
     }
 }

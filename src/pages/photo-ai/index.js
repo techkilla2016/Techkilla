@@ -7,6 +7,7 @@ import { SiTailwindcss } from 'react-icons/si'
 import { FaTeamspeak } from 'react-icons/fa'
 import { IoMdTrendingUp } from 'react-icons/io'
 import { MdDone } from 'react-icons/md'
+import Slider from '@/components/photo-ai/slider'
 import Hero from '@/components/photo-ai/hero';
 const PhotoAI = () => {
     const aiList = [
@@ -85,6 +86,44 @@ const PhotoAI = () => {
             img1: '/photo-ai/model/Ai-photos-2.png',
             img2: '/photo-ai/model/Ai-photos-1.png',
         },
+    ]
+
+
+    // section 7  
+    const imgData = [
+        {
+            img: '/photo-ai/super-hero.jpg',
+            title: 'Superhero',
+        },
+        {
+            img: '/photo-ai/sci-fi.jpeg',
+            title: 'Sci-Fi',
+        },
+        {
+            img: '/photo-ai/Magical.jpg',
+            title: 'Magical World',
+        },
+        {
+            img: '/photo-ai/Professional.jpg',
+            title: 'Professional',
+        },
+        {
+            img: '/photo-ai/Painting.jpg',
+            title: 'Painting',
+        },
+        {
+            img: '/photo-ai/Artistic.jpg',
+            title: 'Artistic',
+        },
+        {
+            img: '/photo-ai/Ornate.jpg',
+            title: 'Ornate Portrait',
+        },
+        {
+            img: '/photo-ai/Retro.jpg',
+            title: 'Retro',
+        },
+
     ]
 
     return (
@@ -202,12 +241,37 @@ const PhotoAI = () => {
                             </Row>
                         </Container>
 
-
-
                         {/* section 6 */}
-                        {/* <Container fluid className='ai-slilder py-5'>
-                            
-                        </Container> */}
+                        <Container fluid className='ai-slilder py-5'>
+                            <Slider />
+                        </Container>
+
+                        {/* section 7  */}
+                        <Container className='ai-photo-Section-7'>
+                            <Row>
+                                <Col xxl={6} xl={6} lg={6} md={10} sm={12} xs={12}>
+                                    <h2>Craft and Transfigure with the AI Photo Booth Experience</h2>
+                                    <p>
+                                        Irrespective of your event's theme, our exclusive AI technology is malleable and tailored to manifest your vision seamlessly."
+                                    </p>
+                                    <button className='btn'>GET IN TOUCH</button>
+                                </Col>
+                            </Row>
+                            <Row className='py-3 mt-5'>
+                                {
+                                    imgData?.map((item, keys) => {
+                                        return <Col xxl={4} xl={4} lg={4} md={6} sm={6} xs={12} className='px-5 py-2'>
+                                            <div className="img-section">
+                                                <img src={item?.img} />
+                                            </div>
+                                            <h3 className='py-2s'>
+                                                {item?.title}
+                                            </h3>
+                                        </Col>
+                                    })
+                                }
+                            </Row>
+                        </Container>
                         <Footer />
                     </div>
                 </div>
