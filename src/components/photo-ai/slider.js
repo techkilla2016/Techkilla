@@ -48,7 +48,7 @@ const Slidebar = () => {
 
     return (
         <>
-            <Col xxl={12} lg={12} md={10} sm={6}>
+            <Col xxl={12} lg={12} md={12} sm={12}>
                 <div className="main">
                     <p className="append-buttons">
                         <button onClick={() => slideTo(0)} className="prepend-2-slides">
@@ -85,17 +85,15 @@ const Slidebar = () => {
                             <SwiperSlide key={slideContent} virtualIndex={index}>
                                 <Row>
                                     <Col xxl={6}>
-                                        <div className="d-flex text-start mt-5 mx-3 ">
-                                            <div className="m-5">
-                                                <span className='fs-3'>{slideContent.pagenum}</span>
-                                                <h1 className='fw-bold'>{slideContent.tilte}</h1>
-                                                <p className='fs-4 text-secondary' >{slideContent.para}</p>
-                                            </div>
+                                        <div className="slider-ai-box d-flex flex-column justify-content-center text-start mx-3 px-4" style={{ height: '100%' }}>
+                                            <span className='fs-3'>{slideContent.pagenum}</span>
+                                            <h1 className='fw-bold'>{slideContent.tilte}</h1>
+                                            <p className='fs-4 text-secondary' >{slideContent.para}</p>
                                         </div>
                                     </Col>
                                     <Col xxl={6}>
-                                        <div className="d-flex text-start mt-5 mx-3 ">
-                                            <img src={slideContent.img} alt='ll' className='col-2' />
+                                        <div className="d-flex text-start  mx-3 ">
+                                            <img src={slideContent.img} alt='ll' className='' />
                                         </div>
                                     </Col>
                                 </Row>
