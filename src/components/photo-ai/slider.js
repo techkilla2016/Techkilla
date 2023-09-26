@@ -78,7 +78,7 @@ const Slidebar = () => {
                             delay: 2000,
                             disableOnInteraction: false,
                         }}
-                        loop={true}
+                        // loop={true}
                         modules={[Autoplay]}
                     >
                         {cardData.map((slideContent, index) => (
