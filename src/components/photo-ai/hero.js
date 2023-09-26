@@ -37,16 +37,16 @@ const Hero = ({ isContinue }) => {
                                 <div className="d-flex">
                                     <div className="ai-modal">
                                         <img alt='AI Photo' src='/photo-ai/Model.png' data-aos="zoom-in-right" data-aos-delay={100} />
-                                        <p className='text-center text-light fw-bold' data-aos="zoom-in-down" data-aos-delay={200}>Orignal</p>
+                                        <p className='text-center fw-bold' data-aos="zoom-in-down" data-aos-delay={200}>Orignal</p>
                                     </div>
                                     <div className="ai-modal">
                                         <img alt='AI Photo' src='/photo-ai/Model1.png' data-aos="zoom-in-right" data-aos-delay={100} />
-                                        <p className='text-center text-light fw-bold' data-aos="zoom-in-down" data-aos-delay={200}>Orignal</p>
+                                        <p className='text-center fw-bold' data-aos="zoom-in-down" data-aos-delay={200}>Orignal</p>
                                     </div>
                                 </div>
                                 <div className="ai-convert-arrow mx-2">
                                     <img alt='AI Photo' src='/photo-ai/Arrow-01.png' data-aos="zoom-in-right" data-aos-delay={500} />
-                                    <p className='text-center text-light fw-bold' data-aos="zoom-in-right" data-aos-delay={800}>Ai Generated Avatar</p>
+                                    <p className='text-center fw-bold' data-aos="zoom-in-right" data-aos-delay={800}>Ai Generated Avatar</p>
                                 </div>
                             </div>
                             <div className="d-flex">
