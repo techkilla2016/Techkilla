@@ -73,7 +73,7 @@ const Slidebar = () => {
                         spaceBetween={50}
                         onSwiper={setSwiperRef}
                         centeredSlides={true}
-                        className="mySwiper"
+                        className="mySwiper py-5"
                         autoplay={{
                             delay: 2000,
                             disableOnInteraction: false,

@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, } from "swiper";
 import ModelSwiper from '@/components/photo-ai/ModelSwiper';
 import CompanySlider from '@/components/photo-ai/CompanySlider';
+import Testimonials from '@/components/Testimonials';
 const PhotoAI = () => {
     const aiList = [
         "No Need for Staffing",
@@ -245,6 +246,12 @@ const PhotoAI = () => {
                                     })
                                 }
                             </Row>
+                        </Container>
+
+                        {/* Testimonials */}
+                        <Container fluid className="Testimonials">
+                            <h2 className='fw-bold text-center mt-5'>Testimonials</h2>
+                            <Testimonials />
                         </Container>
                         <Footer />
                     </div>

@@ -1,3 +1,4 @@
+import Testimonials from '@/components/Testimonials'
 import Button from '@/components/button/Button'
 import Card from '@/components/card'
 import Footer from '@/components/footer'
@@ -62,7 +63,7 @@ const Home = ({ work }) => {
       <main>
         <div className="main">
           <Hero isContinue={true} />
-         
+
           <div className='Section2'>
             <Container>
               <Row>
@@ -190,12 +191,20 @@ const Home = ({ work }) => {
             </div>
           </div>
 
+          {/* Testimonials */}
+          <Container fluid className="Testimonials py-5" style={{ background: "#fafafa" }}>
+            <h2 className='text-secondary fw-bold text-center pt-5'>Testimonials</h2>
+            <Testimonials />
+          </Container>
+
           {/* // Section4 Service */}
           {/* <div className="section4">
               <div className="section5Inner">
                 <WhatWeDo />
               </div>
             </div> */}
+
+          {/* Testimonials */}
           <Footer bg="#fafafa" />
         </div>
       </main>

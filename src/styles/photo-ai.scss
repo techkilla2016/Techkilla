@@ -220,6 +220,7 @@
 
     .ai-model-box.top-100 {
         padding-top: 120px;
+
         @media screen and (max-width : 768px) {
             padding-top: 0px;
             // padding: 20px;
@@ -393,3 +394,5 @@
         background: none;
     }
 }
+
+@import 'comman';

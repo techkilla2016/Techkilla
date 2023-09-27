@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Testimodnials from '@/components/Testimonials'
 import { Col, Container, Row } from 'react-bootstrap'
 import { SiBlockchaindotcom } from 'react-icons/si'
 const funData = [
@@ -796,6 +797,11 @@ const index = () => {
                             </div>
                         </div>
 
+                        {/* Testimonials */}
+                        <Container fluid className="Testimonials py-5" style={{ background: "#fff" }}>
+                            <h2 className='text-secondary fw-bold text-center pt-5'>Testimonials</h2>
+                            <Testimodnials />
+                        </Container>
                         <Footer bg="#fff" />
                     </div>
                 </div>
