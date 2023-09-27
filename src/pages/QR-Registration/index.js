@@ -237,6 +237,37 @@ const choose_list = [
     },
 ]
 
+
+const cardData = [
+    {
+        name: 'Vyom Chaturvedi ',
+        post: "Head Planning & Strategy",
+        company: "Phoenix Live",
+        desc: `It’s always been a great experience working with Yashi and team, they have always delivered on time and as per expectations. It’s been a pleasure working with them.`,
+        img: '/photo-ai/Magical.jpg'
+    },
+    {
+        name: 'Vikas Khanna ',
+        post: "Director",
+        company: "Myka Events",
+        desc: `One of the best solution providers who ensure high audience engagement using customized tech.  I've worked with them on several occasions and everytime the experience has been extremely satisfying.  Wishing Team TechKilla the very best.`,
+        img: '/photo-ai/Magical.jpg'
+    },
+    {
+        name: 'Pratik Bhandari ',
+        post: "Event Marketing & Consultant ",
+        company: "Myka Events",
+        desc: `I now know the team for over 4 years and i must admit they are one of the smoothest team to work with. They are always available, they will try to give solutions at best costs. Working with them doesnt feel like you are working with another company, they become part of your team and thats the best situation to be in. I can high recommend anyone to go ahead and work with them`,
+        img: '/photo-ai/Magical.jpg'
+    },
+    {
+        name: 'Gagan Rohtagi',
+        post: "Associate Vice president,Client servicing",
+        company: "Brand Width Events",
+        desc: `Lovely working with them, very flexible approach and professionalism in execution`,
+        img: '/photo-ai/Magical.jpg'
+    },
+]
 const basicPlans = (url) => {
     const link = document.createElement("a");
     link.setAttribute("target", "_blank");
@@ -800,7 +831,7 @@ const index = () => {
                         {/* Testimonials */}
                         <Container fluid className="Testimonials py-5" style={{ background: "#fff" }}>
                             <h2 className='text-secondary fw-bold text-center pt-5'>Testimonials</h2>
-                            <Testimodnials />
+                            <Testimodnials cardData={cardData} />
                         </Container>
                         <Footer bg="#fff" />
                     </div>
