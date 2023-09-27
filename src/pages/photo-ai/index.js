@@ -12,6 +12,7 @@ import Hero from '@/components/photo-ai/hero';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, } from "swiper";
 import ModelSwiper from '@/components/photo-ai/ModelSwiper';
+import CompanySlider from '@/components/photo-ai/CompanySlider';
 const PhotoAI = () => {
     const aiList = [
         "No Need for Staffing",
@@ -41,12 +42,25 @@ const PhotoAI = () => {
     ]
 
     const companyData = [
-        '/photo-ai/company_01.svg',
-        '/photo-ai/company_02.svg',
-        '/photo-ai/company_03.svg',
-        '/photo-ai/company_04.svg',
-        '/photo-ai/company_05.svg',
-        '/photo-ai/company_01.svg',
+        '/photo-ai/logos/logos-01.png',
+        '/photo-ai/logos/logos-02.png',
+        '/photo-ai/logos/logos-03.png',
+        '/photo-ai/logos/logos-04.png',
+        '/photo-ai/logos/logos-05.png',
+        '/photo-ai/logos/logos-06.png',
+        '/photo-ai/logos/logos-07.png',
+        '/photo-ai/logos/logos-08.png',
+        '/photo-ai/logos/logos-09.png',
+        '/photo-ai/logos/logos-10.png',
+        '/photo-ai/logos/logos-11.png',
+        '/photo-ai/logos/logos-12.png',
+        '/photo-ai/logos/logos-13.png',
+        '/photo-ai/logos/logos-14.png',
+        '/photo-ai/logos/logos-15.png',
+        '/photo-ai/logos/logos-16.png',
+        '/photo-ai/logos/logos-17.png',
+        '/photo-ai/logos/logos-18.png',
+        '/photo-ai/logos/logos-19.png',
     ]
 
     const AIEnhancedData = [
@@ -136,15 +150,9 @@ const PhotoAI = () => {
                                 }
 
                             </Row>
-                            <Row className='py-4'>
-                                {
-                                    companyData?.map((item, keys) => {
-                                        return <Col xxl={2} xl={2} key={keys} lg={2} md={3} sm={4} xs={6} className='p-5' data-aos="fade-up" data-aos-delay={keys * 100}>
-                                            <img src={item} alt="" />
-                                        </Col>
-                                    })
-                                }
-                            </Row>
+                        </Container>
+                        <Container fluid className='my-5 CompanySlider'>
+                            <CompanySlider />
                         </Container>
 
                         {/* section 3 */}
@@ -161,7 +169,7 @@ const PhotoAI = () => {
                                         </p>
                                     </Col>
                                     <Col xxl={5} xl={5} lg={5} md={12} sm={12} xs={12}>
-                                        <Row>
+                                        <Row className='px-4'>
                                             {
                                                 AIEnhancedData?.map((item, keys) => {
                                                     return <Col xxl={6} lg={6} md={6} sm={6} xs={6} key={keys} className='py-3' data-aos="fade-up" data-aos-delay={keys * 100}>

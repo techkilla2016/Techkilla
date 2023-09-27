@@ -206,9 +206,6 @@
     overflow: hidden;
 
     .ai-model-box {
-        min-width: 300px;
-        transform: translateX(-50%);
-
         .img-ai-box-inner {
             img {
                 margin: 10px 0px;
@@ -216,14 +213,17 @@
             }
         }
 
-        &:nth-child(2n+2) {
-            padding-top: 10%;
-
-            @media screen and (max-width : 768px) {
-                padding-top: 0%;
-            }
+        @media screen and (max-width : 768px) {
+            padding: 20px;
         }
+    }
 
+    .ai-model-box.top-100 {
+        padding-top: 120px;
+        @media screen and (max-width : 768px) {
+            padding-top: 0px;
+            // padding: 20px;
+        }
     }
 
 
@@ -384,5 +384,12 @@
         img {
             width: 100%;
         }
+    }
+}
+
+.CompanySlider {
+    .swiper-slide {
+        box-shadow: none;
+        background: none;
     }
 }
