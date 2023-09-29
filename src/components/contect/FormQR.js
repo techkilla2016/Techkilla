@@ -32,6 +32,9 @@ function QrForm({ send }) {
             if (isSend) {
                 setShow(true);
                 setContact(EMPTY_CONTACT);
+            } else {
+                setIsLoad(false)
+                alert('something wrong please try again')
             }
         }
     };
