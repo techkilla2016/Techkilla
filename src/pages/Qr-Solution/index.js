@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Footer01 from '@/components/footer/footer_01'
 import { HiOutlineMail } from 'react-icons/hi'
 import { GiSmartphone } from 'react-icons/gi'
+import { useRouter } from 'next/router';
 import axios from 'axios'
 const funData = [
     {
@@ -157,10 +158,15 @@ const choose_list = [
     },
 ]
 
-const App = ({ BaseUrl }) => {
+const App = (BaseUrl) => {
+    const router = useRouter()
+    console.log(router?.query)
+    const { utm_campaign, utm_medium, utm_source } = router?.query
     const send = async (contact) => {
         try {
-            const reponce = await axios.post(`${BaseUrl}/api/email/contect`, contact)
+            // const reponce = await axios.post(`http://localhost:2917/qr-solution`, { ...contact, utm_campaign, utm_medium, utm_source })
+            const reponce = await axios.post(`https://techkilla-server.vercel.app/qr-solution`, { ...contact, utm_campaign, utm_medium, utm_source })
+            console.log(reponce)
             return true
         } catch (error) {
             return false;
@@ -372,10 +378,10 @@ const App = ({ BaseUrl }) => {
 
 export default App
 
-export const getStaticProps = async () => {
-    return {
-        props: {
-            BaseUrl: process.env.BaseUrl
-        }
-    }
-}
+// export const getStaticProps = async () => {
+//     return {
+//         props: {
+//             BaseUrl: process.env.BaseUrl
+//         }
+//     }
+// }
