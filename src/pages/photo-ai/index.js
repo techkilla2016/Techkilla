@@ -12,10 +12,6 @@ import Hero from '@/components/photo-ai/hero';
 import ModelSwiper from '@/components/photo-ai/ModelSwiper';
 import CompanySlider from '@/components/photo-ai/CompanySlider';
 import Testimonials from '@/components/Testimonials';
-import ContactFrom from '@/components/contect/ContactForm';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation'
-import axios from 'axios';
 const PhotoAI = ({ BaseUrl }) => {
 
     const aiList = [
@@ -136,17 +132,6 @@ const PhotoAI = ({ BaseUrl }) => {
         },
     ]
 
-    const router = useRouter();
-    const send = async (contact) => {
-        try {
-            const reponce = await axios.post(`https://techkilla.com/api/email/`, contact)
-            router.push('/thanks');
-            return true
-
-        } catch (error) {
-            return false;
-        }
-    };
     return (
         <>
             <Head>
@@ -283,20 +268,6 @@ const PhotoAI = ({ BaseUrl }) => {
                             <Testimonials cardData={cardData} />
                         </Container>
 
-                        <div style={{ background: "#fff" }} className='mt-5 pt-5' >
-                            <Container className='pt-5'>
-                                <Row>
-                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12} xs={12}>
-                                        <div className='p-0'>
-                                            <Image src="/about.gif" width={400} height={300} />
-                                        </div>
-                                    </Col>
-                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12} xs={12}>
-                                        <ContactFrom send={send} bg={'#fff'} />
-                                    </Col>
-                                </Row>
-                            </Container>
-                        </div>
                         <Footer bg={'#fff'} />
                     </div>
                 </div>

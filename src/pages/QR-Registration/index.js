@@ -8,6 +8,8 @@ import React from 'react'
 import Testimodnials from '@/components/Testimonials'
 import { Col, Container, Row } from 'react-bootstrap'
 import { SiBlockchaindotcom } from 'react-icons/si'
+import ContactFrom from '@/components/contect/ContactForm'
+import { useRouter } from 'next/navigation'
 const funData = [
     {
         title: 'Form to sign up for an event or campaign',
@@ -278,6 +280,17 @@ const basicPlans = (url) => {
 }
 
 const index = () => {
+    const router = useRouter();
+    const send = async (contact) => {
+        try {
+            const reponce = await axios.post(`https://techkilla.com/api/email/`, contact)
+            router.push('/thanks');
+            return true
+
+        } catch (error) {
+            return false;
+        }
+    };
     return (
         <>
             <Head>
@@ -833,6 +846,20 @@ const index = () => {
                             <h2 className='text-secondary fw-bold text-center pt-5'>Testimonials</h2>
                             <Testimodnials cardData={cardData} />
                         </Container>
+                        <div style={{ background: "#fff" }} className='' >
+                            <Container className=''>
+                                <Row>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12} xs={12}>
+                                        <div className='p-0'>
+                                            <Image src="/about.gif" width={400} height={300} />
+                                        </div>
+                                    </Col>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12} xs={12}>
+                                        <ContactFrom send={send} bg={'#fff'} />
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
                         <Footer bg="#fff" />
                     </div>
                 </div>
