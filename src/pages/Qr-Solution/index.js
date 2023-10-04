@@ -5,8 +5,8 @@ import Image from 'next/image'
 import Footer01 from '@/components/footer/footer_01'
 import { HiOutlineMail } from 'react-icons/hi'
 import { GiSmartphone } from 'react-icons/gi'
-import { useRouter } from 'next/router';
 import axios from 'axios'
+import { useRouter } from 'next/router'
 const funData = [
     {
         title: 'Form to sign up for an event or campaign',
@@ -158,16 +158,15 @@ const choose_list = [
     },
 ]
 
-const App = (BaseUrl) => {
+const App = () => {
     const router = useRouter()
-    console.log(router?.query)
     const { utm_campaign, utm_medium, utm_source } = router?.query
     const send = async (contact) => {
         try {
             // const reponce = await axios.post(`http://localhost:2917/qr-solution`, { ...contact, utm_campaign, utm_medium, utm_source })
             const reponce = await axios.post(`https://techkilla-server.vercel.app/qr-solution`, { ...contact, utm_campaign, utm_medium, utm_source })
-            console.log(reponce)
-            return true
+            router.push('/thanks');
+            return false
         } catch (error) {
             return false;
         }

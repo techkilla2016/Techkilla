@@ -34,7 +34,7 @@ function QrForm({ send, bg }) {
                 setContact(EMPTY_CONTACT);
             } else {
                 setIsLoad(false)
-                alert('something wrong please try again')
+                // alert('something wrong please try again')
             }
         }
     };

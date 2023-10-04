@@ -9,7 +9,6 @@ import Testimodnials from '@/components/Testimonials'
 import { Col, Container, Row } from 'react-bootstrap'
 import { SiBlockchaindotcom } from 'react-icons/si'
 import ContactFrom from '@/components/contect/ContactForm'
-import { useRouter } from 'next/navigation'
 import axios from 'axios'
 const funData = [
     {
@@ -281,12 +280,10 @@ const basicPlans = (url) => {
 }
 
 const index = () => {
-    const router = useRouter();
     const send = async (contact) => {
         try {
             const reponce = await axios.post(`https://techkilla.com/api/email/`, contact)
-            router.push('/thanks');
-            return false
+            return true
 
         } catch (error) {
             return false;
