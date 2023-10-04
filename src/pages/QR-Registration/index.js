@@ -286,7 +286,7 @@ const index = () => {
         try {
             const reponce = await axios.post(`https://techkilla.com/api/email/`, contact)
             router.push('/thanks');
-            return true
+            return false
 
         } catch (error) {
             return false;
