@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form, Col, Row, Button, Modal, ButtonGroup } from "react-bootstrap";
+import { Form, Col, Row, Button, Modal, ButtonGroup, useQuery } from "react-bootstrap";
 import PhoneInput from "react-phone-input-2";
 
 
@@ -13,7 +13,7 @@ const EMPTY_CONTACT = {
   message: "",
   type: 'contact'
 };
-function ContactFrom({ send }) {
+function ContactFrom({ send, bg }) {
   const [showModal, setShowModal] = useState(false);
   const [contact, setContact] = useState(EMPTY_CONTACT);
 
@@ -33,11 +33,12 @@ function ContactFrom({ send }) {
     if (isSend) {
       setShow(true)
       setContact(EMPTY_CONTACT)
+
     }
   }
 
   return (
-    <div className=" contactus px-3" id="contact" >
+    <div className="contactus" id="contact" style={{ background: bg }}>
       <div className="container">
         <h3 className="fw-bold" >Let's Talk</h3>
         <Row className={`main-row ${showModal ? "form-submitted" : ""}`}>
@@ -112,7 +113,7 @@ function ContactFrom({ send }) {
               </Col>
             </Row>
             <Row>
-              <Col className="mb-4 px-5">
+              <Col className="mb-4 px-3">
                 <div className="disclaimer">
                   * By submitting this form, you are accepting our <u>Terms of use</u> and our <u>Privacy policy .</u>
                 </div>

@@ -1,7 +1,6 @@
 /* -----------------------{  Contact   }------------------------- */
 .contactus {
     position: relative;
-    background-color: #faf9f8;
     display: grid;
     place-items: center;
     padding-bottom: 82px;
@@ -64,7 +63,7 @@
     width: 215px;
     height: 68px;
     color: white !important;
-    background-color: #105857;
+    background: linear-gradient(150deg, #ff8a48 47%, #9d260f);
     padding-top: 10px;
     border-radius: 34px;
     letter-spacing: 0.72px;

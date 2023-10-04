@@ -9,11 +9,11 @@ import { IoMdTrendingUp } from 'react-icons/io'
 import { MdDone } from 'react-icons/md'
 import Slider from '@/components/photo-ai/slider'
 import Hero from '@/components/photo-ai/hero';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, } from "swiper";
 import ModelSwiper from '@/components/photo-ai/ModelSwiper';
 import CompanySlider from '@/components/photo-ai/CompanySlider';
 import Testimonials from '@/components/Testimonials';
+import ContactFrom from '@/components/contect/ContactForm';
+import Image from 'next/image';
 const PhotoAI = () => {
     const aiList = [
         "No Need for Staffing",
@@ -41,29 +41,6 @@ const PhotoAI = () => {
         },
 
     ]
-
-    const companyData = [
-        '/photo-ai/logos/logos-01.png',
-        '/photo-ai/logos/logos-02.png',
-        '/photo-ai/logos/logos-03.png',
-        '/photo-ai/logos/logos-04.png',
-        '/photo-ai/logos/logos-05.png',
-        '/photo-ai/logos/logos-06.png',
-        '/photo-ai/logos/logos-07.png',
-        '/photo-ai/logos/logos-08.png',
-        '/photo-ai/logos/logos-09.png',
-        '/photo-ai/logos/logos-10.png',
-        '/photo-ai/logos/logos-11.png',
-        '/photo-ai/logos/logos-12.png',
-        '/photo-ai/logos/logos-13.png',
-        '/photo-ai/logos/logos-14.png',
-        '/photo-ai/logos/logos-15.png',
-        '/photo-ai/logos/logos-16.png',
-        '/photo-ai/logos/logos-17.png',
-        '/photo-ai/logos/logos-18.png',
-        '/photo-ai/logos/logos-19.png',
-    ]
-
     const AIEnhancedData = [
         {
             img: '/photo-ai/2nd-page/1.png',
@@ -155,6 +132,17 @@ const PhotoAI = () => {
             img: '/photo-ai/Magical.jpg'
         },
     ]
+
+    const send = async (contact) => {
+        try {
+            const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
+            navigate.push('/')
+            return true
+
+        } catch (error) {
+            return false;
+        }
+    };
     return (
         <>
             <Head>
@@ -290,7 +278,22 @@ const PhotoAI = () => {
                             <h2 className='fw-bold text-center mt-5'>Testimonials</h2>
                             <Testimonials cardData={cardData} />
                         </Container>
-                        <Footer />
+
+                        <div style={{ background: "#fff" }} className='mt-5 pt-5' >
+                            <Container className='pt-5'>
+                                <Row>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12} xs={12}>
+                                        <div className='p-0'>
+                                            <Image src="/about.gif" width={400} height={300} />
+                                        </div>
+                                    </Col>
+                                    <Col xxl={6} xl={6} lg={6} md={12} sm={12} xs={12}>
+                                        <ContactFrom send={send} bg={'#fff'} />
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </div>
+                        <Footer bg={'#fff'} />
                     </div>
                 </div>
             </main>

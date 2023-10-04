@@ -31,8 +31,8 @@ const Contact = ({ BaseUrl }) => {
                                         <ColLeft />
                                     </div>
                                 </div>
-                                <div className="col-lg-6 contact-form">
-                                    <ContactFrom send={send} />
+                                <div className="col-lg-6 contact-form" style={{background : "#f5f5f4"}}>
+                                    <ContactFrom send={send} bg="#f5f5f4" />
                                 </div>
                             </div>
                         </div>

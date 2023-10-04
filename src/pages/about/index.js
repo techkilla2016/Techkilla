@@ -1,7 +1,5 @@
 import Footer from '@/components/footer'
 import Header from '@/components/header'
-import ColLeft from '@/components/home/section2/left'
-import ColRight from '@/components/home/section2/right'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Head from 'next/head'

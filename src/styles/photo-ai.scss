@@ -119,7 +119,7 @@
             outline: 4px solid #c7c7c7c7;
             width: 80px;
             height: 80px;
-            border-radius: 50%;
+            border-radius: 50% !important;
             display: grid;
             place-items: center;
             margin: 20px 0px;
@@ -336,13 +336,13 @@
     }
 
     button:active {
-        background-image: linear-gradient(150deg, #ff8a48 47%, #9d260f);
+        background: linear-gradient(150deg, #ff8a48 47%, #9d260f);
         color: #fff;
         border-color: transparent;
     }
 
     button:hover {
-        background-image: linear-gradient(150deg, #ff8a48 47%, #9d260f);
+        background: linear-gradient(150deg, #ff8a48 47%, #9d260f);
         color: #fff;
         border-color: transparent;
     }
@@ -399,3 +399,4 @@
 }
 
 @import 'comman';
+@import 'thanks'

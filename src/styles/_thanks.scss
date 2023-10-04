@@ -1,0 +1,85 @@
+.thankInner {
+    min-height: 90vh;
+
+    @media screen and (max-Width:992px) {
+        padding-top: 60px;
+    }
+
+    h1 {
+        font-size: 100px;
+        font-weight: bold;
+        transition: all 0.5s linear;
+
+        @media screen and (max-Width:1200px) {
+            font-size: 80px;
+
+        }
+
+        @media screen and (max-Width:460px) {
+            font-size: 60px;
+
+        }
+
+        @media screen and (max-Width:375px) {
+            font-size: 50px;
+
+        }
+    }
+
+    p {
+        font-size: 30px;
+        line-height: 1.2;
+
+        @media screen and (max-Width:375px) {
+            font-size: 20px;
+
+        }
+    }
+
+    a {
+        color: #000;
+
+        #insta {
+            color: red;
+        }
+
+        #link {
+            color: #2980c3;
+        }
+
+        #yt {
+            color: red;
+        }
+    }
+
+
+    a.continue-link {
+        color: rgb(247, 192, 120);
+        font-size: 26px;
+
+        @media screen and (max-Width:375px) {
+            font-size: 20px;
+
+        }
+    }
+
+    .social-thanks {
+        .link {
+            margin-right: 10px;
+            color: rgb(12 44 43 / 50%);
+            font-weight: bold;
+        }
+
+    }
+}
+
+.thanksImg {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -14,7 +14,7 @@ const EMPTY_CONTACT = {
     country: "",
 };
 
-function QrForm({ send }) {
+function QrForm({ send, bg }) {
     const [showModal, setShowModal] = useState(false);
     const [contact, setContact] = useState(EMPTY_CONTACT);
     const [isLoad, setIsLoad] = useState(false);
@@ -45,7 +45,7 @@ function QrForm({ send }) {
     };
 
     return (
-        <div className="contactus px-3 py-0" id="contact">
+        <div className="contactus px-3 py-0" id="contact" style={{ background: bg }}>
             <div className="container">
                 <h3 className="fw-bold">Let's Talk</h3>
                 <Row className={`main-row ${showModal ? "form-submitted" : ""}`}>
