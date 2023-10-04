@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Col, Row, Button, Modal, ButtonGroup, useQuery } from "react-bootstrap";
 import PhoneInput from "react-phone-input-2";
+import Loader from "../sniper";
 
 
 // const SERVICE_URL = 
@@ -16,7 +17,7 @@ const EMPTY_CONTACT = {
 function ContactFrom({ send, bg }) {
   const [showModal, setShowModal] = useState(false);
   const [contact, setContact] = useState(EMPTY_CONTACT);
-
+  const [isLoad, setIsload] = useState(false)
   const onInputChange = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
@@ -29,16 +30,22 @@ function ContactFrom({ send, bg }) {
   };
 
   const submitForm = async () => {
+    setIsload(true)
     const isSend = await send({ ...contact, phone })
     if (isSend) {
+      setIsload(false)
       setShow(true)
       setContact(EMPTY_CONTACT)
-
+    } else {
+      setIsload(false)
     }
   }
 
   return (
     <div className="contactus" id="contact" style={{ background: bg }}>
+      {
+        isLoad ? <Loader /> : ''
+      }
       <div className="container">
         <h3 className="fw-bold" >Let's Talk</h3>
         <Row className={`main-row ${showModal ? "form-submitted" : ""}`}>

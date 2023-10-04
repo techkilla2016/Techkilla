@@ -14,7 +14,10 @@ import CompanySlider from '@/components/photo-ai/CompanySlider';
 import Testimonials from '@/components/Testimonials';
 import ContactFrom from '@/components/contect/ContactForm';
 import Image from 'next/image';
-const PhotoAI = () => {
+import { useRouter } from 'next/navigation'
+import axios from 'axios';
+const PhotoAI = ({ BaseUrl }) => {
+
     const aiList = [
         "No Need for Staffing",
         "Ready for iPad Use",
@@ -23,6 +26,7 @@ const PhotoAI = () => {
         "Instant Sharing via QR Code, Email, or Drive",
         "Compatible with On-Site Printing"
     ]
+
     const data2 = [
         {
             icon: <SiTailwindcss />,
@@ -41,6 +45,7 @@ const PhotoAI = () => {
         },
 
     ]
+
     const AIEnhancedData = [
         {
             img: '/photo-ai/2nd-page/1.png',
@@ -55,8 +60,6 @@ const PhotoAI = () => {
             img: '/photo-ai/2nd-page/4.png',
         },
     ]
-
-
 
     // section 7  
     const imgData = [
@@ -133,10 +136,11 @@ const PhotoAI = () => {
         },
     ]
 
+    const router = useRouter();
     const send = async (contact) => {
         try {
-            const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
-            navigate.push('/')
+            const reponce = await axios.post(`https://techkilla.com/api/email/`, contact)
+            router.push('/thanks');
             return true
 
         } catch (error) {
@@ -260,7 +264,7 @@ const PhotoAI = () => {
                             <Row className='py-3 mt-5'>
                                 {
                                     imgData?.map((item, keys) => {
-                                        return <Col xxl={4} xl={4} lg={4} md={6} sm={6} xs={12} className='px-5 py-2'>
+                                        return <Col key={keys} xxl={4} xl={4} lg={4} md={6} sm={6} xs={12} className='px-5 py-2'>
                                             <div className="img-section">
                                                 <img src={item?.img} />
                                             </div>

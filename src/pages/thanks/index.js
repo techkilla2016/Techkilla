@@ -11,19 +11,19 @@ const Home = () => {
 
     const media = [
         {
-            link: '/',
+            link: 'https://www.instagram.com/techkillatechnologies/',
             icon: <BsInstagram />,
             id: 'insta',
             place: "Instagram"
         },
         {
-            link: '/',
+            link: 'https://www.linkedin.com/company/techkilla/',
             icon: <FaLinkedinIn />,
             id: 'link',
             place: "Linkedin"
         },
         {
-            link: '/',
+            link: 'https://www.youtube.com/@TechkillaTechnologies',
             icon: <BsYoutube />,
             id: 'yt',
             place: "YouTube"
