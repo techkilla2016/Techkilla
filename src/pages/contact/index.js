@@ -9,7 +9,7 @@ import axios from 'axios';
 const Contact = ({ BaseUrl }) => {
     const send = async (contact) => {
         try {
-            const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
+            const reponce = await axios.post(`${BaseUrl}/contact`, contact)
             return true
         } catch (error) {
             return false;
@@ -31,7 +31,7 @@ const Contact = ({ BaseUrl }) => {
                                         <ColLeft />
                                     </div>
                                 </div>
-                                <div className="col-lg-6 contact-form" style={{background : "#f5f5f4"}}>
+                                <div className="col-lg-6 contact-form" style={{ background: "#f5f5f4" }}>
                                     <ContactFrom send={send} bg="#f5f5f4" />
                                 </div>
                             </div>
@@ -50,7 +50,8 @@ export default Contact
 export const getServerSideProps = async () => {
     return {
         props: {
-            BaseUrl: process.env.BaseUrl
+            // BaseUrl: process.env.BaseUrl
+            BaseUrl: 'https://techkilla-server.vercel.app'
         }
     }
 }

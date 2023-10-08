@@ -60,7 +60,7 @@ export default function handler(req, res) {
       from: process.env.EMAIL,
       to: process.env.EMAIL,
       subject: req?.body?.job,
-      html: contactForm(data) 
+      html: contactForm(data)
     }
     transporter.sendMail(mainOption, (error, info) => {
       if (error) {

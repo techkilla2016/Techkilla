@@ -240,7 +240,6 @@ const Page = ({ BaseUrl }) => {
                             </div> : ''
                         }
 
-
                         {/* Related Projects */}
                         <Footer />
                     </div>
