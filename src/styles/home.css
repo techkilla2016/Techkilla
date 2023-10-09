@@ -202,7 +202,8 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
     color: #333;
     margin-bottom: 15px;
 }
-.heading span{
+
+.heading span {
     color: #ffcb47;
 }
 
@@ -258,7 +259,8 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
     .section__title {
         font-size: 50px;
     }
-    .para_section{
+
+    .para_section {
         padding: 15px 0px 0px;
     }
 }
@@ -277,7 +279,8 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
     .btnSection2 {
         justify-content: space-evenly;
     }
-    .para_section{
+
+    .para_section {
         padding: 15px 0px 0px;
     }
 }
@@ -784,6 +787,7 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
     .out .box .title {
         padding: 10px 0;
     }
+
     .img_section {
         min-width: 100px;
         max-width: 100px;
@@ -979,4 +983,113 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
 .work_card:hover .work_btn {
     visibility: visible;
     bottom: 40px;
+}
+
+/* //////  */
+.wts-header {
+    background: #0c2c2b;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.wts-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.wts-profile-icon {
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.wts-profile-content {
+    padding-left: 20px;
+}
+
+.wts-name {
+    font-size: 20px;
+    color: #fff;
+}
+
+.wts-headline {
+    font-size: 14px;
+    color: #fff;
+}
+
+.wts-headline span.wts-see {
+    color: rgb(49, 49, 165);
+    cursor: pointer;
+}
+
+.wts-body {
+    height: 200px;
+    background: url('./wts.webp') no-repeat center center/cover;
+}
+
+.wts-msg {
+    width: 100%;
+    display: flex;
+    padding: 20px 30px;
+    justify-content: flex-start;
+}
+
+.wts-recive {
+    width: 50%;
+    height: auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 13px;
+    line-height: 1.2;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.wts-recive strong {
+    font-size: 16px;
+}
+
+.wts-footer {
+    width: 100%;
+    padding: 10px 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #fafafafa;
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #198754;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+    color: #fff;
 }
