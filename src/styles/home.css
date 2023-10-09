@@ -1061,6 +1061,7 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+
 .wts-recive strong {
     font-size: 16px;
 }
@@ -1094,4 +1095,16 @@ svg#freepik_stories-virtual-reality.animated #freepik--Windows--inject-33 {
 
 .whatsapp-btn:hover {
     color: #fff;
+}
+
+@media screen and (max-width:524px) {
+    .wts-recive {
+        width: 80%;
+    }
+
+    .whatsapp-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+    }
 }
