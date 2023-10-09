@@ -124,12 +124,12 @@ const Home = ({ work }) => {
                   Techkilla
                 </div>
                 <div className="wts-headline">
-                  Get your personalized microsite development
-                  {
+                  Advanced Technology Solutions
+                  {/* {
                     isMore ? <span onClick={() => setIsMore(false)}>
                       Interactive Playable Ads instead of simple video ads, VR Solutions and offline tech engagement
                     </span> : <span onClick={() => setIsMore(true)} className='wts-see'> ... see more</span>
-                  }
+                  } */}
                 </div>
               </div>
 
