@@ -199,7 +199,6 @@ const App = () => {
                                 <div className="hero">
                                     <Image src="/hero.png" alt="" width={1920} height={1080} />
                                 </div>
-
                             </div>
                             <div className="col-lg-6 contact-form">
                                 <QrForm send={send} />
@@ -228,61 +227,49 @@ const App = () => {
                     <div className="microSection2">
                         <Container>
                             <div className="micro_heading01">How does it <span>function</span>? </div>
-                            {
-                                funData?.map((item, index) => (
-                                    <div className={index % 2 === 1 ? "microFun microFun1" : "microFun"} key={index}>
-                                        <div className="microFun_contain">
-                                            <h3 className="micro_title">
-                                                {item.title}
-                                            </h3>
-                                            <p className='micro_desc'>
-                                                {item.desc}
-                                            </p>
-                                        </div>
-                                        <div className="microFun_img">
-                                            <Image src={item.img} alt='How does it function' width={1920} height={1080} />
-                                        </div>
-                                    </div>
-                                ))
-                            }
+                            <Row>
+                                {
+                                    funData?.map((item, index) => (
+                                        <Col xxl={6} className='my-4'>
+                                            {/* <div className={index % 2 === 1 ? "microFun d-flex align-items-start microFun1" : " d-flex align-items-startmicroFun"} key={index}> */}
+                                            {index == 2 || index == 3 ? <div className="d-flex align-items-start" key={index}>
+
+                                                <div className="microFun_img1">
+                                                    <Image src={item.img} alt='How does it function' width={1920} height={1080} />
+                                                </div>
+                                                <div className="microFun_contain px-3">
+                                                    <h3 className="micro_titl">
+                                                        {item.title}
+                                                    </h3>
+                                                    <p className='micro_des'>
+                                                        {item.desc}
+                                                    </p>
+                                                </div>
+                                            </div> : <div className="d-flex align-items-start" key={index}>
+                                                <div className="microFun_contain">
+                                                    <h3 className="micro_titl">
+                                                        {item.title}
+                                                    </h3>
+                                                    <p className='micro_des'>
+                                                        {item.desc}
+                                                    </p>
+                                                </div>
+                                                <div className="microFun_img1">
+                                                    <Image src={item.img} alt='How does it function' width={1920} height={1080} />
+                                                </div>
+                                            </div>
+
+                                            }
+
+                                        </Col>
+                                    ))
+                                }
+                            </Row>
                         </Container>
                     </div>
 
                     {/* usecase 4  */}
-                    <div className="micro_qr">
-                        <h2 className="micro_heading01 mb-4">
-                            Use <span>cases</span>
-                        </h2>
-                        <div className="qr-p">
-                            <Container>
-                                <Row>
-                                    {
-                                        userCase?.map((curCase, index) => {
-                                            // const Compo = 
-                                            return (
-                                                <Col key={index} xxl={4} xl={4} lg={4} md={6} sm={6} xs={12}>
-                                                    <div className="col-qr">
-                                                        <div className="qr-cases">
-                                                            <h3 className="qr-cases-icon">
-                                                                <Image src={curCase.icon} alt={curCase?.title} width={1920} height={1080} />
-                                                            </h3>
-                                                            <div className="qr-title">
-                                                                {curCase?.title}
-                                                            </div>
-                                                            <div className="qr-desc">
-                                                                {curCase?.desc}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                            )
-                                        })
-                                    }
 
-                                </Row>
-                            </Container>
-                        </div>
-                    </div>
 
                     {/* 5 */}
                     <div className="microSection2 my-4">
@@ -291,7 +278,7 @@ const App = () => {
                             <Row className='justify-content-center'>
                                 {
                                     benefits?.map((item, index) => (
-                                        <Col key={index} xxl={3} xl={3} lg={3} md={4} sm={6} xm={12}>
+                                        <Col key={index} xxl={2} xl={2} lg={2} md={4} sm={6} xm={12}>
                                             <div className="micro-b-cart">
                                                 <div className="micro-b-them">
                                                     <Image src={item.img} alt={item.title} width={1920} height={1080} />
@@ -328,13 +315,13 @@ const App = () => {
                     {/* 12 */}
                     <div className="Expertise_container pt-5">
                         <Container>
-                            <Row className='align-items-center'>
-                                <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                            <Row className='align-items-center justify-content-center'>
+                                <Col xxl={4} xl={4} lg={4} md={12} sm={12}>
                                     <div className="imgfulScreen db-ful">
                                         <Image src='/microsite/logo-02.png' alt={'Collaborate'} width={1920} height={1080} />
                                     </div>
                                 </Col>
-                                <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
+                                <Col xxl={4} xl={4} lg={4} md={12} sm={12}>
                                     <div className="imgfulScreen db-ful">
                                         <Image src='/microsite/logo-01.png' alt={'Collaborate'} width={1920} height={1080} />
                                     </div>
@@ -343,25 +330,29 @@ const App = () => {
                         </Container>
                         <div className="choose_container">
                             <Container>
-                                {
-                                    choose_list?.map((item, index) => {
-                                        return <Row className='align-items-center'>
-                                            <Col xxl={9} xl={9} lg={9} md={9} sm={12} xm={12} >
-                                                <div className="choose_list">
-                                                    <h3><span></span> {item.title}</h3>
-                                                    <p>
-                                                        {item.desc}
-                                                    </p>
-                                                </div>
+                                <Row className='align-items-center'>
+                                    {
+                                        choose_list?.map((item, index) => {
+                                            return <Col xxl={6}>
+                                                <Row>
+                                                    <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12} >
+                                                        <div className="choose_lit">
+                                                            <h3><span></span> {item.title}</h3>
+                                                            <p>
+                                                                {item.desc}
+                                                            </p>
+                                                        </div>
+                                                    </Col>
+                                                    <Col xxl={4} xl={4} lg={4} md={4} sm={12} xm={12} >
+                                                        <div className="imageSec">
+                                                            <Image src={item.img} alt={item.title} width={1920} height={1080} />
+                                                        </div>
+                                                    </Col>
+                                                </Row>
                                             </Col>
-                                            <Col xxl={3} xl={3} lg={3} md={3} sm={12} xm={12} >
-                                                <div className="imageSec">
-                                                    <Image src={item.img} alt={item.title} width={1920} height={1080} />
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    })
-                                }
+                                        })
+                                    }
+                                </Row>
 
                             </Container>
                         </div>
