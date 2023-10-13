@@ -214,19 +214,13 @@ const App = () => {
                             <div className="microFulImg">
                                 <Image src='/microsite/microsite.png' alt='What is QR Code Registration?' width={1920} height={1080} />
                             </div>
-                            <div className="microPara">
-                                QR code registration is a form of one-of-a-kind registration process that occurs
-                                when a wider audience must be managed in terms of attendance,verification,
-                                and backend entry count over time. It overcomes the difficulty of dealing with
-                                and maintaining manual records and also saves time & labor
-                            </div>
                         </Container>
                     </div>
 
                     {/* 3 */}
                     <div className="microSection2">
                         <Container>
-                            <div className="micro_heading01">How does it <span>function</span>? </div>
+                            <div className="micro_heading01 mb-5">How does it <span>function</span>? </div>
                             <Row>
                                 {
                                     funData?.map((item, index) => (
@@ -272,13 +266,13 @@ const App = () => {
 
 
                     {/* 5 */}
-                    <div className="microSection2 my-4">
+                    <div className="microSection2 mb-4">
                         <div className="micro_heading01 BenefitsHeading">Benefits </div>
-                        <Container className='pt-4'>
+                        <Container className='pt-2'>
                             <Row className='justify-content-center'>
                                 {
                                     benefits?.map((item, index) => (
-                                        <Col key={index} xxl={2} xl={2} lg={2} md={4} sm={6} xm={12}>
+                                        <Col key={index} xxl={2} xl={2} lg={2} md={4} sm={6} xs={12}>
                                             <div className="micro-b-cart">
                                                 <div className="micro-b-them">
                                                     <Image src={item.img} alt={item.title} width={1920} height={1080} />
@@ -333,9 +327,9 @@ const App = () => {
                                 <Row className='align-items-center'>
                                     {
                                         choose_list?.map((item, index) => {
-                                            return <Col xxl={6}>
+                                            return <Col xxl={6} lg={6} md={12} sm={12} xs={12}>
                                                 <Row>
-                                                    <Col xxl={8} xl={8} lg={8} md={8} sm={12} xm={12} >
+                                                    <Col xxl={8} xl={8} lg={8} md={8} sm={8} xm={8} xs={8} >
                                                         <div className="choose_lit">
                                                             <h3><span></span> {item.title}</h3>
                                                             <p>
@@ -343,8 +337,8 @@ const App = () => {
                                                             </p>
                                                         </div>
                                                     </Col>
-                                                    <Col xxl={4} xl={4} lg={4} md={4} sm={12} xm={12} >
-                                                        <div className="imageSec">
+                                                    <Col xxl={4} xl={4} lg={4} md={4} sm={4} xm={4} xs={4} >
+                                                        <div className="imageSe">
                                                             <Image src={item.img} alt={item.title} width={1920} height={1080} />
                                                         </div>
                                                     </Col>
