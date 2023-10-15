@@ -174,7 +174,7 @@ const App = () => {
     const [wWidth, setWWidth] = useState(600)
     useEffect(() => {
         setWWidth(window.innerWidth / 2.6)
-    })
+    }, [window.innerWidth])
 
     return (
         <>
