@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, } from 'react-bootstrap'
 import QrForm from '@/components/contect/FormQR'
 import Image from 'next/image'
@@ -163,7 +163,6 @@ const App = () => {
     const { utm_campaign, utm_medium, utm_source } = router?.query
     const send = async (contact) => {
         try {
-            // const reponce = await axios.post(`http://localhost:2917/qr-solution`, { ...contact, utm_campaign, utm_medium, utm_source })
             const reponce = await axios.post(`https://techkilla-server.vercel.app/qr-solution`, { ...contact, utm_campaign, utm_medium, utm_source })
             router.push('/thanks');
             return false
@@ -171,6 +170,11 @@ const App = () => {
             return false;
         }
     };
+
+    const [wWidth, setWWidth] = useState(600)
+    useEffect(() => {
+        setWWidth(window.innerWidth / 2.6)
+    })
 
     return (
         <>
@@ -211,8 +215,17 @@ const App = () => {
                             What is <span>QR Code</span> Registration?
                         </h1>
                         <Container>
-                            <div className="microFulImg">
-                                <Image src='/microsite/microsite.png' alt='What is QR Code Registration?' width={1920} height={1080} />
+                            <div className="microFulImg d-flex justify-content-center">
+                                <iframe
+                                    width="80%"
+                                    style={{ borderRadius: '10px', height: `${wWidth}px` }}
+                                    src="https://www.youtube.com/embed/fugeiotXyUk"
+                                    title="YouTube Video"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+
                             </div>
                         </Container>
                     </div>
