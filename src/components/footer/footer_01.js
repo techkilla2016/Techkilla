@@ -20,8 +20,8 @@ const Footer01 = ({ bg }) => {
                                     background: '#fdb714',
                                     padding: "10px 20px",
                                     borderRadius: 10,
-                                    color: '#fafafa'
-                                }}>Enquire Now</Link>
+                                    color: '#000'
+                                }}>Get a Quote</Link>
                             </Col>
                             <Col xxl={8} xl={8} lg={8} md={12} sm={12} xs={12}>
                                 <div className="">
