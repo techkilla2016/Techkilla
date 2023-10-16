@@ -17,7 +17,7 @@ const Footer01 = ({ bg }) => {
                                 </div>
                                 <Link className="" href="#demo" style={{
                                     fontSize: 20,
-                                    background: '#fdb714',
+                                    background: '#fff',
                                     padding: "10px 20px",
                                     borderRadius: 10,
                                     color: 'rgb(151 24 24)',
