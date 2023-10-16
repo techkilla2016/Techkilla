@@ -9,9 +9,9 @@ const Footer01 = ({ bg }) => {
         <footer>
             <div className="footer-01">
                 <div className='main-footer-01 py-5'>
-                    <Container>
+                    <Container fluid>
                         <div className="row justify-content-evenly align-items-center">
-                            <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12} className='d-flex align-items-center'>
+                            <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12} className='d-flex align-items-center justify-content-evenly'>
                                 <div className="footer-logo">
                                     <Image src='/logo/logo-03.png' width={50} height={50} />
                                 </div>
@@ -20,7 +20,7 @@ const Footer01 = ({ bg }) => {
                                     background: '#fdb714',
                                     padding: "10px 20px",
                                     borderRadius: 10,
-                                    color: '#000',
+                                    color: 'rgb(151 24 24)',
                                     fontWeight: 'bold'
                                 }}>Get a Quote</Link>
                             </Col>
