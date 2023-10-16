@@ -20,7 +20,7 @@ const Footer01 = ({ bg }) => {
                                     background: '#fff',
                                     padding: "10px 20px",
                                     borderRadius: 10,
-                                    color: 'rgb(151 24 24)',
+                                    color: 'rgb(0 35 71)',
                                     fontWeight: 'bold'
                                 }}>Get a Quote</Link>
                             </Col>
