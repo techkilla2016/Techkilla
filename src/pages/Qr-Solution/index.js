@@ -7,6 +7,8 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { GiSmartphone } from 'react-icons/gi'
 import axios from 'axios'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
+import auth from '@/models/auth'
 const funData = [
     {
         title: 'Form to sign up for an event or campaign',
@@ -171,14 +173,14 @@ const App = () => {
         }
     };
 
-    const [wWidth, setWWidth] = useState(600)
+    const [wWidth, setWWidth] = useState(0)
     useEffect(() => {
         setWWidth(window.innerWidth / 2.6)
-    }, [window.innerWidth])
+    })
 
     return (
         <>
-            <div className="main">
+            <div className="main" id='demo'>
                 <div className='row align-items-center py-1 px-3 qr-header'>
                     <Col xxl={2} xl={2} lg={2} md={2} sm={2} xs={2}>
                         <div className="qr-logo">
@@ -233,6 +235,16 @@ const App = () => {
                     {/* 3 */}
                     <div className="microSection2">
                         <Container>
+
+                            <div className="d-flex justify-content-center">
+                                <Link className="mb-5" href="#demo" style={{
+                                    fontSize: 20,
+                                    background: '#fdb714',
+                                    padding: "10px 20px",
+                                    borderRadius: 10,
+                                    color: '#fafafa'
+                                }}>Request a Free Demo </Link>
+                            </div>
                             <div className="micro_heading01 mb-5">How does it <span>function</span>? </div>
                             <Row>
                                 {
@@ -299,6 +311,15 @@ const App = () => {
                                 }
                             </Row>
                         </Container>
+                        <div className="d-flex justify-content-center">
+                            <Link className="mb-5" href="#demo" style={{
+                                fontSize: 20,
+                                background: '#fdb714',
+                                padding: "10px 20px",
+                                borderRadius: 10,
+                                color: '#fafafa'
+                            }}>Enquire Now</Link>
+                        </div>
                     </div>
 
                     {/* 11 */}
