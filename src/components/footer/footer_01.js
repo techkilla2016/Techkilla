@@ -11,7 +11,7 @@ const Footer01 = ({ bg }) => {
                 <div className='main-footer-01 py-5'>
                     <Container>
                         <div className="row justify-content-evenly align-items-center">
-                            <Col xxl={4} xl={4} lg={4} md={4} sm={6} xs={12} className='d-flex align-items-center'>
+                            <Col xxl={4} xl={4} lg={4} md={4} sm={12} xs={12} className='d-flex align-items-center'>
                                 <div className="footer-logo">
                                     <Image src='/logo/logo-03.png' width={50} height={50} />
                                 </div>
@@ -23,7 +23,7 @@ const Footer01 = ({ bg }) => {
                                     color: '#fafafa'
                                 }}>Enquire Now</Link>
                             </Col>
-                            <Col xxl={8} xl={8} lg={8} md={8} sm={6} xs={12}>
+                            <Col xxl={8} xl={8} lg={8} md={8} sm={12} xs={12}>
                                 <div className="">
                                     <div className='d-flex justify-content-evenly align-items-center flex-wrap'>
                                         <div className="my-3">
