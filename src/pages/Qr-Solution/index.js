@@ -242,7 +242,8 @@ const App = () => {
                                     background: '#fdb714',
                                     padding: "10px 20px",
                                     borderRadius: 10,
-                                    color: '#000'
+                                    color: '#000',
+                                    fontWeight: 'bold'
                                 }}>Request a Free Demo </Link>
                             </div>
                             <div className="micro_heading01 mb-5">How does it <span>function</span>? </div>
@@ -317,7 +318,8 @@ const App = () => {
                                 background: '#fdb714',
                                 padding: "10px 20px",
                                 borderRadius: 10,
-                                color: '#000'
+                                color: '#000',
+                                fontWeight: 'bold'
                             }}>Enquire Now</Link>
                         </div>
                     </div>
