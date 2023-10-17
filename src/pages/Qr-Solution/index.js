@@ -345,18 +345,26 @@ const App = () => {
                     {/* 12 */}
                     <div className="Expertise_container pt-5">
                         <Container>
-                            <Row className='align-items-center justify-content-center'>
+                            <div className="d-flex align-items-center justify-content-center">
+                                <h1 className='micro_heading01 text-center'>
+                                    <span className='text-center fw-bold'> WHY CHOOSE US ?</span>
+                                </h1>
+                                {/* <div className="imgfulScreen db-ful" style={{
+                                    width: '100px'
+                                }}>
+                                    <Image src='/microsite/logo-01.png' alt={'Collaborate'} width={1920} height={1080} />
+                                </div> */}
+                            </div>
+                            {/* <Row className='align-items-center justify-content-center'>
                                 <Col xxl={4} xl={4} lg={4} md={12} sm={12}>
                                     <div className="imgfulScreen db-ful">
                                         <Image src='/microsite/logo-02.png' alt={'Collaborate'} width={1920} height={1080} />
                                     </div>
                                 </Col>
                                 <Col xxl={4} xl={4} lg={4} md={12} sm={12}>
-                                    <div className="imgfulScreen db-ful">
-                                        <Image src='/microsite/logo-01.png' alt={'Collaborate'} width={1920} height={1080} />
-                                    </div>
+                                   
                                 </Col>
-                            </Row>
+                            </Row> */}
                         </Container>
                         <div className="choose_container">
                             <Container>
