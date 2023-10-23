@@ -9,6 +9,8 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import auth from '@/models/auth'
+import Head from 'next/head'
+import Script from 'next/script'
 const funData = [
     {
         title: 'Form to sign up for an event or campaign',
@@ -161,6 +163,7 @@ const choose_list = [
 ]
 
 const App = () => {
+
     const router = useRouter()
     const { utm_campaign, utm_medium, utm_source } = router?.query
     const send = async (contact) => {
@@ -180,6 +183,39 @@ const App = () => {
 
     return (
         <>
+            <Head>
+                <Script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-PVH2G66V');
+            `,
+                    }}
+                />
+                <Script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-PVH2G66V');
+            `,
+                    }}
+                />
+                {/* Add the noscript part */}
+                <noscript>
+                    <iframe
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-PVH2G66V"
+                        height="0"
+                        width="0"
+                        style={{ display: 'none', visibility: 'hidden' }}
+                    ></iframe>
+                </noscript>
+            </Head>
             <div className="main" id='demo'>
                 <div className='row align-items-center py-1 px-3 qr-header'>
                     <Col xxl={2} xl={2} lg={2} md={2} sm={2} xs={2}>
