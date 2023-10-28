@@ -67,18 +67,18 @@ const Home = () => {
                         <Row className='align-items-center ai-photo-Section-7'>
                             <Col xxl={7} xl={7} lg={7} md={6} sm={12} xs={12} className='tk-ai-col'>
 
-                                <div className="micro_heading01 text-start">
+                                <div className="micro_heading01 text-start" data-aos="zoom-in-down" data-aos-delay="0">
                                     Unleash Halloween magic with <span>AI face swap!</span>
                                 </div>
-                                <p className='photo-ai-para py-4' >
+                                <p className='photo-ai-para py-4' data-aos="zoom-in-down" data-aos-delay="300">
                                     Get ready for a jaw-dropping transformation with our spooky AI-powered Face Swap.
                                 </p>
-                                <div className="d-flex">
+                                <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
                                     <ExpoBtn title="EXPLORE ALL" url="/" />
                                 </div>
                             </Col>
                             <Col xxl={5} xl={5} lg={5} md={6} sm={12} xs={12} className='tk-ai-col'>
-                                <div className="d-flex justify-content-center">
+                                <div className="d-flex justify-content-center" data-aos="zoom-in-up" data-aos-delay="0">
                                     <SwipeCard />
                                 </div>
                             </Col>
@@ -89,14 +89,14 @@ const Home = () => {
                     <div className="">
                         <div className="ai-model-container py-5">
                             <Container>
-                                <h2 className=' fw-bold'>
+                                <h2 className=' fw-bold' data-aos="zoom-in-down" data-aos-delay="0">
                                     Carefully selected content
                                 </h2>
                                 <Row>
                                     {
                                         aiData?.map((item, keys) => {
-                                            return <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12} key={keys} className='py-3'>
-                                                <Card className='overflow-hidden'>
+                                            return <Col xxl={3} xl={3} lg={3} md={3} sm={12} xs={12} key={keys} className='py-3' data-aos="zoom-in-down" data-aos-delay={keys * 100}>
+                                                <Card className='overflow-hidden' >
                                                     <div className="tk-ai-card">
                                                         <Image src={item?.img} title={item.title} width={1920} height={1080} />
                                                     </div>
