@@ -117,7 +117,7 @@ const Home = ({ work }) => {
           <Modal.Body>
             <div className="wts-header">
               <div className="wts-profile-icon">
-                <Image src='/robo.jpg' width={100} height={100} />
+                <Image src='/robo.jpg' alt='techkilla' width={100} height={100} />
               </div>
               <div className="wts-profile-content">
                 <div className="wts-name">
