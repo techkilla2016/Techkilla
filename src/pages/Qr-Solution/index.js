@@ -8,6 +8,7 @@ import { GiSmartphone } from 'react-icons/gi'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import Script from 'next/script'
 const funData = [
     {
         title: 'Form to sign up for an event or campaign',
@@ -129,19 +130,21 @@ const App = () => {
     return (
         <>
             <div className="main" id='demo'>
-                <div
+                <Script
                     dangerouslySetInnerHTML={{
                         __html: `
-            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-PVH2G66V');
-            console.log("running....")
-            </script>            
-            `,
+                        (function(w,d,s,l,i){
+                            w[l]=w[l]||[];
+                            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+                            var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                            j.async=true;
+                            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                            f.parentNode.insertBefore(j,f);
+                        })(window,document,'script','dataLayer','GTM-PVH2G66V');
+                        console.log("running....");
+                    `,
                     }}
-                ></div>
+                ></Script>
                 <iframe
                     src="https://www.googletagmanager.com/ns.html?id=GTM-PVH2G66V"
                     height="0"
@@ -152,7 +155,7 @@ const App = () => {
                 <div className='row align-items-center py-1 px-3 qr-header'>
                     <Col xxl={2} xl={2} lg={2} md={2} sm={2} xs={2}>
                         <div className="qr-logo">
-                            <Image src="/logo/logo.png" width={70} height={70} />
+                            <Image src="/logo/logo.png" alt='Techkilla' width={70} height={70} />
                         </div>
                     </Col>
                     <Col xxl={10} xl={10} lg={10} md={10} sm={10} xs={10}>
@@ -171,7 +174,7 @@ const App = () => {
                         <div className="row">
                             <div className="col-lg-6 px-0">
                                 <div className="hero">
-                                    <Image src="/hero.png" alt="" width={1920} height={1080} />
+                                    <Image src="/hero.png" alt="techkilla" width={1920} height={1080} />
                                 </div>
                             </div>
                             <div className="col-lg-6 contact-form">
@@ -246,9 +249,7 @@ const App = () => {
                                                     <Image src={item.img} alt='How does it function' width={1920} height={1080} />
                                                 </div>
                                             </div>
-
                                             }
-
                                         </Col>
                                     ))
                                 }
@@ -317,29 +318,14 @@ const App = () => {
                                 <h1 className='micro_heading01 text-center'>
                                     <span className='text-center fw-bold'> WHY CHOOSE US ?</span>
                                 </h1>
-                                {/* <div className="imgfulScreen db-ful" style={{
-                                    width: '100px'
-                                }}>
-                                    <Image src='/microsite/logo-01.png' alt={'Collaborate'} width={1920} height={1080} />
-                                </div> */}
                             </div>
-                            {/* <Row className='align-items-center justify-content-center'>
-                                <Col xxl={4} xl={4} lg={4} md={12} sm={12}>
-                                    <div className="imgfulScreen db-ful">
-                                        <Image src='/microsite/logo-02.png' alt={'Collaborate'} width={1920} height={1080} />
-                                    </div>
-                                </Col>
-                                <Col xxl={4} xl={4} lg={4} md={12} sm={12}>
-                                   
-                                </Col>
-                            </Row> */}
                         </Container>
                         <div className="choose_container">
                             <Container>
                                 <Row className='align-items-center'>
                                     {
                                         choose_list?.map((item, index) => {
-                                            return <Col xxl={6} lg={6} md={12} sm={12} xs={12}>
+                                            return <Col xxl={6} lg={6} md={12} sm={12} xs={12} key={index}>
                                                 <Row>
                                                     <Col xxl={8} xl={8} lg={8} md={8} sm={8} xm={8} xs={8} >
                                                         <div className="choose_lit">

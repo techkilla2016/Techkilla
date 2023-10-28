@@ -225,7 +225,6 @@ const PhotoAI = ({ BaseUrl }) => {
                                             </div>
                                         })
                                     }
-
                                 </Col>
                             </Row>
                         </Container>
