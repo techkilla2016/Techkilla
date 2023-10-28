@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
         />
 
         {/* Other head elements */}
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){

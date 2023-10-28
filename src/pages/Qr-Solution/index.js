@@ -354,18 +354,8 @@ const App = () => {
                 </div>
             </div>
             <Footer01 />
-            {/* <div className="qr-footer bg-dark py-5">
-            </div> */}
         </>
     )
 }
 
 export default App
-
-// export const getStaticProps = async () => {
-//     return {
-//         props: {
-//             BaseUrl: process.env.BaseUrl
-//         }
-//     }
-// }
