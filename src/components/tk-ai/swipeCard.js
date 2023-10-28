@@ -10,12 +10,12 @@ const SwipeCard = () => {
         <div className='ai-container'>
             <div className='img background-img'>
                 <div className='sliderImg'>
-                    <img src="https://i.imgur.com/s08MkXC.jpg" alt="" />
+                    <img src="/photo-ai/Magical.jpg" alt="" />
                 </div>
             </div>
             <div className='img foreground-img' style={{ width: `${sliderPos}%`, }}>
                 <div className='sliderImg'>
-                    <img src="https://i.imgur.com/PfIWek4.jpg" alt="" />
+                    <img src="/photo-ai/sci-fi.jpeg" alt="" />
                 </div>
             </div>
             <input type="range" min="1" max="100"

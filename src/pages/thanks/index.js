@@ -7,6 +7,7 @@ import { FaArrowRight, FaLinkedinIn } from 'react-icons/fa'
 import { MdOutlineHorizontalRule } from 'react-icons/md'
 import { BsInstagram, BsYoutube } from 'react-icons/bs'
 import Image from 'next/image'
+import Script from 'next/script'
 const Home = () => {
 
     const media = [
