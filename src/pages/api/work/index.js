@@ -68,34 +68,34 @@ const list = [
         desc: `"DOW Packaging & Supplies Speciality solved the challenge of  managing dealer & distributor meetings with an Al-based QR code registration  system. This streamlined registration, automated communication, & allowed for  meeting booking through a microsite.`,
         url: 'https://youtube.com/shorts/pfJGe8uSg-E?feature=share'
     },
-    {
-        Heading: 'Tetra Pak - Excitometer',
-        thumbnail: '/work/excitormeter.png',
-        logo: '/work/excitormeter-logo.png',
-        desc: `Are you ready to take your event to the next level?`,
-        url: 'https://youtu.be/NNkH6cb-aQM/'
-    },
-    {
-        Heading: 'Garnier Color Carnival',
-        thumbnail: '/work/garnier.png',
-        logo: '/work/garnier-logo.png',
-        desc: `A custom microsite for Garnier color carnival to fill in the details, upload your bill and verify with automated OTP. Backend database to approve on the bills`,
-        url: 'https://www.youtube.com/shorts/FF3Ti5RF1Vw'
-    },
-    {
-        Heading: 'HDFC AnalytIQ',
-        thumbnail: '/work/hdfc.png',
-        logo: '/work/hdfc-logo.png',
-        desc: `A combination of 3 unique analytical game for HDFC Bank customers to participate and win exciting rewards. Sudoku, scrabble or chess choose as per your skill & show your talent..`,
-        url: 'https://youtu.be/eP9v-MsFvVg'
-    },
-    {
-        Heading: 'HSBC Microsite engagement',
-        thumbnail: '/work/hsbc.png',
-        logo: '/work/hsbc-logo.png',
-        desc: `Created a unique form of microsite engagement for HSBC. Play for 10 minutes with text quiz, picture quiz and jigsaw puzzle and at the end wait for your results.`,
-        url: 'https://youtu.be/orgaHFBRC4c'
-    },
+    // {
+    //     Heading: 'Tetra Pak - Excitometer',
+    //     thumbnail: '/work/excitormeter.png',
+    //     logo: '/work/excitormeter-logo.png',
+    //     desc: `Are you ready to take your event to the next level?`,
+    //     url: 'https://youtu.be/NNkH6cb-aQM/'
+    // },
+    // {
+    //     Heading: 'Garnier Color Carnival',
+    //     thumbnail: '/work/garnier.png',
+    //     logo: '/work/garnier-logo.png',
+    //     desc: `A custom microsite for Garnier color carnival to fill in the details, upload your bill and verify with automated OTP. Backend database to approve on the bills`,
+    //     url: 'https://www.youtube.com/shorts/FF3Ti5RF1Vw'
+    // },
+    // {
+    //     Heading: 'HDFC AnalytIQ',
+    //     thumbnail: '/work/hdfc.png',
+    //     logo: '/work/hdfc-logo.png',
+    //     desc: `A combination of 3 unique analytical game for HDFC Bank customers to participate and win exciting rewards. Sudoku, scrabble or chess choose as per your skill & show your talent..`,
+    //     url: 'https://youtu.be/eP9v-MsFvVg'
+    // },
+    // {
+    //     Heading: 'HSBC Microsite engagement',
+    //     thumbnail: '/work/hsbc.png',
+    //     logo: '/work/hsbc-logo.png',
+    //     desc: `Created a unique form of microsite engagement for HSBC. Play for 10 minutes with text quiz, picture quiz and jigsaw puzzle and at the end wait for your results.`,
+    //     url: 'https://youtu.be/orgaHFBRC4c'
+    // },
     // {
     //     Heading: 'MAYBELLINE NEW YORK',
     //     thumbnail: '/work/maybelline.png',
