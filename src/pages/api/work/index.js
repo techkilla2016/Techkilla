@@ -4,6 +4,28 @@ import recentWorkModel from "@/models/work"
 
 const list = [
     {
+        Heading: 'Spin the Wheel Activity for Easy Rewards Distribution',
+        thumbnail: '/work/TVS-pro.png',
+        logo: '/work/tvs-logo.png',
+        desc: `Take a spin and try your luck with TVS Motors' Spin the Wheel Activity. Spin twice to reveal the reward destined for you.`,
+        url: ''
+    },
+    {
+        Heading: 'Colgate Smile Power Station',
+        thumbnail: '/work/colgate-booth.png',
+        logo: '/work/colgate-logo.png',
+        desc: `Engage with the Colgate Smile Power Station where Thousands of visitors participated, capturing their smiles and scanning the QR code to receive a special smile momento.`,
+        url: 'https://youtube.com/shorts/ylEuAXT_wW8?feature=shared'
+    },
+
+    {
+        Heading: 'TVS Motors presents Tambola or Bingo Live Activity',
+        thumbnail: '/work/tvs.png',
+        logo: '/work/tvs-logo.png',
+        desc: `Join the fun with TVS Motors in an online Tambola or Bingo activity designed for the distribution of rewards to their 12,000 customers.`,
+        url: 'https://youtube.com/shorts/usQ1QdrPiE8?feature=shared'
+    },
+    {
         Heading: 'Aashirvaad Svasti Lassi Instagram filter',
         thumbnail: '/work/Lassi-filter.png',
         logo: '/work/lassi-filter_01.png',
@@ -74,41 +96,41 @@ const list = [
         desc: `Created a unique form of microsite engagement for HSBC. Play for 10 minutes with text quiz, picture quiz and jigsaw puzzle and at the end wait for your results.`,
         url: 'https://youtu.be/orgaHFBRC4c'
     },
-    {
-        Heading: 'MAYBELLINE NEW YORK',
-        thumbnail: '/work/maybelline.png',
-        logo: '/work/maybelline-logo.png',
-        desc: `New York 6 cities new products launch to engage participants & give them a memorable experience in form of video. Shared using airdrop, QR code or whatsapp`,
-        url: '/'
-    },
-    {
-        Heading: 'NHRD "Decode the future"',
-        thumbnail: '/work/NHRD.png',
-        logo: '/work/NHRD-logo.png',
-        desc: `NHRD'S "Decode the Future" event streamlined registration for thousands of visitors with a cutting-edge QR code-based system featuring unique features.`,
-        url: 'https://youtu.be/pD1otredtSY'
-    },
-    {
-        Heading: '360 Spin booth Carlsberg',
-        thumbnail: '/work/spin_booth.png',
-        logo: '/work/spin_booth-logo.png',
-        desc: `group to engage participants & give them a memorable experience in form of video. Shared using airdrop, QR code or whatsapp.`,
-        url: 'https://youtube.com/shorts/Ql0lUsI4U64?feature=share'
-    },
-    {
-        Heading: 'airtel',
-        thumbnail: '/work/airtel.png',
-        logo: '/work/airtel-logo.png',
-        desc: `group to engage participants & give them a memorable experience in form of video. Shared using airdrop, QR code or whatsapp.`,
-        url: 'https://youtube.com/shorts/rbnMxtTQFuM?feature=share'
-    },
-    {
-        Heading: 'airtel',
-        thumbnail: '/work/India_Partner.png',
-        logo: '/work/India_Partner-logo.png',
-        desc: `group to engage participants & give them a memorable experience in form of video. Shared using airdrop, QR code or whatsapp.`,
-        url: 'https://www.youtube.com/shorts/PhjwJKyTo68'
-    },
+    // {
+    //     Heading: 'MAYBELLINE NEW YORK',
+    //     thumbnail: '/work/maybelline.png',
+    //     logo: '/work/maybelline-logo.png',
+    //     desc: `New York 6 cities new products launch to engage participants & give them a memorable experience in form of video. Shared using airdrop, QR code or whatsapp`,
+    //     url: '/'
+    // },
+    // {
+    //     Heading: 'NHRD "Decode the future"',
+    //     thumbnail: '/work/NHRD.png',
+    //     logo: '/work/NHRD-logo.png',
+    //     desc: `NHRD'S "Decode the Future" event streamlined registration for thousands of visitors with a cutting-edge QR code-based system featuring unique features.`,
+    //     url: 'https://youtu.be/pD1otredtSY'
+    // },
+    // {
+    //     Heading: '360 Spin booth Carlsberg',
+    //     thumbnail: '/work/spin_booth.png',
+    //     logo: '/work/spin_booth-logo.png',
+    //     desc: `group to engage participants & give them a memorable experience in form of video. Shared using airdrop, QR code or whatsapp.`,
+    //     url: 'https://youtube.com/shorts/Ql0lUsI4U64?feature=share'
+    // },
+    // {
+    //     Heading: 'airtel',
+    //     thumbnail: '/work/airtel.png',
+    //     logo: '/work/airtel-logo.png',
+    //     desc: `group to engage participants & give them a memorable experience in form of video. Shared using airdrop, QR code or whatsapp.`,
+    //     url: 'https://youtube.com/shorts/rbnMxtTQFuM?feature=share'
+    // },
+    // {
+    //     Heading: 'airtel',
+    //     thumbnail: '/work/India_Partner.png',
+    //     logo: '/work/India_Partner-logo.png',
+    //     desc: `group to engage participants & give them a memorable experience in form of video. Shared using airdrop, QR code or whatsapp.`,
+    //     url: 'https://www.youtube.com/shorts/PhjwJKyTo68'
+    // },
 ]
 
 async function handler(req, res) {

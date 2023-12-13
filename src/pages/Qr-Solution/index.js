@@ -109,7 +109,6 @@ const choose_list = [
 ]
 
 const App = () => {
-
     const router = useRouter()
     const { utm_campaign, utm_medium, utm_source } = router?.query
     const send = async (contact) => {
@@ -129,7 +128,7 @@ const App = () => {
 
     return (
         <>
-            <div className="main" id='demo'>
+            <div className="main" id=''>
                 <Script
                     dangerouslySetInnerHTML={{
                         __html: `

@@ -90,7 +90,7 @@ const Header = () => {
                             </div>
                         </div>
                         <Link className='navlink' href="/case-studies">Case Studies</Link>
-                        <Link className='navlink' href="/privacy-policy">Privacy & Policy</Link>
+                        {/* <Link className='navlink' href="/privacy-policy">Privacy & Policy</Link> */}
                         <Link className='navlink' href="/QR-Registration" style={{
                             color: '#fdb714'
                         }}>QR Registration</Link>
@@ -202,6 +202,9 @@ const Header = () => {
                                 </div>
                                 <div className='listMenu' onClick={() => setIsMobile(false)}>
                                     <Link href="/case-studies">Case Studies</Link>
+                                </div>
+                                <div className='listMenu'>
+                                    <Link href="/privacy-policy">Privacy & Policy</Link>
                                 </div>
                             </div >
                             <div className="MobileNavBtn">
