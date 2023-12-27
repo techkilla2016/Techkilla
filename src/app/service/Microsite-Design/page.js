@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import UseCaseCard from '@/components/service/UseCase'
-import GridSlider from '@/components/slider/GridSlider'
+import GridSlider from '@/components/Slider/GridSlider'
 import useCaseData from "@/data/service/Microsite-Design/useCase"
 import relativedProject from '@/data/service/Microsite-Design/relativedProject'
 import benifit from '@/data/service/Microsite-Design/benifit'
