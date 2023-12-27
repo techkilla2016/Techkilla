@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 
 const SwipeCard = () => {
@@ -10,12 +11,12 @@ const SwipeCard = () => {
         <div className='ai-container'>
             <div className='img background-img'>
                 <div className='sliderImg'>
-                    <img src="/photo-ai/Magical.jpg" alt="" />
+                    <img src="/assets/tk-ai/ai/after.png" alt="" />
                 </div>
             </div>
             <div className='img foreground-img' style={{ width: `${sliderPos}%`, }}>
                 <div className='sliderImg'>
-                    <img src="/photo-ai/sci-fi.jpeg" alt="" />
+                    <img src="/assets/tk-ai/ai/before.png" alt="" />
                 </div>
             </div>
             <input type="range" min="1" max="100"

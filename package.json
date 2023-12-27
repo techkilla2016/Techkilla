@@ -1,5 +1,5 @@
 {
-  "name": "techkilla",
+  "name": "techkilla-main",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,34 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
     "aos": "^2.3.4",
-    "axios": "^1.4.0",
-    "bootstrap": "^5.2.3",
-    "mongoose": "^7.2.1",
-    "next": "13.1.6",
-    "next-images": "^1.8.4",
-    "next-videos": "^1.4.1",
-    "nodemailer": "^6.9.1",
-    "react": "18.2.0",
-    "react-bootstrap": "^2.7.1",
+    "axios": "^1.5.1",
+    "bootstrap": "^5.3.2",
+    "next": "latest",
+    "react": "latest",
+    "react-bootstrap": "^2.9.0",
     "react-bootstrap-country-select": "^1.0.0",
     "react-chat-widget": "^3.1.4",
     "react-countup": "^6.4.2",
-    "react-dom": "18.2.0",
-    "react-ga": "^3.3.1",
-    "react-icons": "^4.7.1",
+    "react-dom": "latest",
+    "react-icons": "^4.11.0",
     "react-phone-input-2": "^2.15.1",
-    "react-phone-number-input": "^3.3.4",
-    "react-player": "^2.12.0",
-    "react-scroll-trigger": "^0.6.14",
-    "react-slider-swiper": "^2.0.6",
-    "react-visibility-sensor": "^5.1.1",
-    "sass": "^1.67.0",
-    "styled-components": "^5.3.6",
-    "swiper": "^9.1.0"
+    "react-player": "^2.13.0",
+    "sass": "^1.68.0",
+    "swiper": "9.1.0"
   },
   "devDependencies": {
-    "file-loader": "^6.2.0"
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest"
   }
 }

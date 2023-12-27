@@ -1,43 +1,9 @@
+"use client"
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap'
-// import { Virtual } from 'swiper/core';
 import { Swiper, SwiperSlide, } from 'swiper/react';
 import { Autoplay, } from "swiper";
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-const cardData = [
-    {
-        pagenum: '1/5',
-        tilte: 'Initiate the Magic',
-        para: `Users simply tap 'Start' to conjure their live image capture.`,
-        img: '/photo-ai/slider/Initiate-the-Magic.png'
-    },
-    {
-        pagenum: '2/5',
-        tilte: 'Discover AI Transformation Options',
-        para: `Select 'Generate' to open the door to a world of AI transformations, where you can handpick your favorite enchantment`,
-        img: '/photo-ai/slider/Discover.png'
-    },
-    {
-        pagenum: '3/5',
-        tilte: 'Transform ',
-        para: `Experience the Speed of Instant AI TransformationCapture the Moment and Watch the Magic Unfold as AI Transforms Your Image in an Instant, Delivering Swift and Stunning Results`,
-        img: '/photo-ai/slider/3rd.png'
-    },
-    {
-        pagenum: '4/5',
-        tilte: 'Re-generate or Share',
-        para: `Click 'Regenerate' to Keep the Magic Alive When Your Desire to Rediscover Yourself Knows No Bounds.`,
-        img: '/photo-ai/slider/Re-Generate-or-Share.png'
-    },
-    {
-        pagenum: '5/5',
-        tilte: 'Share & display',
-        para: `Share Your Transformed Masterpiece with Endless Possibilities. Choose from QR Scanning, Emailing, or Safeguarding for Posterity.`,
-        img: '/photo-ai/slider/Share-Display.png'
-    }
-]
+import cardData from '@/data/photo-ai/Engagement'
 const Slidebar = () => {
     const [swiperRef, setSwiperRef] = useState(0);
 
@@ -51,21 +17,11 @@ const Slidebar = () => {
             <Col xxl={12} lg={12} md={12} sm={12}>
                 <div className="main">
                     <p className="append-buttons">
-                        <button onClick={() => slideTo(0)} className="prepend-2-slides">
-                            1. CAPTURE
-                        </button>
-                        <button onClick={() => slideTo(1)} className="prepend-slide">
-                            2. TRANSFORM
-                        </button>
-                        <button onClick={() => slideTo(2)} className="slide-250">
-                            3. APPLY OVERLY
-                        </button>
-                        <button onClick={() => slideTo(3)} className="slide-500">
-                            4. RECEIVE
-                        </button>
-                        <button onClick={() => slideTo(4)} className="append-slides">
-                            5. SHARE
-                        </button>
+                        <button onClick={() => slideTo(0)} data-aos="fade-up" data-aos-delay="0" className="prepend-2-slides">    1. CAPTURE</button>
+                        <button onClick={() => slideTo(1)} data-aos="fade-up" data-aos-delay="100" className="prepend-slide">    2. TRANSFORM</button>
+                        <button onClick={() => slideTo(2)} data-aos="fade-up" data-aos-delay="200" className="slide-250">    3. APPLY OVERLY</button>
+                        <button onClick={() => slideTo(3)} data-aos="fade-up" data-aos-delay="300" className="slide-500">    4. RECEIVE</button>
+                        <button onClick={() => slideTo(4)} data-aos="fade-up" data-aos-delay="400" className="append-slides">    5. SHARE</button>
                     </p>
                     <Swiper
                         // modules={[Virtual]}

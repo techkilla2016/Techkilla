@@ -1,21 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap'
+"use client"
+import React from 'react';
 import { Swiper, SwiperSlide, } from 'swiper/react';
-import { Autoplay, } from "swiper";
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 const Testimonials = ({ cardData }) => {
-    const [maxHeight, setMaxHeight] = useState(0);
-
-    useEffect(() => {
-        const cardHeights = cardData.map(item => {
-            return item.desc.length;
-        });
-        const maxCardHeight = Math.max(...cardHeights);
-        setMaxHeight(maxCardHeight);
-    }, [cardData]);
     return (
 
         <>

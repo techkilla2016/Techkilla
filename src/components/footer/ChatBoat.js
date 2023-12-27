@@ -1,10 +1,8 @@
+"use client"
 import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 import axios from 'axios';
 import 'react-chat-widget/lib/styles.css';
-
-
-
 const DynamicWidget = dynamic(() => import('react-chat-widget').then(mod => mod.Widget), {
   ssr: false,
 });

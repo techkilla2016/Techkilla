@@ -6,12 +6,12 @@ import { BsInstagram } from 'react-icons/bs'
 import Link from 'next/link'
 import { Col, Row } from 'react-bootstrap'
 import Image from 'next/image'
-import Button from '../button/Button'
-import { BsWhatsapp } from 'react-icons/bs'
-import { IoLogoInstagram } from 'react-icons/io'
-import { ImFacebook } from 'react-icons/im'
-import { FaLinkedinIn } from 'react-icons/fa'
-import ChatBoat from './ChatBoat'
+import Button from '@/components/button'
+// import { BsWhatsapp } from 'react-icons/bs'
+// import { IoLogoInstagram } from 'react-icons/io'
+// import { ImFacebook } from 'react-icons/im'
+// import { FaLinkedinIn } from 'react-icons/fa'
+// import ChatBoat from './ChatBoat'
 import LogoHover from './logoHover'
 const Footer = ({ bg }) => {
     return (
@@ -64,7 +64,7 @@ const Footer = ({ bg }) => {
                         <div className="flex">
                             <section className="flex-content padding_1x">
                                 <h3>Top Products</h3>
-                                <Link href="/case-studies/QR-Registration-and-instant-ID-print-with-live-verification-The-National-HRD-Network-(NHRD)">QR Registration</Link>
+                                <Link href="/QR-Registration">QR Registration</Link>
                                 <Link href="https://www.instagram.com/p/CjPoSz7DaSw"> 360° Spin Booth</Link>
                                 <Link href="/case-studies/Excitometer-Tetra-Pak">Excitometer-Tetra Pak</Link>
                                 <Link href="https://youtu.be/znj9F9XeF3U">Cricket Game</Link>

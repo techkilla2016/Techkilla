@@ -1,0 +1,135 @@
+.project-slider .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.project-slider .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    padding: 3px;
+    width: 30%;
+}
+
+.swiper-slide {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.swiperCart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.backLyer {
+    width: 100%;
+    height: 100%;
+}
+
+.backLyer img {
+    width: 100%;
+    height: 100%;
+}
+
+.lyear {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.0);
+    transition: all 0.2s linear;
+    width: 100%;
+    height: 0%;
+    bottom: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0px 0px;
+}
+
+.lyear button {
+    padding: 0px 20px;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.swiperCart:hover .lyear {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+/* grid slider  */
+.gridSlider {
+    position: relative;
+    height: calc(300px *2);
+}
+
+.gridSlider1 {
+    position: relative;
+    height: 350px;
+}
+
+.gridSlider .swiper,
+.gridSlider1 .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.gridSlider .swiper,
+.gridSlider1 .swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gridSlider .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    height: calc((100% - 30px) / 2) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridSlider1 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    height: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* singleCard */
+.singleCard {
+    height: 100%;
+}
+
+.singleCard .swiper {
+    padding: 50px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.singleCard .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width : 768px) {
+    .project-slider .swiper-slide {
+        width: 100%;
+    }
+}

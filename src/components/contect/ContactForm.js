@@ -1,7 +1,9 @@
+'use client'
 import { useState } from "react";
-import { Form, Col, Row, Button, Modal, ButtonGroup, useQuery } from "react-bootstrap";
+import { Form, Col, Row, Button, Modal, ButtonGroup } from "react-bootstrap";
 import PhoneInput from "react-phone-input-2";
-import Loader from "../sniper";
+import Loader from "@/components/Loader/sniper";
+import Image from "next/image";
 
 
 // const SERVICE_URL = 
@@ -14,7 +16,8 @@ const EMPTY_CONTACT = {
   message: "",
   type: 'contact'
 };
-function ContactFrom({ send, bg }) {
+function ContactFrom({ BaseUrl, bg }) {
+
   const [showModal, setShowModal] = useState(false);
   const [contact, setContact] = useState(EMPTY_CONTACT);
   const [isLoad, setIsload] = useState(false)
@@ -28,6 +31,16 @@ function ContactFrom({ send, bg }) {
   const handlePhoneChange = (value) => {
     setPhone(value);
   };
+
+  const send = async (contact) => {
+    try {
+      const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
+      return true
+    } catch (error) {
+      return false;
+    }
+  };
+
 
   const submitForm = async () => {
     setIsload(true)

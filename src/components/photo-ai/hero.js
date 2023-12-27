@@ -1,28 +1,10 @@
+"use client"
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import ScrollBtn from '../button/scrollBtn'
-
+import model from '@/data/photo-ai/model'
 const Hero = ({ isContinue }) => {
-    const model = [
-        {
-            img1: '/photo-ai/ai1.png',
-            img_1: '/photo-ai/ai_1.png',
-            img2: '/photo-ai/ai2.png',
-            img_2: '/photo-ai/ai_2.png'
-        },
-        {
-            img1: '/photo-ai/ai3.png',
-            img_1: '/photo-ai/ai_3.png',
-            img2: '/photo-ai/ai4.png',
-            img_2: '/photo-ai/ai_4.png'
-        },
-        {
-            img1: '/photo-ai/ai5.png',
-            img_1: '/photo-ai/ai_5.png',
-            img2: '/photo-ai/ai6.png',
-            img_2: '/photo-ai/ai_6.png'
-        },
-    ]
+
     return (
         <div className="photo-ai-home">
             <Container fluid>
@@ -36,16 +18,16 @@ const Hero = ({ isContinue }) => {
                             <div className="d-flex align-items-center justify-content-center ai-photo-convert-container">
                                 <div className="d-flex">
                                     <div className="ai-modal">
-                                        <img alt='AI Photo' src='/photo-ai/Model.png' data-aos="zoom-in-right" data-aos-delay={100} />
+                                        <img alt='AI Photo' src='/assets/photo-ai/Model.png' data-aos="zoom-in-right" data-aos-delay={100} />
                                         <p className='text-center fw-bold' data-aos="zoom-in-down" data-aos-delay={200}>Original </p>
                                     </div>
                                     <div className="ai-modal">
-                                        <img alt='AI Photo' src='/photo-ai/Model1.png' data-aos="zoom-in-right" data-aos-delay={100} />
+                                        <img alt='AI Photo' src='/assets/photo-ai/Model1.png' data-aos="zoom-in-right" data-aos-delay={100} />
                                         <p className='text-center fw-bold' data-aos="zoom-in-down" data-aos-delay={200}>Original </p>
                                     </div>
                                 </div>
                                 <div className="ai-convert-arrow mx-2">
-                                    <img alt='AI Photo' src='/photo-ai/Arrow-01.png' data-aos="zoom-in-right" data-aos-delay={500} />
+                                    <img alt='AI Photo' src='/assets/photo-ai/Arrow-01.png' data-aos="zoom-in-right" data-aos-delay={500} />
                                     <p className='text-center fw-bold' data-aos="zoom-in-right" data-aos-delay={800}>Ai Generated Avatar</p>
                                 </div>
                             </div>
