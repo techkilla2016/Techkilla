@@ -14,6 +14,7 @@ import AIEnhancedData from '@/data/photo-ai/AIEnhancedData'
 import aiList from '@/data/photo-ai/aiList'
 import aiPhoto from '@/data/photo-ai/AI-Photo'
 import TestimonialsData from '@/data/Testimonials'
+import cardData from '@/data/photo-ai/Engagement'
 export const metadata = {
     title: 'AI Photo Booth | Techkilla',
     description: 'Develop by Techkilla Teams',
@@ -118,7 +119,7 @@ const PhotoAI = () => {
 
                         {/* section 6 */}
                         <Container fluid className='ai-slilder py-5'>
-                            <Slider />
+                            <Slider cardData={cardData} />
                         </Container>
 
                         {/* section 7  */}

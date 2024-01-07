@@ -7,6 +7,7 @@ import ExpoBtn from '@/components/button/expoBtn'
 import { MdDone } from 'react-icons/md'
 import Slider from '@/components/photo-ai/slider'
 import { videoDemo, videoDemoMB } from '@/data/tk-ai/videoDemo'
+import AiEngagement from '@/data/photo-ai/AiEngagement'
 import React from 'react'
 const aiList = [
     "No Need for Staffing",
@@ -30,7 +31,7 @@ const Home = () => {
                     {/* 1 */}
                     <Container className='py-5'>
                         <Row className='align-items-center ai-photo-Section-7'>
-                            <Col xxl={7} xl={7} lg={7} md={6} sm={12} xs={12} className='tk-ai-col'>
+                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col'>
 
                                 <div className="micro_heading01 text-start" data-aos="zoom-in-down" data-aos-delay="0">
                                     Group <span>AI Photo</span> with a  single click!
@@ -39,10 +40,10 @@ const Home = () => {
                                     Turn your group into your preferred collection of Heroes in an instant using our cutting-edge AI-powered tool.
                                 </p>
                                 <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
-                                    <ExpoBtn title="EXPLORE ALL" url="/" />
+                                    <ExpoBtn target="_blank" title="Book Now" url="https://calendly.com/techkilla/meeting" />
                                 </div>
                             </Col>
-                            <Col xxl={5} xl={5} lg={5} md={6} sm={12} xs={12} className='tk-ai-col'>
+                            <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col'>
                                 <div className="d-flex justify-content-center" data-aos="zoom-in-up" data-aos-delay="0">
                                     <SwipeCard />
                                 </div>
@@ -115,21 +116,21 @@ const Home = () => {
                                     Generate social media excitement or captivate the audience by allowing them to morph into their beloved movie characters, just like in the renowned Netflix film "Archies."
                                 </p>
                                 <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
-                                    <ExpoBtn title="EXPLORE" url="/" />
+                                    <ExpoBtn target="_blank" title="Book Now" url="https://calendly.com/techkilla/meeting" />
                                 </div>
                             </Col>
                         </Row>
                         <Row className='align-items-center py-5'>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col px-5'>
-                                <h3 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>
+                                <h2 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>
                                     Create your own superhero squad.
-                                </h3>
+                                </h2>
                                 <p data-aos="fade-up" data-aos-delay="300" className='ai-title'>
                                     Ever had the notion that your group could step into the shoes of superheroes?
                                     Introducing a platform where your group can seamlessly embody our favorite Marvel and DC characters, turning engagement into a fun-filled activity executed entirely as a team.
                                 </p>
                                 <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
-                                    <ExpoBtn title="EXPLORE" url="/" />
+                                    <ExpoBtn target="_blank" title="Book Now" url="https://calendly.com/techkilla/meeting" />
                                 </div>
                             </Col>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col'>
@@ -142,22 +143,22 @@ const Home = () => {
                             </Col>
                         </Row>
 
-                        <Row className='align-items-center py-5'>
+                        <Row className='align-items-center py-5 ai-photo-Section-7'>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col'>
-                                <div className="d-flex justify-content-center" data-aos="zoom-in-up" data-aos-delay="0">
+                                <div className="d-flex justify-content-center p-5" data-aos="zoom-in-up" data-aos-delay="0">
                                     {/* <SwipeCard /> */}
                                     <Card>
-                                        <img src='/assets/tk-ai/gif/Captain-Marvel.gif' className='rounded' />
+                                        <img src='/assets/tk-ai/gif/Virat-1.gif' className='rounded' />
                                     </Card>
                                 </div>
                             </Col>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col px-5'>
-                                <h3 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>Snap a Selfie with the Star</h3>
+                                <h2 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>Snap a Selfie with the Star</h2>
                                 <p data-aos="fade-up" data-aos-delay="300" className='ai-title'>
                                     Capture your AI-enhanced selfie alongside any of your beloved superheroes or superstars using our seamlessly magnificent AI tool, delivering magical results in no time.
                                 </p>
                                 <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
-                                    <ExpoBtn title="EXPLORE" url="/" />
+                                    <ExpoBtn target="_blank" title="Book Now" url="https://calendly.com/techkilla/meeting" />
                                 </div>
                             </Col>
                         </Row>
@@ -181,7 +182,7 @@ const Home = () => {
                     </Container>
 
                     <Container fluid className='ai-slilder py-5'>
-                        <Slider />
+                        <Slider cardData={AiEngagement} />
                     </Container>
                     <Footer bg="rgb(245 245 244)" />
                 </div>

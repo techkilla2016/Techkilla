@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap'
 import { Swiper, SwiperSlide, } from 'swiper/react';
 import { Autoplay, } from "swiper";
-import cardData from '@/data/photo-ai/Engagement'
-const Slidebar = () => {
+
+const Slidebar = ({ cardData }) => {
     const [swiperRef, setSwiperRef] = useState(0);
 
     const slideTo = (index) => {
