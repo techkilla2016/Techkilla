@@ -1,69 +1,74 @@
 const videoDemo = [
     [
         {
-            img: '/assets/tk-ai/Iron-Man.png'
+            img: '/assets/tk-ai/gif/Iron-Man.gif'
         },
         {
-            img: '/assets/tk-ai/Mrs-Marvel.png'
+            img: '/assets/tk-ai/gif/Mrs-Marvel.gif'
         },
         {
-            img: '/assets/tk-ai/Witcher.png'
-        },
-    ],
-    [
-        {
-            img: '/assets/tk-ai/captaim-America.png'
-        },
-        {
-            img: '/assets/tk-ai/Justic-Leauge.png'
+            img: '/assets/tk-ai/gif/Witcher.gif'
         },
     ],
     [
         {
-            img: '/assets/tk-ai/Avengers.png'
+            img: '/assets/tk-ai/gif/CAptain-America.gif'
         },
         {
-            img: '/assets/tk-ai/Bat-Man.png'
+            img: '/assets/tk-ai/gif/Justic-Leauge.gif'
+        },
+    ],
+    [
+        {
+            img: '/assets/tk-ai/gif/Avengers.gif'
         },
         {
-            img: '/assets/tk-ai/Fantastic-4.png'
+            img: '/assets/tk-ai/gif/Bat-Man.gif'
+        },
+        {
+            img: '/assets/tk-ai/gif/Avenger-1.gif'
         },
     ],
 ]
 
 const videoDemoMB = [
-    [
-        {
-            img: '/assets/tk-ai/captaim-America.png'
-        },
-    ],
-    [
-        {
-            img: '/assets/tk-ai/Iron-Man.png'
-        },
-        {
-            img: '/assets/tk-ai/Mrs-Marvel.png'
-        },
-    ],
-
 
     [
         {
-            img: '/assets/tk-ai/Bat-Man.png'
+            img: '/assets/tk-ai/gif/Iron-Man.gif'
         },
         {
-            img: '/assets/tk-ai/Fantastic-4.png'
+            img: '/assets/tk-ai/gif/Mrs-Marvel.gif'
+        },
+
+    ],
+    [
+        {
+            img: '/assets/tk-ai/gif/CAptain-America.gif'
         },
     ],
     [
 
         {
-            img: '/assets/tk-ai/Justic-Leauge.png'
+            img: '/assets/tk-ai/gif/Witcher.gif'
         },
         {
-            img: '/assets/tk-ai/Avengers.png'
+            img: '/assets/tk-ai/gif/Justic-Leauge.gif'
         },
     ],
+    [
+        {
+            img: '/assets/tk-ai/gif/Avengers.gif'
+        },
+        {
+            img: '/assets/tk-ai/gif/Bat-Man.gif'
+        },
+    ],
+    [
+        {
+            img: '/assets/tk-ai/gif/Avenger-1.gif'
+        },
+    ]
 ]
 
 export { videoDemo, videoDemoMB }

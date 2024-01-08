@@ -66,7 +66,7 @@ const Home = () => {
                                                     item?.map((curItem, index) => {
                                                         return <React.Fragment key={index} >
                                                             <div className='overflow-hidden my-2' data-aos="fade-up" data-aos-delay={`${(keys + index) * 100}`}>
-                                                                <img src={curItem?.img} className='img-fluid' />
+                                                                <img src={curItem?.img} className='img-fluid' style={{ borderRadius: '20px' }} />
                                                             </div>
                                                         </React.Fragment>
                                                     })
@@ -83,7 +83,7 @@ const Home = () => {
                                                     item?.map((curItem, index) => {
                                                         return <React.Fragment key={index}>
                                                             <div className='overflow-hidden my-2' data-aos="fade-up" data-aos-delay={`${(keys + index) * 100}`}>
-                                                                <img src={curItem?.img} className='img-fluid' />
+                                                                <img src={curItem?.img} className='img-fluid' style={{ borderRadius: '20px' }} />
                                                             </div>
                                                         </React.Fragment>
                                                     })
@@ -183,6 +183,15 @@ const Home = () => {
 
                     <Container fluid className='ai-slilder py-5'>
                         <Slider cardData={AiEngagement} />
+                    </Container>
+
+                    <Container>
+                        <Card>
+                            <div className="d-flex align-items-center justify-content-between p-4">
+                                <h2>Still got questions?</h2>
+                                <ExpoBtn target="_blank" title="Contact Us" url="/contact" />
+                            </div>
+                        </Card>
                     </Container>
                     <Footer bg="rgb(245 245 244)" />
                 </div>
