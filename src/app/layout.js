@@ -10,6 +10,10 @@ import './style.scss'
 import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 import App from './app'
+export const metadata = {
+  title: 'Techkilla',
+  description: `With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals.`,
+}
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
