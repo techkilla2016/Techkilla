@@ -7,15 +7,14 @@ import ExpoBtn from '@/components/button/expoBtn'
 import { MdDone } from 'react-icons/md'
 import Slider from '@/components/photo-ai/slider'
 import { videoDemo, videoDemoMB } from '@/data/tk-ai/videoDemo'
-import AiEngagement from '@/data/photo-ai/AiEngagement'
+import videoAiEngagement from '@/data/photo-ai/videoAiEngagement'
 import React from 'react'
 const aiList = [
-    "No Need for Staffing",
-    "Ready for iPad Use",
-    "Accessible on Mobile Devices with Ease",
-    "User-Friendly and Intuitive",
-    "Instant Sharing via QR Code, Email, or Drive",
-    "Compatible with On-Site Printing"
+    "No need for staffing",
+    "Responsive to all mobile devices",
+    "Ipad Friendly",
+    "Instant sharing via QR, Email & whatsapp",
+    "Social sharing"
 ]
 
 const Home = () => {
@@ -34,10 +33,10 @@ const Home = () => {
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col'>
 
                                 <div className="micro_heading01 text-start" data-aos="zoom-in-down" data-aos-delay="0">
-                                    Group <span>AI Photo</span> with a  single click!
+                                    AI <span>Animated Video</span> Transformation
                                 </div>
                                 <p className='photo-ai-para py-4' data-aos="zoom-in-down" data-aos-delay="300">
-                                    Turn your group into your preferred collection of Heroes in an instant using our cutting-edge AI-powered tool.
+                                    Always wished to be transformed into your imagination? Now it is possible with our intelligent AI Animated video solution.
                                 </p>
                                 <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
                                     <ExpoBtn target="_blank" title="Book Now" url="https://calendly.com/techkilla/meeting" />
@@ -111,9 +110,9 @@ const Home = () => {
                                 </div>
                             </Col>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col px-5'>
-                                <h2 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>For Media & Promotional Purposes</h2>
+                                <h2 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>For fun engagement activities</h2>
                                 <p data-aos="fade-up" data-aos-delay="300" className='ai-title'>
-                                    Generate social media excitement or captivate the audience by allowing them to morph into their beloved movie characters, just like in the renowned Netflix film "Archies."
+                                    Dive into a realm of unparalleled fun with our AI Animated Videobooth, designed to revolutionize your engagement activities. Whether it's a corporate gathering or a social celebration, our AI Animated Videobooth adds a touch of magic to the experience. Elevate engagement, spark joy, and create a buzz with our cutting-edge technology—because unforgettable moments deserve the extraordinary. Let the fun begin!
                                 </p>
                                 <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
                                     <ExpoBtn target="_blank" title="Book Now" url="https://calendly.com/techkilla/meeting" />
@@ -123,11 +122,10 @@ const Home = () => {
                         <Row className='align-items-center py-5'>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col px-5'>
                                 <h2 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>
-                                    Create your own superhero squad.
+                                    Brand recognition & promotion
                                 </h2>
                                 <p data-aos="fade-up" data-aos-delay="300" className='ai-title'>
-                                    Ever had the notion that your group could step into the shoes of superheroes?
-                                    Introducing a platform where your group can seamlessly embody our favorite Marvel and DC characters, turning engagement into a fun-filled activity executed entirely as a team.
+                                    Elevate your brand presence effortlessly. Captivate your audience with engaging visuals and dynamic storytelling. Unlock the power of AI to enhance brand recognition and drive promotional success. Stay ahead in the game with our cutting-edge solution—where innovation meets impact. Your brand, our expertise—let's make waves together.
                                 </p>
                                 <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
                                     <ExpoBtn target="_blank" title="Book Now" url="https://calendly.com/techkilla/meeting" />
@@ -153,9 +151,9 @@ const Home = () => {
                                 </div>
                             </Col>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12} className='tk-ai-col px-5'>
-                                <h2 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>Snap a Selfie with the Star</h2>
+                                <h2 data-aos="fade-up" data-aos-delay="100" className='fw-bold'>Product Launch Event</h2>
                                 <p data-aos="fade-up" data-aos-delay="300" className='ai-title'>
-                                    Capture your AI-enhanced selfie alongside any of your beloved superheroes or superstars using our seamlessly magnificent AI tool, delivering magical results in no time.
+                                    Unveil your product like never before! Elevate your product launch events with our AI Animated Video solution. Allow consumers to strike a pose with your product, and witness the magical transformation into a captivating AI animation. Each animation unfolds a unique story, dynamically changing the atmosphere within the video, creating a memorable product experience. Let your products tell their own stories in a way that leaves a lasting impact.
                                 </p>
                                 <div className="d-flex" data-aos="zoom-in-up" data-aos-delay="200">
                                     <ExpoBtn target="_blank" title="Book Now" url="https://calendly.com/techkilla/meeting" />
@@ -166,7 +164,8 @@ const Home = () => {
                     <Container className='py-5 ai-list-container'>
                         <Row>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
-                                <h2 data-aos="zoom-in-up" data-aos-delay="0"> Your Event Engagement Solution for In-Person, Hybrid, and Virtual Gatherings</h2>
+                                <h2 data-aos="zoom-in-up" data-aos-delay="0">Our AI Solutions are seamless, effective & best for any kind of events & experiential marketing
+                                </h2>
                             </Col>
                             <Col xxl={6} xl={6} lg={6} md={6} sm={12} xs={12}>
                                 {
@@ -182,7 +181,7 @@ const Home = () => {
                     </Container>
 
                     <Container fluid className='ai-slilder py-5'>
-                        <Slider cardData={AiEngagement} />
+                        <Slider cardData={videoAiEngagement} isVideoAI={true} />
                     </Container>
 
                     <Container>

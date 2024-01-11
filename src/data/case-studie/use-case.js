@@ -36,7 +36,7 @@ const useCase = [
     },
     {
         id: 6,
-        slag: '/case-studies/',
+        slag: '/',
         Heading: 'CEAT Tyres',
         cart_them: '/assets/use-case/CEAT-Tyres.png',
         desc: "The ITC Foods brand Sunfeast is already well-known in the market and has now introduced its own Instagram filter, where users of social media would participate and try to play 6 balls in a header round."
@@ -44,7 +44,7 @@ const useCase = [
 
     {
         id: 7,
-        slag: '/case-studies/',
+        slag: '/',
         Heading: 'Concentrix Got Talent ',
         cart_them: '/assets/use-case/ConcentrixGotTalent.png',
         desc: "A unique, creative idea produced just for an HR task. The corporate talent hunt is an annual event when employees can participate, show off their hidden potential, and receive rewards."
@@ -116,7 +116,7 @@ const useCase = [
     },
     {
         id: 17,
-        slag: 'https://youtu.be/PyFBZ0vs7js',
+        slag: 'https://www.youtube.com/watch?v=PyFBZ0vs7js',
         Heading: 'Aashirvaad Svasti Lassi',
         cart_them: '/assets/use-case/Magazine-booth-Case-Studies-size.png',
         desc: "Choose your favourite flavour, take a sip, and feel refreshed. With classic Mango, tangy Strawberry, & rose options, satisfy your cravings and cool down instantly."
