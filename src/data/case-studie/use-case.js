@@ -59,15 +59,15 @@ const useCase = [
     },
     {
         id: 9,
-        slag: 'https://youtu.be/gENxYQYVB4Y',
+        slag: 'https://www.youtube.com/watch?v=gENxYQYVB4Y',
         Heading: 'TVS Motors',
         cart_them: '/assets/use-case/TVSMotors.png',
         desc: "Bingo, Tambola, or Housie Regardless of the name you give it, this is the game that will test your ability to win the big bucks. "
     },
     {
         id: 10,
-        // slag: 'https://youtu.be/znj9F9XeF3U',
-        slag: '/case-studies/Tuborg-Super-Over-Cricket-Game',
+        slag: 'https://youtu.be/znj9F9XeF3U',
+        // slag: '/case-studies/Tuborg-Super-Over-Cricket-Game',
         Heading: 'Cricket Game',
         cart_them: '/assets/use-case/CricketGame.png',
         desc: "A well-known beer and distilled water company, Tuborg, has introduced a really original idea for a web-based engagement activity that can also be used for on-ground activations."
@@ -88,7 +88,7 @@ const useCase = [
     },
     {
         id: 13,
-        slag: 'https://youtube.com/shorts/Ql0lUsI4U64?feature=share',
+        slag: 'https://www.youtube.com/shorts/Ql0lUsI4U64',
         Heading: 'Carlsberg Beer',
         cart_them: '/assets/use-case/Carlsberg.png',
         desc: "360 Photobooth or Spinbooth - Carlsberg Beer"
@@ -102,7 +102,7 @@ const useCase = [
     },
     {
         id: 15,
-        slag: 'https://youtube.com/shorts/rbnMxtTQFuM?feature=share',
+        slag: 'https://www.youtube.com/shorts/rbnMxtTQFuM',
         Heading: 'Airtel Quizzitech',
         cart_them: '/assets/use-case/airtel.png',
         desc: "Idea - To create a personalised microsite for Airtel Wizzards to play and win the Airtel Quizzitech Cup"
