@@ -1,125 +1,137 @@
-// whatsapp modal 
+// whatsapp modal
 
 /* //////  */
 .wts-header {
-    background: #0c2c2b;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
+  background: #0c2c2b;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
 }
 
 .wts-close {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    outline: none;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 50%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .wts-profile-icon {
-    min-width: 60px;
-    max-width: 60px;
-    max-height: 60px;
-    min-height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
+  min-width: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  min-height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .wts-profile-content {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .wts-name {
-    font-size: 20px;
-    color: #fff;
+  font-size: 20px;
+  color: #fff;
 }
 
 .wts-headline {
-    font-size: 14px;
-    color: #fff;
+  font-size: 14px;
+  color: #fff;
 }
 
 .wts-headline span.wts-see {
-    color: rgb(49, 49, 165);
-    cursor: pointer;
+  color: rgb(49, 49, 165);
+  cursor: pointer;
 }
 
 .wts-body {
-    height: 200px;
-    background: url('/css-assets/wts.webp') no-repeat center center/cover;
+  height: 200px;
+  background: url("/css-assets/wts.webp") no-repeat center center/cover;
 }
 
 .wts-msg {
-    width: 100%;
-    display: flex;
-    padding: 20px 30px;
-    justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  padding: 20px 30px;
+  justify-content: flex-start;
 }
 
 .wts-recive {
-    width: 50%;
-    height: auto;
-    background: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 13px;
-    line-height: 1.2;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 50%;
+  height: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  line-height: 1.2;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-
 .wts-recive strong {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .wts-footer {
-    width: 100%;
-    padding: 10px 0px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background: #fafafafa;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  padding: 10px 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #fafafafa;
+  display: flex;
+  justify-content: center;
 }
 
 .whatsapp-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #198754;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    z-index: 100;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: grid;
-    place-items: center;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #198754;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .whatsapp-btn:hover {
-    color: #fff;
+  color: #fff;
 }
 
-@media screen and (max-width:524px) {
-    .wts-recive {
-        width: 90%;
-    }
+@media screen and (max-width: 524px) {
+  .wts-recive {
+    width: 90%;
+  }
 
-    .whatsapp-btn {
-        width: 55px;
-        height: 55px;
-        font-size: 26px;
-    }
+  .whatsapp-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+  }
 }
