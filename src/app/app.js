@@ -1,16 +1,13 @@
-"use client"
-import React, { useEffect } from 'react'
-import AOS from 'aos'
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
 const App = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 1200,
-        });
-    }, []);
-    return (
-        <>
-        </>
-    )
-}
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+    });
+  }, []);
+  return <></>;
+};
 
-export default App
+export default App;
