@@ -76,7 +76,7 @@ const DesktopNav = () => {
               >
                 Physical Engagement
               </Link>
-              <Link className="nav_child_drop" href="/QR-Registration">
+              <Link className="nav_child_drop" href="/QR-code-solution">
                 QR Registration
               </Link>
             </div>

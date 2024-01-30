@@ -106,7 +106,7 @@ const MobileNav = ({ isMobile, setIsMobile }) => {
                       },
                       {
                         title: "QR Registration",
-                        url: "QR-Registration",
+                        url: "/QR-code-solution",
                       },
                     ])
                   }
