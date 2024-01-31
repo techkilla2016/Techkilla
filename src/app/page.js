@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "@/components/header/";
 import Footer from "@/components/footer";
-import Hero from "@/components/home/hero";
+// import Hero from "@/components/home/hero";
 import WhatWeDo from "@/components/home/what-we-do";
 import Service from "@/components/home/service";
 import QrRegistration from "@/components/home/microsite";
@@ -28,7 +28,7 @@ const Home = () => {
         <WhatsappModal />
         <div className="main">
           {/* hero section  */}
-          <Hero isContinue={true} />
+          {/* <Hero isContinue={true} /> */}
 
           {/* what we do section  */}
           <WhatWeDo />
