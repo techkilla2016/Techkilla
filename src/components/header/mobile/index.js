@@ -77,11 +77,11 @@ const MobileNav = ({ isMobile, setIsMobile }) => {
                     childHandal([
                       {
                         title: "AI Photobooth",
-                        url: "/ai-photobooth",
+                        url: "/ai-photo-booth",
                       },
                       {
-                        title: "Group AI Photobooth",
-                        url: "/group-ai-photobooth",
+                        title: "AI Photobooth Group",
+                        url: "/ai-photo-booth-group",
                       },
                       {
                         title: "AI Videobooth",

@@ -44,15 +44,15 @@ const DesktopNav = () => {
             </div>
           </div>
           <div className="navlink">
-            <Link className="nav_child" href="/ai-photobooth">
+            <Link className="nav_child" href="/ai-photo-booth">
               AI Solutions
             </Link>
             <div className="drop_down">
-              <Link className="nav_child_drop" href="/ai-photobooth">
+              <Link className="nav_child_drop" href="/ai-photo-booth">
                 AI Photobooth
               </Link>
-              <Link className="nav_child_drop" href="/group-ai-photobooth">
-                Group AI Photobooth
+              <Link className="nav_child_drop" href="/ai-photo-booth-group">
+                AI Photobooth Group
               </Link>
               <Link className="nav_child_drop" href="/ai-videobooth">
                 AI Videobooth
