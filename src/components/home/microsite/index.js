@@ -29,7 +29,7 @@ const QrRegistration = () => {
         data-aos="zoom-in-up"
         data-aos-delay="0"
       >
-        <Link href="/QR-Registration/" style={{ color: "#fdb714" }}>
+        <Link href="/QR-code-solution" style={{ color: "#fdb714" }}>
           QR Code
         </Link>{" "}
         Registration
@@ -62,7 +62,7 @@ const QrRegistration = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <Link id="bottone1" href="/QR-code-solution/" className="m-auto my-3">
+          <Link id="bottone1" href="/QR-code-solution" className="m-auto my-3">
             <strong>Read More...</strong>
           </Link>
         </div>
