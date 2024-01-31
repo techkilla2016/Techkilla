@@ -6,7 +6,8 @@ import { SiBlockchaindotcom } from "react-icons/si";
 import Button, { ButtonLight } from "@/components/button/";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Testimodnials from "@/components/general/Testimonials";
+import Testimonials from "@/components/Testimonials";
+import TestimonialsData from "@/data/Testimonials";
 import funData from "@/data/QR-Registration/funData";
 import benefits from "@/data/QR-Registration/benefits";
 import useCase from "@/data/QR-Registration/useCase";
@@ -14,7 +15,6 @@ import packageCart from "@/data/QR-Registration/packageCart";
 import expertise from "@/data/QR-Registration/expertise";
 import graphGrow from "@/data/QR-Registration/graphGrow";
 import chooseList from "@/data/QR-Registration/chooseList";
-import cardData from "@/data/QR-Registration/cardData";
 import caseStudieList from "@/data/QR-Registration/caseStudieList";
 
 export const metadata = {
@@ -51,9 +51,12 @@ const QrRegistration = () => {
                     title="BOOK A FREE DEMO NOW"
                   />
                 </div>
-                {/*     <div className="microBtnSection resbtn2">
-                                    <ButtonLight target='https://calendly.com/techkilla/meeting' title='BOOK DEMO' />
-                                </div> */}
+                {/* <div className="microBtnSection resbtn2">
+                  <ButtonLight
+                    target="https://calendly.com/techkilla/meeting"
+                    title="BOOK DEMO"
+                  />
+                </div> */}
               </div>
             </div>
             {/* 2 */}
@@ -642,7 +645,7 @@ const QrRegistration = () => {
               <h2 className="text-secondary fw-bold text-center pt-5">
                 Testimonials
               </h2>
-              <Testimodnials cardData={cardData} />
+              <Testimonials cardData={TestimonialsData} />
             </Container>
             <Footer bg="#fff" />
           </div>
