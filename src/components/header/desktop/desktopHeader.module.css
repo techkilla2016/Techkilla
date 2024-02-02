@@ -1,0 +1,60 @@
+/* .desktopNavbar {
+  border: 1px solid black;
+} */
+
+.desktopNavbar a {
+  /* border: 1px solid black; */
+  color: #000;
+  font-weight: bold;
+  position: relative;
+}
+.desktopNavbar a:hover {
+  color: #ffce3a;
+}
+/* .desktopNavbar a::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 5px;
+  background-color: #ffce3a;
+  transition: all ease 0.5s;
+}
+.desktopNavbar a:hover::after {
+  width: 50%;
+} */
+
+.btns {
+  /* border: 1px solid black; */
+  display: flex;
+  gap: 10px;
+}
+.btns button {
+  border: 2.5px solid black;
+  padding: 7px 15px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 2px;
+}
+.btns button:hover {
+  background-color: #ffce3a;
+  color: #212121;
+}
+
+.btns .demo {
+  background-color: #212121;
+  color: #fff;
+}
+
+@media screen and (max-width: 1056px) {
+  .btns button {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .btns button {
+    font-size: 15px;
+  }
+}

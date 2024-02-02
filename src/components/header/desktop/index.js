@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import styles from "./desktopHeader.module.css";
+
 const DesktopNav = () => {
   return (
     <nav>
-      <div className="navbar">
+      <div className={`navbar`}>
         <Link href="/" className="logo">
           <Image
             priority
@@ -14,7 +16,7 @@ const DesktopNav = () => {
             height={80}
           />
         </Link>
-        <div className="nav">
+        <div className={`nav ${styles.desktopNavbar}`}>
           <Link className="navlink" href="/">
             Home
           </Link>
@@ -91,9 +93,11 @@ const DesktopNav = () => {
           {/* <button className='navlink btn' onClick={() => setShow(true)}> Careers</button> */}
         </div>
       </div>
-      <div className="navButton">
+
+      {/* navButton */}
+      <div className={styles.btns}>
         <Link href="https://calendly.com/techkilla/meeting" target="_blank">
-          <button>Book a Demo</button>
+          <button className={styles.demo}>Book a Demo</button>
         </Link>
         <Link href="/contact">
           <button>Contact Us</button>
