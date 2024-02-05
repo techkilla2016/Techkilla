@@ -1,0 +1,132 @@
+.whatsappModal {
+  /* border: 2px solid black; */
+  /*   margin-left: auto;
+  margin-right: 0; */
+  transform: translate(25%, 5%);
+  /* border-radius: 50%; */
+}
+
+/* .modelBody {
+  border: 1px solid black;
+  border-radius: 50px;
+} */
+
+.header {
+  /* border: 1px solid black; */
+  background-color: #085d50;
+  /* border-radius: 50px 50px 0 0; */
+  border-radius: 1vw 1vw 0 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+  align-items: center;
+  padding: 12px;
+}
+.leftHeader {
+  display: flex;
+  gap: 1vw;
+}
+.logoContainer {
+  border: 1.3px solid #fff;
+}
+.contentContainer {
+  /* border: 1px solid #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+}
+.contentContainer .title {
+  color: #fff;
+  font-size: 20px;
+  /* border: 1px solid black; */
+  margin: 0;
+}
+.contentContainer .description {
+  color: #fff;
+  font-size: 17px;
+  /* font-size: 1.5vw; */
+  /* border: 1px solid black; */
+  margin: 0;
+}
+.close {
+  /* border: 1px solid black; */
+  align-self: flex-start;
+}
+
+.main {
+  /* border: 1px solid black; */
+  /* border-radius: 0 0 50px 50px; */
+  border-radius: 0 0 1vw 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 250px;
+}
+
+.main .comingMsg {
+  /* width: 50%; */
+  width: 60%;
+  height: 40%;
+  /* border: 1px solid black; */
+}
+.comingMsg img {
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.msgBox {
+  /* border: 1px solid black; */
+  width: 95%;
+  height: 18%;
+  align-self: center;
+}
+.msgBox img {
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+@media screen and (max-width: 524px) {
+  .whatsappModal {
+    /* border: 2px solid black; */
+    /* background-color: aqua; */
+    /*  margin-left: auto;
+    margin-right: auto; */
+    transform: translate(0, 0);
+  }
+  .header {
+    /* border: 2px solid black; */
+    gap: 2vw;
+    border-radius: 2vw 2vw 0 0;
+  }
+  .leftHeader {
+    display: flex;
+    gap: 2vw;
+  }
+  .contentContainer .description {
+    font-size: 4vw;
+  }
+  .main {
+    /* height: 200px; */
+    height: 200px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .whatsappModal {
+    /* border: 2px solid black; */
+    /* background-color: aqua; */
+    /*  margin-left: auto;
+    margin-right: auto; */
+    transform: translate(0, 0);
+  }
+  .header {
+    /* border: 2px solid black; */
+    gap: 2vw;
+  }
+  .contentContainer .description {
+    font-size: 3vw;
+  }
+  .main {
+    /* height: 200px; */
+    height: 200px;
+  }
+}

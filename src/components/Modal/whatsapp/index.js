@@ -6,24 +6,18 @@ import { BsWhatsapp } from "react-icons/bs";
 import React, { useEffect, useState } from "react";
 import { Modal } from "react-bootstrap";
 import Cookies from "js-cookie";
+import styles from "./whatsappModal.module.css";
+import closeBtn from "./../../../../public/assets/home/whatsapp-modal/cancel-btn.png";
 
 const WhatsappModal = () => {
   const [show, setShow] = useState(false);
-  // const [isMore, setIsMore] = useState(false)
-  /* useEffect(() => {
-        setTimeout(() => {
-            setShow(true)
-        }, 3000)
-    }, []) */
 
   useEffect(() => {
     // Check if the modal has been shown before
-    // const hasModalBeenShown = localStorage.getItem("hasWhatsappModalBeenShown");
     const hasModalBeenShown = Cookies.get("hasWhatsappModalBeenShown");
     if (!hasModalBeenShown) {
       setTimeout(() => {
         setShow(true);
-        // localStorage.setItem("hasWhatsappModalBeenShown", "true");
         Cookies.set("hasWhatsappModalBeenShown", "true", {
           expires: 1 / (24 * 60),
         });
@@ -34,64 +28,66 @@ const WhatsappModal = () => {
   const handleClose = () => {
     setShow(false);
   };
+
   return (
     <>
+      {/* aria-labelledby={styles.whatsappModal} */}
       <Modal
         show={show}
         onHide={handleClose}
         centered
         data-aos="zoom-in-down"
         data-aos-delay="0"
+        className={styles.whatsappModal}
       >
-        <Modal.Body>
-          <div className="wts-header">
-            <div className="wts-profile-icon">
-              <Image
-                src="/logo/robo.jpg"
-                alt="techkilla"
-                width={100}
-                height={100}
-              />
-            </div>
-            <div className="wts-profile-content">
-              <div className="wts-name">Techkilla</div>
-              <div className="wts-headline">
-                Advanced Technology Solutions
-                {/* {
-                    isMore ? <span onClick={() => setIsMore(false)}>
-                      Interactive Playable Ads instead of simple video ads, VR Solutions and offline tech engagement
-                    </span> : <span onClick={() => setIsMore(true)} className='wts-see'> ... see more</span>
-                  } */}
+        {/* aria-labelledby={styles.modelBody} */}
+        <Modal.Body className={styles.modelBody}>
+          {/* wts-header */}
+          {/* wts-profile-content */}
+          {/* wts-close */}
+          {/* wts-name */}
+          {/* wts-headline */}
+          <div className={styles.header}>
+            <div className={styles.leftHeader}>
+              <div className={`wts-profile-icon ${styles.logoContainer}`}>
+                <Image
+                  src="/logo/robo.jpg"
+                  alt="techkilla"
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <div className={styles.contentContainer}>
+                <p className={styles.title}>Techkilla</p>
+                <p className={styles.description}>
+                  Advanced Technology Solutions
+                </p>
               </div>
             </div>
-            <button className="wts-close" onClick={handleClose}>
-              <AiOutlineCloseCircle />
+            <button className={styles.close} onClick={handleClose}>
+              {/* <AiOutlineCloseCircle /> */}
+              <Image src={closeBtn} alt="close btn" width={20} height={20} />
             </button>
           </div>
 
-          <div className="wts-body">
-            <div className="wts-msg">
-              <div className="wts-recive">
-                <strong>Techkilla</strong> <br />
-                <br />
-                Hi! Welcome to Techkilla, <br />
-                How may we help you?
-              </div>
+          <div className={`wts-body ${styles.main}`}>
+            <div className={styles.comingMsg}>
+              <img
+                src="/assets/home/whatsapp-modal/comingMsg.png"
+                alt="coming-msg"
+              />
             </div>
-          </div>
-
-          <div className="wts-footer">
             <Link
               href="http://wa.me/917827362702?text=Hi Techkilla Team,%0AI am looking for some tech solutions. %0AKindly revert on this%0A%0AThanks."
-              className="btn btn-success"
               target="_blank"
+              className={styles.msgBox}
             >
-              Start Chat
+              <img src="/assets/home/whatsapp-modal/msgBox.png" alt="msg-box" />
             </Link>
           </div>
         </Modal.Body>
       </Modal>
-      {/* {show ? (
+      {/*  {show ? (
         ""
       ) : (
         <Link
