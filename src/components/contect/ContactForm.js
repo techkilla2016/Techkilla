@@ -1,198 +1,224 @@
-'use client'
-import { useState } from "react";
-import { Form, Col, Row, Button, Modal, ButtonGroup } from "react-bootstrap";
-import PhoneInput from "react-phone-input-2";
+"use client";
+import React, { useState } from "react";
+import styles from "./contactForm.module.css";
+import { FaUser, FaIndustry, FaPhoneAlt } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
+import { GrServices } from "react-icons/gr";
+import { MdEdit } from "react-icons/md";
+import axios from "axios";
 import Loader from "@/components/Loader/sniper";
-import Image from "next/image";
-
-
-// const SERVICE_URL = 
+import { Button, Modal, ButtonGroup } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const EMPTY_CONTACT = {
-  subject: "",
-  company: "",
-  email: "",
+  token: "FjUDGe9iYH55sykd0BtD0HweUhjAWfQE",
   name: "",
+  email: "",
+  company: "",
+  phone: "",
+  service: "",
   message: "",
-  type: 'contact'
 };
-function ContactFrom({ BaseUrl, bg }) {
 
+export default function ContactForm() {
   const [showModal, setShowModal] = useState(false);
   const [contact, setContact] = useState(EMPTY_CONTACT);
-  const [isLoad, setIsload] = useState(false)
-  const onInputChange = (e) => {
+  const [isLoad, setIsload] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const onInputChange = e => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
-  const [show, setShow] = useState(false)
 
-  const [phone, setPhone] = useState("");
-
-  const handlePhoneChange = (value) => {
-    setPhone(value);
+  // toast options
+  const toastOptions = {
+    position: "bottom-left",
+    autoClose: 4000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "light",
   };
 
-  const send = async (contact) => {
+  // post request to send email api
+  const send = async contact => {
     try {
-      const reponce = await axios.post(`${BaseUrl}/api/email/`, contact)
-      return true
+      let response = await axios.post(
+        "https://adp24companyday.com/tk-emailer/mail.php",
+        contact
+      );
+      /* response = await response.json();
+      console.log(response); */
+      return true;
     } catch (error) {
+      console.log(error);
       return false;
     }
   };
 
+  // form submission
+  const submitForm = async e => {
+    e.preventDefault();
+    console.log("submitting the form", contact);
+    setIsload(true);
+    if (
+      contact.name &&
+      contact.email &&
+      contact.company &&
+      contact.phone &&
+      contact.service
+    ) {
+      console.log("move on");
 
-  const submitForm = async () => {
-    setIsload(true)
-    const isSend = await send({ ...contact, phone })
-    if (isSend) {
-      setIsload(false)
-      setShow(true)
-      setContact(EMPTY_CONTACT)
+      const isSend = await send({ ...contact });
+      if (isSend) {
+        setIsload(false);
+        setShow(true);
+        setContact(EMPTY_CONTACT);
+        console.log("email sent", show);
+      } else {
+        setIsload(false);
+        console.log("catching error");
+      }
     } else {
-      setIsload(false)
+      setIsload(false);
+      toast.error("Please fill all the required fields", toastOptions);
     }
-  }
+  };
 
   return (
-    <div className="contactus" id="contact" style={{ background: bg }}>
-      {
-        isLoad ? <Loader /> : ''
-      }
-      <div className="container">
-        <h3 className="fw-bold" >Let's Talk</h3>
-        <Row className={`main-row ${showModal ? "form-submitted" : ""}`}>
-          <Col className="details-form">
-            <Row>
-              <Col md={6}>
-                <Form.Group controlId="name">
-                  <Form.Control
-                    placeholder="Full Name *"
-                    name="name"
-                    value={contact.name}
-                    onChange={onInputChange}
-                  />
-                </Form.Group>
-              </Col>
-              <Col md={6}>
-                <Form.Group controlId="email">
-                  <Form.Control
-                    type="email"
-                    placeholder="Work Email *"
-                    name="email"
-                    value={contact.email}
-                    onChange={onInputChange}
-                  />
-                </Form.Group>
-              </Col>
-
-              <Col md={6}>
-                <Form.Group controlId="company">
-                  <Form.Control
-                    placeholder="Company Name *"
-                    name="company"
-                    value={contact.company}
-                    onChange={onInputChange}
-                  />
-                </Form.Group>
-              </Col>
-
-              <Col md={6}>
-                <PhoneInput
-                  className="phoneInput"
-                  defaultCountry="IN" // Set the default country
-                  value={phone}
-                  onChange={handlePhoneChange}
-                />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Form.Group controlId="subject">
-                  <Form.Control
-                    name="subject"
-                    value={contact.subject}
-                    placeholder="Subject"
-                    onChange={onInputChange}
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Form.Group controlId="message">
-                  <Form.Control
-                    as="textarea"
-                    name="message"
-                    rows={3}
-                    value={contact.message}
-                    placeholder="Type your message..."
-                    onChange={onInputChange}
-                  />
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row>
-              <Col className="mb-4 px-3">
-                <div className="disclaimer">
-                  * By submitting this form, you are accepting our <u>Terms of use</u> and our <u>Privacy policy .</u>
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col lg="auto" className="px-4">
-                <Button className="btn-action" onClick={submitForm}>
-                  Contact Us
-                </Button>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-        {showModal && (
-          <div className="submitted">
-            <div className="header">
-              <div className="close-btn" onClick={() => setShowModal(false)}>
-                <Image src="/close.svg" alt="contact us" />
-              </div>
+    <div className={styles.ContactForm}>
+      <header className={styles.header}>
+        <h1>Send A Message</h1>
+        <p>
+          Please let us know what service you are interested in by completing
+          the form below. We will get in touch with you shortly.
+        </p>
+      </header>
+      {isLoad ? <Loader /> : ""}
+      <form className={styles.form}>
+        <main>
+          <div className={styles.differentBox}>
+            <div className={styles.inputBox}>
+              <input
+                type="text"
+                placeholder="Your Name *"
+                required
+                name="name"
+                value={contact.name}
+                onChange={onInputChange}
+              />
+              <FaUser />
             </div>
-            <div className="body">
-              <div>
-                <Image src="/envelop.svg" alt="contact us" />
-              </div>
-              <div className="title">Thanks for submitting</div>
-              <div className="subtitle">your message has been sent!</div>
+            <div className={styles.inputBox} required>
+              <input
+                type="email"
+                placeholder="Your Email *"
+                required
+                name="email"
+                value={contact.email}
+                onChange={onInputChange}
+              />
+
+              <IoMail />
             </div>
           </div>
-        )}</div>
 
+          <div className={styles.differentBox}>
+            <div className={styles.inputBox}>
+              <input
+                type="text"
+                placeholder="Company Name *"
+                required
+                name="company"
+                value={contact.company}
+                onChange={onInputChange}
+              />
+              <FaIndustry />
+            </div>
+            <div className={styles.inputBox}>
+              <input
+                type="number"
+                placeholder="Your Phone *"
+                required
+                name="phone"
+                value={contact.phone}
+                onChange={onInputChange}
+              />
+              <FaPhoneAlt />
+            </div>
+          </div>
 
-      <>
-        <Modal
-          size="lg"
-          show={show}
-          centered
-          onHide={() => setShow(false)}
-          aria-labelledby="example-modal-sizes-title-sm"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-modal-sizes-title-sm">
-              Submission Success
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body className="text-center">
-            Thank you for your submission! Our team will review your information and get back to you as soon as possible. In the meantime, feel free to explore our website and learn more about our products/services. If you have any urgent inquiries, please don't hesitate to contact us directly. We appreciate your interest in our business and look forward to speaking with you soon.
-          </Modal.Body>
-          <Modal.Footer>
-            <ButtonGroup>
-              <Button variant="secondary" size="sm" onClick={() => setShow(false)}>
-                close
-              </Button>
-            </ButtonGroup>
-          </Modal.Footer>
-        </Modal>
-      </>
+          <div className={`${styles.inputBox} ${styles.services}`}>
+            <input
+              type="text"
+              placeholder="Service Required *"
+              required
+              name="service"
+              value={contact.service}
+              onChange={onInputChange}
+            />
+            <GrServices />
+          </div>
+
+          <div
+            className={`${styles.inputBox} ${styles.services} ${styles.msg}`}
+          >
+            <textarea
+              placeholder="Let us know what you need"
+              required
+              name="message"
+              value={contact.message}
+              onChange={onInputChange}
+            />
+            <MdEdit />
+          </div>
+        </main>
+
+        <footer className={styles.footer}>
+          <p>
+            *By submitting this form, you are accepting our Terms of use and our
+            Privacy policy
+          </p>
+          <button type="submit" onClick={e => submitForm(e)}>
+            Send Message
+          </button>
+        </footer>
+      </form>
+
+      <Modal
+        size="lg"
+        show={show}
+        centered
+        onHide={() => setShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">
+            Submission Success
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body style={{ textAlign: "justify" }}>
+          Thank you for your submission! Our team will review your information
+          and get back to you as soon as possible. In the meantime, feel free to
+          explore our website and learn more about our products/services. If you
+          have any urgent inquiries, please don't hesitate to contact us
+          directly. We appreciate your interest in our business and look forward
+          to speaking with you soon.
+        </Modal.Body>
+        <Modal.Footer>
+          <ButtonGroup>
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={() => setShow(false)}
+            >
+              close
+            </Button>
+          </ButtonGroup>
+        </Modal.Footer>
+      </Modal>
+      <ToastContainer />
     </div>
   );
 }
-
-export default ContactFrom;

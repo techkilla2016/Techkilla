@@ -1,0 +1,224 @@
+.ContactForm {
+  /* border: 1px solid red; */
+  padding: 2vw 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+/* .header {
+  border: 1px solid black;
+} */
+
+.header h1 {
+  font-weight: bold;
+}
+
+/* .header p {
+  font-weight: bold;
+} */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.ContactForm main {
+  /* border: 5px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  padding-top: 0vw;
+}
+.differentBox {
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+}
+.inputBox {
+  border: 2px solid transparent;
+  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5vw;
+  background-color: #fff;
+  padding: 1vw 1vw;
+  transition: border ease 0.3s;
+}
+.inputBox:hover {
+  border: 2px solid #feb800;
+}
+
+.inputBox input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2vw;
+  font-weight: bold;
+  width: 85%;
+}
+
+.inputBox svg {
+  font-size: 1.5vw;
+  width: 15%;
+  /* border: 1px solid black; */
+}
+
+.services {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.services input {
+  width: 93%;
+}
+
+.services svg {
+  width: 7%;
+}
+
+.msg {
+  height: 10vw;
+}
+.msg textarea {
+  width: 93%;
+  height: 100%;
+  font-weight: bold;
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 1.2vw;
+}
+.msg svg {
+  align-self: flex-start;
+}
+
+.footer {
+  /* border: 1px solid black; */
+}
+
+.footer p {
+  color: #555;
+  /* line-height: 0.5vw; */
+}
+
+.footer button {
+  /* border: 1px solid black; */
+  /* color: #212121; */
+  text-decoration: 1px 1px 0 rgba(0, 0, 0, 1);
+  padding: 0.7vw 1.2vw;
+  border-radius: 2vw;
+  color: #212121;
+  background-color: #feb800;
+  /*   background-color: #212121;
+  color: #fff; */
+  font-weight: bold;
+  font-size: 1.2vw;
+}
+.footer button:hover {
+  transform: translateX(4px);
+}
+
+/* tablet */
+@media all and (max-width: 991px) {
+  .ContactForm {
+    padding: 2vw 6vw;
+  }
+  .header h1 {
+    font-size: 5vw;
+  }
+  .header p {
+    font-size: 3vw;
+  }
+  .inputBox svg,
+  .services svg {
+    font-size: 2.3vw;
+  }
+  .msg {
+    height: 15vw;
+  }
+  .inputBox,
+  .msg {
+    padding: 2vw 1.5vw;
+  }
+  .inputBox input {
+    font-size: 2.8vw;
+  }
+  .ContactForm {
+    padding: 2vw 8vw;
+  }
+  .inputBox svg,
+  .services svg {
+    font-size: 3vw;
+  }
+  .msg {
+    height: 25vw;
+  }
+  .msg textarea {
+    font-size: 2.8vw;
+  }
+  .footer p {
+    font-size: 2vw;
+  }
+
+  .footer button {
+    padding: 1.4vw 1.8vw;
+    font-size: 2.4vw;
+  }
+}
+
+/* mobile */
+@media all and (max-width: 480px) {
+  .ContactForm {
+    padding: 2vw 6vw;
+  }
+  .header h1 {
+    font-size: 7vw;
+  }
+  .header p {
+    font-size: 4vw;
+  }
+  .inputBox svg,
+  .services svg {
+    font-size: 2vw;
+  }
+  .msg {
+    height: 25vw;
+  }
+  .inputBox,
+  .msg {
+    padding: 3vw 1.5vw;
+  }
+  .inputBox input {
+    font-size: 3vw;
+  }
+  .ContactForm {
+    padding: 2vw 8vw;
+  }
+  .inputBox svg,
+  .services svg {
+    font-size: 3vw;
+  }
+  .msg {
+    height: 25vw;
+  }
+  .msg textarea {
+    font-size: 3vw;
+  }
+  .footer p {
+    font-size: 2.5vw;
+  }
+
+  .footer button {
+    /* border: 1px solid black; */
+    color: #212121;
+    padding: 1vw 1.2vw;
+    width: 100%;
+    font-size: 4vw;
+  }
+}
