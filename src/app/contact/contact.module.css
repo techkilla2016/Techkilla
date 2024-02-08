@@ -4,13 +4,13 @@
   justify-content: center;
   align-items: center;
 }
-.imageParent {
-  /* border: 1px solid black; */
-}
+/* .imageParent {
+  border: 1px solid black;
+} */
 
 .imgContainer {
   /* border: 1px solid black; */
-  height: 50vw;
+  height: 43vw;
   margin-bottom: auto;
   padding: 4vw;
   margin-top: auto;
