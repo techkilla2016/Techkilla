@@ -20,6 +20,16 @@ const aiList = [
   "Social sharing",
 ];
 
+const siteUrl = "https://techkilla.com/";
+
+const metadata = {
+  title: "AI Videobooth | Techkilla",
+  description:
+    "Experience dynamic video transformations with Techkilla's AI Videobooth. Perfect for events and promotions, our AI creates captivating animations for memorable moments.",
+  keywords:
+    "AI Videobooth, video transformation, event technology, interactive video booth, Techkilla, video engagement, AI animations",
+};
+
 const Home = () => {
   const route = useRouter();
   const [isPlay, setIsPlay] = useState(true);
@@ -31,7 +41,18 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Techkilla</title>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta property="og:url" content={`${siteUrl}/ai-videobooth`} />
+        <meta property="og:type" content="website" />
+        {/* <meta property="og:image" content="/path/to/your/image.jpg" /> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        {/* <meta name="twitter:image" content="/path/to/your/image.jpg" /> */}
       </Head>
       <Header />
 

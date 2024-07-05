@@ -18,12 +18,17 @@ const aiList = [
   "Compatible with On-Site Printing",
 ];
 
+export const metadata = {
+  title: "AI Photo Booth Group | Techkilla",
+  description:
+    "Transform your group into superheroes with Techkilla's AI Photo Booth Group. Perfect for events, our tool uses advanced AI to create fun, themed group photos.",
+  keywords:
+    "AI Photo Booth Group, group photo transformation, event technology, superhero photos, interactive photo booth, Techkilla",
+};
+
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>Techkilla</title>
-      </Head>
       <Header />
       <main>
         <div className="main">
