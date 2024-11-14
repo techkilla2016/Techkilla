@@ -1,0 +1,124 @@
+.Testimonial {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2vw;
+  padding: 2vw;
+  color: #333;
+}
+
+.testimonialList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.2vw;
+}
+h3 {
+  font-weight: 600;
+}
+
+.testimonialCard {
+  background-color: #f6e8f5;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect to "lift" the card */
+.testimonialCard:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reviewerName {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+}
+
+.reviewText {
+  font-style: italic;
+  color: #555;
+  margin: 10px 0;
+}
+
+.starRating {
+  color: #f4b400;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loadMore {
+  background-color: #f9fbfd;
+  color: rgb(23, 22, 22);
+  padding: 0.8vw 2vw;
+  margin-top: 2vw;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1vw;
+  background-color: #e2e7eb;
+  border-color: #333;
+  font-weight: 500;
+}
+.footer {
+  // border: 2px solid black;
+  padding: 3vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #333;
+}
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .Testimonial {
+    padding: 5vw 3vw; /* Add more padding for mobile */
+  }
+
+  h2 {
+    font-size: 7vw; /* Make heading larger on mobile */
+    padding: 7vw;
+  }
+
+  .testimonialList {
+    flex-direction: column;
+    gap: 5vw; /* Adjust gap for vertical alignment */
+  }
+
+  .testimonialCard {
+    width: 100%;
+    padding: 6vw;
+  }
+
+  .reviewerName {
+    font-size: 6vw; /* Increase reviewer name font size */
+  }
+
+  .reviewText {
+    font-size: 6vw; /* Make review text larger */
+  }
+
+  .starRating {
+    font-size: 8vw; /* Increase star size */
+  }
+
+  .loadMore {
+    margin-top: 5vw;
+    padding: 2.5vw 8vw; /* Adjust padding for mobile button */
+    font-size: 4vw; /* Adjust button font size */
+  }
+
+  .footer {
+    font-size: 6vw; /* Increase footer font size */
+    padding: 6vw;
+  }
+  .footer-para {
+    font-size: 4vw;
+  }
+}

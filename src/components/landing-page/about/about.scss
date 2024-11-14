@@ -1,0 +1,105 @@
+.About {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5vw;
+}
+
+.firstText {
+  font-size: 1.3vw;
+  font-weight: 600;
+}
+
+.heading {
+  font-size: 2vw;
+  padding: 1.5vw;
+  color: #333;
+}
+
+.secondText {
+  width: 73%;
+  font-size: 1.3vw;
+  line-height: 2vw;
+}
+
+.thirdText {
+  font-size: 1.3vw;
+  width: 73%;
+}
+
+.highlight {
+  color: #e66d10;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.contact-button {
+  background-color: #cb3260;
+  color: white;
+  width: 15vw;
+  font-size: 1.3vw;
+  height: 3.5vw;
+  border: none;
+  border-radius: 5vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #8b1c3d;
+  transform: scale(1.05);
+}
+
+.event-img {
+  padding: 1vw;
+  width: 75%;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .About {
+    padding: 5vw 3vw; /* Increase padding for mobile */
+    text-align: center; /* Center-align text on mobile */
+  }
+
+  .firstText {
+    font-size: 5.5vw;
+    line-height: 6vw; /* Increase font size for mobile */
+  }
+
+  .heading {
+    font-size: 7vw;
+    font-weight: 500;
+    padding: 3vw;
+  }
+
+  .secondText {
+    width: 100%;
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+
+  .thirdText {
+    width: 100%; /* Make third text take more width on mobile */
+    font-size: 4.9vw;
+    line-height: 6vw; /* Increase font size for mobile */
+  }
+
+  .highlight {
+    font-size: 4vw; /* Adjust font size of highlight */
+  }
+
+  .contact-button {
+    width: 50vw; /* Make button wider on mobile */
+    font-size: 4.5vw; /* Increase font size for mobile */
+    height: 10vw; /* Adjust button height for mobile */
+    border-radius: 8vw;
+    margin-top: 2vw; /* Increase border radius */
+  }
+
+  .event-img {
+    width: 100%; /* Make image take full width on mobile */
+    padding: 2vw; /* Adjust padding */
+  }
+}
