@@ -69,26 +69,25 @@ h3 {
   font-weight: 500;
 }
 .footer {
-  // border: 2px solid black;
   padding: 3vw;
   font-size: 1.2vw;
   font-weight: 600;
   color: #333;
 }
-/* Mobile view adjustments */
+
 @media (max-width: 768px) {
   .Testimonial {
-    padding: 5vw 3vw; /* Add more padding for mobile */
+    padding: 5vw 3vw;
   }
 
   h2 {
-    font-size: 7vw; /* Make heading larger on mobile */
+    font-size: 7vw;
     padding: 7vw;
   }
 
   .testimonialList {
     flex-direction: column;
-    gap: 5vw; /* Adjust gap for vertical alignment */
+    gap: 5vw;
   }
 
   .testimonialCard {
@@ -97,25 +96,25 @@ h3 {
   }
 
   .reviewerName {
-    font-size: 6vw; /* Increase reviewer name font size */
+    font-size: 6vw;
   }
 
   .reviewText {
-    font-size: 6vw; /* Make review text larger */
+    font-size: 6vw;
   }
 
   .starRating {
-    font-size: 8vw; /* Increase star size */
+    font-size: 8vw;
   }
 
   .loadMore {
     margin-top: 5vw;
-    padding: 2.5vw 8vw; /* Adjust padding for mobile button */
-    font-size: 4vw; /* Adjust button font size */
+    padding: 2.5vw 8vw;
+    font-size: 4vw;
   }
 
   .footer {
-    font-size: 6vw; /* Increase footer font size */
+    font-size: 6vw;
     padding: 6vw;
   }
   .footer-para {

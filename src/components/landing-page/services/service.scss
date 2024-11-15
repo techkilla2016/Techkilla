@@ -188,10 +188,9 @@
   padding-top: 2vw;
 }
 
-/* Mobile view adjustments */
 @media (max-width: 768px) {
   .Service {
-    padding: 5vw 3vw; /* Increase padding for mobile */
+    padding: 5vw 3vw;
   }
 
   .whatProvide {
@@ -202,36 +201,36 @@
   }
 
   .serviceTitle {
-    font-size: 6vw; /* Increase font size for mobile */
+    font-size: 6vw;
     padding: 3vw;
   }
 
   .serviceItems {
     display: flex;
-    flex-direction: column; /* Stack the service items */
+    flex-direction: column;
     gap: 3vw;
     // border: 2px solid rgb(219, 78, 214);
   }
 
   .serviceItems li {
-    font-size: 4vw; /* Increase font size for mobile */
+    font-size: 4vw;
     padding: 2vw;
   }
 
   .serviceItems li::before {
-    font-size: 4vw; /* Increase icon size */
+    font-size: 4vw;
     margin-right: 2vw;
   }
 
   .serviceItem {
-    width: 80vw; /* Make service items larger on mobile */
+    width: 80vw;
     margin-bottom: 5vw;
     margin-top: 3vw;
     // border: 2px solid blue;
   }
 
   .serviceItem h3 {
-    font-size: 5vw; /* Increase font size */
+    font-size: 5vw;
   }
 
   .enquireNowButton {
@@ -255,7 +254,7 @@
   }
 
   .wordsTransition span {
-    font-size: 4vw; /* Adjust scroll text size for mobile */
+    font-size: 4vw;
   }
 
   .latestDeliveries {
@@ -263,11 +262,11 @@
   }
 
   .latestTitle {
-    font-size: 6vw; /* Increase the title size for mobile */
+    font-size: 6vw;
   }
 
   .deliverablesList {
-    font-size: 4vw; /* Larger font size for list items on mobile */
+    font-size: 4vw;
     line-height: 5vw;
     margin: 3vw;
   }

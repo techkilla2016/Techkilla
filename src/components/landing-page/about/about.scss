@@ -53,19 +53,18 @@
 
 .event-img {
   padding: 1vw;
-  width: 75%;
+  width: 20vw;
 }
 
-/* Mobile view adjustments */
 @media (max-width: 768px) {
   .About {
-    padding: 5vw 3vw; /* Increase padding for mobile */
-    text-align: center; /* Center-align text on mobile */
+    padding: 5vw 3vw;
+    text-align: center;
   }
 
   .firstText {
     font-size: 5.5vw;
-    line-height: 6vw; /* Increase font size for mobile */
+    line-height: 6vw;
   }
 
   .heading {
@@ -81,25 +80,25 @@
   }
 
   .thirdText {
-    width: 100%; /* Make third text take more width on mobile */
+    width: 100%;
     font-size: 4.9vw;
-    line-height: 6vw; /* Increase font size for mobile */
+    line-height: 6vw;
   }
 
   .highlight {
-    font-size: 4vw; /* Adjust font size of highlight */
+    font-size: 4vw;
   }
 
   .contact-button {
-    width: 50vw; /* Make button wider on mobile */
-    font-size: 4.5vw; /* Increase font size for mobile */
-    height: 10vw; /* Adjust button height for mobile */
+    width: 50vw;
+    font-size: 4.5vw;
+    height: 10vw;
     border-radius: 8vw;
-    margin-top: 2vw; /* Increase border radius */
+    margin-top: 2vw;
   }
 
   .event-img {
-    width: 100%; /* Make image take full width on mobile */
-    padding: 2vw; /* Adjust padding */
+    width: 100%;
+    padding: 2vw;
   }
 }

@@ -314,7 +314,6 @@ export default function Services({ handleContactScroll }) {
   ];
 
   const getYouTubeEmbedUrl = (link) => {
-    // Check if link is defined and a valid string
     if (!link || typeof link !== "string") {
       return "";
     }
@@ -322,27 +321,27 @@ export default function Services({ handleContactScroll }) {
     // Check if the link is a YouTube Shorts URL
     const isShorts = link.includes("/shorts/");
     if (isShorts) {
-      const videoId = link.split("/shorts/")[1].split("?")[0]; // Extract video ID for Shorts
+      const videoId = link.split("/shorts/")[1].split("?")[0];
       return `https://www.youtube.com/embed/${videoId}`;
     }
 
     // Check for YouTube short URL format (youtu.be)
     const isYouTubeShort = link.includes("youtu.be/");
     if (isYouTubeShort) {
-      const videoId = link.split("youtu.be/")[1].split("?")[0]; // Extract video ID from youtu.be
+      const videoId = link.split("youtu.be/")[1].split("?")[0];
       return `https://www.youtube.com/embed/${videoId}`;
     }
 
     // If it's not a Shorts link, generate embed URL from normal YouTube URL
-    const videoId = link.split("v=")[1]?.split("&")[0]; // Extract video ID for normal videos
+    const videoId = link.split("v=")[1]?.split("&")[0];
     if (!videoId) {
-      return ""; // Return empty string if no video ID is found
+      return "";
     }
 
     return `https://www.youtube.com/embed/${videoId}`;
   };
-  const firstFiveResources = videoResources.slice(0, 5); // Get the first 5 items
-  const latestDeliveries = videoResources.slice(5); // Get the remaining items
+  const firstFiveResources = videoResources.slice(0, 5);
+  const latestDeliveries = videoResources.slice(5);
 
   return (
     <div className="Service">

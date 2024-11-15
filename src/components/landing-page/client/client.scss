@@ -43,28 +43,27 @@
   }
 }
 
-/* Mobile view adjustments */
 @media (max-width: 768px) {
   .Client {
-    padding: 5vw 3vw; /* Increase padding on smaller screens */
+    padding: 5vw 3vw;
   }
 
   .textCon {
-    font-size: 6vw; /* Make text larger for readability */
+    font-size: 6vw;
     font-weight: 700;
     text-align: center;
   }
 
   .ImgContainer {
-    height: 30vh; /* Increase height of image container */
+    height: 30vh;
   }
 
   .clientLogo {
-    width: 30vw; /* Increase logo size for better visibility */
-    padding: 4vw; /* Increase padding */
+    width: 30vw;
+    padding: 4vw;
   }
 
   .slider {
-    animation: infinite-scroll 20s linear infinite; /* Adjust speed for mobile */
+    animation: infinite-scroll 20s linear infinite;
   }
 }

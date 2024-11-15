@@ -97,12 +97,12 @@
     display: none;
   }
   .mobileImg {
-    display: block; /* Show mobile image */
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  /* Adjust the form container to be below the banner */
+
   .formContainer {
     position: static;
     width: 100%;
