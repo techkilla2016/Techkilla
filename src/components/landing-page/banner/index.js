@@ -24,12 +24,12 @@ export default function Banner({ setFormRef }) {
     <div className="Banner">
       <div className="bannerImg">
         <img
-          class="desktopImg"
+          className="desktopImg"
           src="/landing-page/Banner2.jpg"
           alt="Banner Image"
         />
         <img
-          class="mobileImg"
+          className="mobileImg"
           src="/landing-page/Bannermobile.jpg"
           alt="Banner Image"
         />

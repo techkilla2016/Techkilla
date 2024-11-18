@@ -7,8 +7,9 @@
 }
 
 .firstText {
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   font-weight: 600;
+  line-height: 2;
 }
 
 .heading {
@@ -18,26 +19,27 @@
 }
 
 .secondText {
-  width: 73%;
+  width: 72%;
   font-size: 1.3vw;
-  line-height: 2vw;
+  line-height: 2.5vw;
 }
 
 .thirdText {
   font-size: 1.3vw;
-  width: 73%;
+  width: 72%;
+  line-height: 2.5vw;
 }
 
 .highlight {
   color: #e66d10;
   font-weight: 600;
-  font-style: italic;
+  // font-style: italic;
 }
 
 .contact-button {
   background-color: #cb3260;
   color: white;
-  width: 15vw;
+  width: 13vw;
   font-size: 1.3vw;
   height: 3.5vw;
   border: none;
@@ -52,8 +54,8 @@
 }
 
 .event-img {
-  padding: 1vw;
-  width: 20vw;
+  padding: 1.5vw;
+  width: 75%;
 }
 
 @media (max-width: 768px) {
@@ -63,8 +65,9 @@
   }
 
   .firstText {
-    font-size: 5.5vw;
-    line-height: 6vw;
+    font-size: 7vw;
+    line-height: 1.5;
+    font-family: 500;
   }
 
   .heading {
@@ -75,24 +78,24 @@
 
   .secondText {
     width: 100%;
-    font-size: 5vw;
-    line-height: 6vw;
+    font-size: 5.8vw;
+    line-height: 1.7;
   }
 
   .thirdText {
     width: 100%;
-    font-size: 4.9vw;
-    line-height: 6vw;
+    font-size: 5.8vw;
+    line-height: 1.7;
   }
 
   .highlight {
-    font-size: 4vw;
+    font-size: 5.5vw;
   }
 
   .contact-button {
     width: 50vw;
-    font-size: 4.5vw;
-    height: 10vw;
+    font-size: 5vw;
+    height: 14vw;
     border-radius: 8vw;
     margin-top: 2vw;
   }
