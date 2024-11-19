@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Banner from "../../../components/landing-page/banner/index.js";
-import About from "../../../components/landing-page/about/index.js";
+
 import Services from "../../../components/landing-page/services/index.js";
 import Client from "../../../components/landing-page/client/index.js";
 import Testimonials from "../../../components/landing-page/testimonials/index.js";
@@ -24,7 +24,7 @@ export default function LandingPage() {
   return (
     <div>
       <Banner setFormRef={setFormRef} />
-      <About handleContactScroll={handleContactScroll} />
+
       <Services handleContactScroll={handleContactScroll} />
       <Client handleContactScroll={handleContactScroll} />
       <Testimonials handleContactScroll={handleContactScroll} />

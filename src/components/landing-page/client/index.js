@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import "./client.scss";
 
 export default function Client() {
@@ -23,13 +24,38 @@ export default function Client() {
     { image: "/landing-page/logos-19.png" },
   ];
 
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const cloneLogos = [...clientData, ...clientData];
+
+    // Set up scroll logic
+    let scrollPosition = 0;
+    const scrollSpeed = 1;
+
+    const scroll = () => {
+      scrollPosition -= scrollSpeed;
+      if (Math.abs(scrollPosition) >= slider.scrollWidth / 2) {
+        // Reset scroll position for seamless loop
+        scrollPosition = 0;
+      }
+      slider.style.transform = `translateX(${scrollPosition}px)`;
+      requestAnimationFrame(scroll);
+    };
+
+    requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(scroll);
+  }, [clientData]);
+
   return (
     <div className="Client">
       <h1>Our Clients</h1>
       <p className="textCon">Partnering with Leading Brands & Event Agencies</p>
       <div className="ImgContainer">
-        <div className="slider">
-          {clientData.map((client, index) => (
+        <div className="slider" ref={sliderRef}>
+          {clientData.concat(clientData).map((client, index) => (
             <img
               key={index}
               src={client.image}

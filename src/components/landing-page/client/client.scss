@@ -19,28 +19,19 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
 }
 
 .clientLogo {
   width: 13vw;
   padding: 2vw;
   transition: transform 0.5s ease-in-out;
-}
-
-.slider {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  animation: infinite-scroll 30s linear infinite;
-}
-
-@keyframes infinite-scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 @media (max-width: 768px) {
@@ -61,9 +52,5 @@
   .clientLogo {
     width: 30vw;
     padding: 4vw;
-  }
-
-  .slider {
-    animation: infinite-scroll 20s linear infinite;
   }
 }

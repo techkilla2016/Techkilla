@@ -1,5 +1,5 @@
 import "./service.scss";
-
+import About from "../about/index";
 export default function Services({ handleContactScroll }) {
   const videoResources = [
     {
@@ -393,6 +393,8 @@ export default function Services({ handleContactScroll }) {
         <span>Gaming Solutions</span>
         <span>AR/VR solutions</span>
       </div>
+
+      <About handleContactScroll={handleContactScroll} />
 
       {/* Latest Deliveries Section */}
       {latestDeliveries.length > 0 && (
