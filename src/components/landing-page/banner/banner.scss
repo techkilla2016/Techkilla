@@ -1,0 +1,215 @@
+.Banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0f7fa;
+}
+
+.bannerImg {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.desktopImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mobileImg {
+  display: none;
+}
+.formContainer {
+  position: absolute;
+  right: 4vw;
+  padding: 2vw;
+  width: 30vw;
+  background-color: white;
+  border-radius: 1vw;
+  box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: Arial, sans-serif;
+  // border: 4px solid rgb(153, 43, 43);
+}
+
+.formContainer h3 {
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+  color: #3249e3;
+}
+
+.formContainer label {
+  font-size: 1.1vw;
+  margin-top: 1vw;
+  color: #2c2a2a;
+}
+
+.formContainer input {
+  width: 100%;
+  padding: 0.8vw;
+  margin-top: 0.5vw;
+  border: 0.1vw solid #ddd;
+  border-radius: 0.5vw;
+  font-size: 1vw;
+  outline: none;
+  // border: 1px solid rgb(153, 43, 43);
+}
+
+.formContainer input:focus {
+  border-color: #727772;
+}
+
+.formContainer input::placeholder {
+  color: #aaa;
+}
+
+.formContainer button {
+  margin-top: 1.5vw;
+  padding: 0.8vw 2vw;
+  background-color: rgb(51, 85, 250);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5vw;
+  font-size: 1.2vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 8.2vw;
+}
+
+.formContainer button:hover {
+  background-color: rgb(13, 41, 99);
+}
+
+/* Tablet/iPad */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .Banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0f7fa;
+  }
+
+  .bannerImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .desktopImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .mobileImg {
+    display: none;
+  }
+
+  .formContainer {
+    position: absolute;
+    right: 5vw; /* Adjusted for better spacing on tablets */
+    padding: 3vw; /* Increased padding */
+    width: 35vw; /* Increased width */
+    background-color: white;
+    border-radius: 1vw;
+    box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: Arial, sans-serif;
+  }
+
+  .formContainer h3 {
+    font-size: 2.6vw; /* Larger font size for readability */
+    margin-bottom: 1vw;
+    color: #3249e3;
+  }
+
+  .formContainer label {
+    font-size: 2vw; /* Slightly larger label font size */
+    margin-top: 1vw;
+    color: #2c2a2a;
+  }
+
+  .formContainer input {
+    width: 100%;
+    padding: 1vw; /* Increased padding for better input field usability */
+    margin-top: 0.5vw;
+    border: 0.1vw solid #ddd;
+    border-radius: 0.5vw;
+    font-size: 1.9vw;
+    outline: none;
+  }
+
+  .formContainer button {
+    margin-top: 1.7vw;
+    padding: 1vw 3vw;
+    background-color: rgb(51, 85, 250);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5vw;
+    font-size: 2vw;
+    cursor: pointer;
+    margin-left: 7.5vw;
+  }
+
+  .formContainer button:hover {
+    background-color: rgb(13, 41, 99);
+  }
+}
+
+@media (max-width: 768px) {
+  .Banner {
+    flex-direction: column;
+    justify-content: flex-start;
+    // border: 2px solid black;
+  }
+  .desktopImg {
+    display: none;
+  }
+  .mobileImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .formContainer {
+    position: static;
+    width: 100%;
+    padding: 5vw;
+    gap: 3vw;
+  }
+
+  .formContainer h3 {
+    font-size: 6vw;
+    padding-bottom: 3vw;
+  }
+
+  .formContainer label {
+    font-size: 5vw;
+    font-weight: 500;
+  }
+
+  .formContainer input {
+    padding: 4vw;
+    font-size: 4vw;
+    border-color: #727772;
+  }
+
+  .formContainer button {
+    font-size: 5vw;
+    width: 35vw;
+    height: 13vw;
+    margin-top: 3vw;
+    margin-left: 27vw;
+  }
+}
