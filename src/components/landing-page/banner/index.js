@@ -35,7 +35,7 @@ export default function Banner({ setFormRef }) {
   const sendForm = async (data) => {
     try {
       let response = await axios.post(
-        "https://analytiq4.com/tk-emailer/mail.php",
+        "https://techkilla.in/tk-emailer/mail.php",
         data
       );
       return true;
