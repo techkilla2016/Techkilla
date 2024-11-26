@@ -4,6 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./banner.scss";
+import { useRouter } from "next/navigation";
 
 const EMPTY_FORM = {
   token: "FjUDGe9iYH55sykd0BtD0HweUhjAWfQE",
@@ -18,11 +19,15 @@ export default function Banner({ setFormRef }) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
-
+  const router = useRouter();
   const inputChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+    const { name, value } = e.target;
 
+    if (name === "phone" && /[^0-9]/.test(value)) {
+      return;
+    }
+    setForm({ ...form, [name]: value });
+  };
   const toastOptions = {
     position: "bottom-left",
     autoClose: 4000,
@@ -60,7 +65,8 @@ export default function Banner({ setFormRef }) {
         setLoading(false);
         setSuccess(true);
         setForm(EMPTY_FORM);
-        toast.success("Form submitted successfully!", toastOptions);
+        router.push("/landing-page/aiphotobooth/acknowledgement");
+        // toast.success("Form submitted successfully!", toastOptions);
       } else {
         setLoading(false);
         toast.error("There was an error submitting the form.", toastOptions);
@@ -115,6 +121,7 @@ export default function Banner({ setFormRef }) {
           name="phone"
           value={form.phone}
           onChange={inputChange}
+          pattern="[0-9]*"
           required
         />
 
