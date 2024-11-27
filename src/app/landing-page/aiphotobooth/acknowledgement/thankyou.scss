@@ -1,0 +1,126 @@
+.main-container {
+  padding: 2vw;
+  text-align: center;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.thankyou-container {
+  //   background-color: #c7b9b9;
+  //   border: 2px solid black;
+  height: 70vh;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+  box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, 0.2);
+}
+.company-logo {
+  width: 24%;
+  height: 34%;
+  margin-bottom: 1vw;
+}
+.thankyou-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1vw;
+}
+
+.thankyou-message {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1vw;
+}
+.thankyou-info {
+  font-size: 1.15rem;
+}
+
+.thankyou-link {
+  color: #0070f3;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #005bb5;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 4vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .thankyou-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    padding: 4vw;
+    // height: 50vw;
+  }
+
+  .company-logo {
+    width: 50%;
+  }
+
+  .thankyou-title {
+    font-size: 2.6rem;
+  }
+
+  .thankyou-message {
+    font-size: 1.7rem;
+  }
+
+  .thankyou-info {
+    font-size: 1.5rem;
+    line-height: 7vw;
+  }
+
+  .thankyou-link {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet styles */
+  .main-container {
+    padding: 3vw;
+  }
+
+  .thankyou-container {
+    width: 70vw;
+    padding: 3vw;
+    box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, 0.2);
+  }
+
+  .company-logo {
+    width: 35%;
+    height: auto;
+    margin-bottom: 2vw;
+  }
+
+  .thankyou-title {
+    font-size: 2.2rem;
+  }
+
+  .thankyou-message {
+    font-size: 1.4rem;
+    margin-bottom: 1.5vw;
+  }
+
+  .thankyou-info {
+    font-size: 1.3rem;
+  }
+
+  .thankyou-link {
+    font-size: 1.4rem;
+  }
+}
