@@ -12,6 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 import App from "./app";
 import Link from "next/link";
 import { BsWhatsapp } from "react-icons/bs";
+import Script from "next/script";
+
 
 const siteUrl = "https://techkilla.com/";
 
@@ -71,6 +73,8 @@ export default function RootLayout({ children }) {
         {/* <meta name="twitter:image" content={metadata.twitter.image} /> */}
         <link rel="canonical" href={metadata.openGraph.url} />
         <title>{metadata.title.default}</title>
+       
+       
       </Head>
       <body className={inter.className}>
         <App />
@@ -81,6 +85,7 @@ export default function RootLayout({ children }) {
         >
           <BsWhatsapp />
         </Link>
+
       </body>
     </html>
   );
