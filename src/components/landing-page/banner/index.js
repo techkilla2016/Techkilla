@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./banner.scss";
 import { useRouter } from "next/navigation";
+import TagManager from 'react-gtm-module';
 
 const EMPTY_FORM = {
   token: "FjUDGe9iYH55sykd0BtD0HweUhjAWfQE",
@@ -62,6 +63,17 @@ export default function Banner({ setFormRef }) {
       const isSend = await sendForm({ ...form });
 
       if (isSend) {
+        
+        //tag manager events added 
+
+        TagManager.dataLayer({
+          event: 'sendUserInfo',
+          userInfo: {
+            name: form.name, 
+            email: form.email, 
+          },
+        });
+
         setLoading(false);
         setSuccess(true);
         setForm(EMPTY_FORM);

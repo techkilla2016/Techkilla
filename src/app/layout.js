@@ -74,7 +74,6 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href={metadata.openGraph.url} />
         <title>{metadata.title.default}</title>
        
-       
       </Head>
       <body className={inter.className}>
         <App />
@@ -85,7 +84,7 @@ export default function RootLayout({ children }) {
         >
           <BsWhatsapp />
         </Link>
-
+        
       </body>
     </html>
   );
