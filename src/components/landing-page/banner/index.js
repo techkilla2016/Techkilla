@@ -6,6 +6,9 @@ import "react-toastify/dist/ReactToastify.css";
 import "./banner.scss";
 import { useRouter } from "next/navigation";
 
+import { addDoc , collection } from "firebase/firestore";
+import { db } from "../../../firebase-config";
+
 const EMPTY_FORM = {
   token: "FjUDGe9iYH55sykd0BtD0HweUhjAWfQE",
   name: "",
@@ -36,13 +39,19 @@ export default function Banner({ setFormRef }) {
     theme: "light",
   };
 
+
+
   // API request function
   const sendForm = async (data) => {
     try {
-      let response = await axios.post(
-        "https://techkilla.in/tk-emailer/mail.php",
-        data
-      );
+      // let response = await axios.post(
+      //   "https://techkilla.in/tk-emailer/mail.php",
+      //   data
+      // );
+
+      // firebase code added here
+      let docRef = collection(db,"techkilla-enquiry-form")
+      await addDoc(docRef,{...data,timestamp:Date.now()})
       return true;
     } catch (err) {
       console.error("Error submitting the form:", err);
