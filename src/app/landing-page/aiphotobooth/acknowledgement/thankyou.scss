@@ -11,7 +11,7 @@
 .thankyou-container {
   //   background-color: #c7b9b9;
   //   border: 2px solid black;
-  height: 70vh;
+  // height: 70vh;
   width: 45vw;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,8 @@
     justify-content: center;
     align-items: center;
     width: 90vw;
-    padding: 4vw;
+    height: 100%;
+    // padding: 4vw;
     // height: 50vw;
   }
 
@@ -74,20 +75,21 @@
   }
 
   .thankyou-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .thankyou-message {
-    font-size: 1.5rem;
+    font-size: 1.18rem;
   }
 
   .thankyou-info {
-    font-size: 1.4rem;
-    line-height: 7vw;
+    // border: 1px solid black;
+    font-size: 1rem;
+    // line-height: 7vw;
   }
 
   .thankyou-link {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -118,10 +120,10 @@
   }
 
   .thankyou-info {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .thankyou-link {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }

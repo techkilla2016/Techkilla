@@ -10,7 +10,7 @@ const AcknowledgementPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.push("/");
-    }, 1000);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [router]);
