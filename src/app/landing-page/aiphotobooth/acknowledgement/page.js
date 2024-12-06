@@ -1,8 +1,20 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import "./thankyou.scss"; // Ensure the path is correct based on your file structure
+import "./thankyou.scss";
 
 const AcknowledgementPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push("/");
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [router]);
+
   return (
     <div className="main-container">
       <div className="thankyou-container">

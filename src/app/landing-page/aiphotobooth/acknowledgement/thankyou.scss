@@ -21,8 +21,8 @@
   box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, 0.2);
 }
 .company-logo {
-  width: 24%;
-  height: 34%;
+  width: 12vw;
+  height: 12vw;
   margin-bottom: 1vw;
 }
 .thankyou-title {
@@ -69,24 +69,25 @@
   }
 
   .company-logo {
-    width: 50%;
+    width: 45vw;
+    height: 45vw;
   }
 
   .thankyou-title {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
 
   .thankyou-message {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   .thankyou-info {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 7vw;
   }
 
   .thankyou-link {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {

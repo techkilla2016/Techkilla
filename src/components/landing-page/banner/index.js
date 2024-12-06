@@ -6,12 +6,13 @@ import "react-toastify/dist/ReactToastify.css";
 import "./banner.scss";
 import { useRouter } from "next/navigation";
 
-import { addDoc , collection } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../../firebase-config";
 
 const EMPTY_FORM = {
   token: "FjUDGe9iYH55sykd0BtD0HweUhjAWfQE",
   name: "",
+  email: "",
   phone: "",
   designation: "",
 };
@@ -39,8 +40,6 @@ export default function Banner({ setFormRef }) {
     theme: "light",
   };
 
-
-
   // API request function
   const sendForm = async (data) => {
     try {
@@ -50,8 +49,8 @@ export default function Banner({ setFormRef }) {
       // );
 
       // firebase code added here
-      let docRef = collection(db,"techkilla-enquiry-form")
-      await addDoc(docRef,{...data,timestamp:Date.now()})
+      let docRef = collection(db, "techkilla-enquiry-form");
+      await addDoc(docRef, { ...data, timestamp: Date.now() });
       return true;
     } catch (err) {
       console.error("Error submitting the form:", err);
@@ -67,7 +66,7 @@ export default function Banner({ setFormRef }) {
     setSuccess(false);
 
     // Validate required fields
-    if (form.name && form.phone) {
+    if (form.name && form.email && form.phone) {
       const isSend = await sendForm({ ...form });
 
       if (isSend) {
@@ -113,7 +112,8 @@ export default function Banner({ setFormRef }) {
         className="formContainer"
       >
         <h3>Enquiry Now</h3>
-        <label htmlFor="name">Name*</label>
+
+        <label htmlFor="name">Name *</label>
         <input
           type="text"
           id="name"
@@ -123,7 +123,17 @@ export default function Banner({ setFormRef }) {
           required
         />
 
-        <label htmlFor="phone">Phone Number*</label>
+        <label htmlFor="email">Email *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={form.email}
+          onChange={inputChange}
+          required
+        />
+
+        <label htmlFor="phone">Phone Number </label>
         <input
           type="tel"
           id="phone"
@@ -131,7 +141,8 @@ export default function Banner({ setFormRef }) {
           value={form.phone}
           onChange={inputChange}
           pattern="[0-9]*"
-          required
+          maxLength="10"
+          minLength="10"
         />
 
         <label htmlFor="designation">Designation/Role</label>
@@ -145,7 +156,7 @@ export default function Banner({ setFormRef }) {
         />
 
         <button className="submit-btn" disabled={loading}>
-          {loading ? "Submit" : "Submit"}
+          {loading ? "Submitting..." : "Submit"}
         </button>
       </form>
       <ToastContainer />
