@@ -9,7 +9,7 @@ import styles from "./contact.module.css";
 
 export const metadata = {
   title: "Contact Us  | Techkilla",
-  description: "Develop by Mukesh Singh",
+  description: "Develop by TechKilla Technologies",
 };
 const Contact = () => {
   return (
