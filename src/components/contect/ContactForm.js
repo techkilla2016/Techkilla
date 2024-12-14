@@ -12,7 +12,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const EMPTY_CONTACT = {
-  token: "FjUDGe9iYH55sykd0BtD0HweUhjAWfQE",
   name: "",
   email: "",
   company: "",
@@ -44,9 +43,13 @@ export default function ContactForm() {
   const send = async contact => {
     try {
       let response = await axios.post(
-        "https://adp24companyday.com/tk-emailer/mail.php",
-        contact
-      );
+        "https://api.telecrm.in/enterprise/"+ process.env.NEXT_PUBLIC_CRM_ENTERPRISE_ID+"/autoupdatelead",
+        {"fields":contact,"actions": [{"type": "SYSTEM_NOTE","text": "Lead Source: Main Website"}]},{
+          headers: {
+            Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_CRM_TOKEN
+          }});
+         // console.log(response)
+      // alert(process.env.NEXT_PUBLIC_CRM_TOKEN)
       /* response = await response.json();
       console.log(response); */
       return true;
