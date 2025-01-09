@@ -100,7 +100,10 @@ const Testimonials = ({ cardData }) => {
                     </p>
                   </div>
                   <div className={styles.profileImage}>
-                    <img src={item?.img} />
+                    <img
+                      src={item?.img}
+                      alt={item?.alt || "Testimonial profile image"}
+                    />
                   </div>
                 </div>
                 <p className={`${styles.description} text-secondary`}>

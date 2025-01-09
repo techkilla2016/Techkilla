@@ -18,8 +18,10 @@ import chooseList from "@/data/QR-Registration/chooseList";
 import caseStudieList from "@/data/QR-Registration/caseStudieList";
 
 export const metadata = {
-  title: "QR Registration",
-  description: `QR Registration and instant ID print with live verification - The National HRD Network`,
+  title: "QR Code Solution for Events – Techkilla",
+  description: `Techkilla’s QR code solutions offer seamless digital interactions for events and activations. Engage audiences with innovative and secure QR-based experiences.`,
+  keywords:
+    "QR Code Solution for Events, Techkilla QR Code Services, Seamless QR Event Solutions, Event Interaction Tools, Digital QR Solutions, Custom QR Solutions, Interactive Event Tools, Activation Technology, Secure QR Interactions, Audience Experience Solutions, Dynamic Event Tools, Innovative QR Technology",
 };
 
 const QrRegistration = () => {
