@@ -156,10 +156,14 @@ const VRSolutions = () => {
               <Container>
                 <div className="serviceContainer pb-5">
                   <h3 className="text-center benifit-head">Benefits </h3>
-                  <div className="text-center benifit-para">
+                  {/* <div className="text-center benifit-para">
                     {" "}
                     Some advantages of virtual reality are listed below.
-                  </div>
+                  </div> */}
+                  <p className="text-center benifit-para">
+                    {" "}
+                    Some advantages of virtual reality are listed below.
+                  </p>
                 </div>
                 <Row>
                   {benifit?.map((item, keys) => {

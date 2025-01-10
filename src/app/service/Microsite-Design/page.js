@@ -161,7 +161,8 @@ const MicrositeDesign = () => {
               <div className="use_case">
                 <div id="use_case" className="py-5">
                   <Container>
-                    <div className="use_case_heading">Use cases</div>
+                    <p className="use_case_heading">Use cases</p>
+                    {/* <div className="use_case_heading">Use cases</div> */}
                     <Row>
                       {useCaseData.map((curItem, index) => (
                         <UseCaseCard
@@ -180,9 +181,13 @@ const MicrositeDesign = () => {
                 <Container>
                   <div className="serviceContainer py-5">
                     <h3 className="text-center benifit-head pt-4">Benefits </h3>
-                    <div className="text-center benifit-para">
+
+                    {/* <div className="text-center benifit-para">
                       Benefits of launching your own microsite
-                    </div>
+                    </div> */}
+                    <p className="text-center benifit-para">
+                      Benefits of launching your own microsite
+                    </p>
                   </div>
                   <Row className="justify-content-center">
                     {benifit?.map((item, keys) => {

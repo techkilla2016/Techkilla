@@ -16,9 +16,11 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      <Head>
+      {/* This is my code  */}
+      {/* <Head>
         <title></title>
-      </Head>
+      </Head> */}
+
       <Header />
       <main>
         <div className="main">
@@ -32,8 +34,12 @@ const Page = () => {
                   height={1080}
                 />
               </div>
+
+              {/* This is my code */}
+              {/* <div className="pageText zoom">Excitometer-Tetra Pak</div> */}
               <div className="pageText">
-                <div className="zoom">Excitometer-Tetra Pak</div>
+                {/* <div className="zoom">Excitometer-Tetra Pak</div> */}
+                <p className="zoom">Excitometer-Tetra Pak</p>
               </div>
             </div>
             <div className="Excitometer">
@@ -42,11 +48,16 @@ const Page = () => {
                   <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                     <div className="pageInnerCol">
                       <h1 className="headCol">Excitometer-Tetra Pak</h1>
-                      <div className="ColPara">
+                      <p className="ColPara">
                         An exciting and entertaining exercise for the crowd that
                         took place at the launch of Tetra pak's "Commit to win"
                         campaign.
-                      </div>
+                      </p>
+                      {/* <div className="ColPara">
+                        An exciting and entertaining exercise for the crowd that
+                        took place at the launch of Tetra pak's "Commit to win"
+                        campaign.
+                      </div> */}
                     </div>
                   </Col>
                   <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
@@ -76,9 +87,12 @@ const Page = () => {
                             </div>
                           </Col>
                           <Col xxl={9} xl={9} lg={9} md={8} sm={8} xs={9}>
-                            <div className="key-para">
+                            {/* <div className="key-para">
                               Real-time address to the adoring crowd
-                            </div>
+                            </div> */}
+                            <p className="key-para">
+                              Real-time address to the adoring crowd
+                            </p>
                           </Col>
                         </Row>
                       </div>
@@ -95,16 +109,19 @@ const Page = () => {
                             </div>
                           </Col>
                           <Col xxl={9} xl={9} lg={9} md={8} sm={8} xs={9}>
-                            <div className="key-para">
+                            {/* <div className="key-para">
                               Exceptional animation display
-                            </div>
+                            </div> */}
+                            <p className="key-para">
+                              Exceptional animation display
+                            </p>
                           </Col>
                         </Row>
                       </div>
                     </div>
                   </Col>
                   <Col xxl={6} xl={6} lg={6} md={6} sm={6} xs={12}>
-                    <div className="key-cart">
+                    <div className="key-cart ">
                       <div className="keyCount">
                         <Row className="align-items-center">
                           <Col xxl={3} xl={3} lg={3} md={4} sm={4} xs={3}>
@@ -113,9 +130,12 @@ const Page = () => {
                             </div>
                           </Col>
                           <Col xxl={9} xl={9} lg={9} md={8} sm={8} xs={9}>
-                            <div className="key-para">
+                            {/* <div className="key-para">
                               The primary or main activity being pursued
-                            </div>
+                            </div> */}
+                            <p className="key-para">
+                              The primary or main activity being pursued
+                            </p>
                           </Col>
                         </Row>
                       </div>
@@ -132,9 +152,12 @@ const Page = () => {
                             </div>
                           </Col>
                           <Col xxl={9} xl={9} lg={9} md={8} sm={8} xs={9}>
-                            <div className="key-para">
+                            <p className="key-para">
                               No external hardware is necessary
-                            </div>
+                            </p>
+                            {/* <div className="key-para">
+                              No external hardware is necessary
+                            </div> */}
                           </Col>
                         </Row>
                       </div>
@@ -149,12 +172,18 @@ const Page = () => {
                 <Row>
                   <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                     <div className="pageInnerCol">
-                      <div className="headCol">What is an excitometer?</div>
-                      <div className="ColPara">
+                      <p className="headCol">What is an excitometer?</p>
+                      {/* <div className="headCol">What is an excitometer?</div> */}
+                      {/* <div className="ColPara">
                         Excitometer is a piece of hardware that works with smart
                         software to record loud cheering, screaming, or hooting
                         from the crowd and turn it into a visual representation.
-                      </div>
+                      </div> */}
+                      <p className="ColPara">
+                        Excitometer is a piece of hardware that works with smart
+                        software to record loud cheering, screaming, or hooting
+                        from the crowd and turn it into a visual representation.
+                      </p>
                     </div>
                   </Col>
                   <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
@@ -186,7 +215,7 @@ const Page = () => {
                   </Col>
                   <Col xxl={6} xl={6} lg={6} md={12} sm={12}>
                     <div className="pageInnerCol">
-                      <div className="headCol">How does it work?</div>
+                      {/* <div className="headCol">How does it work?</div>
                       <div className="ColPara">
                         a work of art that has been crafted specifically for the
                         brand in accordance with its requirements, which
@@ -195,7 +224,17 @@ const Page = () => {
                         software with the input it needs. When it hits the
                         predetermined threshold, the event that sets off the
                         trigger will occur.
-                      </div>
+                      </div> */}
+                      <p className="headCol">How does it work?</p>
+                      <p className="ColPara">
+                        a work of art that has been crafted specifically for the
+                        brand in accordance with its requirements, which
+                        determine how the final product will look. An external
+                        microphone that picks up the frequency and supplies the
+                        software with the input it needs. When it hits the
+                        predetermined threshold, the event that sets off the
+                        trigger will occur.
+                      </p>
                     </div>
                   </Col>
                 </Row>
@@ -204,9 +243,12 @@ const Page = () => {
 
             <div className="useCaseSection">
               <Container>
-                <div className="heading">
+                {/* <div className="heading">
                   What are the different <br /> use cases of Excitometer?
-                </div>
+                </div> */}
+                <p className="heading">
+                  What are the different <br /> use cases of Excitometer?
+                </p>
                 <Row>
                   <Col xxl={4} xl={4} lg={4} md={12} sm={12} xs={12}>
                     <div className="key-cart">
@@ -214,9 +256,12 @@ const Page = () => {
                         <div className="key-count" id="key-count1">
                           1
                         </div>
-                        <div className="benif-para">
+                        {/* <div className="benif-para">
                           A machine that dispenses free items or giveaways.
-                        </div>
+                        </div> */}
+                        <p className="benif-para">
+                          A machine that dispenses free items or giveaways.
+                        </p>
                       </div>
                     </div>
                   </Col>
@@ -226,9 +271,12 @@ const Page = () => {
                         <div className="key-count" id="key-count2">
                           2
                         </div>
-                        <div className="benif-para">
+                        {/* <div className="benif-para">
                           Numerous events apart from logo launches taking place.
-                        </div>
+                        </div> */}
+                        <p className="benif-para">
+                          Numerous events apart from logo launches taking place.
+                        </p>
                       </div>
                     </div>
                   </Col>
@@ -239,9 +287,12 @@ const Page = () => {
                         <div className="key-count" id="key-count3">
                           3
                         </div>
-                        <div className="benif-para">
+                        {/* <div className="benif-para">
                           Product launch party celebration and commemoration.
-                        </div>
+                        </div> */}
+                        <p className="benif-para">
+                          Product launch party celebration and commemoration.
+                        </p>
                       </div>
                     </div>
                   </Col>

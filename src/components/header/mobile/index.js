@@ -7,7 +7,7 @@ import Image from "next/image";
 const MobileNav = ({ isMobile, setIsMobile }) => {
   const [isChild, setIsChild] = useState(false);
   const [curChild, setCurChild] = useState([]);
-  const childHandal = payload => {
+  const childHandal = (payload) => {
     setIsChild(true);
     setCurChild(payload);
   };
@@ -25,12 +25,16 @@ const MobileNav = ({ isMobile, setIsMobile }) => {
             />
           </Link>
         </div>
-        <div className="toggle-secction">
-          <button className="toggle btn" onClick={() => setIsMobile(!isMobile)}>
-            {isMobile ? <IoCloseSharp /> : <CgMenuRightAlt />}
-            <span id="toggle"></span>
-          </button>
-        </div>
+        {/* <div className="toggle-secction"> */}
+        <button
+          className="toggle-secction toggle btn"
+          onClick={() => setIsMobile(!isMobile)}
+        >
+          {isMobile ? <IoCloseSharp /> : <CgMenuRightAlt />}
+          {/* my comment */}
+          {/* <span id="toggle"></span> */}
+        </button>
+        {/* </div> */}
         {
           <div
             className={

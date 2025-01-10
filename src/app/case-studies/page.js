@@ -35,7 +35,8 @@ const CaseStudie = () => {
                   width={1920}
                   height={1080}
                 />
-                <div className="preloaderBack-layer"></div>
+                {/* This is my code */}
+                {/* <div className="preloaderBack-layer"></div> */}
               </div>
               <div className="product_intro">
                 <Container>

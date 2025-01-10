@@ -75,13 +75,20 @@ const QrRegistration = () => {
                     height={1080}
                   />
                 </div>
-                <div className="microPara">
+                <p className="microPara">
                   QR code registration is a form of one-of-a-kind registration
                   process that occurs when a wider audience must be managed in
                   terms of attendance,verification, and backend entry count over
                   time. It overcomes the difficulty of dealing with and
                   maintaining manual records and also saves time & labor
-                </div>
+                </p>
+                {/* <div className="microPara">
+                  QR code registration is a form of one-of-a-kind registration
+                  process that occurs when a wider audience must be managed in
+                  terms of attendance,verification, and backend entry count over
+                  time. It overcomes the difficulty of dealing with and
+                  maintaining manual records and also saves time & labor
+                </div> */}
               </Container>
             </div>
 
@@ -238,13 +245,14 @@ const QrRegistration = () => {
                       <div className="cost-cart-box">
                         <div className="cost_cart">
                           <div className="top">
-                            <div className="service_type">BASIC</div>
+                            {/* <div className="service_type">BASIC</div> */}
+                            <p className="service_type">BASIC</p>
                             <div className="price_section">
                               <div className="cart-btnBox">
                                 <div className="price-label">₹ 25000/-</div>
                               </div>
                             </div>
-                            <div className="facilitie">
+                            {/* <div className="facilitie">
                               <div className="facilitie_option">
                                 <div className="icon_fa">
                                   <SiBlockchaindotcom />
@@ -277,7 +285,41 @@ const QrRegistration = () => {
                                 </div>
                                 <div className="fa_text">Auto emailing</div>
                               </div>
-                            </div>
+                            </div> */}
+                            <ul className="facilitie">
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">
+                                  Registration page customization (only logo)
+                                </div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Unique QR code</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Upto 1k users</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Scanner app</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Auto emailing</div>
+                              </li>
+                            </ul>
                           </div>
                           <div className="pay_section">
                             <div className="cart-btnBox">
@@ -297,13 +339,14 @@ const QrRegistration = () => {
                       <div className="cost-cart-box">
                         <div className="cost_cart">
                           <div className="top">
-                            <div className="service_type">STANDARD</div>
+                            {/* <div className="service_type">STANDARD</div> */}
+                            <p className="service_type">STANDARD</p>
                             <div className="price_section">
                               <div className="cart-btnBox">
                                 <div className="price-label">₹ 35000/-</div>
                               </div>
                             </div>
-                            <div className="facilitie">
+                            {/* <div className="facilitie">
                               <div className="facilitie_option">
                                 <div className="icon_fa">
                                   <SiBlockchaindotcom />
@@ -337,7 +380,42 @@ const QrRegistration = () => {
                                 </div>
                                 <div className="fa_text">Auto emailing</div>
                               </div>
-                            </div>
+                            </div> */}
+                            <ul className="facilitie">
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">
+                                  Registration page customization (Background &
+                                  Logo)
+                                </div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Unique QR code</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Upto 1500 users</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Scanner app</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Auto emailing</div>
+                              </li>
+                            </ul>
                           </div>
 
                           <div className="pay_section">
@@ -358,19 +436,25 @@ const QrRegistration = () => {
                       <div className="cost-cart-box">
                         <div className="cost_cart">
                           <div className="top">
-                            <div
+                            {/* <div
                               className="service_type "
                               style={{ color: "#fdb714" }}
                             >
                               PREMIUM
-                            </div>
+                            </div> */}
+                            <p
+                              className="service_type "
+                              style={{ color: "#fdb714" }}
+                            >
+                              PREMIUM
+                            </p>
                             <div className="price_section">
                               <div className="cart-btnBox">
                                 <div className="price-label">₹ 45000/-</div>
                               </div>
                             </div>
 
-                            <div className="facilitie">
+                            {/* <div className="facilitie">
                               <div className="facilitie_option">
                                 <div className="icon_fa">
                                   <SiBlockchaindotcom />
@@ -420,7 +504,58 @@ const QrRegistration = () => {
                                 </div>
                                 <div className="fa_text">Customized URL</div>
                               </div>
-                            </div>
+                            </div> */}
+                            <ul className="facilitie">
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">
+                                  Registration page customization (Background &
+                                  Logo)
+                                </div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">
+                                  Unique Color QR code
+                                </div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Upto 2k users</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Scanner app</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Auto Emailing</div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">
+                                  Instant printing option
+                                </div>
+                              </li>
+                              <li className="facilitie_option">
+                                <div className="icon_fa">
+                                  <SiBlockchaindotcom />
+                                </div>
+                                <div className="fa_text">Customized URL</div>
+                              </li>
+                            </ul>
                           </div>
 
                           <div className="pay_section">
@@ -473,12 +608,18 @@ const QrRegistration = () => {
                     height={1080}
                   />
                 </div>
-                <div className="microPara">
+                {/* <div className="microPara">
                   Your microsite can experience more features like Gaming
                   engagement, digital photobooth interlinking, HR planned
                   activities & many more use cases.We customize your microsite
                   as per the storyline and new ideas.
-                </div>
+                </div> */}
+                <p className="microPara">
+                  Your microsite can experience more features like Gaming
+                  engagement, digital photobooth interlinking, HR planned
+                  activities & many more use cases.We customize your microsite
+                  as per the storyline and new ideas.
+                </p>
               </Container>
             </div>
 
@@ -510,7 +651,8 @@ const QrRegistration = () => {
                                 height={1080}
                               />
                             </div>
-                            <div className="expertise_title">{item.title}</div>
+                            {/* <div className="expertise_title">{item.title}</div> */}
+                            <p className="expertise_title">{item.title}</p>
                           </div>
                         </Col>
                       );
@@ -616,7 +758,8 @@ const QrRegistration = () => {
                         <Col xxl={9} xl={9} lg={9} md={9} sm={12} xm={12}>
                           <div className="choose_list">
                             <h3>
-                              <span></span> {item.title}
+                              {/* <span></span> {item.title} */}
+                              {item.title}
                             </h3>
                             <p>{item.desc}</p>
                           </div>

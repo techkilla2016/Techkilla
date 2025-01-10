@@ -79,6 +79,7 @@ const Service = () => {
                   width={1920}
                   height={1080}
                 />
+
                 <div className="preloaderBack-layer"></div>
               </div>
               <div className="product_intro">
@@ -126,14 +127,22 @@ const Service = () => {
             <Container>
               <Row className="justify-content-center py-4">
                 <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
-                  <div className="text-center" style={{ fontSize: "18px" }}>
+                  {/* <div className="text-center" style={{ fontSize: "18px" }}>
                     Our team of experts works closely with you to understand
                     your unique needs and deliver tailored solutions that meet
                     your specific goals. Whether you're looking to improve
                     customer satisfaction, increase sales, or enhance your
                     brand's image, our experiential technology solutions can
                     help you achieve your objectives.
-                  </div>
+                  </div> */}
+                  <p className="text-center" style={{ fontSize: "18px" }}>
+                    Our team of experts works closely with you to understand
+                    your unique needs and deliver tailored solutions that meet
+                    your specific goals. Whether you're looking to improve
+                    customer satisfaction, increase sales, or enhance your
+                    brand's image, our experiential technology solutions can
+                    help you achieve your objectives.
+                  </p>
                 </Col>
               </Row>
             </Container>

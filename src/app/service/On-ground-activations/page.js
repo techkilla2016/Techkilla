@@ -115,9 +115,12 @@ const Ongroundactivations = () => {
                 </p>
                 <div className="serviceContainer pb-5">
                   <h3 className="text-center benifit-head pt-5">Benefits </h3>
-                  <div className="text-center benifit-para">
+                  {/* <div className="text-center benifit-para">
                     Advantages of on-the-ground activations
-                  </div>
+                  </div> */}
+                  <p className="text-center benifit-para">
+                    Advantages of on-the-ground activations
+                  </p>
                 </div>
                 <Row className="justify-content-center">
                   {Benefits?.map((item, keys) => {
@@ -141,19 +144,26 @@ const Ongroundactivations = () => {
             </div>
             <div className="bgWhite pb-5">
               <Container>
-                <div className="use_case_heading">Related projects</div>
+                <p className="use_case_heading">Related projects</p>
+                {/* <div className="use_case_heading">Related projects</div> */}
                 <SingleCard list={Related_projects} />
               </Container>
             </div>
             <Container>
               <Row className="justify-content-center pb-4">
                 <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
-                  <div className="text-center finishLine py-5">
+                  {/* <div className="text-center finishLine py-5">
                     Are you looking to take your on-ground activations to the
                     next level? Do you want to engage your audience in a truly
                     memorable way? If so, experiential technologies may be just
                     what you need.
-                  </div>
+                  </div> */}
+                  <p className="text-center finishLine py-5">
+                    Are you looking to take your on-ground activations to the
+                    next level? Do you want to engage your audience in a truly
+                    memorable way? If so, experiential technologies may be just
+                    what you need.
+                  </p>
                 </Col>
               </Row>
             </Container>

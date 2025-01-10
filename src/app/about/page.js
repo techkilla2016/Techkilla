@@ -44,13 +44,20 @@ const About = () => {
                   </Col>
                   <Col lg={6} md={12} sm={12}>
                     <div className="right-col">
-                      <div
+                      {/* <div
                         className="colHeading"
                         data-aos="fade-up"
                         data-aos-delay={200}
                       >
                         Who We Are
-                      </div>
+                      </div> */}
+                      <p
+                        className="colHeading"
+                        data-aos="fade-up"
+                        data-aos-delay={200}
+                      >
+                        Who We Are
+                      </p>
                       <h1
                         className="section__title"
                         data-aos="fade-up"
@@ -118,8 +125,10 @@ const About = () => {
                             </div>
                           </div>
                           <div className="para_section">
-                            <div className="heading">{item?.title}</div>
-                            <div className="para">{item?.disc}</div>
+                            <p className="heading">{item?.title}</p>
+                            <p className="para">{item?.disc}</p>
+                            {/* <div className="heading">{item?.title}</div>
+                            <div className="para">{item?.disc}</div> */}
                           </div>
                         </div>
                       </Col>
@@ -130,7 +139,7 @@ const About = () => {
             </div>
 
             {/* service section  */}
-            <div className="pb-5" style={{ background: "#fff" }}>
+            {/* <div className="pb-5" style={{ background: "#fff" }}>
               <div
                 className="micro_heading01"
                 data-aos="zoom-in-down"
@@ -138,7 +147,16 @@ const About = () => {
               >
                 Our <span>Services</span>
               </div>
+            </div> */}
+            <div
+              className="pb-5 micro_heading01"
+              style={{ background: "#fff" }}
+              data-aos="zoom-in-down"
+              data-aos-delay={100}
+            >
+              Our <span>Services</span>
             </div>
+
             <Service bg="/comman/tech.webp" />
 
             {/* 10 */}
@@ -175,13 +193,20 @@ const About = () => {
                                 height={1080}
                               />
                             </div>
-                            <div
+                            {/* <div
                               className="expertise_title"
                               data-aos="fade-up"
                               data-aos-delay={index * 100}
                             >
                               {item.title}
-                            </div>
+                            </div> */}
+                            <p
+                              className="expertise_title"
+                              data-aos="fade-up"
+                              data-aos-delay={index * 100}
+                            >
+                              {item.title}
+                            </p>
                           </div>
                         </Col>
                       );

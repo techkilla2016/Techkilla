@@ -275,7 +275,8 @@ const PlayableAds = () => {
               <Container>
                 <div className="serviceContainer pb-5">
                   <h3 className="text-center benifit-head">Benefits </h3>
-                  <div className="text-center benifit-para">Why Playables?</div>
+                  {/* <div className="text-center benifit-para">Why Playables?</div> */}
+                  <p className="text-center benifit-para">Why Playables?</p>
                 </div>
                 <Row className="justify-content-center">
                   {benifit?.map((item, keys) => {
@@ -300,7 +301,8 @@ const PlayableAds = () => {
             <div className="bgWhite">
               <Container>
                 <div className="section">
-                  <div className="use_case_heading">Related projects</div>
+                  <h1 className="use_case_heading">Related projects</h1>
+                  {/* <div className="use_case_heading">Related projects</div> */}
                   <SingleCard list={relatedProject} />
                 </div>
               </Container>
@@ -308,7 +310,7 @@ const PlayableAds = () => {
             <Container>
               <Row className="justify-content-center pb-4">
                 <Col xxl={10} xl={10} lg={10} md={10} sm={12} xm={12}>
-                  <div className="text-center py-5">
+                  {/* <div className="text-center py-5">
                     playable ads are a powerful tool for digital advertisers
                     looking to engage their audience in a fun and interactive
                     way. By providing users with a unique and memorable
@@ -316,7 +318,16 @@ const PlayableAds = () => {
                     conversions, and gain valuable insights into user behavior.
                     So why not try incorporating playable ads into your next
                     digital ad campaign?
-                  </div>
+                  </div> */}
+                  <p className="text-center py-5">
+                    playable ads are a powerful tool for digital advertisers
+                    looking to engage their audience in a fun and interactive
+                    way. By providing users with a unique and memorable
+                    experience, you can increase brand awareness, drive
+                    conversions, and gain valuable insights into user behavior.
+                    So why not try incorporating playable ads into your next
+                    digital ad campaign?
+                  </p>
                 </Col>
               </Row>
             </Container>

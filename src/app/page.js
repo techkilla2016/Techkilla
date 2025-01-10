@@ -34,7 +34,7 @@ const Home = () => {
           <WhatWeDo />
 
           {/* service section  */}
-          <div className="pb-5" style={{ background: "rgb(245 245 244)" }}>
+          {/* <div className="pb-5" style={{ background: "rgb(245 245 244)" }}>
             <div
               className="micro_heading01"
               data-aos="zoom-in-down"
@@ -42,7 +42,18 @@ const Home = () => {
             >
               Our <span>Services</span>
             </div>
+          </div> */}
+
+          {/* This is my code */}
+          <div
+            className="pb-5 micro_heading01"
+            style={{ background: "rgb(245 245 244)" }}
+            data-aos="zoom-in-down"
+            data-aos-delay={100}
+          >
+            Our <span>Services</span>
           </div>
+
           <Service bg="/comman/tech.webp" />
 
           {/* QR Registrasion intro  section*/}
