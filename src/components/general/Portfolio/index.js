@@ -2,7 +2,8 @@ import { Col, Container, Row } from "react-bootstrap";
 import React from "react";
 import Counter from "@/components/general/Portfolio/Counter";
 import WorkSwiper from "@/components/general/Portfolio/work-slider";
-const PortfolioSection = ({ work, lastLine }) => {
+import RecentWorkSwiper from "@/components/general/Portfolio/recent-work-slider";
+const PortfolioSection = ({ recentwork, work, lastLine }) => {
   return (
     <>
       {/* we can add <div className="section4 pt-3"> like this */}
@@ -32,6 +33,17 @@ const PortfolioSection = ({ work, lastLine }) => {
           <WorkSwiper work={work} />
         </Container>
 
+        {/* Recent work  */}
+        <div
+          className="portfolioTitle text-center"
+          data-aos="zoom-in-up"
+          data-aos-delay={0}
+        >
+          Recent Works
+        </div>
+        <Container>
+          <RecentWorkSwiper work={recentwork} />
+        </Container>
         <Container className="mt-5">
           <Row>
             <Counter />
