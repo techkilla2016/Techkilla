@@ -8,8 +8,11 @@ import contact from "./../../../public/assets/contact/contact.png";
 import styles from "./contact.module.css";
 
 export const metadata = {
-  title: "Contact Us  | Techkilla",
-  description: "Develop by TechKilla Technologies",
+  title: "Contact Techkilla – Innovative Solutions for Your Brand",
+  description:
+    "Get in touch with Techkilla for experiential marketing solutions. Contact our team to explore VR, AI booths, and interactive event services for your brand.",
+  keywords:
+    "Experiential Marketing, VR Booths, AI Booths, Interactive Event Services, Brand Engagement Tools, Techkilla Team, Marketing Innovation, Creative Brand Experiences",
 };
 const Contact = () => {
   return (

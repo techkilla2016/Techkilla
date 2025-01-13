@@ -7,14 +7,15 @@ import Service from "@/components/home/service";
 import QrRegistration from "@/components/home/microsite";
 import Portfolio from "@/components/general/Portfolio";
 import work from "@/data/general/work";
+import recentwork from "@/data/general/recent-work";
 import { Container } from "react-bootstrap";
 import Testimonials from "@/components/Testimonials";
 import TestimonialsData from "@/data/Testimonials";
 import WhatsappModal from "@/components/Modal/whatsapp";
 import Head from "next/head";
 export const metadata = {
-  title: "Techkilla",
-  description: `With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals.`,
+  title: "Techkilla Wedding Photo Booth Services for Events and Occasions",
+  description: `Explore Techkilla’s wedding photo booths, AI photo booths, and AI video booths. Create unforgettable event experiences with our innovative, interactive solutions.`,
 };
 
 const Home = () => {
@@ -34,7 +35,7 @@ const Home = () => {
           <WhatWeDo />
 
           {/* service section  */}
-          <div className="pb-5" style={{ background: "rgb(245 245 244)" }}>
+          {/* <div className="pb-5" style={{ background: "rgb(245 245 244)" }}>
             <div
               className="micro_heading01"
               data-aos="zoom-in-down"
@@ -42,7 +43,18 @@ const Home = () => {
             >
               Our <span>Services</span>
             </div>
+          </div> */}
+
+          {/* This is my code */}
+          <div
+            className="pb-5 micro_heading01"
+            style={{ background: "rgb(245 245 244)" }}
+            data-aos="zoom-in-down"
+            data-aos-delay={100}
+          >
+            Our <span>Services</span>
           </div>
+
           <Service bg="/comman/tech.webp" />
 
           {/* QR Registrasion intro  section*/}
@@ -51,6 +63,7 @@ const Home = () => {
           {/* recent work section  */}
           <Portfolio
             work={work}
+            recentwork={recentwork}
             lastLine="With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals."
           />
 
@@ -63,6 +76,7 @@ const Home = () => {
             <h2 className="text-secondary fw-bold text-center pt-5">
               Testimonials
             </h2>
+
             <Testimonials cardData={TestimonialsData} />
           </Container>
         </div>

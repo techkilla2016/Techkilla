@@ -43,13 +43,21 @@ const QrRegistration = () => {
             height={1080}
           />
         </div>
-        <div className="microPara" data-aos="zoom-out" data-aos-delay="100">
+        {/* <div className="microPara" data-aos="zoom-out" data-aos-delay="100">
           QR code registration is a form of one-of-a-kind registration process
           that occurs when a wider audience must be managed in terms of
           attendance,verification, and backend entry count over time. It
           overcomes the difficulty of dealing with and maintaining manual
           records and also saves time & labor
-        </div>
+        </div> */}
+        {/* This is my code */}
+        <p className="microPara" data-aos="zoom-out" data-aos-delay="100">
+          QR code registration is a form of one-of-a-kind registration process
+          that occurs when a wider audience must be managed in terms of
+          attendance,verification, and backend entry count over time. It
+          overcomes the difficulty of dealing with and maintaining manual
+          records and also saves time & labor
+        </p>
         <div
           className="micro_heading01 my-5"
           data-aos="zoom-in"
