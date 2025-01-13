@@ -13,6 +13,11 @@ import aiList from "@/data/photo-ai/aiList";
 import aiPhoto from "@/data/photo-ai/AI-Photo";
 import TestimonialsData from "@/data/Testimonials";
 import cardData from "@/data/photo-ai/Engagement";
+
+import recentwork from "@/data/general/recent-work";
+import RecentWorkSwiper from "@/components/general/Portfolio/recent-work-slider";
+
+
 const SingleAIPhoto = () => {
   return (
     <main>
@@ -180,6 +185,26 @@ const SingleAIPhoto = () => {
           {/* section 6 */}
           <Container fluid className="ai-slilder py-5">
             <Slider cardData={cardData} />
+          </Container>
+
+          {/* recent ai solution work */}
+          <Container className="ai-photo-Section-7">
+            <Row  className="justify-content-center">
+              <Col xxl={6} xl={6} lg={6} md={10} sm={12} xs={12}>
+                <div
+                  className="portfolioTitle text-center"
+                  data-aos="zoom-in-up"
+                  data-aos-delay={0}
+                  style={{color: "#edb141"}}
+                >
+                 AI Solution Recent Works
+                </div>
+              </Col>
+            </Row>
+          </Container>
+
+          <Container className="py-5">
+            <RecentWorkSwiper work={recentwork} />
           </Container>
 
           {/* section 7  */}
