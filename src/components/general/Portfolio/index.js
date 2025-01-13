@@ -34,13 +34,20 @@ const PortfolioSection = ({ recentwork, work, lastLine }) => {
         </Container>
 
         {/* Recent work  */}
-        <div
-          className="portfolioTitle text-center"
-          data-aos="zoom-in-up"
-          data-aos-delay={0}
-        >
-          Recent Works
-        </div>
+        <Container>
+          <Row className="justify-content-center">
+            <Col lg={7} md={8} sm={8}>
+              <div
+                className="portfolioTitle text-center"
+                data-aos="zoom-in-up"
+                data-aos-delay={0}
+              >
+                AI Solution Recent Works
+              </div>
+            </Col>
+          </Row>
+        </Container>
+
         <Container>
           <RecentWorkSwiper work={recentwork} />
         </Container>
