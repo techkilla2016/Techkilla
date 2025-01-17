@@ -10,9 +10,9 @@ const App = () => {
     });
   }, []);
 
-  // useEffect(()=>{
-  //   TagManager.initialize({ gtmId: 'GTM-PVH2G66V' });
-  // },[])
+  useEffect(() => {
+    TagManager.initialize({ gtmId: "GTM-TMCF5D4L" });
+  }, []);
   return <></>;
 };
 
