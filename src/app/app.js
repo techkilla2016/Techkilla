@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import AOS from "aos";
-import TagManager from "react-gtm-module"
+import TagManager from "react-gtm-module";
 
 const App = () => {
   useEffect(() => {
@@ -9,9 +9,10 @@ const App = () => {
       duration: 800,
     });
   }, []);
-  useEffect(()=>{
-    TagManager.initialize({ gtmId: 'GTM-PVH2G66V' });
-  },[])
+
+  // useEffect(()=>{
+  //   TagManager.initialize({ gtmId: 'GTM-PVH2G66V' });
+  // },[])
   return <></>;
 };
 
