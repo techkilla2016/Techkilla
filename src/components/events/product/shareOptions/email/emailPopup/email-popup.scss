@@ -1,0 +1,101 @@
+// responsive design
+// laptop
+.ResponsiveDesignEmailPopup {
+  height: 100%;
+  width: 100%;
+  padding: 2svh;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  .emailBox {
+    border: 3px solid purple;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 50%;
+    height: 50%;
+    gap: 10%;
+    position: relative;
+    .emailInput {
+      width: 50%;
+      padding: 2svh;
+      border-radius: 10px;
+      font-size: 2svh;
+    }
+    .close {
+      position: absolute;
+      top: 4%;
+      right: 2%;
+      font-size: 4svh;
+      cursor: pointer;
+    }
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignEmailPopup {
+    .emailBox {
+      width: 80%;
+      height: 40%;
+      .emailInput {
+        width: 90%;
+        padding: 1.8svh;
+        font-size: 1.8svh;
+      }
+      .close {
+        right: 4%;
+        font-size: 4svh;
+      }
+    }
+  }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+  .ResponsiveDesignEmailPopup {
+    .emailBox {
+      width: 90%;
+      height: 40%;
+      .emailInput {
+        padding: 1.8svh;
+        font-size: 1.9svh;
+      }
+      .close {
+        right: 4%;
+        font-size: 4svh;
+      }
+    }
+  }
+}
+
+// vertical design
+.VerticalDesignEmailPopup {
+  height: 100%;
+  width: 100%;
+  padding: 2svh;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  .emailBox {
+    border: 3px solid purple;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 90%;
+    height: 40%;
+    gap: 10%;
+    position: relative;
+    .emailInput {
+      width: 80%;
+      padding: 1.8svh;
+      border-radius: 10px;
+      font-size: 2svh;
+    }
+    .close {
+      position: absolute;
+      top: 4%;
+      right: 2%;
+      font-size: 4svh;
+      cursor: pointer;
+    }
+  }
+}

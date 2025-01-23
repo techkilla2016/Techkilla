@@ -1,0 +1,93 @@
+// responsive design
+// laptop view
+.ResponsiveDesignQrPopup {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  padding: 2svh;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  .qrBox {
+    border: 3px solid purple;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 30%;
+    height: 50%;
+    gap: 10%;
+    position: relative;
+    #qr {
+      // border: 1px solid red;
+      width: 60%;
+      height: 80%;
+    }
+    .close {
+      position: absolute;
+      top: 4%;
+      right: 2%;
+      font-size: 4svh;
+      cursor: pointer;
+    }
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignQrPopup {
+    .qrBox {
+      width: 80%;
+      height: 50%;
+      #qr {
+        // border: 1px solid red;
+        width: 75%;
+        height: 75%;
+      }
+      .close {
+        right: 4%;
+        font-size: 4svh;
+      }
+    }
+  }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+  .ResponsiveDesignQrPopup {
+    border: 1px solid black;
+    .close {
+      font-size: 5svh;
+    }
+  }
+}
+
+// vertical design
+.VerticalDesignQrPopup {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  padding: 2svh;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  .qrBox {
+    border: 3px solid purple;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 90%;
+    height: 50%;
+    gap: 10%;
+    position: relative;
+    #qr {
+      // border: 1px solid red;
+      width: 60%;
+      height: 80%;
+    }
+    .close {
+      position: absolute;
+      top: 4%;
+      right: 2%;
+      font-size: 4svh;
+      cursor: pointer;
+    }
+  }
+}

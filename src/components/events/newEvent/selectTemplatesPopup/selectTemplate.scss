@@ -1,0 +1,506 @@
+.TemplatePopup {
+  height: calc(100svh - 7vw);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  bottom: 0;
+  /* background: linear-gradient(to right, #deeded, #e8e0e6); */
+  padding: 1.5vw;
+  margin: 5.2vw auto;
+  //   border: 3px solid blue;
+  //   z-index: 1000000;
+
+  .popupContent {
+    background-color: white;
+
+    background-image: url("./../../../../../public/faceSwap/bg.png");
+    // border: 3px solid blue;
+    border-radius: 1vw;
+    background: linear-gradient(to right, #e8e0e6, #deeded);
+    height: 100%;
+    width: 70%;
+    padding: 0.5vw;
+    gap: 1vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    justify-content: flex-start;
+    .mainContainer {
+      //   border: 2px solid blue;
+      //   height: 50vw;
+      // position: relative;
+      gap: 1vw;
+      .loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // border: 2px solid blue;
+        // background-color: red;
+        background: linear-gradient(to right, #e8e0e6, #deeded);
+        z-index: 9;
+        border-radius: 1vw;
+      }
+      .headingSel {
+        // border: 1px solid red;
+        font-size: 2vw;
+        padding-top: 0.8vw;
+        padding-bottom: 0.3vw;
+        font-weight: 600;
+        background: linear-gradient(to right, #ff93df, #7a21bb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .categoryContainer {
+        gap: 1vw;
+        width: 100%;
+        font-size: 0.6vw;
+        flex-wrap: wrap;
+        // border: 2px solid rgb(4, 255, 0);
+        .categoryBtn {
+          font-size: 1vw;
+          font-weight: 500;
+          //   color: white;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(to right, #ff93df, #7a21bb) border-box;
+          border: 0.15vw solid transparent;
+          padding: 0.4vw 0.9vw;
+          border-radius: 0.7vw;
+          cursor: pointer;
+        }
+        .categoryBtn:hover,
+        .selectedCategory {
+          background: linear-gradient(to right, #ff93df, #7a21bb) padding-box,
+            linear-gradient(to right, #ff93df, #7a21bb) border-box;
+          border: 0.3vh solid transparent;
+          color: #fff;
+        }
+      }
+      .templateMainContainer {
+        // border: 1px solid blue;
+
+        width: 100%;
+        height: 60vh;
+        overflow-y: auto;
+        gap: 2vw;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .templateContainer {
+          //   border-radius: 1vw;
+          //   border: 1px solid blue;
+          //   width: 10.5vw;
+          border: 0.15vw solid transparent;
+          width: 9.5vw;
+          cursor: pointer;
+          border-radius: 0.5vw;
+          object-fit: cover;
+          position: relative;
+
+          .customCheckbox {
+            display: none;
+          }
+
+          .customLabel {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+          }
+
+          .customLabel .imgTemp {
+            width: 9.5vw;
+            height: auto;
+            display: block;
+          }
+
+          .customLabel::before {
+            content: "";
+            position: absolute;
+            top: 0.3vw;
+            left: 0.3vw;
+            width: 1.1vw;
+            height: 1.1vw;
+            // border: 2px solid #ccc;
+            border-radius: 0.2vw;
+            background-color: transparent;
+            transition: all 0.3s ease;
+          }
+
+          .customCheckbox:checked + .customLabel::before {
+            background-color: #df4bef;
+          }
+
+          .customLabel::after {
+            content: "✔";
+            position: absolute;
+            top: 0.2vw;
+            left: 0.5vw;
+            color: white;
+            transform: scale(0);
+            transition: transform 0.2s ease;
+          }
+
+          .customCheckbox:checked + .customLabel::after {
+            transform: scale(1);
+          }
+
+          .imgTemp {
+            border-radius: 0.5vw;
+          }
+        }
+      }
+    }
+    .saveBtn {
+      // border:2px solid blue;
+      color: #fff;
+      font-size: 1vw;
+    }
+    .closeBtn {
+      position: absolute;
+      width: 3vw;
+      right: -2%;
+      //   color: red;
+      top: -3%;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}
+
+.templateMainContainer::-webkit-scrollbar {
+  width: 7px;
+}
+
+.templateMainContainer::-webkit-scrollbar-track {
+  background: rgba(122, 33, 187, 0.2);
+  border-radius: 10px;
+}
+
+.templateMainContainer::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    var(--themeColor2),
+    var(--themeColor1)
+  );
+  border-radius: 10px;
+}
+
+@media all and (max-width: 1024px) {
+  .TemplatePopup {
+    height: calc(100svh - 20vw);
+    padding: 1.5vw;
+    margin: 5.2vw auto;
+
+    .popupContent {
+      border-radius: 1vw;
+      background: linear-gradient(to right, #e8e0e6, #deeded);
+      height: 75%;
+      width: 90%;
+      padding: 3vw;
+      gap: 3vw;
+      overflow-y: auto;
+      overflow: visible;
+      .loader {
+        // position: fixed;
+        // border: 2px solid red;
+        // top: 45%;
+        // left: 48%;
+        width: 100%;
+        height: 100%;
+      }
+      .mainContainer {
+        gap: 3vw;
+
+        .headingSel {
+          font-size: 3vw;
+          padding-top: 0.8vw;
+          padding-bottom: 0.3vw;
+          font-weight: 600;
+        }
+
+        .categoryContainer {
+          gap: 2vw;
+          width: 100%;
+          flex-wrap: wrap;
+
+          .categoryBtn {
+            font-size: 3.2vw;
+            font-weight: 500;
+            background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, #ff93df, #7a21bb) border-box;
+            border: 0.25vw solid transparent;
+            padding: 1.2vw;
+            border-radius: 1.4vw;
+            cursor: pointer;
+          }
+
+          .categoryBtn:hover,
+          .selectedCategory {
+            background: linear-gradient(to right, #ff93df, #7a21bb) padding-box,
+              linear-gradient(to right, #ff93df, #7a21bb) border-box;
+            border: 0.3vh solid transparent;
+            color: #fff;
+          }
+        }
+
+        .templateMainContainer {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2vw;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+          height: 40vh;
+          overflow-y: auto;
+
+          .templateContainer {
+            width: calc((100% - 6vw) / 3); /* Fit 3 templates per row */
+            border: 0.5vw solid transparent;
+            border-radius: 1vw;
+            position: relative;
+
+            .customCheckbox {
+              display: none;
+            }
+
+            .customLabel {
+              display: inline-block;
+              position: relative;
+              cursor: pointer;
+
+              .imgTemp {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 2vw;
+              }
+            }
+
+            .customLabel::before {
+              content: "";
+              position: absolute;
+              top: 1vw;
+              left: 1vw;
+              width: 3.2vw;
+              height: 3.2vw;
+              border-radius: 0.5vw;
+              background-color: transparent;
+              transition: all 0.3s ease;
+            }
+
+            .customCheckbox:checked + .customLabel::before {
+              background-color: #df4bef;
+            }
+
+            .customLabel::after {
+              content: "✔";
+              position: absolute;
+              top: 0.8vw;
+              left: 1.5vw;
+              font-size: 2.8vw;
+              color: white;
+              transform: scale(0);
+              transition: transform 0.2s ease;
+            }
+
+            .customCheckbox:checked + .customLabel::after {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+
+      .saveBtn {
+        color: #fff;
+        font-size: 3.3vw;
+        padding: 0.2vw 1vw 0.2vw;
+      }
+
+      .closeBtn {
+        position: absolute;
+        width: 7vw;
+        right: -3%;
+        top: -3%;
+        cursor: pointer;
+      }
+    }
+  }
+  .templateMainContainer::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .templateMainContainer::-webkit-scrollbar-track {
+    background: rgba(122, 33, 187, 0.2);
+    border-radius: 10px;
+  }
+
+  .templateMainContainer::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      var(--themeColor2),
+      var(--themeColor1)
+    );
+    border-radius: 10px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .TemplatePopup {
+    height: calc(100svh - 20vw);
+    padding: 1.5vw;
+    margin: 5.2vw auto;
+
+    .popupContent {
+      border-radius: 1vw;
+      background: linear-gradient(to right, #e8e0e6, #deeded);
+      height: 70%;
+      width: 90%;
+      padding: 3vw;
+      gap: 3vw;
+      // border:2px solid blue;
+      overflow-y: auto;
+      overflow: visible;
+      .loader {
+        // position: fixed;
+        // top: 45%;
+        // left: 45% !important;
+      }
+      .mainContainer {
+        gap: 3vw;
+
+        .headingSel {
+          font-size: 3vw;
+          padding-top: 0.8vw;
+          padding-bottom: 0.3vw;
+          font-weight: 600;
+        }
+
+        .categoryContainer {
+          gap: 2vw;
+          width: 100%;
+          flex-wrap: wrap;
+
+          .categoryBtn {
+            font-size: 3.5vw;
+            font-weight: 500;
+            background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, #ff93df, #7a21bb) border-box;
+            border: 0.25vw solid transparent;
+            padding: 1.2vw;
+            border-radius: 1.4vw;
+            cursor: pointer;
+          }
+
+          .categoryBtn:hover,
+          .selectedCategory {
+            background: linear-gradient(to right, #ff93df, #7a21bb) padding-box,
+              linear-gradient(to right, #ff93df, #7a21bb) border-box;
+            border: 0.3vh solid transparent;
+            color: #fff;
+          }
+        }
+
+        .templateMainContainer {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2vw;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+          height: 40vh;
+          overflow-y: auto;
+          // border:2px solid blue;
+          padding-right: 2vw;
+
+          .templateContainer {
+            width: calc((100% - 6vw) / 3); /* Fit 3 templates per row */
+            border: 0.5vw solid transparent;
+            border-radius: 1vw;
+            position: relative;
+
+            .customCheckbox {
+              display: none;
+            }
+
+            .customLabel {
+              display: inline-block;
+              position: relative;
+              cursor: pointer;
+
+              .imgTemp {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 2vw;
+              }
+            }
+
+            .customLabel::before {
+              content: "";
+              position: absolute;
+              top: 1vw;
+              left: 1vw;
+              width: 3.2vw;
+              height: 3.2vw;
+              border-radius: 0.5vw;
+              background-color: transparent;
+              transition: all 0.3s ease;
+            }
+
+            .customCheckbox:checked + .customLabel::before {
+              background-color: #df4bef;
+            }
+
+            .customLabel::after {
+              content: "✔";
+              position: absolute;
+              top: 0.8vw;
+              left: 1.5vw;
+              font-size: 2.8vw;
+              color: white;
+              transform: scale(0);
+              transition: transform 0.2s ease;
+            }
+
+            .customCheckbox:checked + .customLabel::after {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+
+      .saveBtn {
+        color: #fff;
+        font-size: 3vw;
+        padding: 0.2vw 1vw 0.2vw;
+      }
+
+      .closeBtn {
+        position: absolute;
+        width: 8.4vw;
+        right: -3%;
+        top: -4%;
+        cursor: pointer;
+      }
+    }
+  }
+  .templateMainContainer::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .templateMainContainer::-webkit-scrollbar-track {
+    background: rgba(122, 33, 187, 0.2);
+    border-radius: 10px;
+  }
+
+  .templateMainContainer::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      var(--themeColor2),
+      var(--themeColor1)
+    );
+    border-radius: 10px;
+  }
+}

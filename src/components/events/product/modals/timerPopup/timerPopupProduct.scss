@@ -1,0 +1,95 @@
+.eventCountdownProductResponsive {
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  width: 30svh;
+  padding: 2svh;
+  min-height: 12svh;
+  background-color: #fff;
+  border-radius: 0.4svh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  .countdownBox {
+    .paraTime {
+      font-size: 3svh;
+    }
+  }
+  .closeIcon {
+    position: absolute;
+    top: -10%;
+    right: -2%;
+    font-size: 3svh;
+    cursor: pointer;
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .eventCountdownProductResponsive {
+    padding: 2svh;
+    min-height: 12svh;
+    background-color: #fff;
+    border-radius: 0.4svh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    .countdownBox {
+      .paraTime {
+        font-size: 3svh;
+      }
+    }
+    .closeIcon {
+      position: absolute;
+      top: -10%;
+      right: -2%;
+      font-size: 3svh;
+      cursor: pointer;
+    }
+  }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+  .eventCountdownProductResponsive {
+    padding: 2svh;
+    min-height: 12svh;
+    background-color: #fff;
+    border-radius: 0.4svh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    .countdownBox {
+      .paraTime {
+        font-size: 2.8svh;
+      }
+    }
+    .closeIcon {
+      position: absolute;
+      top: -10%;
+      right: -2%;
+      font-size: 3svh;
+      cursor: pointer;
+    }
+  }
+}
+
+// for vertical screen
+.eventCountdownProductVertical {
+  // border: 2px solid red;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 50%;
+  padding: 2svh;
+  min-height: 12svh;
+  background-color: #fff;
+  border-radius: 0.4svh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  .countdownBox {
+    .paraTime {
+      font-size: 3svh;
+    }
+  }
+  .closeIcon {
+    position: absolute;
+    top: -10%;
+    right: -2%;
+    font-size: 3svh;
+    cursor: pointer;
+  }
+}

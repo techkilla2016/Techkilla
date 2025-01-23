@@ -1,0 +1,24 @@
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.EventsPage {
+  // border: 1px solid red;
+  margin-top: 5.2vw;
+  padding: 2vw;
+}
+
+@media all and (max-width: 480px) {
+  .EventsPage {
+    margin-top: 13vw;
+  }
+}

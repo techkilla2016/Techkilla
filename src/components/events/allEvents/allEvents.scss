@@ -1,0 +1,424 @@
+.AllEvents .mainTable tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+.AllEvents .mainTable tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.AllEvents .mainTable .table-data {
+  color: #333;
+}
+.AllEvents .table-wrapper .mainTable thead tr {
+  background-color: #efefef;
+}
+.AllEvents {
+  // border: 2px solid yellow;
+  // margin-top: 2vw;
+  padding: 1vw;
+  width: 100%;
+  gap: 2vw;
+  height: 100%;
+  min-height: 100vh;
+  justify-content: flex-start;
+
+  .tableHead {
+    font-size: 2.5vw;
+    // border: 2px solid red;
+    //   padding: 1.5vw 0;
+    font-weight: 600;
+    background: linear-gradient(to right, #ff93df, #7a21bb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  .searchContainer {
+    justify-content: space-evenly;
+    width: 100%;
+    // padding: 1vw;
+    gap: 2vw;
+
+    .filterContainer {
+      // padding: 2vw;
+      // border: 2px solid green;
+      width: 90%;
+      // gap: 2vw;
+      justify-content: flex-start;
+      .firstFilter {
+        padding: 1vw;
+        // border: 2px solid blue;
+      }
+      .secondFilter {
+        padding: 1vw;
+        // border: 2px solid red;
+      }
+      .filter-label {
+        // border: 2px solid black;
+
+        font-size: 1.3rem;
+        color: #333;
+        font-weight: 600;
+        margin-right: 0.5rem;
+      }
+      .filter-input {
+        border: none;
+        border-bottom: 2px solid #aaa;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 0 0 4px 4px;
+        outline: none;
+        transition: border-color 0.3s ease;
+        background-color: transparent;
+      }
+
+      .filter-input:focus {
+        border-bottom: 2px solid #626466;
+      }
+    }
+    .newEvent {
+      margin-right: 1vw;
+      border-radius: 0.5vw;
+      background: linear-gradient(to right, #ff93df, #7a21bb);
+      color: #fff;
+      width: 10%;
+      font-size: 1.2vw;
+      padding: 0.7vw 1.3vw;
+    }
+  }
+  .table-wrapper {
+    border: 1.5px solid rgb(135, 131, 135);
+    width: 100%;
+    border-radius: 0.7vw;
+    overflow: hidden;
+    .mainTable {
+      // border: 2px solid red;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+    }
+
+    .table-header {
+      // border: 2px solid rgb(23, 15, 15);
+      font-size: 1.3vw;
+      font-weight: bold;
+      text-align: left;
+      text-align: center;
+      color: rgb(98, 86, 86);
+      padding: 0.7vw;
+      border-bottom: 1px solid rgb(156, 151, 151);
+      border-left: 1px solid rgb(156, 151, 151);
+    }
+
+    .table-data {
+      text-align: center;
+      padding: 1vw;
+      // border-bottom: 1px solid gray;
+      border-right: 1px solid gray;
+      font-size: 1.1vw;
+    }
+    .edit-button,
+    .delete-button,
+    .preview-button {
+      padding: 0.3vw 0.4vw 0.1vw 0.4vw;
+      margin: 0.5vw;
+      font-size: 1.6vw;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      outline: none;
+    }
+    .preview-button {
+      // background-color: rgb(240, 160, 22);
+      background-color: rgb(240, 160, 22);
+      color: white;
+    }
+    .edit-button {
+      background-color: #3977d4;
+      color: white;
+    }
+
+    .delete-button {
+      background-color: #f44336;
+      color: white;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .AllEvents {
+    // border: 2px solid yellow;
+    // margin-top: 2vw;
+    padding: 1vw;
+    width: 100%;
+    gap: 2vw;
+    height: 100%;
+    min-height: 70vh;
+    justify-content: flex-start;
+    .mobile-hide {
+      display: none;
+    }
+    .tableHead {
+      font-size: 4vw;
+      // border: 2px solid red;
+      //   padding: 1.5vw 0;
+      font-weight: 600;
+      background: linear-gradient(to right, #ff93df, #7a21bb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+    .searchContainer {
+      justify-content: space-evenly;
+      width: 100%;
+      // padding: 1vw;
+      gap: 3vw;
+
+      .filterContainer {
+        // padding: 2vw;
+        // border: 2px solid green;
+        width: 80%;
+        // gap: 2vw;
+        justify-content: flex-start;
+        .firstFilter {
+          padding: 1vw;
+        }
+        .secondFilter {
+          padding: 1vw;
+          // border: 2px solid red;
+        }
+        .filter-label {
+          // border: 2px solid black;
+
+          font-size: 2vw;
+          color: #333;
+          font-weight: 600;
+          margin-right: 0.5rem;
+        }
+        .filter-input {
+          border: none;
+          border-bottom: 2px solid #ccc;
+          padding: 0.5rem;
+          font-size: 1.8vw;
+          border-radius: 0 0 4px 4px;
+          outline: none;
+          transition: border-color 0.3s ease;
+        }
+
+        .filter-input:focus {
+          border-bottom: 2px solid #626466;
+        }
+      }
+      .newEvent {
+        margin-right: 1vw;
+        border-radius: 1vw;
+        background: linear-gradient(to right, #ff93df, #7a21bb);
+        color: #fff;
+        width: 20%;
+        font-size: 2.5vw;
+        padding: 0.8vw 1.3vw;
+      }
+    }
+    .table-wrapper {
+      border: 1.5px solid rgb(135, 131, 135);
+      width: 100%;
+      border-radius: 1.5vw;
+      overflow: hidden;
+      .mainTable {
+        // border: 2px solid red;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+      }
+
+      .table-header {
+        // border: 2px solid rgb(23, 15, 15);
+        font-size: 2vw;
+        font-weight: 600;
+        text-align: left;
+        text-align: center;
+        color: rgb(98, 86, 86);
+        padding: 1vw;
+        border-bottom: 1px solid rgb(156, 151, 151);
+        border-left: 1px solid rgb(156, 151, 151);
+      }
+
+      .table-data {
+        text-align: center;
+        padding: 1vw;
+        // border-bottom: 1px solid gray;
+        border-right: 1px solid gray;
+        font-size: 1.8vw;
+      }
+      .edit-button,
+      .delete-button,
+      .preview-button {
+        padding: 0.6vw 0.7vw 0.3vw 0.7vw;
+        margin: 1vw;
+        font-size: 2.7vw;
+        border: none;
+        border-radius: 0.7vw;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        outline: none;
+      }
+      .preview-button {
+        background-color: rgb(211, 113, 56);
+        color: white;
+      }
+      .edit-button {
+        background-color: #3977d4;
+        color: white;
+      }
+
+      .delete-button {
+        background-color: #f44336;
+        color: white;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .AllEvents {
+    // border: 2px solid rgb(108, 93, 79);
+    // margin-top: 2vw;
+    padding: 1vw;
+    width: 100%;
+    gap: 2vw;
+    height: 100%;
+    min-height: 50vh;
+    .mobile-hide {
+      display: none;
+    }
+
+    .tableHead {
+      font-size: 4vw;
+      // border: 2px solid red;
+      padding: 1.5vw 0;
+      font-weight: 600;
+
+      text-align: center;
+    }
+    .searchContainer {
+      // justify-content: space-evenly;
+      width: 100%;
+      // flex-direction: column;
+
+      // padding: 1vw;
+      // border: 2px solid green;
+      gap: 3vw;
+
+      .filterContainer {
+        // padding: 2vw;
+        // border: 2px solid green;
+        width: 80%;
+        // gap: 2vw;
+
+        justify-content: flex-start;
+        .firstFilter {
+          padding: 1vw;
+          // width: 80%;
+          gap: 1vw;
+          // border: 2px solid blue;
+        }
+        .secondFilter {
+          padding: 1vw;
+          // border: 2px solid red;
+        }
+        .filter-label {
+          // border: 2px solid black;
+          // width: 15vw;
+          font-size: 2.7vw;
+          color: #333;
+          font-weight: 600;
+          margin-right: 0.5rem;
+        }
+        .filter-input {
+          border: none;
+          border-bottom: 2px solid #ccc;
+          padding: 0.5rem;
+          font-size: 2.3vw;
+          border-radius: 0 0 4px 4px;
+          outline: none;
+          transition: border-color 0.3s ease;
+        }
+
+        .filter-input:focus {
+          border-bottom: 2px solid #626466;
+        }
+      }
+      .newEvent {
+        margin-right: 1vw;
+        border-radius: 1vw;
+        background: linear-gradient(to right, #ff93df, #7a21bb);
+        color: #fff;
+        width: 20%;
+        font-size: 3vw;
+        padding: 0.9vw 1.4vw;
+        // border: 2px solid blue;
+      }
+    }
+    .table-wrapper {
+      border: 1.5px solid rgb(135, 131, 135);
+      width: 100%;
+      border-radius: 1.5vw;
+      overflow: hidden;
+      .preview-card {
+        background: #f9f9f9;
+        padding: 2vw;
+        border-radius: 1vw;
+        // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 2px solid blue;
+      }
+      .mainTable {
+        // border: 2px solid red;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+      }
+
+      .table-header {
+        // border: 2px solid rgb(23, 15, 15);
+        font-size: 3vw;
+        font-weight: 600;
+        border-bottom: 1px solid rgb(156, 151, 151);
+        border-left: 1px solid rgb(156, 151, 151);
+      }
+
+      .table-data {
+        text-align: center;
+        padding: 1vw;
+        font-size: 2.7vw;
+      }
+      .table-action {
+        text-align: center;
+        padding: 1vw;
+      }
+      .edit-button,
+      .delete-button,
+      .preview-button {
+        padding: 0.5vw 0.6vw 0.3vw 0.6vw;
+        // border: 2px solid rgb(211, 147, 51) !important;
+        margin: 1vw;
+        font-size: 3vw;
+        border: none;
+        border-radius: 0.7vw;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        outline: none;
+      }
+      .preview-button {
+        background-color: rgb(211, 113, 56);
+        color: white;
+      }
+      .edit-button {
+        background-color: #3977d4;
+        color: white;
+      }
+
+      .delete-button {
+        background-color: #f44336;
+        color: white;
+      }
+    }
+  }
+}

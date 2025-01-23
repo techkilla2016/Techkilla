@@ -1,0 +1,73 @@
+// responsive design
+// laptop
+.ResponsiveDesignOutputScreenPhotobooth {
+  height: 100svh;
+  justify-content: flex-start;
+  padding: 2svh;
+  .main {
+    width: 100%;
+    height: calc(100% - 15%);
+    gap: 6svh;
+    .outputImg {
+      width: 40svh;
+      border: 2px solid purple;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    .loaderProduct{
+      // border: 2px solid red;
+      height: 80%;
+    }
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignOutputScreenPhotobooth {
+    .main {
+      height: calc(100% - 25%);
+      gap: 3svh;
+      .outputImg {
+        width: 33svh;
+      }
+    }
+  }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+  .ResponsiveDesignOutputScreenPhotobooth {
+    .main {
+      height: calc(100% - 20%);
+      gap: 4svh;
+      .outputImg {
+        width: 35svh;
+      }
+    }
+  }
+}
+
+// vertical design
+.VerticalDesignOutputScreenPhotobooth {
+  height: 100svh;
+  justify-content: flex-start;
+  padding: 2svh;
+  .main {
+    width: 100%;
+    height: calc(100% - 20%);
+    gap: 4svh;
+    .outputImg {
+      width: 35svh;
+      border: 5px solid purple;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    .loaderProduct{
+      // border: 2px solid red;
+      height: 50%;
+      // width: 100%;
+    }
+  }
+}

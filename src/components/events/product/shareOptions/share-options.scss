@@ -1,0 +1,26 @@
+// responsive design
+// laptop view
+.ResponsiveDesignShareOptions {
+  width: 100%;
+  gap: 2svh;
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignShareOptions {
+    width: 70%;
+    flex-wrap: wrap;
+    gap: 2svh;
+  }
+}
+// mobile view
+@media all and (max-width: 480px) {
+  .ResponsiveDesignShareOptions {
+    width: 100%;
+  }
+}
+
+.VerticalDesignShareOptions {
+  flex-wrap: wrap;
+  gap: 1svh;
+}

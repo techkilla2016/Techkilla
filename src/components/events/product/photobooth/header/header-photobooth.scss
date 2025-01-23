@@ -1,0 +1,76 @@
+// laptop view
+.ResponsiveDesignHeaderPhotobooth {
+  // border: 1px solid green;
+  width: 100%;
+  height: 15%;
+  position: relative;
+  .logo {
+    // border: 1px solid red;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .clockIcon{
+    // border: 2px solid red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 5svh;
+    cursor: pointer;
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignHeaderPhotobooth {
+    height: 25%;
+    position: static;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo {
+      width: auto;
+      height: 60%;
+      position: static;
+    }
+    .clockIcon{
+      top: 1%;
+      right: 2%;
+    }
+  }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+  .ResponsiveDesignHeaderPhotobooth {
+    height: 20%;
+    position: static;
+    flex-direction: column;
+    justify-content: space-between;
+    .logo {
+      width: auto;
+      height: 60%;
+      position: static;
+    }
+  }
+}
+
+// vertical design
+.VerticalDesignHeaderPhotobooth {
+  // border: 1px solid green;
+  height: 20%;
+  flex-direction: column;
+  justify-content: space-between;
+  .logo {
+    height: 10svh;
+    position: static;
+  }
+  .clockIcon{
+    // border: 2px solid red;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 3svh;
+    cursor: pointer;
+  }
+}

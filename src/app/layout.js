@@ -13,6 +13,7 @@ import App from "./app";
 import Link from "next/link";
 import { BsWhatsapp } from "react-icons/bs";
 import Script from "next/script";
+import { Providers } from "./redux/provider";
 
 export default function RootLayout({ children }) {
   return (
@@ -44,14 +45,16 @@ export default function RootLayout({ children }) {
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        <App />
-        {children}
-        <Link
-          className="whatsapp-btn"
-          href="http://wa.me/917827362702?text=Hi Techkilla Team,%0AI am looking for some tech solutions. %0AKindly revert on this%0A%0AThanks."
-        >
-          <BsWhatsapp />
-        </Link>
+        <Providers>
+          <App />
+          {children}
+          <Link
+            className="whatsapp-btn"
+            href="http://wa.me/917827362702?text=Hi Techkilla Team,%0AI am looking for some tech solutions. %0AKindly revert on this%0A%0AThanks."
+          >
+            <BsWhatsapp />
+          </Link>
+        </Providers>
       </body>
     </html>
   );
