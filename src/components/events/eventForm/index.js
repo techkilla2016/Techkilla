@@ -122,8 +122,6 @@ export default function EventForm({ action }) {
     getData();
   }, []);
 
-  console.log(allEventsSelector, "all events selector");
-
   // fetch event data
   useEffect(() => {
     if (searchParams && allEventsSelector?.length > 0) {

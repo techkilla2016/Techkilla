@@ -41,7 +41,9 @@ export default function EventsPage() {
   // get all events
   useEffect(() => {
     if (userData) {
-      const collectionRef = collection(db, "snapshawt_events");
+      console.log("trying to get all events");
+
+      const collectionRef = collection(db, "techkilla_events");
       const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
         const alldata = snapshot.docs
           .map((doc) => ({
@@ -63,11 +65,14 @@ export default function EventsPage() {
 
   return (
     <div className="flex-row-center EventsPage">
-      {!userData && !allEventsData && <Login />}
+      {/* {!userData && !allEventsData && <Login />} */}
+      {/* <Login /> */}
 
       {userData && allEventsData?.length === 0 && <Welcome />}
 
-      {userData && allEventsData?.length > 0 && <AllEvents />}
+      {userData && allEventsData?.length > 0 && (
+        <AllEvents data={allEventsData} />
+      )}
     </div>
   );
 }

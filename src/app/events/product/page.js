@@ -46,7 +46,7 @@ export default function Product() {
     const deviceId = getOrCreateDeviceId();
     console.log(deviceId);
     try {
-      const docRef = doc(db, "snapshawt_events", eventData.id);
+      const docRef = doc(db, "techkilla_events", eventData.id);
 
       const docSnapshot = await getDoc(docRef);
       if (docSnapshot.exists()) {
@@ -99,7 +99,7 @@ export default function Product() {
         } else if (devices.length < noOfDevices) {
           try {
             // add device id to event
-            const collectionRef = collection(db, "snapshawt_events");
+            const collectionRef = collection(db, "techkilla_events");
             const docRef = doc(collectionRef, eventData.id);
 
             await updateDoc(docRef, {
@@ -133,7 +133,7 @@ export default function Product() {
   const getEventDataAndCheckAuth = async (authFormData) => {
     if (authFormData) {
       const templatesCollectionRef = collection(db, "events_templates");
-      const eventsCollectionRef = collection(db, "snapshawt_events");
+      const eventsCollectionRef = collection(db, "techkilla_events");
 
       let unsubscribeEvents;
       let unsubscribeTemplates;

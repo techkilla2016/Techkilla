@@ -51,13 +51,13 @@ export default function AllEvents({ data }) {
     try {
       console.log("deleted", eventToDelete);
 
-      const collectionRef = collection(db, "snapshawt_events");
+      const collectionRef = collection(db, "techkilla_events");
       const docRef = doc(collectionRef, eventToDelete);
       await deleteDoc(docRef);
 
       const imageRef = storageRef(
         storage,
-        `snapshawt_events_logos/${eventToDelete}`
+        `techkilla_events_logos/${eventToDelete}`
       );
       await deleteObject(imageRef);
 
