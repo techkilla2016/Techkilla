@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "react-phone-input-2/lib/style.css";
 import "aos/dist/aos.css";
+import "react-toastify/dist/ReactToastify.css";
 import "./style.scss";
 import Head from "next/head";
 import { Inter } from "next/font/google";
