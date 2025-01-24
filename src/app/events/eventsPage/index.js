@@ -65,8 +65,12 @@ export default function EventsPage() {
 
   return (
     <div className="flex-row-center EventsPage">
-      {/* {!userData && !allEventsData && <Login />} */}
-      {/* <Login /> */}
+      {!userData && !allEventsData && (
+        <Login userData={userData} setUserData={setUserData} />
+      )}
+
+      <button>Logout</button>
+      {/* <Login userData={userData} setUserData={setUserData} /> */}
 
       {userData && allEventsData?.length === 0 && <Welcome />}
 
