@@ -1,0 +1,42 @@
+// responsive design
+// laptop view
+.ResponsiveDesignCommonPanel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  //   border: 1px solid red;
+  justify-content: flex-end;
+  padding: 2svh;
+  gap: 2svh;
+  z-index: 1;
+  .icon {
+    // border: 1px solid green;
+    font-size: 4svh;
+    cursor: pointer;
+    color: purple;
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignCommonPanel {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1svh;
+    gap: 1svh;
+  }
+}
+
+// mobie view
+@media all and (max-width: 480px) {
+  .ResponsiveDesignCommonPanel {
+    .icon {
+      font-size: 3svh;
+    }
+  }
+}
+
+// vertical design
+.VerticalDesignCommonPanel {
+  border: 1px solid red;
+}

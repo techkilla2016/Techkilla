@@ -1,0 +1,101 @@
+// resposive design
+// laptop view
+.ResponsiveDesignGrid10Photobooth {
+  // border: 2px solid orange;
+  height: 80%;
+  flex-wrap: wrap;
+  gap: 3svh;
+  justify-content: flex-start;
+  .card {
+    width: 22svh;
+    border: 2px solid purple;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  .smallCard {
+    width: 15svh;
+  }
+  .mt-4 {
+    margin-top: 4svh;
+  }
+  .mt-5 {
+    margin-top: 5svh;
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignGrid10Photobooth {
+    // border: 1px solid black;
+    height: 80%;
+    flex-wrap: wrap;
+    gap: 1.5svh;
+    justify-content: center;
+    .card {
+      width: 14svh;
+    }
+    .bigCard {
+      width: 16svh;
+    }
+    .mt-4 {
+      margin-top: 4svh;
+    }
+    .mt-5 {
+      margin-top: 5svh;
+    }
+  }
+}
+
+// mobile veiw
+@media all and (max-width: 480px) {
+  .ResponsiveDesignGrid10Photobooth {
+    height: 72%;
+    flex-wrap: wrap;
+    gap: 1svh;
+    justify-content: center;
+    .card {
+      width: 14svh;
+    }
+    .smallCard {
+      width: 10.3svh;
+    }
+    .mt-4 {
+      margin-top: 4svh;
+    }
+    .mt-5 {
+      margin-top: 5svh;
+    }
+  }
+}
+
+// vertical design
+.VerticalDesignGrid10Photobooth {
+  // border: 2px solid orange;
+  width: 100%;
+  height: 82%;
+  flex-wrap: wrap;
+  gap: 2svh;
+  justify-content: center;
+
+  .card {
+    width: 14.5svh;
+    border: 2px solid purple;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  .smallCard {
+    width: 11.3svh;
+  }
+  .mt-4 {
+    margin-top: 4svh;
+  }
+  .mt-5 {
+    margin-top: 5svh;
+  }
+}

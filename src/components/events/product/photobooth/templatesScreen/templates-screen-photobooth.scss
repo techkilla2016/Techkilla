@@ -1,0 +1,47 @@
+// responsive design
+// laptop view
+.ResponsiveDesignTemplatesScreenPhotobooth {
+  height: 100%;
+  justify-content: flex-start;
+  padding: 2svh;
+  .main {
+    width: 100%;
+    // border: 1px solid red;
+    height: calc(100% - 15%);
+    gap: 2svh;
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignTemplatesScreenPhotobooth {
+    // border: 10px solid pink;
+    .main {
+      height: calc(100% - 25%);
+      // border: 1px solid pink;
+    }
+  }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+  .ResponsiveDesignTemplatesScreenPhotobooth {
+    .main {
+      height: calc(100% - 20%);
+      // border: 1px solid pink;
+    }
+  }
+}
+
+// vertical design
+.VerticalDesignTemplatesScreenPhotobooth {
+  height: 100%;
+  // border: 1px solid blue;
+  justify-content: flex-start;
+  padding: 2svh;
+  .main {
+    // border: 1px solid red;
+    height: calc(100% - 20%);
+    gap: 2svh;
+  }
+}

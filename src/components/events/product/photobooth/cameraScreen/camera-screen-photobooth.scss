@@ -1,0 +1,77 @@
+// responsive design
+// laptop view
+.ResponsiveDesignCameraScreenPhotobooth {
+  height: 100%;
+  justify-content: flex-start;
+  padding: 2svh;
+  .main {
+    width: 100%;
+    // border: 1px solid red;
+    height: calc(100% - 15%);
+    gap: 5svh;
+    .btns {
+      // border: 1px solid red;
+      .afterCapture {
+        gap: 4svh;
+      }
+    }
+  }
+}
+
+// tablet view
+@media all and (max-width: 1024px) {
+  .ResponsiveDesignCameraScreenPhotobooth {
+    .main {
+      // border: 1px solid red;
+      height: calc(100% - 25%);
+      gap: 4svh;
+    }
+    .btns {
+      .afterCapture {
+        gap: 2svh !important;
+      }
+    }
+  }
+
+  /* .VerticalDesignCameraScreenPhotobooth {
+    display: none;
+  } */
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+  .ResponsiveDesignCameraScreenPhotobooth {
+    .main {
+      height: calc(100% - 20%);
+      gap: 3svh;
+    }
+    .btns {
+      .afterCapture {
+        gap: 1svh !important;
+      }
+    }
+  }
+
+  /* .VerticalDesignCameraScreenPhotobooth {
+    display: none;
+  } */
+}
+
+// vertical design
+.VerticalDesignCameraScreenPhotobooth {
+  height: 100%;
+  justify-content: flex-start;
+  padding: 2svh;
+  .main {
+    width: 100%;
+    // border: 1px solid red;
+    height: calc(100% - 20%);
+    gap: 5svh;
+    .btns {
+      // border: 1px solid red;
+      .afterCapture {
+        gap: 4svh;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.loaderResponsive {
+  width: 20vw;
+  height: 5vw;
+  display: inline-block;
+  position: relative;
+  border: 0.3vw solid var(--themeColor1);
+  border-radius: 0.2svh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1%;
+  gap: 1%;
+  /* margin: auto; */
+  .line {
+    background-color: var(--themeColor1);
+    height: 90%;
+    width: 1.7%;
+    animation: animloader 1s linear infinite;
+  }
+}
+
+/* laptop view */
+@media all and (max-width: 1024px) {
+  .loaderResponsive {
+    width: 40svw;
+    height: 8vw;
+    border: 0.6vw solid var(--themeColor1);
+    border-radius: 0.4svh;
+  }
+}
+
+/* mobile view */
+@media all and (max-width: 480px) {
+  .loaderResponsive {
+    width: 50svw;
+    height: 10vw;
+    border: 0.7vw solid var(--themeColor1);
+    border-radius: 0.5svh;
+  }
+}
+
+/* vertical screen */
+
+.loaderVertical {
+  width: 60svw;
+  height: 15vw;
+  display: inline-block;
+  position: relative;
+  border: 0.3vw solid var(--themeColor1);
+  border-radius: 0.2svh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1%;
+  gap: 1%;
+  /* margin: auto; */
+  .line {
+    background-color: var(--themeColor1);
+    height: 90%;
+    width: 1.7%;
+    animation: animloader 1s linear infinite;
+  }
+}

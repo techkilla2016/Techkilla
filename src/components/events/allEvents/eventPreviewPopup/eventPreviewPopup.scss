@@ -1,0 +1,210 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vw;
+  padding-bottom: 20vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  // align-items: flex-start !important;
+  // border: 2px solid blue;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5vw;
+  gap: 1vw;
+  border-radius: 1.5vw;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 40vw;
+  width: 100%;
+  // text-align: center;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+  position: relative;
+  // border: 2px solid blue;
+  .eventPre {
+    font-size: 1.5vw;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff93df, #7a21bb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    // border: 2px solid green;
+  }
+  .zipContainer {
+    // border: 2px solid blue;
+    width: 100%;
+    padding-right: 2vw;
+    justify-content: flex-end !important;
+    .downloadBtn {
+      font-size: 1.9vw;
+      // border: 1px solid black;
+
+      // color: #e62727;
+      transition: transform 0.3s ease, color 0.3s ease;
+      animation: zoom-blink 1s infinite alternate;
+    }
+  }
+  @keyframes zoom-blink {
+    0% {
+      transform: scale(1);
+      color: #ed7ee4;
+    }
+    100% {
+      transform: scale(1.2);
+      color: #7516ce;
+    }
+  }
+  .detailCon {
+    // border: 2px solid blue;
+    padding: 1vw;
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    padding: 1vw;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  a {
+    color: #7a21bb;
+    text-decoration: underline;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-child(odd) {
+    background-color: white;
+  }
+
+  .close-preview {
+    // border: 2px solid rgb(185, 156, 61);
+    position: absolute;
+    width: 3vw;
+    right: -2%;
+    //   color: red;
+    top: -3%;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+@media (max-width: 1024px) {
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    // align-items: flex-start !important;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 3vw;
+    gap: 2vw;
+    border-radius: 2vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 80vw;
+    // width: 90%;
+    // text-align: center;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    position: relative;
+    // border: 2px solid blue;
+    .eventPre {
+      font-size: 2.9vw;
+    }
+    .zipContainer {
+      // border: 2px solid blue;
+
+      padding-right: 2vw;
+
+      .downloadBtn {
+        font-size: 4vw;
+        // border: 1px solid black;
+
+        // color: #e62727;
+        transition: transform 0.3s ease, color 0.3s ease;
+        animation: zoom-blink 1s infinite alternate;
+      }
+    }
+    .detailCon {
+      // border: 2px solid blue;
+      padding: 1vw;
+      width: 100%;
+    }
+
+    td,
+    th {
+      padding: 1vw;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-size: 1.8vw;
+    }
+
+    .close-preview {
+      position: absolute;
+      width: 6vw;
+      right: -2%;
+      //   color: red;
+      top: -3%;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding-top: 2vw;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 3vw;
+    gap: 2vw;
+    border-radius: 2vw;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 80vw;
+    width: 90%;
+    position: relative;
+    // border: 2px solid blue;
+    .eventPre {
+      font-size: 3.3vw;
+    }
+    .detailCon {
+      // border: 2px solid blue;
+      padding: 1vw;
+      width: 100%;
+    }
+
+    td,
+    th {
+      padding: 1vw;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-size: 2.2vw;
+    }
+    .close-preview {
+      width: 8vw;
+      right: -5%;
+
+      top: -4%;
+    }
+  }
+}
