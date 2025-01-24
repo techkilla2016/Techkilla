@@ -11,9 +11,10 @@ import { signOut } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { UserDataReducer, AllEventsReducer } from "@/app/redux/slice";
 import { ToastContainer } from "react-toastify";
-
+import { SlLogout } from "react-icons/sl";
 import Header from "@/components/header";
 import Welcome from "@/components/events/welcome";
+import Loader from "@/components/events/loader/index";
 import AllEvents from "@/components/events/allEvents";
 import Login from "@/components/events/login";
 
@@ -21,6 +22,7 @@ export default function EventsPage() {
   const dispatch = useDispatch();
   const [userData, setUserData] = useState();
   const [allEventsData, setAllEventsData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // run 1st api => 2s
   // get user data
@@ -36,6 +38,7 @@ export default function EventsPage() {
         dispatch(UserDataReducer(data));
         setUserData(data);
       }
+      setLoading(false);
     });
     return () => unsubscribe();
   }, []);
@@ -47,6 +50,7 @@ export default function EventsPage() {
   useEffect(() => {
     if (userData) {
       console.log("trying to get all events");
+      setLoading(true);
 
       const collectionRef = collection(db, "techkilla_events");
       const unsubscribe = onSnapshot(collectionRef, (snapshot) => {
@@ -61,6 +65,7 @@ export default function EventsPage() {
         setAllEventsData(alldata);
         dispatch(AllEventsReducer(alldata));
         console.log(alldata);
+        setLoading(false);
       });
       return () => unsubscribe();
     }
@@ -80,21 +85,25 @@ export default function EventsPage() {
   return (
     <div className="flex-row-center EventsPage">
       <Header />
-      {!userData && <Login userData={userData} setUserData={setUserData} />}
+      {loading && <Loader />}
+      {!loading && !userData && (
+        <Login userData={userData} setUserData={setUserData} />
+      )}
 
-      {userData && allEventsData?.length === 0 && <Welcome />}
+      {!loading && userData && allEventsData?.length === 0 && <Welcome />}
 
-      {userData && allEventsData?.length > 0 && (
+      {!loading && userData && allEventsData?.length > 0 && (
         <AllEvents data={allEventsData} />
       )}
 
       {/* logout */}
       {userData && (
         <div className="logout">
-          <p>Welcome, {userData.displayName}</p>
-          <button onClick={handleLogout} className="btn btn-primary">
+          {/* <p>Welcome, {userData.displayName}</p> */}
+          {/* <button onClick={handleLogout} className="btn btn-primary">
             Logout
-          </button>
+          </button> */}
+          <SlLogout onClick={handleLogout} className="logOut" />
         </div>
       )}
       <ToastContainer />

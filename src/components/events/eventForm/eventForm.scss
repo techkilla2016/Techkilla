@@ -1,12 +1,13 @@
-.NewEvent {
+.EventNew {
   // border: 2px solid red;
-  margin-top: 5.2vw;
+  margin-top: 1vw;
   .heading {
     // border: 2px solid black;
     padding: 1vw;
     // margin-top: 2vw;
     font-size: 2.8vw;
-    background: linear-gradient(to right, #ff93df, #7a21bb);
+    font-weight: 600;
+    background: linear-gradient(to right, #ebdd14, #100a14);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -354,14 +355,14 @@
 }
 
 @media all and (max-width: 1024px) {
-  .NewEvent {
+  .EventNew {
     // border: 2px solid red;
-    margin-top: 6vw;
+    margin-top: 2vw;
     .heading {
       // border: 2px solid black;
       padding: 4vw;
-      margin-top: 2vw;
-      font-size: 5.5vw;
+      // margin-top: 2vw;
+      font-size: 6vw;
     }
 
     .formContainer {
@@ -644,14 +645,14 @@
   }
 }
 @media all and (max-width: 480px) {
-  .NewEvent {
+  .EventNew {
     // border: 2px solid red;
-    margin-top: 12vw;
+    margin-top: 8vw;
     .heading {
       // border: 2px solid black;
       padding: 4vw;
       margin-top: 2vw;
-      font-size: 5vw;
+      font-size: 7vw;
     }
 
     .formContainer {

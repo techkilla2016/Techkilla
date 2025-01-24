@@ -1,13 +1,25 @@
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
+}
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@import '/public/style/style.scss';
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "/public/style/style.scss";

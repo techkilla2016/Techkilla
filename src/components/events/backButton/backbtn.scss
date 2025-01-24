@@ -1,0 +1,73 @@
+.back-button {
+  background-color: rgb(234, 205, 18);
+  //   border: 2px solid red;
+  color: #100f01;
+
+  //   font-size: 1rem;
+  padding-top: 0.5vw;
+  padding-left: 1vw;
+  padding-right: 1.2vw;
+  padding-bottom: 0.5vw;
+  margin-top: 2vw;
+  margin-left: 3vw;
+  font-size: 1.3vw;
+  font-weight: 600;
+  //   border: none;
+  border-radius: 3vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #ffffff;
+  background-color: #100f01;
+}
+
+@media all and (max-width: 1024px) {
+  .back-button {
+    background-color: rgb(234, 205, 18);
+    //   border: 2px solid red;
+    color: #100f01;
+    //   font-size: 1rem;
+    padding-top: 1.8vw;
+    padding-left: 2.8vw;
+    padding-right: 2.8vw;
+    padding-bottom: 1.8vw;
+    margin-top: 4vw;
+    margin-left: 3vw;
+    font-size: 2.8vw;
+    font-weight: 600;
+    //   border: none;
+    border-radius: 5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .back-button:hover {
+    color: #ffffff;
+    background-color: #100f01;
+  }
+}
+@media all and (max-width: 480px) {
+  .back-button {
+    background-color: rgb(234, 205, 18);
+    //   border: 2px solid red;
+    color: #100f01;
+    //   font-size: 1rem;
+    padding-top: 1.8vw;
+    padding-left: 2.8vw;
+    padding-right: 2.8vw;
+    padding-bottom: 1.8vw;
+    margin-top: 4vw;
+    margin-left: 3vw;
+    font-size: 3.8vw;
+    font-weight: 600;
+    //   border: none;
+    border-radius: 5vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .back-button:hover {
+    color: #ffffff;
+    background-color: #100f01;
+  }
+}

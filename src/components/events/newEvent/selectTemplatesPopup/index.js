@@ -141,7 +141,7 @@ export default function SelectTemplatesPopup({
       <div className="flex-col-center popupContent">
         <div className="flex-col-center mainContainer">
           {isAllTemplatesLoading && (
-            <div className="flex-col-center loader">
+            <div className="flex-col-center loaderTemplate">
               <ClipLoader size={50} color="#df4bef" />
             </div>
           )}

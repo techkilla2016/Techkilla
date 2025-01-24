@@ -1,3 +1,17 @@
 .NewEvent {
-  // padding: 1vw;
+  /* padding: 1vw; */
+  /* border: 2px solid black; */
+  margin-top: 6vw;
+}
+
+@media all and (max-width: 1024px) {
+  .NewEvent {
+    margin-top: 10vw;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .NewEvent {
+    margin-top: 16.5vw;
+  }
 }

@@ -7,7 +7,8 @@
     // border: 2px solid red;
     padding: 1vw;
     font-size: 3vw;
-    background: linear-gradient(to right, #ff93df, #7a21bb);
+    font-weight: 600;
+    background: linear-gradient(to right, #ebdd14, #100a14);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -15,8 +16,16 @@
     // border: 2px solid black;
     padding: 1vw;
     width: 64vw;
-    line-height: 2vw;
+    line-height: 2.2vw;
     font-size: 1.1vw;
+  }
+  .createBtn {
+    background: linear-gradient(to right, #ebdd14, #706207);
+    // border: 2px solid blue;
+    color: white;
+    border-radius: 1.7vw;
+    font-size: 1.5vw;
+    padding: 0.5vw 1.5vw;
   }
 }
 @media all and (max-width: 480px) {
@@ -30,8 +39,8 @@
     .heading {
       // border: 2px solid red;
       padding: 1vw;
-      font-size: 5vw;
-      background: linear-gradient(to right, #ff93df, #7a21bb);
+      font-size: 5.2vw;
+      background: linear-gradient(to right, #ebdd14, #100a14);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -42,8 +51,13 @@
       line-height: 5vw;
       font-size: 2.8vw;
     }
-    .eventBtn {
-      border: 2px soild blue;
+    .createBtn {
+      background: linear-gradient(to right, #ebdd14, #706207);
+      // border: 2px solid blue;
+      color: white;
+      border-radius: 3.4vw;
+      font-size: 3.5vw;
+      padding: 1.5vw 2.5vw;
     }
   }
 }

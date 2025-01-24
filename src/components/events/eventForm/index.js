@@ -405,7 +405,7 @@ export default function EventForm({ action }) {
   };
 
   return (
-    <div className="flex-col-center NewEvent">
+    <div className="flex-col-center EventNew">
       <Header />
       <h1 className="heading">
         {action === "edit" ? "Edit Event" : "Create Event"}

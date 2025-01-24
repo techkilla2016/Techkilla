@@ -14,7 +14,7 @@ export default function Welcome() {
         old one and find out what's new!
       </p>
 
-      <Link href="/events/new" className=" btn2">
+      <Link href="/events/new" className="createBtn">
         Create an Event
       </Link>
     </div>
