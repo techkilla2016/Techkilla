@@ -53,6 +53,7 @@
 .close {
   /* border: 1px solid black; */
   align-self: flex-start;
+  width: 4vw;
 }
 
 .main {
@@ -128,5 +129,10 @@
   .main {
     /* height: 200px; */
     height: 200px;
+  }
+  .close {
+    /* border: 1px solid black; */
+    align-self: flex-start;
+    width: 9vw;
   }
 }
