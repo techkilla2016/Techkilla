@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 import { db, storage } from "@/firebase-config";
 import crypto from "crypto";
 
+import Header from "@/components/header";
+
 import {
   doc,
   collection,
@@ -122,6 +124,7 @@ export default function EventForm({ action }) {
     getData();
   }, []);
 
+  // time => 2s
   // fetch event data
   useEffect(() => {
     if (searchParams && allEventsSelector?.length > 0) {
@@ -403,6 +406,7 @@ export default function EventForm({ action }) {
 
   return (
     <div className="flex-col-center NewEvent">
+      <Header />
       <h1 className="heading">
         {action === "edit" ? "Edit Event" : "Create Event"}
       </h1>
