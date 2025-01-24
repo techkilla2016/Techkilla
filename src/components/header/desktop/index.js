@@ -96,6 +96,9 @@ const DesktopNav = () => {
 
       {/* navButton */}
       <div className={styles.btns}>
+        <Link href="/events">
+          <button>Events </button>
+        </Link>
         <Link href="https://calendly.com/techkilla/meeting" target="_blank">
           <button className={styles.demo}>Book a Demo</button>
         </Link>
