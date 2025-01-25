@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useSelector } from "react-redux";
 import { db, storage } from "@/firebase-config";
 import crypto from "crypto";
+import Loader from "./../loader/index";
 
 import Header from "@/components/header";
 
@@ -81,6 +82,7 @@ export default function EventForm({ action }) {
   const [allTemplatesData, setAllTemplatesData] = useState([]);
   const [templateUpdateStatus, setTemplateUpdateStatus] = useState();
   const [allCategories, setAllCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   console.log(userDataSelector);
 
@@ -181,6 +183,7 @@ export default function EventForm({ action }) {
   // handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     console.log("form submitting", formData);
 
     // create event
@@ -255,6 +258,8 @@ export default function EventForm({ action }) {
       } catch (e) {
         console.error("Error during event creation: ", e);
         toast.error("Failed to create event. Please try again.", toastOptions);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -313,6 +318,8 @@ export default function EventForm({ action }) {
         console.error("Error during event updation: ", e);
         // alert("Failed to update event. Please try again.");
         toast.error("Failed to update event. Please try again.", toastOptions);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -340,6 +347,7 @@ export default function EventForm({ action }) {
 
     setTimeout(() => {
       router.push("/events");
+      setLoading(false);
     }, 2000);
   };
 
@@ -358,7 +366,9 @@ export default function EventForm({ action }) {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     if (file && file.type.startsWith("image/")) {
+      setLoading(true);
       setFormData({ ...formData, logo: file });
+      setLoading(false);
     } else {
       console.log("Please drop a valid image file.");
       toast.error("Please drop a valid image file.", toastOptions);
@@ -372,7 +382,9 @@ export default function EventForm({ action }) {
     const file = event.target.files[0];
 
     if (file && file.type.startsWith("image/")) {
+      setLoading(true);
       setFormData({ ...formData, logo: file });
+      setLoading(false);
     } else {
       toast.error("Please select a valid image file.", toastOptions);
     }
@@ -407,301 +419,318 @@ export default function EventForm({ action }) {
   return (
     <div className="flex-col-center EventNew">
       <Header />
-      <h1 className="heading">
-        {action === "edit" ? "Edit Event" : "Create Event"}
-      </h1>
-      <form onSubmit={handleSubmit} className="flex-col-center formContainer">
-        {/* show expires date */}
-        {action == "edit" && (
-          <div className="flex-col-center valueField">
-            <label className="labelling" style={{ color: "red" }}>
-              {formData?.expiresAt && isExpired(formData.expiresAt)
-                ? `Event expired on ${formatDate(
-                    formData.expiresAt
-                  )}. Extend duration to continue.`
-                : `Your event will expire on  ${formatDate(
-                    formData.expiresAt
-                  )}`}
-            </label>
-          </div>
-        )}
-
-        {/* event name*/}
-        <div className="flex-col-center valueField">
-          <label className="labelling">
-            Event Name:
-            <input
-              type="text"
-              name="eventName"
-              value={formData.eventName}
-              onChange={handleChange}
-              className="inputCon"
-              placeholder="Enter event name"
-              required
-              disabled={action === "edit"}
-            />
-          </label>
+      {loading ? (
+        <div className="loader-container">
+          <Loader />
         </div>
+      ) : (
+        <>
+          <h1 className="heading">
+            {action === "edit" ? "Edit Event" : "Create Event"}
+          </h1>
 
-        {/* product name */}
-        <div className="flex-col-center valueField">
-          <label className="labelling">
-            Product Name:
-            <select
-              name="productName"
-              value={formData.productName}
-              onChange={handleChange}
-              className="inputCon"
-              required
-            >
-              <option value="" disabled>
-                Select Product
-              </option>
-              {data?.productsArr.map((product) => (
-                <option key={product} value={product}>
-                  {product.replace(/-/g, " ").charAt(0).toUpperCase() +
-                    product.replace(/-/g, " ").slice(1)}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-
-        {/* Screen */}
-        <div className="flex-col-center valueField">
-          <label className="labelling">
-            Screen:
-            <select
-              name="screen"
-              value={formData.screen}
-              onChange={handleChange}
-              className="inputCon"
-              required
-            >
-              <option value="" disabled>
-                Select Screen Type
-              </option>
-              {data?.screenArr.map((screen) => (
-                <option value={screen}>{screen}</option>
-              ))}
-            </select>
-          </label>
-        </div>
-
-        {/* event duration */}
-        <div className="flex-col-center valueField">
-          <label className="labelling">
-            {action === "add" ? "Event Duration:" : `Update Event Duration:`}
-            <select
-              value={formData.duration}
-              name="duration"
-              onChange={handleChange}
-              className="inputCon"
-              required={action === "add"}
-            >
-              <option value="" disabled selected>
-                {action === "add"
-                  ? "Select Event Duration"
-                  : "Update Event Duration"}
-              </option>
-              {data?.durationHour.map((screen) => (
-                <option key={screen} value={screen}>
-                  {screen} Hour
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-
-        {/* number of devices */}
-        <div className="flex-col-center valueField">
-          <label className="labelling">
-            Number of Devices:
-            <select
-              name="numberOfDevices"
-              value={formData.numberOfDevices}
-              onChange={handleChange}
-              className="inputCon"
-              required
-            >
-              <option value="" disabled selected>
-                Select number of devices
-              </option>
-              {data?.numberOfDevices.map((screen) => (
-                <option value={screen}>{screen}</option>
-              ))}
-            </select>
-          </label>
-        </div>
-
-        {/* template number */}
-        {formData.productName !== "image-generator" && (
-          <div className="flex-col-center valueField">
-            <label className="labelling">
-              Template Number:
-              <select
-                name="templateNumber"
-                value={formData.templateNumber}
-                onChange={handleChange}
-                className="inputCon"
-                required
-              >
-                <option value="" disabled selected>
-                  Select Template
-                </option>
-                {data?.templateNumberArr.map((templateNumber) => (
-                  <option value={templateNumber}>{templateNumber}</option>
-                ))}
-              </select>
-            </label>
-          </div>
-        )}
-
-        {/* template popup */}
-        {formData.productName !== "image-generator" && (
-          <div className="flex-col-center templateField">
-            <button
-              type="button"
-              className="templateBtn"
-              onClick={handleShowTemplatePopup}
-            >
-              Select Templates
-            </button>
-            {templateError && <p className="errorText">{templateError}</p>}
-          </div>
-        )}
-        {showTemplatePopup && (
-          <SelectTemplatesPopup
-            setShowTemplatePopup={setShowTemplatePopup}
-            templateNumber={formData.templateNumber}
-            setFormData={setFormData}
-            selectedTemplatesFromProps={formData.templates}
-            allTemplatesData={allTemplatesData}
-            allCategories={allCategories}
-            setAllCategories={setAllCategories}
-            setAllTemplatesData={setAllTemplatesData}
-          />
-        )}
-
-        {/* logo upload */}
-        <div
-          className="flex-col-center logoUploader"
-          onDrop={handleDrop}
-          onDragOver={(e) => e.preventDefault()}
-        >
-          <label
-            htmlFor="fileInput"
-            className=" flex-col-center logoUploadLabel"
+          <form
+            onSubmit={handleSubmit}
+            className="flex-col-center formContainer"
           >
-            <p className="flex-row-center uploadText">Upload Logo:</p>
-            <div className="logoContainer">
-              {formData.logo ? (
-                <div>
-                  <img
-                    src={
-                      typeof formData.logo === "string"
-                        ? formData.logo
-                        : URL.createObjectURL(formData.logo)
-                    }
-                    alt="Uploaded Logo"
-                    className="uploadedImage"
-                  />
-                  <div className="flex-col-center addNewFace">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        triggerFileUpload();
-                      }}
-                      className="plusIconButton"
-                    >
-                      <Image
-                        src={Drag}
-                        alt="Add New Logo"
-                        width={24}
-                        height={24}
-                        className="imgPlusIcon"
-                      />
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <div>
-                  <p className="flex-row-center orText">
-                    Drag & Drop your Logo here
-                  </p>
-                  <p className="flex-row-center orText">OR</p>
-                  <label htmlFor="fileInput" className="fileInputLabel">
-                    Choose a file
-                  </label>
-                </div>
-              )}
-            </div>
-          </label>
-          <input
-            type="file"
-            ref={fileInputRef}
-            accept="image/*"
-            id="fileInput"
-            onChange={handleFileSelect}
-            style={{ display: "none" }}
-          />
-        </div>
-
-        {/* Background Images */}
-        <div className="flex-col-center imageContainer">
-          <p className="bg-head">Background Images:</p>
-          <div className="flex-row-center bgImgContainer">
-            {data?.bgImagesArr.map((src, idx) => (
-              <div
-                key={idx}
-                onClick={() => {
-                  setFormData({ ...formData, bgImage: src });
-                }}
-                className={`bgImg ${
-                  formData.bgImage === src ? "selected" : ""
-                }`}
-              >
-                <Image
-                  src={src}
-                  alt={`bgImage-${idx}`}
-                  width={50}
-                  height={50}
-                  className="imageCon"
-                />
+            {/* show expires date */}
+            {action == "edit" && (
+              <div className="flex-col-center valueField">
+                <label className="labelling" style={{ color: "red" }}>
+                  {formData?.expiresAt && isExpired(formData.expiresAt)
+                    ? `Event expired on ${formatDate(
+                        formData.expiresAt
+                      )}. Extend duration to continue.`
+                    : `Your event will expire on  ${formatDate(
+                        formData.expiresAt
+                      )}`}
+                </label>
               </div>
-            ))}
-          </div>
-        </div>
+            )}
 
-        {/* share options */}
-        <div className="flex-col-center shareOption">
-          <label className="flex-row-center shareHead">Share Options:</label>
-          <div className="flex-row-center options">
-            {data?.shareOptionsArr.map((option) => (
-              <label key={option} className="flex-row-center checkboxLabel">
+            {/* event name*/}
+            <div className="flex-col-center valueField">
+              <label className="labelling">
+                Event Name:
                 <input
-                  type="checkbox"
-                  value={option}
-                  className="flex-row-center checkboxInput"
-                  checked={formData.shareOptions.includes(option)}
-                  onChange={handleCheckboxChange}
+                  type="text"
+                  name="eventName"
+                  value={formData.eventName}
+                  onChange={handleChange}
+                  className="inputCon"
+                  placeholder="Enter event name"
+                  required
+                  disabled={action === "edit"}
                 />
-                <span className="checkboxText">
-                  {option.charAt(0).toUpperCase() + option.slice(1)}
-                </span>
               </label>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        {/* submit button */}
-        <div className="flex-col-center submitContainers">
-          <button type="submit" className="flex-row-center submitBtn">
-            {action === "edit" ? "UPDATE" : "SUBMIT"}
-          </button>
-        </div>
-      </form>
+            {/* product name */}
+            <div className="flex-col-center valueField">
+              <label className="labelling">
+                Product Name:
+                <select
+                  name="productName"
+                  value={formData.productName}
+                  onChange={handleChange}
+                  className="inputCon"
+                  required
+                >
+                  <option value="" disabled>
+                    Select Product
+                  </option>
+                  {data?.productsArr.map((product) => (
+                    <option key={product} value={product}>
+                      {product.replace(/-/g, " ").charAt(0).toUpperCase() +
+                        product.replace(/-/g, " ").slice(1)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            {/* Screen */}
+            <div className="flex-col-center valueField">
+              <label className="labelling">
+                Screen:
+                <select
+                  name="screen"
+                  value={formData.screen}
+                  onChange={handleChange}
+                  className="inputCon"
+                  required
+                >
+                  <option value="" disabled>
+                    Select Screen Type
+                  </option>
+                  {data?.screenArr.map((screen) => (
+                    <option value={screen}>{screen}</option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            {/* event duration */}
+            <div className="flex-col-center valueField">
+              <label className="labelling">
+                {action === "add"
+                  ? "Event Duration:"
+                  : `Update Event Duration:`}
+                <select
+                  value={formData.duration}
+                  name="duration"
+                  onChange={handleChange}
+                  className="inputCon"
+                  required={action === "add"}
+                >
+                  <option value="" disabled selected>
+                    {action === "add"
+                      ? "Select Event Duration"
+                      : "Update Event Duration"}
+                  </option>
+                  {data?.durationHour.map((screen) => (
+                    <option key={screen} value={screen}>
+                      {screen} Hour
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            {/* number of devices */}
+            <div className="flex-col-center valueField">
+              <label className="labelling">
+                Number of Devices:
+                <select
+                  name="numberOfDevices"
+                  value={formData.numberOfDevices}
+                  onChange={handleChange}
+                  className="inputCon"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Select number of devices
+                  </option>
+                  {data?.numberOfDevices.map((screen) => (
+                    <option value={screen}>{screen}</option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            {/* template number */}
+            {formData.productName !== "image-generator" && (
+              <div className="flex-col-center valueField">
+                <label className="labelling">
+                  Template Number:
+                  <select
+                    name="templateNumber"
+                    value={formData.templateNumber}
+                    onChange={handleChange}
+                    className="inputCon"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Select Template
+                    </option>
+                    {data?.templateNumberArr.map((templateNumber) => (
+                      <option value={templateNumber}>{templateNumber}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+            )}
+
+            {/* template popup */}
+            {formData.productName !== "image-generator" && (
+              <div className="flex-col-center templateField">
+                <button
+                  type="button"
+                  className="templateBtn"
+                  onClick={handleShowTemplatePopup}
+                >
+                  Select Templates
+                </button>
+                {templateError && <p className="errorText">{templateError}</p>}
+              </div>
+            )}
+            {showTemplatePopup && (
+              <SelectTemplatesPopup
+                setShowTemplatePopup={setShowTemplatePopup}
+                templateNumber={formData.templateNumber}
+                setFormData={setFormData}
+                selectedTemplatesFromProps={formData.templates}
+                allTemplatesData={allTemplatesData}
+                allCategories={allCategories}
+                setAllCategories={setAllCategories}
+                setAllTemplatesData={setAllTemplatesData}
+              />
+            )}
+
+            {/* logo upload */}
+            <div
+              className="flex-col-center logoUploader"
+              onDrop={handleDrop}
+              onDragOver={(e) => e.preventDefault()}
+            >
+              <label
+                htmlFor="fileInput"
+                className=" flex-col-center logoUploadLabel"
+              >
+                <p className="flex-row-center uploadText">Upload Logo:</p>
+                <div className="logoContainer">
+                  {formData.logo ? (
+                    <div>
+                      <img
+                        src={
+                          typeof formData.logo === "string"
+                            ? formData.logo
+                            : URL.createObjectURL(formData.logo)
+                        }
+                        alt="Uploaded Logo"
+                        className="uploadedImage"
+                      />
+                      <div className="flex-col-center addNewFace">
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            triggerFileUpload();
+                          }}
+                          className="plusIconButton"
+                        >
+                          <Image
+                            src={Drag}
+                            alt="Add New Logo"
+                            width={24}
+                            height={24}
+                            className="imgPlusIcon"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <p className="flex-row-center orText">
+                        Drag & Drop your Logo here
+                      </p>
+                      <p className="flex-row-center orText">OR</p>
+                      <label htmlFor="fileInput" className="fileInputLabel">
+                        Choose a file
+                      </label>
+                    </div>
+                  )}
+                </div>
+              </label>
+              <input
+                type="file"
+                ref={fileInputRef}
+                accept="image/*"
+                id="fileInput"
+                onChange={handleFileSelect}
+                style={{ display: "none" }}
+              />
+            </div>
+
+            {/* Background Images */}
+            <div className="flex-col-center imageContainer">
+              <p className="bg-head">Background Images:</p>
+              <div className="flex-row-center bgImgContainer">
+                {data?.bgImagesArr.map((src, idx) => (
+                  <div
+                    key={idx}
+                    onClick={() => {
+                      setFormData({ ...formData, bgImage: src });
+                    }}
+                    className={`bgImg ${
+                      formData.bgImage === src ? "selected" : ""
+                    }`}
+                  >
+                    <Image
+                      src={src}
+                      alt={`bgImage-${idx}`}
+                      width={50}
+                      height={50}
+                      className="imageCon"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* share options */}
+            <div className="flex-col-center shareOption">
+              <label className="flex-row-center shareHead">
+                Share Options:
+              </label>
+              <div className="flex-row-center options">
+                {data?.shareOptionsArr.map((option) => (
+                  <label key={option} className="flex-row-center checkboxLabel">
+                    <input
+                      type="checkbox"
+                      value={option}
+                      className="flex-row-center checkboxInput"
+                      checked={formData.shareOptions.includes(option)}
+                      onChange={handleCheckboxChange}
+                    />
+                    <span className="checkboxText">
+                      {option.charAt(0).toUpperCase() + option.slice(1)}
+                    </span>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {/* submit button */}
+            <div className="flex-col-center submitContainers">
+              <button type="submit" className="flex-row-center submitBtn">
+                {action === "edit" ? "UPDATE" : "SUBMIT"}
+              </button>
+            </div>
+          </form>
+        </>
+      )}
+
       <ToastContainer />
     </div>
   );

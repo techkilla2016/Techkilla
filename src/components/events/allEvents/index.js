@@ -18,6 +18,7 @@ export default function AllEvents({ data }) {
 
   const [showConfirmDelete, setShowConfirmDelete] = useState(false);
   const [eventToDelete, setEventToDelete] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const formatDate = (timestamp) => {
     if (timestamp && typeof timestamp.toDate === "function") {
@@ -49,6 +50,7 @@ export default function AllEvents({ data }) {
     if (!eventToDelete) return;
 
     try {
+      setLoading(true);
       console.log("deleted", eventToDelete);
 
       const collectionRef = collection(db, "techkilla_events");
@@ -63,9 +65,11 @@ export default function AllEvents({ data }) {
 
       console.log("Event and logo deleted successfully.");
       setShowConfirmDelete(false);
+      setLoading(false);
     } catch (err) {
       console.log(err);
       setShowConfirmDelete(false);
+      setLoading(false);
     }
   };
 
@@ -148,19 +152,19 @@ export default function AllEvents({ data }) {
                 <td className="flex-row-center table-action">
                   <span
                     onClick={() => handlePreview(item)}
-                    className="preview-button"
+                    className="flex-row-center preview-button"
                   >
                     <TfiEye />
                   </span>
                   <Link
                     href={`/events/edit?event=${item.eventNumber}`}
-                    className="edit-button"
+                    className="flex-row-center edit-button"
                   >
                     <MdOutlineModeEdit />
                   </Link>
                   <span
                     onClick={() => handleDelete(item.id)}
-                    className="delete-button"
+                    className="flex-row-center delete-button"
                   >
                     <MdDeleteOutline />
                   </span>
@@ -179,6 +183,7 @@ export default function AllEvents({ data }) {
         show={showConfirmDelete}
         onConfirm={confirmDelete}
         onCancel={handleCancelDelete}
+        loading={loading}
       />
     </div>
   );
