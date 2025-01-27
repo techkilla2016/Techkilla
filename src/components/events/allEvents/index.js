@@ -3,8 +3,8 @@ import "./allEvents.scss";
 
 import Link from "next/link";
 import { MdOutlineModeEdit, MdDeleteOutline } from "react-icons/md";
-import { TfiEye } from "react-icons/tfi";
-
+import { PiRocketLaunch } from "react-icons/pi";
+import { FaRegEye } from "react-icons/fa";
 import { db, storage } from "@/firebase-config";
 import { ref as storageRef, deleteObject } from "firebase/storage";
 import { collection, deleteDoc, doc } from "firebase/firestore";
@@ -154,8 +154,12 @@ export default function AllEvents({ data }) {
                     onClick={() => handlePreview(item)}
                     className="flex-row-center preview-button"
                   >
-                    <TfiEye />
+                    <FaRegEye />
                   </span>
+                  <Link href="" className="flex-row-center launch-button">
+                    <PiRocketLaunch />
+                  </Link>
+
                   <Link
                     href={`/events/edit?event=${item.eventNumber}`}
                     className="flex-row-center edit-button"

@@ -15,6 +15,7 @@
 .modal-content {
   background: white;
   padding: 1.5vw;
+  margin-top: 6vw;
   gap: 1vw;
   border-radius: 1.5vw;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -28,9 +29,10 @@
   .eventPre {
     font-size: 1.5vw;
     font-weight: 700;
-    background: linear-gradient(to right, #ff93df, #7a21bb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(to right, #ff93df, #7a21bb);
+    color: blue;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
     text-align: center;
     // border: 2px solid green;
   }
@@ -51,11 +53,11 @@
   @keyframes zoom-blink {
     0% {
       transform: scale(1);
-      color: #ed7ee4;
+      color: #aba64d;
     }
     100% {
       transform: scale(1.2);
-      color: #7516ce;
+      color: #f2a93c;
     }
   }
   .detailCon {

@@ -6,6 +6,7 @@ import { ref as storageRef, listAll, getDownloadURL } from "firebase/storage";
 import JSZip from "jszip";
 import { HiOutlineFolderDownload } from "react-icons/hi";
 import { saveAs } from "file-saver";
+import { MdCancel } from "react-icons/md";
 import closeBtn from "@/../public/modals/upgrade-now/close-btn.png";
 
 export default function EventPreviewPopup({ eventData, onClose }) {
@@ -58,7 +59,7 @@ export default function EventPreviewPopup({ eventData, onClose }) {
   return (
     <div className="flex-row-center modal-overlay">
       <div className="flex-col-center modal-content">
-        <p className="eventPre">{eventData.eventName} </p>
+        {/* <p className="eventPre">{eventData.eventName} </p> */}
         <div className="flex-row-center zipContainer">
           <HiOutlineFolderDownload
             onClick={() =>
@@ -107,7 +108,7 @@ export default function EventPreviewPopup({ eventData, onClose }) {
                   <a
                     href="http://localhost:3000/events/product"
                     target="_blank"
-                    style={{ color: "#7a21bb", textDecoration: "underline" }}
+                    style={{ color: "blue ", textDecoration: "underline" }}
                   >
                     http://localhost:3000/events/product
                   </a>

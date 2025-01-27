@@ -119,7 +119,8 @@
     }
     .edit-button,
     .delete-button,
-    .preview-button {
+    .preview-button,
+    .launch-button {
       // padding: 0.2vw;
       width: 2.5vw;
       height: 2.5vw;
@@ -138,6 +139,10 @@
     }
     .edit-button {
       background-color: #3977d4;
+      color: white;
+    }
+    .launch-button {
+      background-color: rgb(34, 123, 34);
       color: white;
     }
 
@@ -255,7 +260,8 @@
       }
       .edit-button,
       .delete-button,
-      .preview-button {
+      .preview-button,
+      .launch-button {
         width: 4vw;
         height: 4vw;
         margin: 0.5vw;
@@ -265,19 +271,6 @@
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
         outline: none;
-      }
-      .preview-button {
-        background-color: rgb(211, 113, 56);
-        color: white;
-      }
-      .edit-button {
-        background-color: #3977d4;
-        color: white;
-      }
-
-      .delete-button {
-        background-color: #f44336;
-        color: white;
       }
     }
   }
@@ -400,7 +393,8 @@
       }
       .edit-button,
       .delete-button,
-      .preview-button {
+      .preview-button,
+      .launch-button {
         width: 6vw;
         height: 6vw;
         margin: 0.5vw;
@@ -410,19 +404,6 @@
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
         outline: none;
-      }
-      .preview-button {
-        background-color: rgb(211, 113, 56);
-        color: white;
-      }
-      .edit-button {
-        background-color: #3977d4;
-        color: white;
-      }
-
-      .delete-button {
-        background-color: #f44336;
-        color: white;
       }
     }
   }

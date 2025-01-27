@@ -1,5 +1,5 @@
 .TemplatePopup {
-  height: calc(100svh - 7vw);
+  height: calc(100svh - 5vw);
   position: fixed;
   top: 0;
   left: 0;
@@ -49,22 +49,23 @@
         padding-top: 0.8vw;
         padding-bottom: 0.3vw;
         font-weight: 600;
-        background: linear-gradient(to right, #ff93df, #7a21bb);
+        background: linear-gradient(to right, #ebdd14, #100a14);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       .categoryContainer {
         gap: 1vw;
         width: 100%;
+        padding-top: 1.5vw;
         font-size: 0.6vw;
         flex-wrap: wrap;
         // border: 2px solid rgb(4, 255, 0);
         .categoryBtn {
-          font-size: 1vw;
+          font-size: 1.2vw;
           font-weight: 500;
           //   color: white;
           background: linear-gradient(white, white) padding-box,
-            linear-gradient(to right, #ff93df, #7a21bb) border-box;
+            linear-gradient(to right, #ebdd14, #100a14) border-box;
           border: 0.15vw solid transparent;
           padding: 0.4vw 0.9vw;
           border-radius: 0.7vw;
@@ -72,8 +73,8 @@
         }
         .categoryBtn:hover,
         .selectedCategory {
-          background: linear-gradient(to right, #ff93df, #7a21bb) padding-box,
-            linear-gradient(to right, #ff93df, #7a21bb) border-box;
+          background: linear-gradient(to right, #eadc12, #d88717) padding-box,
+            linear-gradient(to right, #63625a, #100a14) border-box;
           border: 0.3vh solid transparent;
           color: #fff;
         }
@@ -120,8 +121,8 @@
             position: absolute;
             top: 0.3vw;
             left: 0.3vw;
-            width: 1.1vw;
-            height: 1.1vw;
+            width: 1.2vw;
+            height: 1.2vw;
             // border: 2px solid #ccc;
             border-radius: 0.2vw;
             background-color: transparent;
@@ -129,15 +130,16 @@
           }
 
           .customCheckbox:checked + .customLabel::before {
-            background-color: #df4bef;
+            background-color: #eadc12;
           }
 
           .customLabel::after {
             content: "✔";
             position: absolute;
-            top: 0.2vw;
+            top: 0.3vw;
             left: 0.5vw;
-            color: white;
+            color: black;
+            font-weight: 600;
             transform: scale(0);
             transition: transform 0.2s ease;
           }
@@ -152,10 +154,16 @@
         }
       }
     }
-    .saveBtn {
-      // border:2px solid blue;
-      color: #fff;
-      font-size: 1vw;
+    .saveButton {
+      border: 1px solid #696964;
+      outline: none;
+      color: black;
+      padding: 0.1vw 1.2vw;
+      background: #ebdd14;
+      cursor: pointer;
+      font-size: 1.5vw;
+      border-radius: 1vw;
+      margin-bottom: 2vw;
     }
     .closeBtn {
       position: absolute;
@@ -174,7 +182,7 @@
 }
 
 .templateMainContainer::-webkit-scrollbar-track {
-  background: rgba(122, 33, 187, 0.2);
+  background: rgba(62, 62, 59, 0.2);
   border-radius: 10px;
 }
 
@@ -291,16 +299,16 @@
             }
 
             .customCheckbox:checked + .customLabel::before {
-              background-color: #df4bef;
+              background-color: #eadc12;
             }
-
             .customLabel::after {
               content: "✔";
               position: absolute;
               top: 0.8vw;
               left: 1.5vw;
               font-size: 2.8vw;
-              color: white;
+              font-weight: 600;
+              color: black;
               transform: scale(0);
               transition: transform 0.2s ease;
             }
@@ -312,10 +320,16 @@
         }
       }
 
-      .saveBtn {
-        color: #fff;
-        font-size: 3.3vw;
-        padding: 0.2vw 1vw 0.2vw;
+      .saveButton {
+        border: 1px solid #696964;
+        outline: none;
+        color: black;
+        padding: 0.3vw 2vw;
+        background: #ebdd14;
+        cursor: pointer;
+        font-size: 2.5vw;
+        border-radius: 1vw;
+        margin-bottom: 2vw;
       }
 
       .closeBtn {
@@ -332,7 +346,7 @@
   }
 
   .templateMainContainer::-webkit-scrollbar-track {
-    background: rgba(122, 33, 187, 0.2);
+    background: rgba(62, 62, 59, 0.2);
     border-radius: 10px;
   }
 
@@ -355,18 +369,14 @@
     .popupContent {
       border-radius: 1vw;
       background: linear-gradient(to right, #e8e0e6, #deeded);
-      height: 70%;
+      height: 68%;
       width: 90%;
       padding: 3vw;
       gap: 3vw;
-      // border:2px solid blue;
+      // border: 2px solid blue;
       overflow-y: auto;
       overflow: visible;
-      .loader {
-        // position: fixed;
-        // top: 45%;
-        // left: 45% !important;
-      }
+
       .mainContainer {
         gap: 3vw;
 
@@ -383,10 +393,10 @@
           flex-wrap: wrap;
 
           .categoryBtn {
-            font-size: 3.5vw;
+            font-size: 3.9vw;
             font-weight: 500;
             background: linear-gradient(white, white) padding-box,
-              linear-gradient(to right, #ff93df, #7a21bb) border-box;
+              linear-gradient(to right, #ebdd14, #100a14) border-box;
             border: 0.25vw solid transparent;
             padding: 1.2vw;
             border-radius: 1.4vw;
@@ -395,9 +405,9 @@
 
           .categoryBtn:hover,
           .selectedCategory {
-            background: linear-gradient(to right, #ff93df, #7a21bb) padding-box,
-              linear-gradient(to right, #ff93df, #7a21bb) border-box;
-            border: 0.3vh solid transparent;
+            background: linear-gradient(to right, #eadc12, #d88717) padding-box,
+              linear-gradient(to right, #63625a, #100a14) border-box;
+            border: 0.2vh solid transparent;
             color: #fff;
           }
         }
@@ -448,18 +458,17 @@
               background-color: transparent;
               transition: all 0.3s ease;
             }
-
             .customCheckbox:checked + .customLabel::before {
-              background-color: #df4bef;
+              background-color: #eadc12;
             }
-
             .customLabel::after {
               content: "✔";
               position: absolute;
-              top: 0.8vw;
+              top: 0.5vw;
               left: 1.5vw;
-              font-size: 2.8vw;
-              color: white;
+              font-size: 3vw;
+              font-weight: 600;
+              color: black;
               transform: scale(0);
               transition: transform 0.2s ease;
             }
@@ -471,10 +480,17 @@
         }
       }
 
-      .saveBtn {
-        color: #fff;
-        font-size: 3vw;
-        padding: 0.2vw 1vw 0.2vw;
+      .saveButton {
+        border: 1px solid #696964;
+        outline: none;
+        color: black;
+        padding: 0.3vw 1.9vw;
+        background: #ebdd14;
+        cursor: pointer;
+        font-size: 3.7vw;
+        border-radius: 1vw;
+        margin: 2vw;
+        // margin-bottom: 2vw;
       }
 
       .closeBtn {
@@ -491,7 +507,7 @@
   }
 
   .templateMainContainer::-webkit-scrollbar-track {
-    background: rgba(122, 33, 187, 0.2);
+    background: rgba(62, 62, 59, 0.2);
     border-radius: 10px;
   }
 

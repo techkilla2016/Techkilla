@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "./selectTemplate.scss";
-import { ClipLoader } from "react-spinners";
-
+// import { ClipLoader } from "react-spinners";
+import Loader from "../../loader/index";
 import closeBtn from "@/../public/modals/upgrade-now/close-btn.png";
 // import getAllTemplates from "@/customHooks/singleAiFaceSwap/getAllTemplates";
 import { toast } from "react-toastify";
@@ -142,7 +142,7 @@ export default function SelectTemplatesPopup({
         <div className="flex-col-center mainContainer">
           {isAllTemplatesLoading && (
             <div className="flex-col-center loaderTemplate">
-              <ClipLoader size={50} color="#df4bef" />
+              <Loader />
             </div>
           )}
 
@@ -190,15 +190,14 @@ export default function SelectTemplatesPopup({
         </div>
 
         {/* submit */}
-        <div className="flex-row-center btn2">
-          <div
-            onClick={() => {
-              handlePopUpSave();
-            }}
-            className="flex-row-center saveBtn"
-          >
-            SAVE
-          </div>
+
+        <div
+          onClick={() => {
+            handlePopUpSave();
+          }}
+          className="flex-row-center saveButton"
+        >
+          SAVE
         </div>
 
         {/* close */}

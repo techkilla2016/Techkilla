@@ -650,7 +650,7 @@ export default function EventForm({ action }) {
                       </div>
                     </div>
                   ) : (
-                    <div>
+                    <div className="flex-col-center addNewFace">
                       <p className="flex-row-center orText">
                         Drag & Drop your Logo here
                       </p>
