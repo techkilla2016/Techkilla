@@ -1,8 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
 import "./backbtn.scss";
+import { TbArrowBackUpDouble } from "react-icons/tb";
 
-const BackButton = ({ label = "↩ Back" }) => {
+const BackButton = () => {
   const router = useRouter();
 
   const handleBack = () => {
@@ -11,7 +12,7 @@ const BackButton = ({ label = "↩ Back" }) => {
 
   return (
     <button className="back-button" onClick={handleBack}>
-      {label}
+      <TbArrowBackUpDouble />
     </button>
   );
 };
