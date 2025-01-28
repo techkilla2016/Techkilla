@@ -1,0 +1,97 @@
+.LoginComp {
+  //   border: 1px solid rgb(66, 66, 71);
+  width: 30vw;
+  border-radius: 3vw;
+  height: 30vw;
+  .head1 {
+    // border: 1px solid red;
+    // width: 100%;
+    padding: 0.6vw 1.8vw;
+    text-align: center;
+    // width: 10%;
+    font-size: 2.3vw;
+    font-weight: 600;
+  }
+  .head2 {
+    // border: 1px solid green;
+    text-align: center;
+    color: gray;
+    font-size: 1vw;
+  }
+  .googleLogin {
+    border: 1px solid rgb(185, 179, 179);
+    padding: 0.5vw 4.5vw;
+    font-size: 1vw;
+    border-radius: 2vw;
+  }
+  .googleLogin:hover {
+    background-color: #f6ce4c;
+    color: black;
+    border: 1px solid white;
+  }
+}
+@media all and (max-width: 1024px) {
+  .LoginComp {
+    // border: 1px solid rgb(66, 66, 71);
+    width: 40vw;
+    margin-top: 15vw;
+    border-radius: 3vw;
+    height: 40vw;
+    .head1 {
+      // border: 1px solid red;
+      // width: 100%;
+      padding: 0.6vw 1.8vw;
+      text-align: center;
+      // width: 10%;
+      font-size: 3vw;
+    }
+    .head2 {
+      // border: 1px solid green;
+      text-align: center;
+      color: gray;
+      font-size: 1.6vw;
+    }
+    .googleLogin {
+      border: 1px solid rgb(185, 179, 179);
+      padding: 0.5vw 4.5vw;
+      font-size: 1.3vw;
+      border-radius: 3vw;
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  .LoginComp {
+    // border: 1px solid rgb(66, 66, 71);
+    width: 60vw;
+    border-radius: 3vw;
+    height: 100vw;
+    .head1 {
+      //   border: 1px solid red;
+      // width: 100%;
+      padding: 0.6vw 1.8vw;
+      text-align: center;
+      // width: 10%;
+      font-size: 5vw;
+      font-weight: 600;
+    }
+    .head2 {
+      //   border: 1px solid green;
+      text-align: center;
+      width: 55vw;
+      color: gray;
+      font-size: 3vw;
+    }
+    .googleLogin {
+      border: 1px solid rgb(185, 179, 179);
+      padding: 0.5vw 4.5vw;
+      font-size: 3vw;
+      border-radius: 2vw;
+    }
+
+    .googleLogin:hover {
+      background-color: rgb(45, 90, 249);
+      color: white;
+      border: 1px solid white;
+    }
+  }
+}

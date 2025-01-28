@@ -77,12 +77,11 @@
     }
     .newEvent {
       margin-right: 1vw;
-      border-radius: 0.6vw;
-      background: linear-gradient(to right, #3c3a3a, #8f8f17);
-
-      color: #fff;
+      border-radius: 1vw;
+      background: #f6ce4c;
+      color: black;
       width: 10%;
-      font-size: 1.25vw;
+      font-size: 1.3vw;
       padding: 0.5vw 1.3vw;
     }
   }
@@ -149,6 +148,47 @@
     .delete-button {
       background-color: #f44336;
       color: white;
+    }
+  }
+  .pagination {
+    margin: 1.5rem 0;
+    gap: 0.8rem;
+    // font-family: "Roboto", sans-serif;
+
+    .page-button {
+      background-color: #ffffff;
+      border: 2px solid #f6ce4c;
+      border-radius: 50%;
+      color: black;
+      font-size: 0.9rem;
+      font-weight: bold;
+      width: 2vw;
+      height: 2vw;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      // box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+    }
+
+    .page-button:hover {
+      background-color: #f6ce4c;
+      color: black;
+      transform: scale(1.1);
+      box-shadow: 0px 6px 12px #f6ce4c;
+    }
+
+    .page-button.active {
+      background-color: black;
+      color: #ffffff;
+      border-color: #f6ce4c;
+      // transform: scale(1.15);
+    }
+
+    .page-button:disabled {
+      background-color: #f0f0f0;
+      color: #b0b0b0;
+      border-color: #e0e0e0;
+      cursor: not-allowed;
+      box-shadow: none;
     }
   }
 }
@@ -271,6 +311,15 @@
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
         outline: none;
+      }
+    }
+    .pagination {
+      .page-button {
+        font-size: 1.1rem;
+        font-weight: bold;
+        width: 4vw;
+        height: 4vw;
+        cursor: pointer;
       }
     }
   }
@@ -404,6 +453,15 @@
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.2s ease;
         outline: none;
+      }
+    }
+    .pagination {
+      .page-button {
+        font-size: 1rem;
+        font-weight: bold;
+        width: 5vw;
+        height: 5vw;
+        cursor: pointer;
       }
     }
   }

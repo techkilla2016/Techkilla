@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./allEvents.scss";
 
 import Link from "next/link";
@@ -20,17 +20,19 @@ export default function AllEvents({ data }) {
   const [eventToDelete, setEventToDelete] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
+
   const formatDate = (timestamp) => {
     if (timestamp && typeof timestamp.toDate === "function") {
       const date = timestamp.toDate();
       const day = String(date.getDate()).padStart(2, "0");
       const month = String(date.getMonth() + 1).padStart(2, "0");
-      const year = date.getFullYear(); // Full year (e.g., 2025)
+      const year = date.getFullYear();
       let hours = String(date.getHours()).padStart(2, "0");
       const minutes = String(date.getMinutes()).padStart(2, "0");
       const ampm = hours >= 12 ? "PM" : "AM";
-      hours = hours % 12;
-      hours = hours ? String(hours).padStart(2, "0") : "12";
+      hours = hours % 12 || 12;
       return `${day}-${month}-${year}, ${hours}:${minutes} ${ampm}`;
     }
     return "N/A";
@@ -45,6 +47,18 @@ export default function AllEvents({ data }) {
       .includes(eventNumber.toString());
     return eventNameMatch && eventNumberMatch;
   });
+
+  // Pagination
+  const totalPages = Math.ceil(filteredEvents.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const paginatedEvents = filteredEvents.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
 
   const confirmDelete = async () => {
     if (!eventToDelete) return;
@@ -138,7 +152,7 @@ export default function AllEvents({ data }) {
             </tr>
           </thead>
           <tbody>
-            {filteredEvents.map((item) => (
+            {paginatedEvents.map((item) => (
               <tr className="table-row" key={item.id}>
                 <td className="table-data">#{item.eventNumber}</td>
                 <td className="table-data">{item.eventName}</td>
@@ -177,6 +191,21 @@ export default function AllEvents({ data }) {
             ))}
           </tbody>
         </table>
+      </div>
+
+      {/* Pagination Controls */}
+      <div className="flex-row-center pagination">
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            className={`flex-row-center page-button ${
+              currentPage === index + 1 ? "active" : ""
+            }`}
+            onClick={() => handlePageChange(index + 1)}
+          >
+            {index + 1}
+          </button>
+        ))}
       </div>
 
       <EventPreviewPopup

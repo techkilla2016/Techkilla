@@ -121,9 +121,9 @@
             position: absolute;
             top: 0.3vw;
             left: 0.3vw;
-            width: 1.2vw;
-            height: 1.2vw;
-            // border: 2px solid #ccc;
+            width: 1.1vw;
+            height: 1.1vw;
+            border: 1px solid #ccc;
             border-radius: 0.2vw;
             background-color: transparent;
             transition: all 0.3s ease;
@@ -237,7 +237,7 @@
             font-size: 3.2vw;
             font-weight: 500;
             background: linear-gradient(white, white) padding-box,
-              linear-gradient(to right, #ff93df, #7a21bb) border-box;
+              linear-gradient(to right, #ebdd14, #100a14) border-box;
             border: 0.25vw solid transparent;
             padding: 1.2vw;
             border-radius: 1.4vw;
@@ -246,8 +246,8 @@
 
           .categoryBtn:hover,
           .selectedCategory {
-            background: linear-gradient(to right, #ff93df, #7a21bb) padding-box,
-              linear-gradient(to right, #ff93df, #7a21bb) border-box;
+            background: linear-gradient(to right, #eadc12, #d88717) padding-box,
+              linear-gradient(to right, #63625a, #100a14) border-box;
             border: 0.3vh solid transparent;
             color: #fff;
           }
@@ -293,6 +293,7 @@
               left: 1vw;
               width: 3.2vw;
               height: 3.2vw;
+              border: 2px solid #ccc;
               border-radius: 0.5vw;
               background-color: transparent;
               transition: all 0.3s ease;
@@ -454,6 +455,7 @@
               left: 1vw;
               width: 3.2vw;
               height: 3.2vw;
+              border: 2px solid #ccc;
               border-radius: 0.5vw;
               background-color: transparent;
               transition: all 0.3s ease;

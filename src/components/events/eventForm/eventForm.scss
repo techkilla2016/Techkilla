@@ -88,15 +88,20 @@
     // align-items: flex-start;
     .templateBtn {
       // border: 1px solid green;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       padding: 0.4vw 0.6vw;
       font-weight: 500;
       width: 100%;
-      color: white;
+      color: black;
       // background: #bc3dfb;
       border-radius: 1vw 0 1vw 0;
       animation: blink 1s linear infinite;
       // color: #555;
+    }
+    .successText {
+      color: green;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
     }
     .errorText {
       color: rgb(239, 66, 66);
@@ -106,7 +111,7 @@
     @keyframes blink {
       0%,
       100% {
-        background-color: #aba64d;
+        background-color: #f6ce4c;
       }
       50% {
         background-color: #f2a93c;
@@ -164,7 +169,7 @@
       -moz-appearance: none;
       appearance: none;
       background-color: transparent;
-      border: 2px solid #cec113;
+      border: 2px solid #f6ce4c;
       border-radius: 1vw;
       width: 1.6vw;
       height: 1.6vw;
@@ -210,7 +215,7 @@
       }
       .logoContainer {
         border: 2px dashed #ccc;
-        border: 2px solid blue;
+        // border: 2px solid blue;
         border-radius: 0.8vw;
         padding: 1vw;
         width: 100%;
@@ -223,7 +228,7 @@
         .uploadedImage {
           width: 8vw;
           height: 6vw;
-          border: 2px solid blue;
+          // border: 2px solid blue;
 
           object-fit: contain;
           border-radius: 0.5vw;
@@ -342,17 +347,13 @@
   .submitContainers {
     padding-top: 2vw;
     .submitBtn {
-      // border: 1px solid #696964;
-      outline: none;
+      margin-right: 1vw;
+      border-radius: 1vw;
+      background: #f6ce4c;
       color: black;
-      // color: white;
-      padding: 0.3vw 1.9vw;
-      background: #ffce3a;
-      // background: rgb(156, 14, 14);
-      cursor: pointer;
-      font-size: 1.2vw;
-      border-radius: 0.7vw;
-      // margin: 2vw;
+      // width: 10%;
+      font-size: 1.3vw;
+      padding: 0.5vw 1.3vw;
     }
   }
 }
@@ -441,6 +442,11 @@
         animation: blink 1s linear infinite;
         // color: #555;
       }
+      .successText {
+        color: green;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+      }
       .errorText {
         color: rgb(239, 66, 66);
         font-size: 1rem;
@@ -484,7 +490,7 @@
       }
 
       .checkboxInput {
-        border: 2px solid #cec113;
+        border: 2px solid #f6ce4c;
         border-radius: 2.4vw;
         width: 3.5vw;
         height: 3.5vw;
@@ -534,7 +540,7 @@
           transition: border-color 0.3s;
 
           .uploadedImage {
-            border: 2px solid blue;
+            // border: 2px solid blue;
             width: 18vw;
             height: 15vw;
             object-fit: contain;
@@ -729,6 +735,11 @@
         animation: blink 1s linear infinite;
         // color: #555;
       }
+      .successText {
+        color: green;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+      }
       .errorText {
         color: rgb(239, 66, 66);
         font-size: 1rem;
@@ -778,7 +789,7 @@
         -moz-appearance: none;
         appearance: none;
         background-color: transparent;
-        border: 2px solid #cec113;
+        border: 2px solid #f6ce4c;
         border-radius: 2.4vw;
         width: 5.2vw;
         // padding: 0.2vw;

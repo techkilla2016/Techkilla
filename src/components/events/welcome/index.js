@@ -5,18 +5,23 @@ import Link from "next/link";
 export default function Welcome() {
   return (
     <div className="flex-col-center Welcome">
-      <h1 className="heading">Welcome! Looks like you are new.</h1>
+      <h1 className="heading">
+        Welcome!
+        <br />
+        Looks like you are new.
+      </h1>
 
       <p className="paraGraph">
-        Can't find your events? Perhaps you created them using our legacy
-        system. No worries, those events are still available by clicking here.
-        Or start by creating an event in our new system that will replace the
-        old one and find out what's new!
+        Create, manage, and explore exciting events effortlessly.
       </p>
-
-      <Link href="/events/new" className="createBtn">
-        Create an Event
-      </Link>
+      <div className="flex-row-center buttonEvent">
+        <Link href="/events/new" className="createBtn">
+          Create an Event
+        </Link>
+        <Link href="/contact" className="createBtn1">
+          Contact Us →
+        </Link>
+      </div>
     </div>
   );
 }

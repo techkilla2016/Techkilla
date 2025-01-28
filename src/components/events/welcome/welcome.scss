@@ -1,31 +1,44 @@
 .Welcome {
-  //   border: 2px solid blue;
+  // border: 2px solid blue;
   width: 70%;
-  gap: 1.5vw;
+  // gap: 1.5vw;
+
+  align-items: flex-start;
   padding: 1vw;
   .heading {
     // border: 2px solid red;
     padding: 1vw;
-    font-size: 3vw;
+    font-size: 2.8vw;
+    color: #1e1e15;
     font-weight: 600;
-    background: linear-gradient(to right, #ebdd14, #100a14);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(to right, #ebdd14, #100a14);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
   .paraGraph {
     // border: 2px solid black;
     padding: 1vw;
-    width: 64vw;
+    text-align: left;
+    // width: 64vw;
     line-height: 2.2vw;
     font-size: 1.1vw;
   }
-  .createBtn {
-    background: linear-gradient(to right, #ebdd14, #706207);
-    // border: 2px solid blue;
-    color: white;
-    border-radius: 1.7vw;
-    font-size: 1.5vw;
-    padding: 0.5vw 1.5vw;
+  .buttonEvent {
+    padding: 0.5vw;
+    gap: 1vw;
+    .createBtn {
+      background: #f6ce4c;
+      // border: 2px solid blue;
+      color: #100f01;
+      border-radius: 1.7vw;
+      font-weight: 600;
+      font-size: 1.2vw;
+      padding: 0.5vw 2vw;
+    }
+    .createBtn1 {
+      color: #100f01;
+      font-size: 1vw;
+    }
   }
 }
 @media all and (max-width: 480px) {

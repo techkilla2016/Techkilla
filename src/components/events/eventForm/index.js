@@ -9,6 +9,7 @@ import crypto from "crypto";
 import Loader from "./../loader/index";
 
 import Header from "@/components/header";
+import Congratulation from "@/components/events/congratulations";
 
 import {
   doc,
@@ -83,6 +84,7 @@ export default function EventForm({ action }) {
   const [templateUpdateStatus, setTemplateUpdateStatus] = useState();
   const [allCategories, setAllCategories] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   console.log(userDataSelector);
 
@@ -253,8 +255,8 @@ export default function EventForm({ action }) {
 
           console.log("Document updated with logo URL");
         }
-
-        toast.success("Event created successfully!", toastOptions);
+        setIsPopupOpen(true);
+        // toast.success("Event created successfully!", toastOptions);
       } catch (e) {
         console.error("Error during event creation: ", e);
         toast.error("Failed to create event. Please try again.", toastOptions);
@@ -592,6 +594,12 @@ export default function EventForm({ action }) {
                   Select Templates
                 </button>
                 {templateError && <p className="errorText">{templateError}</p>}
+
+                {formData.templates && formData.templates.length > 0 && (
+                  <p className="successText">
+                    {formData.templates.length} template(s) selected.
+                  </p>
+                )}
               </div>
             )}
             {showTemplatePopup && (
@@ -606,6 +614,28 @@ export default function EventForm({ action }) {
                 setAllTemplatesData={setAllTemplatesData}
               />
             )}
+            {/* share options */}
+            <div className="flex-col-center shareOption">
+              <label className="flex-row-center shareHead">
+                Share Options:
+              </label>
+              <div className="flex-row-center options">
+                {data?.shareOptionsArr.map((option) => (
+                  <label key={option} className="flex-row-center checkboxLabel">
+                    <input
+                      type="checkbox"
+                      value={option}
+                      className="flex-row-center checkboxInput"
+                      checked={formData.shareOptions.includes(option)}
+                      onChange={handleCheckboxChange}
+                    />
+                    <span className="checkboxText">
+                      {option.charAt(0).toUpperCase() + option.slice(1)}
+                    </span>
+                  </label>
+                ))}
+              </div>
+            </div>
 
             {/* logo upload */}
             <div
@@ -698,29 +728,6 @@ export default function EventForm({ action }) {
               </div>
             </div>
 
-            {/* share options */}
-            <div className="flex-col-center shareOption">
-              <label className="flex-row-center shareHead">
-                Share Options:
-              </label>
-              <div className="flex-row-center options">
-                {data?.shareOptionsArr.map((option) => (
-                  <label key={option} className="flex-row-center checkboxLabel">
-                    <input
-                      type="checkbox"
-                      value={option}
-                      className="flex-row-center checkboxInput"
-                      checked={formData.shareOptions.includes(option)}
-                      onChange={handleCheckboxChange}
-                    />
-                    <span className="checkboxText">
-                      {option.charAt(0).toUpperCase() + option.slice(1)}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
             {/* submit button */}
             <div className="flex-col-center submitContainers">
               <button type="submit" className="flex-row-center submitBtn">
@@ -728,6 +735,10 @@ export default function EventForm({ action }) {
               </button>
             </div>
           </form>
+          <Congratulation
+            isOpen={isPopupOpen}
+            onClose={() => setIsPopupOpen(false)}
+          />
         </>
       )}
 
