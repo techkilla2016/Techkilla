@@ -23,6 +23,7 @@ export default function EventsPage() {
   const [userData, setUserData] = useState();
   const [allEventsData, setAllEventsData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   // run 1st api => 2s
   // get user data
@@ -98,12 +99,22 @@ export default function EventsPage() {
 
       {/* logout */}
       {userData && (
-        <div className="logout">
-          {/* <p>Welcome, {userData.displayName}</p> */}
-          {/* <button onClick={handleLogout} className="btn btn-primary">
-            Logout
-          </button> */}
-          <SlLogout onClick={handleLogout} className="logOut" />
+        <div className="logout-container">
+          <div className="logout-header" onClick={() => setIsOpen(!isOpen)}>
+            <span className="profile-text">Hi {userData?.displayName}!</span>
+            <span className={`arrow ${isOpen ? "up" : "down"}`}>
+              {isOpen ? "▲" : "▼"}
+            </span>
+          </div>
+
+          {isOpen && (
+            <div className="logout-menu">
+              <SlLogout onClick={handleLogout} className="logOut" />
+              <span onClick={handleLogout} className="logout-text">
+                Log Out
+              </span>
+            </div>
+          )}
         </div>
       )}
       <ToastContainer />

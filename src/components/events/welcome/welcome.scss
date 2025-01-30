@@ -1,43 +1,62 @@
 .Welcome {
   // border: 2px solid blue;
-  width: 70%;
-  // gap: 1.5vw;
-
+  margin-top: 4vw;
+  width: 100%;
+  gap: 6vw;
   align-items: flex-start;
-  padding: 1vw;
-  .heading {
-    // border: 2px solid red;
-    padding: 1vw;
-    font-size: 2.8vw;
-    color: #1e1e15;
-    font-weight: 600;
-    // background: linear-gradient(to right, #ebdd14, #100a14);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-  }
-  .paraGraph {
-    // border: 2px solid black;
-    padding: 1vw;
-    text-align: left;
-    // width: 64vw;
-    line-height: 2.2vw;
-    font-size: 1.1vw;
-  }
-  .buttonEvent {
-    padding: 0.5vw;
-    gap: 1vw;
-    .createBtn {
-      background: #f6ce4c;
-      // border: 2px solid blue;
-      color: #100f01;
-      border-radius: 1.7vw;
+  .context-part {
+    // border: 2px solid blue;
+    width: 40%;
+    // height: auto;
+    // gap: 1.5vw;
+
+    align-items: flex-start;
+    // padding: 1vw;
+    .heading {
+      // border: 2px solid red;
+      padding: 1vw;
+      font-size: 2.8vw;
+      color: #1e1e15;
       font-weight: 600;
-      font-size: 1.2vw;
-      padding: 0.5vw 2vw;
+      // background: linear-gradient(to right, #ebdd14, #100a14);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
     }
-    .createBtn1 {
-      color: #100f01;
-      font-size: 1vw;
+    .paraGraph {
+      // border: 2px solid black;
+      padding: 1vw;
+      text-align: left;
+      // width: 64vw;
+      line-height: 2.2vw;
+      font-size: 1.1vw;
+    }
+    .buttonEvent {
+      padding: 0.5vw;
+      gap: 1vw;
+      .createBtn {
+        background: #f6ce4c;
+        // border: 2px solid blue;
+        color: #100f01;
+        border-radius: 1.7vw;
+        font-weight: 600;
+        font-size: 1.2vw;
+        padding: 0.5vw 2vw;
+      }
+      .createBtn1 {
+        color: #100f01;
+        font-size: 1vw;
+      }
+    }
+  }
+  .img-part {
+    // border-radius: 8px;
+    width: 60%;
+    // border-left: 2px solid #000;
+    .ai-photobooth {
+      border-radius: 8px;
+      width: 100vh;
+      height: 60vh;
+      border-left: 2px solid #000;
     }
   }
 }
