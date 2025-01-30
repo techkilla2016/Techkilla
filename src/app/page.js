@@ -14,8 +14,9 @@ import TestimonialsData from "@/data/Testimonials";
 import WhatsappModal from "@/components/Modal/whatsapp";
 import Head from "next/head";
 export const metadata = {
-  title: "Techkilla Wedding Photo Booth Services for Events and Occasions",
-  description: `Explore Techkilla’s wedding photo booths, AI photo booths, and AI video booths. Create unforgettable event experiences with our innovative, interactive solutions.`,
+  title:
+    "Event Photo Booth | AI photo Booth Services for Occasions - Techkilla",
+  description: `Photo Booth for events with AI features. Create instant memories at your occasion with Techkilla's interactive photo booth services. Book now for unforgettable moments!`,
 };
 
 const Home = () => {
