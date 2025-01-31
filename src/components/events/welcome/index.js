@@ -25,15 +25,15 @@ export default function Welcome() {
           </Link>
         </div>
       </div>
-      <div className="flex-row-center img-part">
+      {/* <div className="flex-row-center img-part">
         <Image
-          src="/events/welcome.png"
+          src="/events/blog8-08.jpg"
           alt="welcome-photobooth"
           className="ai-photobooth"
           width={500}
           height={300}
         />
-      </div>
+      </div> */}
     </div>
   );
 }

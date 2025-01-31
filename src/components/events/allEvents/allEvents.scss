@@ -33,6 +33,7 @@
     text-align: center;
   }
   .searchContainer {
+    // border: 2px solid red;
     justify-content: space-evenly;
     width: 100%;
     // padding: 1vw;
@@ -75,14 +76,23 @@
         border-bottom: 2px solid #626466;
       }
     }
-    .newEvent {
-      margin-right: 1vw;
-      border-radius: 1vw;
-      background: #f6ce4c;
-      color: black;
-      width: 10%;
-      font-size: 1.3vw;
-      padding: 0.5vw 1.3vw;
+    .event-icon {
+      // border: 1px solid black;
+      // background: #f6ce4c;
+      border-radius: 0.2vw;
+      cursor: pointer;
+      // width: 3.2vw;
+      .newEvent {
+        // border: 1px solid blue;
+        // margin-right: 1vw;
+        // border-radius: 1vw;
+        background: #f6ce4c;
+        border-radius: 0.2vw;
+        color: black;
+        font-weight: 600;
+        font-size: 2vw;
+        margin: 0.4vw;
+      }
     }
   }
   .table-wrapper {
@@ -177,8 +187,8 @@
     }
 
     .page-button.active {
-      background-color: black;
-      color: #ffffff;
+      background-color: #f6ce4c;
+      color: black;
       border-color: #f6ce4c;
       // transform: scale(1.15);
     }
@@ -393,15 +403,23 @@
           border-bottom: 2px solid #626466;
         }
       }
-      .newEvent {
-        margin-right: 1vw;
-        border-radius: 1vw;
-        background: linear-gradient(to right, #3c3a3a, #8f8f17);
-        color: #fff;
-        width: 20%;
-        font-size: 3vw;
-        padding: 0.9vw 1.4vw;
-        // border: 2px solid blue;
+      .event-icon {
+        border: 1px solid black;
+        background: #f6ce4c;
+        border-radius: 0.6vw;
+        cursor: pointer;
+        // width: 3.2vw;
+        .newEvent {
+          // border: 1px solid blue;
+          // margin-right: 1vw;
+          // border-radius: 1vw;
+          // background: white !important;
+          border-radius: 0.6vw;
+          color: black;
+          // font-weight: 600;
+          font-size: 4vw !important;
+          // margin: 1vw;
+        }
       }
     }
     .table-wrapper {

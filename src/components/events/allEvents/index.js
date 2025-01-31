@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./allEvents.scss";
-
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { MdOutlineModeEdit, MdDeleteOutline } from "react-icons/md";
 import { PiRocketLaunch } from "react-icons/pi";
 import { FaRegEye } from "react-icons/fa";
+import { BsPlusSquare } from "react-icons/bs";
 import { db, storage } from "@/firebase-config";
 import { ref as storageRef, deleteObject } from "firebase/storage";
 import { collection, deleteDoc, doc } from "firebase/firestore";
@@ -19,9 +20,9 @@ export default function AllEvents({ data }) {
   const [showConfirmDelete, setShowConfirmDelete] = useState(false);
   const [eventToDelete, setEventToDelete] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3;
+  const itemsPerPage = 8;
 
   const formatDate = (timestamp) => {
     if (timestamp && typeof timestamp.toDate === "function") {
@@ -133,10 +134,15 @@ export default function AllEvents({ data }) {
             </label>
           </div>
         </div>
-
-        <Link href="/events/new" className="flex-row-center newEvent">
+        <div className="flex-row-center event-icon">
+          <BsPlusSquare
+            className="flex-row-center newEvent"
+            onClick={() => router.push("/events/new")}
+          />
+        </div>
+        {/* <Link href="/events/new" className="flex-row-center newEvent">
           New Event
-        </Link>
+        </Link> */}
       </div>
 
       <div className="table-wrapper">
