@@ -20,36 +20,64 @@
 }
 
 .popup-container {
-  background: #f0edf3;
+  background-color: beige;
+  // background: #f0edf3;
   border-radius: 1vw;
+  width: 30vw;
+  // border: 1px solid blue;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   padding: 2vw 3vw;
-
+  position: relative;
   text-align: center;
   animation: popup-enter 0.3s ease-in-out;
 }
+.popup-content {
+  gap: 0.1vw;
+  .img-success {
+    // border: 2px solid blue;
 
+    width: 2.4vw;
+  }
+}
 .popup-content h2 {
   color: #28a745;
   font-size: 1.8rem;
-  margin-bottom: 12px;
+  // margin-bottom: 12px;
 }
 
 .popup-content p {
   color: #333;
   font-size: 1rem;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
 }
-
-.close-btn {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  padding: 8px 15px;
-  font-size: 1rem;
+.footer-part {
+  // border: 2px solid blue;
+  gap: 1vw;
+  margin-bottom: 1vw;
+  .launch {
+    // border: 2px solid black;
+    color: #fff;
+    padding: 5px 10px;
+    background: green;
+    border-radius: 10px;
+  }
+  .dashboard {
+    // border: 2px solid blue;
+    color: #fff;
+    background: #007bff;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+}
+.close-preview {
+  // border: 2px solid rgb(185, 156, 61);
+  position: absolute;
+  width: 2.5vw;
+  right: -3%;
+  //   color: red;
+  top: -6%;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  z-index: 10;
 }
 
 .close-btn:hover {
@@ -103,14 +131,24 @@
 @media all and (max-width: 480px) {
   .popup-container {
     background: #f0edf3;
-    border-radius: 2vw;
+    border-radius: 3vw;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    padding: 5vw 4vw;
-
+    padding: 4vw 3vw;
+    margin: 4vw;
+    width: 90vw;
+    background-color: beige;
+    // border: 2px solid blue;
     text-align: center;
     animation: popup-enter 0.3s ease-in-out;
   }
+  .popup-content {
+    gap: 0.5vw;
+    .img-success {
+      // border: 2px solid blue;
 
+      width: 10vw !important;
+    }
+  }
   .popup-content h2 {
     color: #28a745;
     font-size: 1.8rem;
@@ -119,18 +157,34 @@
 
   .popup-content p {
     color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    // margin-bottom: 20px;
   }
+  .footer-part {
+    // border: 2px solid blue;
+    gap: 1.3vw;
+    margin-bottom: 1vw;
+    .launch {
+      // border: 2px solid black;
+      color: #fff;
+      padding: 5px 12px;
+      font-size: 1.1rem;
+      background: green;
+      border-radius: 10px;
+    }
+    .dashboard {
+      // border: 2px solid blue;
+      color: #fff;
+      font-size: 1.1rem;
+      background: #007bff;
+      padding: 5px 12px;
+      border-radius: 10px;
+    }
+  }
+  .close-preview {
+    width: 8vw;
+    right: -4%;
 
-  .close-btn {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 15px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    top: -5%;
   }
 }

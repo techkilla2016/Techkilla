@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import closeBtn from "@/../public/modals/upgrade-now/close-btn.png";
 import "./congratulation.scss";
 
 const Congratulation = ({ isOpen, onClose }) => {
@@ -18,14 +21,33 @@ const Congratulation = ({ isOpen, onClose }) => {
   return (
     <div className={`popup-overlay ${isOpen ? "show" : ""}`} onClick={onClose}>
       <div className="popup-container" onClick={(e) => e.stopPropagation()}>
-        <div className="popup-content">
+        <div className="flex-col-center popup-content">
+          <div className="flex-col-center img-success">
+            <Image
+              src="/events/payment-success.png"
+              alt="Event Success"
+              width={50}
+              height={30}
+            />
+          </div>
           <h2 style={{ color: "green" }}>Congratulations!</h2>
 
           <p>Your event has been created successfully.</p>
         </div>
-        <button className="close-btn" onClick={onClose}>
+        <div className="flex-row-center footer-part">
+          <Link href="/events/edit" className="flex-row-center dashboard">
+            Go to Dashboard
+          </Link>
+          <Link href="/events/test-page" className="flex-row-center launch">
+            Launch
+          </Link>
+        </div>
+        {/* <button className="close-btn" onClick={onClose}>
           Close
-        </button>
+        </button> */}
+        <div onClick={onClose} className="flex-row-center close-preview">
+          <Image src={closeBtn} alt="close" />
+        </div>
       </div>
     </div>
   );
