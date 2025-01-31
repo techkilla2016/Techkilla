@@ -101,7 +101,7 @@ export default function EventsPage() {
       {userData && (
         <div className="logout-container">
           <div className="logout-header" onClick={() => setIsOpen(!isOpen)}>
-            <span className="profile-text">Hi {userData?.displayName}!</span>
+            <span className="profile-text">Hi, {userData?.displayName}!</span>
             <span className={`arrow ${isOpen ? "up" : "down"}`}>
               {isOpen ? "▲" : "▼"}
             </span>
