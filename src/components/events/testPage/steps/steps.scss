@@ -1,0 +1,56 @@
+.Steps {
+  padding: 1vw;
+  // border: 2px solid blue;
+  .test-head {
+    padding: 1.5vw;
+    // border: 1px solid gray;
+  }
+  .first-container {
+    // border: 1px solid gray;
+    // width: 80%;
+    border-radius: 2vw;
+    gap: 3vw;
+    // padding: 1vw;
+  }
+  .step-one {
+    position: relative;
+    padding: 1vw;
+    // border: 2px solid green;
+    .icon-part {
+      top: -6%;
+      width: 2.5vw;
+      height: 2.5vw;
+      border-radius: 50%;
+      // padding: 1vw;
+      background-color: white;
+      right: 40%;
+      // margin: 2px;
+      position: absolute;
+      border: 1px solid gray;
+      .icon {
+        font-size: 1.7vw;
+      }
+      .icons {
+        font-size: 1.4vw;
+      }
+    }
+    .text-part {
+      border: 1px solid gray;
+      // text-align: end;
+      width: 10vw;
+      // border: 1px solid black;
+      border-radius: 1vw;
+      justify-content: flex-end;
+      // align-items: flex-end;
+      height: 5.5vw;
+      .steps {
+        font-weight: 600;
+        font-size: 1vw;
+        // border: 1px solid black;
+      }
+      .selection {
+        // border: 1px solid black;
+      }
+    }
+  }
+}

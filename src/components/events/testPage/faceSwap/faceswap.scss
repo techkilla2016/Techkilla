@@ -1,0 +1,100 @@
+.Faceswap {
+  border: 1px solid gray;
+  border-radius: 0.5vw;
+  gap: 2vw;
+  //   width: 150vh;
+  .left-container {
+    // border: 2px solid green;
+    height: 60vh;
+    padding-left: 2vw;
+    width: 60vh;
+    gap: 2vw;
+    .output-img {
+      //   padding: 1vw;
+      border-radius: 0.5vw;
+      border: 1.4px solid gray;
+    }
+    .generated-img {
+      border-radius: 0.4vw;
+    }
+  }
+  .right-container {
+    // border: 2px solid red;
+    height: 60vh;
+    width: 60vh;
+    gap: 2vw;
+    .upper {
+      border: 1.4px solid gray;
+      border-radius: 0.7vw;
+      align-items: center !important;
+      justify-content: center !important;
+      //   gap: 2vw;
+      padding: 0.4vw;
+      //   height: 20vh;
+      height: auto;
+      width: 50vh;
+      .select-text {
+        font-size: 1vw;
+        font-weight: 600;
+        // border: 2px solid red;
+      }
+      .select-face {
+        display: flex;
+        gap: 1vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        // border: 2px solid red;
+
+        .face-option {
+          width: 3vw;
+          height: 4vw;
+          border-radius: 0.5vw;
+          object-fit: cover;
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .lower {
+      border: 1.4px solid gray;
+      border-radius: 0.7vw;
+      //   gap: 1vw;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0.4vw;
+      //   height: 30vh;
+      height: auto;
+      width: 50vh;
+      .select-text {
+        // border: 2px solid red;
+        font-size: 1.1vw;
+        font-weight: 600;
+      }
+
+      .select-template {
+        display: flex;
+        gap: 0.8vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        // border: 2px solid red;
+
+        .template-option {
+          width: 3.5vw;
+          height: 4.5vw;
+          border-radius: 0.3vw;
+          object-fit: cover;
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
