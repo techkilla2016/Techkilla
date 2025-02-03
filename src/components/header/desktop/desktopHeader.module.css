@@ -30,6 +30,16 @@
   display: flex;
   gap: 10px;
 }
+.createEvent {
+  border: 2.5px solid black;
+  padding: 7px 15px;
+  border-radius: 50px;
+  background-color: #ffce3a;
+  font-weight: bold;
+  font-size: 15px;
+  color: #212121;
+  margin-right: 2px;
+}
 .btns button {
   border: 2.5px solid black;
   padding: 7px 15px;

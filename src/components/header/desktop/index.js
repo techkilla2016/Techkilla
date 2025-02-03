@@ -96,8 +96,8 @@ const DesktopNav = () => {
 
       {/* navButton */}
       <div className={styles.btns}>
-        <Link href="/events">
-          <button>Events </button>
+        <Link href="/events" className={styles.createEvent}>
+          Create your Event
         </Link>
         <Link href="https://calendly.com/techkilla/meeting" target="_blank">
           <button className={styles.demo}>Book a Demo</button>
@@ -108,6 +108,7 @@ const DesktopNav = () => {
       </div>
     </nav>
   );
+  E;
 };
 
 export default DesktopNav;
