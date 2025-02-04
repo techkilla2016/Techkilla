@@ -33,7 +33,11 @@ import SelectTemplatesPopup from "@/components/events/newEvent/selectTemplatesPo
 import { toast, ToastContainer } from "react-toastify";
 
 const data = {
-  screenArr: ["responsive", "vertical"],
+  screenArr: [
+    { value: "responsive", label: "iPad, Mobile" },
+    { value: "vertical", label: "Plasma Screen 1080 × 1920" },
+  ],
+
   bgImagesArr: [
     "https://snapshawt.com/faceSwap/bg.png",
     "https://i.pinimg.com/736x/54/41/0c/54410cf84fc2fba4656fddd91dedc953.jpg",
@@ -42,7 +46,7 @@ const data = {
   shareOptionsArr: ["QR", "email", "print", "download"],
   productsArr: ["photobooth"],
   templateNumberArr: [10],
-  durationHour: [1,2,3,4,5,6,7],
+  durationHour: [1, 2, 3, 4, 5, 6, 7],
   numberOfDevices: [1, 2, 3, 4],
 };
 
@@ -230,7 +234,7 @@ export default function EventForm({ action }) {
             userId: userDataSelector.uid,
             createdAt: Timestamp.fromDate(new Date()),
             expiresAt: Timestamp.fromDate(
-              new Date(new Date().getTime() + duration *24* 60 * 60 * 1000)
+              new Date(new Date().getTime() + duration * 24 * 60 * 60 * 1000)
             ),
             eventNumber: updatedCounter,
             password: pass,
@@ -351,7 +355,6 @@ export default function EventForm({ action }) {
     //   router.push("/events");
     //   setLoading(false);
     // }, 2000);
-
   };
 
   // trigger file upload
@@ -471,7 +474,7 @@ export default function EventForm({ action }) {
             {/* product name */}
             <div className="flex-col-center valueField">
               <label className="labelling">
-                Product Name:
+                Choose your Product:
                 <select
                   name="productName"
                   value={formData.productName}
@@ -492,7 +495,6 @@ export default function EventForm({ action }) {
               </label>
             </div>
 
-            {/* Screen */}
             <div className="flex-col-center valueField">
               <label className="labelling">
                 Screen:
@@ -507,7 +509,9 @@ export default function EventForm({ action }) {
                     Select Screen Type
                   </option>
                   {data?.screenArr.map((screen) => (
-                    <option value={screen}>{screen}</option>
+                    <option key={screen.value} value={screen.value}>
+                      {screen.label}
+                    </option>
                   ))}
                 </select>
               </label>
@@ -533,7 +537,7 @@ export default function EventForm({ action }) {
                   </option>
                   {data?.durationHour.map((screen) => (
                     <option key={screen} value={screen}>
-                      {screen} {screen>1 ? "Day's" : "Day"}
+                      {screen} {screen > 1 ? "Day's" : "Day"}
                     </option>
                   ))}
                 </select>

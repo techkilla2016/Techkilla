@@ -118,7 +118,7 @@ const MobileNav = ({ isMobile, setIsMobile }) => {
                   Products
                 </div>
                 <div className="listMenu" onClick={() => setIsMobile(false)}>
-                  <Link href="/events">Events</Link>
+                  <Link href="/events">Create your Event</Link>
                 </div>
                 <div className="listMenu" onClick={() => setIsMobile(false)}>
                   <Link href="/case-studies">Case Studies</Link>
@@ -134,7 +134,7 @@ const MobileNav = ({ isMobile, setIsMobile }) => {
                   </button>
                 </Link>
                 <Link href="/contact">
-                  <button onClick={() => setIsMobile(false)}>Contect Us</button>
+                  <button onClick={() => setIsMobile(false)}>Contact Us</button>
                 </Link>
               </div>
             </div>
