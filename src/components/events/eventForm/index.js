@@ -42,7 +42,7 @@ const data = {
   shareOptionsArr: ["QR", "email", "print", "download"],
   productsArr: ["photobooth"],
   templateNumberArr: [10],
-  durationHour: [0.1, 0.2, 0.3, 0.4, 4, 6, 8, 10],
+  durationHour: [1,2,3,4,5,6,7],
   numberOfDevices: [1, 2, 3, 4],
 };
 
@@ -230,7 +230,7 @@ export default function EventForm({ action }) {
             userId: userDataSelector.uid,
             createdAt: Timestamp.fromDate(new Date()),
             expiresAt: Timestamp.fromDate(
-              new Date(new Date().getTime() + duration * 60 * 60 * 1000)
+              new Date(new Date().getTime() + duration *24* 60 * 60 * 1000)
             ),
             eventNumber: updatedCounter,
             password: pass,
@@ -287,7 +287,7 @@ export default function EventForm({ action }) {
           let baseTime =
             now > currentExpiresAt.getTime() ? now : currentExpiresAt.getTime();
           let newTimeStamp = new Date(
-            baseTime + formData.duration * 60 * 60 * 1000
+            baseTime + formData.duration * 24 * 60 * 60 * 1000
           );
 
           await updateDoc(docRef, {
@@ -347,10 +347,11 @@ export default function EventForm({ action }) {
       await updateEvent();
     }
 
-    setTimeout(() => {
-      router.push("/events");
-      setLoading(false);
-    }, 2000);
+    // setTimeout(() => {
+    //   router.push("/events");
+    //   setLoading(false);
+    // }, 2000);
+
   };
 
   // trigger file upload
@@ -532,7 +533,7 @@ export default function EventForm({ action }) {
                   </option>
                   {data?.durationHour.map((screen) => (
                     <option key={screen} value={screen}>
-                      {screen} Hour
+                      {screen} {screen>1 ? "Day's" : "Day"}
                     </option>
                   ))}
                 </select>

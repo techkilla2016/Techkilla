@@ -19,7 +19,7 @@ const Congratulation = ({ isOpen, onClose }) => {
   if (!show) return null;
 
   return (
-    <div className={`popup-overlay ${isOpen ? "show" : ""}`} onClick={onClose}>
+    <div className={`popup-overlay ${isOpen ? "show" : ""}`}>
       <div className="popup-container" onClick={(e) => e.stopPropagation()}>
         <div className="flex-col-center popup-content">
           <div className="flex-col-center img-success">
@@ -35,7 +35,7 @@ const Congratulation = ({ isOpen, onClose }) => {
           <p>Your event has been created successfully.</p>
         </div>
         <div className="flex-row-center footer-part">
-          <Link href="/events/edit" className="flex-row-center dashboard">
+          <Link href="/events/" className="flex-row-center dashboard">
             Go to Dashboard
           </Link>
           <Link href="/events/test-page" className="flex-row-center launch">
@@ -45,9 +45,9 @@ const Congratulation = ({ isOpen, onClose }) => {
         {/* <button className="close-btn" onClick={onClose}>
           Close
         </button> */}
-        <div onClick={onClose} className="flex-row-center close-preview">
+        {/* <div onClick={onClose} className="flex-row-center close-preview">
           <Image src={closeBtn} alt="close" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
