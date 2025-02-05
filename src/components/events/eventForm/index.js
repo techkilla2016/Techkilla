@@ -607,7 +607,9 @@ export default function EventForm({ action }) {
                 )}
               </div>
             )}
-            {showTemplatePopup && (
+            
+            {/* {showTemplatePopup && (
+            )} */}
               <SelectTemplatesPopup
                 setShowTemplatePopup={setShowTemplatePopup}
                 templateNumber={formData.templateNumber}
@@ -617,8 +619,8 @@ export default function EventForm({ action }) {
                 allCategories={allCategories}
                 setAllCategories={setAllCategories}
                 setAllTemplatesData={setAllTemplatesData}
+                showTemplatePopup={showTemplatePopup}
               />
-            )}
             {/* share options */}
             <div className="flex-col-center shareOption">
               <label className="flex-row-center shareHead">
