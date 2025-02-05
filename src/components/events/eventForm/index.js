@@ -34,7 +34,7 @@ import { toast, ToastContainer } from "react-toastify";
 
 const data = {
   screenArr: [
-    { value: "responsive", label: "iPad, Mobile" },
+    { value: "responsive", label: "iPad, Mobile, Laptop (Responsive)" },
     { value: "vertical", label: "Plasma Screen 1080 × 1920" },
   ],
 
@@ -83,7 +83,7 @@ export default function EventForm({ action }) {
   const [showTemplatePopup, setShowTemplatePopup] = useState(false);
   const [templateError, setTemplateError] = useState("");
   const fileInputRef = useRef(null);
-
+  const [isUploading, setIsUploading] = useState(false);
   const [allTemplatesData, setAllTemplatesData] = useState([]);
   const [templateUpdateStatus, setTemplateUpdateStatus] = useState();
   const [allCategories, setAllCategories] = useState([]);
@@ -372,9 +372,9 @@ export default function EventForm({ action }) {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
     if (file && file.type.startsWith("image/")) {
-      setLoading(true);
+      setIsUploading(true);
       setFormData({ ...formData, logo: file });
-      setLoading(false);
+      setIsUploading(false);
     } else {
       console.log("Please drop a valid image file.");
       toast.error("Please drop a valid image file.", toastOptions);
@@ -388,9 +388,9 @@ export default function EventForm({ action }) {
     const file = event.target.files[0];
 
     if (file && file.type.startsWith("image/")) {
-      setLoading(true);
+      setIsUploading(true);
       setFormData({ ...formData, logo: file });
-      setLoading(false);
+      setIsUploading(false);
     } else {
       toast.error("Please select a valid image file.", toastOptions);
     }
@@ -654,7 +654,11 @@ export default function EventForm({ action }) {
               >
                 <p className="flex-row-center uploadText">Upload Logo:</p>
                 <div className="logoContainer">
-                  {formData.logo ? (
+                  {isUploading ? (
+                    <div className="flex-col-center loaderContainer">
+                      <div className="spinLoader"></div>
+                    </div>
+                  ) : formData.logo ? (
                     <div>
                       <img
                         src={

@@ -6,8 +6,9 @@
     padding: 1vw;
     // margin-top: 2vw;
     font-size: 2.8vw;
+
     font-weight: 600;
-    background: linear-gradient(to right, #ebdd14, #100a14);
+    background: linear-gradient(to right, #fad43a, #b3a70b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -224,7 +225,25 @@
         cursor: pointer;
         position: relative;
         transition: border-color 0.3s;
+        .logoContainer {
+          .spinLoader {
+            width: 2vw;
+            height: 2vw;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid gray;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+          }
 
+          @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        }
         .uploadedImage {
           width: 8vw;
           height: 6vw;
@@ -290,23 +309,25 @@
     }
   }
   .imageContainer {
-    margin: 1.5rem 0;
-    gap: 1vw;
+    margin: 0.5rem 0;
+    // gap: 1vw;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .bg-head {
+      // border: 2px solid blue;
       width: 100%;
       font-size: 1.2rem;
       font-weight: 600;
       color: #343232;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       text-align: left;
     }
 
     .bgImgContainer {
+      // border: 2px solid blue;
       display: flex;
       flex-wrap: wrap;
       gap: 2vw;
@@ -347,15 +368,20 @@
   }
 
   .submitContainers {
-    padding-top: 2vw;
+    // padding-top: 2vw;
     .submitBtn {
-      margin-right: 1vw;
-      border-radius: 1vw;
+      // margin-right: 1vw;
+      border-radius: 0.8vw;
       background: #f6ce4c;
+      // border: 1.5px solid black;
       color: black;
       // width: 10%;
       font-size: 1.3vw;
-      padding: 0.5vw 1.3vw;
+      font-weight: 600;
+      padding: 0.3vw 1.5vw;
+    }
+    .submitBtn:hover {
+      background: #dcb32c;
     }
   }
 }
@@ -363,10 +389,10 @@
 @media all and (max-width: 1024px) {
   .EventNew {
     // border: 2px solid red;
-    margin-top: 2vw;
+    // margin-top: 2vw;
     .heading {
       // border: 2px solid black;
-      padding: 4vw;
+      padding: 2vw;
       // margin-top: 2vw;
       font-size: 6vw;
     }
@@ -434,11 +460,11 @@
       // align-items: flex-start;
       .templateBtn {
         // border: 1px solid green;
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         padding: 1.2vw 1vw;
         font-weight: 500;
         width: 100%;
-        color: white;
+        color: black;
         // background: #bc3dfb;
         border-radius: 2vw 0 2vw 0;
         animation: blink 1s linear infinite;
@@ -451,13 +477,13 @@
       }
       .errorText {
         color: rgb(239, 66, 66);
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-top: 0.7vw;
       }
       @keyframes blink {
         0%,
         100% {
-          background-color: #aba64d;
+          background-color: #f6ce4c;
         }
         50% {
           background-color: #f2a93c;
@@ -534,7 +560,7 @@
         .logoContainer {
           border: 2px dashed #ccc;
           border-radius: 0.8vw;
-          padding: 1vw;
+          padding: 1.5vw;
           width: 100%;
           height: auto;
           text-align: center;
@@ -549,8 +575,8 @@
             border-radius: 0.5vw;
           }
           .orText {
-            padding: 1vw;
-            font-size: 2vw;
+            // padding: 1vw;
+            font-size: 2.15vw;
           }
           .imgPlusIcon {
             // border: 1px solid red;
@@ -576,10 +602,12 @@
         }
 
         .fileInputLabel {
-          padding-top: 1.6vw;
+          // border: 2px solid green;
+          // padding-top: 1.6vw;
           text-align: center;
           cursor: pointer;
-          font-size: 1.5rem;
+          font-size: 2.2vw;
+          font-weight: bold;
           color: #bc3dfb;
 
           &:hover {
@@ -638,10 +666,11 @@
       padding-top: 2vw;
       .submitBtn {
         border-radius: 1.5vw;
-        background: #ce9e24;
-        color: #fff;
-        font-size: 1.6rem;
-        padding: 2vw 3vw;
+        background: #f6ce4c;
+        border: 1.5px solid black;
+        color: black;
+        font-size: 3vw !important;
+        padding: 1vw 3vw;
       }
     }
   }
@@ -649,10 +678,9 @@
 @media all and (max-width: 480px) {
   .EventNew {
     // border: 2px solid red;
-    margin-top: 8vw;
     .heading {
       // border: 2px solid black;
-      padding: 4vw;
+      padding: 2vw;
       margin-top: 2vw;
       font-size: 7vw;
     }
@@ -682,31 +710,22 @@
       align-items: flex-start;
 
       .labelling {
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: #555;
+        font-size: 1.2rem !important;
+        font-weight: 600 !important;
+        color: #343232 !important;
         width: 100%;
 
         // border: 1px solid #369124;
         .optionClass {
-          padding: 0.5rem;
+          padding: 0.6rem;
+          // border: 1px solid #369124;
           font-size: 1rem;
           color: #333; // Text color
           background-color: #f9f9f9;
-
-          &:hover {
-            background-color: #ff93df;
-            color: #fff;
-          }
-
-          &:focus {
-            background-color: #ff93df;
-            color: #fff;
-          }
         }
         .inputCon {
           width: 100%;
-          padding: 0.8rem;
+          padding: 1rem;
           border: 1px solid #ccc;
           border-radius: 5px;
           font-size: 1rem;
@@ -727,11 +746,11 @@
       // align-items: flex-start;
       .templateBtn {
         // border: 1px solid green;
-        font-size: 1.1rem;
+        font-size: 1.35rem;
         padding: 1.2vw 1vw;
         font-weight: 500;
         width: 100%;
-        color: white;
+        color: black;
         // background: #bc3dfb;
         border-radius: 2vw 0 2vw 0;
         animation: blink 1s linear infinite;
@@ -750,7 +769,7 @@
       @keyframes blink {
         0%,
         100% {
-          background-color: #aba64d;
+          background-color: #f6ce4c;
         }
         50% {
           background-color: #f2a93c;
@@ -765,11 +784,11 @@
       padding-bottom: 2vw;
 
       .shareHead {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         justify-content: flex-start;
         align-items: flex-start;
-        font-weight: 500;
-        color: #555;
+        font-weight: 600 !important;
+        color: #343232 !important;
         width: 100%;
       }
 
@@ -818,23 +837,24 @@
     }
 
     .logoUploader {
+      // border: 2px solid green;
       width: 100%;
-      gap: 0.7vw;
+      gap: 0.5vw;
       justify-content: flex-start;
       align-items: flex-start;
       .logoUploadLabel {
         .uploadText {
           // border: 2px solid blue;
-          padding: 1vw;
-          font-size: 1.1rem;
-          font-weight: 500;
-          color: #555;
+          padding: 0.6vw;
+          font-size: 1.2rem !important;
+          font-weight: 600 !important;
+          color: #343232 !important;
         }
         .logoContainer {
           border: 2px dashed #ccc;
           // border: 2px solid blue;
           border-radius: 0.8vw;
-          padding: 1vw;
+          padding: 2vw;
           width: 100%;
           height: auto;
           text-align: center;
@@ -848,13 +868,13 @@
           }
           .orText {
             // padding: 1vw;
-            font-size: 3vw;
+            font-size: 3.4vw;
           }
           .imgPlusIcon {
             // border: 1px solid red;
             // font-size: 4vh;
-            width: 4.2vw;
-            height: 4.2vw;
+            width: 4.3vw;
+            height: 4.3vw;
             cursor: pointer;
             position: absolute;
             //  color:#3d8fc2;
@@ -874,7 +894,7 @@
         }
 
         .fileInputLabel {
-          margin-top: 10px;
+          // margin-top: 10px;
           text-align: center;
           cursor: pointer;
           font-size: 1.1rem;
@@ -903,9 +923,9 @@
 
       .bg-head {
         width: 100%;
-        font-size: 1rem;
-        font-weight: 500;
-        color: #555;
+        font-size: 1.2rem !important;
+        font-weight: 600 !important;
+        color: #343232 !important;
         margin-bottom: 1rem;
         text-align: left;
       }
@@ -938,10 +958,11 @@
       padding-top: 2vw;
       .submitBtn {
         border-radius: 2vw;
-        background: #ce9e24;
-        color: #fff;
-        font-size: 1.6rem;
-        padding: 2vw 4vw;
+        background: #f6ce4c;
+        border: 1.5px solid black;
+        color: black;
+        font-size: 3.5vw !important;
+        padding: 1.5vw 4vw;
       }
     }
   }
