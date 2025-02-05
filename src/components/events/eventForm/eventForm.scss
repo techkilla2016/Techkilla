@@ -1,5 +1,4 @@
 .EventNew {
-  // border: 2px solid red;
   margin-top: 1vw;
   .heading {
     // border: 2px solid black;
@@ -182,11 +181,12 @@
 
     .checkboxInput:checked::before {
       content: "✔";
-      font-size: 1.1rem;
+      font-size: 1.07rem;
       color: black;
       position: absolute;
-      top: -3%;
-      left: 0.2vw;
+      top: -10%;
+      left: 0.25vw;
+      // border: 1px solid red;
       font-weight: 800;
     }
 
