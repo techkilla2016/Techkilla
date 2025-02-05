@@ -85,6 +85,7 @@ export default function EventForm({ action }) {
   const [allCategories, setAllCategories] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedTemplates,setSelectedTemplates]=useState();
 
   console.log(userDataSelector);
 
@@ -154,6 +155,14 @@ export default function EventForm({ action }) {
       : value;
     setFormData({ ...formData, [name]: updatedValue });
   };
+
+  useEffect(()=>{
+    if(formData.templates.length>0){
+      let data = allTemplatesData?.filter(template=>formData.templates.includes(template.id));
+      setSelectedTemplates(data)
+      // console.log(data)
+    }
+  },[formData])
 
   console.log(formData);
 
@@ -507,7 +516,7 @@ export default function EventForm({ action }) {
                     Select Screen Type
                   </option>
                   {data?.screenArr.map((screen) => (
-                    <option value={screen}>{screen}</option>
+                    <option value={screen}>{screen=="responsive" ? `${screen} (Mobile,Tablet,Deskstop)` : screen}</option>
                   ))}
                 </select>
               </label>
@@ -600,6 +609,17 @@ export default function EventForm({ action }) {
                   <p className="successText">
                     {formData.templates.length} template(s) selected.
                   </p>
+                )}
+                {formData.templates && formData.templates.length > 0 && selectedTemplates?.length>0 && (
+                  <div className="flex-row-center selectedTemplatesWrapper">
+                    {
+                      selectedTemplates.map((item)=>{
+                        return <div>
+                          <Image width={100} height={100} src={item.card} />
+                        </div>
+                      })
+                    }
+                  </div>
                 )}
               </div>
             )}
