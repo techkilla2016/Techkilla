@@ -8,6 +8,9 @@ import { db, storage } from "@/firebase-config";
 import crypto from "crypto";
 import Loader from "./../loader/index";
 
+import { resizeImgDimension } from "@/utils/reduceImgDimension";
+import { reduceImgSize } from "@/utils/reduceImgSize";
+
 import Header from "@/components/header";
 import Congratulation from "@/components/events/congratulations";
 
@@ -360,37 +363,51 @@ export default function EventForm({ action }) {
   // trigger file upload
   const triggerFileUpload = () => {
     if (fileInputRef.current) {
-      console.log("File input found, triggering click...");
       fileInputRef.current.click();
     } else {
       console.error("File input reference is null or undefined.");
     }
   };
 
-  // handle drag and drop
-  const handleDrop = (event) => {
-    event.preventDefault();
-    const file = event.dataTransfer.files[0];
-    if (file && file.type.startsWith("image/")) {
-      setLoading(true);
-      setFormData({ ...formData, logo: file });
-      setLoading(false);
-    } else {
-      console.log("Please drop a valid image file.");
-      toast.error("Please drop a valid image file.", toastOptions);
-    }
-  };
-
-  // Handle file select
-  const handleFileSelect = (event) => {
+  // Handle file select and drop
+  const handleFileSelectAndDrop = (event, type) => {
     event.preventDefault();
 
-    const file = event.target.files[0];
+    console.log(type);
+
+    const file =
+      type === "upload" ? event.target.files[0] : event.dataTransfer.files[0];
 
     if (file && file.type.startsWith("image/")) {
-      setLoading(true);
-      setFormData({ ...formData, logo: file });
-      setLoading(false);
+      let imageFile = file;
+      const reader = new FileReader();
+
+      reader.onloadend = async (event) => {
+        const img = new window.Image();
+        img.src = event.target.result;
+
+        img.onload = async () => {
+          try {
+            setLoading(true);
+
+            const resizedFile = await resizeImgDimension(imageFile);
+            const finalFile = await reduceImgSize(resizedFile, imageFile.size);
+
+            const finalReader = new FileReader();
+            finalReader.onloadend = () => {
+              setFormData({ ...formData, logo: finalFile });
+              setLoading(false);
+            };
+
+            finalReader.readAsDataURL(finalFile);
+          } catch (error) {
+            console.error("Error processing image:", error);
+            setLoading(false);
+          }
+        };
+      };
+
+      reader.readAsDataURL(file);
     } else {
       toast.error("Please select a valid image file.", toastOptions);
     }
@@ -647,7 +664,7 @@ export default function EventForm({ action }) {
             {/* logo upload */}
             <div
               className="flex-col-center logoUploader"
-              onDrop={handleDrop}
+              onDrop={(event) => handleFileSelectAndDrop(event, "drop")}
               onDragOver={(e) => e.preventDefault()}
             >
               <label
@@ -704,7 +721,7 @@ export default function EventForm({ action }) {
                 ref={fileInputRef}
                 accept="image/*"
                 id="fileInput"
-                onChange={handleFileSelect}
+                onChange={(event) => handleFileSelectAndDrop(event, "upload")}
                 style={{ display: "none" }}
               />
             </div>
