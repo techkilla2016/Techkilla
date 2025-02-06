@@ -103,11 +103,11 @@ export default function EventPreviewPopup({ eventData, onClose }) {
                 <td>URL</td>
                 <td>
                   <a
-                    href="http://localhost:3000/events/product"
+                    href="https://techkilla-events-sass.vercel.app/"
                     target="_blank"
                     style={{ color: "blue ", textDecoration: "underline" }}
                   >
-                    http://localhost:3000/events/product
+                    https://techkilla-events-sass.vercel.app/
                   </a>
                 </td>
               </tr>

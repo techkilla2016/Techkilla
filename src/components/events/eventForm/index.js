@@ -192,7 +192,7 @@ export default function EventForm({ action }) {
         setFormData(event);
       }
     }
-  }, [searchParams]);
+  }, [searchParams, allEventsSelector]);
 
   // handle form changes
   const handleChange = (e) => {
