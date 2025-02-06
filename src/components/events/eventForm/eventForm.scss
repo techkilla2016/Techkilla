@@ -1,5 +1,4 @@
 .EventNew {
-  // border: 2px solid red;
   margin-top: 1vw;
   .heading {
     // border: 2px solid black;
@@ -24,6 +23,7 @@
     margin-bottom: 8vw;
     // border: 1px solid #611414;
     border-radius: 1vw;
+   
   }
   .valueField {
     // border: 1px solid #f82424;
@@ -90,6 +90,18 @@
       font-size: 1rem;
       margin-top: 0.7vw;
     }
+    .selectedTemplatesWrapper{
+      // border: 1px solid red;
+      // padding: .4svh;
+      gap: 0.6svh;
+      .selectedTemplate{
+        border-radius: 0.55svh;
+        overflow: hidden;
+        // border: 1px solid red;
+        // border: 10px solid red !important;
+      }
+    }
+
     @keyframes blink {
       0%,
       100% {
@@ -146,11 +158,12 @@
 
     .checkboxInput:checked::before {
       content: "✔";
-      font-size: 1.1rem;
+      font-size: 1.07rem;
       color: black;
       position: absolute;
-      top: -3%;
-      left: 0.2vw;
+      top: -10%;
+      left: 0.25vw;
+      // border: 1px solid red;
       font-weight: 800;
     }
 

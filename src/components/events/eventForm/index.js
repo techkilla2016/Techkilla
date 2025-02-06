@@ -92,8 +92,15 @@ export default function EventForm({ action }) {
   const [allCategories, setAllCategories] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedTemplates,setSelectedTemplates]=useState();
 
-  console.log(userDataSelector);
+
+  useEffect(()=>{
+    if(formData.templates.length>0){
+      let data = allTemplatesData?.filter(template=>formData.templates.includes(template.id));
+      setSelectedTemplates(data)
+    }
+  },[formData,allTemplatesData])
 
   // get all templates
   useEffect(() => {
@@ -621,20 +628,35 @@ export default function EventForm({ action }) {
                     {formData.templates.length} template(s) selected.
                   </p>
                 )}
+
+                {formData.templates && formData.templates.length > 0 && selectedTemplates?.length>0 && (
+                  <div className="flex-row-center selectedTemplatesWrapper">
+                    {
+                      selectedTemplates.map((item)=>{
+                        return <div className="flex-row-center selectedTemplate">
+                          <Image alt="image" width={100} height={100} src={item.card} />
+                        </div>
+                      })
+                    }
+                  </div>
+                )}
               </div>
             )}
-            {showTemplatePopup && (
-              <SelectTemplatesPopup
-                setShowTemplatePopup={setShowTemplatePopup}
-                templateNumber={formData.templateNumber}
-                setFormData={setFormData}
-                selectedTemplatesFromProps={formData.templates}
-                allTemplatesData={allTemplatesData}
-                allCategories={allCategories}
-                setAllCategories={setAllCategories}
-                setAllTemplatesData={setAllTemplatesData}
-              />
-            )}
+
+            {/* {showTemplatePopup && (
+            )} */}
+            <SelectTemplatesPopup
+              setShowTemplatePopup={setShowTemplatePopup}
+              templateNumber={formData.templateNumber}
+              setFormData={setFormData}
+              selectedTemplatesFromProps={formData.templates}
+              allTemplatesData={allTemplatesData}
+              allCategories={allCategories}
+              setAllCategories={setAllCategories}
+              setAllTemplatesData={setAllTemplatesData}
+              showTemplatePopup={showTemplatePopup}
+              action={action}
+            />
             {/* share options */}
             <div className="flex-col-center shareOption">
               <label className="flex-row-center shareHead">

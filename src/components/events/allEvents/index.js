@@ -22,7 +22,8 @@ export default function AllEvents({ data }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8;
+  const [inputFocus,setInputFocus]=useState(null)
+  const itemsPerPage = 4;
 
   const formatDate = (timestamp) => {
     if (timestamp && typeof timestamp.toDate === "function") {
@@ -117,6 +118,8 @@ export default function AllEvents({ data }) {
                 className="filter-input"
                 type="text"
                 value={eventName}
+                onFocus={()=>setInputFocus("name")}
+                onBlur={()=>setInputFocus(null)}
                 onChange={(e) => setEventName(e.target.value)}
               />
             </label>
@@ -128,6 +131,8 @@ export default function AllEvents({ data }) {
               <input
                 className="filter-input"
                 type="text"
+                onFocus={()=>setInputFocus("number")}
+                onBlur={()=>setInputFocus(null)}
                 value={eventNumber}
                 onChange={(e) => setEventNumber(e.target.value)}
               />
@@ -158,7 +163,7 @@ export default function AllEvents({ data }) {
             </tr>
           </thead>
           <tbody>
-            {paginatedEvents.map((item) => (
+            {paginatedEvents.length>0  ? paginatedEvents.map((item) => (
               <tr className="table-row" key={item.id}>
                 <td className="table-data">#{item.eventNumber}</td>
                 <td className="table-data">{item.eventName}</td>
@@ -194,7 +199,7 @@ export default function AllEvents({ data }) {
                   </span>
                 </td>
               </tr>
-            ))}
+            )) : <tr className="table-row">No Data Found by {inputFocus=="name" ? "Event name" :"Event number"}</tr>}
           </tbody>
         </table>
       </div>

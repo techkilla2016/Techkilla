@@ -6,24 +6,31 @@
   right: 0;
   z-index: 9999;
   bottom: 0;
-  /* background: linear-gradient(to right, #deeded, #e8e0e6); */
+  //  background: linear-gradient(to right, #deeded, #e8e0e6); 
+  // background-color: #fff;
   padding: 1.5vw;
   margin: 5.2vw auto;
-  //   border: 3px solid blue;
+    // border: 3px solid blue;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.1s ease-in-out;
+    transform: translateY(-120%);
   //   z-index: 1000000;
 
   .popupContent {
-    background-color: white;
+    background-color: white ;
 
-    background-image: url("./../../../../../public/faceSwap/bg.png");
+    // background-image: url("./../../../../../public/faceSwap/bg.png");
     // border: 3px solid blue;
     border-radius: 1vw;
-    background: linear-gradient(to right, #e8e0e6, #deeded);
+    // background: linear-gradient(to right, #e8e0e6, #deeded);
+
     height: 100%;
     width: 70%;
-    padding: 0.5vw;
+    padding: 0.4vw;
     gap: 1vw;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    // border: 2px solid red;
     position: relative;
     justify-content: flex-start;
     .mainContainer {
@@ -61,22 +68,21 @@
         flex-wrap: wrap;
         // border: 2px solid rgb(4, 255, 0);
         .categoryBtn {
-          font-size: 1.2vw;
+          font-size: 1.1vw;
           font-weight: 500;
           //   color: white;
           background: linear-gradient(white, white) padding-box,
             linear-gradient(to right, #ebdd14, #100a14) border-box;
           border: 0.15vw solid transparent;
-          padding: 0.4vw 0.9vw;
-          border-radius: 0.7vw;
+          padding: 0.1vw 0.9vw;
+          border-radius: 0.3vw;
           cursor: pointer;
         }
         .categoryBtn:hover,
         .selectedCategory {
-          background: linear-gradient(to right, #eadc12, #d88717) padding-box,
-            linear-gradient(to right, #63625a, #100a14) border-box;
-          border: 0.3vh solid transparent;
-          color: #fff;
+          background: #d3b717;
+          border: 0.3vh solid #000;
+          color: #000;
         }
       }
       .templateMainContainer {
@@ -91,9 +97,9 @@
 
         .templateContainer {
           //   border-radius: 1vw;
-          //   border: 1px solid blue;
           //   width: 10.5vw;
           border: 0.15vw solid transparent;
+          // border: 10px solid blue;
           width: 9.5vw;
           cursor: pointer;
           border-radius: 0.5vw;
@@ -136,8 +142,8 @@
           .customLabel::after {
             content: "✔";
             position: absolute;
-            top: 0.3vw;
-            left: 0.5vw;
+            top: 0.1vw;
+            left: 0.4vw;
             color: black;
             font-weight: 600;
             transform: scale(0);
@@ -158,19 +164,21 @@
       border: 1px solid #696964;
       outline: none;
       color: black;
-      padding: 0.1vw 1.2vw;
+      padding: 0.2vw 1.2vw;
       background: #ebdd14;
       cursor: pointer;
-      font-size: 1.5vw;
-      border-radius: 1vw;
+      // font-weight: 600;
+      // text-transform: capitalize;
+      font-size: 1vw;
+      border-radius: 0.4vw;
       margin-bottom: 2vw;
     }
     .closeBtn {
       position: absolute;
-      width: 3vw;
-      right: -2%;
+      width: 2.3vw;
+      right: -1%;
       //   color: red;
-      top: -3%;
+      top: -2%;
       cursor: pointer;
       z-index: 10;
     }
