@@ -27,7 +27,8 @@ export default function SelectTemplatesPopup({
   allCategories,
   setAllCategories,
   setAllTemplatesData,
-  showTemplatePopup
+  showTemplatePopup,
+  action
 }) {
   // const [allTemplatesData, setAllTemplatesData] = useState();
   // const [allCategories, setAllCategories] = useState([]);
@@ -38,7 +39,7 @@ export default function SelectTemplatesPopup({
   const [selectedTemplates, setSelectedTemplates] = useState(
     selectedTemplatesFromProps || []
   );
-
+ 
   // Fetch templates data when the component mounts
   // useEffect(() => {
   //   const fetchTemplates = async () => {
@@ -58,13 +59,12 @@ export default function SelectTemplatesPopup({
   //   fetchTemplates();
   // }, []);
 
-  useEffect(() => {
-    console.log(filteredTemplates);
-  }, [filteredTemplates]);
-
-  useEffect(() => {
-    console.log(selectedTemplates);
-  }, [selectedTemplates]);
+  useEffect(()=>{
+    if(action=="edit"){
+      setSelectedTemplates(selectedTemplatesFromProps);
+      console.log('updates handled in edit states')
+    }
+  },[selectedTemplatesFromProps])
 
   // Extract categories from the fetched templates and set default category
   useEffect(() => {

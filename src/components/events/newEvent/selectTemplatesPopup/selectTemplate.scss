@@ -6,12 +6,15 @@
   right: 0;
   z-index: 9999;
   bottom: 0;
-  /* background: linear-gradient(to right, #deeded, #e8e0e6); */
+  //  background: linear-gradient(to right, #deeded, #e8e0e6); 
+  // background-color: #fff;
   padding: 1.5vw;
   margin: 5.2vw auto;
     // border: 3px solid blue;
+    width: 100%;
+    overflow: hidden;
     transition: transform 0.1s ease-in-out;
-    transform: translateY(-140%);
+    transform: translateY(-120%);
   //   z-index: 1000000;
 
   .popupContent {
