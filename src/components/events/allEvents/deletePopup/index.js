@@ -12,10 +12,10 @@ export default function DeletePopup({ onConfirm, onCancel, show, loading }) {
         <h3>Are you sure you want to delete this event?</h3>
 
         {loading ? (
-          // <div className="loader-container">
-          <Loader />
+          <div className="flex-row-center loader-container">
+            <div className="spinLoader"></div>
+          </div>
         ) : (
-          // </div>
           <div className="flex-row-center buttonContainer">
             <button onClick={onConfirm} className="confirm-delete">
               Yes, Delete

@@ -121,7 +121,7 @@ export default function SelectTemplatesPopup({
         const checked = e.target.checked;
         if(checked){
           toast.warning(
-            `You can select only up to ${templateNumber} templates.`,
+            `You can select only ${templateNumber} templates.`,
             toastOptions
           );
         } 

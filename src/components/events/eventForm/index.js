@@ -49,7 +49,43 @@ const data = {
   shareOptionsArr: ["QR", "email", "print", "download"],
   productsArr: ["photobooth"],
   templateNumberArr: [10],
-  durationHour: [1, 2, 3, 4, 5, 6, 7],
+  eventPackages: [
+    {
+      duration: 1,
+      credits: 500,
+      price: 7000,
+    },
+    {
+      duration: 2,
+      credits: 1000,
+      price: 13000,
+    },
+    {
+      duration: 3,
+      credits: 1500,
+      price: 20000,
+    },
+    {
+      duration: 4,
+      credits: 2000,
+      price: 26000,
+    },
+    {
+      duration: 5,
+      credits: 2500,
+      price: 33000,
+    },
+    {
+      duration: 6,
+      credits: 3000,
+      price: 40000,
+    },
+    {
+      duration: 7,
+      credits: 3500,
+      price: 45000,
+    },
+  ],
   numberOfDevices: [1, 2, 3, 4],
 };
 
@@ -62,7 +98,7 @@ const DEFAULT_DATA = {
   templateNumber: null,
   templates: [],
   logo: "",
-  duration: null,
+  eventPackage: null,
   numberOfDevices: null,
 };
 
@@ -92,15 +128,16 @@ export default function EventForm({ action }) {
   const [allCategories, setAllCategories] = useState([]);
   const [loading, setLoading] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [selectedTemplates,setSelectedTemplates]=useState();
+  const [selectedTemplates, setSelectedTemplates] = useState();
 
-
-  useEffect(()=>{
-    if(formData.templates.length>0){
-      let data = allTemplatesData?.filter(template=>formData.templates.includes(template.id));
-      setSelectedTemplates(data)
+  useEffect(() => {
+    if (formData.templates.length > 0) {
+      let data = allTemplatesData?.filter((template) =>
+        formData.templates.includes(template.id)
+      );
+      setSelectedTemplates(data);
     }
-  },[formData,allTemplatesData])
+  }, [formData, allTemplatesData]);
 
   // get all templates
   useEffect(() => {
@@ -159,13 +196,15 @@ export default function EventForm({ action }) {
   // handle form changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const updatedValue = [
-      "duration",
-      "numberOfDevices",
-      "templateNumber",
-    ].includes(name)
+
+    // convert string to number
+    let updatedValue = ["numberOfDevices", "templateNumber"].includes(name)
       ? Number(value)
       : value;
+
+    // convert string to object
+    if (name === "eventPackage") updatedValue = JSON.parse(value);
+
     setFormData({ ...formData, [name]: updatedValue });
   };
 
@@ -205,7 +244,7 @@ export default function EventForm({ action }) {
     // create event
     const createEvent = async () => {
       try {
-        const { logo, duration, ...eventData } = formData;
+        const { logo, ...eventData } = formData;
 
         // firestore references
         const counterDocRef = doc(db, "techkilla_events", "eventCounter");
@@ -243,9 +282,9 @@ export default function EventForm({ action }) {
             ...eventData,
             userId: userDataSelector.uid,
             createdAt: Timestamp.fromDate(new Date()),
-            expiresAt: Timestamp.fromDate(
+            /* expiresAt: Timestamp.fromDate(
               new Date(new Date().getTime() + duration * 24 * 60 * 60 * 1000)
-            ),
+            ), */
             eventNumber: updatedCounter,
             password: pass,
           });
@@ -282,7 +321,7 @@ export default function EventForm({ action }) {
     // update event
     const updateEvent = async () => {
       try {
-        const { logo, duration, ...eventData } = formData;
+        const { logo, ...eventData } = formData;
         // update event
         const collectionRef = collection(db, "techkilla_events");
         const docRef = doc(collectionRef, formData.id);
@@ -432,7 +471,7 @@ export default function EventForm({ action }) {
   const formatDate = (timestamp) => {
     if (timestamp && typeof timestamp.toDate === "function") {
       const date = timestamp.toDate();
-      const day = String(date.getDate()).padStart(2, "0");
+      const duration = String(date.getDate()).padStart(2, "0");
       const month = String(date.getMonth() + 1).padStart(2, "0");
       const year = date.getFullYear(); // Full year (e.g., 2025)
       let hours = String(date.getHours()).padStart(2, "0");
@@ -440,7 +479,7 @@ export default function EventForm({ action }) {
       const ampm = hours >= 12 ? "PM" : "AM";
       hours = hours % 12;
       hours = hours ? String(hours).padStart(2, "0") : "12";
-      return `${day}-${month}-${year}, ${hours}:${minutes} ${ampm}`;
+      return `${duration}-${month}-${year}, ${hours}:${minutes} ${ampm}`;
     }
     return "N/A";
   };
@@ -518,6 +557,7 @@ export default function EventForm({ action }) {
               </label>
             </div>
 
+            {/* screen */}
             <div className="flex-col-center valueField">
               <label className="labelling">
                 Screen:
@@ -540,27 +580,28 @@ export default function EventForm({ action }) {
               </label>
             </div>
 
-            {/* event duration */}
+            {/* event package */}
             <div className="flex-col-center valueField">
               <label className="labelling">
                 {action === "add"
-                  ? "Event Duration:"
-                  : `Update Event Duration:`}
+                  ? "Select a Event Package:"
+                  : `Update Event Package:`}
                 <select
-                  value={formData.duration}
-                  name="duration"
+                  value={formData.eventPackage}
+                  name="eventPackage"
                   onChange={handleChange}
                   className="inputCon"
                   required={action === "add"}
                 >
                   <option value="" disabled selected>
                     {action === "add"
-                      ? "Select Event Duration"
-                      : "Update Event Duration"}
+                      ? "Select a Event Package"
+                      : "Update Event Package"}
                   </option>
-                  {data?.durationHour.map((screen) => (
-                    <option key={screen} value={screen}>
-                      {screen} {screen > 1 ? "Day's" : "Day"}
+                  {data?.eventPackages.map((pckg) => (
+                    <option key={pckg.duration} value={JSON.stringify(pckg)}>
+                      {pckg.duration} {pckg.duration > 1 ? "Days" : "Day"} -{" "}
+                      {pckg.credits} credits - {pckg.price} Rs
                     </option>
                   ))}
                 </select>
@@ -629,17 +670,24 @@ export default function EventForm({ action }) {
                   </p>
                 )}
 
-                {formData.templates && formData.templates.length > 0 && selectedTemplates?.length>0 && (
-                  <div className="flex-row-center selectedTemplatesWrapper">
-                    {
-                      selectedTemplates.map((item)=>{
-                        return <div className="flex-row-center selectedTemplate">
-                          <Image alt="image" width={100} height={100} src={item.card} />
-                        </div>
-                      })
-                    }
-                  </div>
-                )}
+                {formData.templates &&
+                  formData.templates.length > 0 &&
+                  selectedTemplates?.length > 0 && (
+                    <div className="flex-row-center selectedTemplatesWrapper">
+                      {selectedTemplates.map((item) => {
+                        return (
+                          <div className="flex-row-center selectedTemplate">
+                            <Image
+                              alt="image"
+                              width={100}
+                              height={100}
+                              src={item.card}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
               </div>
             )}
 
@@ -694,7 +742,9 @@ export default function EventForm({ action }) {
                 <div className="logoContainer">
                   {isUploading ? (
                     <div className="flex-col-center loaderContainer">
-                      <div className="spinLoader"></div>
+                      <div className="spinLoader">
+                        
+                      </div>
                     </div>
                   ) : formData.logo ? (
                     <div>
