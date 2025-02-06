@@ -46,16 +46,6 @@
         font-size: 1rem;
         color: #333; // Text color
         background-color: #f9f9f9;
-
-        &:hover {
-          background-color: #ff93df;
-          color: #fff;
-        }
-
-        &:focus {
-          background-color: #ff93df;
-          color: #fff;
-        }
       }
       .inputCon {
         width: 100%;
@@ -235,14 +225,6 @@
           // padding: 0.5vw;
           // border: 1px solid red;
         }
-        // .addNewFace {
-        //   border: 0.23vh solid #b8b5b5;
-        //   background-color: #fbf6f6;
-        //   width: 10vh;
-        //   padding: 0.3vh;
-        //   height: 100%;
-        //   border-radius: 0.5vh;
-        //   /* border: 1px solid red; */
 
         .imgPlusIcon {
           // border: 1px solid red;
@@ -257,10 +239,6 @@
           right: 1%;
           // color: #3c3b3b;
         }
-
-        // &:hover {
-        //   border-color: #d77df5;
-        // }
 
         img {
           max-width: 100%;
