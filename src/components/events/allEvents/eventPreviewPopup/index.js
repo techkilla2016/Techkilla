@@ -45,10 +45,7 @@ export default function EventPreviewPopup({ eventData, onClose }) {
       await Promise.all(downloadPromises);
 
       const zipBlob = await zip.generateAsync({ type: "blob" });
-      saveAs(
-        zipBlob,
-        `snapshawt_${productName}_${eventName}_${eventNumber}.zip`
-      );
+      saveAs(zipBlob, `${productName}_${eventName}_${eventNumber}.zip`);
     } catch (error) {
       console.error("Error downloading folder:", error);
     }
@@ -64,7 +61,7 @@ export default function EventPreviewPopup({ eventData, onClose }) {
           <HiOutlineFolderDownload
             onClick={() =>
               downloadFolder(
-                `snapshawt_events/${productName}/${eventName}_${eventNumber}`
+                `techkilla_events/${productName}/${eventName}_${eventNumber}`
               )
             }
             className="flex-row-center downloadBtn"
