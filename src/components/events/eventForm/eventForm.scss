@@ -23,7 +23,6 @@
     margin-bottom: 8vw;
     // border: 1px solid #611414;
     border-radius: 1vw;
-   
   }
   .valueField {
     // border: 1px solid #f82424;
@@ -90,11 +89,11 @@
       font-size: 1rem;
       margin-top: 0.7vw;
     }
-    .selectedTemplatesWrapper{
+    .selectedTemplatesWrapper {
       // border: 1px solid red;
       // padding: .4svh;
       gap: 0.6svh;
-      .selectedTemplate{
+      .selectedTemplate {
         border-radius: 0.55svh;
         overflow: hidden;
         // border: 1px solid red;
@@ -202,7 +201,7 @@
         cursor: pointer;
         position: relative;
         transition: border-color 0.3s;
-        .logoContainer {
+        .loaderContainer {
           border: 2px solid blue;
           width: 100%;
           gap: 10px;
