@@ -129,6 +129,7 @@ export default function EventForm({ action }) {
   const [loading, setLoading] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedTemplates, setSelectedTemplates] = useState();
+  const [createdDocumentId, setCreatedDocumentId] = useState(null);
 
   useEffect(() => {
     if (formData.templates.length > 0) {
@@ -252,6 +253,7 @@ export default function EventForm({ action }) {
 
         // create a new document reference for the event for unique id
         const newDocRef = doc(collectionRef);
+        setCreatedDocumentId(newDocRef.id);
 
         // run Firestore transaction to get and increment eventNumber
         const newEventNumber = await runTransaction(db, async (transaction) => {
@@ -833,6 +835,7 @@ export default function EventForm({ action }) {
           <Congratulation
             isOpen={isPopupOpen}
             onClose={() => setIsPopupOpen(false)}
+            createdDocumentId={createdDocumentId}
           />
         </>
       )}

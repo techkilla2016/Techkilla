@@ -4,7 +4,7 @@ import Link from "next/link";
 import closeBtn from "@/../public/modals/upgrade-now/close-btn.png";
 import "./congratulation.scss";
 
-const Congratulation = ({ isOpen, onClose }) => {
+const Congratulation = ({ isOpen, onClose, createdDocumentId }) => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -35,7 +35,10 @@ const Congratulation = ({ isOpen, onClose }) => {
           <p>Your event has been created successfully.</p>
         </div>
         <div className="flex-row-center footer-part">
-          <Link href="/events/pricing" className="flex-row-center launch">
+          <Link
+            href={`/events/pricing?id=${createdDocumentId}`}
+            className="flex-row-center launch"
+          >
             Launch
           </Link>
           <Link href="/events/" className="flex-row-center dashboard">

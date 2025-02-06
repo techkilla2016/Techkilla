@@ -83,8 +83,6 @@ export default function EventsPage() {
     }
   };
 
-  
-
   return (
     <div className="flex-row-center EventsPage">
       <Header />

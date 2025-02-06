@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
 import BillingInfoForm from "./billingForm";
 import { useSelector } from "react-redux";
+import { useSearchParams } from "next/navigation";
 
 const paymentMethods = [
   {
@@ -35,17 +36,6 @@ const paymentImages = [
   "/events/price-page/icons-08.png",
 ];
 
-const orderSummaryItems = [
-  "50 Credit",
-  "1 Day",
-  "No Watermark",
-  "HD Image Share",
-  "Access to 10 Templates",
-  "Retake & Quick Share",
-  "Custom Branding",
-  "Multi-Device Support",
-];
-
 // toast options
 const toastOptions = {
   position: "top-center",
@@ -58,8 +48,21 @@ const toastOptions = {
   theme: "light",
 };
 
+const DEFAULT_ORDER_SUMMARY_ITEMS = [
+  "No Watermark",
+  "HD Image Share",
+  "Access to 10 Templates",
+  "Retake & Quick Share",
+  "Custom Branding",
+  "Multi-Device Support",
+];
+
 export default function PriceComponent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const userDataSelector = useSelector((data) => data.userData.user);
+  const allEventsSelector = useSelector((data) => data.allEvents);
+
   const [price, setPrice] = useState("$ 4.99");
   const [isMobileView, setIsMobileView] = useState(false);
   const [isForm, setIsForm] = useState(true);
@@ -76,9 +79,34 @@ export default function PriceComponent() {
   });
 
   const [userBillingInfo, setUserBillingInfo] = useState();
-  const userDataSelector = useSelector((data) => data.userData.user);
   const [currentBilling, setCurrentBilling] = useState();
   const [isShowOldBillingInfo, setIsShowOldBillingInfo] = useState();
+  const [eventData, setEventData] = useState();
+  const [orderSummaryItems, setOrderSummaryItems] = useState(
+    DEFAULT_ORDER_SUMMARY_ITEMS
+  );
+
+  // fetch event data
+  useEffect(() => {
+    if (searchParams && allEventsSelector?.length > 0) {
+      const eventId = searchParams.get("id");
+      const event = allEventsSelector.find((event) => event.id === eventId);
+      setEventData(event);
+      setOrderSummaryItems((prev) =>
+        prev.length < 8
+          ? [
+              `${event.eventPackage.duration} ${
+                event.eventPackage.duration > 1 ? "Days" : "Day"
+              }`,
+              `${event.eventPackage.credits} credits`,
+              ...prev,
+            ]
+          : prev
+      );
+    }
+  }, [searchParams, allEventsSelector]);
+
+  console.log(eventData, "eventdata");
 
   // useEffect(() => {
   //   const getBillingData = async () => {
@@ -150,7 +178,7 @@ export default function PriceComponent() {
     }
   }
 
-  const handleConfirmAndPay = () => {
+  /*   const handleConfirmAndPay = () => {
     const user = UserDB.getUser();
 
     if (!user) {
@@ -192,7 +220,7 @@ export default function PriceComponent() {
     } else {
       toast.error("Please select a payment method", toastOptions);
     }
-  };
+  }; */
 
   return (
     <div className="flex-row-center payment-section">
@@ -200,21 +228,13 @@ export default function PriceComponent() {
       <div className="flex-col-center left-form-section">
         {/* left-title */}
         <div className="flex-row-center premium-icon-container">
-          <div className="flex-row-center premium-icon">
-            <Image
-              src="/logo/logo-01.png"
-              alt="price-icon"
-              width={150}
-              height={150}
-            />
-          </div>
           <h1 className="heading-txt">Techkilla's AI Photobooth</h1>
         </div>
 
         {/* left-content */}
         <div className="flex-col-center left-content">
           <ul className="flex-col-center list-items-container">
-            {orderSummaryItems.map((item, index) => (
+            {orderSummaryItems?.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>

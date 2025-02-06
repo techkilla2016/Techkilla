@@ -22,7 +22,7 @@ export default function AllEvents({ data }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
-  const [inputFocus,setInputFocus]=useState(null)
+  const [inputFocus, setInputFocus] = useState(null);
   const itemsPerPage = 4;
 
   const formatDate = (timestamp) => {
@@ -118,8 +118,8 @@ export default function AllEvents({ data }) {
                 className="filter-input"
                 type="text"
                 value={eventName}
-                onFocus={()=>setInputFocus("name")}
-                onBlur={()=>setInputFocus(null)}
+                onFocus={() => setInputFocus("name")}
+                onBlur={() => setInputFocus(null)}
                 onChange={(e) => setEventName(e.target.value)}
               />
             </label>
@@ -131,8 +131,8 @@ export default function AllEvents({ data }) {
               <input
                 className="filter-input"
                 type="text"
-                onFocus={()=>setInputFocus("number")}
-                onBlur={()=>setInputFocus(null)}
+                onFocus={() => setInputFocus("number")}
+                onBlur={() => setInputFocus(null)}
                 value={eventNumber}
                 onChange={(e) => setEventNumber(e.target.value)}
               />
@@ -163,43 +163,53 @@ export default function AllEvents({ data }) {
             </tr>
           </thead>
           <tbody>
-            {paginatedEvents.length>0  ? paginatedEvents.map((item) => (
-              <tr className="table-row" key={item.id}>
-                <td className="table-data">#{item.eventNumber}</td>
-                <td className="table-data">{item.eventName}</td>
-                <td className="table-data mobile-hide">
-                  {formatDate(item.createdAt)}
-                </td>
-                <td className="table-data mobile-hide">
-                  {formatDate(item.expiresAt)}
-                </td>
-                <td className="table-data mobile-hide">{item.productName}</td>
-                <td className="flex-row-center table-action">
-                  <span
-                    onClick={() => handlePreview(item)}
-                    className="flex-row-center preview-button"
-                  >
-                    <FaRegEye />
-                  </span>
-                  <Link href="" className="flex-row-center launch-button">
-                    <PiRocketLaunch />
-                  </Link>
+            {paginatedEvents.length > 0 ? (
+              paginatedEvents.map((item) => (
+                <tr className="table-row" key={item.id}>
+                  <td className="table-data">#{item.eventNumber}</td>
+                  <td className="table-data">{item.eventName}</td>
+                  <td className="table-data mobile-hide">
+                    {formatDate(item.createdAt)}
+                  </td>
+                  <td className="table-data mobile-hide">
+                    {formatDate(item.expiresAt)}
+                  </td>
+                  <td className="table-data mobile-hide">{item.productName}</td>
+                  <td className="flex-row-center table-action">
+                    <span
+                      onClick={() => handlePreview(item)}
+                      className="flex-row-center preview-button"
+                    >
+                      <FaRegEye />
+                    </span>
+                    <Link
+                      href={`/events/pricing?id=${item.id}`}
+                      className="flex-row-center launch-button"
+                    >
+                      <PiRocketLaunch />
+                    </Link>
 
-                  <Link
-                    href={`/events/edit?event=${item.eventNumber}`}
-                    className="flex-row-center edit-button"
-                  >
-                    <MdOutlineModeEdit />
-                  </Link>
-                  <span
-                    onClick={() => handleDelete(item.id)}
-                    className="flex-row-center delete-button"
-                  >
-                    <MdDeleteOutline />
-                  </span>
-                </td>
+                    <Link
+                      href={`/events/edit?event=${item.eventNumber}`}
+                      className="flex-row-center edit-button"
+                    >
+                      <MdOutlineModeEdit />
+                    </Link>
+                    <span
+                      onClick={() => handleDelete(item.id)}
+                      className="flex-row-center delete-button"
+                    >
+                      <MdDeleteOutline />
+                    </span>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr className="table-row">
+                No Data Found by{" "}
+                {inputFocus == "name" ? "Event name" : "Event number"}
               </tr>
-            )) : <tr className="table-row">No Data Found by {inputFocus=="name" ? "Event name" :"Event number"}</tr>}
+            )}
           </tbody>
         </table>
       </div>
