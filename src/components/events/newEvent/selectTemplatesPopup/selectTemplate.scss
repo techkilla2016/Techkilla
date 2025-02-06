@@ -142,12 +142,13 @@
           .customLabel::after {
             content: "✔";
             position: absolute;
-            top: 0.1vw;
-            left: 0.4vw;
+            top: 0.2svw;
+            left: 0.4svw;
             color: black;
             font-weight: 600;
             transform: scale(0);
             transition: transform 0.2s ease;
+            font-size: 1svw;
           }
 
           .customCheckbox:checked + .customLabel::after {
