@@ -35,7 +35,7 @@ const Congratulation = ({ isOpen, onClose }) => {
           <p>Your event has been created successfully.</p>
         </div>
         <div className="flex-row-center footer-part">
-          <Link href="/events/test-page" className="flex-row-center launch">
+          <Link href="/events/pricing" className="flex-row-center launch">
             Launch
           </Link>
           <Link href="/events/" className="flex-row-center dashboard">
