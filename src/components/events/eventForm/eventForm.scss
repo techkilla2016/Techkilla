@@ -23,7 +23,6 @@
     margin-bottom: 8vw;
     // border: 1px solid #611414;
     border-radius: 1vw;
-   
   }
   .valueField {
     // border: 1px solid #f82424;
@@ -46,16 +45,6 @@
         font-size: 1rem;
         color: #333; // Text color
         background-color: #f9f9f9;
-
-        &:hover {
-          background-color: #ff93df;
-          color: #fff;
-        }
-
-        &:focus {
-          background-color: #ff93df;
-          color: #fff;
-        }
       }
       .inputCon {
         width: 100%;
@@ -100,11 +89,11 @@
       font-size: 1rem;
       margin-top: 0.7vw;
     }
-    .selectedTemplatesWrapper{
+    .selectedTemplatesWrapper {
       // border: 1px solid red;
       // padding: .4svh;
       gap: 0.6svh;
-      .selectedTemplate{
+      .selectedTemplate {
         border-radius: 0.55svh;
         overflow: hidden;
         // border: 1px solid red;
@@ -213,7 +202,7 @@
         position: relative;
         transition: border-color 0.3s;
         .loaderContainer {
-          // border: 2px solid blue;
+          border: 2px solid blue;
           width: 100%;
           gap: 10px;
           height: 6vw;
@@ -248,14 +237,6 @@
           // padding: 0.5vw;
           // border: 1px solid red;
         }
-        // .addNewFace {
-        //   border: 0.23vh solid #b8b5b5;
-        //   background-color: #fbf6f6;
-        //   width: 10vh;
-        //   padding: 0.3vh;
-        //   height: 100%;
-        //   border-radius: 0.5vh;
-        //   /* border: 1px solid red; */
 
         .imgPlusIcon {
           // border: 1px solid red;
@@ -270,10 +251,6 @@
           right: 1%;
           // color: #3c3b3b;
         }
-
-        // &:hover {
-        //   border-color: #d77df5;
-        // }
 
         img {
           max-width: 100%;

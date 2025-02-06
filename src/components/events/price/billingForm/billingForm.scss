@@ -1,0 +1,202 @@
+.billingFormContainer {
+  // border: 2px solid red;
+  width: 100%;
+  gap: 1.4svh;
+  justify-content: flex-start;
+  .billingHeading {
+    font-size: 2.9svh;
+    font-weight: bold;
+    color: #010101;
+  }
+  .billingForm {
+    // border: 2px solid red;
+    width: 100%;
+    gap: 1svh;
+    .formFieldBilling {
+      width: 100%;
+      gap: 1svh;
+      align-items: flex-start;
+      .labelBilling {
+        // width: 100%;
+      }
+      .inputBilling {
+        width: 100%;
+        outline: none;
+        // border: none;
+        padding: 1.4svh;
+        border: 0.2svh solid black;
+        border-radius: 0.8svh;
+        font-size: 2svh;
+        .optionInputBilling{
+          // font-size: 4svh;
+        }
+      }
+      .checkLabel {
+        // border: 2px solid red;
+        gap: 1svh;
+      }
+    }
+    .buttonBilling {
+      background-color: #007bff;
+      color: white;
+      padding: 1vw;
+      width: 100%;
+      font-size: 1vw;
+      font-weight: 600;
+      border-radius: 0.35vw;
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  .recentBillingInfoContainer{
+    // border: 2px solid red;
+    width: 100%;
+    gap: 1.3svh;
+    .recentBillingCardWrapper{
+      width: 100%;
+      // border: 2px solid red;
+      height: 40svh;
+      gap: 2svh;
+      overflow-y: auto;
+     justify-content: flex-start;
+    .recentBillingCard{
+      gap: 1.4svh;
+      justify-content: flex-start;
+      padding: 1.5svh;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 0.9svh;
+      .addressBillingBox{
+        // border: 1px solid red;
+        width: 100%;
+        align-items: flex-start;
+        gap: 0.3svh;
+        .boxTitleBillingCard{
+          font-size: 2.4svh;
+          font-weight: 600;
+        }
+        .boxBillingAddressName{
+          font-size: 2svh;
+          color: grey;
+        }
+      }
+    }
+  }
+    .buttonBilling{
+    background-color: #007bff;
+      color: white;
+      padding: 1vw;
+      width: 100%;
+      font-size: 1vw;
+      font-weight: 600;
+      border-radius: 0.35vw;
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+
+  }
+}
+
+// for tablet
+@media all and (max-width: 1024px) {
+  .billingFormContainer {
+    width: 100%;
+    gap: 1.4svh;
+    .billingHeading {
+      font-size: 3.8svh;
+      font-weight: bold;
+    }
+    .billingForm {
+      width: 100%;
+      gap: 1svh;
+      .formFieldBilling {
+        width: 100%;
+        gap: 1.4svh;
+        align-items: flex-start;
+        .labelBilling {
+          // width: 100%;
+          font-size: 2.2svh;
+        }
+        .inputBilling {
+          width: 100%;
+          outline: none;
+          // border: none;
+          padding: 1.3svh;
+          border-radius: 0.8svh;
+          font-size: 2.2svh;
+        }
+        .checkLabel {
+          // border: 2px solid red;
+          gap: 1svh;
+          // width: 15svh;
+          .inputBillingCheck {
+          }
+        }
+      }
+      .buttonBilling {
+        padding: 2.8vw;
+        font-size: 2.8vw;
+        font-weight: 600;
+        border-radius: 0.98vw;
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+
+// for mobile
+@media all and (max-width: 480px) {
+  .billingFormContainer {
+    // border: 2px solid red;
+    width: 100%;
+    gap: 1.4svh;
+    .billingForm {
+      // border: 2px solid red;
+      width: 100%;
+      gap: 1svh;
+      .formFieldBilling {
+        width: 100%;
+        gap: 1svh;
+        align-items: flex-start;
+        .labelBilling {
+          // width: 100%;
+        }
+        .inputBilling {
+          width: 100%;
+          outline: none;
+          // border: none;
+          padding: 1svh;
+          border-radius: 0.8svh;
+        }
+        .checkLabel {
+          // border: 2px solid red;
+          gap: 1svh;
+        }
+      }
+      .buttonBilling {
+        width: 100%;
+        padding: 4.2vw;
+        font-size: 4.2vw;
+        font-weight: 600;
+        border-radius: 1.47vw;
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
