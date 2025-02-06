@@ -49,7 +49,7 @@ const data = {
   shareOptionsArr: ["QR", "email", "print", "download"],
   productsArr: ["photobooth"],
   templateNumberArr: [10],
-  eventPackage: [
+  eventPackages: [
     {
       duration: 1,
       credits: 500,
@@ -98,7 +98,7 @@ const DEFAULT_DATA = {
   templateNumber: null,
   templates: [],
   logo: "",
-  duration: null,
+  eventPackage: null,
   numberOfDevices: null,
 };
 
@@ -196,13 +196,15 @@ export default function EventForm({ action }) {
   // handle form changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const updatedValue = [
-      "duration",
-      "numberOfDevices",
-      "templateNumber",
-    ].includes(name)
+
+    // convert string to number
+    let updatedValue = ["numberOfDevices", "templateNumber"].includes(name)
       ? Number(value)
       : value;
+
+    // convert string to object
+    if (name === "eventPackage") updatedValue = JSON.parse(value);
+
     setFormData({ ...formData, [name]: updatedValue });
   };
 
@@ -242,7 +244,7 @@ export default function EventForm({ action }) {
     // create event
     const createEvent = async () => {
       try {
-        const { logo, duration, ...eventData } = formData;
+        const { logo, ...eventData } = formData;
 
         // firestore references
         const counterDocRef = doc(db, "techkilla_events", "eventCounter");
@@ -280,9 +282,9 @@ export default function EventForm({ action }) {
             ...eventData,
             userId: userDataSelector.uid,
             createdAt: Timestamp.fromDate(new Date()),
-            expiresAt: Timestamp.fromDate(
+            /* expiresAt: Timestamp.fromDate(
               new Date(new Date().getTime() + duration * 24 * 60 * 60 * 1000)
-            ),
+            ), */
             eventNumber: updatedCounter,
             password: pass,
           });
@@ -319,7 +321,7 @@ export default function EventForm({ action }) {
     // update event
     const updateEvent = async () => {
       try {
-        const { logo, duration, ...eventData } = formData;
+        const { logo, ...eventData } = formData;
         // update event
         const collectionRef = collection(db, "techkilla_events");
         const docRef = doc(collectionRef, formData.id);
@@ -585,8 +587,8 @@ export default function EventForm({ action }) {
                   ? "Select a Event Package:"
                   : `Update Event Package:`}
                 <select
-                  value={formData.duration}
-                  name="duration"
+                  value={formData.eventPackage}
+                  name="eventPackage"
                   onChange={handleChange}
                   className="inputCon"
                   required={action === "add"}
@@ -596,8 +598,8 @@ export default function EventForm({ action }) {
                       ? "Select a Event Package"
                       : "Update Event Package"}
                   </option>
-                  {data?.eventPackage.map((pckg) => (
-                    <option key={pckg.duration} value={pckg.duration}>
+                  {data?.eventPackages.map((pckg) => (
+                    <option key={pckg.duration} value={JSON.stringify(pckg)}>
                       {pckg.duration} {pckg.duration > 1 ? "Days" : "Day"} -{" "}
                       {pckg.credits} credits - {pckg.price} Rs
                     </option>
