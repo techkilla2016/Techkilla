@@ -202,7 +202,7 @@
         position: relative;
         transition: border-color 0.3s;
         .loaderContainer {
-          border: 2px solid blue;
+          // border: 2px solid blue;
           width: 100%;
           gap: 10px;
           height: 6vw;
@@ -453,6 +453,26 @@
         }
         .logoContainer {
           padding: 1.5vw;
+          .loaderContainer {
+            // border: 2px solid blue;
+            width: 100%;
+            gap: 10px;
+            height: 16svw;
+            // height: auto;
+            .spinLoader {
+              width: 5vw;
+              height: 5svw;
+            }
+  
+            @keyframes spin {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+          }
 
           .uploadedImage {
             // border: 2px solid blue;
@@ -598,10 +618,15 @@
 
       .options {
         gap: 4vw;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
       }
 
       .checkboxLabel {
         gap: 2vw;
+        width: 40%;
+        justify-content: flex-start;
       }
 
       .checkboxInput {
@@ -613,9 +638,9 @@
 
       .checkboxInput:checked::before {
         content: "✔";
-        font-size: 1.2rem;
-        top: -4% !important;
-        left: 0.4vw !important;
+        font-size: 4.2svw;
+        top: -20% !important;
+        left: 0.4svw !important;
       }
 
       .checkboxText {
@@ -649,6 +674,26 @@
           cursor: pointer;
           position: relative;
           transition: border-color 0.3s;
+          .loaderContainer {
+            // border: 2px solid blue;
+            width: 100%;
+            gap: 10px;
+            height: 17svw;
+            // height: auto;
+            .spinLoader {
+              width: 6svw;
+              height: 6svw;
+            }
+  
+            @keyframes spin {
+              0% {
+                transform: rotate(0deg);
+              }
+              100% {
+                transform: rotate(360deg);
+              }
+            }
+          }
           .uploadedImage {
             // border: 2px solid blue;
             width: 20vw;
