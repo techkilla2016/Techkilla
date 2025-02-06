@@ -1,0 +1,379 @@
+.PricePage {
+  margin-top: 5.2vw;
+  // border: 2px solid blue;
+  // background: url("./../../../../public/home/hero/bg01.png") center / cover;
+  padding: 2vw;
+  gap: 2vw;
+  position: relative;
+
+  .headingTxt {
+    text-align: center;
+    color: var(--themeColor1);
+  }
+
+  .allCredit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .singleCraditContainer {
+    position: relative;
+    width: 23%;
+    box-shadow: 0.1vw 0.1vw 0.5vw rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vw;
+    background-color: #fff;
+    border-radius: 2vw;
+    cursor: pointer;
+    .heading {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      padding: 1vw;
+      color: #fff;
+      height: 4vw;
+      width: 100%;
+      border-top-left-radius: 2vw;
+      border-top-right-radius: 2vw;
+    }
+    .descriptionContainer {
+      width: 90%;
+      margin: 2vw 2vw 1vw 2vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 1vw;
+      .description {
+        // border: 1px solid black;
+        display: flex !important;
+        border-bottom: 0.1px solid var(--themeColor2);
+        padding: 0.5vw;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1.2vw;
+        width: 100%;
+        .icon {
+          font-size: 1.5vw;
+        }
+        .desContent {
+          font-size: 1vw;
+          width: 100%;
+        }
+      }
+    }
+    .btn {
+      /* border: 1px solid black; */
+      width: 80%;
+      align-self: center;
+      font-size: 1.2vw;
+      font-weight: 600;
+    }
+
+    .creditCount {
+      position: absolute;
+      top: 1vw;
+      box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+      padding: 0.8vw;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vw;
+      width: 90%;
+      border-radius: 1vw;
+      .count {
+        /* border: 1px solid black; */
+        font-size: 1.8vw;
+        font-weight: 600;
+        text-align: center;
+      }
+      .txt {
+        /* border: 1px solid black; */
+        font-size: 1.3vw;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .selectedCreditContainer {
+    box-shadow: 0vw 0.5vw 2vw var(--themeColor1);
+  }
+
+  .buyNow {
+    width: 20%;
+    border-radius: 2vw;
+    font-weight: 600;
+  }
+
+  .close {
+    width: 1.5vw;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    cursor: pointer;
+  }
+
+  .singleFaq {
+    margin-top: 2vw;
+    padding: 2vw 3vw 3vw 3vw;
+    gap: 2vw;
+    width: 100%;
+    .container {
+      width: 85%;
+      gap: 2vw;
+      align-items: flex-start;
+      .dl {
+        border: 0.2vw solid transparent;
+        width: 100%;
+        padding: 1vw 2vw;
+        align-items: flex-start;
+        gap: 2vw;
+        background-color: #fff;
+        border-radius: 2vw;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+        .dt {
+          width: 100%;
+          /* border: 1px solid #000; */
+          justify-content: space-between;
+          color: var(--themeColor1);
+          .svg {
+            font-size: 2vw;
+          }
+        }
+        .dd {
+          width: 100%;
+          padding: 1vw 0;
+          display: none;
+          border-top: 0.2vw solid #ccc;
+        }
+
+        .showDd {
+          display: flex;
+        }
+      }
+      .dl:hover {
+        transform: scale(1.02);
+        border: 0.2vw solid var(--themeColor2);
+      }
+      .showDl {
+        transform: scale(1.02);
+        border: 0.2vw solid var(--themeColor2);
+      }
+    }
+  }
+}
+
+// tablet view
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  .PricePage {
+    margin-top: 5.2vw;
+    padding: 4vw 0;
+    gap: 6.67vw;
+    .allCredit {
+      flex-direction: column;
+      gap: 1.67vw;
+    }
+    .singleCraditContainer {
+      width: 95%;
+      box-shadow: 0.21vw 0.21vw 1.04vw rgba(0, 0, 0, 0.4);
+      gap: 0.83vw;
+      padding-bottom: 2.92vw;
+      border-radius: 4.17vw;
+      .heading {
+        padding: 2.92vw;
+        height: 12.5vw;
+        border-top-left-radius: 4.17vw;
+        border-top-right-radius: 4.17vw;
+      }
+      .descriptionContainer {
+        margin: 6.67vw 0 4.17vw 0;
+        padding-top: 0.42vw;
+        .description {
+          border-bottom: 0.21px solid var(--themeColor2);
+          padding: 1.67vw 0;
+          gap: 2.92vw;
+          .icon {
+            font-size: 5.21vw;
+          }
+          .desContent {
+            font-size: 3.5vw;
+          }
+        }
+      }
+      .btn {
+        font-size: 3.33vw;
+      }
+      .creditCount {
+        top: 4.17vw;
+        box-shadow: 0 0 1.04vw rgba(0, 0, 0, 0.5);
+        padding: 1.67vw 4.17vw;
+        border-radius: 2.08vw;
+        gap: 1.25vw;
+        .count {
+          font-size: 8.33vw;
+          font-size: 5.21vw;
+        }
+        .txt {
+          font-size: 4.17vw;
+        }
+      }
+    }
+    .selectedCreditContainer {
+      box-shadow: 0vw 0.83vw 2.5vw var(--themeColor1);
+    }
+    .buyNow {
+      width: 100%;
+    }
+    .singleFaq {
+      padding: 3.33vw;
+      gap: 4.17vw;
+      .headingTxt {
+        font-size: 4.25vw;
+      }
+      .txt1 {
+        font-size: 3vw;
+      }
+
+      .txt2 {
+        font-size: 2.75vw;
+        line-height: 4vw;
+      }
+      .container {
+        width: 100%;
+        gap: 4.17vw;
+        .dl {
+          border: 0.42vw solid transparent;
+          width: 100%;
+          padding: 2.08vw 4.17vw;
+          gap: 4.17vw;
+          border-radius: 4.17vw;
+          .dt {
+            text-align: start;
+            .svg {
+              font-size: 4.17vw;
+              /* border: 1px solid black; */
+            }
+          }
+          .dd {
+            padding: 2.08vw 0;
+            border-top: 0.42vw solid #ccc;
+          }
+        }
+        .dl:hover {
+          transform: scale(1.05);
+          border: 0.42vw solid var(--themeColor2);
+        }
+        .showDl {
+          transform: scale(1.05);
+          border: 0.42vw solid var(--themeColor2);
+        }
+      }
+    }
+  }
+}
+
+// mobile view
+@media all and (max-width: 480px) {
+  .PricePage {
+    margin-top: 13.5vw;
+    padding: 0 0;
+    gap: 8vw;
+    .allCredit {
+      flex-direction: column;
+      gap: 2vw;
+    }
+    .singleCraditContainer {
+      width: 95%;
+      box-shadow: 0.25vw 0.25vw 1.25vw rgba(0, 0, 0, 0.4);
+      gap: 1vw;
+      padding-bottom: 3.5vw;
+      border-radius: 5vw;
+      .heading {
+        padding: 3.5vw;
+        height: 15vw;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+      }
+      .descriptionContainer {
+        margin: 8vw 0 5vw 0;
+        padding-top: 0.5vw;
+        .description {
+          border-bottom: 0.25px solid var(--themeColor2);
+          padding: 2vw 0;
+          gap: 3.5vw;
+          .icon {
+            font-size: 6.25vw;
+          }
+          .desContent {
+            font-size: 4.2vw;
+          }
+        }
+      }
+      .btn {
+        font-size: 4vw;
+      }
+      .creditCount {
+        top: 5vw;
+        box-shadow: 0 0 1.25vw rgba(0, 0, 0, 0.5);
+        padding: 2vw 5vw;
+        border-radius: 2.5vw;
+        gap: 1.5vw;
+        .count {
+          font-size: 10vw;
+          font-size: 6.25vw;
+        }
+        .txt {
+          font-size: 5vw;
+        }
+      }
+    }
+    .selectedCreditContainer {
+      box-shadow: 0vw 1vw 3vw var(--themeColor1);
+    }
+    .buyNow {
+      width: 100%;
+    }
+    .singleFaq {
+      padding: 4vw;
+      gap: 5vw;
+      .container {
+        width: 100%;
+        gap: 5vw;
+        .dl {
+          border: 0.5vw solid transparent;
+          width: 100%;
+          padding: 2.5vw 5vw;
+          gap: 5vw;
+          border-radius: 5vw;
+          .dt {
+            text-align: start;
+            .svg {
+              font-size: 5vw;
+              /* border: 1px solid black; */
+            }
+          }
+          .dd {
+            padding: 2.5vw 0;
+            border-top: 0.5vw solid #ccc;
+          }
+        }
+        .dl:hover {
+          transform: scale(1.05);
+          border: 0.5vw solid var(--themeColor2);
+        }
+        .showDl {
+          transform: scale(1.05);
+          border: 0.5vw solid var(--themeColor2);
+        }
+      }
+    }
+  }
+}
