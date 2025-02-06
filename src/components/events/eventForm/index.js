@@ -37,7 +37,7 @@ import { toast, ToastContainer } from "react-toastify";
 
 const data = {
   screenArr: [
-    { value: "responsive", label: "iPad, Mobile" },
+    { value: "responsive", label: "iPad, Mobile, Laptop (Responsive)" },
     { value: "vertical", label: "Plasma Screen 1080 × 1920" },
   ],
 
@@ -86,7 +86,7 @@ export default function EventForm({ action }) {
   const [showTemplatePopup, setShowTemplatePopup] = useState(false);
   const [templateError, setTemplateError] = useState("");
   const fileInputRef = useRef(null);
-
+  const [isUploading, setIsUploading] = useState(false);
   const [allTemplatesData, setAllTemplatesData] = useState([]);
   const [templateUpdateStatus, setTemplateUpdateStatus] = useState();
   const [allCategories, setAllCategories] = useState([]);
@@ -386,6 +386,7 @@ export default function EventForm({ action }) {
       type === "upload" ? event.target.files[0] : event.dataTransfer.files[0];
 
     if (file && file.type.startsWith("image/")) {
+      setIsUploading(true);
       let imageFile = file;
       const reader = new FileReader();
 
@@ -395,21 +396,19 @@ export default function EventForm({ action }) {
 
         img.onload = async () => {
           try {
-            setLoading(true);
-
             const resizedFile = await resizeImgDimension(imageFile);
             const finalFile = await reduceImgSize(resizedFile, imageFile.size);
 
             const finalReader = new FileReader();
             finalReader.onloadend = () => {
               setFormData({ ...formData, logo: finalFile });
-              setLoading(false);
+              setIsUploading(false);
             };
 
             finalReader.readAsDataURL(finalFile);
           } catch (error) {
             console.error("Error processing image:", error);
-            setLoading(false);
+            setIsUploading(false);
           }
         };
       };
@@ -693,7 +692,11 @@ export default function EventForm({ action }) {
               >
                 <p className="flex-row-center uploadText">Upload Logo:</p>
                 <div className="logoContainer">
-                  {formData.logo ? (
+                  {isUploading ? (
+                    <div className="flex-col-center loaderContainer">
+                      <div className="spinLoader"></div>
+                    </div>
+                  ) : formData.logo ? (
                     <div>
                       <img
                         src={
