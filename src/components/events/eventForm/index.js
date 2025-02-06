@@ -742,7 +742,9 @@ export default function EventForm({ action }) {
                 <div className="logoContainer">
                   {isUploading ? (
                     <div className="flex-col-center loaderContainer">
-                      <div className="spinLoader"></div>
+                      <div className="spinLoader">
+                        
+                      </div>
                     </div>
                   ) : formData.logo ? (
                     <div>
