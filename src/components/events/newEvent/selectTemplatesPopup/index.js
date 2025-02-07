@@ -96,6 +96,7 @@ export default function SelectTemplatesPopup({
       }, 3000);
     }
   }, [allTemplatesData, selectedCategory]);
+  console.log(allTemplatesData)
 
   // Format category names for display
   // const formatCategory = (category) => {
