@@ -9,7 +9,7 @@ export default function DeletePopup({ onConfirm, onCancel, show, loading }) {
     <div className="flex-row-center DeleteContainer">
       {/* <Loader /> */}
       <div className="flex-col-center confirm-modal-content">
-        <h3>Are you sure you want to delete this event?</h3>
+        <h3>Are you sure?</h3>
 
         {loading ? (
           <div className="flex-row-center loader-container">

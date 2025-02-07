@@ -5,7 +5,8 @@
     padding: 1vw;
     font-size: 2.8vw;
     font-weight: 600;
-    background: linear-gradient(to right, #fad43a, #b3a70b);
+    // background: linear-gradient(to right, #fad43a, #b3a70b);
+    background-color: #ffce3a;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -13,15 +14,15 @@
   .formContainer {
     width: 100%;
     height: 100%;
-    gap: 1.2vw;
-    padding: 4vw;
+    gap: 1vw;
+    padding: 2.5vw;
     box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
     // gap: 1.5rem
     max-width: 50vw;
     // padding: 1.5rem;
     margin-bottom: 8vw;
-    // border: 1px solid #611414;
+    border: 0.15svw solid #ffce3a;
     border-radius: 1vw;
   }
   .valueField {
@@ -29,16 +30,16 @@
     // margin-bottom: 1.5rem;
     width: 100%;
     font-size: 1vw;
-    // gap: 5vw;
+    // gap: 0.2vw !important;
     justify-content: flex-start;
     align-items: flex-start;
 
     .labelling {
-      font-size: 1.2rem;
+      font-size: 1.05svw;
       font-weight: 600;
       color: #343232;
       width: 100%;
-
+      align-items: flex-start;
       // border: 1px solid #369124;
       .optionClass {
         padding: 0.5rem;
@@ -48,13 +49,18 @@
       }
       .inputCon {
         width: 100%;
-        padding: 0.8rem;
+        padding: 0.6svw;
         border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1rem;
-        margin-top: 0.7vw;
+        border-radius: 0.21svw;
+        font-size: 1svw;
+        margin-top: 0.3vw;
         color: #333;
-        transition: border 0.3s;
+        transition: all 0.3s;
+      }
+      .inputCon:focus{
+        border-color: #ffce3a;
+        box-shadow: 0 0 0 0.2rem rgba(255, 206, 58, 0.25);
+        outline: none;
       }
 
       select {
@@ -69,12 +75,12 @@
     // align-items: flex-start;
     .templateBtn {
       // border: 1px solid green;
-      font-size: 1.3rem;
-      padding: 0.4vw 0.6vw;
-      font-weight: 500;
+      font-size: 1.2svw;
+      padding: 0.7vw 1vw;
+      font-weight: 600;
       width: 100%;
-      color: black;
-      // background: #bc3dfb;
+      color: rgb(20, 20, 20);
+      background: #ffce3a;
       border-radius: 1vw 0 1vw 0;
       animation: blink 1s linear infinite;
       // color: #555;
@@ -128,16 +134,16 @@
     }
 
     .options {
-      gap: 2vw;
+      gap: 1.5vw;
       justify-content: flex-start;
       align-items: flex-start;
     }
 
     .checkboxLabel {
-      font-size: 1.5rem;
+      font-size: 1vw;
       display: flex;
       align-items: center;
-      gap: 0.7vw;
+      gap: 0.6vw;
     }
 
     .checkboxInput {
@@ -147,8 +153,8 @@
       background-color: transparent;
       border: 2px solid #f6ce4c;
       border-radius: 1vw;
-      width: 1.6vw;
-      height: 1.6vw;
+      width: 1.5vw;
+      height: 1.5vw;
 
       cursor: pointer;
       position: relative;
@@ -157,17 +163,17 @@
 
     .checkboxInput:checked::before {
       content: "✔";
-      font-size: 1.07rem;
+      font-size: 1vw;
       color: black;
       position: absolute;
-      top: -10%;
+      top: -6%;
       left: 0.25vw;
       // border: 1px solid red;
       font-weight: 800;
     }
 
     .checkboxText {
-      font-size: 1.1rem;
+      font-size: 0.99vw;
       display: inline-block;
     }
   }
@@ -235,7 +241,9 @@
         }
         .orText {
           // padding: 0.5vw;
-          // border: 1px solid red;
+          font-size: 1vw;
+          gap: .1vw;
+          font-weight: 600;
         }
 
         .imgPlusIcon {
@@ -264,7 +272,8 @@
         cursor: pointer;
         color: rgb(49, 49, 232);
         font-weight: bold;
-        text-decoration: underline;
+        text-decoration: underline ;
+        border-bottom: 0.17vw solid rgb(49, 49, 232);
         // border: 2px solid blue;
 
         &:hover {
@@ -341,7 +350,7 @@
     .submitBtn {
       // margin-right: 1vw;
       border-radius: 0.8vw;
-      background: #f6ce4c;
+      background: #ffce3a;
       // border: 1.5px solid black;
       color: black;
       // width: 10%;
@@ -357,29 +366,25 @@
 
 @media all and (max-width: 1024px) {
   .EventNew {
-    // border: 2px solid red;
-    // margin-top: 2vw;
     .heading {
-      // border: 2px solid black;
       padding: 2vw;
       font-size: 6vw;
     }
-
     .formContainer {
-      gap: 2.2vw;
+      gap: 1.3vw;
       padding: 4vw;
       max-width: 90vw;
       // padding: 1.5rem;
-      margin-bottom: 15vw;
+      // margin-bottom: 10vw;
       // border: 1px solid #611414;
       border-radius: 1vw;
     }
     .valueField {
       // border: 1px solid #f82424;
-      // margin-bottom: 1.5rem;
+      margin-bottom: 2.5svw;
       width: 100%;
       .labelling {
-        font-size: 1.7rem;
+        font-size: 3.2svw;
 
         // border: 1px solid #369124;
         .optionClass {
@@ -387,8 +392,9 @@
           font-size: 1.6rem;
         }
         .inputCon {
+          padding: 1.3svw;
           border-radius: 0.6vw;
-          font-size: 1.5rem;
+          font-size: 3vw;
           margin-top: 1vw;
         }
       }
@@ -404,10 +410,11 @@
       }
     }
     .shareOption {
-      padding-bottom: 2vw;
+      padding-bottom: 3vw;
+      padding-top: 3vw;
 
       .shareHead {
-        font-size: 1.75rem;
+        font-size: 3.2svw;
       }
 
       .options {
@@ -417,26 +424,27 @@
       }
 
       .checkboxLabel {
-        font-size: 1.6rem;
-        gap: 2vw;
+        font-size: 3.2svw;
+        // border: 1px solid red;
+        gap: 1vw;
       }
 
       .checkboxInput {
-        border: 2px solid #f6ce4c;
+        border: 0.4vw solid #f6ce4c;
         border-radius: 2.4vw;
-        width: 3.5vw;
-        height: 3.5vw;
+        width: 3.7vw;
+        height: 3.7vw;
       }
 
       .checkboxInput:checked::before {
         content: "✔";
-        font-size: 1.6rem;
-        top: 0.1vw;
+        font-size: 3svw;
+        top: -0.8vw;
         left: 0.4vw !important;
       }
 
       .checkboxText {
-        font-size: 1.6rem;
+        font-size: 3svw;
         display: inline-block;
       }
     }
@@ -448,7 +456,7 @@
         .uploadText {
           // border: 2px solid blue;
           // padding: 1vw;
-          font-size: 1.7rem;
+          font-size: 3.2svw;
           font-weight: 600;
         }
         .logoContainer {
@@ -457,7 +465,7 @@
             // border: 2px solid blue;
             width: 100%;
             gap: 10px;
-            height: 16svw;
+            height: 15svw;
             // height: auto;
             .spinLoader {
               width: 5vw;
@@ -563,7 +571,7 @@
     }
 
     .formContainer {
-      gap: 2.2vw;
+      gap: 0.1vw;
       max-width: 90vw;
       margin-bottom: 15vw;
       border-radius: 1vw;
@@ -574,22 +582,24 @@
       padding: 1vw;
       font-size: 1vw;
       .labelling {
-        font-size: 4vw !important;
+        font-size: 3.7vw !important;
         font-weight: 600 !important;
         color: #343232 !important;
         width: 100%;
 
         // border: 1px solid #369124;
         .optionClass {
-          padding: 0.6rem;
+          padding: 0.8svw;
           // border: 1px solid #369124;
           font-size: 1rem;
         }
         .inputCon {
           // border: 1px solid #369124;
           // padding: 1rem;
-          font-size: 3.7vw;
+          padding: 2svw;
+          font-size: 3.5vw;
           font-weight: 500;
+          margin-top: 1.2vw;
         }
       }
     }
@@ -598,8 +608,8 @@
 
       .templateBtn {
         // border: 1px solid green;
-        font-size: 1.35rem;
-        padding: 1.2vw 1vw;
+        font-size: 3.6svw;
+        padding: 1.5vw 1vw;
         // background: #bc3dfb;
         border-radius: 2vw 0 2vw 0;
       }
@@ -608,10 +618,11 @@
       }
     }
     .shareOption {
-      padding-bottom: 2vw;
+      padding-top: 5vw;
+      padding-bottom: 5vw;
 
       .shareHead {
-        font-size: 4.1vw;
+        font-size: 3.7vw;
         font-weight: 600 !important;
         color: #343232 !important;
       }
@@ -624,27 +635,29 @@
       }
 
       .checkboxLabel {
-        gap: 2vw;
+        // font-size: 1vw;
+        gap: 1.5vw;
         width: 40%;
         justify-content: flex-start;
       }
 
       .checkboxInput {
         border-radius: 2.4vw;
-        width: 5.2vw;
+        width: 5vw;
         // padding: 0.2vw;
-        height: 5.2vw;
+        height: 5vw;
       }
 
       .checkboxInput:checked::before {
         content: "✔";
-        font-size: 4.2svw;
-        top: -20% !important;
-        left: 0.4svw !important;
+        font-size: 4svw;
+        top: -14% !important;
+        left: 0.8svw !important;
       }
 
       .checkboxText {
-        font-size: 1.3rem;
+        font-size: 3.3vw;
+        // border: 1px solid red;
         display: inline-block;
       }
     }
@@ -667,7 +680,7 @@
           border: 2px dashed #ccc;
           // border: 2px solid blue;
           border-radius: 0.8vw;
-          padding: 2vw;
+          padding: 4vw;
           width: 100%;
           height: auto;
           text-align: center;
@@ -701,7 +714,7 @@
           }
           .orText {
             // padding: 1vw;
-            font-size: 3.4vw;
+            font-size: 3.9vw;
           }
           .imgPlusIcon {
             // border: 1px solid red;
@@ -719,7 +732,8 @@
         .fileInputLabel {
           // margin-top: 10px;
           // border: 2px solid green;
-          font-size: 1.25rem;
+          border-width: 0.5svw;
+          font-size: 3.9svw;
         }
       }
     }
@@ -729,7 +743,7 @@
       gap: 1vw;
       .bg-head {
         width: 100%;
-        font-size: 1.2rem !important;
+        font-size: 3.9svw !important;
         font-weight: 600 !important;
       }
 

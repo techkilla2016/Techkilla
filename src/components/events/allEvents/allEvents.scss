@@ -27,9 +27,10 @@
     // border: 2px solid red;
     //   padding: 1.5vw 0;
     font-weight: 600;
-    background: linear-gradient(to right, #fad43a, #b3a70b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(to right, #fad43a, #b3a70b);
+    color: #ffce3a;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
     text-align: center;
   }
   .searchContainer {
@@ -87,7 +88,7 @@
         // border: 1px solid blue;
         // margin-right: 1vw;
         // border-radius: 1vw;
-        background: #f6ce4c;
+        background: #ffce3a;
         border-radius: 0.2vw;
         color: black;
         font-weight: 600;
@@ -144,8 +145,8 @@
     }
     .preview-button {
       // background-color: rgb(240, 160, 22);
-      background-color: rgb(240, 160, 22);
-      color: white;
+      background-color: #ffce3a;
+      color: #6b6969;
     }
     .edit-button {
       background-color: #3977d4;
@@ -188,10 +189,8 @@
     }
 
     .page-button.active {
-      background-color: #f6ce4c;
+      background-color: #ffce3a;
       color: black;
-      border-color: #f6ce4c;
-      // transform: scale(1.15);
     }
 
     .page-button:disabled {

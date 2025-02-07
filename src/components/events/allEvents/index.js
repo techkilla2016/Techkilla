@@ -199,7 +199,7 @@ export default function AllEvents({ data }) {
                   </span>
                 </td>
               </tr>
-            )) : <tr className="table-row">No Data Found by {inputFocus=="name" ? "Event name" :"Event number"}</tr>}
+            )) : <tr className="table-row text-center">No Data Found by {inputFocus=="name" ? "Event name" :"Event number"}</tr>}
           </tbody>
         </table>
       </div>
