@@ -19,10 +19,10 @@ export default function BillingInfoForm({
   setIsShowOldBillingInfo,
   userDataSelector,
 }) {
+  const router = useRouter();
   const [states, setStates] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedState, setSelectedState] = useState("");
-  const router = useRouter();
 
   // for form field
   const handleChange = (e) => {
@@ -57,7 +57,7 @@ export default function BillingInfoForm({
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!userDataSelector) {
-      router.push("/signin?path=%2Fpricing");
+      router.push("/events");
       return;
     }
     if (formData.contact.length < 10) {
@@ -117,6 +117,7 @@ export default function BillingInfoForm({
   return (
     <div className="flex-col-center billingFormContainer">
       <p className="billingHeading">Billing Info</p>
+
       {isShowOldBillingInfo &&
       userBillingInfo &&
       userBillingInfo?.length > 0 ? (
@@ -160,7 +161,7 @@ export default function BillingInfoForm({
       ) : (
         <form className="flex-col-center billingForm" onSubmit={handleSubmit}>
           <div className="flex-col-center formFieldBilling">
-            <label className="labelBilling">Name:</label>
+            <label className="labelBilling">Name*</label>
             <input
               type="text"
               name="name"
@@ -171,8 +172,10 @@ export default function BillingInfoForm({
               required
             />
           </div>
+
+          {/* contact */}
           <div className="flex-col-center formFieldBilling">
-            <label className="labelBilling">Contact:</label>
+            <label className="labelBilling">Contact*</label>
             <input
               type="number"
               name="contact"
@@ -183,8 +186,10 @@ export default function BillingInfoForm({
               placeholder="Enter Contact Number"
             />
           </div>
+
+          {/* email */}
           <div className="flex-col-center formFieldBilling">
-            <label className="labelBilling">Email:</label>
+            <label className="labelBilling">Email*</label>
             <input
               type="email"
               name="email"
@@ -195,21 +200,24 @@ export default function BillingInfoForm({
               placeholder="Enter Your Email"
             />
           </div>
+
+          {/* billing address */}
           <div className="flex-col-center formFieldBilling">
-            <label className="labelBilling">Billing Address:</label>
-            <input
+            <label className="labelBilling">Billing Address*</label>
+            <textarea
               type="text"
               name="billingAddress"
               value={formData.billingAddress}
               onChange={handleChange}
               required
-              className="inputBilling"
-              placeholder="Enter Billing Address "
+              className="inputBilling billingAddress"
+              placeholder="Enter Billing Address"
             />
           </div>
 
+          {/* country */}
           <div className="flex-col-center formFieldBilling">
-            <label>Country</label>
+            <label>Country*</label>
             <select
               value={selectedCountry}
               onChange={handleCountryChange}
@@ -225,8 +233,9 @@ export default function BillingInfoForm({
             </select>
           </div>
 
+          {/* state */}
           <div className="flex-col-center formFieldBilling">
-            <label>State</label>
+            <label>State*</label>
             <select
               value={selectedState}
               onChange={(e) => setSelectedState(e.target.value)}
@@ -244,8 +253,9 @@ export default function BillingInfoForm({
             </select>
           </div>
 
+          {/* pin code */}
           <div className="flex-col-center formFieldBilling">
-            <label className="labelBilling">Pin Code:</label>
+            <label className="labelBilling">Pin Code*</label>
             <input
               type="number"
               name="pincode"
@@ -257,6 +267,7 @@ export default function BillingInfoForm({
             />
           </div>
 
+          {/* gst bill required */}
           <div className="flex-col-center formFieldBilling">
             <label className="labelBilling checkLabel flex-row-center">
               GST Bill Required?
@@ -270,10 +281,11 @@ export default function BillingInfoForm({
             </label>
           </div>
 
+          {/* gst bill details */}
           {formData.isGstRequired && (
             <>
               <div className="flex-col-center formFieldBilling">
-                <label className="labelBilling">Company Name (GST):</label>
+                <label className="labelBilling">Company Name (GST)*</label>
                 <input
                   type="text"
                   name="gstCompanyName"
@@ -285,21 +297,8 @@ export default function BillingInfoForm({
                 />
               </div>
 
-              {/* <div className="flex-col-center formFieldBilling">
-              <label className="labelBilling">Company Address:</label>
-              <input
-                type="text"
-                name="gstCompanyAddress"
-                value={formData.gstCompanyAddress}
-                onChange={handleChange}
-                required
-                className="inputBilling"
-                placeholder="Enter Address"
-              />
-            </div> */}
-
               <div className="flex-col-center formFieldBilling">
-                <label className="labelBilling">GST Number:</label>
+                <label className="labelBilling">GST Number*</label>
                 <input
                   type="number"
                   name="gstNumber"

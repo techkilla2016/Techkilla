@@ -57,6 +57,12 @@ const DEFAULT_ORDER_SUMMARY_ITEMS = [
   "Multi-Device Support",
 ];
 
+const DEFAULT_FARE_SUMMARY = {
+  baseFare: 0,
+  gstFare: 0,
+  totalFare: 0,
+};
+
 export default function PriceComponent() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -85,6 +91,7 @@ export default function PriceComponent() {
   const [orderSummaryItems, setOrderSummaryItems] = useState(
     DEFAULT_ORDER_SUMMARY_ITEMS
   );
+  const [fareSummary, setFareSummary] = useState(DEFAULT_FARE_SUMMARY);
 
   // fetch event data
   useEffect(() => {
@@ -103,6 +110,12 @@ export default function PriceComponent() {
             ]
           : prev
       );
+      setFareSummary({
+        baseFare: event?.eventPackage.price,
+        gstFare: event?.eventPackage.price * (18 / 100),
+        totalFare:
+          event?.eventPackage.price + event?.eventPackage.price * (18 / 100),
+      });
     }
   }, [searchParams, allEventsSelector]);
 
@@ -227,9 +240,7 @@ export default function PriceComponent() {
       {/* left-part */}
       <div className="flex-col-center left-form-section">
         {/* left-title */}
-        <div className="flex-row-center premium-icon-container">
-          <h1 className="heading-txt">Techkilla's AI Photobooth</h1>
-        </div>
+        <h1 className="heading-txt">Techkilla's AI Photobooth</h1>
 
         {/* left-content */}
         <div className="flex-col-center left-content">
@@ -376,6 +387,23 @@ export default function PriceComponent() {
           </div>
         </div>
       )}
+
+      {/* fare summary*/}
+      <div className="flex-col-center fareSummaryContainer">
+        <h1 className="summary-heading-txt">Fare Summary</h1>
+        <div className="flex-col-center fareSummary">
+          <p className="flex-row-center fareTxt">
+            <span>Base Fare</span>
+            <strong>₹{fareSummary.baseFare}</strong>
+          </p>
+          <p className="flex-row-center fareTxt">
+            <span>Taxes (18% GST)</span> <strong>₹{fareSummary.gstFare}</strong>
+          </p>
+          <p className="flex-row-center totalFareTxt">
+            <span>Grand Total</span> <strong>₹{fareSummary.totalFare}</strong>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

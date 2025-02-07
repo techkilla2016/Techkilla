@@ -1,11 +1,10 @@
 .PricePage {
-  margin-top: 5.2vw;
-  // border: 2px solid blue;
-  // background: url("./../../../../public/home/hero/bg01.png") center / cover;
-  padding: 2vw;
+  margin-top: 3.8vw;
+  padding: 1vw 0.5vw 0 0;
   gap: 2vw;
+  overflow: hidden;
   position: relative;
-
+  // border: 10px solid red;
   .headingTxt {
     text-align: center;
     color: var(--themeColor1);

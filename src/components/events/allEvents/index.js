@@ -108,7 +108,7 @@ export default function AllEvents({ data }) {
 
   return (
     <div className="flex-col-center AllEvents">
-      <p className="flex-row-center tableHead">Event Details</p>
+      <p className="flex-row-center tableHead">Recent Events</p>
       <div className="flex-row-center searchContainer">
         <div className="flex-row-center filterContainer">
           <div className="flex-row-center firstFilter">

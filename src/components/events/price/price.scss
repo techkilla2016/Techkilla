@@ -1,40 +1,33 @@
 .payment-section {
-  width: 60vw;
-  padding: 2vw;
-  background-color: white;
-  // align-items: flex-start;
+  // border: 1px solid red;
+  width: 90vw;
+  height: 85svh;
+  padding: 1vw;
+  background-color: #fff;
   justify-content: space-between;
-  border-radius: 1.5vw;
+  align-items: flex-start;
+  border-radius: 0.5vw;
   box-shadow: 0 1vw 2vw rgba(113, 155, 177, 0.5);
-  gap: 2vw;
+  gap: 1vw;
+
   .left-form-section {
-    // border: 1px solid black;
-    width: 43%;
-    // padding: 1vw;
+    // border: 1px solid red;
+    width: 30%;
     align-items: flex-start;
     gap: 1vw;
-
-    .premium-icon-container {
-      // border: 1px solid black;
+    padding: 0.5vw;
+    .heading-txt {
       width: 100%;
-      // justify-content: flex-start;
-      gap: 0.5vw;
-      .heading-txt {
-        width: 100%;
-        text-align: center;
-        font-size: 1.4vw;
-        font-weight: 600;
-      }
+      text-align: center;
+      font-size: 1.5vw;
+      font-weight: 600;
     }
-
     .left-content {
       // border: 1px solid black;
       width: 100%;
       align-items: flex-start;
-      // gap: 1vw;
       .list-items-container,
       .features {
-        // border: 1px solid black;
         width: 100%;
         padding-bottom: 1vw;
         border-bottom: 0.15vw solid #9e9898;
@@ -46,7 +39,6 @@
           font-weight: 500;
           position: relative;
           padding-left: 1.5vw;
-
           &::before {
             content: "✔";
             position: absolute;
@@ -68,10 +60,7 @@
     }
 
     .left-icons-container {
-      // border: 1px solid black;
-      // align-items: center;
       width: 100%;
-
       gap: 1vw;
       .payment-icon {
         width: 2.5vw;
@@ -83,19 +72,15 @@
   }
 
   .right-section {
-    // background: linear-gradient(to right, rgb(236, 235, 235), #e9f8f8);
     background-color: rgb(236, 235, 235);
     box-shadow: 0 0vw 0.3vw rgba(0, 0, 0, 0.4);
-    // border: 2px solid red;
-    width: 57%;
-    height: 68svh;
-    padding: 1.5vw;
-    border-radius: 1vw;
+    width: 55%;
+    height: 100%;
+    padding: 0.5vw 1vw;
+    border-radius: 0.25vw;
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: auto;
-    // padding-top: 2svh;
-    // border: 1px solid black;
     gap: 2vw;
     .payment-method {
       // border: 1px solid black;
@@ -103,7 +88,9 @@
       gap: 2vw;
       align-items: flex-start;
       .right-heading-txt {
-        font-size: 1.2vw;
+        width: 100%;
+        text-align: center;
+        font-size: 1vw;
         font-weight: 600;
       }
       .payment-methods-container {
@@ -197,6 +184,36 @@
       .features,
       .left-icons-container {
         display: none;
+      }
+    }
+  }
+
+  .fareSummaryContainer {
+    width: 30%;
+    background-color: rgb(236, 235, 235);
+    box-shadow: 0 0vw 0.3vw rgba(0, 0, 0, 0.4);
+    padding: 0.5vw 1vw;
+    border-radius: 0.25vw;
+    gap: 2vw;
+    .summary-heading-txt {
+      width: 100%;
+      text-align: center;
+      font-size: 1.2vw;
+      font-weight: 600;
+    }
+    .fareSummary {
+      // border: 1px solid red;
+      width: 100%;
+      .fareTxt {
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+      }
+      .totalFareTxt {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 1.2vw;
+        color: #007bff;
       }
     }
   }
