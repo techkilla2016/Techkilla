@@ -1,6 +1,6 @@
 .swiperMain {
   /* padding: 2vw; */
-  /* border: 2px solid #141313; */
+  // border: 2px solid #141313;
   width: 100%;
   /* margin: 0 auto; */
 
@@ -8,7 +8,7 @@
     border: 0.1vw solid #ccc;
     padding: 1vw;
     width: 100%;
-    height: 21vw;
+    height: 25vw;
     justify-content: flex-start;
     gap: 1vw;
     border-radius: 1vw;
@@ -23,19 +23,22 @@
     }
     .linkWrapper {
       text-decoration: none;
-      /* border: 5px solid #141313; */
+      // border: 5px solid #141313;
       width: 100%;
-      gap: 0.8vw;
+      // gap: 0.6vw;
       /* width: 30%; */
 
       justify-content: flex-start;
       .headTitle {
         font-size: 1.1vw;
+        color: rgb(58, 57, 57);
+        // border: 1px solid blue;
         font-weight: 700;
       }
 
       .excerptHead {
         font-size: 0.8vw;
+        color: rgb(58, 57, 57);
       }
 
       /* &:hover .headTitle {

@@ -68,7 +68,7 @@ const Home = () => {
             recentwork={recentwork}
             lastLine="With Techkilla's innovative experiential technology solutions, businesses can enhance their customer engagement and increase brand loyalty. Contact us today to learn more about how we can help you achieve your business goals."
           />
-          <Blog />
+
           {/* Testimonials section*/}
           <Container
             fluid
@@ -81,6 +81,7 @@ const Home = () => {
 
             <Testimonials cardData={TestimonialsData} />
           </Container>
+          <Blog />
         </div>
       </main>
       <Footer bg="#fafafa" />

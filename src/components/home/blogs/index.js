@@ -1,7 +1,8 @@
 "use client";
-import styles from "./blogs.module.css";
+import "./blogs.scss";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "@/components/button";
 import { useRouter } from "next/navigation";
 import { blogPosts } from "../../../data/blogs/index.js";
 import { generateSlug } from "../../../utils/blogSlug";
@@ -23,42 +24,47 @@ const Blogs = () => {
   };
   const displayPosts = blogPosts.slice(0, 3);
   return (
-    <div className={`flex-col-center ${styles.BlogPage}`}>
-      <div className={`flex-col-center ${styles.textContainer}`}>
-        <p className={`txt2 ${styles.blogText}`}>RESOURCES</p>
-        <h2 className={styles.secondHead}>
-          Boost Your Personal Brand Instantly with{" "}
-          <span style={{ color: "#7a21bb" }}>Snapshawt's AI </span>Solutions
+    <div className="flex-col-center BlogPage">
+      <div className="flex-col-center textContainer">
+        {/* <p className="txt2 blogText">RESOURCES</p> */}
+        <h2 className="secondHead">
+          Boost Your Brand Marketing & Customer Success Instantly with{" "}
+          <span style={{ color: "#fad43a", fontWeight: "600" }}>
+            AI, AR, VR,
+          </span>{" "}
+          and{" "}
+          <span style={{ color: "#fad43a", fontWeight: "600" }}>
+            Gamification
+          </span>
         </h2>
-        <p className={`txt2 ${styles.blogText}`}>
-          Learn about AI face swap, why AI matters, and key things to avoid when
-          using AI—explore the full guide now!
+        <p className="txt2 blogText">
+          Discover how technology integration can transform your marketing
+          campaigns, elevate customer engagement, and create memorable success
+          stories and lasting interactions.
         </p>
       </div>
-      <div className={`flex-row-center ${styles.blogContainer}`}>
+      <div className="flex-row-center blogContainer">
         {displayPosts.map((post, index) => (
           <div
             key={post.id}
-            className={`flex-col-center ${styles.singleBlogContainer} ${
-              index % 2 === 0 ? styles.even : styles.odd
+            className={`flex-col-center singleBlogContainer ${
+              index % 2 === 0 ? "even" : "odd"
             }`}
           >
             <Link href={`/blogs/${generateSlug(post.title)}`}>
-              <div className={`flex-row-center ${styles.upperPart}`}>
+              <div className="flex-row-center upperPart">
                 <Image
                   src={post.thumbnailImage.src}
                   alt={post.thumbnailImage.alt}
-                  width={100}
-                  height={100}
+                  width={500}
+                  height={500}
                 />
               </div>
-              <div className={`flex-row-center ${styles.lowerPart}`}>
-                <p className={styles.textTitle}>
-                  {getTitleBeforeSymbol(post.title)}
-                </p>
-                <div className={styles.iconPart}>
+              <div className="flex-row-center lowerPart">
+                <p className="textTitle">{getTitleBeforeSymbol(post.title)}</p>
+                <div className="iconPart">
                   <Image
-                    src="/blogs/icon.png"
+                    src="/blogs/icon-10.png"
                     alt="Icon"
                     width={24}
                     height={24}
@@ -69,12 +75,7 @@ const Blogs = () => {
           </div>
         ))}
       </div>
-      <Link
-        href={"/blogs"}
-        className={`flex-row-center ${styles.moreContainer}`}
-      >
-        <button className={`btn2 ${styles.btn}`}>Read More {">"}</button>
-      </Link>
+      <Button url={"/blogs"} title="Read More "></Button>
     </div>
   );
 };

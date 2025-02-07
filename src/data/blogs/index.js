@@ -12,24 +12,19 @@ const blogImage11 = "/blogs/blog-image/blog1/blog1-11.png";
 const blogImage12 = "/blogs/blog-image/blog1/blog1-12.png";
 const blogImage13 = "/blogs/blog-image/blog1/blog1-13.png";
 
-// const blogImage11 = "/blogs/blog-image/blog2/blog2-01.jpg";
-// const blogImage12 = "/blogs/blog-image/blog2/blog2-02.jpg";
-// const blogImage13 = "/blogs/blog-image/blog2/blog2-03.jpg";
-// const blogImage14 = "/blogs/blog-image/blog2/blog2-04.jpg";
-// const blogImage15 = "/blogs/blog-image/blog2/blog2-06.jpg";
-// const blogImage16 = "/blogs/blog-image/blog2/blog2-07.jpg";
-// const blogImage17 = "/blogs/blog-image/blog2/blog2-08.jpg";
-// const blogImage18 = "/blogs/blog-image/blog2/blog2-09.jpg";
-// const blogImage19 = "/blogs/blog-image/blog2/blog2-10.jpg";
-// const blogImage20 = "/blogs/blog-image/blog2/blog2-11.jpg";
-// const blogImage21 = "/blogs/blog-image/blog2/blog2-12.jpg";
+const blogImage14 = "/blogs/blog-image/blog2/blog2-01.png";
+const blogImage15 = "/blogs/blog-image/blog2/blog2-02.png";
+const blogImage16 = "/blogs/blog-image/blog2/blog2-03.jpg";
+const blogImage17 = "/blogs/blog-image/blog2/blog2-04.png";
+const blogImage18 = "/blogs/blog-image/blog2/blog2-05.png";
+const blogImage19 = "/blogs/blog-image/blog2/blog2-06.jpg";
 
-// const blogImage22 = "/blogs/blog-image/blog3/blog3-01.jpg";
-// const blogImage23 = "/blogs/blog-image/blog3/blog3-02.jpg";
-// const blogImage24 = "/blogs/blog-image/blog3/blog3-03.jpg";
-// const blogImage25 = "/blogs/blog-image/blog3/blog3-04.jpg";
-// const blogImage26 = "/blogs/blog-image/blog3/blog3-05.jpg";
-// const blogImage27 = "/blogs/blog-image/blog3/blog3-06.jpg";
+const blogImage20 = "/blogs/blog-image/blog3/blog3-01.png";
+const blogImage21 = "/blogs/blog-image/blog3/blog3-02.jpg";
+const blogImage22 = "/blogs/blog-image/blog3/blog3-03.jpg";
+const blogImage23 = "/blogs/blog-image/blog3/blog3-04.png";
+const blogImage24 = "/blogs/blog-image/blog3/blog3-05.png";
+const blogImage25 = "/blogs/blog-image/blog3/blog3-06.png";
 
 export const blogPosts = [
   {
@@ -174,14 +169,14 @@ export const blogPosts = [
     content:
       "A photo booth is no longer just an extra—it’s a must-have for any event! Whether it’s a wedding, corporate gala, or birthday bash, an interactive photo booth keeps guests engaged while creating unforgettable memories. Here’s why you need one for your celebration:",
     thumbnailImage: {
-      src: blogImage11,
+      src: blogImage14,
       alt: "Second Blog Image",
     },
     additionalContents: [
       {
         ques: "Instant Entertainment & Engagement",
         img: {
-          src: blogImage2,
+          src: blogImage15,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -190,7 +185,7 @@ export const blogPosts = [
       {
         ques: "Shareable & Social Media-Ready Content",
         img: {
-          src: blogImage2,
+          src: blogImage16,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -199,7 +194,7 @@ export const blogPosts = [
       {
         ques: "Personalized Keepsakes for Guests",
         img: {
-          src: blogImage2,
+          src: blogImage17,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -208,7 +203,7 @@ export const blogPosts = [
       {
         ques: "Brand Visibility & Customization",
         img: {
-          src: blogImage2,
+          src: blogImage18,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -217,7 +212,7 @@ export const blogPosts = [
       {
         ques: "Easy, Hassle-Free Setup",
         img: {
-          src: blogImage2,
+          src: blogImage19,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -237,18 +232,18 @@ export const blogPosts = [
   },
   {
     id: "3",
-    title: "Revolutionize Events with Techkilla’s AI Photo Booth Technology",
+    title: "Revolutionize Events with Techkilla AI Photo Booth Technology",
     content:
       "A photo booth is no longer just an extra—it’s a must-have for any event! Whether it’s a wedding, corporate gala, or birthday bash, an interactive photo booth keeps guests engaged while creating unforgettable memories. With Techkilla’s cutting-edge AI-powered technology, photo booths are now more immersive, shareable, and customized than ever.",
     thumbnailImage: {
-      src: blogImage11,
+      src: blogImage20,
       alt: "Second Blog Image",
     },
     additionalContents: [
       {
         ques: "Instant Entertainment & Engagement",
         img: {
-          src: blogImage2,
+          src: blogImage21,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -257,7 +252,7 @@ export const blogPosts = [
       {
         ques: "Shareable & Social Media-Ready Content",
         img: {
-          src: blogImage2,
+          src: blogImage22,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -266,7 +261,7 @@ export const blogPosts = [
       {
         ques: "Personalized AI-Generated Keepsakes",
         img: {
-          src: blogImage2,
+          src: blogImage23,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -275,7 +270,7 @@ export const blogPosts = [
       {
         ques: "Brand Visibility & Customization",
         img: {
-          src: blogImage2,
+          src: blogImage24,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },
@@ -284,7 +279,7 @@ export const blogPosts = [
       {
         ques: "Easy, Hassle-Free Setup with Smart AI Integration",
         img: {
-          src: blogImage2,
+          src: blogImage25,
           alt: "Second Blog Image 4",
           imgSize: "vertical",
         },

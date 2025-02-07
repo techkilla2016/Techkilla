@@ -1,21 +1,19 @@
 import React from "react";
 import Link from "next/link";
+import "./blogHeader.scss";
 // import { allRoutes } from "@/data/allRoutes";
 
-export default function BlogHeader({ styles }) {
-  {
-    /* nav bar */
-  }
+export default function BlogHeader() {
   return (
-    <nav className={`flex-row-center ${styles.nav}`}>
+    <nav className="flex-row-center nav">
       <Link href="/">
-        <button className={styles.buttonStyle}>Home</button>
+        <button className="buttonStyle">Home</button>
       </Link>
       <Link href={"/"}>
-        <button className={styles.buttonStyle}>Face Swap</button>
+        <button className="buttonStyle">Face Swap</button>
       </Link>
       <Link href={"/#contact"}>
-        <button className={styles.buttonStyle}>Contact us</button>
+        <button className="buttonStyle">Contact us</button>
       </Link>
     </nav>
   );

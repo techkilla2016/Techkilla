@@ -1,6 +1,8 @@
 import Link from "next/link";
-import styles from "./singleBlogPage.module.css";
+import "./singleBlogPage.scss";
 import Image from "next/image";
+import Header from "../../../components/header";
+import Contact from "@/components/blogs/contactUs";
 import BlogContent from "@/components/blogs/swiperCom";
 import { blogPosts } from "../../../data/blogs/index.js";
 import { generateSlug } from "../../../utils/blogSlug";
@@ -172,9 +174,9 @@ export default function BlogPostPage({ params }) {
 
   if (!post) {
     return (
-      <div className={`flex-col-center ${styles.SingleBlogPage}`}>
-        <BlogHeader styles={styles} />
-        <div className={`flex-col-center ${styles.topSection}`}>
+      <div className="flex-col-center SingleBlogPage">
+        <BlogHeader />
+        <div className="flex-col-center topSection">
           <h2>Oops! Blog Not Found</h2>
           <p>
             The post you're looking for has either been deleted or never
@@ -189,13 +191,13 @@ export default function BlogPostPage({ params }) {
   const highlightedWordsSet = new Set();
 
   return (
-    <div className={`flex-col-center ${styles.SingleBlogPage}`}>
-      <BlogHeader styles={styles} />
+    <div className="flex-col-center SingleBlogPage">
+      <BlogHeader />
 
-      <div className={`flex-col-center ${styles.topSection}`}>
-        <h1 className={styles.title}>{post.title}</h1>
+      <div className="flex-col-center topSection">
+        <h1 className="titlehead">{post.title}</h1>
 
-        <div className={`flex-col-center ${styles.commonContainer}`}>
+        <div className="flex-col-center commonContainer">
           {post.content &&
             (() => {
               const midIndex = Math.floor(post.content.length / 2);
@@ -206,7 +208,7 @@ export default function BlogPostPage({ params }) {
 
               return (
                 <>
-                  <p className={` ${styles.fontContent} ${styles.belowText}`}>
+                  <p className="fontContent belowText">
                     {highlightText(
                       firstPart,
                       highlightWords,
@@ -215,17 +217,17 @@ export default function BlogPostPage({ params }) {
                   </p>
 
                   {post.thumbnailImage && post.thumbnailImage.src && (
-                    <div className={`flex-row-center ${styles.thumbnailImg}`}>
+                    <div className="flex-row-center thumbnailImgType">
                       <Image
                         src={post.thumbnailImage.src}
                         alt={post.thumbnailImage.alt}
-                        width={100}
-                        height={100}
+                        width={500}
+                        height={500}
                       />
                     </div>
                   )}
 
-                  <p className={` ${styles.fontContent} ${styles.belowText}`}>
+                  <p className="fontContent belowText">
                     {highlightText(
                       secondPart,
                       highlightWords,
@@ -239,17 +241,17 @@ export default function BlogPostPage({ params }) {
       </div>
 
       {/* Main content */}
-      <div className={`flex-row-center ${styles.middleSection}`}>
-        <div className={`flex-col-center ${styles.contentIndex}`}>
-          <h2 className={styles.contentIndexTitle}>Contents</h2>
-          <ul className={`flex-col-center ${styles.quesHead}`}>
+      <div className="flex-row-center middleSection">
+        <div className="flex-col-center contentIndex">
+          <h2 className="contentIndexTitle">Contents</h2>
+          <ul className="flex-col-center quesHead">
             {post.additionalContents.map(
               (content, index) =>
                 content.ques && (
-                  <li key={index} className={styles.contentItem}>
+                  <li key={index} className="contentItem">
                     <a
                       href={`#${content.ques.replace(/\s+/g, "_")}`}
-                      className={styles.link}
+                      className="link"
                     >
                       {content.ques}
                     </a>
@@ -259,19 +261,19 @@ export default function BlogPostPage({ params }) {
           </ul>
         </div>
 
-        <main className={`flex-col-center ${styles.mainContainer}`}>
+        <div className="flex-col-center mainContainer">
           {/* Question array */}
-          <div className={`flex-col-center ${styles.upperContainer}`}>
+          <div className="flex-col-center upperContainerPart">
             {post.additionalContents.map((content, index) => {
               return (
                 <div
                   key={index}
                   id={content.ques.replace(/\s+/g, "_")}
-                  className={`flex-col-center ${styles.blogSection}`}
+                  className="flex-col-center blogSection"
                 >
                   {/* Question heading */}
                   {content.hasOwnProperty("ques") && (
-                    <p className={styles.quesContent}>{content.ques}</p>
+                    <p className="quesContent">{content.ques}</p>
                   )}
 
                   {/* Question image */}
@@ -279,37 +281,33 @@ export default function BlogPostPage({ params }) {
                     <div
                       className={`flex-row-center ${
                         content.img.imgSize === "bigHorizontal"
-                          ? styles.bigHorizontal
+                          ? "bigHorizontal"
                           : content.img.imgSize === "smallHorizontal"
-                          ? styles.smallHorizontal
-                          : styles.vertical
-                      } ${styles.questionImg}`}
+                          ? "smallHorizontal"
+                          : "vertical"
+                      } questionImg`}
                     >
                       <Image
                         src={content.img.src}
                         alt={content.img.alt}
-                        width={100}
-                        height={100}
+                        width={500}
+                        height={500}
                       />
                     </div>
                   )}
 
                   {/* question content */}
                   {content.con && Array.isArray(content.con) ? (
-                    <ol className={`flex-col-center ${styles.listContent}`}>
+                    <ol className="flex-col-center listContent">
                       {content.con.map((item, index) => (
                         <li key={index}>
-                          <ul
-                            className={`flex-col-center ${styles.singleListContainer}`}
-                          >
-                            <li className={styles.list}>
-                              <strong
-                                className={`${styles.fontContent} ${styles.headingStrong}`}
-                              >
+                          <ul className="flex-col-center singleListContainer">
+                            <li className="list">
+                              <strong className="fontContent headingStrong">
                                 {item.heading}:
                               </strong>
                             </li>
-                            <li className={styles.fontContent}>
+                            <li className="fontContent">
                               {highlightText(
                                 item.description,
                                 highlightWords,
@@ -321,9 +319,9 @@ export default function BlogPostPage({ params }) {
                                 <Image
                                   src={item.img.src}
                                   alt={item.img.alt}
-                                  className={styles.contentImage}
-                                  width={100}
-                                  height={100}
+                                  className="contentImage"
+                                  width={500}
+                                  height={500}
                                 />
                               )}
                             </div>
@@ -333,7 +331,7 @@ export default function BlogPostPage({ params }) {
                     </ol>
                   ) : (
                     content.con && (
-                      <p className={` ${styles.fontContent}`}>
+                      <p className="fontContent">
                         {highlightText(
                           content.con,
                           highlightWords,
@@ -345,7 +343,7 @@ export default function BlogPostPage({ params }) {
 
                   {/* Question sub */}
                   {content.hasOwnProperty("sub") && (
-                    <p className={` ${styles.fontContent}`}>
+                    <p className="fontContent">
                       {highlightText(
                         content.sub,
                         highlightWords,
@@ -356,7 +354,7 @@ export default function BlogPostPage({ params }) {
 
                   {/* Question additional part */}
                   {content.hasOwnProperty("add") && (
-                    <p className={` ${styles.fontContent}`}>
+                    <p className="fontContent">
                       {highlightText(
                         content.add,
                         highlightWords,
@@ -370,9 +368,9 @@ export default function BlogPostPage({ params }) {
           </div>
 
           {post.hasOwnProperty("conclusion") && (
-            <div className={`flex-col-center ${styles.conclusion}`}>
+            <div className="flex-col-center conclusion">
               {post.conclusion.hasOwnProperty("head") && (
-                <p className={styles.quesConcl}>
+                <p className="quesConcl">
                   {highlightText(
                     post.conclusion.head,
                     highlightWords,
@@ -385,16 +383,16 @@ export default function BlogPostPage({ params }) {
                   src={post.conclusion.img.src}
                   alt={post.conclusion.img.alt}
                   className={
-                    styles[post.conclusion.img.imgSize]
-                      ? styles[post.conclusion.img.imgSize]
-                      : styles.square
+                    post.conclusion.img.imgSize
+                      ? post.conclusion.img.imgSize
+                      : "square"
                   }
-                  width={200}
-                  height={200}
+                  width={400}
+                  height={400}
                 />
               )}
               {post.conclusion.hasOwnProperty("conclusion") && (
-                <p className={styles.fontContent}>
+                <p className="fontContent">
                   {highlightText(
                     post.conclusion.conclusion,
                     highlightWords,
@@ -404,23 +402,10 @@ export default function BlogPostPage({ params }) {
               )}
             </div>
           )}
+        </div>
 
-          <div className={`flex-col-center ${styles.contactMain}`}>
-            <p className={styles.contactUs}>Contact Us:</p>
-            <p className={`${styles.fontContent} ${styles.queryMail}`}>
-              Have any queries? Mail us at:{" "}
-              <a
-                href="mailto:support@snapshawt.com"
-                className={styles.contactEmail}
-              >
-                support@snapshawt.com
-              </a>
-            </p>
-          </div>
-        </main>
-
-        <div className={`flex-col-center ${styles.leftFooterSecond}`}>
-          <ul className={`flex-col-center ${styles.socialIconCon}`}>
+        <div className="flex-col-center leftFooterSecond">
+          <ul className="flex-col-center socialIconCon">
             {/* Facebook */}
             <Link
               href="https://www.facebook.com/profile.php?id=61557027670734&mibextid=ZbWKwL"
@@ -431,7 +416,7 @@ export default function BlogPostPage({ params }) {
                   src={"/blogs/Icon-02.png"}
                   width={32} // specify appropriate width
                   height={32} // specify appropriate height
-                  className={styles.socialIcon}
+                  className="socialIcon"
                   alt="Facebook icon"
                 />
               </li>
@@ -447,7 +432,7 @@ export default function BlogPostPage({ params }) {
                   src={"/blogs/Icon-04.png"}
                   width={32}
                   height={32}
-                  className={styles.socialIcon}
+                  className="socialIcon"
                   alt="Instagram icon"
                 />
               </li>
@@ -463,7 +448,7 @@ export default function BlogPostPage({ params }) {
                   src={"/blogs/Icon-03.png"}
                   width={32}
                   height={32}
-                  className={styles.socialIcon}
+                  className="socialIcon"
                   alt="Twitter icon"
                 />
               </li>
@@ -476,7 +461,7 @@ export default function BlogPostPage({ params }) {
                   src={"/blogs/Icon-01.png"}
                   width={32}
                   height={32}
-                  className={styles.socialIcon}
+                  className="socialIcon"
                   alt="Pinterest icon"
                 />
               </li>
@@ -492,7 +477,7 @@ export default function BlogPostPage({ params }) {
                   src={"/blogs/Icon-05.png"}
                   width={32}
                   height={32}
-                  className={styles.socialIcon}
+                  className="socialIcon"
                   alt="Snapchat icon"
                 />
               </li>
@@ -504,7 +489,7 @@ export default function BlogPostPage({ params }) {
                   src={"/blogs/Icon-07.png"}
                   width={32} // specify appropriate width
                   height={32} // specify appropriate height
-                  className={styles.socialIcon}
+                  className="socialIcon"
                   alt="YouTube icon"
                 />
               </li>
@@ -512,8 +497,9 @@ export default function BlogPostPage({ params }) {
           </ul>
         </div>
       </div>
-      <div className={`flex-col-center ${styles.sliderWrapper}`}>
-        <p className={styles.blogHead}>Related Blogs</p>
+      <Contact />
+      <div className="flex-col-center sliderWrapper">
+        <p className="blogHead">Related Blogs</p>
 
         <BlogContent />
       </div>

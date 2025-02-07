@@ -3,10 +3,10 @@
   /* background: url("./../../../../public/home/enhanceimage/enhanceImgBg.png")
     center / cover; */
   /* padding: 2vw 3vw 3vw 3vw; */
-  gap: 4vw;
+  gap: 2vw;
   /* border: 1px solid black; */
   .textContainer {
-    /* border: 1px solid black; */
+    // border: 1px solid black;
     align-items: flex-start;
     gap: 0.6vw;
 
@@ -15,32 +15,33 @@
     }
   }
   .blogContainer {
-    /* border: 1px solid black; */
+    // border: 1px solid black;
     gap: 4vw;
 
     .singleBlogContainer {
-      /* border: 0.15vw solid #ccc; */
+      // border: 0.15vw solid #ccc;
       border-radius: 0.5vw;
       overflow: hidden;
-      box-shadow: 0 0 1vw rgba(122, 33, 187, 0.3);
+      box-shadow: 0 0 10px rgba(229, 220, 45, 0.3);
       .upperPart {
         width: 24vw;
-        /* border: 1px solid red; */
+        // border: 1px solid red;
       }
       .lowerPart {
-        /* border: 1px solid black; */
+        // border: 1px solid black;
         justify-content: space-between;
         /* height: 4.5vw; */
-        padding: 1.2vw;
+        padding: 1vw;
         font-weight: 500;
         .textTitle {
-          font-size: 1.2vw;
-          /* border: 1px solid black; */
-          color: var(--themeColor1);
+          font-size: 1.1vw;
+          // border: 1px solid black;
+          // color: var(--themeColor1);
+          color: rgb(72, 70, 70);
         }
 
         .iconPart {
-          /* border: 1px solid black; */
+          // border: 1px solid black;
           justify-content: flex-end;
           width: 1.3vw;
           transition: transform ease 0.3s;
@@ -53,6 +54,7 @@
   }
   .moreContainer {
     align-items: flex-start;
+    border: 1px solid blue;
     .moreBlog {
       cursor: pointer;
       width: 8.5vw;

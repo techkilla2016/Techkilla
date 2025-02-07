@@ -5,36 +5,22 @@
   line-height: 2vw;
 }
 .SingleBlogPage {
-  margin-top: 5.2vw;
+  margin-top: 5.6vw;
   padding-bottom: 4vw;
   /* background: url("../../../../public/home/hero/bg01.png") center / cover; */
   gap: 4vw;
 
-  .nav {
-    /* border: 1px solid black; */
-    gap: 3vw;
-    padding: 1.5vw;
-    width: 100%;
-    /* border-top: 0.14vw solid rgb(168, 165, 165); */
-    border-bottom: 0.14vw solid rgb(217, 213, 213);
-    .buttonStyle {
-      font-size: 1.2vw;
-      font-weight: 500;
-    }
-    .buttonStyle:hover {
-      color: var(--themeColor1);
-    }
-  }
-
   .topSection {
+    // border: 2px solid blue;
     width: 100%;
     padding-bottom: 4vw;
+    padding-top: 2vw;
     border-bottom: 1px solid rgb(184, 180, 180);
     gap: 2vw;
     justify-content: flex-start;
 
-    .title {
-      /* border: 1px solid black; */
+    .titlehead {
+      // border: 1px solid black;
       width: 70%;
       font-size: 2.4vw;
       font-weight: 600;
@@ -42,13 +28,13 @@
     .commonContainer {
       width: 100%;
       justify-content: flex-start;
-      /* border: 1px solid black; */
+      // border: 1px solid rgb(173, 23, 23);
       gap: 2vw;
       .belowText {
-        /* border: 1px solid black; */
+        // border: 2px solid blue;
         width: 70%;
       }
-      .thumbnailImg {
+      .thumbnailImgType {
         /* border: 1px solid black; */
         width: 70%;
         border-radius: 1vw;
@@ -59,12 +45,12 @@
   }
 
   .middleSection {
-    /* border: 10px solid black; */
+    // border: 1px solid black;
     /* gap: 4vw; */
     align-items: flex-start;
 
     .contentIndex {
-      /* border: 1px solid black; */
+      // border: 1px solid black;
       width: 25%;
       align-items: flex-start;
       gap: 1.2vw;
@@ -76,7 +62,7 @@
         font-weight: 500;
       }
       .quesHead {
-        /* border: 1px solid black; */
+        // border: 1px solid black;
         width: 80%;
         align-items: flex-start;
         gap: 0.8vw;
@@ -102,16 +88,16 @@
 
     .mainContainer {
       width: 55%;
-      gap: 4vw;
-      /* border: 1px solid black; */
+      // gap: 4vw;
+      // border: 1px solid black;
 
-      .upperContainer {
-        /* border: 1px solid red; */
+      .upperContainerPart {
+        // border: 1px solid red;
         gap: 4vw;
         .blogSection {
-          /* border: 1px solid red; */
+          // border: 1px solid red;
           align-items: flex-start;
-          gap: 3vw;
+          gap: 2vw;
           .quesContent {
             font-size: 1.4vw;
             font-weight: 600;
@@ -278,7 +264,7 @@
         /* border: 1px solid black; */
         gap: 6vw;
         align-items: flex-start;
-        .title {
+        .titlehead {
           font-size: 5.2vw;
         }
         /* .belowText {
@@ -290,7 +276,7 @@
         }
       }
       .lowerContainer {
-        /* border: 1px solid black; */
+        border: 1px solid black;
         gap: 6vw;
         .blogSection {
           align-items: flex-start;
@@ -356,7 +342,7 @@
       gap: 4vw;
       padding-bottom: 9vw;
 
-      .title {
+      .titlehead {
         font-size: 6.3vw;
         width: 100%;
         font-weight: 600;
