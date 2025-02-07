@@ -545,6 +545,7 @@ export default function EventForm({ action }) {
                   onChange={handleChange}
                   className="inputCon"
                   required
+                  disabled={action === "edit"}
                 >
                   <option value="" disabled>
                     Select Product
@@ -594,6 +595,7 @@ export default function EventForm({ action }) {
                   onChange={handleChange}
                   className="inputCon"
                   required={action === "add"}
+                  disabled={action === "edit"}
                 >
                   <option value="" disabled selected>
                     {action === "add"
@@ -779,7 +781,7 @@ export default function EventForm({ action }) {
                   ) : (
                     <div className="flex-col-center addNewFace">
                       <p className="flex-row-center orText">
-                        Drag & Drop your Logo here
+                        Drag & Drop Your Logo Here
                       </p>
                       <p className="flex-row-center orText">OR</p>
                       <label htmlFor="fileInput" className="fileInputLabel">

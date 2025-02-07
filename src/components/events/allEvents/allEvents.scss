@@ -28,9 +28,15 @@
     //   padding: 1.5vw 0;
     font-weight: 600;
     // background: linear-gradient(to right, #fad43a, #b3a70b);
+<<<<<<< HEAD
     background-color: #fad43a;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+=======
+    color: #ffce3a;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+>>>>>>> 2af163d2637957b886210df0105b1b823b4884d7
     text-align: center;
   }
   .searchContainer {
@@ -88,7 +94,7 @@
         // border: 1px solid blue;
         // margin-right: 1vw;
         // border-radius: 1vw;
-        background: #f6ce4c;
+        background: #ffce3a;
         border-radius: 0.2vw;
         color: black;
         font-weight: 600;
@@ -145,8 +151,8 @@
     }
     .preview-button {
       // background-color: rgb(240, 160, 22);
-      background-color: rgb(240, 160, 22);
-      color: white;
+      background-color: #ffce3a;
+      color: #6b6969;
     }
     .edit-button {
       background-color: #3977d4;
@@ -189,10 +195,8 @@
     }
 
     .page-button.active {
-      background-color: #f6ce4c;
+      background-color: #ffce3a;
       color: black;
-      border-color: #f6ce4c;
-      // transform: scale(1.15);
     }
 
     .page-button:disabled {
@@ -269,14 +273,20 @@
           border-bottom: 2px solid #626466;
         }
       }
-      .newEvent {
-        margin-right: 1vw;
-        border-radius: 1vw;
-        background: linear-gradient(to right, #3c3a3a, #8f8f17);
-        color: #fff;
-        width: 20%;
-        font-size: 2.5vw;
-        padding: 0.8vw 1.3vw;
+      .event-icon {
+        // border: 1px solid black;
+        // background: #f6ce4c;
+        border-radius: 0.2vw;
+        cursor: pointer;
+        // width: 3.2vw;
+        .newEvent {
+          // border: 1px solid blue;
+          // margin-right: 1vw;
+          // border-radius: 1vw;
+          border-radius: 0.2vw;
+          font-size: 4vw;
+          margin: 0.4vw;
+        }
       }
     }
     .table-wrapper {
@@ -408,7 +418,7 @@
         }
       }
       .event-icon {
-        border: 1px solid black;
+        // border: 1px solid black;
         background: #f6ce4c;
         border-radius: 0.6vw;
         cursor: pointer;
@@ -421,7 +431,7 @@
           border-radius: 0.6vw;
           color: black;
           // font-weight: 600;
-          font-size: 4vw !important;
+          font-size: 5vw !important;
           // margin: 1vw;
         }
       }
