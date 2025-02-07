@@ -1,0 +1,322 @@
+.MainBlogPage {
+  margin-top: 5.2vw;
+  padding-bottom: 4vw;
+  /* padding: 2vw 3vw 3vw 3vw; */
+  gap: 2vw;
+  /* border: 1px solid black; */
+}
+.nav {
+  /* border: 1px solid black; */
+  gap: 3vw;
+  padding: 1.5vw;
+  width: 100%;
+  /* border-top: 0.14vw solid rgb(168, 165, 165); */
+  border-bottom: 0.14vw solid rgb(217, 213, 213);
+  .buttonStyle {
+    /* border: 1px solid black; */
+    font-size: 1.2vw;
+    font-weight: 500;
+  }
+  .buttonStyle:hover {
+    color: var(--themeColor1);
+  }
+}
+.maincontainer {
+  /* border: 1px solid black; */
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.mainHeading {
+  color: rgb(75, 72, 72);
+  font-weight: 500;
+  /* border: 1px solid black; */
+  padding-bottom: 1vw;
+  font-size: 1.9vw;
+  /* font-style: italic; */
+}
+.shortDesc {
+  font-size: 1vw;
+  padding-bottom: 3vw;
+  /* border: 1px solid black; */
+}
+.blogContainer {
+  /* border: 1px solid black; */
+  gap: 2vw;
+}
+
+.blogItem {
+  gap: 2vw;
+  cursor: pointer;
+  /* border: 1px solid rgb(182, 119, 119); */
+}
+.thumbnailImage {
+  padding: 1vw;
+  width: 40%;
+  border-radius: 2vw;
+  overflow: hidden;
+  /* box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0); */
+}
+.textContainer {
+  /* border: 1px solid black; */
+  width: 55%;
+  padding: 2vw;
+  gap: 1.6vw;
+}
+.blogTitle {
+  font-size: 1.8vw;
+
+  font-weight: 600;
+}
+.blogContent {
+  font-size: 1vw;
+  line-height: 1.8vw;
+  color: #666;
+}
+.contactMain {
+  width: 100%;
+  gap: 0.5vw;
+  /* border: 1px solid black; */
+  /* align-items: flex-start; */
+  .contactUs {
+    font-size: 1.4vw;
+    font-weight: 600;
+    line-height: 2vw;
+  }
+
+  .queryMail {
+    .contactEmail {
+      text-decoration: underline !important;
+      color: #af42d3;
+      font-style: italic;
+    }
+  }
+}
+.leftFooterSecond {
+  /* border: 1px solid black; */
+  gap: 3vw;
+  width: 25%;
+
+  .socialIconCon {
+    gap: 1vw;
+    .socialIcon {
+      /* border-radius: 0.7vw; */
+      width: 3vw;
+      height: 3vw;
+      /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    }
+  }
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin-top: 3vw;
+  /* height: 100vw; */
+}
+
+.cardItem {
+  width: 30vw;
+  padding: 1.5vw;
+  border: 0.1vw solid #ccc;
+  border-radius: 0.5vw;
+  box-shadow: 0px 0.5vw 0.8vw rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 25vw;
+}
+
+.cardThumbnail {
+  /* border: 2px solid black; */
+  border-radius: 0.3vw;
+  margin-bottom: 1vw;
+}
+
+.cardTitle {
+  /* border: 2px solid black; */
+  font-size: 1.2vw;
+  margin-bottom: 0.8vw;
+}
+
+.cardExcerpt {
+  font-size: 0.9vw;
+  color: #666;
+}
+.mobileType {
+  display: none;
+}
+
+/* tablet responsiveness */
+@media all and (max-width: 991px) {
+  .desktopType {
+    display: none;
+  }
+  .blogPage {
+    margin-top: 5.7vw;
+  }
+  .mobileType {
+    display: flex;
+    flex-direction: column; /* Stack the blogs vertically */
+    gap: 4vw; /* Adjust the gap between each card */
+    padding: 3vw; /* Padding around the cards */
+  }
+
+  /* Style for each card */
+  .cardItem {
+    width: 90vw;
+    height: 100%;
+    padding: 4vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 1vw;
+    box-shadow: 0px 2vw 3vw rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 4vw; /* Gap between cards */
+  }
+
+  .cardThumbnail {
+    border-radius: 0.3vw;
+    margin-bottom: 1vw;
+  }
+
+  .cardTitle {
+    font-size: 4.2vw;
+    margin-bottom: 1.5vw;
+    margin-top: 1.5vw;
+  }
+
+  .cardExcerpt {
+    font-size: 3.5vw;
+    color: #666;
+    line-height: 1.6;
+  }
+  .contactMain {
+    width: 100%;
+    gap: 2vw;
+    /* border: 1px solid black; */
+    /* align-items: flex-start; */
+    .contactUs {
+      font-size: 3.5vw;
+      font-weight: 600;
+      line-height: 2vw;
+    }
+
+    .queryMail {
+      font-size: 3.5vw;
+      .contactEmail {
+        text-decoration: underline !important;
+        color: #af42d3;
+        font-style: italic;
+        font-size: 3.5vw;
+      }
+    }
+  }
+  .leftFooterSecond {
+    /* border: 1px solid black; */
+    gap: 3vw;
+    width: 25%;
+
+    .socialIconCon {
+      gap: 2vw;
+      .socialIcon {
+        /* border-radius: 0.7vw; */
+        width: 8vw;
+        height: 8vw;
+        /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+      }
+    }
+  }
+}
+
+/* mobile responsiveness */
+@media all and (max-width: 480px) {
+  .MainBlogPage {
+    margin-top: 13.6vw;
+    padding-bottom: 8vw;
+    gap: 3vw;
+  }
+  .desktopType {
+    display: none;
+  }
+  .nav {
+    /* border: 1px solid black; */
+    gap: 9vw;
+    padding: 6vw;
+    border-bottom: 1px solid rgb(167, 164, 164);
+    .buttonStyle {
+      font-size: 4.8vw;
+    }
+  }
+  .mobileType {
+    display: flex;
+    flex-direction: column; /* Stack the blogs vertically */
+    gap: 4vw; /* Adjust the gap between each card */
+    padding: 3vw; /* Padding around the cards */
+  }
+
+  /* Style for each card */
+  .cardItem {
+    width: 90vw; /* Take up most of the screen width */
+    padding: 4vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 1vw;
+    box-shadow: 0px 2vw 3vw rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 4vw; /* Gap between cards */
+  }
+
+  .cardThumbnail {
+    border-radius: 0.3vw;
+    margin-bottom: 1vw;
+  }
+
+  .cardTitle {
+    font-size: 4vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .cardExcerpt {
+    font-size: 3.5vw;
+    color: #666;
+    line-height: 1.6;
+  }
+  .contactMain {
+    width: 100%;
+    gap: 2vw;
+    /* border: 1px solid black; */
+    /* align-items: flex-start; */
+    .contactUs {
+      font-size: 3.5vw;
+      font-weight: 600;
+      line-height: 2vw;
+    }
+
+    .queryMail {
+      font-size: 3.5vw;
+      .contactEmail {
+        text-decoration: underline !important;
+        color: #af42d3;
+        font-style: italic;
+        font-size: 3.5vw;
+      }
+    }
+  }
+  .leftFooterSecond {
+    /* border: 1px solid black; */
+    gap: 3vw;
+    width: 25%;
+
+    .socialIconCon {
+      gap: 2vw;
+      .socialIcon {
+        /* border-radius: 0.7vw; */
+        width: 8vw;
+        height: 8vw;
+        /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+      }
+    }
+  }
+}
