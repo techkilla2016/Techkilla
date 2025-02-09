@@ -14,6 +14,7 @@ import TestimonialsData from "@/data/Testimonials";
 import WhatsappModal from "@/components/Modal/whatsapp";
 import Blog from "@/components/home/blogs";
 import Head from "next/head";
+import Faq from "@/components/faq/faq";
 export const metadata = {
   title:
     "Event Photo Booth | AI photo Booth Services for Occasions - Techkilla",
@@ -81,9 +82,11 @@ const Home = () => {
 
             <Testimonials cardData={TestimonialsData} />
           </Container>
-          <Blog />
+
+          <Faq />
         </div>
       </main>
+      <Blog />
       <Footer bg="#fafafa" />
     </>
   );
