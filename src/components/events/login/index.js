@@ -15,7 +15,7 @@ export default function Login({ userData, setUserData }) {
   const handleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
-      console.log("User data stored in Firestore.");
+      console.log("User data stored in Firestore.", result);
     } catch (error) {
       console.error(error.message);
     }

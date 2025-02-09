@@ -1,5 +1,4 @@
 .payment-section {
-  // border: 1px solid red;
   width: 90vw;
   height: 85svh;
   padding: 1vw;
@@ -80,7 +79,6 @@
     border-radius: 0.25vw;
     align-items: flex-start;
     justify-content: flex-start;
-    overflow-y: auto;
     gap: 2vw;
     .payment-method {
       // border: 1px solid black;
@@ -194,7 +192,7 @@
     box-shadow: 0 0vw 0.3vw rgba(0, 0, 0, 0.4);
     padding: 0.5vw 1vw;
     border-radius: 0.25vw;
-    gap: 2vw;
+    gap: 1vw;
     .summary-heading-txt {
       width: 100%;
       text-align: center;
@@ -202,12 +200,13 @@
       font-weight: 600;
     }
     .fareSummary {
-      // border: 1px solid red;
       width: 100%;
+      gap: 0.5vw;
       .fareTxt {
         width: 100%;
         justify-content: space-between;
         border-bottom: 1px solid #ccc;
+        padding: 0.5vw 0;
       }
       .totalFareTxt {
         width: 100%;
@@ -220,7 +219,7 @@
 }
 
 // tablet responsive view
-@media all and (min-width: 480px) and (max-width: 1024px) {
+/* @media all and (min-width: 480px) and (max-width: 1024px) {
   .payment-section {
     width: 90%;
     padding: 0;
@@ -414,10 +413,10 @@
       }
     }
   }
-}
+} */
 
 // mobile responsive view
-@media all and (max-width: 480px) {
+/* @media all and (max-width: 480px) {
   .payment-section {
     // border: 1px solid black;
     width: 100%;
@@ -611,4 +610,4 @@
       }
     }
   }
-}
+} */

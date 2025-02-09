@@ -1,9 +1,20 @@
 .billingFormContainer {
-  // border: 2px solid red;
+  .buttonBilling {
+    color: #fff;
+    background-color: #007bff;
+    padding: 0.5vw;
+    width: 100%;
+    font-size: 1vw;
+    font-weight: 600;
+    border-radius: 0.2vw;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
   width: 100%;
   height: 100%;
-  overflow-y: auto;
-  gap: 1.4svh;
+  gap: 1vw;
   justify-content: flex-start;
   position: relative;
   padding: 0 0.5vw;
@@ -13,104 +24,113 @@
     font-size: 1.2vw;
     font-weight: 600;
   }
-  .billingForm {
-    // border: 2px solid red;
-    width: 100%;
-    gap: 2svh;
-    .formFieldBilling {
-      width: 100%;
-      gap: 0.5svh;
-      align-items: flex-start;
-
-      .labelBilling {
-        // width: 100%;
-      }
-      .inputBilling {
-        width: 100%;
-        outline: none;
-        padding: 1svh;
-        border: 0.2svh solid black;
-        border-radius: 0.5svh;
-        font-size: 2svh;
-        .optionInputBilling {
-          // font-size: 4svh;
-        }
-      }
-      .billingAddress {
-        resize: none;
-      }
-      .checkLabel {
-        // border: 2px solid red;
-        gap: 1svh;
-      }
-    }
-    .buttonBilling {
-      // border: 2px solid red;
-      background-color: #007bff;
-      color: white;
-      padding: 1vw;
-      width: 100%;
-      font-size: 1vw;
-      font-weight: 600;
-      border-radius: 0.35vw;
-      position: sticky;
-      bottom: 0;
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
-  }
   .recentBillingInfoContainer {
-    // border: 2px solid red;
     width: 100%;
-    gap: 1.3svh;
+    height: 92%;
+    position: relative;
+    justify-content: flex-start;
     .recentBillingCardWrapper {
       width: 100%;
-      // border: 2px solid red;
-      height: 40svh;
-      gap: 2svh;
+      height: 82%;
+      gap: 0.5vw;
       overflow-y: auto;
       justify-content: flex-start;
       .recentBillingCard {
-        gap: 1.4svh;
-        justify-content: flex-start;
-        padding: 1.5svh;
         width: 100%;
         background-color: #fff;
-        border-radius: 0.9svh;
-        .addressBillingBox {
-          // border: 1px solid red;
+        border-radius: 0.2vw;
+        gap: 1vw;
+        padding: 0.5vw;
+        cursor: pointer;
+        .radio {
+          width: 1vw;
+          height: 1vw;
+        }
+        .billingDetailsContainer {
           width: 100%;
           align-items: flex-start;
-          gap: 0.3svh;
+          gap: 0.5vw;
           .boxTitleBillingCard {
-            font-size: 2.4svh;
+            font-size: 1vw;
             font-weight: 600;
           }
           .boxBillingAddressName {
-            font-size: 2svh;
+            font-size: 0.8vw;
             color: grey;
+          }
+        }
+        .actionIconContainer {
+          gap: 1vw;
+          font-size: 1.5vw;
+          .editIcon {
+            color: #0056b3;
+          }
+          .deleteIcon {
+            color: red;
           }
         }
       }
     }
-    .buttonBilling {
-      background-color: #007bff;
-      color: white;
-      padding: 1vw;
+    .btnContainer {
+      height: 18%;
       width: 100%;
-      font-size: 1vw;
-      font-weight: 600;
-      border-radius: 0.35vw;
-      &:hover {
-        background-color: #0056b3;
+      gap: 0.3vw;
+      justify-content: flex-end;
+      .buttonBilling {
+        @extend .buttonBilling;
+      }
+    }
+  }
+  .billingForm {
+    width: 100%;
+    height: 92%;
+    .formContainer {
+      width: 100%;
+      height: 91%;
+      gap: 1vw;
+      justify-content: flex-start;
+      overflow-y: auto;
+      .formFieldBilling {
+        width: 100%;
+        gap: 0.2vw;
+        align-items: flex-start;
+        .labelBilling {
+          font-size: 0.9vw;
+          font-weight: 600;
+        }
+        .inputBilling {
+          width: 100%;
+          outline: none;
+          padding: 1svh;
+          border: 0.1vw solid #aaa;
+          border-radius: 0.2vw;
+          font-size: 0.9vw;
+          .optionInputBilling {
+            // font-size: 4svh;
+          }
+        }
+        .billingAddress {
+          resize: none;
+        }
+        .checkLabel {
+          // border: 2px solid red;
+          gap: 1svh;
+        }
+      }
+    }
+    .btnContainer {
+      width: 100%;
+      height: 9%;
+      align-items: flex-end;
+      .buttonBilling {
+        @extend .buttonBilling;
       }
     }
   }
 }
 
 // for tablet
-@media all and (max-width: 1024px) {
+/* @media all and (max-width: 1024px) {
   .billingFormContainer {
     width: 100%;
     gap: 1.4svh;
@@ -200,6 +220,7 @@
     }
   }
 }
+ */
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

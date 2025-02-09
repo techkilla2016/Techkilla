@@ -9,6 +9,8 @@ import { useDispatch } from "react-redux";
 import { UserDataReducer, AllEventsReducer } from "@/app/redux/slice";
 import { collection, onSnapshot } from "firebase/firestore";
 
+import useCreateUser from "@/customHooks/useCreateUser";
+
 const App = () => {
   const dispatch = useDispatch();
   const [userData, setUserData] = useState();
@@ -27,6 +29,8 @@ const App = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
+        console.log("running user data change");
+
         const data = {
           uid: user.uid,
           email: user.email,
@@ -35,6 +39,20 @@ const App = () => {
         };
         dispatch(UserDataReducer(data));
         setUserData(data);
+
+        console.log(user);
+
+        // create user in mongodb
+        const userData = {
+          firebaseUid: user.uid,
+          displayName: user.displayName,
+          email: user.email,
+          photoURL: user.photoURL,
+          createdAt: user.metadata.createdAt,
+          lastLoginAt: user.metadata.lastLoginAt,
+        };
+
+        useCreateUser(userData);
       }
     });
     return () => unsubscribe();

@@ -80,8 +80,8 @@ export default function PriceComponent() {
     billingAddress: "",
     isGstRequired: false,
     gstCompanyName: "",
-    // gstCompanyAddress: "",
     gstNumber: "",
+    gst: false,
   });
 
   const [userBillingInfo, setUserBillingInfo] = useState();
@@ -121,43 +121,43 @@ export default function PriceComponent() {
 
   console.log(eventData, "eventdata");
 
-  // useEffect(() => {
-  //   const getBillingData = async () => {
-  //     console.log(userDataSelector, "user data");
-  //     try {
-  //       let res = await axios.get(
-  //         `${process.env.SERVER_BASE_URL}/billing-info/getAllByUserid/${userDataSelector?._id}`
-  //       );
-  //       setUserBillingInfo(res.data);
-  //       setCurrentBilling(res?.data[0]);
-  //       setIsShowOldBillingInfo(true);
-  //       console.log(res);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
+  useEffect(() => {
+    const getBillingData = async () => {
+      try {
+        let res = await axios.get(
+          `http://localhost:8000/billing-info/${userDataSelector?.uid}`
+        );
+        setUserBillingInfo(res?.data.billingInfo);
+        setCurrentBilling(res?.data.billingInfo[0]);
+        setIsShowOldBillingInfo(true);
+        console.log(res);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-  //   if (userDataSelector?._id) {
-  //     getBillingData();
-  //   }
-  // }, [userDataSelector]);
+    if (userDataSelector?.uid) {
+      getBillingData();
+    }
+  }, [userDataSelector]);
 
-  // // mobile view
-  // const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
-  // useEffect(() => {
-  //   if (UserDB.isUserIndian()) setPrice("INR 399");
-  //   else setPrice("$ 4.99");
+  // mobile view
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
 
-  //   setIsMobileView(isMobile);
-  // }, [isMobile]);
+  /*  useEffect(() => {
+    if (UserDB.isUserIndian()) setPrice("INR 399");
+    else setPrice("$ 4.99");
 
-  // // update it for each payment
-  // let paymentGatewayLink = "";
-  // const [selectedMethod, setSelectedMethod] = useState("credit");
+    setIsMobileView(isMobile);
+  }, [isMobile]); */
 
-  // const handlePaymentMethodSelect = (method) => {
-  //   setSelectedMethod(method);
-  // };
+  // update it for each payment
+  let paymentGatewayLink = "";
+  const [selectedMethod, setSelectedMethod] = useState("credit");
+
+  const handlePaymentMethodSelect = (method) => {
+    setSelectedMethod(method);
+  };
 
   function openPaymentPopup(paymentGatewayLink) {
     // Set the popup dimensions
