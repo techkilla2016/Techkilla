@@ -8,9 +8,10 @@
   .buttonStyle {
     font-size: 1.2vw;
     font-weight: 500;
+    // background-color: gray;
   }
   .buttonStyle:hover {
-    color: var(--themeColor1);
+    color: #fad43a;
   }
 }
 @media all and (min-width: 480px) and (max-width: 1024px) {

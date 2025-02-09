@@ -1,16 +1,17 @@
 .MainBlogPage {
-  // margin-top: 5.2vw;
-  padding-bottom: 4vw;
-  /* padding: 2vw 3vw 3vw 3vw; */
+  margin-top: 5.2vw;
+  // padding-bottom: 4vw;
+  // padding: 2vw 3vw 3vw 3vw;
   gap: 2vw;
-  /* border: 1px solid black; */
+  // border: 1px solid black;
 }
 
-.maincontainer {
-  // border: 1px solid black;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
+// .mainContainer {
+//   // margin-top: 5.2vw;
+//   border: 1px solid black;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+// }
 .mainHeading {
   // color: rgb(75, 72, 72);
   font-weight: 600;
@@ -111,7 +112,7 @@
     display: none;
   }
   .blogPage {
-    margin-top: 5.7vw;
+    margin-top: 6vw;
   }
   .mobileType {
     display: flex;
@@ -119,7 +120,12 @@
     gap: 4vw; /* Adjust the gap between each card */
     padding: 3vw; /* Padding around the cards */
   }
-
+  .blogTitle {
+    background: linear-gradient(to right, #fad43a, #2c2904);
+    //  color: #ffce3a;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   /* Style for each card */
   .cardItem {
     width: 90vw;
@@ -141,6 +147,7 @@
     font-size: 4.2vw;
     margin-bottom: 1.5vw;
     margin-top: 1.5vw;
+    color: black;
   }
 
   .cardExcerpt {
@@ -169,6 +176,12 @@
       font-size: 4.8vw;
     }
   }
+  .blogTitle {
+    background: linear-gradient(to right, #fad43a, #2c2904);
+    //  color: #ffce3a;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .mobileType {
     display: flex;
     flex-direction: column; /* Stack the blogs vertically */
@@ -182,6 +195,7 @@
     padding: 4vw;
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
+
     box-shadow: 0px 2vw 3vw rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 4vw; /* Gap between cards */
@@ -195,6 +209,7 @@
   .cardTitle {
     font-size: 4vw;
     margin-bottom: 1.5vw;
+    color: black;
   }
 
   .cardExcerpt {

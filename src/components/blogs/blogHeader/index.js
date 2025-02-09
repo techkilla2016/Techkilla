@@ -9,10 +9,10 @@ export default function BlogHeader() {
       <Link href="/">
         <button className="buttonStyle">Home</button>
       </Link>
-      <Link href={"/"}>
-        <button className="buttonStyle">Face Swap</button>
+      <Link href={"/events"}>
+        <button className="buttonStyle">Create your Photobooth</button>
       </Link>
-      <Link href={"/#contact"}>
+      <Link href={"/contact"}>
         <button className="buttonStyle">Contact us</button>
       </Link>
     </nav>

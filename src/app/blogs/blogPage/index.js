@@ -6,6 +6,7 @@ import Header from "../../../components/header";
 import Image from "next/image";
 import { blogPosts } from "@/data/blogs/index.js";
 import BlogHeader from "@/components/blogs/blogHeader";
+import Footer from "@/components/footer";
 
 export default function BlogPage() {
   const generateSlug = (title) => {
@@ -15,17 +16,17 @@ export default function BlogPage() {
   return (
     <>
       <div className="flex-col-center MainBlogPage">
-        {/* <BlogHeader /> */}
+        <BlogHeader />
         {/* <Header /> */}
 
         <div className="flex-col-center mainContainer">
-          <h3 className={`flex-col-center mainHeading`}>
+          {/* <h3 className={`flex-col-center mainHeading`}>
             Welcome to Our Blog Space
           </h3>
           <p className="shortDesc">
             Sharing stories and ideas that spark curiosity and drive
             conversations.
-          </p>{" "}
+          </p>{" "} */}
           <div className="flex-col-center blogContainer">
             {/* First 5 blogs with alternating layout */}
             <div className="desktopType">
@@ -135,6 +136,7 @@ export default function BlogPage() {
         </div>
         <Contact />
       </div>
+      <Footer />
     </>
   );
 }
