@@ -1,0 +1,223 @@
+.MainBlogPage {
+  margin-top: 5.2vw;
+  // padding-bottom: 4vw;
+  // padding: 2vw 3vw 3vw 3vw;
+  gap: 2vw;
+  // border: 1px solid black;
+}
+
+// .mainContainer {
+//   // margin-top: 5.2vw;
+//   border: 1px solid black;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+// }
+.mainHeading {
+  // color: rgb(75, 72, 72);
+  font-weight: 600;
+  // border: 1px solid black;
+  margin-top: 2vw;
+  padding-bottom: 1vw;
+  font-size: 1.9vw;
+  /* font-style: italic; */
+}
+.shortDesc {
+  font-size: 1vw;
+  padding-bottom: 3vw;
+  /* border: 1px solid black; */
+}
+.blogContainer {
+  // border: 1px solid black;
+  gap: 2vw;
+}
+
+.blogItem {
+  gap: 2vw;
+  cursor: pointer;
+  // border: 1px solid rgb(182, 119, 119);
+}
+.thumbnailImageType {
+  padding: 1vw;
+  // border: 2px solid blue;
+  width: 40%;
+  border-radius: 2vw;
+  overflow: hidden;
+  /* box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0); */
+}
+.textContainer {
+  // border: 1px solid black;
+  width: 55%;
+  padding: 2vw;
+  gap: 1.6vw;
+}
+.blogTitle {
+  // border: 1px solid black;
+  // color: yellow;
+  font-size: 1.8vw;
+  font-weight: 600;
+  background: linear-gradient(to right, #fad43a, #2c2904);
+  //  color: #ffce3a;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.blogContent {
+  // border: 1px solid black;
+  font-size: 1vw;
+  line-height: 1.8vw;
+  color: #666;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin-top: 3vw;
+  /* height: 100vw; */
+}
+
+.cardItem {
+  width: 30vw;
+  padding: 1.5vw;
+  border: 0.1vw solid #ccc;
+  border-radius: 0.5vw;
+  box-shadow: 0px 0.5vw 0.8vw rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 25vw;
+}
+
+.cardThumbnail {
+  /* border: 2px solid black; */
+  border-radius: 0.3vw;
+  margin-bottom: 1vw;
+}
+
+.cardTitle {
+  /* border: 2px solid black; */
+  font-size: 1.2vw;
+  margin-bottom: 0.8vw;
+}
+
+.cardExcerpt {
+  font-size: 0.9vw;
+  color: #666;
+}
+.mobileType {
+  display: none;
+}
+
+/* tablet responsiveness */
+@media all and (max-width: 991px) {
+  .desktopType {
+    display: none;
+  }
+  .blogPage {
+    margin-top: 6vw;
+    // border: 2px solid blue;
+  }
+  .mobileType {
+    display: flex;
+    margin-top: 6vw;
+    flex-direction: column;
+    gap: 4vw;
+    padding: 3vw;
+    // border: 2px solid blue;
+  }
+  .blogTitle {
+    background: linear-gradient(to right, #fad43a, #2c2904);
+    //  color: #ffce3a;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  /* Style for each card */
+  .cardItem {
+    width: 90vw;
+    height: 100%;
+    padding: 4vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 1vw;
+    box-shadow: 0px 2vw 3vw rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 4vw; /* Gap between cards */
+  }
+
+  .cardThumbnail {
+    border-radius: 0.3vw;
+    margin-bottom: 1vw;
+  }
+
+  .cardTitle {
+    font-size: 4.2vw;
+    margin-bottom: 1.5vw;
+    margin-top: 1.5vw;
+    color: black;
+  }
+
+  .cardExcerpt {
+    font-size: 3.5vw;
+    color: #666;
+    line-height: 1.6;
+  }
+}
+
+/* mobile responsiveness */
+@media all and (max-width: 480px) {
+  .MainBlogPage {
+    margin-top: 13.6vw;
+    padding-bottom: 8vw;
+    gap: 3vw;
+  }
+  .desktopType {
+    display: none;
+  }
+  .nav {
+    /* border: 1px solid black; */
+    gap: 9vw;
+    padding: 6vw;
+    border-bottom: 1px solid rgb(167, 164, 164);
+    .buttonStyle {
+      font-size: 4.8vw;
+    }
+  }
+  .blogTitle {
+    background: linear-gradient(to right, #fad43a, #2c2904);
+    //  color: #ffce3a;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .mobileType {
+    display: flex;
+    flex-direction: column; /* Stack the blogs vertically */
+    gap: 4vw; /* Adjust the gap between each card */
+    padding: 3vw; /* Padding around the cards */
+  }
+
+  /* Style for each card */
+  .cardItem {
+    width: 90vw; /* Take up most of the screen width */
+    padding: 4vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 1vw;
+
+    box-shadow: 0px 2vw 3vw rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 4vw; /* Gap between cards */
+  }
+
+  .cardThumbnail {
+    border-radius: 0.3vw;
+    margin-bottom: 1vw;
+  }
+
+  .cardTitle {
+    font-size: 4vw;
+    margin-bottom: 1.5vw;
+    color: black;
+  }
+
+  .cardExcerpt {
+    font-size: 3.5vw;
+    color: #666;
+    line-height: 1.6;
+  }
+}

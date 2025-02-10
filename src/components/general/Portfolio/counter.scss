@@ -1,0 +1,93 @@
+.Counter {
+  //   border: 2px solid blue;
+  gap: 1.5vw;
+  padding-bottom: 2vw;
+  .headExp {
+    font-weight: 600;
+  }
+  .imgExp {
+    width: 10vw;
+  }
+  .expSection {
+    // border: 2px solid blue;
+    width: 80%;
+    justify-content: space-between;
+    padding: 2vw;
+    .expItem {
+      padding: 3vw;
+      position: relative;
+      background: #f6ce4c;
+      //   border: 1px solid green;
+      .expNumber {
+        font-weight: 600;
+        font-size: 2.8vw;
+      }
+      .expName {
+        font-weight: 600;
+        font-size: 1vw;
+      }
+      .icon-part {
+        // border: 1px solid blue;
+        position: absolute;
+        bottom: -15%;
+        right: 35%;
+        width: 4vw;
+        background: rgb(245, 243, 243);
+        color: #f6ce4c;
+        border-radius: 50%;
+        height: 4vw;
+        font-weight: 600;
+        font-size: 1.8vw;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  .Counter {
+    //   border: 2px solid blue;
+    gap: 2vw;
+    padding-bottom: 5vw;
+    .headExp {
+      font-weight: 600;
+    }
+    .imgExp {
+      width: 24vw;
+    }
+    .expSection {
+      // border: 2px solid blue;
+      gap: 13vw;
+      width: 60%;
+      padding: 2vw;
+      flex-direction: column;
+      .expItem {
+        padding: 6vw;
+        position: relative;
+        background: #f6ce4c;
+        //   border: 1px solid green;
+        .expNumber {
+          font-weight: 600;
+          font-size: 6vw;
+        }
+        .expName {
+          font-weight: 600;
+          font-size: 3.6vw;
+        }
+        .icon-part {
+          //   border: 1px solid blue;
+          position: absolute;
+          bottom: -15%;
+          right: 35%;
+          width: 12vw;
+          background: rgb(245, 243, 243);
+          color: #f6ce4c;
+          border-radius: 50%;
+          height: 12vw;
+          font-weight: 600;
+          font-size: 6vw;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

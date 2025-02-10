@@ -2,7 +2,18 @@
 import React, { useState } from "react";
 import YouTubePlayer from "@/components/Modal/video";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper";
+import {
+  Navigation,
+  Autoplay,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import ButtonSwap from "@/components/button/buttonSwap";
 import Image from "next/image";
 export default function RecentWorkSwiper({ work }) {

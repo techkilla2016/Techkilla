@@ -1,83 +1,45 @@
-"use client"
-import React, { useState, useEffect, useRef } from "react";
-import dynamic from "next/dynamic";
-import { Col, Row } from "react-bootstrap";
+"use client";
+import React from "react";
 import Image from "next/image";
+import { ImHappy } from "react-icons/im";
+import { PiNotePencilLight } from "react-icons/pi";
+import { IoIosContacts } from "react-icons/io";
+import { FaAward } from "react-icons/fa6";
+import "./counter.scss";
 
-const DynamicCountUp = dynamic(() => import("react-countup"), { ssr: false });
+export default function Counter() {
+  const experience = [
+    { name: "Happy Customers", number: "90+", icon: ImHappy },
+    { name: "Projects Completed", number: "700+", icon: PiNotePencilLight },
+    { name: "Organic Impressions", number: "5M+", icon: IoIosContacts },
+    { name: "Pro Awards Winner", number: "3+", icon: FaAward },
+  ];
 
-const Counter = () => {
-    const [isVisible, setIsVisible] = useState(true);
-    const counterRef = useRef(null);
-    useEffect(() => {
-        const handleScroll = () => {
-            const divElement = counterRef?.current;
-            if (!divElement) return;
-            const { top, bottom } = divElement.getBoundingClientRect();
-            if (top < window?.innerHeight) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    const counterData = [
-        {
-            icon: '/assets/home/a01.png',
-            alt: "Happy Customers",
-            count: <><DynamicCountUp start={0} end={80} duration={2.5} />+</>,
-            title: 'Happy Customers'
-        },
-        {
-            icon: '/assets/home/a02.png',
-            alt: "Projects Completed",
-            count: <><DynamicCountUp start={0} end={600} duration={2.5} />+</>,
-            title: ' Projects Completed'
-        },
-        {
-            icon: '/assets/home/a03.png',
-            alt: "Organic Impressions",
-            count: <><DynamicCountUp start={0} end={5} duration={2.5} />M+</>,
-            title: 'Organic Impressions'
-        },
-        {
-            icon: '/assets/home/a04.png',
-            alt: "Pro Awards Winner",
-            count: <><DynamicCountUp start={0} end={3} duration={2.5} />+</>,
-            title: "Pro Awards Winner"
-        }
-    ]
-    return (
-        <div ref={counterRef}>
-            {
-                isVisible && <Row>
-                    {
-                        counterData?.map((item, keys) => {
-                            return <Col xl={3} lg={3} md={6} sm={12} key={keys} data-aos="zoom-in-up" data-aos-delay={0}>
-                                <div className="recode my-4 py-4" >
-                                    <div className="recodeIcon">
-                                        <Image src={item?.icon} alt={item?.alt} width={1920} height={1080} />
-                                    </div>
-                                    <div className="recodeData">
-                                        {item?.count}
-                                    </div>
-                                    <div className="recodeTitle">
-                                        {item?.title}
-                                    </div>
-                                </div>
-                            </Col>
-                        })
-                    }
-                </Row>
-            }
-        </div>
-    );
-};
-
-export default Counter;
+  return (
+    <div className="flex-col-center Counter">
+      <h1 className="headExp">Our Experience</h1>
+      <div className="flex-col-center imgExp">
+        <Image
+          src="/assets/home/8-year.png"
+          alt="Experience"
+          width={500}
+          height={300}
+        />
+      </div>
+      <div className="flex-row-center expSection">
+        {experience.map((exp, index) => {
+          const IconComponent = exp.icon;
+          return (
+            <div key={index} className="flex-col-center expItem">
+              <h2 className="expNumber">{exp.number}</h2>
+              <p className="expName">{exp.name}</p>
+              <div className="flex-col-center icon-part">
+                <IconComponent className="expIcon" />{" "}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
