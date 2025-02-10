@@ -1,18 +1,18 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import YouTubePlayer from "@/components/general/video/youtube";
 
 export default function SingleCard({ list }) {
-  const [isPlay, setIsPlay] = useState(false)
-  const [curVideo, setCurVideo] = useState('')
+  const [isPlay, setIsPlay] = useState(false);
+  const [curVideo, setCurVideo] = useState("");
   const handleClose = () => {
-    setIsPlay(false)
-  }
+    setIsPlay(false);
+  };
   return (
     <>
       <div className="singleCard">
@@ -47,32 +47,37 @@ export default function SingleCard({ list }) {
           modules={[Pagination, Autoplay]}
           className="mySwiper"
         >
-          {
-            list?.map((item, index) => {
-              return <SwiperSlide key={index}>
+          {list?.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
                 <div className="swiperCart">
                   <div className="backLyer">
-                    <Image src={item.them} alt={item.title} width={1920} height={1080} />
+                    <Image
+                      src={item.them}
+                      alt={item.title}
+                      width={1920}
+                      height={1080}
+                    />
                   </div>
                   <div className="lyear">
-                    <button onClick={() => {
-                      if (item?.url !== '/') {
-                        setIsPlay(true)
-                        setCurVideo(item?.url)
-                      }
-                    }}>
+                    <button
+                      onClick={() => {
+                        if (item?.url !== "/") {
+                          setIsPlay(true);
+                          setCurVideo(item?.url);
+                        }
+                      }}
+                    >
                       {item.title}
                     </button>
                   </div>
                 </div>
               </SwiperSlide>
-            })
-          }
+            );
+          })}
         </Swiper>
-      </div >
-      {
-        isPlay && <YouTubePlayer url={curVideo} handleClose={handleClose} />
-      }
+      </div>
+      {isPlay && <YouTubePlayer url={curVideo} handleClose={handleClose} />}
     </>
   );
 }
