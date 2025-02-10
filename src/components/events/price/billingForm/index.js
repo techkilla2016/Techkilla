@@ -18,13 +18,13 @@ export default function BillingInfoForm({
   isShowOldBillingInfo,
   setIsShowOldBillingInfo,
   userDataSelector,
-  setIsGetBillingData
+  setIsGetBillingData,
 }) {
   const router = useRouter();
   const [states, setStates] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedState, setSelectedState] = useState("");
-  const [isFormUpdate,setIsFormUpdate]=useState(false)
+  const [isFormUpdate, setIsFormUpdate] = useState(false);
 
   // for form field
   const handleChange = (e) => {
@@ -104,75 +104,80 @@ export default function BillingInfoForm({
     }
 
     // update form
-    if(isFormUpdate){
+    if (isFormUpdate) {
       try {
-        const res = await axios.patch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/billing-info/update/${formData._id}`,data)
-        setIsShowOldBillingInfo(true)
-        toast.success("Billing details updated successfully!")
+        const res = await axios.patch(
+          `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/billing-info/update/${formData._id}`,
+          data
+        );
+        setIsShowOldBillingInfo(true);
+        toast.success("Billing details updated successfully!");
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
-    }else{
+    } else {
       try {
         let res = await axios.post(
           `http://localhost:8000/billing-info/create`,
           data
         );
-        toast.success("New billing details added successfully!")
-        setIsForm(false)
+        toast.success("New billing details added successfully!");
+        setIsForm(false);
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     }
     console.log("Submitted Data:", formData);
-    setIsGetBillingData((prev)=>!prev)
-    setFormData({})
+    setIsGetBillingData((prev) => !prev);
+    setFormData({});
   };
 
   const handleDelete = async (id) => {
     try {
-
-      let res = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/billing-info/delete/${id}`)
-      setIsGetBillingData((prev)=>!prev)
-      toast.success("Billing address deleted successfully!")
-      console.log(res)
+      let res = await axios.delete(
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/billing-info/delete/${id}`
+      );
+      setIsGetBillingData((prev) => !prev);
+      toast.success("Billing address deleted successfully!");
+      console.log(res);
     } catch (error) {
       console.log(error);
     }
   };
 
   // handle update billing info
-  const handleUpdateBillingInfo=async(id)=>{
+  const handleUpdateBillingInfo = async (id) => {
     setIsShowOldBillingInfo(false);
     setIsFormUpdate(true);
-    const foundData = userBillingInfo?.find((item)=>item._id==id)
-    const countryData = countriesData.find((c)=>c.name===foundData?.country);
+    const foundData = userBillingInfo?.find((item) => item._id == id);
+    const countryData = countriesData.find(
+      (c) => c.name === foundData?.country
+    );
 
-    console.log(countryData,'found data based on id');
-    setStates(countryData? countryData.states : [])
-    setSelectedState(foundData.state)
-    setSelectedCountry(foundData.country)
-    
+    console.log(countryData, "found data based on id");
+    setStates(countryData ? countryData.states : []);
+    setSelectedState(foundData.state);
+    setSelectedCountry(foundData.country);
+
     let data = {
-      name:foundData.name,
-      contact:foundData.phone,
-      email:foundData.email,
-      _id:foundData._id,
-      billingAddress:foundData.address,
-      gst:foundData.isGst,
-      pincode:foundData.pin,
-    }
+      name: foundData.name,
+      contact: foundData.phone,
+      email: foundData.email,
+      _id: foundData._id,
+      billingAddress: foundData.address,
+      gst: foundData.isGst,
+      pincode: foundData.pin,
+    };
 
     setFormData({
       ...data,
-      isGstRequired:foundData?.gst,
-      gstCompanyName:foundData?.gstInfo?.companyName,
-      gstNumber:foundData?.gstInfo?.gstNumber
-    })
+      isGstRequired: foundData?.gst,
+      gstCompanyName: foundData?.gstInfo?.companyName,
+      gstNumber: foundData?.gstInfo?.gstNumber,
+    });
+  };
 
-  }
-
-  console.log(formData)
+  console.log(formData);
 
   return (
     <div className="flex-col-center billingFormContainer">
@@ -207,8 +212,14 @@ export default function BillingInfoForm({
                     <p className="boxBillingAddressName">{item.address}</p>
                   </div>
                   <div className="flex-row-center actionIconContainer">
-                    <MdEdit className="editIcon" onClick={()=>handleUpdateBillingInfo(item._id)}/>
-                    <MdDelete className="deleteIcon" onClick={()=>handleDelete(item._id)} />
+                    <MdEdit
+                      className="editIcon"
+                      onClick={() => handleUpdateBillingInfo(item._id)}
+                    />
+                    <MdDelete
+                      className="deleteIcon"
+                      onClick={() => handleDelete(item._id)}
+                    />
                   </div>
                 </label>
               );
@@ -351,7 +362,7 @@ export default function BillingInfoForm({
             </div>
 
             {/* gst bill details */}
-            
+
             {formData.gst && (
               <>
                 <div className="flex-col-center formFieldBilling">
@@ -389,7 +400,7 @@ export default function BillingInfoForm({
               type="submit"
               style={{ marginTop: "1rem" }}
             >
-              {isFormUpdate ? "Update" : "Proceed to Pay"}
+              {isFormUpdate ? "UPDATE" : "PROCEED TO PAY"}
             </button>
           </div>
         </form>
