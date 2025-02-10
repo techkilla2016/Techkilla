@@ -1,4 +1,4 @@
-const blogImage1 = "/blogs/blog-image/blog1/blog1-01.png";
+const blogImage1 = "/blogs/blog-image/blog1/blog1-01.jpg";
 const blogImage2 = "/blogs/blog-image/blog1/blog1-02.png";
 const blogImage3 = "/blogs/blog-image/blog1/blog1-03.png";
 const blogImage4 = "/blogs/blog-image/blog1/blog1-04.png";
@@ -12,14 +12,14 @@ const blogImage11 = "/blogs/blog-image/blog1/blog1-11.png";
 const blogImage12 = "/blogs/blog-image/blog1/blog1-12.png";
 const blogImage13 = "/blogs/blog-image/blog1/blog1-13.png";
 
-const blogImage14 = "/blogs/blog-image/blog2/blog2-01.png";
+const blogImage14 = "/blogs/blog-image/blog2/blog2-01.jpg";
 const blogImage15 = "/blogs/blog-image/blog2/blog2-02.png";
 const blogImage16 = "/blogs/blog-image/blog2/blog2-03.jpg";
 const blogImage17 = "/blogs/blog-image/blog2/blog2-04.png";
 const blogImage18 = "/blogs/blog-image/blog2/blog2-05.png";
 const blogImage19 = "/blogs/blog-image/blog2/blog2-06.jpg";
 
-const blogImage20 = "/blogs/blog-image/blog3/blog3-01.png";
+const blogImage20 = "/blogs/blog-image/blog3/blog3-01.jpg";
 const blogImage21 = "/blogs/blog-image/blog3/blog3-02.jpg";
 const blogImage22 = "/blogs/blog-image/blog3/blog3-03.jpg";
 const blogImage23 = "/blogs/blog-image/blog3/blog3-04.png";

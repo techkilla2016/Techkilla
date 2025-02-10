@@ -1,7 +1,7 @@
-.nav {
-  /* border: 1px solid black; */
+.navs {
+  // border: 1px solid black;
   gap: 3vw;
-  padding: 1.5vw;
+  // padding: 1.5vw;
   width: 100%;
   /* border-top: 0.14vw solid rgb(168, 165, 165); */
   border-bottom: 0.14vw solid rgb(217, 213, 213);
@@ -15,7 +15,7 @@
   }
 }
 @media all and (min-width: 480px) and (max-width: 1024px) {
-  .nav {
+  .navs {
     /* border: 1px solid black; */
     gap: 3.5vw;
     padding: 3vw;
@@ -26,7 +26,7 @@
   }
 }
 @media all and (max-width: 480px) {
-  .nav {
+  .navs {
     /* border: 1px solid black; */
     gap: 9vw;
     padding: 6vw;

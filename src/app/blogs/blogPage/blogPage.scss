@@ -113,12 +113,15 @@
   }
   .blogPage {
     margin-top: 6vw;
+    // border: 2px solid blue;
   }
   .mobileType {
     display: flex;
-    flex-direction: column; /* Stack the blogs vertically */
-    gap: 4vw; /* Adjust the gap between each card */
-    padding: 3vw; /* Padding around the cards */
+    margin-top: 6vw;
+    flex-direction: column;
+    gap: 4vw;
+    padding: 3vw;
+    // border: 2px solid blue;
   }
   .blogTitle {
     background: linear-gradient(to right, #fad43a, #2c2904);

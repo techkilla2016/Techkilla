@@ -9,6 +9,7 @@
   padding-bottom: 4vw;
   /* background: url("../../../../public/home/hero/bg01.png") center / cover; */
   gap: 4vw;
+  // border-bottom: 1px solid gray !important;
 
   .topSection {
     // border: 2px solid blue;
@@ -270,13 +271,13 @@
         /* .belowText {
           /* border: 1px solid black; */
 
-        .thumbnailImg {
+        .thumbnailImgType {
           width: 100%;
           overflow: hidden;
         }
       }
       .lowerContainer {
-        border: 1px solid black;
+        // border: 1px solid black;
         gap: 6vw;
         .blogSection {
           align-items: flex-start;
@@ -319,34 +320,25 @@
     line-height: 1.8;
   }
   .SingleBlogPage {
-    /* border: 1px solid black; */
-    margin-top: 13.6vw;
+    // border: 1px solid black;
+    padding-top: 2vw;
+    margin-top: 17vw;
     padding-bottom: 8vw;
     gap: 3vw;
 
-    .nav {
-      /* border: 1px solid black; */
-      gap: 9vw;
-      padding: 6vw;
-      border-bottom: 1px solid rgb(167, 164, 164);
-      .buttonStyle {
-        font-size: 4.8vw;
-      }
-    }
-
     .topSection {
-      /* border: 1px solid black; */
+      // border: 1px solid black;
       width: 100%;
-      padding: 3vw;
+      padding: 2vw;
       border-bottom: 1px solid rgb(196, 191, 191);
       gap: 4vw;
       padding-bottom: 9vw;
 
       .titlehead {
-        font-size: 6.3vw;
+        font-size: 6.4vw;
         width: 100%;
         font-weight: 600;
-        padding-bottom: 3vw;
+        // padding-bottom: 1vw;
         line-height: 1.5;
       }
       .commonContainer {
@@ -360,7 +352,7 @@
           padding-right: 2vw;
           z-index: 1;
         }
-        .thumbnailImg {
+        .thumbnailImgType {
           width: 100%;
           z-index: 2;
           border-radius: 0.8vw;
@@ -422,12 +414,13 @@
         order: 2;
         align-items: center;
 
-        .upperContainer {
+        .upperContainerPart {
           gap: 8vw;
           .blogSection {
             gap: 7vw;
+            // border: 2px solid blue;
             .quesContent {
-              font-size: 5.1vw;
+              font-size: 5.1vw !important;
               line-height: 8vw;
             }
             .listContent {
@@ -461,24 +454,7 @@
         }
       }
       .leftFooterSecond {
-        gap: 10vw;
-        width: 100%;
-        order: 3;
-        padding: 4vw;
-        align-items: center;
-
-        .socialIconCon {
-          /* border: 1px solid black; */
-          gap: 2.5vw;
-          flex-direction: row;
-
-          .socialIcon {
-            /* border: 1px solid black; */
-            /* border-radius: 0.7vw; */
-            width: 13vw;
-            height: auto;
-          }
-        }
+        display: none;
       }
     }
 

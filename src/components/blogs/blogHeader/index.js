@@ -5,12 +5,12 @@ import "./blogHeader.scss";
 
 export default function BlogHeader() {
   return (
-    <nav className="flex-row-center nav">
+    <nav className="flex-row-center navs">
       <Link href="/">
         <button className="buttonStyle">Home</button>
       </Link>
-      <Link href={"/events"}>
-        <button className="buttonStyle">Create your Photobooth</button>
+      <Link href={"/ai-photo-booth"}>
+        <button className="buttonStyle">Photobooth</button>
       </Link>
       <Link href={"/contact"}>
         <button className="buttonStyle">Contact us</button>
