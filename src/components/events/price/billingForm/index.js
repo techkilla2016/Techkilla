@@ -18,11 +18,13 @@ export default function BillingInfoForm({
   isShowOldBillingInfo,
   setIsShowOldBillingInfo,
   userDataSelector,
+  setIsGetBillingData
 }) {
   const router = useRouter();
   const [states, setStates] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedState, setSelectedState] = useState("");
+  const [isFormUpdate,setIsFormUpdate]=useState(false)
 
   // for form field
   const handleChange = (e) => {
@@ -94,29 +96,83 @@ export default function BillingInfoForm({
     if (formData.gst) {
       /* data.companyNameAsPerGst = formData.gstCompanyName;
       data.gstNumber = Number(formData.gstNumber); */
+
       data.gstInfo = {
         gstNumber: formData.gstNumber,
         companyName: formData.gstCompanyName,
       };
     }
 
-    let res = await axios.post(
-      `http://localhost:8000/billing-info/create`,
-      data
-    );
-
-    console.log(res);
+    // update form
+    if(isFormUpdate){
+      try {
+        const res = await axios.patch(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/billing-info/update/${formData._id}`,data)
+        setIsShowOldBillingInfo(true)
+        toast.success("Billing details updated successfully!")
+      } catch (error) {
+        console.log(error)
+      }
+    }else{
+      try {
+        let res = await axios.post(
+          `http://localhost:8000/billing-info/create`,
+          data
+        );
+        toast.success("New billing details added successfully!")
+        setIsForm(false)
+      } catch (error) {
+        console.log(error)
+      }
+    }
     console.log("Submitted Data:", formData);
-
-    setIsForm(false);
+    setIsGetBillingData((prev)=>!prev)
+    setFormData({})
   };
 
   const handleDelete = async (id) => {
     try {
+
+      let res = await axios.delete(`${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/billing-info/delete/${id}`)
+      setIsGetBillingData((prev)=>!prev)
+      toast.success("Billing address deleted successfully!")
+      console.log(res)
     } catch (error) {
       console.log(error);
     }
   };
+
+  // handle update billing info
+  const handleUpdateBillingInfo=async(id)=>{
+    setIsShowOldBillingInfo(false);
+    setIsFormUpdate(true);
+    const foundData = userBillingInfo?.find((item)=>item._id==id)
+    const countryData = countriesData.find((c)=>c.name===foundData?.country);
+
+    console.log(countryData,'found data based on id');
+    setStates(countryData? countryData.states : [])
+    setSelectedState(foundData.state)
+    setSelectedCountry(foundData.country)
+    
+    let data = {
+      name:foundData.name,
+      contact:foundData.phone,
+      email:foundData.email,
+      _id:foundData._id,
+      billingAddress:foundData.address,
+      gst:foundData.isGst,
+      pincode:foundData.pin,
+    }
+
+    setFormData({
+      ...data,
+      isGstRequired:foundData?.gst,
+      gstCompanyName:foundData?.gstInfo?.companyName,
+      gstNumber:foundData?.gstInfo?.gstNumber
+    })
+
+  }
+
+  console.log(formData)
 
   return (
     <div className="flex-col-center billingFormContainer">
@@ -151,8 +207,8 @@ export default function BillingInfoForm({
                     <p className="boxBillingAddressName">{item.address}</p>
                   </div>
                   <div className="flex-row-center actionIconContainer">
-                    <MdEdit className="editIcon" />
-                    <MdDelete className="deleteIcon" />
+                    <MdEdit className="editIcon" onClick={()=>handleUpdateBillingInfo(item._id)}/>
+                    <MdDelete className="deleteIcon" onClick={()=>handleDelete(item._id)} />
                   </div>
                 </label>
               );
@@ -286,8 +342,8 @@ export default function BillingInfoForm({
                 GST Bill Required?
                 <input
                   type="checkbox"
-                  name="isGstRequired"
-                  checked={formData.isGstRequired}
+                  name="gst"
+                  checked={formData.gst}
                   onChange={handleChange}
                   className="inputBillingCheck"
                 />
@@ -295,7 +351,8 @@ export default function BillingInfoForm({
             </div>
 
             {/* gst bill details */}
-            {formData.isGstRequired && (
+            
+            {formData.gst && (
               <>
                 <div className="flex-col-center formFieldBilling">
                   <label className="labelBilling">Company Name (GST)*</label>
@@ -332,7 +389,7 @@ export default function BillingInfoForm({
               type="submit"
               style={{ marginTop: "1rem" }}
             >
-              PROCEED TO PAY
+              {isFormUpdate ? "Update" : "Proceed to Pay"}
             </button>
           </div>
         </form>

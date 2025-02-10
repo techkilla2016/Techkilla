@@ -92,6 +92,7 @@ export default function PriceComponent() {
     DEFAULT_ORDER_SUMMARY_ITEMS
   );
   const [fareSummary, setFareSummary] = useState(DEFAULT_FARE_SUMMARY);
+  const [isGetBillingData, setIsGetBillingData] = useState(false);
 
   // fetch event data
   useEffect(() => {
@@ -139,7 +140,7 @@ export default function PriceComponent() {
     if (userDataSelector?.uid) {
       getBillingData();
     }
-  }, [userDataSelector]);
+  }, [userDataSelector,isGetBillingData]);
 
   // mobile view
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
@@ -286,6 +287,7 @@ export default function PriceComponent() {
             isShowOldBillingInfo={isShowOldBillingInfo}
             setIsShowOldBillingInfo={setIsShowOldBillingInfo}
             userDataSelector={userDataSelector}
+            setIsGetBillingData={setIsGetBillingData}
           />
         </div>
       ) : (
