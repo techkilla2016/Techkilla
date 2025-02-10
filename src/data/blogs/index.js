@@ -234,7 +234,7 @@ export const blogPosts = [
     id: "3",
     title: "Revolutionize Events with Techkilla AI Photo Booth Technology",
     content:
-      "A photo booth is no longer just an extra—it’s a must-have for any event! Whether it’s a wedding, corporate gala, or birthday bash, an interactive photo booth keeps guests engaged while creating unforgettable memories. With Techkilla’s cutting-edge AI-powered technology, photo booths are now more immersive, shareable, and customized than ever.",
+      "A photo booth is no longer just an extra—it’s a must-have for any event! Whether it’s a wedding, corporate gala, or birthday bash, an interactive photo booth keeps our guests engaged while creating unforgettable memories. With Techkilla’s cutting-edge AI-powered technology, photo booths are now more immersive, shareable, and customized than ever.",
     thumbnailImage: {
       src: blogImage20,
       alt: "Second Blog Image",
