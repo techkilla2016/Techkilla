@@ -105,7 +105,11 @@ export default function EventPreviewPopup({ eventData, onClose }) {
                   <a
                     href="https://techkilla-events-sass.vercel.app/"
                     target="_blank"
-                    style={{ color: "blue ", textDecoration: "underline" }}
+                    style={{
+                      color: "blue ",
+                      textDecoration: "underline",
+                    }}
+                    className="linkPart"
                   >
                     https://techkilla-events-sass.vercel.app/
                   </a>

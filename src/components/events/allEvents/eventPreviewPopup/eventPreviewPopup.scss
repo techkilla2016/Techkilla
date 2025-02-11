@@ -19,7 +19,7 @@
   gap: 1vw;
   border-radius: 1.5vw;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  max-width: 40vw;
+  max-width: 50vw;
   width: 100%;
   // text-align: center;
   // justify-content: flex-start;
@@ -34,7 +34,7 @@
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
     text-align: center;
-    // border: 2px solid green;
+    border: 2px solid green;
   }
   .zipContainer {
     // border: 2px solid blue;
@@ -74,6 +74,8 @@
   td,
   th {
     padding: 1vw;
+    font-size: 1.1vw;
+    font-weight: 600;
     border: 1px solid #ddd;
     text-align: left;
   }
@@ -153,12 +155,14 @@
 
     td,
     th {
-      padding: 1vw;
+      padding: 2vw;
       border: 1px solid #ddd;
       text-align: left;
-      font-size: 1.8vw;
+      font-size: 2.2vw;
     }
-
+    .linkPart {
+      font-size: 2.2vw;
+    }
     .close-preview {
       position: absolute;
       width: 6vw;
@@ -182,12 +186,27 @@
     gap: 2vw;
     border-radius: 2vw;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    max-width: 80vw;
-    width: 90%;
+    max-width: 94vw;
+    // height: 60vw;
+    width: 100% !important;
     position: relative;
     // border: 2px solid blue;
     .eventPre {
       font-size: 3.3vw;
+    }
+    .zipContainer {
+      // border: 2px solid blue;
+      width: 100%;
+      padding-right: 4vw;
+      justify-content: flex-end !important;
+      .downloadBtn {
+        font-size: 7vw;
+        // border: 1px solid black;
+
+        // color: #e62727;
+        transition: transform 0.3s ease, color 0.3s ease;
+        animation: zoom-blink 1s infinite alternate;
+      }
     }
     .detailCon {
       // border: 2px solid blue;
@@ -197,14 +216,17 @@
 
     td,
     th {
-      padding: 1vw;
+      padding: 2vw;
       border: 1px solid #ddd;
-      text-align: left;
-      font-size: 2.2vw;
+      text-align: center;
+      font-size: 3.4vw;
+    }
+    .linkPart {
+      font-size: 3.4vw;
     }
     .close-preview {
       width: 8vw;
-      right: -5%;
+      right: -3%;
 
       top: -4%;
     }
