@@ -27,7 +27,9 @@ const Blogs = () => {
   return (
     <div className="flex-col-center BlogPage">
       <div className="flex-col-center textContainer">
-        {/* <p className="txt2 blogText">RESOURCES</p> */}
+        <p className="txt2 blogText">
+          RESOURCES & <span style={{ color: "#fad43a" }}>BLOGS</span>
+        </p>
         <h2 className="secondHead">
           Boost Your Brand Marketing & Customer Success Instantly with{" "}
           <span style={{ color: "#fad43a", fontWeight: "600" }}>

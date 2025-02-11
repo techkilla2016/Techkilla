@@ -17,7 +17,7 @@ export default function Counter() {
 
   return (
     <div className="flex-col-center Counter">
-      <h1 className="headExp">Our Experience</h1>
+      {/* <h1 className="headExp">Our Experience</h1> */}
       <div className="flex-col-center imgExp">
         <Image
           src="/assets/home/8-year.png"

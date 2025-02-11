@@ -23,7 +23,7 @@
       // border: 0.15vw solid #ccc;
       border-radius: 0.5vw;
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(229, 220, 45, 0.3);
+      box-shadow: 0 0 10px rgba(78, 74, 5, 0.3);
       .upperPart {
         // width: 24vw;
         // border: 1px solid red;
@@ -36,9 +36,10 @@
         font-weight: 500;
         .textTitle {
           font-size: 1.1vw;
+          font-weight: 600;
           // border: 1px solid black;
           // color: var(--themeColor1);
-          color: rgb(72, 70, 70);
+          color: rgb(67, 64, 62);
         }
 
         .iconPart {
