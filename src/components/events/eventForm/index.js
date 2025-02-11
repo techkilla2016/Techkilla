@@ -506,7 +506,7 @@ export default function EventForm({ action }) {
             {/* show expires date */}
             {action == "edit" && (
               <div className="flex-col-center valueField">
-                <label className="labelling" style={{ color: "red" }}>
+                <label className="labelExpire" style={{ color: "red" }}>
                   {formData?.expiresAt && isExpired(formData.expiresAt)
                     ? `Event expired on ${formatDate(
                         formData.expiresAt

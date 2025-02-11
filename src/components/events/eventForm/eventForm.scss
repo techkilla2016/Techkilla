@@ -33,7 +33,12 @@
     // gap: 0.2vw !important;
     justify-content: flex-start;
     align-items: flex-start;
-
+    .labelExpire {
+      font-size: 1.05svw;
+      font-weight: 600;
+      color: #343232;
+      width: 100%;
+    }
     .labelling {
       font-size: 1.05svw;
       font-weight: 600;
@@ -57,7 +62,7 @@
         color: #333;
         transition: all 0.3s;
       }
-      .inputCon:focus{
+      .inputCon:focus {
         border-color: #ffce3a;
         box-shadow: 0 0 0 0.2rem rgba(255, 206, 58, 0.25);
         outline: none;
@@ -242,7 +247,7 @@
         .orText {
           // padding: 0.5vw;
           font-size: 1vw;
-          gap: .1vw;
+          gap: 0.1vw;
           font-weight: 600;
         }
 
@@ -272,7 +277,7 @@
         cursor: pointer;
         color: rgb(49, 49, 232);
         font-weight: bold;
-        text-decoration: underline ;
+        text-decoration: underline;
         border-bottom: 0.17vw solid rgb(49, 49, 232);
         // border: 2px solid blue;
 
@@ -379,6 +384,12 @@
       // border: 1px solid #611414;
       border-radius: 1vw;
     }
+    .labelExpire {
+      font-size: 3.2svw;
+      font-weight: 600;
+      color: #343232;
+      width: 100%;
+    }
     .valueField {
       // border: 1px solid #f82424;
       margin-bottom: 2.5svw;
@@ -471,7 +482,7 @@
               width: 5vw;
               height: 5svw;
             }
-  
+
             @keyframes spin {
               0% {
                 transform: rotate(0deg);
@@ -552,7 +563,7 @@
       .submitBtn {
         border-radius: 1.5vw;
         background: #f6ce4c;
-        border: 1.5px solid black;
+        // border: 1.5px solid black;
         color: black;
         font-size: 3vw !important;
         padding: 1vw 3vw;
@@ -576,6 +587,12 @@
       margin-bottom: 15vw;
       border-radius: 1vw;
       // border: 1px solid #611414;
+    }
+    .labelExpire {
+      font-size: 3.7vw !important;
+      font-weight: 600;
+      color: #343232;
+      width: 100%;
     }
     .valueField {
       // border: 1px solid #f82424;
@@ -697,7 +714,7 @@
               width: 6svw;
               height: 6svw;
             }
-  
+
             @keyframes spin {
               0% {
                 transform: rotate(0deg);
