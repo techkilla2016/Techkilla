@@ -354,9 +354,12 @@
     }
 
     .tableHead {
-      font-size: 4vw;
+      font-size: 6.2vw;
+      width: 100%;
       // border: 2px solid red;
-      padding: 1.5vw 0;
+      // justify-content: flex-start !important;
+      // align-items: flex-start !important;
+      margin-top: 12vw;
       font-weight: 600;
       background: linear-gradient(to right, #fad43a, #b3a70b);
       -webkit-background-clip: text;
@@ -368,31 +371,37 @@
       width: 100%;
       // flex-direction: column;
 
-      // padding: 1vw;
+      padding-right: 1vw;
       // border: 2px solid green;
-      gap: 3vw;
+      gap: 1vw;
 
       .filterContainer {
-        // padding: 2vw;
+        padding: 2vw;
+        flex-direction: column;
         // border: 2px solid green;
-        width: 80%;
+        width: 90%;
         // gap: 2vw;
 
         justify-content: flex-start;
         .firstFilter {
-          padding: 1vw;
+          // padding: 1vw;
           // width: 80%;
+          width: 100%;
+          justify-content: flex-start;
           gap: 1vw;
           // border: 2px solid blue;
         }
         .secondFilter {
-          padding: 1vw;
+          // padding: 1vw;
+          gap: 1vw;
+          justify-content: flex-start;
+          width: 100%;
           // border: 2px solid red;
         }
         .filter-label {
           // border: 2px solid black;
           // width: 15vw;
-          font-size: 2.7vw;
+          font-size: 3.3vw;
           color: #333;
           font-weight: 600;
           margin-right: 0.5rem;
@@ -401,7 +410,7 @@
           border: none;
           border-bottom: 2px solid #ccc;
           padding: 0.5rem;
-          font-size: 2.3vw;
+          font-size: 3.2vw;
           border-radius: 0 0 4px 4px;
           outline: none;
           transition: border-color 0.3s ease;
@@ -451,7 +460,8 @@
 
       .table-header {
         // border: 2px solid rgb(23, 15, 15);
-        font-size: 3vw;
+        font-size: 3.4vw;
+        color: rgb(44, 42, 42);
         font-weight: 600;
         border-bottom: 1px solid rgb(156, 151, 151);
         border-left: 1px solid rgb(156, 151, 151);
@@ -460,7 +470,7 @@
       .table-data {
         text-align: center;
         padding: 1vw;
-        font-size: 2.7vw;
+        font-size: 3.7vw;
       }
       .table-action {
         text-align: center;
@@ -483,7 +493,7 @@
     }
     .pagination {
       .page-button {
-        font-size: 1rem;
+        font-size: 3.5vw;
         font-weight: bold;
         width: 5vw;
         height: 5vw;
