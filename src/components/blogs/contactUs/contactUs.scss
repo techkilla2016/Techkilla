@@ -58,8 +58,10 @@
 }
 @media all and (max-width: 480px) {
   .Contact {
-    // border: 1px solid blue;
-    width: 90%;
+    border-top: 1px solid gray;
+    width: 100%;
+    // padding: 1vw;
+    padding-top: 6vw;
     .contactMain {
       width: 100%;
       padding: 1vw !important;
@@ -68,33 +70,33 @@
       /* align-items: flex-start; */
       .contactUs {
         // border: 2px solid red;
-        font-size: 4vw;
+        font-size: 4.7vw;
         font-weight: 600;
         line-height: 2vw;
       }
       .descText {
         text-align: center;
-        font-size: 3vw;
-        line-height: 5vw;
+        font-size: 4.2vw;
+        line-height: 8vw;
       }
 
       .queryMail {
         //   font-size: 3.5vw;
-        font-size: 3vw;
+        font-size: 4vw;
         // border: 2px solid red;
         .contactEmail {
           text-decoration: underline !important;
           color: blue;
           font-style: italic;
           // font-size: 3.5vw;
-          font-size: 3vw;
+          font-size: 4vw;
         }
       }
       .queryMail2 {
-        font-size: 3vw;
+        font-size: 4vw !important;
         .booking {
           cursor: pointer;
-          font-size: 3vw;
+          font-size: 4vw;
         }
       }
     }

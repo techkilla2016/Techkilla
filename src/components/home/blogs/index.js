@@ -6,6 +6,7 @@ import Button from "@/components/button";
 import { useRouter } from "next/navigation";
 import { blogPosts } from "../../../data/blogs/index.js";
 import { generateSlug } from "../../../utils/blogSlug";
+import icon from "../../../../public/blogs/Icon-10.png";
 
 // import { allRoutes } from "@/data/allRoutes";
 
@@ -63,12 +64,7 @@ const Blogs = () => {
               <div className="flex-row-center lowerPart">
                 <p className="textTitle">{getTitleBeforeSymbol(post.title)}</p>
                 <div className="iconPart">
-                  <Image
-                    src="/blogs/icon-10.png"
-                    alt="Icon"
-                    width={24}
-                    height={24}
-                  />
+                  <Image src={icon} alt="Icon" width={24} height={24} />
                 </div>
               </div>
             </Link>

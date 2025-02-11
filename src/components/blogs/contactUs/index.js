@@ -30,8 +30,8 @@ export default function ContactUs() {
             <li>
               <Image
                 src={"/blogs/Icon-02.png"}
-                width={32} // specify appropriate width
-                height={32} // specify appropriate height
+                width={32}
+                height={32}
                 className="socialIcon"
                 alt="Facebook icon"
               />
