@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./price.scss";
 import Link from "next/link";
-import { toast } from "react-toastify";
 import Image from "next/image";
-// import UserDB from "@/utils/userdb";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
@@ -93,7 +91,10 @@ export default function PriceComponent() {
   );
   const [fareSummary, setFareSummary] = useState(DEFAULT_FARE_SUMMARY);
   const [isGetBillingData, setIsGetBillingData] = useState(false);
+  const [selectedMethod, setSelectedMethod] = useState("credit");
 
+  // mobile view
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
   // fetch event data
   useEffect(() => {
     if (searchParams && allEventsSelector?.length > 0) {
@@ -120,8 +121,7 @@ export default function PriceComponent() {
     }
   }, [searchParams, allEventsSelector]);
 
-  console.log(eventData, "eventdata");
-
+  // fetch billingInfo data of particular user
   useEffect(() => {
     const getBillingData = async () => {
       try {
@@ -140,26 +140,14 @@ export default function PriceComponent() {
     if (userDataSelector?.uid) {
       getBillingData();
     }
-  }, [userDataSelector,isGetBillingData]);
+  }, [userDataSelector, isGetBillingData]);
 
-  // mobile view
-  const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
-
-  /*  useEffect(() => {
-    if (UserDB.isUserIndian()) setPrice("INR 399");
-    else setPrice("$ 4.99");
-
-    setIsMobileView(isMobile);
-  }, [isMobile]); */
-
-  // update it for each payment
-  let paymentGatewayLink = "";
-  const [selectedMethod, setSelectedMethod] = useState("credit");
-
+  // handle payment method select
   const handlePaymentMethodSelect = (method) => {
     setSelectedMethod(method);
   };
 
+  // handle open payment popup
   function openPaymentPopup(paymentGatewayLink) {
     // Set the popup dimensions
     var popupWidth = 460;
@@ -192,41 +180,41 @@ export default function PriceComponent() {
     }
   }
 
-  /*   const handleConfirmAndPay = () => {
-    const user = UserDB.getUser();
+  // handle confirm and pay
+  const handleConfirmAndPay = async () => {
+    console.log(
+      userDataSelector,
+      currentBilling,
+      eventData,
+      "handle confirm and pay"
+    );
 
-    if (!user) {
-      router.push("/signin?path=%2Fpricing");
-      return;
+    if (!userDataSelector?.uid || !currentBilling?._id || !eventData?.id) {
+      return router.push("/events");
     }
 
     if (selectedMethod) {
       // checking payment method is credit or paypal
       if (selectedMethod === "credit") {
-        // it is for fast empty popup loading
-        openPaymentPopup(paymentGatewayLink);
-
         const data = {
-          userId: user._id,
-          amount: "399",
-          name: user._id,
-          MUID: "MUID" + Date.now(),
-          transactionId: "T" + Date.now(),
+          userFirebaseUid: userDataSelector?.uid,
+          billingInfoId: currentBilling?._id,
+          eventFirebaseId: eventData?.id,
         };
 
-        axios
-          .post("https://snapshawt.in" + "/payment/post", data)
-          .then((response) => {
-            // if (response.status == 200) setLoading(false);
-            // console.log(response.data)
-            openPaymentPopup(response.data);
-          })
-          .catch((error) => {
-            // setLoading(false);
-            console.log(error);
-          });
+        try {
+          const res = await axios.post(
+            "http://localhost:8000/payment/create-order",
+            data
+          );
+          console.log(res);
+
+          if (res?.data?.paymentGatewayLink)
+            openPaymentPopup(res?.data?.paymentGatewayLink);
+        } catch (error) {
+          console.log(error);
+        }
       } else {
-        // paymentGatewayLink = "paypal-link";
         toast.error("Please select another payment method", toastOptions);
       }
 
@@ -234,7 +222,7 @@ export default function PriceComponent() {
     } else {
       toast.error("Please select a payment method", toastOptions);
     }
-  }; */
+  };
 
   return (
     <div className="flex-row-center payment-section">
