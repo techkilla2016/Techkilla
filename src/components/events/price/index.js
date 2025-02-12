@@ -204,10 +204,11 @@ export default function PriceComponent() {
 
         try {
           const res = await axios.post(
-            "http://localhost:8000/payment/create-order",
+            "http://localhost:8000/techkilla-payment/create-order",
             data
           );
-          console.log(res);
+
+          console.log(res,'res');
 
           if (res?.data?.paymentGatewayLink)
             openPaymentPopup(res?.data?.paymentGatewayLink);
