@@ -98,7 +98,11 @@ const DEFAULT_DATA = {
   templateNumber: null,
   templates: [],
   logo: "",
-  eventPackage: null,
+  eventPackage: {
+    duration: "",
+    credits: "",
+    price: "",
+  },
   numberOfDevices: null,
 };
 
@@ -203,13 +207,21 @@ export default function EventForm({ action }) {
       ? Number(value)
       : value;
 
+    console.log("onchange calling");
+
     // convert string to object
-    if (name === "eventPackage") updatedValue = JSON.parse(value);
+    if (name === "eventPackage") {
+      const selectedPackage = data.eventPackages.find(
+        (pckg) => pckg.duration === Number(value)
+      );
+
+      updatedValue = selectedPackage;
+    }
 
     setFormData({ ...formData, [name]: updatedValue });
   };
 
-  console.log(formData);
+  // console.log(formData);
 
   const handleCheckboxChange = (e) => {
     const { value, checked } = e.target;
@@ -284,9 +296,6 @@ export default function EventForm({ action }) {
             ...eventData,
             userId: userDataSelector.uid,
             createdAt: Timestamp.fromDate(new Date()),
-            /* expiresAt: Timestamp.fromDate(
-              new Date(new Date().getTime() + duration * 24 * 60 * 60 * 1000)
-            ), */
             eventNumber: updatedCounter,
             password: pass,
           });
@@ -588,9 +597,9 @@ export default function EventForm({ action }) {
               <label className="labelling">
                 {action === "add"
                   ? "Select a Event Package:"
-                  : `Update Event Package:`}
+                  : `Event Package:`}
                 <select
-                  value={formData.eventPackage}
+                  value={formData.eventPackage?.duration || ""}
                   name="eventPackage"
                   onChange={handleChange}
                   className="inputCon"
@@ -603,7 +612,7 @@ export default function EventForm({ action }) {
                       : "Update Event Package"}
                   </option>
                   {data?.eventPackages.map((pckg) => (
-                    <option key={pckg.duration} value={JSON.stringify(pckg)}>
+                    <option key={pckg.duration} value={pckg.duration}>
                       {pckg.duration} {pckg.duration > 1 ? "Days" : "Day"} -{" "}
                       {pckg.credits} credits - {pckg.price} Rs
                     </option>

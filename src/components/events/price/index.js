@@ -218,8 +218,6 @@ export default function PriceComponent() {
       } else {
         toast.error("Please select another payment method", toastOptions);
       }
-
-      // openPaymentPopup(paymentGatewayLink);
     } else {
       toast.error("Please select a payment method", toastOptions);
     }
