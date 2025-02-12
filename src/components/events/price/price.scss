@@ -74,6 +74,7 @@
     background-color: rgb(236, 235, 235);
     box-shadow: 0 0vw 0.3vw rgba(0, 0, 0, 0.4);
     width: 55%;
+    position: relative;
     height: 100%;
     padding: 0.5vw 1vw;
     border-radius: 0.25vw;
@@ -155,7 +156,9 @@
 
     .rightBottomContainer {
       width: 100%;
-      border: 1px solid black;
+      // border: 1px solid black;
+      position: absolute;
+      bottom: 5%;
       gap: 1.2vw;
       .confirm-btn {
         background-color: #007bff;
@@ -219,26 +222,34 @@
 }
 
 // tablet responsive view
-/* @media all and (min-width: 480px) and (max-width: 1024px) {
+ @media all and (min-width: 480px) and (max-width: 1024px) {
   .payment-section {
-    width: 90%;
+    width:85%;
     padding: 0;
+    margin-top: 1.5svh;
+    height: 100%;
     padding-top: 3.2vw;
     border-radius: 0;
     box-shadow: 0 2.8vw 5.6vw rgba(113, 155, 177, 0.5);
+    // border: 1px solid red;
     gap: 0;
     flex-direction: column;
     .left-form-section {
       // border: 1px solid black;
       width: 100%;
-      gap: 5.6vw;
-      padding: 2.67vw;
+      gap: 5vw;
+      padding: 2vw;
       align-items: center;
+      .heading-txt{
+        // border: 1px solid red;
+        font-size: 4svw;
+      }
       .premium-icon-container {
         // border: 1px solid black;
         justify-content: flex-start;
         gap: 2.8vw;
         .heading-txt {
+          // border: 1px solid red;
           font-size: 4.2vw;
           font-weight: 600;
         }
@@ -283,12 +294,15 @@
 
     .right-section {
       box-shadow: 0 0vw 0.84vw rgba(0, 0, 0, 0.4);
+      // border: 1px solid red;
       width: 100%;
       padding: 4vw;
       border-radius: 0;
-      height: 72svh;
-      border-top-left-radius: 2.8vw;
-      border-top-right-radius: 2.8vw;
+      // height: 72svh;
+      height: 100%;
+      order: 2;
+      // border-top-left-radius: 2.8vw;
+      // border-top-right-radius: 2.8vw;
       align-items: center;
       gap: 5.6vw;
       .payment-method {
@@ -356,6 +370,7 @@
       .rightBottomContainer {
         width: 100%;
         gap: 3.36vw;
+        position: relative;
         .confirm-btn {
           width: 100%;
           padding: 2.8vw;
@@ -412,15 +427,36 @@
         }
       }
     }
+    .fareSummaryContainer{
+      width: 100%;
+      padding: 4svw;
+      // border: 2px solid red;
+      border-radius: 1svw;
+      gap: 1.2svw;
+      .summary-heading-txt{
+        font-size: 3svh;
+      }
+      .fareSummary{
+        gap: 2svw;
+        .fareTxt{
+          padding: 1svw 0;
+          font-size: 2.6svw;
+        }
+        .totalFareTxt{
+          font-size: 2.8svw;
+        }
+      }
+    }
   }
-} */
+} 
 
 // mobile responsive view
-/* @media all and (max-width: 480px) {
+ @media all and (max-width: 480px) {
   .payment-section {
     // border: 1px solid black;
     width: 100%;
     padding: 0;
+    height: 100%;
     padding-top: 4.8vw;
     border-radius: 0;
     box-shadow: 0 4.2vw 8.4vw rgba(113, 155, 177, 0.5);
@@ -429,9 +465,12 @@
     .left-form-section {
       // border: 1px solid black;
       width: 100%;
-      gap: 8.4vw;
+      gap: 6vw;
       padding: 4vw;
       align-items: center;
+      .heading-txt{
+        font-size: 7svw;
+      }
       .premium-icon-container {
         // border: 1px solid black;
         justify-content: flex-start;
@@ -480,12 +519,14 @@
     }
 
     .right-section {
-      box-shadow: 0 0vw 1.26vw rgba(0, 0, 0, 0.4);
+      // box-shadow: 0 0vw 1.26vw rgba(0, 0, 0, 0.4);
       width: 100%;
       padding: 6vw;
+      height: 100%;
+      order: 2;
       border-radius: 0;
-      border-top-left-radius: 4.2vw;
-      border-top-right-radius: 4.2vw;
+      // border-top-left-radius: 4.2vw;
+      // border-top-right-radius: 4.2vw;
       align-items: center;
       gap: 8.4vw;
       .payment-method {
@@ -553,6 +594,7 @@
       .rightBottomContainer {
         width: 100%;
         gap: 5.04vw;
+        position: relative;
         .confirm-btn {
           width: 100%;
           padding: 4.2vw;
@@ -609,5 +651,25 @@
         }
       }
     }
+    .fareSummaryContainer{
+      width: 100%;
+      padding: 4svw;
+      // border: 2px solid red;
+      border-radius: 1svw;
+      gap: 1.2svw;
+      .summary-heading-txt{
+        font-size: 3svh;
+      }
+      .fareSummary{
+        gap: 2svw;
+        .fareTxt{
+          padding: 1svw 0;
+          font-size: 3.8svw;
+        }
+        .totalFareTxt{
+          font-size: 4.2svw;
+        }
+      }
+    }
   }
-} */
+} 

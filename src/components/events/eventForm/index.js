@@ -206,7 +206,7 @@ export default function EventForm({ action }) {
     let updatedValue = ["numberOfDevices", "templateNumber"].includes(name)
       ? Number(value)
       : value;
-
+      
     console.log("onchange calling");
 
     // convert string to object
@@ -221,7 +221,7 @@ export default function EventForm({ action }) {
     setFormData({ ...formData, [name]: updatedValue });
   };
 
-  // console.log(formData);
+  console.log(formData);
 
   const handleCheckboxChange = (e) => {
     const { value, checked } = e.target;

@@ -14,9 +14,9 @@ const paymentMethods = [
     id: "credit",
     label: "UPI/ Credit/ Debit Card",
     images: [
-      "/price-page/icons-01.png",
-      "/price-page/icons-03.png",
-      "/price-page/icons-05.png",
+      "/events/price-page/icons-01.png",
+      "/events/price-page/icons-03.png",
+      "/events/price-page/icons-05.png",
       // "/price-page/icons-04.png",
     ],
   },
@@ -330,11 +330,11 @@ export default function PriceComponent() {
             <div className="flex-col-center bill-section">
               <div className="flex-row-center total-bill-container borderBottom">
                 <p className="totalTxt">Subtotal</p>
-                <p className="totalTxt">{price}</p>
+                <p className="totalTxt">{fareSummary.baseFare}</p>
               </div>
               <div className="flex-row-center total-bill-container ">
                 <p className="totalCostTxt">Total Cost</p>
-                <p className="totalCostTxt">{price} </p>
+                <p className="totalCostTxt">{fareSummary.totalFare} </p>
               </div>
             </div>
           </div>
