@@ -6,19 +6,19 @@
   right: 0;
   z-index: 9999;
   bottom: 0;
-  //  background: linear-gradient(to right, #deeded, #e8e0e6); 
+  //  background: linear-gradient(to right, #deeded, #e8e0e6);
   // background-color: #fff;
   padding: 1.5vw;
   margin: 4vw auto;
-    // border: 3px solid blue;
-    width: 100%;
-    overflow: hidden;
-    transition: transform 0.1s ease-in-out;
-    transform: translateY(-120%);
+  // border: 3px solid blue;
+  width: 100%;
+  // overflow: hidden;
+  transition: transform 0.1s ease-in-out;
+  transform: translateY(-120%);
   //   z-index: 1000000;
 
   .popupContent {
-    background-color: white ;
+    background-color: white;
 
     // background-image: url("./../../../../../public/faceSwap/bg.png");
     // border: 3px solid blue;
@@ -63,26 +63,29 @@
       .categoryContainer {
         gap: 1vw;
         width: 100%;
-        padding-top: 1.5vw;
+        // padding-top: 1.5vw;
+        // justify-content: flex-start;
+        padding: 0.6vw;
         font-size: 0.6vw;
         flex-wrap: wrap;
         // border: 2px solid rgb(4, 255, 0);
         .categoryBtn {
-          font-size: 1.1vw;
+          font-size: 1.2vw;
           font-weight: 500;
           //   color: white;
           background: linear-gradient(white, white) padding-box,
-            linear-gradient(to right, #ebdd14, #100a14) border-box;
+            linear-gradient(to right, #fad43a, #100a14) border-box;
           border: 0.15vw solid transparent;
-          padding: 0.1vw 0.9vw;
-          border-radius: 0.3vw;
+          padding: 0.3vw 0.8vw;
+          border-radius: 1.5vw;
           cursor: pointer;
         }
         .categoryBtn:hover,
         .selectedCategory {
-          background: #ebdd14;
-          border: 0.2vh solid #000;
+          background: #fad43a;
+          border: 1.5px solid #000;
           color: #000;
+          font-weight: 600;
         }
       }
       .templateMainContainer {
@@ -162,17 +165,21 @@
       }
     }
     .saveButton {
-      border: 1px solid #696964;
+      border: 1.5px solid #000;
       outline: none;
       color: black;
-      padding: 0.2vw 1.2vw;
-      background: #ebdd14;
+      padding: 0.3vw 0.8vw;
+      background: #fad43a;
       cursor: pointer;
-      // font-weight: 600;
+      font-weight: 600;
       // text-transform: capitalize;
-      font-size: 1vw;
-      border-radius: 0.4vw;
+      font-size: 1.2vw;
+      border-radius: 1.5vw;
       margin-bottom: 2vw;
+    }
+    .saveButton:hover {
+      // font-weight: 600;
+      background: #f1dd8f;
     }
     .closeBtn {
       position: absolute;
@@ -206,15 +213,15 @@
 
 @media all and (max-width: 1024px) {
   .TemplatePopup {
-    height: calc(100svh - 20vw);
+    height: calc(100svh - 5vw);
     padding: 1.5vw;
     margin: 5.2vw auto;
 
     .popupContent {
       border-radius: 1vw;
       background: linear-gradient(to right, #e8e0e6, #deeded);
-      height: 75%;
-      width: 90%;
+      height: 100%;
+      width: 100%;
       padding: 3vw;
       gap: 3vw;
       overflow-y: auto;
@@ -243,39 +250,40 @@
           flex-wrap: wrap;
 
           .categoryBtn {
-            font-size: 3.2vw;
+            font-size: 3.5vw;
             font-weight: 500;
             background: linear-gradient(white, white) padding-box,
               linear-gradient(to right, #ebdd14, #100a14) border-box;
             border: 0.25vw solid transparent;
-            padding: 1.2vw;
-            border-radius: 1.4vw;
+            padding: 1.3vw 3vw;
+            border-radius: 4vw;
             cursor: pointer;
           }
 
           .categoryBtn:hover,
           .selectedCategory {
-            background: linear-gradient(to right, #eadc12, #d88717) padding-box,
-              linear-gradient(to right, #63625a, #100a14) border-box;
-            border: 0.3vh solid transparent;
-            color: #fff;
+            background: #fad43a;
+            border: 1.5px solid #000;
+            color: #000;
+            font-weight: 600;
           }
         }
 
         .templateMainContainer {
           display: flex;
           flex-wrap: wrap;
-          gap: 2vw;
-          justify-content: space-between;
-          align-items: flex-start;
+          // gap: 2vw;
+
           width: 100%;
-          height: 40vh;
+          height: 70vh;
+          // border: 2px solid blue;
           overflow-y: auto;
 
           .templateContainer {
-            width: calc((100% - 6vw) / 3); /* Fit 3 templates per row */
+            // border: 2px solid blue;
+            width: calc((100% - 8vw) / 3); /* Fit 3 templates per row */
             border: 0.5vw solid transparent;
-            border-radius: 1vw;
+            border-radius: 2vw;
             position: relative;
 
             .customCheckbox {
@@ -309,7 +317,7 @@
             }
 
             .customCheckbox:checked + .customLabel::before {
-              background-color: #eadc12;
+              background-color: #fad43a;
             }
             .customLabel::after {
               content: "✔";
@@ -331,15 +339,15 @@
       }
 
       .saveButton {
-        border: 1px solid #696964;
+        border: 1.5px solid #000;
         outline: none;
         color: black;
-        padding: 0.3vw 2vw;
-        background: #ebdd14;
+        padding: 1.2vw 3vw;
+        background: #fad43a;
         cursor: pointer;
-        font-size: 2.5vw;
-        border-radius: 1vw;
-        margin-bottom: 2vw;
+        font-size: 3.8vw;
+        border-radius: 4vw;
+        margin: 2vw;
       }
 
       .closeBtn {
@@ -372,23 +380,32 @@
 
 @media all and (max-width: 480px) {
   .TemplatePopup {
-    height: calc(100svh - 20vw);
-    padding: 1.5vw;
-    margin: 5.2vw auto;
+    height: calc(100svh - 13vw);
+    padding: 2vw;
+    top: 4%;
+    left: 0;
+    right: 0;
+    // gap: 3vw;
+    bottom: 0;
+    // margin: 5.2vw;
 
     .popupContent {
       border-radius: 1vw;
+      // margin: 1vw !important;
+      // margin-bottom: 2vw;
+      margin-top: 4vw;
       background: linear-gradient(to right, #e8e0e6, #deeded);
-      height: 68%;
-      width: 90%;
-      padding: 3vw;
-      gap: 3vw;
+      height: 100%;
+      width: 100%;
+      // padding: 3vw;
+      gap: 4vw;
       // border: 2px solid blue;
       overflow-y: auto;
       overflow: visible;
 
       .mainContainer {
-        gap: 3vw;
+        // border: 2px solid blue;
+        gap: 4vw;
 
         .headingSel {
           font-size: 3vw;
@@ -403,43 +420,41 @@
           flex-wrap: wrap;
 
           .categoryBtn {
-            font-size: 3.9vw;
-            font-weight: 500;
-            background: linear-gradient(white, white) padding-box,
-              linear-gradient(to right, #ebdd14, #100a14) border-box;
+            font-size: 4.2vw;
             border: 0.25vw solid transparent;
-            padding: 1.2vw;
-            border-radius: 1.4vw;
+            padding: 1.5vw 3vw;
+            border-radius: 4.7vw;
             cursor: pointer;
           }
 
           .categoryBtn:hover,
           .selectedCategory {
-            background: linear-gradient(to right, #eadc12, #d88717) padding-box,
-              linear-gradient(to right, #63625a, #100a14) border-box;
-            border: 0.2vh solid transparent;
-            color: #fff;
+            background: #fad43a;
+            border: 1.5px solid #000;
+            color: #000;
+            font-weight: 600;
           }
         }
 
         .templateMainContainer {
           display: flex;
           flex-wrap: wrap;
-          gap: 2vw;
-          justify-content: space-between;
-          align-items: flex-start;
+          gap: 3vw;
+          // justify-content: space-between;
+          // align-items: flex-start;
           width: 100%;
-          height: 40vh;
+          height: 70vh;
           overflow-y: auto;
-          // border:2px solid blue;
-          padding-right: 2vw;
+          // border: 2px solid blue;
+          // padding-right: 2vw;
 
           .templateContainer {
-            width: calc((100% - 6vw) / 3); /* Fit 3 templates per row */
+            width: calc((100% - 5vw) / 2);
             border: 0.5vw solid transparent;
-            border-radius: 1vw;
+            border-radius: 2vw;
             position: relative;
 
+            // border: 2px solid red;
             .customCheckbox {
               display: none;
             }
@@ -462,22 +477,22 @@
               position: absolute;
               top: 1vw;
               left: 1vw;
-              width: 3.2vw;
-              height: 3.2vw;
-              border: 2px solid #ccc;
+              width: 5vw;
+              height: 5vw;
+              border: 1px solid #ccc;
               border-radius: 0.5vw;
               background-color: transparent;
               transition: all 0.3s ease;
             }
             .customCheckbox:checked + .customLabel::before {
-              background-color: #eadc12;
+              background-color: #fad43a;
             }
             .customLabel::after {
               content: "✔";
               position: absolute;
-              top: 0.5vw;
-              left: 1.5vw;
-              font-size: 3vw;
+              top: 0.8vw;
+              left: 1.7vw;
+              font-size: 4.3vw;
               font-weight: 600;
               color: black;
               transform: scale(0);
@@ -492,23 +507,20 @@
       }
 
       .saveButton {
-        border: 1px solid #696964;
+        border: 1.5px solid #000;
         outline: none;
-        color: black;
-        padding: 0.3vw 1.9vw;
-        background: #ebdd14;
-        cursor: pointer;
-        font-size: 3.7vw;
-        border-radius: 1vw;
-        margin: 2vw;
+        font-size: 4.4vw;
+        padding: 1.5vw 3.3vw;
+        border-radius: 4.7vw;
+        // margin: 2vw;
         // margin-bottom: 2vw;
       }
 
       .closeBtn {
         position: absolute;
         width: 8.4vw;
-        right: -3%;
-        top: -4%;
+        right: -2%;
+        top: -2%;
         cursor: pointer;
       }
     }
