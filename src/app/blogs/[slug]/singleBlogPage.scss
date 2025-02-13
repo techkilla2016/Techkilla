@@ -4,6 +4,9 @@
   color: rgb(57, 53, 53);
   line-height: 2vw;
 }
+.mobile-highlight {
+  color: #ffc300;
+}
 .SingleBlogPage {
   margin-top: 5.6vw;
   padding-bottom: 4vw;
@@ -240,6 +243,9 @@
 }
 
 @media all and (min-width: 480px) and (max-width: 1024px) {
+  .mobile-highlight {
+    font-size: 3vw;
+  }
   .SingleBlogPage {
     margin-top: 5vw;
     padding-bottom: 12vw;
@@ -315,6 +321,9 @@
 }
 
 @media all and (max-width: 480px) {
+  .mobile-highlight {
+    font-size: 4.9vw;
+  }
   .fontContent {
     font-size: 4.8vw;
     font-weight: 300;
