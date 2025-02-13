@@ -24,10 +24,7 @@
 
   .tableHead {
     font-size: 2.5vw;
-    // border: 2px solid red;
-    //   padding: 1.5vw 0;
     font-weight: 600;
-    // background: linear-gradient(to right, #fad43a, #b3a70b);
     color: #ffce3a;
     // -webkit-background-clip: text;
     // -webkit-text-fill-color: transparent;
@@ -100,7 +97,8 @@
   .table-wrapper {
     border: 1.5px solid rgb(135, 131, 135);
     width: 100%;
-    border-radius: 0.7vw;
+    // border: 1px solid red;
+    // border-radius: 0.7vw;
     overflow: hidden;
     .mainTable {
       // border: 2px solid red;
@@ -202,6 +200,8 @@
     }
   }
 }
+
+
 @media (max-width: 1024px) {
   .AllEvents {
     // border: 2px solid yellow;
@@ -340,6 +340,8 @@
     }
   }
 }
+
+
 @media (max-width: 480px) {
   .AllEvents {
     // border: 2px solid rgb(108, 93, 79);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./allEvents.scss";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import { ref as storageRef, deleteObject } from "firebase/storage";
 import { collection, deleteDoc, doc } from "firebase/firestore";
 import DeletePopup from "./deletePopup";
 import EventPreviewPopup from "../../../components/events/allEvents/eventPreviewPopup";
+import { toast } from "react-toastify";
 
 export default function AllEvents({ data }) {
   const [eventName, setEventName] = useState("");
@@ -23,7 +24,7 @@ export default function AllEvents({ data }) {
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
   const [inputFocus, setInputFocus] = useState(null);
-  const itemsPerPage = 4;
+  const itemsPerPage = 5;
 
   const formatDate = (timestamp) => {
     if (timestamp && typeof timestamp.toDate === "function") {
@@ -61,7 +62,7 @@ export default function AllEvents({ data }) {
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
-
+ 
   const confirmDelete = async () => {
     if (!eventToDelete) return;
 
@@ -80,6 +81,14 @@ export default function AllEvents({ data }) {
       await deleteObject(imageRef);
 
       console.log("Event and logo deleted successfully.");
+
+      // for reset pagination for last page
+      const updateData = data.filter((item)=>item.id!==eventToDelete)
+      const totalPagesAfterDeletion = Math.ceil(updateData.length/itemsPerPage);
+      if(currentPage>totalPagesAfterDeletion){
+        setCurrentPage(totalPagesAfterDeletion);
+      };
+      
       setShowConfirmDelete(false);
       setLoading(false);
     } catch (err) {
@@ -120,7 +129,10 @@ export default function AllEvents({ data }) {
                 value={eventName}
                 onFocus={() => setInputFocus("name")}
                 onBlur={() => setInputFocus(null)}
-                onChange={(e) => setEventName(e.target.value)}
+                onChange={(e) => {
+                  setEventName(e.target.value);
+                  setCurrentPage(1)
+                }}
               />
             </label>
           </div>
@@ -134,7 +146,10 @@ export default function AllEvents({ data }) {
                 onFocus={() => setInputFocus("number")}
                 onBlur={() => setInputFocus(null)}
                 value={eventNumber}
-                onChange={(e) => setEventNumber(e.target.value)}
+                onChange={(e) => { 
+                  setEventNumber(e.target.value)
+                  setCurrentPage(1)
+                }}
               />
             </label>
           </div>
