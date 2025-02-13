@@ -28,7 +28,7 @@ export default function SelectTemplatesPopup({
   setAllCategories,
   setAllTemplatesData,
   showTemplatePopup,
-  action
+  action,
 }) {
   // const [allTemplatesData, setAllTemplatesData] = useState();
   // const [allCategories, setAllCategories] = useState([]);
@@ -39,7 +39,7 @@ export default function SelectTemplatesPopup({
   const [selectedTemplates, setSelectedTemplates] = useState(
     selectedTemplatesFromProps || []
   );
- 
+
   // Fetch templates data when the component mounts
   // useEffect(() => {
   //   const fetchTemplates = async () => {
@@ -59,12 +59,12 @@ export default function SelectTemplatesPopup({
   //   fetchTemplates();
   // }, []);
 
-  useEffect(()=>{
-    if(action=="edit"){
+  useEffect(() => {
+    if (action == "edit") {
       setSelectedTemplates(selectedTemplatesFromProps);
-      console.log('updates handled in edit states')
+      console.log("updates handled in edit states");
     }
-  },[selectedTemplatesFromProps])
+  }, [selectedTemplatesFromProps]);
 
   // Extract categories from the fetched templates and set default category
   useEffect(() => {
@@ -96,7 +96,7 @@ export default function SelectTemplatesPopup({
       }, 3000);
     }
   }, [allTemplatesData, selectedCategory]);
-  console.log(allTemplatesData)
+  console.log(allTemplatesData);
 
   // Format category names for display
   // const formatCategory = (category) => {
@@ -108,24 +108,25 @@ export default function SelectTemplatesPopup({
   // console.log(selectedTemplates);
   // console.log("filter", filteredTemplates);
   // handle template selection with a maximum limit
-  const handleTemplateSelection = (item,e) => {
+  const handleTemplateSelection = (item, e) => {
     setSelectedTemplates((prev) => {
       if (prev.includes(item.id)) {
         return prev.filter((template) => template !== item.id);
-      } else if(prev.length < templateNumber){
+      } else if (prev.length < templateNumber) {
         return [...prev, item.id];
-      }else{
-        return prev
-      }});
+      } else {
+        return prev;
+      }
+    });
 
-    if(selectedTemplates.length>=templateNumber){
-        const checked = e.target.checked;
-        if(checked){
-          toast.warning(
-            `You can select only ${templateNumber} templates.`,
-            toastOptions
-          );
-        } 
+    if (selectedTemplates.length >= templateNumber) {
+      const checked = e.target.checked;
+      if (checked) {
+        toast.warning(
+          `You can select only ${templateNumber} templates.`,
+          toastOptions
+        );
+      }
     }
   };
 
@@ -141,7 +142,10 @@ export default function SelectTemplatesPopup({
   };
 
   return (
-    <div className="flex-col-center TemplatePopup" style={{transform:showTemplatePopup ? "translateY(0%)" : ""}}>
+    <div
+      className="flex-col-center TemplatePopup"
+      style={{ transform: showTemplatePopup ? "translateY(0%)" : "" }}
+    >
       <div className="flex-col-center popupContent">
         <div className="flex-col-center mainContainer">
           {isAllTemplatesLoading && (
@@ -175,7 +179,7 @@ export default function SelectTemplatesPopup({
                     id={item.id}
                     type="checkbox"
                     checked={selectedTemplates.includes(item.id)}
-                    onChange={(e) => handleTemplateSelection(item,e)}
+                    onChange={(e) => handleTemplateSelection(item, e)}
                     className="customCheckbox"
                   />
                   <label htmlFor={item.id} className="customLabel">
@@ -201,7 +205,7 @@ export default function SelectTemplatesPopup({
           }}
           className="flex-row-center saveButton"
         >
-          SAVE
+          Proceed
         </div>
 
         {/* close */}

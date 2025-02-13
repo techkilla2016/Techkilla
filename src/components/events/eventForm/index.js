@@ -206,7 +206,7 @@ export default function EventForm({ action }) {
     let updatedValue = ["numberOfDevices", "templateNumber"].includes(name)
       ? Number(value)
       : value;
-      
+
     console.log("onchange calling");
 
     // convert string to object
@@ -790,7 +790,7 @@ export default function EventForm({ action }) {
                   ) : (
                     <div className="flex-col-center addNewFace">
                       <p className="flex-row-center orText">
-                        Drag & Drop Your Logo Here
+                        Drag & Drop your Logo
                       </p>
                       <p className="flex-row-center orText">OR</p>
                       <label htmlFor="fileInput" className="fileInputLabel">
@@ -839,7 +839,7 @@ export default function EventForm({ action }) {
             {/* submit button */}
             <div className="flex-col-center submitContainers">
               <button type="submit" className="flex-row-center submitBtn">
-                {action === "edit" ? "UPDATE" : "SUBMIT"}
+                {action === "edit" ? "Update" : "Submit"}
               </button>
             </div>
           </form>

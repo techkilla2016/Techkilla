@@ -351,20 +351,22 @@
   }
 
   .submitContainers {
-    // padding-top: 2vw;
+    padding-top: 2vw;
     .submitBtn {
-      // margin-right: 1vw;
-      border-radius: 0.8vw;
-      background: #ffce3a;
-      // border: 1.5px solid black;
+      border: 1.5px solid #000;
+      outline: none;
       color: black;
-      // width: 10%;
-      font-size: 1.3vw;
+      padding: 0.4vw 2.5vw;
+      background: #fad43a;
+      cursor: pointer;
       font-weight: 600;
-      padding: 0.3vw 1.5vw;
+      // text-transform: capitalize;
+      font-size: 1.2vw;
+      border-radius: 1.5vw;
+      margin-bottom: 2vw;
     }
     .submitBtn:hover {
-      background: #dcb32c;
+      background: #f4c50a;
     }
   }
 }
@@ -415,7 +417,7 @@
 
       .templateBtn {
         // border: 1px solid green;
-        font-size: 1.7rem;
+        font-size: 3.4svw;
         // background: #bc3dfb;
         border-radius: 2vw 0 2vw 0;
       }
@@ -500,7 +502,7 @@
           }
           .orText {
             // padding: 1vw;
-            font-size: 2vw;
+            font-size: 2.5vw;
           }
           .imgPlusIcon {
             // border: 1px solid red;
@@ -519,7 +521,7 @@
           // border: 2px solid green;
           // padding-top: 1.6vw;
 
-          font-size: 2vw;
+          font-size: 2.5vw;
         }
       }
     }
@@ -530,7 +532,7 @@
       width: 100%;
 
       .bg-head {
-        font-size: 1.7rem;
+        font-size: 3.2svw;
         font-weight: 600;
       }
 
@@ -561,12 +563,14 @@
     .submitContainers {
       padding-top: 2vw;
       .submitBtn {
-        border-radius: 1.5vw;
-        background: #f6ce4c;
-        // border: 1.5px solid black;
-        color: black;
-        font-size: 3vw !important;
-        padding: 1vw 3vw;
+        padding: 0.9vw 3.5vw;
+        background: #fad43a;
+        cursor: pointer;
+        font-weight: 600;
+        // text-transform: capitalize;
+        font-size: 3.3vw;
+        border-radius: 4vw;
+        margin-bottom: 2vw;
       }
     }
   }
@@ -599,7 +603,7 @@
       padding: 1vw;
       font-size: 1vw;
       .labelling {
-        font-size: 3.7vw !important;
+        font-size: 3.8vw !important;
         font-weight: 600 !important;
         color: #343232 !important;
         width: 100%;
@@ -639,7 +643,7 @@
       padding-bottom: 5vw;
 
       .shareHead {
-        font-size: 3.7vw;
+        font-size: 3.9vw !important;
         font-weight: 600 !important;
         color: #343232 !important;
       }
@@ -673,7 +677,7 @@
       }
 
       .checkboxText {
-        font-size: 3.3vw;
+        font-size: 3.6vw;
         // border: 1px solid red;
         display: inline-block;
       }
@@ -731,7 +735,7 @@
           }
           .orText {
             // padding: 1vw;
-            font-size: 3.9vw;
+            font-size: 3.6svw;
           }
           .imgPlusIcon {
             // border: 1px solid red;
@@ -750,7 +754,7 @@
           // margin-top: 10px;
           // border: 2px solid green;
           border-width: 0.5svw;
-          font-size: 3.9svw;
+          font-size: 3.6svw;
         }
       }
     }
@@ -784,9 +788,9 @@
     .submitContainers {
       padding-top: 2vw;
       .submitBtn {
-        border-radius: 2vw;
-        font-size: 3.5vw !important;
-        padding: 1.5vw 4vw;
+        border-radius: 5vw;
+        font-size: 4.1vw !important;
+        padding: 1.5vw 6vw;
       }
     }
   }
