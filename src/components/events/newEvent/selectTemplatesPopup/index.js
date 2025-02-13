@@ -71,14 +71,17 @@ export default function SelectTemplatesPopup({
     if (allTemplatesData) {
       // const categories = allTemplatesData.map((item)=>item.category);
       // setAllCategories(categories);
-
+      console.log('got all templates')
       // Automatically select the first category as the default
       if (allCategories.length > 0) {
-        console.log(allCategories[0]);
         setSelectedCategory(allCategories[0]);
+        console.log('got all category')
       }
     }
-  }, [allTemplatesData]);
+  }, [allTemplatesData,allCategories]);
+  useEffect(()=>{
+    console.log("got selected category")
+  },[selectedCategory])
 
   // Update the filtered templates whenever the selected category changes
   useEffect(() => {

@@ -381,7 +381,7 @@ export default function BillingInfoForm({
                 <div className="flex-col-center formFieldBilling">
                   <label className="labelBilling">GST Number*</label>
                   <input
-                    type="number"
+                    type="text"
                     name="gstNumber"
                     value={formData.gstNumber}
                     onChange={handleChange}
