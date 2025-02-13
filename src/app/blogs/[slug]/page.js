@@ -127,13 +127,7 @@ function highlightText(text, highlightWords, highlightedWordsSet) {
       highlightedWordsSet.add(highlight.word.toLowerCase()); // Mark the word as highlighted
       return (
         <Link href={highlight.url} key={index} target={highlight.target}>
-          <span
-            style={{
-              color: "#FFC300",
-            }}
-          >
-            {part}
-          </span>
+          <span className="mobile-highlight">{part}</span>
         </Link>
       );
     }
