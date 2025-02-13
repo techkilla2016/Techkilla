@@ -53,17 +53,19 @@
 .blogTitle {
   // border: 1px solid black;
   // color: yellow;
-  font-size: 1.8vw;
+  font-size: 2vw;
   font-weight: 600;
-  background: linear-gradient(to right, #fad43a, #2c2904);
-  //  color: #ffce3a;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fad43a;
+  // background: linear-gradient(to right, #fad43a, #2c2904);
+  // //  color: #ffce3a;
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
   text-align: center;
+  text-shadow: 1px black;
 }
 .blogContent {
   // border: 1px solid black;
-  font-size: 1vw;
+  font-size: 1.1vw;
   line-height: 1.8vw;
   color: #666;
 }
@@ -210,13 +212,14 @@
   }
 
   .cardTitle {
-    font-size: 4vw;
+    font-size: 4.6vw;
     margin-bottom: 1.5vw;
-    color: black;
+    font-weight: 600;
+    color: rgb(37, 34, 34);
   }
 
   .cardExcerpt {
-    font-size: 3.5vw;
+    font-size: 3.8vw;
     color: #666;
     line-height: 1.6;
   }

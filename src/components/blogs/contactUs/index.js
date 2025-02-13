@@ -7,7 +7,9 @@ export default function ContactUs() {
   return (
     <div className="flex-col-center Contact">
       <div className="flex-col-center contactMain">
-        <p className="contactUs">Make Your Wedding Unforgettable!</p>
+        <p className="contactUs">
+          Make Your Event Unforgettable with Techkilla!
+        </p>
         <p className="descText">
           Want to wow your guests with AI-driven wedding experiences? Contact
           Techkilla today and book your AI-powered wedding photobooth!
@@ -17,10 +19,26 @@ export default function ContactUs() {
           <a href="mailto:support@snapshawt.com" className="contactEmail">
             contact@techkilla.com
           </a>{" "}
-          or Whatsapp
+          or{" "}
+          <a
+            className="whatsappLink"
+            href="https://wa.me/917827362702"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
         </p>
         <p className="fontContent queryMail2">
-          📅 Book a Demo : <span className="booking">Booking link of demo</span>
+          📅 Book a Demo:{" "}
+          <a
+            className="booking"
+            href="https://calendly.com/techkilla/meeting?month=2025-02"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Click here
+          </a>
         </p>
       </div>
       <div className="flex-row-center leftFooterSecond">
@@ -68,7 +86,10 @@ export default function ContactUs() {
           </Link>
 
           {/* Pinterest */}
-          <Link href="https://x.com/techkillatechno" target="_blank">
+          <Link
+            href="https://www.pinterest.com/techkillatechnologies/"
+            target="_blank"
+          >
             <li>
               <Image
                 src={"/blogs/Icon-01.png"}
