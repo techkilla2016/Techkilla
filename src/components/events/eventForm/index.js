@@ -252,7 +252,7 @@ export default function EventForm({ action }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("form submitting", formData);
-    
+
     // create event
     const createEvent = async () => {
       setLoading(true);
@@ -573,7 +573,7 @@ export default function EventForm({ action }) {
             {/* screen */}
             <div className="flex-col-center valueField">
               <label className="labelling">
-                Screen:<span className="requiredIcon">*</span>
+                Screen<span className="requiredIcon">*</span>
                 <select
                   name="screen"
                   value={formData.screen}
@@ -596,9 +596,8 @@ export default function EventForm({ action }) {
             {/* event package */}
             <div className="flex-col-center valueField">
               <label className="labelling">
-                {action === "add"
-                  ? "Select a Event Package:"
-                  : `Event Package:`}<span className="requiredIcon">*</span>
+                {action === "add" ? "Select a Event Package" : `Event Package`}
+                <span className="requiredIcon">*</span>
                 <select
                   value={formData.eventPackage?.duration || ""}
                   name="eventPackage"
@@ -625,7 +624,7 @@ export default function EventForm({ action }) {
             {/* number of devices */}
             <div className="flex-col-center valueField">
               <label className="labelling">
-                Number of Devices:<span className="requiredIcon">*</span>
+                Number of Devices<span className="requiredIcon">*</span>
                 <select
                   name="numberOfDevices"
                   value={formData.numberOfDevices}
@@ -647,7 +646,7 @@ export default function EventForm({ action }) {
             {formData.productName !== "image-generator" && (
               <div className="flex-col-center valueField">
                 <label className="labelling">
-                  Template Number:<span className="requiredIcon">*</span>
+                  Template Number<span className="requiredIcon">*</span>
                   <select
                     name="templateNumber"
                     value={formData.templateNumber}
@@ -722,7 +721,7 @@ export default function EventForm({ action }) {
             {/* share options */}
             <div className="flex-col-center shareOption">
               <label className="flex-row-center shareHead">
-                Share Options:<span className="requiredIcon">*</span>
+                Share Options<span className="requiredIcon">*</span>
               </label>
               <div className="flex-row-center options">
                 {data?.shareOptionsArr.map((option) => (
@@ -752,7 +751,9 @@ export default function EventForm({ action }) {
                 htmlFor="fileInput"
                 className=" flex-col-center logoUploadLabel"
               >
-                <p className="flex-row-center uploadText">Upload Logo:<span className="requiredIcon">*</span></p>
+                <p className="flex-row-center uploadText">
+                  Upload Logo<span className="requiredIcon">*</span>
+                </p>
                 <div className="logoContainer">
                   {isUploading ? (
                     <div className="flex-col-center loaderContainer">
@@ -813,7 +814,9 @@ export default function EventForm({ action }) {
 
             {/* Background Images */}
             <div className="flex-col-center imageContainer">
-              <p className="bg-head">Background Images:<span className="requiredIcon">*</span></p>
+              <p className="bg-head">
+                Background Images:<span className="requiredIcon">*</span>
+              </p>
               <div className="flex-row-center bgImgContainer">
                 {data?.bgImagesArr.map((src, idx) => (
                   <div
