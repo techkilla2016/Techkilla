@@ -83,9 +83,20 @@ const DesktopNav = () => {
               </Link>
             </div>
           </div>
-          <Link className="navlink" href="/case-studies">
-            Case Studies
-          </Link>
+          <div className="navlink">
+            <Link className="navlink" href="/blogs">
+              Resources
+            </Link>
+            <div className="drop_down">
+              <Link className="nav_child_drop" href="/blogs">
+                Blogs
+              </Link>
+              <Link className="nav_child_drop" href="/case-studies">
+                Case Studies
+              </Link>
+            </div>
+          </div>
+
           {/* <Link className='navlink' href="/privacy-policy">Privacy & Policy</Link> */}
           {/* <Link className='navlink' href="/QR-Registration" style={{
                         color: '#fdb714'
