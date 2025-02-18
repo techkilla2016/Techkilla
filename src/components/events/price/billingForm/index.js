@@ -107,7 +107,7 @@ export default function BillingInfoForm({
     if (isFormUpdate) {
       try {
         const res = await axios.patch(
-          `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/billing-info/update/${formData._id}`,
+          `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-billing-info/update/${formData._id}`,
           data
         );
         setIsShowOldBillingInfo(true);
@@ -118,7 +118,7 @@ export default function BillingInfoForm({
     } else {
       try {
         let res = await axios.post(
-          `http://localhost:8000/billing-info/create`,
+          `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-billing-info/create`,
           data
         );
         toast.success("New billing details added successfully!");
@@ -132,10 +132,11 @@ export default function BillingInfoForm({
     setFormData({});
   };
 
+  // handle delete
   const handleDelete = async (id) => {
     try {
       let res = await axios.delete(
-        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/billing-info/delete/${id}`
+        `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-billing-info/delete/${id}`
       );
       setIsGetBillingData((prev) => !prev);
       toast.success("Billing address deleted successfully!");

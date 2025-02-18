@@ -3,7 +3,7 @@ import axios from "axios";
 const useCreateUser = async (data) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/user/create",
+      `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-user/create`,
       data
     );
     return response.data;
