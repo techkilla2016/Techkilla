@@ -48,8 +48,8 @@ export default function ContactUs() {
             <li>
               <Image
                 src={"/blogs/Icon-02.png"}
-                width={32}
-                height={32}
+                width={100}
+                height={100}
                 className="socialIcon"
                 alt="Facebook icon"
               />
@@ -64,8 +64,8 @@ export default function ContactUs() {
             <li>
               <Image
                 src={"/blogs/Icon-04.png"}
-                width={32}
-                height={32}
+                width={100}
+                height={100}
                 className="socialIcon"
                 alt="Instagram icon"
               />
@@ -77,8 +77,8 @@ export default function ContactUs() {
             <li>
               <Image
                 src={"/blogs/Icon-03.png"}
-                width={32}
-                height={32}
+                width={100}
+                height={100}
                 className="socialIcon"
                 alt="Twitter icon"
               />
@@ -93,8 +93,8 @@ export default function ContactUs() {
             <li>
               <Image
                 src={"/blogs/Icon-01.png"}
-                width={32}
-                height={32}
+                width={100}
+                height={100}
                 className="socialIcon"
                 alt="Pinterest icon"
               />
@@ -109,8 +109,8 @@ export default function ContactUs() {
             <li>
               <Image
                 src={"/blogs/Icon-05.png"}
-                width={32}
-                height={32}
+                width={100}
+                height={100}
                 className="socialIcon"
                 alt="Snapchat icon"
               />
@@ -124,8 +124,8 @@ export default function ContactUs() {
             <li>
               <Image
                 src={"/blogs/Icon-07.png"}
-                width={32} // specify appropriate width
-                height={32} // specify appropriate height
+                width={100}
+                height={100}
                 className="socialIcon"
                 alt="YouTube icon"
               />

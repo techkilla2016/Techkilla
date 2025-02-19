@@ -10,57 +10,57 @@ import Footer from "@/components/footer";
 // import { allRoutes } from "@/data/allRoutes";
 import BlogHeader from "@/components/blogs/blogHeader";
 
-const siteUrl = process.env.SITE_URL;
+const siteUrl = "https://www.techkilla.com";
 
-// export async function generateMetadata({ params }) {
-//   const { slug } = params;
-//   const post = blogPosts.find((blog) => generateSlug(blog.title) == slug);
-//   if (!post) {
-//     return {
-//       title: "Blog Not Found",
-//       description: "The blog you are looking for does not exist.",
-//     };
-//   }
-//   return {
-//     metadataBase: new URL(siteUrl),
-//     alternates: {
-//       canonical: `/blogs/${slug}`,
-//       languages: {
-//         "en-US": `/blogs/${slug}/en-US`,
-//         "de-DE": `/blogs/${slug}/de-DE`,
-//       },
-//     },
-//     title: post?.seo?.title,
-//     description: post?.seo?.description,
-//     keywords: post?.seo?.keywords,
-//     openGraph: {
-//       type: "website",
-//       locate: "en_US",
-//       site_name: "Snapshawt",
-//       url: siteUrl,
-//       title: post?.seo?.title,
-//       description: post?.seo?.description,
-//       images: {
-//         url: post?.seo?.img,
-//         width: 1200,
-//         height: 630,
-//         alt: post.seo.imgAlt,
-//       },
-//     },
-//     twitter: {
-//       card: "summary_large_image",
-//       site: "@Snapshawt",
-//       title: post?.seo?.title,
-//       description: post?.seo?.description,
-//       images: {
-//         url: post?.seo?.img,
-//         width: 1200,
-//         height: 630,
-//         alt: post.seo.imgAlt,
-//       },
-//     },
-//   };
-// }
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const post = blogPosts.find((blog) => generateSlug(blog.title) == slug);
+  if (!post) {
+    return {
+      title: "Blog Not Found",
+      description: "The blog you are looking for does not exist.",
+    };
+  }
+  return {
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: `/blogs/${slug}`,
+      languages: {
+        "en-US": `/blogs/${slug}/en-US`,
+        "de-DE": `/blogs/${slug}/de-DE`,
+      },
+    },
+    title: post?.seo?.title,
+    description: post?.seo?.description,
+    keywords: post?.seo?.keywords,
+    openGraph: {
+      type: "website",
+      locate: "en_US",
+      site_name: "Techkilla",
+      url: siteUrl,
+      title: post?.seo?.title,
+      description: post?.seo?.description,
+      images: {
+        url: post?.seo?.img,
+        width: 1200,
+        height: 630,
+        alt: post.seo.imgAlt,
+      },
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@Techkilla",
+      title: post?.seo?.title,
+      description: post?.seo?.description,
+      images: {
+        url: post?.seo?.img,
+        width: 1200,
+        height: 630,
+        alt: post.seo.imgAlt,
+      },
+    },
+  };
+}
 
 const highlightWords = [
   {
@@ -393,8 +393,8 @@ export default function BlogPostPage({ params }) {
                 <li>
                   <Image
                     src={"/blogs/Icon-02.png"}
-                    width={32} // specify appropriate width
-                    height={32} // specify appropriate height
+                    width={100}
+                    height={100}
                     className="socialIcon"
                     alt="Facebook icon"
                   />
@@ -409,8 +409,8 @@ export default function BlogPostPage({ params }) {
                 <li>
                   <Image
                     src={"/blogs/Icon-04.png"}
-                    width={32}
-                    height={32}
+                    width={100}
+                    height={100}
                     className="socialIcon"
                     alt="Instagram icon"
                   />
@@ -422,8 +422,8 @@ export default function BlogPostPage({ params }) {
                 <li>
                   <Image
                     src={"/blogs/Icon-03.png"}
-                    width={32}
-                    height={32}
+                    width={100}
+                    height={100}
                     className="socialIcon"
                     alt="Twitter icon"
                   />
@@ -438,8 +438,8 @@ export default function BlogPostPage({ params }) {
                 <li>
                   <Image
                     src={"/blogs/Icon-01.png"}
-                    width={32}
-                    height={32}
+                    width={100}
+                    height={100}
                     className="socialIcon"
                     alt="Pinterest icon"
                   />
@@ -454,8 +454,8 @@ export default function BlogPostPage({ params }) {
                 <li>
                   <Image
                     src={"/blogs/Icon-05.png"}
-                    width={32}
-                    height={32}
+                    width={100}
+                    height={100}
                     className="socialIcon"
                     alt="Snapchat icon"
                   />
@@ -469,8 +469,8 @@ export default function BlogPostPage({ params }) {
                 <li>
                   <Image
                     src={"/blogs/Icon-07.png"}
-                    width={32} // specify appropriate width
-                    height={32} // specify appropriate height
+                    width={100}
+                    height={100}
                     className="socialIcon"
                     alt="YouTube icon"
                   />
