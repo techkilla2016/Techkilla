@@ -117,9 +117,26 @@ const MobileNav = ({ isMobile, setIsMobile }) => {
                 >
                   Products
                 </div>
-                <div className="listMenu" onClick={() => setIsMobile(false)}>
-                  <Link href="/case-studies">Case Studies</Link>
+                <div
+                  className="listMenu"
+                  onClick={() =>
+                    childHandal([
+                      {
+                        title: "Blogs",
+                        url: "/blogs",
+                      },
+                      {
+                        title: "Case Studies",
+                        url: "/case-studies",
+                      },
+                    ])
+                  }
+                >
+                  Resources
                 </div>
+                {/* <div className="listMenu" onClick={() => setIsMobile(false)}>
+                  <Link href="/case-studies">Case Studies</Link>
+                </div> */}
               </div>
               <div className="MobileNavBtn">
                 <Link
