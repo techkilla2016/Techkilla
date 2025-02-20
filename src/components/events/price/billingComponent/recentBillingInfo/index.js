@@ -45,9 +45,15 @@ export default function RecentBillingInfo({
                   className="flex-col-center billingDetailsContainer"
                   onClick={() => handleAddressChange(item)}
                 >
-                  <p className="boxTitleBillingCard">{item.name}</p>
+                  <p className="boxTitleBillingCard">
+                    {item.name.length > 20
+                      ? item.name.slice(0, 20) + "..."
+                      : item.name}
+                  </p>
                   <p className="boxBillingAddressName">
-                    {item.address.slice(0, 30)}...
+                    {item.address.length > 25
+                      ? item.address.slice(0, 25) + "..."
+                      : item.address}
                   </p>
                 </div>
                 <div className="flex-row-center actionIconContainer">

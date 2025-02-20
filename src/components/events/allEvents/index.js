@@ -10,6 +10,7 @@ import { db, storage } from "@/firebase-config";
 import { ref as storageRef, deleteObject } from "firebase/storage";
 import { collection, deleteDoc, doc } from "firebase/firestore";
 import DeletePopup from "./deletePopup";
+import { IoIosRemoveCircleOutline } from "react-icons/io";
 
 import EventPreviewPopup from "../../../components/events/allEvents/eventPreviewPopup";
 import { toast } from "react-toastify";
@@ -117,7 +118,10 @@ export default function AllEvents({ data }) {
   const handleClosePreview = () => {
     setSelectedEvent(null);
   };
-
+  const removeFilter = () => {
+    setEventName("");
+    setEventNumber("");
+  };
   return (
     <div className="flex-col-center AllEvents">
       <p className="flex-row-center tableHead"></p>
@@ -157,12 +161,18 @@ export default function AllEvents({ data }) {
               />
             </label>
           </div>
+          <IoIosRemoveCircleOutline
+            className="removeFilter"
+            onClick={removeFilter}
+          />
         </div>
       </div>
       <div className="flex-row-center eventDetail">
         <div className="flex-row-center countPart">
-          <p className="eventCount">Total events : 15</p>
-          <p className="eventCount">Active events : 2</p>
+          <p className="eventCount">Total events : {data.length}</p>
+          <p className="eventCount">
+            Active events: {data.filter((event) => event.expiresAt).length}
+          </p>
         </div>
 
         <div
@@ -191,10 +201,18 @@ export default function AllEvents({ data }) {
               paginatedEvents.map((item) => (
                 <tr key={item.id}>
                   <td>#{item.eventNumber}</td>
-                  <td>{item.eventName}</td>
+                  <td>
+                    {item.eventName.charAt(0).toUpperCase() +
+                      item.eventName.slice(1)}
+                  </td>
+                  <td>
+                    {item.productName.charAt(0).toUpperCase() +
+                      item.productName.slice(1)}
+                  </td>
+
                   <td>{formatDate(item.createdAt)}</td>
                   <td>{formatDate(item.expiresAt)}</td>
-                  <td>{item.productName}</td>
+
                   <td className="flex-row-center">
                     <span
                       onClick={() => handlePreview(item)}
@@ -235,29 +253,53 @@ export default function AllEvents({ data }) {
       </div>
       <div className="flex-col-center card-container">
         {paginatedEvents.map((item) => (
-          <div key={item.id} className="event-card">
-            <h3>{item.eventName}</h3>
-            <p>
-              <strong>Event No:</strong> #{item.eventNumber}
+          <div key={item.id} className="flex-col-center event-card">
+            <p className="event-name">{item.eventName}</p>
+            <p className="flex-row-center event-product">
+              <p className="event-head">
+                <strong className="event-data"> Product : </strong>
+                {item.productName}
+              </p>
+              <p className="event-head">
+                {" "}
+                <strong className="event-data">Event No : </strong>#
+                {item.eventNumber}
+              </p>
             </p>
-            <p>
-              <strong>Product:</strong> {item.productName}
+            <p className="event-head">
+              <strong className="event-data">Created:</strong>{" "}
+              {formatDate(item.createdAt)}
             </p>
-            <p>
-              <strong>Created:</strong> {formatDate(item.createdAt)}
+            <p className="event-head">
+              <strong className="event-data">Expires:</strong>{" "}
+              {formatDate(item.expiresAt)}
             </p>
-            <p>
-              <strong>Expires:</strong> {formatDate(item.expiresAt)}
-            </p>
-            <div className="card-actions">
-              <FaRegEye onClick={() => setSelectedEvent(item)} />
-              <Link href={`/events/pricing?id=${item.id}`}>
+            <div className="flex-row-center card-actions">
+              <span
+                onClick={() => handlePreview(item)}
+                className="flex-row-center preview-button"
+              >
+                <FaRegEye />
+              </span>
+              <Link
+                href={`/events/pricing?id=${item.id}`}
+                className="flex-row-center launch-button"
+              >
                 <PiRocketLaunch />
               </Link>
-              <Link href={`/events/edit?event=${item.eventNumber}`}>
+
+              <Link
+                href={`/events/edit?event=${item.eventNumber}`}
+                className="flex-row-center edit-button"
+              >
                 <MdOutlineModeEdit />
               </Link>
-              <MdDeleteOutline onClick={() => setEventToDelete(item.id)} />
+              <span
+                onClick={() => handleDelete(item.id)}
+                className="flex-row-center delete-button"
+              >
+                <MdDeleteOutline />
+              </span>
             </div>
           </div>
         ))}

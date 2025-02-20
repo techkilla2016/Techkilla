@@ -1,11 +1,15 @@
 .EventsPage {
   // border: 1px solid red;
-  // background: rgb(242, 242, 242);
+  min-height: 100vh;
+  background: rgb(242, 242, 242);
   margin-top: 5.2vw;
   padding-top: 2.2vw;
   position: relative;
+  align-items: flex-start;
+  // height: 100%;
   .logout-container {
     // border: 2px solid blue;
+    background: rgb(255, 255, 255);
     position: absolute;
     padding: 0.5vw;
     border-radius: 1vw;
@@ -16,10 +20,9 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   }
   .profile-text {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     padding: 0.2vw;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     // border: 2px solid blue;
   }
   .logout-header {
@@ -45,15 +48,15 @@
   .logOut {
     cursor: pointer;
     font-size: 1vw;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     color: black;
   }
 
   .logout-text {
-    font-size: 1vw;
+    font-size: 1.1vw;
     // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     //   sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     cursor: pointer;
   }
 }
@@ -74,10 +77,9 @@
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
     .profile-text {
-      font-size: 2.5vw;
+      font-size: 2.2vw;
       padding: 0.2vw;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       // border: 2px solid blue;
     }
     .logout-header {
@@ -102,14 +104,13 @@
 
     .logOut {
       cursor: pointer;
-      font-size: 2vw;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+      font-size: 1.8vw;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       color: black;
     }
 
     .logout-text {
-      font-size: 2.5vw;
+      font-size: 2.1vw;
       // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       //   sans-serif;
       cursor: pointer;
@@ -127,8 +128,9 @@
     border-radius: 1vw;
   }
   .profile-text {
-    font-size: 3.8vw !important;
+    font-size: 3.1vw !important;
     padding: 0.7vw;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     // border: 2px solid blue;
   }
   .logout-header {
@@ -155,8 +157,7 @@
     cursor: pointer;
     font-size: 3vw !important;
     font-weight: 600 !important;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     color: black;
   }
 
