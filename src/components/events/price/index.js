@@ -5,9 +5,11 @@ import Image from "next/image";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useMediaQuery } from "react-responsive";
-import BillingInfoForm from "./billingForm";
+import BillingInfoComponent from "./billingComponent";
 import { useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
+import LeftPriceContainer from "./leftContainer/index";
+import RightPriceContainer from "./rightContainer/index";
 
 const paymentMethods = [
   {
@@ -69,7 +71,7 @@ export default function PriceComponent() {
 
   const [price, setPrice] = useState("$ 4.99");
   const [isMobileView, setIsMobileView] = useState(false);
-  const [isForm, setIsForm] = useState(true);
+  const [isForm, setIsForm] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -95,6 +97,7 @@ export default function PriceComponent() {
 
   // mobile view
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
+  console.log(isGetBillingData)
   // fetch event data
   useEffect(() => {
     if (searchParams && allEventsSelector?.length > 0) {
@@ -180,16 +183,23 @@ export default function PriceComponent() {
     }
   }
 
+  useEffect(()=>{
+    console.log(currentBilling)
+  },[currentBilling])
+
   // handle confirm and pay
-  const handleConfirmAndPay = async () => {
+  const handleConfirmAndPay = async (billing) => {
     console.log(
-      userDataSelector,
+      // userDataSelector,
       currentBilling,
-      eventData,
+      // eventData,
+      billing,
       "handle confirm and pay"
     );
+    const billingInfo = currentBilling?._id ? currentBilling : billing;
 
-    if (!userDataSelector?.uid || !currentBilling?._id || !eventData?.id) {
+
+    if (!userDataSelector?.uid || !billingInfo?._id || !eventData?.id) {
       return router.push("/events");
     }
 
@@ -198,7 +208,7 @@ export default function PriceComponent() {
       if (selectedMethod === "credit") {
         const data = {
           userFirebaseUid: userDataSelector?.uid,
-          billingInfoId: currentBilling?._id,
+          billingInfoId: billingInfo?._id,
           eventFirebaseId: eventData?.id,
         };
 
@@ -208,7 +218,7 @@ export default function PriceComponent() {
             data
           );
 
-          console.log(res,'res');
+          console.log(res, "res");
 
           if (res?.data?.paymentGatewayLink)
             openPaymentPopup(res?.data?.paymentGatewayLink);
@@ -223,48 +233,23 @@ export default function PriceComponent() {
     }
   };
 
+  const formatPriceINR = (amount) => {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    minimumFractionDigits: 2,
+  }).format(amount);
+};
+
   return (
     <div className="flex-row-center payment-section">
       {/* left-part */}
-      <div className="flex-col-center left-form-section">
-        {/* left-title */}
-        <h1 className="heading-txt">Techkilla's AI Photobooth</h1>
-
-        {/* left-content */}
-        <div className="flex-col-center left-content">
-          <ul className="flex-col-center list-items-container">
-            {orderSummaryItems?.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-
-          <ul className="flex-col-center features">
-            <li>100% secure payment encryption</li>
-            <li>Instant activation</li>
-            <li>24/7 technical service</li>
-          </ul>
-
-          {/* left-icons-container */}
-          <div className="flex-row-center left-icons-container">
-            {paymentImages.map((image, index) => (
-              <div key={index} className="payment-icon">
-                <Image
-                  src={image}
-                  width={150}
-                  height={150}
-                  alt={`Payment method ${index + 1}`}
-                  className={index === 4 ? "paypal-icon" : "payment-icon"}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <LeftPriceContainer orderSummaryItems={orderSummaryItems}/>
 
       {/* right-part */}
       {isForm ? (
         <div className="flex-col-center right-section">
-          <BillingInfoForm
+          <BillingInfoComponent
             setCurrentBilling={setCurrentBilling}
             currentBilling={currentBilling}
             userBillingInfo={userBillingInfo}
@@ -275,124 +260,18 @@ export default function PriceComponent() {
             setIsShowOldBillingInfo={setIsShowOldBillingInfo}
             userDataSelector={userDataSelector}
             setIsGetBillingData={setIsGetBillingData}
+            fareSummary={fareSummary}
+            handleConfirmAndPay={handleConfirmAndPay}
           />
         </div>
       ) : (
-        <div className="flex-col-center right-section">
-          <div className="flex-col-center payment-method">
-            <p className="right-heading-txt">Payment method</p>
-            <div className="flex-col-center payment-methods-container">
-              {paymentMethods.map((method, index) => (
-                <div
-                  key={index}
-                  onClick={() => handlePaymentMethodSelect(method.id)}
-                  className="flex-row-center payment-method-item"
-                >
-                  <input
-                    type="radio"
-                    name="payment-method"
-                    value={method.id}
-                    checked={selectedMethod === method.id}
-                  />
-
-                  <label className="flex-row-center payment-label">
-                    <p className="labelTxt">{method.label}</p>
-
-                    <div className="flex-row-center payment-icons-container">
-                      {method.images.map((image, imgIndex) => (
-                        <div
-                          key={imgIndex}
-                          className="flex-row-center payment-icon"
-                          style={
-                            isMobileView && imgIndex === 1
-                              ? { display: "none" }
-                              : {}
-                          }
-                        >
-                          <Image
-                            src={image}
-                            alt={`${method.label}-icon`}
-                            className={
-                              method.id === "paypal"
-                                ? "paypal-icon"
-                                : "payment-icon"
-                            }
-                            width={150}
-                            height={150}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </label>
-                </div>
-              ))}
-            </div>
-            <div className="flex-col-center bill-section">
-              <div className="flex-row-center total-bill-container borderBottom">
-                <p className="totalTxt">Subtotal</p>
-                <p className="totalTxt">{fareSummary.baseFare}</p>
-              </div>
-              <div className="flex-row-center total-bill-container ">
-                <p className="totalCostTxt">Total Cost</p>
-                <p className="totalCostTxt">{fareSummary.totalFare} </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex-col-center rightBottomContainer">
-            <button className="confirm-btn" onClick={handleConfirmAndPay}>
-              Confirm and pay
-            </button>
-            <p className="confirm-pay-section">
-              By clicking "Confirm and pay" you agree to our &nbsp;
-              <Link
-                target="_blank"
-                href="https://snapshawt.com/terms-conditions"
-                className="terms-of-use"
-              >
-                Terms and Conditions
-              </Link>
-            </p>
-            <ul className="flex-col-center features">
-              <li>100% secure payment encryption</li>
-              <li>Instant activation</li>
-              <li>24/7 technical service</li>
-            </ul>
-
-            {/* left-icons-container */}
-            <div className="flex-row-center left-icons-container">
-              {paymentImages.map((image, index) => (
-                <div key={index} className="payment-icon">
-                  <Image
-                    src={image}
-                    width={150}
-                    height={150}
-                    alt={`Payment method ${index + 1}`}
-                    className={index === 4 ? "paypal-icon" : "payment-icon"}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <RightPriceContainer 
+          fareSummary={fareSummary} 
+          selectedMethod={selectedMethod} 
+          isMobileView={isMobileView} 
+          setIsForm={setIsForm}
+          />
       )}
-
-      {/* fare summary*/}
-      <div className="flex-col-center fareSummaryContainer">
-        <h1 className="summary-heading-txt">Fare Summary</h1>
-        <div className="flex-col-center fareSummary">
-          <p className="flex-row-center fareTxt">
-            <span>Base Fare</span>
-            <strong>₹{fareSummary.baseFare}</strong>
-          </p>
-          <p className="flex-row-center fareTxt">
-            <span>Taxes (18% GST)</span> <strong>₹{fareSummary.gstFare}</strong>
-          </p>
-          <p className="flex-row-center totalFareTxt">
-            <span>Grand Total</span> <strong>₹{fareSummary.totalFare}</strong>
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
