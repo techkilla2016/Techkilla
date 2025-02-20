@@ -5,11 +5,12 @@ import Link from "next/link";
 import { MdOutlineModeEdit, MdDeleteOutline } from "react-icons/md";
 import { PiRocketLaunch } from "react-icons/pi";
 import { FaRegEye } from "react-icons/fa";
-import { BsPlusSquare } from "react-icons/bs";
+import { IoAddCircleOutline } from "react-icons/io5";
 import { db, storage } from "@/firebase-config";
 import { ref as storageRef, deleteObject } from "firebase/storage";
 import { collection, deleteDoc, doc } from "firebase/firestore";
 import DeletePopup from "./deletePopup";
+
 import EventPreviewPopup from "../../../components/events/allEvents/eventPreviewPopup";
 import { toast } from "react-toastify";
 
@@ -62,7 +63,7 @@ export default function AllEvents({ data }) {
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
- 
+
   const confirmDelete = async () => {
     if (!eventToDelete) return;
 
@@ -83,12 +84,14 @@ export default function AllEvents({ data }) {
       console.log("Event and logo deleted successfully.");
 
       // for reset pagination for last page
-      const updateData = data.filter((item)=>item.id!==eventToDelete)
-      const totalPagesAfterDeletion = Math.ceil(updateData.length/itemsPerPage);
-      if(currentPage>totalPagesAfterDeletion){
+      const updateData = data.filter((item) => item.id !== eventToDelete);
+      const totalPagesAfterDeletion = Math.ceil(
+        updateData.length / itemsPerPage
+      );
+      if (currentPage > totalPagesAfterDeletion) {
         setCurrentPage(totalPagesAfterDeletion);
-      };
-      
+      }
+
       setShowConfirmDelete(false);
       setLoading(false);
     } catch (err) {
@@ -117,8 +120,9 @@ export default function AllEvents({ data }) {
 
   return (
     <div className="flex-col-center AllEvents">
-      <p className="flex-row-center tableHead">Recent Events</p>
+      <p className="flex-row-center tableHead"></p>
       <div className="flex-row-center searchContainer">
+        <p className="filterTxt">Filters</p>
         <div className="flex-row-center filterContainer">
           <div className="flex-row-center firstFilter">
             <label className="filter-label">
@@ -131,7 +135,7 @@ export default function AllEvents({ data }) {
                 onBlur={() => setInputFocus(null)}
                 onChange={(e) => {
                   setEventName(e.target.value);
-                  setCurrentPage(1)
+                  setCurrentPage(1);
                 }}
               />
             </label>
@@ -146,51 +150,52 @@ export default function AllEvents({ data }) {
                 onFocus={() => setInputFocus("number")}
                 onBlur={() => setInputFocus(null)}
                 value={eventNumber}
-                onChange={(e) => { 
-                  setEventNumber(e.target.value)
-                  setCurrentPage(1)
+                onChange={(e) => {
+                  setEventNumber(e.target.value);
+                  setCurrentPage(1);
                 }}
               />
             </label>
           </div>
         </div>
-        <div className="flex-row-center event-icon">
-          <BsPlusSquare
-            className="flex-row-center newEvent"
-            onClick={() => router.push("/events/new")}
-          />
-        </div>
-        {/* <Link href="/events/new" className="flex-row-center newEvent">
-          New Event
-        </Link> */}
       </div>
+      <div className="flex-row-center eventDetail">
+        <div className="flex-row-center countPart">
+          <p className="eventCount">Total events : 15</p>
+          <p className="eventCount">Active events : 2</p>
+        </div>
 
-      <div className="table-wrapper">
-        <table className="mainTable">
+        <div
+          className="flex-row-center event-icon"
+          onClick={() => router.push("/events/new")}
+        >
+          <IoAddCircleOutline className="newEvent" />
+          <span className="eventText">Create Event</span>
+        </div>
+      </div>
+      <div className="laptop-view">
+        <table>
           <thead>
-            <tr className="table-row">
-              <th className="table-header">Event No.</th>
-              <th className="table-header">Event Name</th>
-              <th className="table-header mobile-hide">Created</th>
-              <th className="table-header mobile-hide">Expires</th>
-              <th className="table-header mobile-hide">Product</th>
-              <th className="table-header">Actions</th>
+            <tr>
+              <th>Event No.</th>
+              <th>Event Name</th>
+              <th>Product</th>
+              <th>Created</th>
+              <th>Expires</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
+            {" "}
             {paginatedEvents.length > 0 ? (
               paginatedEvents.map((item) => (
-                <tr className="table-row" key={item.id}>
-                  <td className="table-data">#{item.eventNumber}</td>
-                  <td className="table-data">{item.eventName}</td>
-                  <td className="table-data mobile-hide">
-                    {formatDate(item.createdAt)}
-                  </td>
-                  <td className="table-data mobile-hide">
-                    {formatDate(item.expiresAt)}
-                  </td>
-                  <td className="table-data mobile-hide">{item.productName}</td>
-                  <td className="flex-row-center table-action">
+                <tr key={item.id}>
+                  <td>#{item.eventNumber}</td>
+                  <td>{item.eventName}</td>
+                  <td>{formatDate(item.createdAt)}</td>
+                  <td>{formatDate(item.expiresAt)}</td>
+                  <td>{item.productName}</td>
+                  <td className="flex-row-center">
                     <span
                       onClick={() => handlePreview(item)}
                       className="flex-row-center preview-button"
@@ -220,13 +225,42 @@ export default function AllEvents({ data }) {
                 </tr>
               ))
             ) : (
-              <tr className="table-row">
+              <tr>
                 No Data Found by{" "}
                 {inputFocus == "name" ? "Event name" : "Event number"}
               </tr>
             )}
           </tbody>
         </table>
+      </div>
+      <div className="flex-col-center card-container">
+        {paginatedEvents.map((item) => (
+          <div key={item.id} className="event-card">
+            <h3>{item.eventName}</h3>
+            <p>
+              <strong>Event No:</strong> #{item.eventNumber}
+            </p>
+            <p>
+              <strong>Product:</strong> {item.productName}
+            </p>
+            <p>
+              <strong>Created:</strong> {formatDate(item.createdAt)}
+            </p>
+            <p>
+              <strong>Expires:</strong> {formatDate(item.expiresAt)}
+            </p>
+            <div className="card-actions">
+              <FaRegEye onClick={() => setSelectedEvent(item)} />
+              <Link href={`/events/pricing?id=${item.id}`}>
+                <PiRocketLaunch />
+              </Link>
+              <Link href={`/events/edit?event=${item.eventNumber}`}>
+                <MdOutlineModeEdit />
+              </Link>
+              <MdDeleteOutline onClick={() => setEventToDelete(item.id)} />
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Pagination Controls */}

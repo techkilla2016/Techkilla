@@ -10,7 +10,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .formContainer {
     width: 100%;
     height: 100%;
@@ -46,6 +46,15 @@
       width: 100%;
       align-items: flex-start;
       // border: 1px solid #369124;
+      .additionText {
+        // border: 1px solid #369124;
+        // padding-top: 0.8vw;
+        padding-left: 0.2vw;
+        font-size: 1vw;
+        font-weight: 500;
+        color: rgb(71, 148, 224);
+        align-items: flex-start;
+      }
       .optionClass {
         padding: 0.5rem;
         font-size: 1rem;
@@ -398,7 +407,13 @@
       width: 100%;
       .labelling {
         font-size: 3.2svw;
-
+        .additionText {
+          // border: 1px solid #369124;
+          // padding-top: 0.8vw;
+          padding-left: 0.5vw;
+          font-size: 3.1svw;
+          font-weight: 500;
+        }
         // border: 1px solid #369124;
         .optionClass {
           padding: 0.5rem;
@@ -609,6 +624,13 @@
         width: 100%;
 
         // border: 1px solid #369124;
+        .additionText {
+          // border: 1px solid #369124;
+          padding-top: 1vw;
+          padding-left: 0.5vw;
+          font-size: 3.6vw;
+          font-weight: 500;
+        }
         .optionClass {
           padding: 0.8svw;
           // border: 1px solid #369124;
