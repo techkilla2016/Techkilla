@@ -128,8 +128,10 @@ export default function PriceComponent() {
   useEffect(() => {
     const getBillingData = async () => {
       try {
+        console.log("api is calling", process.env.NEXT_PUBLIC_SERVER_BASE_URL);
+
         let res = await axios.get(
-          `http://localhost:8000/billing-info/${userDataSelector?.uid}`
+          `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-billing-info/${userDataSelector?.uid}`
         );
         setUserBillingInfo(res?.data.billingInfo);
         setCurrentBilling(res?.data.billingInfo[0]);
@@ -214,7 +216,7 @@ export default function PriceComponent() {
 
         try {
           const res = await axios.post(
-            "http://localhost:8000/techkilla-payment/create-order",
+            `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-payment/create-order`,
             data
           );
 
