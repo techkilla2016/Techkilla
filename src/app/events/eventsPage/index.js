@@ -44,7 +44,7 @@ export default function EventsPage() {
     return () => unsubscribe();
   }, []);
 
-  console.log(userData);
+  // console.log(userData);
 
   // run 2nd api => 2s
   // get all events
@@ -65,7 +65,7 @@ export default function EventsPage() {
 
         setAllEventsData(alldata);
         dispatch(AllEventsReducer(alldata));
-        console.log(alldata);
+        // console.log(alldata);
         setLoading(false);
       });
       return () => unsubscribe();

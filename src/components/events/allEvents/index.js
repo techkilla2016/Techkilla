@@ -169,8 +169,10 @@ export default function AllEvents({ data }) {
       </div>
       <div className="flex-row-center eventDetail">
         <div className="flex-row-center countPart">
-          <p className="eventCount">Total events : 15</p>
-          <p className="eventCount">Active events : 2</p>
+          <p className="eventCount">Total events : {data.length}</p>
+          <p className="eventCount">
+            Active events: {data.filter((event) => event.expiresAt).length}
+          </p>
         </div>
 
         <div
@@ -199,8 +201,15 @@ export default function AllEvents({ data }) {
               paginatedEvents.map((item) => (
                 <tr key={item.id}>
                   <td>#{item.eventNumber}</td>
-                  <td>{item.eventName}</td>
-                  <td>{item.productName}</td>
+                  <td>
+                    {item.eventName.charAt(0).toUpperCase() +
+                      item.eventName.slice(1)}
+                  </td>
+                  <td>
+                    {item.productName.charAt(0).toUpperCase() +
+                      item.productName.slice(1)}
+                  </td>
+
                   <td>{formatDate(item.createdAt)}</td>
                   <td>{formatDate(item.expiresAt)}</td>
 
