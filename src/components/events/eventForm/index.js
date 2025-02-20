@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { db, storage } from "@/firebase-config";
 import crypto from "crypto";
 import Loader from "./../loader/index";
+import Link from "next/link";
 
 import { resizeImgDimension } from "@/utils/reduceImgDimension";
 import { reduceImgSize } from "@/utils/reduceImgSize";
@@ -52,38 +53,18 @@ const data = {
   eventPackages: [
     {
       duration: 1,
-      credits: 500,
+      credits: 200,
       price: 7000,
     },
     {
       duration: 2,
-      credits: 1000,
+      credits: 500,
       price: 13000,
     },
     {
       duration: 3,
-      credits: 1500,
+      credits: 700,
       price: 20000,
-    },
-    {
-      duration: 4,
-      credits: 2000,
-      price: 26000,
-    },
-    {
-      duration: 5,
-      credits: 2500,
-      price: 33000,
-    },
-    {
-      duration: 6,
-      credits: 3000,
-      price: 40000,
-    },
-    {
-      duration: 7,
-      credits: 3500,
-      price: 45000,
     },
   ],
   numberOfDevices: [1, 2, 3, 4],
@@ -618,6 +599,23 @@ export default function EventForm({ action }) {
                     </option>
                   ))}
                 </select>
+                <Link
+                  href="https://wa.me/917827362702"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="additionText"
+                >
+                  For additional credits & validity, contact to our support
+                  team.
+                  {/* <p className="text1">
+                    <span>Additional Credits : </span>Per 100 credits, the cost
+                    is ₹3,000.
+                  </p> */}
+                  {/* <p className="text1">
+                    For additional credits & validity Contact to our support
+                    team
+                  </p> */}
+                </Link>
               </label>
             </div>
 
