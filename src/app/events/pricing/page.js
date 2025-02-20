@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../../../components/header";
-import Price from "./pricingPage";
+import PricingPage from "./pricingPage";
+
 export default function page() {
   return (
     <>
       <Header />
-      <Price />
+      <PricingPage />
     </>
   );
 }

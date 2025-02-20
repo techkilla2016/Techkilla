@@ -2,13 +2,15 @@ import React from "react";
 import "./rightPriceContainer.scss";
 import Image from "next/image";
 import Link from "next/link";
-import PaymentIconContainer from "../paymentIconContainer/index";
+import PaymentIcons from "../paymentIcons";
 
 export default function RightPriceContainer({
   fareSummary,
   selectedMethod,
   isMobileView,
-  setIsForm
+  setIsForm,
+  handlePaymentMethodSelect,
+  formatPriceINR,
 }) {
   const paymentMethods = [
     {
@@ -36,19 +38,21 @@ export default function RightPriceContainer({
         <div className="flex-col-center fareSummary">
           <p className="flex-row-center fareTxt">
             <span>Base Fare</span>
-            <strong>₹{fareSummary.baseFare}</strong>
+            <strong>{formatPriceINR(fareSummary.baseFare)}</strong>
           </p>
           <p className="flex-row-center fareTxt">
-            <span>Taxes (18% GST)</span> <strong>₹{fareSummary.gstFare}</strong>
+            <span>Taxes (18% GST)</span>{" "}
+            <strong>{formatPriceINR(fareSummary.gstFare)}</strong>
           </p>
           <p className="flex-row-center totalFareTxt">
-            <span>Grand Total</span> <strong>₹{fareSummary.totalFare}</strong>
+            <span>Grand Total</span>{" "}
+            <strong>{formatPriceINR(fareSummary.totalFare)}</strong>
           </p>
         </div>
       </div>
 
+      {/* payment method */}
       <div className="flex-col-center payment-method">
-        {/* <p className="right-heading-txt">Payment method</p> */}
         <div className="flex-col-center payment-methods-container">
           {paymentMethods.map((method, index) => (
             <div
@@ -95,25 +99,15 @@ export default function RightPriceContainer({
             </div>
           ))}
         </div>
-        {/* <div className="flex-col-center bill-section">
-              <div className="flex-row-center total-bill-container borderBottom">
-                <p className="totalTxt">Subtotal</p>
-                <p className="totalTxt">{fareSummary.baseFare}</p>
-              </div>
-              <div className="flex-row-center total-bill-container ">
-                <p className="totalCostTxt">Total Cost</p>
-                <p className="totalCostTxt">{fareSummary.totalFare} </p>
-              </div>
-            </div> */}
       </div>
 
       <div className="flex-col-center rightBottomContainer">
         <button className="confirm-btn" onClick={() => setIsForm(true)}>
-          {/* <button className="confirm-btn" onClick={handleConfirmAndPay}> */}
           PROCEED TO PAY
         </button>
+
         <p className="confirm-pay-section">
-          By clicking "Confirm and pay" you agree to our &nbsp;
+          By clicking <strong>PROCEED TO PAY</strong> you agree to our &nbsp;
           <Link
             target="_blank"
             href="https://snapshawt.com/terms-conditions"
@@ -122,14 +116,14 @@ export default function RightPriceContainer({
             Terms and Conditions
           </Link>
         </p>
+
         <ul className="flex-col-center features">
           <li>100% secure payment encryption</li>
           <li>Instant activation</li>
           <li>24/7 technical service</li>
         </ul>
 
-        {/* left-icons-container */}
-        <PaymentIconContainer />
+        <PaymentIcons />
       </div>
     </div>
   );

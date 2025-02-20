@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 
 import PriceComponent from "../../../../components/events/price";
 
-export default function Price() {
+export default function PricingPage() {
   const priceRef = useRef();
 
   return (

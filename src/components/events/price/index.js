@@ -97,7 +97,7 @@ export default function PriceComponent() {
 
   // mobile view
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
-  console.log(isGetBillingData)
+  console.log(isGetBillingData);
   // fetch event data
   useEffect(() => {
     if (searchParams && allEventsSelector?.length > 0) {
@@ -185,9 +185,9 @@ export default function PriceComponent() {
     }
   }
 
-  useEffect(()=>{
-    console.log(currentBilling)
-  },[currentBilling])
+  useEffect(() => {
+    console.log(currentBilling);
+  }, [currentBilling]);
 
   // handle confirm and pay
   const handleConfirmAndPay = async (billing) => {
@@ -199,7 +199,6 @@ export default function PriceComponent() {
       "handle confirm and pay"
     );
     const billingInfo = currentBilling?._id ? currentBilling : billing;
-
 
     if (!userDataSelector?.uid || !billingInfo?._id || !eventData?.id) {
       return router.push("/events");
@@ -236,17 +235,16 @@ export default function PriceComponent() {
   };
 
   const formatPriceINR = (amount) => {
-  return new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    minimumFractionDigits: 2,
-  }).format(amount);
-};
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      minimumFractionDigits: 2,
+    }).format(amount);
+  };
 
   return (
-    <div className="flex-row-center payment-section">
-      {/* left-part */}
-      <LeftPriceContainer orderSummaryItems={orderSummaryItems}/>
+    <div className="flex-row-center Price">
+      <LeftPriceContainer orderSummaryItems={orderSummaryItems} />
 
       {/* right-part */}
       {isForm ? (
@@ -267,12 +265,14 @@ export default function PriceComponent() {
           />
         </div>
       ) : (
-        <RightPriceContainer 
-          fareSummary={fareSummary} 
-          selectedMethod={selectedMethod} 
-          isMobileView={isMobileView} 
+        <RightPriceContainer
+          fareSummary={fareSummary}
+          selectedMethod={selectedMethod}
+          isMobileView={isMobileView}
           setIsForm={setIsForm}
-          />
+          handlePaymentMethodSelect={handlePaymentMethodSelect}
+          formatPriceINR={formatPriceINR}
+        />
       )}
     </div>
   );

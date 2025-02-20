@@ -1,0 +1,18 @@
+.left-icons-container {
+  width: 100%;
+  gap: 1.2vw;
+  margin-top: 0.5vw;
+  .payment-icon {
+    width: 2.8vw;
+  }
+  .paypal-icon {
+    width: 4.3vw;
+  }
+}
+
+/* for tablet view and mobile view*/
+@media all and (max-width: 1024px) {
+  .left-icons-container {
+    display: none;
+  }
+}

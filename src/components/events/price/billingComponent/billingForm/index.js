@@ -12,19 +12,10 @@ export default function BillingForm({
   isFormUpdate,
   handleCancel,
   fareSummary,
-  setSelectedState
+  setSelectedState,
 }) {
-  const formatPriceINR = (amount) => {
-    return new Intl.NumberFormat("en-IN", {
-      style: "currency",
-      currency: "INR",
-      minimumFractionDigits: 0,
-    }).format(amount);
-  };
-
   return (
     <form className="flex-col-center billingForm" onSubmit={handleSubmit}>
-      {/* <div className="flex-col-center billing-form-Wrapper"></div> */}
       <div className="flex-col-center formContainer">
         <p className="billingHeading">Billing Info</p>
         <div className="flex-col-center formFieldBilling">
@@ -149,7 +140,6 @@ export default function BillingForm({
         </div>
 
         {/* gst bill details */}
-
         {formData.gst && (
           <>
             <div className="flex-col-center formFieldBilling">
@@ -202,16 +192,22 @@ export default function BillingForm({
             </button>
           </>
         ) : (
-            <>
-            <button type="button" className="buttonBilling cancel-btn" onClick={()=>handleCancel()}>Cancel</button>
-          <button
-            className="buttonBilling update-btn"
-            type="submit"
-            // style={{ marginTop: "1rem" }}
+          <>
+            <button
+              type="button"
+              className="buttonBilling cancel-btn"
+              onClick={() => handleCancel()}
             >
-            {"Add"}
-          </button>
-        </>
+              Cancel
+            </button>
+            <button
+              className="buttonBilling update-btn"
+              type="submit"
+              // style={{ marginTop: "1rem" }}
+            >
+              {"Add"}
+            </button>
+          </>
         )}
       </div>
     </form>

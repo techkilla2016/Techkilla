@@ -4,8 +4,6 @@ import "./billingForm.scss";
 import { toast } from "react-toastify";
 import countriesData from "@/data/countries.json";
 import axios from "axios";
-import { MdEdit } from "react-icons/md";
-import { MdDelete } from "react-icons/md";
 import { useRouter } from "next/navigation";
 import RecentBillingInfo from "./recentBillingInfo/index";
 import BillingForm from "./billingForm/index";
@@ -22,7 +20,7 @@ export default function billingComponent({
   userDataSelector,
   setIsGetBillingData,
   fareSummary,
-  handleConfirmAndPay
+  handleConfirmAndPay,
 }) {
   const router = useRouter();
   const [states, setStates] = useState([]);
@@ -120,7 +118,7 @@ export default function billingComponent({
           `http://localhost:8000/billing-info/create`,
           data
         );
-        console.log(res)
+        console.log(res);
         toast.success("New billing details added successfully!");
         setCurrentBilling(res.data.billingInfo);
         // handleConfirmAndPay(res.data.billingInfo);
@@ -131,7 +129,8 @@ export default function billingComponent({
     }
     console.log("Submitted Data:", formData);
     setIsGetBillingData((prev) => !prev);
-    setFormData({ name: "",
+    setFormData({
+      name: "",
       contact: "",
       email: "",
       pincode: "",
@@ -139,10 +138,11 @@ export default function billingComponent({
       isGstRequired: false,
       gstCompanyName: "",
       gstNumber: "",
-      gst: false,});
-    setSelectedCountry("")
-    setSelectedState("")
-    setStates([])
+      gst: false,
+    });
+    setSelectedCountry("");
+    setSelectedState("");
+    setStates([]);
   };
 
   const handleDelete = async (id) => {
@@ -198,9 +198,10 @@ export default function billingComponent({
     }).format(amount);
   };
 
-  const handleCancel=()=>{
+  const handleCancel = () => {
     setIsFormUpdate(false);
-    setFormData({ name: "",
+    setFormData({
+      name: "",
       contact: "",
       email: "",
       pincode: "",
@@ -208,13 +209,14 @@ export default function billingComponent({
       isGstRequired: false,
       gstCompanyName: "",
       gstNumber: "",
-      gst: false,});
-      if(userBillingInfo?.length>0){
-        setIsShowOldBillingInfo(true)
-      }else{
-        setIsForm(false)
-      }
-  }
+      gst: false,
+    });
+    if (userBillingInfo?.length > 0) {
+      setIsShowOldBillingInfo(true);
+    } else {
+      setIsForm(false);
+    }
+  };
 
   return (
     <div className="flex-col-center billingFormContainer">
@@ -222,8 +224,8 @@ export default function billingComponent({
       {isShowOldBillingInfo &&
       userBillingInfo &&
       userBillingInfo?.length > 0 ? (
-        <RecentBillingInfo 
-          userBillingInfo={userBillingInfo} 
+        <RecentBillingInfo
+          userBillingInfo={userBillingInfo}
           currentBilling={currentBilling}
           fareSummary={fareSummary}
           handleUpdateBillingInfo={handleUpdateBillingInfo}
@@ -231,10 +233,10 @@ export default function billingComponent({
           handleDelete={handleDelete}
           handleAddressChange={handleAddressChange}
           handleConfirmAndPay={handleConfirmAndPay}
-          />
+        />
       ) : (
-        <BillingForm 
-          handleSubmit={handleSubmit} 
+        <BillingForm
+          handleSubmit={handleSubmit}
           formData={formData}
           handleChange={handleChange}
           selectedCountry={selectedCountry}
@@ -246,7 +248,7 @@ export default function billingComponent({
           handleCancel={handleCancel}
           fareSummary={fareSummary}
           setSelectedState={setSelectedState}
-          />
+        />
       )}
     </div>
   );

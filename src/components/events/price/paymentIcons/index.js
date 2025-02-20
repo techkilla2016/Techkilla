@@ -1,7 +1,8 @@
 import React from "react";
+import "./payment-icons.scss";
 import Image from "next/image";
 
-export default function PaymentIconContainer() {
+export default function PaymentIcons() {
   const paymentImages = [
     "/events/price-page/icons-01.png",
     "/events/price-page/icons-03.png",

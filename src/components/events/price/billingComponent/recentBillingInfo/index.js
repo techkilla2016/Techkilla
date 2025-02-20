@@ -23,7 +23,7 @@ export default function RecentBillingInfo({
   return (
     <div className="flex-col-center recentBillingInfoContainer">
       <div className="flex-col-center recentBillingCardWrapper">
-        <p className="billingHeading">Recent Billing Information</p>
+        <p className="billingHeading">Billing Info</p>
         <div className="flex-col-center recentBillingBox">
           {userBillingInfo.map((item) => {
             return (
@@ -46,7 +46,9 @@ export default function RecentBillingInfo({
                   onClick={() => handleAddressChange(item)}
                 >
                   <p className="boxTitleBillingCard">{item.name}</p>
-                  <p className="boxBillingAddressName">{item.address}</p>
+                  <p className="boxBillingAddressName">
+                    {item.address.slice(0, 30)}...
+                  </p>
                 </div>
                 <div className="flex-row-center actionIconContainer">
                   <MdEdit
@@ -81,13 +83,9 @@ export default function RecentBillingInfo({
             </button> */}
         <p className="priceSummary">
           {formatPriceINR(fareSummary.baseFare)}
-          <br /> +{formatPriceINR(fareSummary.gstFare)} taxes
+          <br /> + {formatPriceINR(fareSummary.gstFare)} taxes
         </p>
-        <button
-          className="buttonBilling"
-          onClick={() => handleConfirmAndPay()}
-          // style={{ marginTop: "1rem" }}
-        >
+        <button className="buttonBilling" onClick={() => handleConfirmAndPay()}>
           {"PAY NOW"}
         </button>
       </div>
