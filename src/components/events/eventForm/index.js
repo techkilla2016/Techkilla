@@ -279,6 +279,7 @@ export default function EventForm({ action }) {
             createdAt: Timestamp.fromDate(new Date()),
             eventNumber: updatedCounter,
             password: pass,
+            status:"pending"
           });
 
           return updatedCounter;
