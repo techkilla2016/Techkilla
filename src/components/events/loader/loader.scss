@@ -60,3 +60,26 @@
     opacity: 1;
   }
 }
+@media (max-width: 1024px) {
+  .loaderEvent {
+    span {
+      width: 3vw;
+      height: 3vw;
+      background: linear-gradient(45deg, #e7d12f, #e4d33b);
+      border-radius: 50%;
+      animation: bounce 1.2s infinite ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .loaderEvent {
+    span {
+      width: 5vw;
+      height: 5vw;
+      background: linear-gradient(45deg, #e7d12f, #e4d33b);
+      border-radius: 50%;
+      animation: bounce 1.2s infinite ease-in-out;
+    }
+  }
+}
