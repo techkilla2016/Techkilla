@@ -70,8 +70,6 @@ export default function AllEvents({ data }) {
 
     try {
       setLoading(true);
-      console.log("deleted", eventToDelete);
-
       const collectionRef = collection(db, "techkilla_events");
       const docRef = doc(collectionRef, eventToDelete);
       await deleteDoc(docRef);
@@ -81,8 +79,6 @@ export default function AllEvents({ data }) {
         `techkilla_events_logos/${eventToDelete}`
       );
       await deleteObject(imageRef);
-
-      console.log("Event and logo deleted successfully.");
 
       // for reset pagination for last page
       const updateData = data.filter((item) => item.id !== eventToDelete);
@@ -134,15 +130,13 @@ export default function AllEvents({ data }) {
     let eventMillis = item.hasOwnProperty("expiresAt")
       ? item.expiresAt.seconds * 1000 + item.nanoseconds / 1_000_000
       : 0;
-    console.log("generated url", item);
+
     if (!item.hasOwnProperty("expiresAt")) {
-      console.log("goes inside has own property");
       return `/events/pricing?id=${item.id}`;
     }
 
     // Expired → Goes to Pricing
     if (eventMillis < Date.now()) {
-      console.log("expired", eventMillis);
       return `/events/pricing?id=${item.id}`;
     }
 

@@ -8,14 +8,10 @@ import { FcGoogle } from "react-icons/fc";
 export default function Login({ userData, setUserData }) {
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
-
-  console.log(userData);
-
   // handle login
   const handleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, googleProvider);
-      console.log("User data stored in Firestore.", result);
     } catch (error) {
       console.error(error.message);
     }

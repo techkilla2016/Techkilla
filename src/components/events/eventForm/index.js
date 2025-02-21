@@ -116,6 +116,8 @@ export default function EventForm({ action }) {
   const [selectedTemplates, setSelectedTemplates] = useState();
   const [createdDocumentId, setCreatedDocumentId] = useState(null);
 
+  const shareRef = useRef(null);
+
   useEffect(() => {
     if (formData.templates.length > 0) {
       let data = allTemplatesData?.filter((template) =>
@@ -155,7 +157,6 @@ export default function EventForm({ action }) {
             ...doc.data(),
             id: doc.id,
           }));
-          console.log(data);
           setAllCategories(data);
         });
       } catch (err) {
@@ -188,8 +189,6 @@ export default function EventForm({ action }) {
       ? Number(value)
       : value;
 
-    console.log("onchange calling");
-
     // convert string to object
     if (name === "eventPackage") {
       const selectedPackage = data.eventPackages.find(
@@ -201,8 +200,6 @@ export default function EventForm({ action }) {
 
     setFormData({ ...formData, [name]: updatedValue });
   };
-
-  console.log(formData);
 
   const handleCheckboxChange = (e) => {
     const { value, checked } = e.target;
@@ -232,7 +229,6 @@ export default function EventForm({ action }) {
   // handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("form submitting", formData);
 
     // create event
     const createEvent = async () => {
@@ -298,8 +294,6 @@ export default function EventForm({ action }) {
 
           // update the Firestore document with the logo URL
           await updateDoc(newDocRef, { logo: logoURL });
-
-          console.log("Document updated with logo URL");
         }
 
         setIsPopupOpen(true);
@@ -354,12 +348,8 @@ export default function EventForm({ action }) {
           const snapshot = await uploadBytes(logoRef, formData.logo);
           const logoURL = await getDownloadURL(snapshot.ref);
 
-          console.log("Logo updated at URL: ", logoURL);
-
           // update the Firestore document with the logo URL
           await updateDoc(docRef, { logo: logoURL });
-
-          console.log("Document updated with logo URL");
         }
 
         // alert("Event updated successfully!");
@@ -393,6 +383,10 @@ export default function EventForm({ action }) {
         toast.error("Please Select Background Image",toastOptions)
         return;
       }
+      if(formData.shareOptions.length<=0){
+        shareRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+        return toast.error("Please Select Atleast one share Option",toastOptions)
+      }
 
     if (action === "add") {
       await createEvent();
@@ -418,8 +412,6 @@ export default function EventForm({ action }) {
   // Handle file select and drop
   const handleFileSelectAndDrop = (event, type) => {
     event.preventDefault();
-
-    console.log(type);
 
     const file =
       type === "upload" ? event.target.files[0] : event.dataTransfer.files[0];
@@ -484,6 +476,8 @@ export default function EventForm({ action }) {
     return "N/A";
   };
 
+  console.log(formData);
+
   return (
     <div className="flex-col-center EventNew">
       <Header />
@@ -502,7 +496,7 @@ export default function EventForm({ action }) {
             className="flex-col-center formContainer"
           >
             {/* show expires date */}
-            {action == "edit" && (
+            {action == "edit" && formData?.status!=="pending" && (
               <div className="flex-col-center valueField">
                 <label className="labelExpire" style={{ color: "red" }}>
                   {formData?.expiresAt && isExpired(formData.expiresAt)
@@ -550,7 +544,7 @@ export default function EventForm({ action }) {
                   </option>
                   {data?.productsArr.map((product) => (
                     <option key={product} value={product}>
-                      {product.replace(/-/g, " ").charAt(0).toUpperCase() +
+                      Ai {product.replace(/-/g, " ").charAt(0).toUpperCase() +
                         product.replace(/-/g, " ").slice(1)}
                     </option>
                   ))}
@@ -724,7 +718,7 @@ export default function EventForm({ action }) {
               action={action}
             />
             {/* share options */}
-            <div className="flex-col-center shareOption">
+            <div className="flex-col-center shareOption" ref={shareRef}>
               <label className="flex-row-center shareHead">
                 Share Options<span className="requiredIcon">*</span>
               </label>

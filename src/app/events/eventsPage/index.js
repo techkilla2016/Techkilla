@@ -50,7 +50,6 @@ export default function EventsPage() {
   // get all events
   useEffect(() => {
     if (userData) {
-      console.log("trying to get all events");
       setLoading(true);
 
       const collectionRef = collection(db, "techkilla_events");

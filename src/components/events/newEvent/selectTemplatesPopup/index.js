@@ -40,54 +40,27 @@ export default function SelectTemplatesPopup({
     selectedTemplatesFromProps || []
   );
 
-  // Fetch templates data when the component mounts
-  // useEffect(() => {
-  //   const fetchTemplates = async () => {
-  //     try {
-  //       const [allTemplates, templateUpdateStatus] = await getAllTemplates();
-  //       setAllTemplatesData(allTemplates);
-  //       setTemplateUpdateStatus(templateUpdateStatus);
-  //       setTimeout(() => {
-  //         setIsAllTemplatesLoading(false);
-  //       }, [1000]);
-  //     } catch (error) {
-  //       console.error("Error fetching templates:", error);
-  //       setIsAllTemplatesLoading(true);
-  //     }
-  //   };
-
-  //   fetchTemplates();
-  // }, []);
-
   useEffect(() => {
     if (action == "edit") {
       setSelectedTemplates(selectedTemplatesFromProps);
-      console.log("updates handled in edit states");
     }
   }, [selectedTemplatesFromProps]);
 
   // Extract categories from the fetched templates and set default category
   useEffect(() => {
     if (allTemplatesData) {
-      // const categories = allTemplatesData.map((item)=>item.category);
-      // setAllCategories(categories);
-      console.log('got all templates')
       // Automatically select the first category as the default
       if (allCategories.length > 0) {
         setSelectedCategory(allCategories[0]);
-        console.log('got all category')
       }
     }
   }, [allTemplatesData,allCategories]);
-  useEffect(()=>{
-    console.log("got selected category")
-  },[selectedCategory])
+  
 
   // Update the filtered templates whenever the selected category changes
   useEffect(() => {
     if (allTemplatesData) {
       const templates = allTemplatesData;
-      console.log(selectedCategory, "category", templates);
       const filteredTemplates = templates.filter(
         (template) => template.category === selectedCategory.name
       );
