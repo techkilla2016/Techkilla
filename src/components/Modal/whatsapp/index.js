@@ -47,9 +47,9 @@ const WhatsappModal = () => {
           {/* wts-close */}
           {/* wts-name */}
           {/* wts-headline */}
-          <div className={styles.header}>
+          <div className={styles.headerType}>
             <div className={styles.leftHeader}>
-              <div className={`wts-profile-icon ${styles.logoContainer}`}>
+              <div className={`wts-profile-icon ${styles.logoContainerone}`}>
                 <Image
                   src="/logo/robo.jpg"
                   alt="techkilla"
@@ -58,19 +58,19 @@ const WhatsappModal = () => {
                 />
               </div>
               <div className={styles.contentContainer}>
-                <p className={styles.title}>Techkilla</p>
-                <p className={styles.description}>
+                <p className={styles.titletype}>Techkilla</p>
+                <p className={styles.descriptiontype}>
                   Advanced Technology Solutions
                 </p>
               </div>
             </div>
-            <button className={styles.close} onClick={handleClose}>
+            <button className={styles.closeIcon} onClick={handleClose}>
               {/* <AiOutlineCloseCircle /> */}
               <Image src={closeBtn} alt="close btn" width={20} height={20} />
             </button>
           </div>
 
-          <div className={`wts-body ${styles.main}`}>
+          <div className={`wts-body ${styles.maintype}`}>
             <div className={styles.comingMsg}>
               <img
                 src="/assets/home/whatsapp-modal/comingMsg.png"
