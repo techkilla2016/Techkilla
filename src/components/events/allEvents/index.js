@@ -122,6 +122,34 @@ export default function AllEvents({ data }) {
     setEventName("");
     setEventNumber("");
   };
+
+  function isEventExpired(timestamp) {
+    const eventTimeMillis =
+      timestamp.seconds * 1000 + timestamp.nanoseconds / 1_000_000;
+    return Date.now() > eventTimeMillis;
+  }
+
+  const generateUrl = (item) => {
+    // No expiresAt → Goes to Pricing
+    let eventMillis = item.hasOwnProperty("expiresAt")
+      ? item.expiresAt.seconds * 1000 + item.nanoseconds / 1_000_000
+      : 0;
+    console.log("generated url", item);
+    if (!item.hasOwnProperty("expiresAt")) {
+      console.log("goes inside has own property");
+      return `/events/pricing?id=${item.id}`;
+    }
+
+    // Expired → Goes to Pricing
+    if (eventMillis < Date.now()) {
+      console.log("expired", eventMillis);
+      return `/events/pricing?id=${item.id}`;
+    }
+
+    // Active → Goes to External Site
+    return "https://techkilla-events-sass.vercel.app/";
+  };
+
   const capitalizeWords = (str) => {
     if (!str) return "";
     return str
@@ -285,8 +313,9 @@ export default function AllEvents({ data }) {
                 <FaRegEye />
               </span>
               <Link
-                href={`/events/pricing?id=${item.id}`}
+                href={generateUrl(item)}
                 className="flex-row-center launch-button"
+                target={item.expiresAt && isEventExpired ? "_blank" : "_self"}
               >
                 <PiRocketLaunch />
               </Link>
