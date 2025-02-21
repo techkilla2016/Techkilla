@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-import paymentSuccessImg from "@/../public/price-page/price-acknowledgement/payment-success.png";
-import paymentFailureImg from "@/../public/price-page/price-acknowledgement/payment-failure.png";
+import paymentSuccessImg from "../../../../../public/events/price-page/price-acknowledgement/payment-success.png";
+import paymentFailureImg from "../../../../../public/events/price-page/price-acknowledgement/payment-failure.png";
 import { allRoutes } from "@/data/allRoutes";
 
 export default function Acknowledgementpage() {
@@ -92,8 +92,7 @@ function PaymentAcknowledgementContent({ status, setStatus }) {
           <button
             className="btn1 goBackBtn"
             onClick={() => {
-              opener.location.href =
-                `https://snapshawt.com${allRoutes.faceSwap}`;
+              opener.location.href = `https://snapshawt.com${allRoutes.faceSwap}`;
               self.close();
             }}
           >
