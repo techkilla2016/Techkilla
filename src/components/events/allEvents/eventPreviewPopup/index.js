@@ -10,6 +10,7 @@ import { MdCancel } from "react-icons/md";
 import closeBtn from "@/../public/modals/upgrade-now/close-btn.png";
 
 export default function EventPreviewPopup({ eventData, onClose }) {
+  // console.log("status", eventData);
   const formatDate = (timestamp) => {
     if (timestamp && typeof timestamp.toDate === "function") {
       const date = timestamp.toDate();
@@ -52,6 +53,13 @@ export default function EventPreviewPopup({ eventData, onClose }) {
   }
 
   const { productName, eventName, eventNumber } = eventData;
+  const capitalizeWords = (str) => {
+    if (!str) return "";
+    return str
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
 
   return (
     <div className="flex-row-center modal-overlay">
@@ -117,7 +125,11 @@ export default function EventPreviewPopup({ eventData, onClose }) {
               </tr>
               <tr>
                 <td>Event Name</td>
-                <td>{eventData.eventName}</td>
+                <td>{capitalizeWords(eventData.eventName)}</td>
+              </tr>
+              <tr>
+                <td>Product</td>
+                <td>AI {capitalizeWords(eventData.productName)}</td>
               </tr>
               <tr>
                 <td>Event Number</td>
@@ -125,8 +137,17 @@ export default function EventPreviewPopup({ eventData, onClose }) {
               </tr>
               <tr>
                 <td>Password</td>
-                <td>{eventData.password}</td>
+                <td>
+                  {eventData.status === "pending" ? (
+                    <span style={{ color: "red" }}>
+                      (Payment is not completed)
+                    </span>
+                  ) : (
+                    eventData.password
+                  )}
+                </td>
               </tr>
+
               <tr>
                 <td>Created</td>
                 <td>{formatDate(eventData.createdAt)}</td>
@@ -134,10 +155,6 @@ export default function EventPreviewPopup({ eventData, onClose }) {
               <tr>
                 <td>Expires</td>
                 <td>{formatDate(eventData.expiresAt)}</td>
-              </tr>
-              <tr>
-                <td>Product</td>
-                <td>{eventData.productName}</td>
               </tr>
             </tbody>
           </table>
