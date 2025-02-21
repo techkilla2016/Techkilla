@@ -116,7 +116,7 @@
       border: 0.11vw solid #ccc;
       width: 100%;
       height: 86%;
-      gap: 0.8vw;
+      gap: 1vw;
       justify-content: flex-start;
       overflow-y: auto;
       background-color: #f1f1f1;
@@ -126,6 +126,7 @@
         width: 100%;
         gap: 0.1vw;
         align-items: flex-start;
+        position: relative;
         .labelBilling {
           font-size: 0.9vw;
           font-weight: 500;
@@ -145,6 +146,12 @@
         .checkLabel {
           font-weight: 600;
           gap: 1svh;
+        }
+        .errorMsg {
+          position: absolute;
+          bottom: -25%;
+          color: red;
+          font-size: 0.6vw;
         }
       }
     }
@@ -274,6 +281,10 @@
           .checkLabel {
             gap: 1svh;
           }
+          .errorMsg {
+            bottom: -22%;
+            font-size: 1.5vw;
+          }
         }
       }
       .btnContainer {
@@ -376,7 +387,7 @@
       width: 100%;
       gap: 5vw;
       .formContainer {
-        gap: 4vw;
+        gap: 4.2vw;
         .formFieldBilling {
           width: 100%;
           gap: 0.8vw;
@@ -392,6 +403,10 @@
           }
           .checkLabel {
             gap: 2svh;
+          }
+          .errorMsg {
+            bottom: -22%;
+            font-size: 2.7vw;
           }
         }
       }

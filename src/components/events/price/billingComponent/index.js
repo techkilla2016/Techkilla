@@ -27,6 +27,7 @@ export default function billingComponent({
   const [selectedCountry, setSelectedCountry] = useState("");
   const [selectedState, setSelectedState] = useState("");
   const [isFormUpdate, setIsFormUpdate] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   // for form field
   const handleChange = (e) => {
@@ -34,7 +35,9 @@ export default function billingComponent({
     if (name === "contact") {
       // Enforce exactly 10 digits
       if (value.length > 10) {
-        return;
+        setErrorMsg("Please enter a valid 10-digit mobile number");
+      } else {
+        setErrorMsg("");
       }
     }
 
@@ -62,9 +65,11 @@ export default function billingComponent({
       router.push("/events");
       return;
     }
-    if (formData.contact.length < 10) {
-      toast.warning("Please enter a valid 10-digit mobile number");
+    if (formData.contact.length < 10 || formData.contact.length > 10) {
+      setErrorMsg("Please enter a valid 10-digit mobile number");
       return;
+    } else {
+      setErrorMsg("");
     }
 
     if (!selectedCountry || !selectedState) {
@@ -167,7 +172,6 @@ export default function billingComponent({
       (c) => c.name === foundData?.country
     );
 
-    console.log(countryData, "found data based on id");
     setStates(countryData ? countryData.states : []);
     setSelectedState(foundData.state);
     setSelectedCountry(foundData.country);
@@ -218,9 +222,10 @@ export default function billingComponent({
     }
   };
 
+  console.log(errorMsg);
+
   return (
     <div className="flex-col-center billingFormContainer">
-      {/* <p className="billingHeading">Billing Info</p> */}
       {isShowOldBillingInfo &&
       userBillingInfo &&
       userBillingInfo?.length > 0 ? (
@@ -248,6 +253,7 @@ export default function billingComponent({
           handleCancel={handleCancel}
           fareSummary={fareSummary}
           setSelectedState={setSelectedState}
+          errorMsg={errorMsg}
         />
       )}
     </div>
