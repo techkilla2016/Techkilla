@@ -3,35 +3,52 @@
   margin-top: 5.2vw;
   padding: 2vw;
   background-color: #e7f1fb;
+
   align-items: flex-start;
-  .mainContainer {
+  .mainContainerAcknow {
     width: 40vw;
     justify-content: flex-start;
+    // border: 1px solid blue;
     padding: 2vw;
     box-shadow: 0 0 0.3vw rgba(0, 0, 0, 0.5);
     border-radius: 2vw;
     background-color: #fff;
     gap: 1vw;
     color: #000;
-    .link {
-      color: var(--themeColor1);
+    .link-new {
+      color: blue;
       font-weight: 500;
-      text-decoration: underline;
+      text-decoration: underline !important;
+      // border: 1px solid blue;
     }
     .boldTxt {
       font-weight: 600;
     }
-    .topContainer {
+    .txt3 {
+      font-size: 1vw;
+      text-align: center;
+    }
+
+    .topContainerAcknow {
       .acknowledgementIcon {
         width: 5vw;
       }
     }
-    .bottomContainer {
+    .bottomContainerAcknow {
+      text-align: center;
+      // border: 1px solid blue;
     }
+
     .goBackBtn {
       width: 8vw;
       font-size: 1vw;
       font-weight: 600;
+      color: black;
+      padding: 0.5vw 1vw;
+      background: #f9c527;
+      border-radius: 1.1vw;
+      cursor: pointer;
+      border: 1.5px solid black;
     }
   }
 }
