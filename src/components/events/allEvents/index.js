@@ -124,27 +124,38 @@ export default function AllEvents({ data }) {
   };
 
   function isEventExpired(timestamp) {
-    const eventTimeMillis = timestamp.seconds * 1000 + timestamp.nanoseconds / 1_000_000;
+    const eventTimeMillis =
+      timestamp.seconds * 1000 + timestamp.nanoseconds / 1_000_000;
     return Date.now() > eventTimeMillis;
-}
+  }
 
   const generateUrl = (item) => {
     // No expiresAt → Goes to Pricing
-    let eventMillis = item.hasOwnProperty("expiresAt") ? item.expiresAt.seconds * 1000 + item.nanoseconds/1_000_000 : 0;
-    console.log("generated url",item)
+    let eventMillis = item.hasOwnProperty("expiresAt")
+      ? item.expiresAt.seconds * 1000 + item.nanoseconds / 1_000_000
+      : 0;
+    console.log("generated url", item);
     if (!item.hasOwnProperty("expiresAt")) {
-      console.log("goes inside has own property")
-      return `/events/pricing?id=${item.id}`; 
+      console.log("goes inside has own property");
+      return `/events/pricing?id=${item.id}`;
     }
-    
+
     // Expired → Goes to Pricing
     if (eventMillis < Date.now()) {
-      console.log('expired',eventMillis)
-      return `/events/pricing?id=${item.id}`; 
+      console.log("expired", eventMillis);
+      return `/events/pricing?id=${item.id}`;
     }
-  
+
     // Active → Goes to External Site
-    return "https://techkilla-events-sass.vercel.app/"; 
+    return "https://techkilla-events-sass.vercel.app/";
+  };
+
+  const capitalizeWords = (str) => {
+    if (!str) return "";
+    return str
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   };
 
   return (
@@ -226,14 +237,9 @@ export default function AllEvents({ data }) {
               paginatedEvents.map((item) => (
                 <tr key={item.id}>
                   <td>#{item.eventNumber}</td>
-                  <td>
-                    {item.eventName.charAt(0).toUpperCase() +
-                      item.eventName.slice(1)}
-                  </td>
-                  <td>
-                    {item.productName.charAt(0).toUpperCase() +
-                      item.productName.slice(1)}
-                  </td>
+                  <td>{capitalizeWords(item.eventName)}</td>
+
+                  <td>AI {capitalizeWords(item.productName)}</td>
 
                   <td>{formatDate(item.createdAt)}</td>
                   <td>{formatDate(item.expiresAt)}</td>
@@ -309,7 +315,7 @@ export default function AllEvents({ data }) {
               <Link
                 href={generateUrl(item)}
                 className="flex-row-center launch-button"
-                target={item.expiresAt && isEventExpired ? "_blank":"_self"}
+                target={item.expiresAt && isEventExpired ? "_blank" : "_self"}
               >
                 <PiRocketLaunch />
               </Link>
