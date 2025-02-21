@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import { UserDataReducer, AllEventsReducer } from "@/app/redux/slice";
 import { collection, onSnapshot } from "firebase/firestore";
 
-import useCreateUser from "@/customHooks/useCreateUser";
+import createUser from "@/utils/useCreateUser";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -40,8 +40,6 @@ const App = () => {
         dispatch(UserDataReducer(data));
         setUserData(data);
 
-        console.log(user);
-
         // create user in mongodb
         const userData = {
           firebaseUid: user.uid,
@@ -52,7 +50,7 @@ const App = () => {
           lastLoginAt: user.metadata.lastLoginAt,
         };
 
-        useCreateUser(userData);
+        createUser(userData);
       }
     });
     return () => unsubscribe();

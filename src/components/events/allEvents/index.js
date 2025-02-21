@@ -217,6 +217,7 @@ export default function AllEvents({ data }) {
         <table>
           <thead>
             <tr>
+              <th>Status</th>
               <th>Event No.</th>
               <th>Event Name</th>
               <th>Product</th>
@@ -230,6 +231,7 @@ export default function AllEvents({ data }) {
             {paginatedEvents.length > 0 ? (
               paginatedEvents.map((item) => (
                 <tr key={item.id}>
+                  <td>{capitalizeWords(item.status)}</td>
                   <td>#{item.eventNumber}</td>
                   <td>{capitalizeWords(item.eventName)}</td>
 
@@ -247,7 +249,11 @@ export default function AllEvents({ data }) {
                     </span>
                     <Link
                       href={generateUrl(item)}
-                      target={item.expiresAt && !isEventExpired(item.expiresAt) ? "_blank":"_self"}
+                      target={
+                        item.expiresAt && !isEventExpired(item.expiresAt)
+                          ? "_blank"
+                          : "_self"
+                      }
                       className="flex-row-center launch-button"
                     >
                       <PiRocketLaunch />
@@ -310,7 +316,11 @@ export default function AllEvents({ data }) {
               <Link
                 href={generateUrl(item)}
                 className="flex-row-center launch-button"
-                target={item?.expiresAt && !isEventExpired(item.expiresAt) ? "_blank":"_self"} 
+                target={
+                  item?.expiresAt && !isEventExpired(item.expiresAt)
+                    ? "_blank"
+                    : "_self"
+                }
               >
                 <PiRocketLaunch />
               </Link>

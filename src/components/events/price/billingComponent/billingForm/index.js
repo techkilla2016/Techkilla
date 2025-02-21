@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 
 export default function BillingForm({
   handleSubmit,
@@ -13,6 +13,7 @@ export default function BillingForm({
   handleCancel,
   fareSummary,
   setSelectedState,
+  errorMsg,
 }) {
   return (
     <form className="flex-col-center billingForm" onSubmit={handleSubmit}>
@@ -35,6 +36,7 @@ export default function BillingForm({
         <div className="flex-col-center formFieldBilling">
           <label className="labelBilling">Contact*</label>
           <input
+            style={errorMsg ? { borderColor: "red" } : {}}
             type="number"
             name="contact"
             value={formData.contact}
@@ -43,6 +45,7 @@ export default function BillingForm({
             className="inputBilling"
             placeholder="Enter Contact Number"
           />
+          {errorMsg && <span className="errorMsg">{errorMsg}</span>}
         </div>
 
         {/* email */}

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const useCreateUser = async (data) => {
+const createUser = async (data) => {
   try {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-user/create`,
@@ -12,4 +12,4 @@ const useCreateUser = async (data) => {
   }
 };
 
-export default useCreateUser;
+export default createUser;
