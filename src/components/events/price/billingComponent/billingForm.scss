@@ -33,9 +33,8 @@
       height: 86%;
       gap: 0.3vw;
       justify-content: flex-start;
-      padding: 1vw;
+      padding: 0.5vw 0;
       border-radius: 0.5vw;
-      overflow-y: auto;
       border: 0.11vw solid #ccc;
       .add-new-billing {
         font-size: 1vw;
@@ -43,21 +42,22 @@
         font-weight: 600;
         text-decoration: underline !important;
         text-align: right;
-        padding: 0.3vw;
+        padding: 0 1.5vw;
         cursor: pointer;
       }
       .recentBillingBox {
         gap: 0.8svw;
         width: 100%;
-        height: 100%;
+        height: 90%;
+        overflow-y: auto;
         justify-content: flex-start;
-        padding-top: 1vw;
+        padding: 0.5vw 1vw;
         .recentBillingCard {
           width: 100%;
           background-color: #fff;
           border-radius: 0.25vw;
           gap: 1vw;
-          padding: 0.5vw;
+          padding: 1vw 0.5vw;
           cursor: pointer;
           .radio {
             width: 1vw;
@@ -133,7 +133,7 @@
         .inputBilling {
           width: 100%;
           outline: none;
-          padding: 0.9svh;
+          padding: 1.3svh 1svh;
           border: 0.1vw solid #ccc;
           border-radius: 0.15vw;
           font-size: 0.8vw;
@@ -208,13 +208,13 @@
           font-size: 2.6vw;
         }
         .recentBillingBox {
-          gap: 2vw;
+          gap: 2.5vw;
           .recentBillingCard {
             width: 100%;
             background-color: #fff;
             border-radius: 1vw;
             gap: 2vw;
-            padding: 1.5vw;
+            padding: 2.2vw 1.5vw;
             .radio {
               width: 4vw;
               height: 4vw;
@@ -267,7 +267,7 @@
           .inputBilling {
             width: 100%;
             outline: none;
-            padding: 1svh;
+            padding: 2.2vw 1.5vw;
             border-radius: 0.3svh;
             font-size: 2.5vw;
           }
@@ -327,12 +327,12 @@
           font-size: 4vw;
         }
         .recentBillingBox {
-          gap: 1.4svh;
+          gap: 3.6vw;
           .recentBillingCard {
             width: 100%;
             border-radius: 0.6vw;
             gap: 2.5vw;
-            padding: 2.5vw;
+            padding: 4vw 2vw;
             cursor: pointer;
             .radio {
               width: 6vw;
@@ -352,7 +352,7 @@
             }
             .actionIconContainer {
               gap: 4vw;
-              font-size: 5.5vw;
+              font-size: 6vw;
             }
           }
         }
@@ -387,7 +387,7 @@
           .inputBilling {
             width: 100%;
             outline: none;
-            padding: 1svh;
+            padding: 3vw 2vw;
             font-size: 3.5vw;
           }
           .checkLabel {

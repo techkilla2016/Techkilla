@@ -57,8 +57,9 @@
 /* tablet view*/
 @media all and (max-width: 1024px) {
   .LeftPriceContainer {
-    border: none;
-    box-shadow: none;
+    border: 0.15vw solid #ffde59;
+    box-shadow: 0 0 2.5px rgba(255, 222, 89, 0.3),
+      0 0 5px rgba(255, 222, 89, 0.4), 0 0 8px rgba(255, 222, 89, 0.5);
     width: 100%;
     border-radius: 0;
     gap: 2vw;
