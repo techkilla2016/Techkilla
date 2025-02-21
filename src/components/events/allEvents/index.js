@@ -316,11 +316,7 @@ export default function AllEvents({ data }) {
               <Link
                 href={generateUrl(item)}
                 className="flex-row-center launch-button"
-<<<<<<< HEAD
                 target={item?.expiresAt && !isEventExpired(item.expiresAt) ? "_blank":"_self"} 
-=======
-                target={item.expiresAt && isEventExpired ? "_blank" : "_self"}
->>>>>>> 5ac852a40131c07e46f32916acca4905e1ad6808
               >
                 <PiRocketLaunch />
               </Link>
