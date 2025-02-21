@@ -301,6 +301,7 @@ export default function EventForm({ action }) {
 
           console.log("Document updated with logo URL");
         }
+
         setIsPopupOpen(true);
         // toast.success("Event created successfully!", toastOptions);
       } catch (e) {
@@ -387,6 +388,11 @@ export default function EventForm({ action }) {
         "Please select a template before proceeding.",
         toastOptions
       );
+
+      if(!formData.bgImage){
+        toast.error("Please Select Background Image",toastOptions)
+        return;
+      }
 
     if (action === "add") {
       await createEvent();

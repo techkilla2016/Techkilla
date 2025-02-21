@@ -252,7 +252,8 @@ export default function AllEvents({ data }) {
                       <FaRegEye />
                     </span>
                     <Link
-                      href={`/events/pricing?id=${item.id}`}
+                      href={generateUrl(item)}
+                      target={item.expiresAt && !isEventExpired(item.expiresAt) ? "_blank":"_self"}
                       className="flex-row-center launch-button"
                     >
                       <PiRocketLaunch />
@@ -315,7 +316,7 @@ export default function AllEvents({ data }) {
               <Link
                 href={generateUrl(item)}
                 className="flex-row-center launch-button"
-                target={item.expiresAt && isEventExpired ? "_blank" : "_self"}
+                target={item?.expiresAt && !isEventExpired(item.expiresAt) ? "_blank":"_self"} 
               >
                 <PiRocketLaunch />
               </Link>
