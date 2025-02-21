@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import RecentBillingInfo from "./recentBillingInfo/index";
 import BillingForm from "./billingForm/index";
 
-export default function billingComponent({
+export default function BillingInfoComponent({
   formData,
   setFormData,
   setIsForm,

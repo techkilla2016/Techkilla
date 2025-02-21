@@ -279,7 +279,7 @@ export default function EventForm({ action }) {
             createdAt: Timestamp.fromDate(new Date()),
             eventNumber: updatedCounter,
             password: pass,
-            status:"pending"
+            status: "pending",
           });
 
           return updatedCounter;
@@ -389,10 +389,10 @@ export default function EventForm({ action }) {
         toastOptions
       );
 
-      if(!formData.bgImage){
-        toast.error("Please Select Background Image",toastOptions)
-        return;
-      }
+    if (!formData.bgImage) {
+      toast.error("Please Select Background Image", toastOptions);
+      return;
+    }
 
     if (action === "add") {
       await createEvent();
@@ -640,8 +640,10 @@ export default function EventForm({ action }) {
                   <option value="" disabled selected>
                     Select number of devices
                   </option>
-                  {data?.numberOfDevices.map((screen) => (
-                    <option value={screen}>{screen}</option>
+                  {data?.numberOfDevices.map((screen, idx) => (
+                    <option key={idx} value={screen}>
+                      {screen}
+                    </option>
                   ))}
                 </select>
               </label>
@@ -662,8 +664,10 @@ export default function EventForm({ action }) {
                     <option value="" disabled selected>
                       Select Template
                     </option>
-                    {data?.templateNumberArr.map((templateNumber) => (
-                      <option value={templateNumber}>{templateNumber}</option>
+                    {data?.templateNumberArr.map((templateNumber, idx) => (
+                      <option key={idx} value={templateNumber}>
+                        {templateNumber}
+                      </option>
                     ))}
                   </select>
                 </label>
@@ -692,9 +696,12 @@ export default function EventForm({ action }) {
                   formData.templates.length > 0 &&
                   selectedTemplates?.length > 0 && (
                     <div className="flex-row-center selectedTemplatesWrapper">
-                      {selectedTemplates.map((item) => {
+                      {selectedTemplates.map((item, idx) => {
                         return (
-                          <div className="flex-row-center selectedTemplate">
+                          <div
+                            key={idx}
+                            className="flex-row-center selectedTemplate"
+                          >
                             <Image
                               alt="image"
                               width={100}
