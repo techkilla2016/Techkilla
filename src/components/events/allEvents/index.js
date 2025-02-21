@@ -122,6 +122,14 @@ export default function AllEvents({ data }) {
     setEventName("");
     setEventNumber("");
   };
+  const capitalizeWords = (str) => {
+    if (!str) return "";
+    return str
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
   return (
     <div className="flex-col-center AllEvents">
       <p className="flex-row-center tableHead"></p>
@@ -201,14 +209,9 @@ export default function AllEvents({ data }) {
               paginatedEvents.map((item) => (
                 <tr key={item.id}>
                   <td>#{item.eventNumber}</td>
-                  <td>
-                    {item.eventName.charAt(0).toUpperCase() +
-                      item.eventName.slice(1)}
-                  </td>
-                  <td>
-                    {item.productName.charAt(0).toUpperCase() +
-                      item.productName.slice(1)}
-                  </td>
+                  <td>{capitalizeWords(item.eventName)}</td>
+
+                  <td>AI {capitalizeWords(item.productName)}</td>
 
                   <td>{formatDate(item.createdAt)}</td>
                   <td>{formatDate(item.expiresAt)}</td>

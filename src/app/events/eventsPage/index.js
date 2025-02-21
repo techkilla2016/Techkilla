@@ -77,7 +77,8 @@ export default function EventsPage() {
     try {
       await signOut(auth);
       setUserData(null);
-      console.log("User logged out successfully.");
+      setIsOpen(false);
+      // console.log("User logged out successfully.");
     } catch (error) {
       console.error("Logout failed:", error.message);
     }
