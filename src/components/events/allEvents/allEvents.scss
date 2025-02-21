@@ -334,8 +334,8 @@
         }
         .filter-label {
           // border: 2px solid black;
-          font-size: 2.2vw;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          font-size: 2.4vw;
+
           color: #333;
           font-weight: 600;
           // margin-right: 0.5vw;
@@ -344,16 +344,15 @@
           border: none;
           border-bottom: 2px solid #aaa;
           padding: 0.5rem;
-          font-size: 2.2vw;
+          font-size: 2.3vw;
           border-radius: 0 0 4px 4px;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         }
 
         .filter-input:focus {
           border-bottom: 2px solid #626466;
         }
         .removeFilter {
-          font-size: 3.4vw;
+          font-size: 3.8vw;
           color: black;
           cursor: pointer;
         }
@@ -377,8 +376,8 @@
       .countPart {
         gap: 2vw;
         .eventCount {
-          font-size: 2.2vw;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          font-size: 2.4vw;
+
           color: #333;
           font-weight: 600;
         }
@@ -388,7 +387,7 @@
 
         justify-content: flex-start !important;
         border-radius: 3vw;
-        max-width: 20vw;
+        max-width: 24vw;
         // width: 15vw;
         padding: 0.3vw 1vw;
         margin-right: 1vw;
@@ -402,14 +401,14 @@
           border-radius: 50vw;
           color: black;
 
-          font-size: 3.2vw;
+          font-size: 3.4vw;
           // margin: 0.4vw;
         }
         .eventText {
-          font-size: 1.8vw;
+          font-size: 2vw;
           color: black;
           font-weight: 600;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
           // border: 1px solid blue;
         }
       }
@@ -442,20 +441,17 @@
         border-radius: 2.5vw;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         .event-name {
-          font-size: 2.5vw;
+          font-size: 2.8vw;
           font-weight: 600;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         }
         .event-product {
           gap: 2vw;
         }
         .event-head {
-          font-size: 1.9vw;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          font-size: 2.2vw;
         }
         .event-data {
-          font-size: 2vw;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          font-size: 2.3vw;
         }
         .card-actions {
           // border: 2px solid blue;
@@ -562,7 +558,7 @@
         }
         .filter-label {
           // border: 2px solid black;
-          font-size: 3vw;
+          font-size: 3.2vw;
           color: #333;
           font-weight: 600;
           // margin-right: 0.5vw;
@@ -571,7 +567,7 @@
           border: none;
           border-bottom: 2px solid #aaa;
           padding: 0.5rem;
-          font-size: 2.7vw;
+          font-size: 2.9vw;
           border-radius: 0 0 4px 4px;
         }
 
@@ -579,7 +575,7 @@
           border-bottom: 2px solid #626466;
         }
         .removeFilter {
-          font-size: 5.7vw;
+          font-size: 6.8vw;
           color: black;
           cursor: pointer;
         }
@@ -599,7 +595,7 @@
       .countPart {
         gap: 3vw;
         .eventCount {
-          font-size: 3vw;
+          font-size: 3.15vw;
           color: #333;
           font-weight: 600;
         }
@@ -659,19 +655,16 @@
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         .event-name {
           // border: 2px solid blue;
-          font-size: 3.3vw;
+          font-size: 3.5vw;
           font-weight: 600;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         }
 
         .event-head {
-          font-size: 2.9vw;
+          font-size: 3.2vw;
           // border: 2px solid blue;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         }
         .event-data {
-          font-size: 2.9vw;
-          font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+          font-size: 3.3vw;
         }
         .card-actions {
           // border: 2px solid blue;

@@ -8,6 +8,7 @@
   align-items: flex-start;
   .context-part {
     // border: 0.1vw solid gray;
+    background: rgb(255, 255, 255);
     width: 40%;
     // height: 80%;
     // height: auto;
@@ -20,7 +21,7 @@
     .heading {
       // border: 2px solid red;
       // padding: 1vw;
-      font-size: 2.8vw;
+      font-size: 2.5vw;
       color: #1e1e15;
       font-weight: 600;
       // background: linear-gradient(to right, #ebdd14, #100a14);
@@ -67,7 +68,7 @@
     }
   }
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 1024px) {
   .Welcome {
     // border: 2px solid blue;
 
@@ -78,6 +79,8 @@
     .context-part {
       width: 80%;
       padding: 3vw;
+      border-radius: 4vw;
+      margin-top: 2vw;
       box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.25);
       // border: 2px solid red;
       .heading {
@@ -107,6 +110,52 @@
         .createBtn1 {
           color: #100f01;
           font-size: 2.2vw;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  .Welcome {
+    // border: 2px solid blue;
+
+    width: 100%;
+    gap: 2vw;
+    margin-top: 9vw;
+    padding-bottom: 7vw;
+    .context-part {
+      width: 80%;
+      padding: 3vw;
+      margin-top: 8vw !important;
+      box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.25);
+      // border: 2px solid red;
+      .heading {
+        // border: 2px solid red;
+        padding: 1vw;
+        font-size: 5.2vw;
+      }
+      .paraGraph {
+        // border: 2px solid black;
+        padding: 1vw;
+        width: 80vw;
+        line-height: 5vw;
+        font-size: 2.8vw;
+      }
+      .buttonEvent {
+        padding: 0.5vw;
+        gap: 3vw;
+        .createBtn {
+          background: #f6ce4c;
+          // border: 2px solid blue;
+          color: #100f01;
+          border-radius: 1.7vw;
+          font-weight: 600;
+          font-size: 2.5vw;
+          padding: 0.8vw 2.6vw;
+        }
+        .createBtn1 {
+          color: #100f01;
+          font-size: 2.4vw;
         }
       }
     }
