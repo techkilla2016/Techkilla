@@ -40,8 +40,7 @@ export default function Login({ userData, setUserData }) {
         memories that last a lifetime.
       </p>
       <button onClick={handleLogin} className="flex-row-center googleLogin">
-        <FcGoogle style={{ marginRight: "10px", fontSize: "1.6vw" }} /> Continue
-        with Google
+        <FcGoogle className="google-logo" /> Continue with Google
       </button>
     </div>
   );

@@ -286,11 +286,11 @@ export default function AllEvents({ data }) {
       <div className="flex-col-center card-container">
         {paginatedEvents.map((item) => (
           <div key={item.id} className="flex-col-center event-card">
-            <p className="event-name">{item.eventName}</p>
+            <p className="event-name">{capitalizeWords(item.eventName)}</p>
             <p className="flex-row-center event-product">
               <p className="event-head">
                 <strong className="event-data"> Product : </strong>
-                {item.productName}
+                AI {capitalizeWords(item.productName)}
               </p>
               <p className="event-head">
                 {" "}
