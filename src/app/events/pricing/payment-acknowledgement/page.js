@@ -58,41 +58,38 @@ function PaymentAcknowledgementContent({ status, setStatus }) {
               </h3>
             </div>
 
-            <p className="txt3 boldTxt">Thank You for Choosing Snapshawt! </p>
-
             <div className="flex-col-center bottomContainerAcknow">
               {status === "success" ? (
                 <div className="txt3">
-                  Your credit purchase was successful! 🎊{" "}
-                  <strong className="boldTxt">50 credits</strong> have been
-                  added to your account. Get ready to unleash your creativity
-                  and enjoy making personalized content with{" "}
-                  <a
+                  🎉 Congratulations! Your{" "}
+                  <strong>Techkilla event experience</strong> is locked in. Get
+                  ready for an unforgettable engagement! 🚀🔥 Start creating
+                  your events now!
+                  {/* <a
                     href="https://snapshawt.com"
                     target="_blank"
                     className="link-new"
                   >
                     Snapshawt.com
                   </a>
-                  !
+                  ! */}
+                  <p className="txt3 ">Happy creating!✨</p>
                 </div>
               ) : (
                 <div className="txt3">
-                  Unfortunately, we were unable to process your payment at this
-                  time. Please check your details or try another method{" "}
-                  <strong className="boldTxt">(card, wallet, UPI, etc.)</strong>
+                  <strong> Oops!</strong> Something went wrong with your
+                  Techkilla event purchase. 😢 Try again or reach out—we’re here
+                  to help! 💡 Start creating your events now!{" "}
                 </div>
               )}
             </div>
 
             <div className="txt3">
-              Need assistance? We're here to help! Contact us at &nbsp;
+              💡 Need assistance? We’re here to help—reach out at &nbsp;
               <a href="mailto:support@snapshawt.com" className="link-new">
-                support@snapshawt.com
+                contact@techkilla.com
               </a>
             </div>
-
-            <p className="txt3 boldTxt">Happy creating!✨</p>
 
             <button
               className=" goBackBtn"

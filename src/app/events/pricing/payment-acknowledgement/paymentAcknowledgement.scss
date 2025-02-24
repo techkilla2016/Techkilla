@@ -1,7 +1,7 @@
 .PaymentAcknowledgement {
   min-height: calc(100svh - 5.2vw);
   margin-top: 5.2vw;
-  padding: 2vw;
+  padding: 5vw;
   background-color: #e7f1fb;
 
   align-items: flex-start;
@@ -41,10 +41,10 @@
 
     .goBackBtn {
       width: 8vw;
-      font-size: 1vw;
+      font-size: 1.1vw;
       font-weight: 600;
       color: black;
-      padding: 0.5vw 1vw;
+      padding: 0.3vw 0.8vw;
       background: #f9c527;
       border-radius: 1.1vw;
       cursor: pointer;
@@ -58,25 +58,39 @@
   .PaymentAcknowledgement {
     min-height: calc(100svh - 5.2vw);
     margin-top: 5.2vw;
-    padding: 2.5vw;
+    // padding: 5vw !important;
     padding-top: 5vw;
-    .mainContainer {
+    .mainContainerAcknow {
+      // border: 2px solid black;
+      margin-top: 10vw;
       width: 90%;
-      padding: 2.5vw;
+      padding: 5vw !important;
       box-shadow: 0 0 0.375vw rgba(0, 0, 0, 0.5);
       border-radius: 2.5vw;
       gap: 2.5vw;
-      .topContainer {
+      .topContainerAcknow {
+        // border: 2px solid blue;
         .acknowledgementIcon {
-          width: 8.75vw;
+          width: 9vw;
         }
         h3 {
-          font-size: 3.5vw;
+          font-size: 3.7vw;
         }
+      }
+      .txt3 {
+        font-size: 3vw !important;
+      }
+      .link-new {
+        color: blue;
+        font-weight: 500;
+        font-size: 3vw;
+        text-decoration: underline !important;
+        // border: 1px solid blue;
       }
       .goBackBtn {
         width: 20vw;
-        font-size: 3.5vw;
+        font-size: 3.3vw;
+        border-radius: 2vw;
       }
     }
   }
@@ -88,13 +102,26 @@
     min-height: calc(100svh - 13.5vw);
     margin-top: 13.5vw;
     padding: 5vw;
-    .mainContainer {
+    // border: 1px solid blue;
+    .mainContainerAcknow {
       width: 100%;
+      // border: 1px solid blue;
+      justify-content: center !important;
       padding: 5vw;
+      margin-top: 10vw;
       box-shadow: 0 0 0.75vw rgba(0, 0, 0, 0.5);
       border-radius: 5vw;
       gap: 3.5vw;
-      .topContainer {
+      .link-new {
+        // border: 1px solid blue;
+        font-size: 4vw;
+      }
+
+      .txt3 {
+        font-size: 4vw !important;
+        text-align: center;
+      }
+      .topContainerAcknow {
         .acknowledgementIcon {
           width: 17.5vw;
         }
@@ -105,6 +132,7 @@
       .goBackBtn {
         width: 28vw;
         font-size: 4.5vw;
+        border-radius: 3vw;
       }
     }
   }
