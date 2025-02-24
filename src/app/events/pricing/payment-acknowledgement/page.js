@@ -4,15 +4,16 @@ import React, { useState, useEffect, Suspense } from "react";
 import "./paymentAcknowledgement.scss";
 import Image from "next/image";
 import Header from "@/components/header";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 import { useSearchParams } from "next/navigation";
 
 import paymentSuccessImg from "../../../../../public/events/price-page/price-acknowledgement/payment-success.png";
 import paymentFailureImg from "../../../../../public/events/price-page/price-acknowledgement/payment-failure.png";
-import { allRoutes } from "@/data/allRoutes";
 
 export default function Acknowledgementpage() {
   const [status, setStatus] = useState("");
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <PaymentAcknowledgementContent status={status} setStatus={setStatus} />
@@ -21,6 +22,18 @@ export default function Acknowledgementpage() {
 }
 
 function PaymentAcknowledgementContent({ status, setStatus }) {
+  const router = useRouter();
+  const [countdown, setCountdown] = useState(3);
+  useEffect(() => {
+    if (countdown > 0) {
+      const timer = setTimeout(() => {
+        setCountdown((prev) => prev - 1);
+      }, 1000);
+      return () => clearTimeout(timer);
+    } else {
+      router.push("/events");
+    }
+  }, [countdown, router]);
   const searchParams = useSearchParams();
   const stats = searchParams.get("status");
 
@@ -89,6 +102,14 @@ function PaymentAcknowledgementContent({ status, setStatus }) {
               <a href="mailto:support@snapshawt.com" className="link-new">
                 contact@techkilla.com
               </a>
+              <p
+                className="txt3 "
+                style={{
+                  color: "green",
+                }}
+              >
+                Redirecting in {countdown} sec...
+              </p>
             </div>
 
             <button
