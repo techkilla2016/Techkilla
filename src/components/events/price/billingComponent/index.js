@@ -123,7 +123,7 @@ export default function BillingInfoComponent({
           `http://localhost:80/techkilla-billing-info/create`,
           data
         );
-        console.log(res);
+        // console.log(res);
         toast.success("New billing details added successfully!");
         setCurrentBilling(res.data.billingInfo);
         // handleConfirmAndPay(res.data.billingInfo);
@@ -132,7 +132,7 @@ export default function BillingInfoComponent({
         console.log(error);
       }
     }
-    console.log("Submitted Data:", formData);
+    // console.log("Submitted Data:", formData);
     setIsGetBillingData((prev) => !prev);
     setFormData({
       name: "",
@@ -157,7 +157,7 @@ export default function BillingInfoComponent({
       );
       setIsGetBillingData((prev) => !prev);
       toast.success("Billing address deleted successfully!");
-      console.log(res);
+      // console.log(res);
     } catch (error) {
       console.log(error);
     }
@@ -222,7 +222,7 @@ export default function BillingInfoComponent({
     }
   };
 
-  console.log(errorMsg);
+  // console.log(errorMsg);
 
   return (
     <div className="flex-col-center billingFormContainer">

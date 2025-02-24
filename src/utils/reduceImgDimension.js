@@ -8,18 +8,18 @@ export const resizeImgDimension = (file) => {
         const MAX_DIMENSION = 1500;
         let { width, height } = img;
 
-        console.log("image's original dimensions=>", width, height);
+        // console.log("image's original dimensions=>", width, height);
         if (width > MAX_DIMENSION || height > MAX_DIMENSION) {
           const aspectRatio = width / height;
           if (width > height) {
             width = MAX_DIMENSION;
             height = MAX_DIMENSION / aspectRatio;
-            console.log("image's dimension is converted => ", width, height);
+            // console.log("image's dimension is converted => ", width, height);
           } else {
             height = MAX_DIMENSION;
             width = MAX_DIMENSION * aspectRatio;
           }
-          console.log("image's  dimensions is converted =>", width, height);
+          // console.log("image's  dimensions is converted =>", width, height);
         } else {
           // console.log("image's dimension is not converted => ", width, height);
         }

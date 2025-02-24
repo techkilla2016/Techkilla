@@ -140,7 +140,7 @@ export default function EventForm({ action }) {
           setAllTemplatesData(data);
         });
       } catch (err) {
-        console.log(err);
+        // console.log(err);
       }
     };
 
@@ -299,7 +299,7 @@ export default function EventForm({ action }) {
         setIsPopupOpen(true);
         // toast.success("Event created successfully!", toastOptions);
       } catch (e) {
-        console.error("Error during event creation: ", e);
+        // console.error("Error during event creation: ", e);
         toast.error("Failed to create event. Please try again.", toastOptions);
       } finally {
         setLoading(false);
@@ -379,14 +379,17 @@ export default function EventForm({ action }) {
         toastOptions
       );
 
-      if(!formData.bgImage){
-        toast.error("Please Select Background Image",toastOptions)
-        return;
-      }
-      if(formData.shareOptions.length<=0){
-        shareRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-        return toast.error("Please Select Atleast one share Option",toastOptions)
-      }
+    if (!formData.bgImage) {
+      toast.error("Please Select Background Image", toastOptions);
+      return;
+    }
+    if (formData.shareOptions.length <= 0) {
+      shareRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      return toast.error(
+        "Please Select Atleast one share Option",
+        toastOptions
+      );
+    }
 
     if (action === "add") {
       await createEvent();
@@ -476,7 +479,7 @@ export default function EventForm({ action }) {
     return "N/A";
   };
 
-  console.log(formData);
+  // console.log(formData);
 
   return (
     <div className="flex-col-center EventNew">
@@ -496,7 +499,7 @@ export default function EventForm({ action }) {
             className="flex-col-center formContainer"
           >
             {/* show expires date */}
-            {action == "edit" && formData?.status!=="pending" && (
+            {action == "edit" && formData?.status !== "pending" && (
               <div className="flex-col-center valueField">
                 <label className="labelExpire" style={{ color: "red" }}>
                   {formData?.expiresAt && isExpired(formData.expiresAt)
@@ -544,7 +547,8 @@ export default function EventForm({ action }) {
                   </option>
                   {data?.productsArr.map((product) => (
                     <option key={product} value={product}>
-                      Ai {product.replace(/-/g, " ").charAt(0).toUpperCase() +
+                      Ai{" "}
+                      {product.replace(/-/g, " ").charAt(0).toUpperCase() +
                         product.replace(/-/g, " ").slice(1)}
                     </option>
                   ))}

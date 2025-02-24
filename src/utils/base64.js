@@ -49,7 +49,7 @@ export const base64 = (template, callback) => {
     .then((blob) => {
       // Read the Blob as DataURL using the FileReader API
       const reader = new FileReader();
-      console.log(reader);
+      // console.log(reader);
 
       reader.onloadend = () => {
         // console.log(reader.result);

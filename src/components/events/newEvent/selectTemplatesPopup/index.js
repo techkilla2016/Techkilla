@@ -54,8 +54,7 @@ export default function SelectTemplatesPopup({
         setSelectedCategory(allCategories[0]);
       }
     }
-  }, [allTemplatesData,allCategories]);
-  
+  }, [allTemplatesData, allCategories]);
 
   // Update the filtered templates whenever the selected category changes
   useEffect(() => {
@@ -72,7 +71,7 @@ export default function SelectTemplatesPopup({
       }, 3000);
     }
   }, [allTemplatesData, selectedCategory]);
-  console.log(allTemplatesData);
+  // console.log(allTemplatesData);
 
   // Format category names for display
   // const formatCategory = (category) => {

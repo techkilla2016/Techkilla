@@ -26,7 +26,7 @@ export default function ContactForm() {
   const [isLoad, setIsload] = useState(false);
   const [show, setShow] = useState(false);
 
-  const onInputChange = e => {
+  const onInputChange = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
   };
 
@@ -40,15 +40,23 @@ export default function ContactForm() {
   };
 
   // post request to send email api
-  const send = async contact => {
+  const send = async (contact) => {
     try {
       let response = await axios.post(
-        "https://api.telecrm.in/enterprise/"+ process.env.NEXT_PUBLIC_CRM_ENTERPRISE_ID+"/autoupdatelead",
-        {"fields":contact,"actions": [{"type": "SYSTEM_NOTE","text": "Lead Source: Main Website"}]},{
+        "https://api.telecrm.in/enterprise/" +
+          process.env.NEXT_PUBLIC_CRM_ENTERPRISE_ID +
+          "/autoupdatelead",
+        {
+          fields: contact,
+          actions: [{ type: "SYSTEM_NOTE", text: "Lead Source: Main Website" }],
+        },
+        {
           headers: {
-            Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_CRM_TOKEN
-          }});
-         // console.log(response)
+            Authorization: "Bearer " + process.env.NEXT_PUBLIC_CRM_TOKEN,
+          },
+        }
+      );
+      // console.log(response)
       // alert(process.env.NEXT_PUBLIC_CRM_TOKEN)
       /* response = await response.json();
       console.log(response); */
@@ -60,9 +68,9 @@ export default function ContactForm() {
   };
 
   // form submission
-  const submitForm = async e => {
+  const submitForm = async (e) => {
     e.preventDefault();
-    console.log("submitting the form", contact);
+    // console.log("submitting the form", contact);
     setIsload(true);
     if (
       contact.name &&
@@ -71,14 +79,14 @@ export default function ContactForm() {
       contact.phone &&
       contact.service
     ) {
-      console.log("move on");
+      // console.log("move on");
 
       const isSend = await send({ ...contact });
       if (isSend) {
         setIsload(false);
         setShow(true);
         setContact(EMPTY_CONTACT);
-        console.log("email sent", show);
+        // console.log("email sent", show);
       } else {
         setIsload(false);
         console.log("catching error");
@@ -183,7 +191,7 @@ export default function ContactForm() {
             *By submitting this form, you are accepting our Terms of use and our
             Privacy policy
           </p>
-          <button type="submit" onClick={e => submitForm(e)}>
+          <button type="submit" onClick={(e) => submitForm(e)}>
             Send Message
           </button>
         </footer>

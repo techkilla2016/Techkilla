@@ -97,7 +97,7 @@ export default function PriceComponent() {
 
   // mobile view
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
-  console.log(isGetBillingData);
+  // console.log(isGetBillingData);
   // fetch event data
   useEffect(() => {
     if (searchParams && allEventsSelector?.length > 0) {
@@ -128,7 +128,7 @@ export default function PriceComponent() {
   useEffect(() => {
     const getBillingData = async () => {
       try {
-        console.log("api is calling", process.env.NEXT_PUBLIC_SERVER_BASE_URL);
+        // console.log("api is calling", process.env.NEXT_PUBLIC_SERVER_BASE_URL);
 
         let res = await axios.get(
           `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-billing-info/${userDataSelector?.uid}`
@@ -136,7 +136,7 @@ export default function PriceComponent() {
         setUserBillingInfo(res?.data.billingInfo);
         setCurrentBilling(res?.data.billingInfo[0]);
         setIsShowOldBillingInfo(true);
-        console.log(res);
+        // console.log(res);
       } catch (err) {
         console.log(err);
       }
@@ -186,18 +186,18 @@ export default function PriceComponent() {
   }
 
   useEffect(() => {
-    console.log(currentBilling);
+    // console.log(currentBilling);
   }, [currentBilling]);
 
   // handle confirm and pay
   const handleConfirmAndPay = async (billing) => {
-    console.log(
-      // userDataSelector,
-      currentBilling,
-      // eventData,
-      billing,
-      "handle confirm and pay"
-    );
+    // console.log(
+    //   // userDataSelector,
+    //   currentBilling,
+    //   // eventData,
+    //   billing,
+    //   "handle confirm and pay"
+    // );
     const billingInfo = currentBilling?._id ? currentBilling : billing;
 
     if (!userDataSelector?.uid || !billingInfo?._id || !eventData?.id) {
@@ -219,7 +219,7 @@ export default function PriceComponent() {
             data
           );
 
-          console.log(res, "res");
+          // console.log(res, "res");
 
           if (res?.data?.paymentGatewayLink)
             openPaymentPopup(res?.data?.paymentGatewayLink);
