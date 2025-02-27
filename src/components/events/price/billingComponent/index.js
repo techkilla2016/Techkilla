@@ -21,6 +21,7 @@ export default function BillingInfoComponent({
   setIsGetBillingData,
   fareSummary,
   handleConfirmAndPay,
+  isPayLoading
 }) {
   const router = useRouter();
   const [states, setStates] = useState([]);
@@ -120,7 +121,7 @@ export default function BillingInfoComponent({
     } else {
       try {
         let res = await axios.post(
-          `http://localhost:80/techkilla-billing-info/create`,
+          `${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/techkilla-billing-info/create`,
           data
         );
         // console.log(res);
@@ -238,6 +239,7 @@ export default function BillingInfoComponent({
           handleDelete={handleDelete}
           handleAddressChange={handleAddressChange}
           handleConfirmAndPay={handleConfirmAndPay}
+          isPayLoading={isPayLoading}
         />
       ) : (
         <BillingForm

@@ -1,6 +1,7 @@
 import React from "react";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
+import {ClockLoader} from "react-spinners"
 
 export default function RecentBillingInfo({
   userBillingInfo,
@@ -11,6 +12,7 @@ export default function RecentBillingInfo({
   handleDelete,
   handleAddressChange,
   handleConfirmAndPay,
+  isPayLoading
 }) {
   const formatPriceINR = (amount) => {
     return new Intl.NumberFormat("en-IN", {
@@ -91,8 +93,8 @@ export default function RecentBillingInfo({
           {formatPriceINR(fareSummary.baseFare)}
           <br /> + {formatPriceINR(fareSummary.gstFare)} taxes
         </p>
-        <button className="buttonBilling" onClick={() => handleConfirmAndPay()}>
-          {"PAY NOW"}
+        <button className="flex-row-center buttonBilling" onClick={() => handleConfirmAndPay()}>
+          {"PAY NOW"} {isPayLoading && <ClockLoader color="white" size={17} />}
         </button>
       </div>
     </div>
