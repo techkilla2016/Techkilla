@@ -12,7 +12,6 @@ import { Container } from "react-bootstrap";
 import Testimonials from "@/components/Testimonials";
 import TestimonialsData from "@/data/Testimonials";
 import WhatsappModal from "@/components/Modal/whatsapp";
-import Blog from "@/components/home/blogs";
 import Head from "next/head";
 import Faq from "@/components/faq/faq";
 export const metadata = {
@@ -86,7 +85,6 @@ const Home = () => {
           <Faq />
         </div>
       </main>
-      <Blog />
       <Footer bg="#fafafa" />
     </>
   );

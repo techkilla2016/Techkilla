@@ -12,6 +12,7 @@
       font-size: 1.7vw;
       font-weight: 600;
       line-height: 2vw;
+      text-align: center;
     }
     .descText {
       text-align: center;
@@ -73,7 +74,7 @@
 }
 @media all and (min-width: 480px) and (max-width: 1024px) {
   .Contact {
-    border-top: 1px solid gray;
+    // border-top: 1px solid gray;
     width: 100%;
     // padding: 1vw;
     padding-top: 6vw;
@@ -143,7 +144,7 @@
 
 @media all and (max-width: 480px) {
   .Contact {
-    border-top: 1px solid gray;
+    // border-top: 1px solid gray;
     width: 100%;
     // padding: 1vw;
     padding-top: 6vw;

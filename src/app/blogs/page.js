@@ -11,7 +11,7 @@ const newLocal = {
       "de-DE": `/blogs/de-DE`,
     },
   },
-  title: "Theckilla Blog: Photobooth & Image Creation",
+  title: "Techkilla Blog: Photobooth & Image Creation",
   description:
     "Explore Photobooth, image creation tips, and photo transformation ideas with Techkilla. Unleash creativity with fast, advanced AI!",
   keywords:
@@ -21,7 +21,7 @@ const newLocal = {
     locale: "en_US",
     url: siteUrl,
     site_name: "Techkilla",
-    title: "Theckilla Blog: Photobooth & Image Creation",
+    title: "Techkilla Blog: Photobooth & Image Creation",
     description:
       "Explore Photobooth, image creation tips, and photo transformation ideas with Techkilla. Unleash creativity with fast, advanced AI!",
     images: {
@@ -34,7 +34,7 @@ const newLocal = {
   twitter: {
     card: "summary_large_image",
     site: "@Techkilla",
-    title: "Theckilla Blog: Photobooth & Image Creation",
+    title: "Techkilla Blog: Photobooth & Image Creation",
     description:
       "Explore Photobooth, image creation tips, and photo transformation ideas with Techkilla. Unleash creativity with fast, advanced AI!",
     images: {

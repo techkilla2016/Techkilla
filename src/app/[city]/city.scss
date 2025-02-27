@@ -1,0 +1,286 @@
+.City {
+  // border: 2px solid black;
+  padding-top: 1vw;
+  margin-top: 5.4vw;
+  gap: 2vw;
+  .firstPart {
+    // border: 2px solid black;
+    background: rgb(245, 245, 228);
+    // border-bottom: 1px solid gray;
+    gap: 1vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    text-align: center;
+    .cityHeading {
+      // border: 1px solid black;
+      font-size: 2vw;
+      font-weight: 600;
+      // color: rgb(62, 63, 67);
+      color:black;
+      
+    }
+    .descriptionPart {
+      width: 90%;
+      padding:1vw;
+      font-size: 1.15vw;
+      // border: 1px solid black;
+    }
+    .contact-btn {
+      color: white;
+      font-size: 1.1vw;
+      background: rgb(192, 33, 33);
+      padding: 0.5vw 1.4vw;
+      border-radius: 0.3vw;
+    }
+  }
+  .secondPart {
+    // border: 2px solid black;
+    padding: 2vw;
+    gap: 2vw;
+  
+.photoboothRow{
+  gap:4vw;
+}
+    .even {
+      padding: 2vw;
+      flex-direction: row;
+      border-bottom: 1px solid gray;
+      // border: 2px solid black;
+    }
+
+    .odd {
+      padding: 2vw;
+      flex-direction: row-reverse;
+      border-bottom: 1px solid gray;
+      // border: 2px solid black;
+    }
+    .imageContainer{
+      // border: 2px solid black;
+      width:40%;
+      border-radius: 1.3vw;
+      box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0.4);
+      .imgPart{
+        border-radius: 1.3vw;
+      }
+    }
+    .textContainer{
+      align-items: flex-start;
+      width:60%;
+      gap:0.7vw;
+      .boothHead{
+        font-size: 1.65vw;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+      }
+      .boothDesc{
+        line-height: 2vw;
+        font-weight: 500;
+        font-size: 1.12vw;
+        
+      }
+    }
+  }
+    .watch-more-btn {
+      display: inline-block;
+      // margin-top: 10px;
+      padding: 0.4vw 0.8vw;
+      background-color: rgb(0, 85, 255);
+      color: white;
+      border-radius: 5px;
+    }
+  }
+  @media all and (max-width: 1024px) {
+    .City {
+      // border: 2px solid black;
+      padding-top: 1vw;
+      margin-top: 8vw;
+      gap: 2vw;
+      .firstPart {
+        // border: 2px solid black;
+        gap: 1vw;
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+        text-align: center;
+        .cityHeading {
+          // border: 1px solid black;
+          font-size: 4vw;
+          font-weight: 600;
+          line-height: 5.4vw;
+          // color: rgb(62, 63, 67);
+          color:black;
+          
+        }
+        .descriptionPart {
+          width: 95%;
+          // padding:1.5vw;
+          line-height: 5.4vw;
+                font-weight: 500;
+                font-size: 3.2vw;
+          // border: 1px solid black;
+        }
+        .contact-btn {
+          color: white;
+          font-size: 3vw;
+          background: rgb(192, 33, 33);
+          padding: 1vw 2vw;
+          border-radius: 1vw;
+        }
+      }
+      .secondPart {
+        // border: 2px solid black;
+      
+        .photoboothRow{
+          // border: 2px solid black;
+          flex-direction: column !important;
+          gap:4vw;
+        }
+            .even {
+              padding: 2vw;
+              border-bottom: 1px solid gray;
+              // border: 2px solid black;
+            }
+        
+            .odd {
+              
+              padding: 2vw;
+              border-bottom: 1px solid gray;
+              // border: 2px solid black;
+            }
+            .imageContainer{
+              // border: 2px solid black;
+              width:100%;
+              border-radius: 1.3vw;
+              box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0.4);
+              .imgPart{
+                width:100%;
+                // border: 2px solid black;
+                border-radius: 1.3vw;
+              }
+            }
+            .textContainer{
+              align-items: flex-start;
+              width:100%;
+              gap:1.5vw;
+              .boothHead{
+                font-size: 4.2vw;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                
+              }
+              .boothDesc{
+                line-height: 5.4vw;
+                font-weight: 500;
+                font-size: 3.3vw;
+                
+              }
+            }
+          }
+            .watch-more-btn {
+              display: inline-block;
+              // margin-top: 10px;
+    font-size: 3.5vw;
+              padding: 1vw 3vw;
+              background-color: rgb(0, 85, 255);
+              color: white;
+              border-radius: 5px;
+            }
+      }
+  }
+
+  @media all and (max-width: 480px) {
+    .City {
+      // border: 2px solid black;
+      // padding-top: 1vw;
+      margin-top: 16vw;
+      gap: 2vw;
+      .firstPart {
+        // border: 2px solid black;
+        background: rgb(245, 245, 228);
+        // border-bottom: 1px solid gray;
+        gap: 2vw;
+        padding-top: 8vw;
+        padding-bottom: 8vw;
+        text-align: center;
+        .cityHeading {
+          // border: 1px solid black;
+          font-size: 5.3vw;
+          line-height: 7vw;
+          width:95%;
+          font-weight: 600;
+          // color: rgb(62, 63, 67);
+          color:black;
+          
+        }
+        .descriptionPart {
+          width: 95%;
+          padding:2vw;
+          font-size:4.8vw;
+          line-height: 7.5vw;
+          // border: 1px solid black;
+        }
+        .contact-btn {
+          font-size: 4.2vw;
+          padding: 1.5vw 3vw;
+          border-radius: 1.5vw;
+        }
+      }
+      .secondPart {
+        // border: 2px solid black;
+        padding: 2vw;
+        gap: 2vw;
+      
+    .photoboothRow{
+      // border: 2px solid black;
+      flex-direction: column !important;
+      gap:4vw;
+    }
+        .even {
+          padding: 2vw;
+          border-bottom: 1px solid gray;
+          // border: 2px solid black;
+        }
+    
+        .odd {
+         
+          padding: 2vw;
+          border-bottom: 1px solid gray;
+          // border: 2px solid black;
+        }
+        .imageContainer{
+          // border: 2px solid black;
+          width:100%;
+          border-radius: 1.3vw;
+          box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0.4);
+          .imgPart{
+            width:100%;
+            // border: 2px solid black;
+            border-radius: 1.3vw;
+          }
+        }
+        .textContainer{
+          align-items: flex-start;
+          width:100%;
+          gap:1.5vw;
+          .boothHead{
+            font-size: 6vw;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+          }
+          .boothDesc{
+            line-height: 8vw;
+            font-weight: 500;
+            font-size: 4.8vw;
+            
+          }
+        }
+      }
+        .watch-more-btn {
+          display: inline-block;
+          // margin-top: 10px;
+font-size: 4vw;
+          padding: 1.5vw 4vw;
+          background-color: rgb(0, 85, 255);
+          color: white;
+          border-radius: 5px;
+        }
+      }
+  }
