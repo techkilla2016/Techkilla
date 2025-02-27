@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { ClipLoader } from "react-spinners";
+
 
 export default function BillingForm({
   handleSubmit,
@@ -14,6 +16,7 @@ export default function BillingForm({
   fareSummary,
   setSelectedState,
   errorMsg,
+  isAddLoading
 }) {
   return (
     <form className="flex-col-center billingForm" onSubmit={handleSubmit}>
@@ -190,8 +193,8 @@ export default function BillingForm({
             >
               Cancel
             </button>
-            <button type="submit" className="buttonBilling update-btn">
-              Update
+            <button type="submit" className="flex-row-center buttonBilling update-btn">
+              Update {isAddLoading && <ClipLoader size={19} color="white" /> }
             </button>
           </>
         ) : (
@@ -204,11 +207,11 @@ export default function BillingForm({
               Cancel
             </button>
             <button
-              className="buttonBilling update-btn"
+              className="flex-row-center buttonBilling update-btn"
               type="submit"
               // style={{ marginTop: "1rem" }}
             >
-              {"Add"}
+              {"Add"} 
             </button>
           </>
         )}

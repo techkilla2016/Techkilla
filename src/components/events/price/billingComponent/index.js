@@ -29,6 +29,7 @@ export default function BillingInfoComponent({
   const [selectedState, setSelectedState] = useState("");
   const [isFormUpdate, setIsFormUpdate] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const [isAddLoading,setIsAddLoading]=useState(false);
 
   // for form field
   const handleChange = (e) => {
@@ -106,6 +107,7 @@ export default function BillingInfoComponent({
         companyName: formData.gstCompanyName,
       };
     }
+    setIsAddLoading(true);
     // update form
     if (isFormUpdate) {
       try {
@@ -149,6 +151,7 @@ export default function BillingInfoComponent({
     setSelectedCountry("");
     setSelectedState("");
     setStates([]);
+    setIsAddLoading(false);
   };
 
   const handleDelete = async (id) => {
@@ -256,6 +259,7 @@ export default function BillingInfoComponent({
           fareSummary={fareSummary}
           setSelectedState={setSelectedState}
           errorMsg={errorMsg}
+          isAddLoading={isAddLoading}
         />
       )}
     </div>

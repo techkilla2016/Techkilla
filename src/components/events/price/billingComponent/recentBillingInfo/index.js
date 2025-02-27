@@ -1,7 +1,7 @@
 import React from "react";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
-import {ClockLoader} from "react-spinners"
+import {ClipLoader} from "react-spinners"
 
 export default function RecentBillingInfo({
   userBillingInfo,
@@ -94,7 +94,7 @@ export default function RecentBillingInfo({
           <br /> + {formatPriceINR(fareSummary.gstFare)} taxes
         </p>
         <button className="flex-row-center buttonBilling" onClick={() => handleConfirmAndPay()}>
-          {"PAY NOW"} {isPayLoading && <ClockLoader color="white" size={17} />}
+          {"PAY NOW"} {isPayLoading && <ClipLoader color="white" size={17} />}
         </button>
       </div>
     </div>
