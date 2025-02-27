@@ -219,6 +219,8 @@ export default function BillingInfoComponent({
       gstNumber: "",
       gst: false,
     });
+    setSelectedCountry("")
+    setSelectedState("");
     if (userBillingInfo?.length > 0) {
       setIsShowOldBillingInfo(true);
     } else {

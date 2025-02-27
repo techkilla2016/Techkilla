@@ -211,7 +211,7 @@ export default function BillingForm({
               type="submit"
               // style={{ marginTop: "1rem" }}
             >
-              {"Add"} 
+              {"Add"} {isAddLoading && <ClipLoader size={19} color="white" /> }
             </button>
           </>
         )}

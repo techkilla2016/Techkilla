@@ -153,6 +153,10 @@ export default function PriceComponent() {
     setSelectedMethod(method);
   };
 
+  useEffect(()=>{
+    console.log(currentBilling)
+  },[currentBilling])
+
   // handle open payment popup
   function openPaymentPopup(paymentGatewayLink) {
     // Set the popup dimensions
