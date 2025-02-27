@@ -276,6 +276,7 @@ export default function EventForm({ action }) {
             eventNumber: updatedCounter,
             password: pass,
             status: "pending",
+            branch: `${process.env.NEXT_PUBLIC_BRANCH}`,
           });
 
           return updatedCounter;
@@ -299,7 +300,7 @@ export default function EventForm({ action }) {
         setIsPopupOpen(true);
         // toast.success("Event created successfully!", toastOptions);
       } catch (e) {
-        // console.error("Error during event creation: ", e);
+        console.error("Error during event creation: ", e);
         toast.error("Failed to create event. Please try again.", toastOptions);
       } finally {
         setLoading(false);
