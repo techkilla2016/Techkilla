@@ -94,6 +94,7 @@ export default function PriceComponent() {
   const [fareSummary, setFareSummary] = useState(DEFAULT_FARE_SUMMARY);
   const [isGetBillingData, setIsGetBillingData] = useState(false);
   const [selectedMethod, setSelectedMethod] = useState("credit");
+  const [isPayLoading,setIsPayLoading]=useState();
 
   // mobile view
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
@@ -183,6 +184,9 @@ export default function PriceComponent() {
     } else {
       alert("Please allow popups for this website");
     }
+    setTimeout(()=>{
+      setIsPayLoading(false)
+    },2000)
   }
 
   useEffect(() => {
@@ -205,6 +209,7 @@ export default function PriceComponent() {
     }
 
     if (selectedMethod) {
+      setIsPayLoading(true)
       // checking payment method is credit or paypal
       if (selectedMethod === "credit") {
         const data = {
@@ -262,6 +267,7 @@ export default function PriceComponent() {
             setIsGetBillingData={setIsGetBillingData}
             fareSummary={fareSummary}
             handleConfirmAndPay={handleConfirmAndPay}
+            isPayLoading={isPayLoading}
           />
         </div>
       ) : (

@@ -4,10 +4,11 @@
     color: #fff;
     background-color: #000;
     padding: 0.5vw;
-    width: 30%;
+    width: 35%;
     font-size: 1vw;
     font-weight: 600;
     border-radius: 0.25vw;
+    gap: 0.8svw;
     &:hover {
       background-color: #363636;
     }
@@ -196,6 +197,7 @@
       width: 40%;
       font-size: 2.2vw;
       border-radius: 0.6svw;
+      gap: 2svw;
     }
     .billingHeading {
       font-size: 3.2vw;
@@ -318,7 +320,8 @@
     gap: 2vw;
     .buttonBilling {
       padding: 1.5vw;
-      font-size: 3.5vw;
+      font-size: 3.3vw;
+      gap: 3svw;
     }
     .billingHeading {
       font-size: 5.04vw;
