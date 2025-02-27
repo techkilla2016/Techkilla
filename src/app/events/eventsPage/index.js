@@ -5,7 +5,13 @@ import "./eventsPage.scss";
 
 import { db } from "@/firebase-config";
 import { auth } from "@/firebase-config";
-import { collection, onSnapshot, orderBy, query, serverTimestamp } from "firebase/firestore";
+import {
+  collection,
+  onSnapshot,
+  orderBy,
+  query,
+  serverTimestamp,
+} from "firebase/firestore";
 import { signOut } from "firebase/auth";
 
 import { useDispatch } from "react-redux";
@@ -53,7 +59,7 @@ export default function EventsPage() {
       setLoading(true);
 
       const collectionRef = collection(db, "techkilla_events");
-      const q = query(collectionRef,orderBy("createdAt","desc"))
+      const q = query(collectionRef, orderBy("createdAt", "desc"));
       const unsubscribe = onSnapshot(q, (snapshot) => {
         const alldata = snapshot.docs
           .map((doc) => ({
@@ -61,7 +67,10 @@ export default function EventsPage() {
             id: doc.id,
           }))
           .filter((data) => data.userId === userData.uid)
-          // .sort((a, b) => a.eventNumber - b.eventNumber);
+          .filter(
+            (data) => data.branch === `${process.env.NEXT_PUBLIC_BRANCH}`
+          );
+        // .sort((a, b) => a.eventNumber - b.eventNumber);
 
         setAllEventsData(alldata);
         dispatch(AllEventsReducer(alldata));
