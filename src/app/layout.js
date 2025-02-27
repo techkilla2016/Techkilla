@@ -7,6 +7,7 @@ import "react-phone-input-2/lib/style.css";
 import "aos/dist/aos.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./style.scss";
+import "react-tooltip/dist/react-tooltip.css";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
