@@ -21,6 +21,7 @@ export default function BillingInfoComponent({
   setIsGetBillingData,
   fareSummary,
   handleConfirmAndPay,
+  isPayLoading
 }) {
   const router = useRouter();
   const [states, setStates] = useState([]);
@@ -238,6 +239,7 @@ export default function BillingInfoComponent({
           handleDelete={handleDelete}
           handleAddressChange={handleAddressChange}
           handleConfirmAndPay={handleConfirmAndPay}
+          isPayLoading={isPayLoading}
         />
       ) : (
         <BillingForm
