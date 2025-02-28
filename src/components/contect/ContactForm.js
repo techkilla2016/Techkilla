@@ -41,30 +41,22 @@ export default function ContactForm() {
 
   // post request to send email api
   const send = async (contact) => {
-    try {
-      let response = await axios.post(
-        "https://api.telecrm.in/enterprise/" +
-          process.env.NEXT_PUBLIC_CRM_ENTERPRISE_ID +
-          "/autoupdatelead",
-        {
-          fields: contact,
-          actions: [{ type: "SYSTEM_NOTE", text: "Lead Source: Main Website" }],
-        },
-        {
-          headers: {
-            Authorization: "Bearer " + process.env.NEXT_PUBLIC_CRM_TOKEN,
-          },
-        }
-      );
-      // console.log(response)
-      // alert(process.env.NEXT_PUBLIC_CRM_TOKEN)
-      /* response = await response.json();
-      console.log(response); */
-      return true;
-    } catch (error) {
-      console.log(error);
-      return false;
-    }
+    // try {
+    //   let response = await axios.post(
+    //     "https://api.telecrm.in/enterprise/"+ process.env.NEXT_PUBLIC_CRM_ENTERPRISE_ID+"/autoupdatelead",
+    //     {"fields":contact,"actions": [{"type": "SYSTEM_NOTE","text": "Lead Source: Main Website"}]},{
+    //       headers: {
+    //         Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_CRM_TOKEN
+    //       }});
+    //      // console.log(response)
+    //   // alert(process.env.NEXT_PUBLIC_CRM_TOKEN)
+    //   /* response = await response.json();
+    //   console.log(response); */
+    //   return true;
+    // } catch (error) {
+    //   console.log(error);
+    //   return false;
+    // }
   };
 
   // form submission

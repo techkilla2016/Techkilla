@@ -51,7 +51,7 @@ const PortfolioSection = ({ recentwork, work, lastLine }) => {
         <Container>
           <RecentWorkSwiper work={recentwork} />
         </Container>
-        
+
         <Container className="mt-5">
           <Row>
             <Counter />

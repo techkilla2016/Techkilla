@@ -1,0 +1,212 @@
+.Contact {
+  //   border: 1px solid blue;
+  width: 40%;
+  .contactMain {
+    width: 100%;
+    padding: 1vw;
+    // gap: 2vw;
+    // border: 1px solid black;
+    /* align-items: flex-start; */
+    .contactUs {
+      //   border: 2px solid red;
+      font-size: 1.7vw;
+      font-weight: 600;
+      line-height: 2vw;
+    }
+    .descText {
+      text-align: center;
+      font-size: 1vw;
+    }
+
+    .queryMail {
+      //   font-size: 3.5vw;
+      font-size: 1vw;
+      //   border: 2px solid red;
+      .contactEmail {
+        text-decoration: underline !important;
+        color: blue;
+        font-style: italic;
+        // font-size: 3.5vw;
+        font-size: 1.1vw;
+      }
+      .whatsappLink {
+        text-decoration: underline !important;
+        color: blue;
+        font-style: italic;
+        cursor: pointer;
+      }
+      .whatsappLink:hover {
+        color: rgb(222, 75, 12);
+      }
+    }
+    .queryMail2 {
+      font-size: 1vw;
+      .booking {
+        cursor: pointer;
+        font-size: 1.1vw;
+        color: blue;
+        font-style: italic;
+        text-decoration: underline !important;
+      }
+      .booking:hover {
+        color: rgb(222, 75, 12);
+      }
+    }
+  }
+  .leftFooterSecond {
+    // border: 1px solid black;
+    // gap: 3vw;
+    width: 100%;
+
+    .socialIconCon {
+      gap: 2vw;
+      .socialIcon {
+        /* border-radius: 0.7vw; */
+        width: 2.5vw;
+        height: 2.5vw;
+        /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+      }
+    }
+  }
+}
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  .Contact {
+    border-top: 1px solid gray;
+    width: 100%;
+    // padding: 1vw;
+    padding-top: 6vw;
+    .contactMain {
+      width: 100%;
+      padding: 2vw !important;
+      //   gap: 2vw;
+      // border: 1px solid black;
+      /* align-items: flex-start; */
+      .contactUs {
+        // border: 2px solid red;
+        font-size: 4vw;
+        text-align: center;
+        font-weight: 600;
+        line-height: 6vw;
+      }
+      .descText {
+        text-align: center;
+        font-size: 3.8vw;
+        line-height: 8vw;
+      }
+
+      .queryMail {
+        //   font-size: 3.5vw;
+        font-size: 3.2vw;
+        // border: 2px solid red;
+        .contactEmail {
+          text-decoration: underline !important;
+          color: blue;
+          font-style: italic;
+          // font-size: 3.5vw;
+          font-size: 3.2vw;
+        }
+        .whatsappLink {
+          font-size: 3vw;
+        }
+      }
+      .queryMail2 {
+        font-size: 3vw !important;
+
+        .booking {
+          cursor: pointer;
+          color: blue;
+          font-size: 3.1vw;
+        }
+      }
+    }
+    .leftFooterSecond {
+      /* border: 1px solid black; */
+      gap: 3vw;
+      width: 25%;
+
+      .socialIconCon {
+        gap: 2vw;
+        .socialIcon {
+          /* border-radius: 0.7vw; */
+          width: 8vw;
+          height: 8vw;
+          /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Contact {
+    border-top: 1px solid gray;
+    width: 100%;
+    // padding: 1vw;
+    padding-top: 6vw;
+    .contactMain {
+      width: 100%;
+      padding: 2vw !important;
+      //   gap: 2vw;
+      // border: 1px solid black;
+      /* align-items: flex-start; */
+      .contactUs {
+        // border: 2px solid red;
+        font-size: 4.7vw;
+        text-align: center;
+        font-weight: 600;
+        line-height: 6vw;
+      }
+      .descText {
+        text-align: center;
+        font-size: 4.2vw;
+        line-height: 8vw;
+      }
+
+      .queryMail {
+        //   font-size: 3.5vw;
+        font-size: 4vw;
+        // border: 2px solid red;
+        .contactEmail {
+          text-decoration: underline !important;
+          color: blue;
+          font-style: italic;
+          // font-size: 3.5vw;
+          font-size: 4vw;
+        }
+        .whatsappLink {
+          font-size: 4vw;
+        }
+      }
+      .queryMail2 {
+        font-size: 4vw !important;
+
+        .booking {
+          cursor: pointer;
+          color: blue;
+          font-size: 4vw;
+        }
+      }
+    }
+    .leftFooterSecond {
+      /* border: 1px solid black; */
+      gap: 3vw;
+      width: 25%;
+
+      .socialIconCon {
+        gap: 2vw;
+        .socialIcon {
+          /* border-radius: 0.7vw; */
+          width: 8vw;
+          height: 8vw;
+          /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+                  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+                  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+        }
+      }
+    }
+  }
+}
