@@ -72,9 +72,9 @@
 }
 @media all and (max-width: 480px) {
   .LoginComp {
-    // border: 1px solid rgb(66, 66, 71);
-    width: 85vw;
-    border-radius: 3vw;
+    border: 1px solid rgb(66, 66, 71);
+    width: 90vw;
+    border-radius: 5vw;
     height: 75vw;
     .head1 {
       // border: 1px solid red;
@@ -90,15 +90,15 @@
       text-align: center;
       width: 60vw;
       color: rgb(83, 81, 81);
-      font-size: 3.4vw;
+      font-size: 3.5vw;
     }
     .googleLogin {
-      border: 1px solid rgb(185, 179, 179);
-      padding: 0.7vw 5vw;
-      font-size: 3.35vw;
-      border-radius: 2vw;
+      border: 1.2px solid rgb(185, 179, 179);
+      padding: 1.3vw 5vw;
+      font-size: 3.7vw;
+      border-radius: 2.5vw;
       .google-logo {
-        font-size: 3.8vw;
+        font-size: 5vw;
         margin-right: 2vw;
       }
     }

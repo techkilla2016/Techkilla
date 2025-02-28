@@ -731,7 +731,7 @@ export default function EventForm({ action }) {
             />
             {/* share options */}
             <div className="flex-col-center shareOption" ref={shareRef}>
-              <label className="flex-row-center shareHead">
+              <label className="shareHead">
                 Share Options<span className="requiredIcon"> *</span>
               </label>
               <div className="flex-row-center options">
@@ -762,7 +762,7 @@ export default function EventForm({ action }) {
                 htmlFor="fileInput"
                 className=" flex-col-center logoUploadLabel"
               >
-                <p className="flex-row-center uploadText">
+                <p className="uploadText">
                   Upload Logo<span className="requiredIcon"> *</span>
                 </p>
                 <div className="logoContainer">
@@ -826,7 +826,7 @@ export default function EventForm({ action }) {
             {/* Background Images */}
             <div className="flex-col-center imageContainer">
               <p className="bg-head">
-                Background Images<span className="requiredIcon"> *</span>
+                Background Images <span className="requiredIcon">*</span>
               </p>
               <div className="flex-row-center bgImgContainer">
                 {data?.bgImagesArr.map((src, idx) => (

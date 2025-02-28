@@ -11,7 +11,9 @@
     // border: 2px solid blue;
     background: rgb(255, 255, 255);
     position: absolute;
-    padding: 0.5vw;
+    padding: 0.1vw 0.5vw;
+
+    // padding-left: 2vw;
     border-radius: 1vw;
     // border: 1px solid rgba(0, 0, 0, 0.2);
     top: 3%;
@@ -21,7 +23,7 @@
   }
   .profile-text {
     font-size: 1.1vw;
-    padding: 0.2vw;
+    padding: 0.5vw !important;
     // font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     // border: 2px solid blue;
   }
@@ -42,7 +44,8 @@
     align-items: center;
     gap: 0.5vw;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    padding-top: 0.5vw;
+    padding-top: 0.3vw;
+    padding-bottom: 0.3vw;
   }
 
   .logOut {
@@ -122,12 +125,14 @@
   }
   .logout-container {
     // border: 2px solid blue;
-    margin: 1vw;
-    border-radius: 1vw;
+    // width: 100%;
+    // margin: 1vw;
+    padding: 1vw 1.3vw !important;
+    border-radius: 2.5vw;
   }
   .profile-text {
-    font-size: 3.1vw !important;
-    padding: 0.7vw;
+    font-size: 3.5vw !important;
+    padding: 1vw !important;
 
     // border: 2px solid blue;
   }
@@ -139,7 +144,7 @@
   }
 
   .arrow {
-    font-size: 2.5vw !important;
+    font-size: 2.65vw !important;
     // border: 2px solid blue;
   }
 
@@ -153,14 +158,12 @@
 
   .logOut {
     cursor: pointer;
-    font-size: 3vw !important;
-    font-weight: 600 !important;
-
+    font-size: 3.4vw !important;
     color: black;
   }
 
   .logout-text {
-    font-size: 2.8vw !important;
+    font-size: 3.4vw !important;
     // font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     //   sans-serif;
     cursor: pointer;
