@@ -478,7 +478,7 @@
               width: 5vw;
               height: 5vw;
               border: 1px solid #ccc;
-              border-radius: 50%;
+              border-radius: 0.5vw;
               background-color: transparent;
               transition: all 0.3s ease;
             }
@@ -488,9 +488,9 @@
             .customLabel::after {
               content: "✔";
               position: absolute;
-              top: 1.5vw;
-              left: 1.3vw;
-              font-size: 5vw;
+              top: 0.7vw;
+              left: 1.5vw;
+              font-size: 4.1vw;
               font-weight: 600;
               color: black;
               transform: scale(0);
