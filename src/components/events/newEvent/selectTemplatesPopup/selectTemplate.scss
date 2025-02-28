@@ -380,9 +380,10 @@
 
 @media all and (max-width: 480px) {
   .TemplatePopup {
-    height: calc(100svh - 13vw);
-    padding: 2vw;
-    top: 4%;
+    height: calc(100vh - 14vw);
+    // height: 80vw;
+    padding: 4vw;
+    top: 0;
     left: 0;
     right: 0;
     // gap: 3vw;
@@ -390,15 +391,12 @@
     // margin: 5.2vw;
 
     .popupContent {
-      border-radius: 1vw;
-      // margin: 1vw !important;
-      // margin-bottom: 2vw;
+      border-radius: 2vw;
       margin-top: 4vw;
-      background: linear-gradient(to right, #e8e0e6, #deeded);
       height: 100%;
       width: 100%;
-      // padding: 3vw;
-      gap: 4vw;
+      // padding: 2vw !important;
+      gap: 3.5vw;
       // border: 2px solid blue;
       overflow-y: auto;
       overflow: visible;
@@ -443,15 +441,15 @@
           // justify-content: space-between;
           // align-items: flex-start;
           width: 100%;
-          height: 70vh;
+          height: 65vh;
           overflow-y: auto;
           // border: 2px solid blue;
           // padding-right: 2vw;
 
           .templateContainer {
-            width: calc((100% - 5vw) / 2);
+            // width: calc((100vw - vw) / 3);
             border: 0.5vw solid transparent;
-            border-radius: 2vw;
+            border-radius: 2.4vw;
             position: relative;
 
             // border: 2px solid red;
@@ -480,7 +478,7 @@
               width: 5vw;
               height: 5vw;
               border: 1px solid #ccc;
-              border-radius: 0.5vw;
+              border-radius: 50%;
               background-color: transparent;
               transition: all 0.3s ease;
             }
@@ -490,9 +488,9 @@
             .customLabel::after {
               content: "✔";
               position: absolute;
-              top: 0.8vw;
-              left: 1.7vw;
-              font-size: 4.3vw;
+              top: 1.5vw;
+              left: 1.3vw;
+              font-size: 5vw;
               font-weight: 600;
               color: black;
               transform: scale(0);
