@@ -605,7 +605,7 @@
 
     .formContainer {
       gap: 0.1vw;
-      max-width: 90vw;
+      max-width: 93vw;
       margin-bottom: 15vw;
       border-radius: 1vw;
       // border: 1px solid #611414;
@@ -621,7 +621,7 @@
       padding: 1vw;
       font-size: 1vw;
       .labelling {
-        font-size: 3.8vw !important;
+        font-size: 4.2vw !important;
         font-weight: 600 !important;
         color: #343232 !important;
         width: 100%;
@@ -629,9 +629,7 @@
         // border: 1px solid #369124;
         .additionText {
           // border: 1px solid #369124;
-          padding-top: 1vw;
-          padding-left: 0.5vw;
-          font-size: 3.6vw;
+          font-size: 3.8vw !important;
           font-weight: 500;
         }
         .optionClass {
@@ -640,12 +638,15 @@
           font-size: 1rem;
         }
         .inputCon {
-          // border: 1px solid #369124;
-          // padding: 1rem;
-          padding: 2svw;
+          height: 9vw;
+          width: 100%;
+          padding: 2vw;
           font-size: 3.5vw;
-          font-weight: 500;
-          margin-top: 1.2vw;
+          border: 0.1vw solid #ccc;
+          border-radius: 1vw;
+          background-color: #fff;
+          outline: none;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         }
       }
     }
@@ -654,10 +655,11 @@
 
       .templateBtn {
         // border: 1px solid green;
-        font-size: 3.6svw;
+        font-size: 3.7svw;
         padding: 1.5vw 1vw;
         // background: #bc3dfb;
-        border-radius: 2vw 0 2vw 0;
+        border-radius: 2.5vw 0 2.5vw 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
       .successText {
         font-size: 1rem;

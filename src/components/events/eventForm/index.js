@@ -640,7 +640,7 @@ export default function EventForm({ action }) {
                     Select number of devices
                   </option>
                   {data?.numberOfDevices.map((screen, idx) => (
-                    <option key={idx} value={screen}>
+                    <option key={idx} value={screen} className="inputCon">
                       {screen}
                     </option>
                   ))}
