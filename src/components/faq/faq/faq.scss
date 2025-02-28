@@ -1,0 +1,76 @@
+.grd-txt {
+  font-weight: 600;
+  background: linear-gradient(to right, #fad43a, #b3a70b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6)); */
+}
+
+.Faq {
+  margin-top: 5.2vw;
+  // padding-top: 3vw;
+  // background-image: url("./../../../public/home/hero/bg01.png");
+  // background-position: center;
+  // background-size: cover;
+  gap: 3vw;
+  // .header {
+  // }
+  .main {
+    width: 85%;
+    border-radius: 1vw;
+    padding: 1vw;
+    // background: gray;
+    // border: 2px solid blue;
+    .ul {
+      width: 100%;
+      align-items: flex-start;
+      gap: 2vw;
+      .a {
+        width: 100%;
+        .li {
+          padding: 1vw 2vw;
+          width: 100%;
+          justify-content: space-between;
+          background-color: #fff;
+          border-radius: 2vw;
+          background-color: #f3f2ec;
+          color: black;
+          cursor: pointer;
+          border: 0.2vw solid transparent;
+          transition: all ease-in-out 0.2s;
+        }
+      }
+      .li:hover {
+        /* transform: translateX(1vw); */
+        transform: scale(1.02);
+        border: 0.2vw solid #fad43a;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .Faq {
+    margin-top: 13.5vw;
+    padding: 6vw 4vw;
+    gap: 10vw;
+    .main {
+      width: 100%;
+      .ul {
+        gap: 5vw;
+        .a {
+          .li {
+            padding: 2.5vw 5vw;
+            border-radius: 5vw;
+            border: 0.5vw solid transparent;
+          }
+        }
+        .li:hover {
+          /* transform: translateX(1vw); */
+          transform: scale(1.05);
+          border: 0.5vw solid var(--themeColor2);
+        }
+      }
+    }
+  }
+}

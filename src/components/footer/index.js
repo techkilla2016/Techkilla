@@ -75,6 +75,8 @@ const Footer = ({ bg }) => {
                   Excitometer-Tetra Pak
                 </Link>
                 <Link href="https://youtu.be/znj9F9XeF3U">Cricket Game</Link>
+                <Link href="/ai-photo-booth">AI Photobooth</Link>
+                <Link href="/ai-photo-booth-group">AI Photobooth Group</Link>
               </section>
 
               <section className="flex-content padding_1x">
