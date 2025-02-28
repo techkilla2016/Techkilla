@@ -131,54 +131,54 @@
 @media all and (max-width: 480px) {
   .popup-container {
     background: #f0edf3;
-    border-radius: 3vw;
+    border-radius: 3.5vw;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    padding: 4vw 3vw;
+    padding: 4vw;
     margin: 4vw;
-    width: 90vw;
+    width: 85vw;
     background-color: beige;
     // border: 2px solid blue;
     text-align: center;
     animation: popup-enter 0.3s ease-in-out;
   }
   .popup-content {
-    gap: 0.5vw;
+    gap: 1.5vw;
     .img-success {
       // border: 2px solid blue;
 
-      width: 10vw !important;
+      width: 11vw !important;
     }
   }
   .popup-content h2 {
     color: #28a745;
-    font-size: 1.8rem;
+    font-size: 6vw;
     // margin-bottom: 12px;
   }
 
   .popup-content p {
     color: #333;
-    font-size: 1.3rem;
+    font-size: 3.8vw;
     // margin-bottom: 20px;
   }
   .footer-part {
     // border: 2px solid blue;
-    gap: 1.3vw;
+    gap: 2vw;
     margin-bottom: 1vw;
     .launch {
       // border: 2px solid black;
       color: #fff;
-      padding: 5px 12px;
-      font-size: 1.1rem;
+      padding: 1vw 2vw;
+      font-size: 3.2vw;
       background: green;
-      border-radius: 10px;
+      border-radius: 2vw;
     }
     .dashboard {
       // border: 2px solid blue;
       color: #fff;
-      font-size: 1.1rem;
+      font-size: 3.2vw;
       background: #007bff;
-      padding: 5px 12px;
-      border-radius: 10px;
+      padding: 1vw 3vw;
+      border-radius: 2vw;
     }
   }
   .close-preview {
