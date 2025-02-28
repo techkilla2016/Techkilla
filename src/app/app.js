@@ -29,8 +29,6 @@ const App = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        console.log("running user data change");
-
         const data = {
           uid: user.uid,
           email: user.email,
@@ -75,8 +73,6 @@ const App = () => {
       return () => unsubscribe();
     }
   }, [userData]);
-
-  console.log(userData, "userData in app.js =>");
 
   return <></>;
 };
