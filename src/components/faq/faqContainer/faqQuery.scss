@@ -1,0 +1,102 @@
+.SingleFaq {
+  margin-top: 5.2vw;
+  padding: 2vw 3vw 3vw 3vw;
+  // border: 1px solid red;
+  /* background-image: url("./../../../../public/home/hero/bg01.png");
+  background-position: center;
+  background-size: cover; */
+  gap: 4vw;
+  // border: 1px solid red;
+  justify-content: flex-start;
+  min-height: 50vh;
+  .grd-txt {
+    font-weight: 600;
+    background: linear-gradient(to right, #fad43a, #b3a70b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6)); */
+  }
+
+  .container {
+    width: 85%;
+    gap: 2vw;
+    align-items: flex-start;
+    .dl {
+      // border: 1px solid red;
+      border: 0.2vw solid transparent;
+      width: 100%;
+      padding: 1vw 2vw;
+      align-items: flex-start;
+      gap: 2vw;
+      background-color: #f3f2ec;
+      border-radius: 2vw;
+      cursor: pointer;
+      transition: all ease-in-out 0.2s;
+      .dt {
+        width: 100%;
+        /* border: 1px solid #000; */
+        justify-content: space-between;
+        color: black;
+        .svg {
+          font-size: 2vw;
+        }
+      }
+      .dd {
+        width: 100%;
+        padding: 1vw 0;
+        display: none;
+        border-top: 0.2vw solid #ccc;
+      }
+
+      .showDd {
+        display: flex;
+      }
+    }
+    .dl:hover {
+      transform: scale(1.02);
+      border: 0.2vw solid var(--themeColor2);
+    }
+    .showDl {
+      transform: scale(1.02);
+      border: 0.2vw solid var(--themeColor2);
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .SingleFaq {
+    margin-top: 13.5vw;
+    padding: 6vw 4vw;
+    gap: 10vw;
+    .container {
+      width: 100%;
+      gap: 5vw;
+      .dl {
+        border: 0.5vw solid transparent;
+        width: 100%;
+        padding: 2.5vw 5vw;
+        gap: 5vw;
+        border-radius: 5vw;
+        .dt {
+          text-align: start;
+          .svg {
+            font-size: 5vw;
+            /* border: 1px solid black; */
+          }
+        }
+        .dd {
+          padding: 2.5vw 0;
+          border-top: 0.5vw solid #ccc;
+        }
+      }
+      .dl:hover {
+        transform: scale(1.05);
+        border: 0.5vw solid var(--themeColor2);
+      }
+      .showDl {
+        transform: scale(1.05);
+        border: 0.5vw solid var(--themeColor2);
+      }
+    }
+  }
+}

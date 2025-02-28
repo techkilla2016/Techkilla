@@ -21,7 +21,7 @@ export default function BillingInfoComponent({
   setIsGetBillingData,
   fareSummary,
   handleConfirmAndPay,
-  isPayLoading
+  isPayLoading,
 }) {
   const router = useRouter();
   const [states, setStates] = useState([]);
@@ -29,6 +29,7 @@ export default function BillingInfoComponent({
   const [selectedState, setSelectedState] = useState("");
   const [isFormUpdate, setIsFormUpdate] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const [isAddLoading, setIsAddLoading] = useState(false);
 
   // for form field
   const handleChange = (e) => {
@@ -60,8 +61,10 @@ export default function BillingInfoComponent({
     setCurrentBilling(item);
   };
 
+  // handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!userDataSelector) {
       router.push("/events");
       return;
@@ -106,6 +109,7 @@ export default function BillingInfoComponent({
         companyName: formData.gstCompanyName,
       };
     }
+    setIsAddLoading(true);
     // update form
     if (isFormUpdate) {
       try {
@@ -115,6 +119,8 @@ export default function BillingInfoComponent({
         );
         setIsShowOldBillingInfo(true);
         toast.success("Billing details updated successfully!");
+        setIsFormUpdate(false);
+        setCurrentBilling(res.data.billingInfo);
       } catch (error) {
         console.log(error);
       }
@@ -149,6 +155,7 @@ export default function BillingInfoComponent({
     setSelectedCountry("");
     setSelectedState("");
     setStates([]);
+    setIsAddLoading(false);
   };
 
   const handleDelete = async (id) => {
@@ -158,6 +165,7 @@ export default function BillingInfoComponent({
       );
       setIsGetBillingData((prev) => !prev);
       toast.success("Billing address deleted successfully!");
+      setCurrentBilling(res?.data.billingInfo[0]);
       // console.log(res);
     } catch (error) {
       console.log(error);
@@ -216,6 +224,8 @@ export default function BillingInfoComponent({
       gstNumber: "",
       gst: false,
     });
+    setSelectedCountry("");
+    setSelectedState("");
     if (userBillingInfo?.length > 0) {
       setIsShowOldBillingInfo(true);
     } else {
@@ -256,6 +266,7 @@ export default function BillingInfoComponent({
           fareSummary={fareSummary}
           setSelectedState={setSelectedState}
           errorMsg={errorMsg}
+          isAddLoading={isAddLoading}
         />
       )}
     </div>

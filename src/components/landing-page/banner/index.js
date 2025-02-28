@@ -48,15 +48,15 @@ export default function Banner({ setFormRef }) {
       // );
 
       // firebase code added here
-      // let docRef = collection(db, "techkilla-enquiry-form");
-      // await addDoc(docRef, { ...data, timestamp: Date.now() });
+      let docRef = collection(db, "techkilla-enquiry-form");
+      await addDoc(docRef, { ...data, timestamp: Date.now() });
 
-      let response = await axios.post(
-        "https://api.telecrm.in/enterprise/"+ process.env.NEXT_PUBLIC_CRM_ENTERPRISE_ID+"/autoupdatelead",
-        {"fields":data,"actions": [{"type": "SYSTEM_NOTE","text": "Lead Source: Landing Page"}]},{
-          headers: {
-            Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_CRM_TOKEN
-          }});
+      // let response = await axios.post(
+      //   "https://api.telecrm.in/enterprise/"+ process.env.NEXT_PUBLIC_CRM_ENTERPRISE_ID+"/autoupdatelead",
+      //   {"fields":data,"actions": [{"type": "SYSTEM_NOTE","text": "Lead Source: Landing Page"}]},{
+      //     headers: {
+      //       Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_CRM_TOKEN
+      //     }});
 
       return true;
     } catch (err) {

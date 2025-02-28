@@ -156,6 +156,12 @@ export default function EventPreviewPopup({ eventData, onClose }) {
                 <td>Expires</td>
                 <td>{formatDate(eventData.expiresAt)}</td>
               </tr>
+              {eventData.status !== "pending" && (
+                <tr>
+                  <td>Credits</td>
+                  <td>{eventData.creditsLeft}</td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

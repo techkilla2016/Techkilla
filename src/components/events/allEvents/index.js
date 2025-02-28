@@ -11,6 +11,7 @@ import { ref as storageRef, deleteObject } from "firebase/storage";
 import { collection, deleteDoc, doc } from "firebase/firestore";
 import DeletePopup from "./deletePopup";
 import { IoIosRemoveCircleOutline } from "react-icons/io";
+import { Tooltip } from "react-tooltip";
 
 import EventPreviewPopup from "../../../components/events/allEvents/eventPreviewPopup";
 import { toast } from "react-toastify";
@@ -152,6 +153,18 @@ export default function AllEvents({ data }) {
       .join(" ");
   };
 
+  useEffect(() => {
+    // Initialize Bootstrap tooltips
+    import("bootstrap/dist/js/bootstrap.bundle.min.js").then((bootstrap) => {
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      tooltipTriggerList.forEach((tooltipTriggerEl) => {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });
+  }, []);
+
   return (
     <div className="flex-col-center AllEvents">
       <p className="flex-row-center tableHead"></p>
@@ -244,8 +257,11 @@ export default function AllEvents({ data }) {
                     <span
                       onClick={() => handlePreview(item)}
                       className="flex-row-center preview-button"
+                      data-tooltip-id="Preview"
+                      data-tooltip-content="Preview"
                     >
                       <FaRegEye />
+                      <Tooltip id="Preview" className="custom-tooltip" />
                     </span>
                     <Link
                       href={generateUrl(item)}
@@ -255,21 +271,30 @@ export default function AllEvents({ data }) {
                           : "_self"
                       }
                       className="flex-row-center launch-button"
+                      data-tooltip-id="Launch"
+                      data-tooltip-content="Launch"
                     >
                       <PiRocketLaunch />
+                      <Tooltip id="Launch" className="custom-tooltip" />
                     </Link>
 
                     <Link
                       href={`/events/edit?event=${item.eventNumber}`}
                       className="flex-row-center edit-button"
+                      data-tooltip-id="Edit"
+                      data-tooltip-content="Edit"
                     >
                       <MdOutlineModeEdit />
+                      <Tooltip id="Edit" className="custom-tooltip" />
                     </Link>
                     <span
                       onClick={() => handleDelete(item.id)}
                       className="flex-row-center delete-button"
+                      data-tooltip-id="Delete"
+                      data-tooltip-content="Delete"
                     >
                       <MdDeleteOutline />
+                      <Tooltip id="Delete" className="custom-tooltip" />
                     </span>
                   </td>
                 </tr>
@@ -286,8 +311,14 @@ export default function AllEvents({ data }) {
       <div className="flex-col-center card-container">
         {paginatedEvents.map((item) => (
           <div key={item.id} className="flex-col-center event-card">
+            <p className="event-head">
+              <strong className="event-data"> Status : </strong>
+              {capitalizeWords(item.status)}
+            </p>
+
             <p className="event-name">{capitalizeWords(item.eventName)}</p>
-            <p className="flex-row-center event-product">
+
+            <div className="flex-row-center event-product">
               <p className="event-head">
                 <strong className="event-data"> Product : </strong>
                 AI {capitalizeWords(item.productName)}
@@ -297,7 +328,8 @@ export default function AllEvents({ data }) {
                 <strong className="event-data">Event No : </strong>#
                 {item.eventNumber}
               </p>
-            </p>
+            </div>
+
             <p className="event-head">
               <strong className="event-data">Created:</strong>{" "}
               {formatDate(item.createdAt)}

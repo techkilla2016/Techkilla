@@ -12,10 +12,13 @@ import { Container } from "react-bootstrap";
 import Testimonials from "@/components/Testimonials";
 import TestimonialsData from "@/data/Testimonials";
 import WhatsappModal from "@/components/Modal/whatsapp";
+import Blog from "@/components/home/blogs";
 import Head from "next/head";
+import Faq from "@/components/faq/faq";
 export const metadata = {
-  title: "Techkilla Wedding Photo Booth Services for Events and Occasions",
-  description: `Explore Techkilla’s wedding photo booths, AI photo booths, and AI video booths. Create unforgettable event experiences with our innovative, interactive solutions.`,
+  title:
+    "Event Photo Booth | AI photo Booth Services for Occasions - Techkilla",
+  description: `Photo Booth for events with AI features. Create instant memories at your occasion with Techkilla's interactive photo booth services. Book now for unforgettable moments!`,
 };
 
 const Home = () => {
@@ -79,8 +82,11 @@ const Home = () => {
 
             <Testimonials cardData={TestimonialsData} />
           </Container>
+
+          <Faq />
         </div>
       </main>
+      <Blog />
       <Footer bg="#fafafa" />
     </>
   );

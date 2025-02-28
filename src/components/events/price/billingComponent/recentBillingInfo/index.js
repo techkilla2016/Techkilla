@@ -1,7 +1,7 @@
 import React from "react";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
-import {ClockLoader} from "react-spinners"
+import { ClipLoader } from "react-spinners";
 
 export default function RecentBillingInfo({
   userBillingInfo,
@@ -12,7 +12,7 @@ export default function RecentBillingInfo({
   handleDelete,
   handleAddressChange,
   handleConfirmAndPay,
-  isPayLoading
+  isPayLoading,
 }) {
   const formatPriceINR = (amount) => {
     return new Intl.NumberFormat("en-IN", {
@@ -58,14 +58,23 @@ export default function RecentBillingInfo({
                       : item.address}
                   </p>
                 </div>
-                <div className="flex-row-center actionIconContainer">
+                <div
+                  className="flex-row-center actionIconContainer"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   <MdEdit
                     className="editIcon"
-                    onClick={() => handleUpdateBillingInfo(item._id)}
+                    onClick={(e) => {
+                      handleUpdateBillingInfo(item._id);
+                    }}
                   />
                   <MdDelete
                     className="deleteIcon"
-                    onClick={() => handleDelete(item._id)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      handleDelete(item._id);
+                    }}
                   />
                 </div>
               </label>
@@ -93,8 +102,11 @@ export default function RecentBillingInfo({
           {formatPriceINR(fareSummary.baseFare)}
           <br /> + {formatPriceINR(fareSummary.gstFare)} taxes
         </p>
-        <button className="flex-row-center buttonBilling" onClick={() => handleConfirmAndPay()}>
-          {"PAY NOW"} {isPayLoading && <ClockLoader color="white" size={17} />}
+        <button
+          className="flex-row-center buttonBilling"
+          onClick={() => handleConfirmAndPay()}
+        >
+          {"PAY NOW"} {isPayLoading && <ClipLoader color="white" size={17} />}
         </button>
       </div>
     </div>

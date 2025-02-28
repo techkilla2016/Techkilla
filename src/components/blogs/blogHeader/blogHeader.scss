@@ -1,0 +1,38 @@
+.navs {
+  // border: 1px solid black;
+  gap: 3vw;
+  // padding: 1.5vw;
+  width: 100%;
+  /* border-top: 0.14vw solid rgb(168, 165, 165); */
+  border-bottom: 0.14vw solid rgb(217, 213, 213);
+  .buttonStyle {
+    font-size: 1.2vw;
+    font-weight: 500;
+    // background-color: gray;
+  }
+  .buttonStyle:hover {
+    color: #fad43a;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  .navs {
+    /* border: 1px solid black; */
+    gap: 3.5vw;
+    padding: 3vw;
+    .buttonStyle {
+      font-size: 3.2vw;
+      // font-weight: 600;
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  .navs {
+    /* border: 1px solid black; */
+    gap: 9vw;
+    padding: 6vw;
+    border-bottom: 1px solid rgb(167, 164, 164);
+    .buttonStyle {
+      font-size: 4.8vw;
+    }
+  }
+}
